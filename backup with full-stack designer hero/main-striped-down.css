@@ -1,0 +1,436 @@
+
+
+
+/* Reset
+-------------------------------------------------- */
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, cite, code, em, img, small, strong, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, section, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    vertical-align: baseline;
+}
+
+html {
+  font-family: 'Gotu', system, -apple-system, ".SFNSText-Regular", "San Francisco", "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", sans-serif;
+  font-size: 20px;
+  line-height: 1.5;
+  background: #fff;
+  color: #2A3748;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  font-variant-ligatures: common-ligatures;
+  font-feature-settings: "liga","clig";
+}
+
+*,html,body {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+ol, ul {
+  padding-left: 2em;
+  padding-inline-start: 2em;
+}
+
+li {
+  line-height: 1.2;
+  margin-bottom: 1em;
+}
+
+blockquote p {
+  font-style: italic;
+  font-family: Georgia,"Book Antiqua","Palatino Linotype", Palatino, Palladio, "URW Palladio L", Baskerville, "Bookman Old Style", "Bitstream Charter", "Nimbus Roman No9 L", Garamond, "Apple Garamond", "ITC Garamond Narrow", "New Century Schoolbook", "Century Schoolbook", "Century Schoolbook L", Georgia, serif;
+  font-size: 1.2em;
+  margin-bottom: 4em;
+  margin-top: 4em;
+  border-left: #5EAA78 1px solid;
+  padding-left: 2em;
+}
+  blockquote cite {
+    margin-top: 1em;
+    display: block;
+  }
+  blockquote cite::before {
+    content:'\2014';
+  }
+
+p.caption {
+  font-size: .7em;
+  margin-bottom: 3em;
+ }
+
+a:link, a:visited {
+  color: #4D5151;
+  transition: all .2s;
+}
+a:hover, a:active {
+  color: #5EAA78;
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+
+
+/* Fonts
+-------------------------------------------------- */
+
+h1, h2, h3 {
+  font-family: 'Gotu', 'Martel', Georgia,"Book Antiqua","Palatino Linotype", Palatino, Palladio, "URW Palladio L", Baskerville, "Bookman Old Style", "Bitstream Charter", "Nimbus Roman No9 L", Garamond, "Apple Garamond", "ITC Garamond Narrow", "New Century Schoolbook", "Century Schoolbook", "Century Schoolbook L", Georgia, serif;
+  line-height: 1.2;
+  margin-top: 1em;
+  letter-spacing: -0.025em;
+  font-weight: normal;
+}
+
+h1 {
+  font-size: 5em;
+  font-family: Martel, serif;
+  font-weight: 900;
+  letter-spacing: -3px;
+  color: #626b77;
+}
+  .hero h1 {
+    font-size: 4em;
+    font-weight: 500;
+    font-family: 'Teko', sans-serif;
+    text-transform: uppercase;
+  }
+
+h2 {
+  font-size: 2em;
+  margin-bottom: .5em;
+}
+
+h3 {
+  font-size: 1.3em;
+  margin-bottom: .5em;
+}
+
+h4 {
+  font-weight: normal;
+  font-size: .8em;
+  margin-bottom: .5em;
+  text-transform: uppercase;
+}
+
+p {
+  margin-bottom: 1em;
+}
+
+
+@media only screen and (max-width: 800px) {
+  html {
+    font-size: 18px;
+  }
+}
+
+
+/* Layout 
+-------------------------------------------------- */
+
+
+/* narrow content container */
+nav,
+.hero div,
+footer,
+main.content-main,
+.content-container {
+  position: relative;
+  margin: 0 auto;
+  max-width: 800px;
+  width: 92%;
+}
+
+/* content container left */
+
+.content-container.--left {
+  padding-right: 40%;
+  max-width: inherit;
+}
+
+.content-container {
+  margin-bottom: 6em;
+}
+
+
+/* wide content container */
+footer,
+nav {
+  max-width: inherit;
+}
+
+.halfsies {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+  .halfsies > div {
+    display: flex;
+  }
+
+  .halfsies .left-half,
+  .halfsies .right-half {
+    flex: 1;
+    padding: 4em;
+  }
+
+
+/* eventually tie to homepage only */
+
+
+.hero {
+  background-color: #2A3748;
+}
+  .hero div {
+    text-align: center;
+    padding-top: 8em;
+
+    /* radial gradient */
+    background: radial-gradient(at bottom center, circle 400px, #FFF583, #2A3748);
+  }
+  .hero h3 {
+    color: #FFF583;
+    margin: 0;
+    font-size: 2.2vw;
+  }
+  .hero h1  {
+    color: #fff;
+    margin: 0 0 -.2em 0;
+    font-size: 7.3vw;
+  }
+  .hero img {
+    vertical-align: bottom;
+    display: table-cell;
+  }
+
+
+.halfsies .left-half {
+  background-color: #F4F8F8
+}
+.halfsies .right-half {
+  background: url(/img/wes.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+.halfsies h2 {
+  font-size: 4vw;
+  margin: 0
+}
+
+
+footer {
+  border-top: 1px solid #5EAA78;
+  padding-top: 2em;
+  font-size: .8em;
+  margin-top: 2em;
+}
+
+section.gift-text {
+  margin-bottom: 8em;
+}
+
+
+@media only screen and (max-width: 800px) {
+
+
+  .halfsies > div {
+    display: block;
+  }
+
+  .halfsies .right-half {
+    padding-bottom: 12em;
+    background-position: top;
+  }
+
+  .halfsies .left-half {
+    padding-right: 4%;
+    padding-left: 4%;
+  }
+
+  .halfsies h2 {
+    font-size: inherit; /* not sure why this isnt working, setting it manually for now */
+    font-size: 2em;
+  }
+  .content-container.--left {
+    padding-right: inherit;
+  }
+
+}
+
+/* Nav
+-------------------------------------------------- */
+
+header  {
+  padding-top: 1em;
+  padding-bottom: 1em;
+  background-color: #2A3748;
+  /*background-color: #f6f9fb;*/
+  /*border-bottom: 1px solid #D6DBDE;*/
+}
+header div.site-logo a {
+  text-decoration: none;
+  color: #F4F8F8;
+  font-family: 'Martel', sans-serif;
+  font-size: 1.3em;
+}   
+
+header div.site-logo::before {
+  content: " ";
+  float: left;
+  text-decoration: none;
+  font-size: 1.5em;
+
+  /* from css tricks */
+  display: block;
+  width: 49px;
+  height: 39px;
+  background-image: url(/img/mount.svg);
+  background-size: 49px 39px;
+}
+
+
+nav {
+  display: flex;
+  justify-content: space-between;
+}
+  nav ul.nav-menu {
+    display: flex;
+    padding: 0;
+  }
+    nav ul.nav-menu li {
+      margin: 0 0 0 1em;
+      position: relative;
+      list-style: none;
+
+      display: flex;
+      flex: 0 0 auto;
+
+      font-family: 'Teko', sans-serif;
+      text-transform: uppercase;
+      font-size: 1.5em;
+      font-weight: 300;
+    }
+    nav ul.nav-menu li a {
+      text-decoration: none;
+      padding-top: .7em;
+      color: #F4F8F8;
+    }
+
+      nav ul.nav-menu li a:before {
+        content: "";
+        position: absolute;
+        left: 51%;
+        right: 51%;
+        top: -20px;
+        background-color: #5EAA78;
+        height: 1px;
+        -ms-transition-property: left,right;
+        -webkit-transition-property: left,right;
+        transition-property: left,right;
+        -ms-transition-duration: .3s;
+        -webkit-transition-duration: .3s;
+        transition-duration: .3s;
+        -ms-transition-timing-function: ease-out;
+        -webkit-transition-timing-function: ease-out;
+        transition-timing-function: ease-out;
+      }
+      nav ul.nav-menu li a.active:before,
+      nav ul.nav-menu li a:hover:before {
+        left: 0;
+        right: 0;
+      }
+
+
+
+
+
+/* Work page 
+-------------------------------------------------- */
+section.case-study h4 span {
+  display: inline-block;
+  margin-bottom: 1em;
+  /*margin-left: 1em;*/
+  /*border-left: solid 1px #333;*/
+  /*padding-left: 1em;*/
+  padding: .4em .8em;
+  background-color: #5EAA78;
+  color: #fff;
+  border
+}
+
+
+
+/* Gift page 
+-------------------------------------------------- */
+
+section.gift-text h1 {
+  font-size: 9em;
+  font-size: 14vw;
+  margin-top: 15%;
+  margin-bottom: 0;
+  font-family: 'Martel', sans-serif;
+
+  background: url('/img/trees.jpg') no-repeat;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: rgba(0,0,0,.2);
+  padding: 25px 50px 10px 0;
+  background-size: cover;
+  background-position: center; 
+}
+
+section.gift-text p {
+  font-size: 11vw;
+  margin-top: -.4em;
+  margin-left: .2em;
+  letter-spacing: -2px;
+  white-space: nowrap;
+}
+
+
+
+/* Homepage 
+-------------------------------------------------- */
+
+
+
+/*img.full {   
+  max-width: 90vw;
+  margin-top: -20em;
+  z-index: -1;
+  position: relative;
+}
+*/
+/*section div.text-box {
+  background-color: #fff;
+  padding: 2em 2em 2em 0;
+  width: 80%;
+}*/
+
+@media only screen and (max-width: 800px) {
+
+/*  section div.text-box {
+    width: 100%;
+    padding-bottom: 1em;
+    padding-right: 0
+  }
+
+  img.full {   
+    margin-top: 0;    
+    height: 250px;
+    width: 100%;
+    object-fit: cover;
+  }*/
+
+}
+

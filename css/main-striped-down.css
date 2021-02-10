@@ -1,0 +1,544 @@
+
+
+
+/* Reset
+-------------------------------------------------- */
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, cite, code, em, img, small, strong, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, section, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    vertical-align: baseline;
+}
+
+html {
+  font-family: system, -apple-system, ".SFNSText-Regular", "San Francisco", "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", sans-serif;
+  font-size: 20px;
+  line-height: 1.5;
+  background: #fff;
+  color: #2a3748;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  font-variant-ligatures: common-ligatures;
+  font-feature-settings: "liga","clig";
+}
+
+*,html,body {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+ol, ul {
+  padding-left: 2em;
+  padding-inline-start: 2em;
+}
+li {
+  line-height: 1.2;
+  margin-bottom: 1em;
+}
+  li + p {
+    margin-top: -.7em;
+  }
+
+blockquote p {
+  font-style: italic;
+  font-family: Georgia,"Book Antiqua","Palatino Linotype", Palatino, Palladio, "URW Palladio L", Baskerville, "Bookman Old Style", "Bitstream Charter", "Nimbus Roman No9 L", Garamond, "Apple Garamond", "ITC Garamond Narrow", "New Century Schoolbook", "Century Schoolbook", "Century Schoolbook L", Georgia, serif;
+  font-size: 1.2em;
+  margin-bottom: 4em;
+  margin-top: 4em;
+  border-left: #5EAA78 1px solid;
+  padding-left: 2em;
+}
+
+  blockquote cite {
+    margin-top: 1em;
+    display: block;
+  }
+  blockquote cite::before {
+    content:'\2014';
+  }
+
+p.caption {
+  font-size: .7em;
+  margin-bottom: 3em;
+ }
+
+a:link, a:visited {
+  color: #4D5151;
+  transition: all .2s;
+}
+a:hover, a:active {
+  color: #5EAA78;
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+video {
+  box-shadow: 0 2px 8px rgba(0,0,0,.3);
+  width: 100%;
+}
+audio, canvas, progress, video {
+  display: inline-block;
+  vertical-align: baseline;
+}
+
+
+/* Fonts
+-------------------------------------------------- */
+
+h1, h2, h3 {
+  font-family: 'Gotu', 'Martel', Georgia,"Book Antiqua","Palatino Linotype", Palatino, Palladio, "URW Palladio L", Baskerville, "Bookman Old Style", "Bitstream Charter", "Nimbus Roman No9 L", Garamond, "Apple Garamond", "ITC Garamond Narrow", "New Century Schoolbook", "Century Schoolbook", "Century Schoolbook L", Georgia, serif;
+  line-height: 1.2;
+  margin-top: 1em;
+  font-weight: normal;
+}
+
+h1 {
+  font-size: 4em;
+  line-height: .8;
+  margin-bottom: 1em;
+  margin-top: 2.5em;
+  font-family: "Damion", cursive;
+}
+h2 {
+  font-size: 2em;
+  letter-spacing: -0.025em;
+  margin-bottom: .5em;
+}
+  h2.beefy {
+    font-size: 2.8em;
+    margin: 0
+  }
+
+h3 {
+  letter-spacing: -0.025em;
+  font-size: 1.5em;
+  margin-bottom: .5em;
+}
+
+h4 {
+  font-weight: normal;
+  font-size: .8em;
+  margin-bottom: .5em;
+  text-transform: uppercase;
+}
+
+p {
+  margin-bottom: 1em;
+}
+
+
+@media only screen and (max-width: 800px) {
+
+  html {
+    font-size: 18px;
+  }
+
+  h1 {
+    font-size: 3em;
+    margin: 2em 0 1em;
+  }
+
+  h2.beefy {
+    font-size: 1.7em; 
+  }
+  
+  h2 {
+    font-size: 1.5em; 
+  }
+
+ h3 {
+    font-size: 1.2em; 
+  }
+
+}
+
+
+/* Layout 
+-------------------------------------------------- */
+
+
+/* narrow content container */
+nav,
+.hero div,
+main.content-main,
+.content-inner,
+.content-container {
+  position: relative;
+  margin: 0 auto;
+  max-width: 800px;
+  width: 92%;
+  /*overflow: hidden;*/
+}
+
+.content-container {
+  margin-bottom: 6em;
+}
+
+  .content-container.--right {
+    padding-left: 30%;
+    max-width: inherit;
+  }
+
+  .content-container.--left {
+    padding-right: 40%;
+    max-width: inherit;
+  }
+
+
+
+  .content-inner {
+    padding-bottom: 3em
+  }
+
+
+/* wide content container */
+footer,
+nav {
+  max-width: inherit;
+}
+
+.halfsies {
+  display: flex;
+}
+  .halfsies > div {
+    flex: 1;
+  }
+
+  .halfsies .left-half,
+  .halfsies .right-half {
+    flex: 1;
+    padding: 8em 4em;
+  }
+  .halfsies .left-half h1,
+  .halfsies .right-half h1 { 
+    margin-top: 0;
+   }
+
+/* homepage */
+.intro.halfsies {
+  flex-direction: column;
+  justify-content: center;
+}
+  .intro.halfsies > div {
+    display: flex;
+  }
+
+  .intro.halfsies .left-half {
+    background-color: #F4F8F8
+  }
+  .intro.halfsies .right-half {
+    background: url(/img/wes.jpg);
+    background-size: cover;
+    background-position: center;
+  }
+
+
+footer {
+  padding-top: 4em;
+  padding-bottom: 4em;
+  font-size: .8em;
+  background-color: #F4F8F8;
+  text-align: center;
+}
+
+section.gift-text {
+  margin-bottom: 8em;
+}
+
+
+@media only screen and (max-width: 800px) {
+
+
+  .content-container {
+    margin-bottom: 3em;
+  }
+
+  .content-container.--right,
+  .content-container.--left {
+    padding-right: 0;
+    padding-left: 0;
+  }
+
+  .halfsies > div {
+    display: block;
+  }
+
+  .halfsies .right-half {
+    padding-bottom: 12em;
+    background-position: top;
+  }
+
+  .halfsies .left-half {
+    padding-right: 4%;
+    padding-left: 4%;
+  }
+
+  .content-container.--left {
+    padding-right: inherit;
+  }
+
+}
+
+/* Nav
+-------------------------------------------------- */
+
+header  {
+  padding-top: 1em;
+  padding-bottom: 1em;
+  /*background-color: #2A3748;*/
+  /*background-color: #f6f9fb;*/
+  /*border-bottom: 1px solid #D6DBDE;*/
+}
+header div.site-logo a {
+  text-decoration: none;
+  font-family: "Damion", cursive;
+  font-size: 2em;
+  color: #5EAA78
+}   
+
+/*header div.site-logo::before {
+  content: " ";
+  float: left;
+  text-decoration: none;
+  font-size: 1.5em;
+
+  display: block;
+  width: 49px;
+  height: 39px;
+  background-image: url(/img/mount.svg);
+  background-size: 49px 39px;
+}*/
+
+
+nav {
+  display: flex;
+  justify-content: space-between;
+}
+  nav ul.nav-menu {
+    display: flex;
+    padding: 0;
+  }
+    nav ul.nav-menu li {
+      margin: 0 0 0 2em;
+      position: relative;
+      list-style: none;
+
+      display: flex;
+      flex: 0 0 auto;
+    }
+    nav ul.nav-menu li a {
+      /*text-decoration: none;*/
+      padding-top: .7em;
+      /*color: #F4F8F8;*/
+    }
+
+      nav ul.nav-menu li a:before {
+        content: "";
+        position: absolute;
+        left: 51%;
+        right: 51%;
+        top: -20px;
+        background-color: #5EAA78;
+        height: 1px;
+        -ms-transition-property: left,right;
+        -webkit-transition-property: left,right;
+        transition-property: left,right;
+        -ms-transition-duration: .3s;
+        -webkit-transition-duration: .3s;
+        transition-duration: .3s;
+        -ms-transition-timing-function: ease-out;
+        -webkit-transition-timing-function: ease-out;
+        transition-timing-function: ease-out;
+      }
+      nav ul.nav-menu li a.active:before,
+      nav ul.nav-menu li a:hover:before {
+        left: 0;
+        right: 0;
+      }
+@media only screen and (max-width: 800px) {
+
+  header div.site-logo a {
+    font-size: 1.4em;
+    word-wrap: normal;
+  }
+
+}
+
+
+
+/* Colored themes
+-------------------------------------------------- */
+
+section.theme--dark {
+  background-color: #2A3748;
+}
+  section.theme--dark p, 
+  section.theme--dark li, 
+  section.theme--dark h1, 
+  section.theme--dark h2, 
+  section.theme--dark h3, 
+  section.theme--dark h4, 
+  section.theme--dark a, 
+  section.theme--dark a:visited, 
+  section.theme--dark a:link {
+    color: #fff;
+  }
+  section.theme--dark h1 {
+    margin-bottom: .5em;
+   }
+
+}
+
+
+
+
+
+/* Work page 
+-------------------------------------------------- */
+
+section.case-study h4 span {
+  display: inline-block;
+  margin-bottom: 1em;
+  /*margin-left: 1em;*/
+  /*border-left: solid 1px #333;*/
+  /*padding-left: 1em;*/
+  padding: .4em .8em;
+  background-color: #5EAA78;
+  color: #fff;
+  border
+}
+
+
+/* Serices: UI
+-------------------------------------------------- */
+
+.ui-thumb {
+  padding: 5em 0;
+}
+  .ui-thumb h2 {
+    text-align: center;
+  }
+  .ui-thumb img {
+    box-shadow: 0 3px 50px rgba(0,0,0,.15);
+    margin-bottom: 1em;
+  }
+
+  .ui-thumb.--green {
+    background-color: #CCD52C;
+  }
+  .ui-thumb.--green h2,
+  .ui-thumb.--green p,
+  .ui-thumb.--green a {
+    color: #064864;
+  }
+
+  .ui-thumb.--teal {
+    background-color: #1AACA2;
+  }
+  .ui-thumb.--teal h2,
+  .ui-thumb.--teal p,
+  .ui-thumb.--teal a {
+    color: #fff;
+  }
+
+  .ui-thumb.--blue {
+    background-color: #0E3563;
+  }
+  .ui-thumb.--blue h2,
+  .ui-thumb.--blue p,
+  .ui-thumb.--blue a {
+    color: #fff;
+  }
+
+
+/* Gift page 
+-------------------------------------------------- */
+
+section.gift-text h1 {
+  font-size: 9em;
+  font-size: 14vw;
+  margin-top: 15%;
+  margin-bottom: 0;
+  font-family: 'Martel', sans-serif;
+
+  background: url('/img/trees.jpg') no-repeat;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: rgba(0,0,0,.2);
+  padding: 25px 50px 10px 0;
+  background-size: cover;
+  background-position: center; 
+}
+
+section.gift-text p {
+  font-size: 11vw;
+  margin-top: -.4em;
+  margin-left: .2em;
+  letter-spacing: -2px;
+  white-space: nowrap;
+}
+
+
+
+/* Homepage 
+-------------------------------------------------- */
+
+
+/* eventually tie to homepage only */
+.hero {
+  /*background-color: #2A3748;*/
+}
+  .hero h1 {
+    margin-bottom: 0
+  }
+
+  .hero div {
+    text-align: center;
+    /*padding-top: 4em;*/
+    padding-bottom: 4em;
+
+    /* radial gradient */
+    background: radial-gradient(at bottom center, circle 400px, #FFF583, #2A3748);
+  }
+
+  .hero h1  {
+    /*color: #fff;*/
+    /*margin: 0 0 -.2em 0;*/
+    /*font-size: 7.3vw;*/
+  }
+  .hero img {
+    vertical-align: bottom;
+    display: table-cell;
+  }
+
+section.specialties h1  {
+  margin-bottom: 0
+}
+
+section.gift h2,
+section.intro.halfsies h2 {
+
+}
+
+section.gift h1,
+section.gift h2 {
+  text-align: center;
+}
+
+@media only screen and (max-width: 800px) {
+  .halfsies h2 {
+    font-size: inherit; /* not sure why this isnt working, setting it manually for now */
+    font-size: 2em;
+  }
+
+}
+
