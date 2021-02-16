@@ -176,7 +176,7 @@ main.content-main,
   margin: 0 auto;
   max-width: 800px;
   width: 92%;
-  /*overflow: hidden;*/
+  overflow: hidden;
 }
 
 .content-container {
