@@ -13,7 +13,7 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
 
 html {
   font-family: system, -apple-system, ".SFNSText-Regular", "San Francisco", "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", sans-serif;
-  font-size: 20px;
+  font-size: 18px;
   line-height: 1.5;
   background: #fff;
   color: #2a3748;
@@ -32,6 +32,22 @@ body {
   margin: 0;
   padding: 0;
 }
+  body::before {
+
+    background-color: #ffffff;
+    background: linear-gradient(to bottom, rgba(255,255,255,0) 0%,rgba(255,255,255,1) 100%), url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 80 40' width='80' height='40'%3E%3Cpath fill='%23e8e5ed' fill-opacity='0.4' d='M0 40a19.96 19.96 0 0 1 5.9-14.11 20.17 20.17 0 0 1 19.44-5.2A20 20 0 0 1 20.2 40H0zM65.32.75A20.02 20.02 0 0 1 40.8 25.26 20.02 20.02 0 0 1 65.32.76zM.07 0h20.1l-.08.07A20.02 20.02 0 0 1 .75 5.25 20.08 20.08 0 0 1 .07 0zm1.94 40h2.53l4.26-4.24v-9.78A17.96 17.96 0 0 0 2 40zm5.38 0h9.8a17.98 17.98 0 0 0 6.67-16.42L7.4 40zm3.43-15.42v9.17l11.62-11.59c-3.97-.5-8.08.3-11.62 2.42zm32.86-.78A18 18 0 0 0 63.85 3.63L43.68 23.8zm7.2-19.17v9.15L62.43 2.22c-3.96-.5-8.05.3-11.57 2.4zm-3.49 2.72c-4.1 4.1-5.81 9.69-5.13 15.03l6.61-6.6V6.02c-.51.41-1 .85-1.48 1.33zM17.18 0H7.42L3.64 3.78A18 18 0 0 0 17.18 0zM2.08 0c-.01.8.04 1.58.14 2.37L4.59 0H2.07z'%3E%3C/path%3E%3C/svg%3E")0 50% repeat;
+    content: "";
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    display: block;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    display: block;
+    z-index: -1;
+  }
+
 
 ol, ul {
   padding-left: 2em;
@@ -97,19 +113,19 @@ audio, canvas, progress, video {
 h1, h2, h3 {
   font-family: 'Gotu', 'Martel', Georgia,"Book Antiqua","Palatino Linotype", Palatino, Palladio, "URW Palladio L", Baskerville, "Bookman Old Style", "Bitstream Charter", "Nimbus Roman No9 L", Garamond, "Apple Garamond", "ITC Garamond Narrow", "New Century Schoolbook", "Century Schoolbook", "Century Schoolbook L", Georgia, serif;
   line-height: 1.2;
-  margin-top: 1em;
+  margin-top: 1.5em;
   font-weight: normal;
 }
 
 h1 {
-  font-size: 4em;
+  font-size: 5em;
   line-height: .8;
   margin-bottom: 1em;
-  margin-top: 2.5em;
+  margin-top: 2em;
   font-family: "Damion", cursive;
 }
 h2 {
-  font-size: 2em;
+  font-size: 3em;
   letter-spacing: -0.025em;
   margin-bottom: .5em;
 }
@@ -120,8 +136,8 @@ h2 {
 
 h3 {
   letter-spacing: -0.025em;
-  font-size: 1.5em;
-  margin-bottom: .5em;
+  font-size: 2em;
+  margin-bottom: .2em;
 }
 
 h4 {
@@ -175,17 +191,19 @@ main.content-main,
   position: relative;
   margin: 0 auto;
   max-width: 800px;
-  width: 92%;
-  overflow: hidden;
+  width: 90%;
 }
 
 .content-container {
-  margin-bottom: 6em;
+  margin-bottom: 5em;
 }
 
   .content-container.--right {
-    padding-left: 30%;
+    padding-left: 20%;
+    padding-right: 20%;
     max-width: inherit;
+    /*border-left: 10px solid #F4F8F8;*/
+    /*border-right: 10px solid #F4F8F8;*/
   }
 
   .content-container.--left {
@@ -209,6 +227,9 @@ nav {
 .halfsies {
   display: flex;
 }
+  .halfsies > .halfsies-inner {
+    display: flex;
+  }
   .halfsies > div {
     flex: 1;
   }
@@ -236,16 +257,16 @@ nav {
     background-color: #F4F8F8
   }
   .intro.halfsies .right-half {
-    background: url(/img/wes.jpg);
+    background: url(/img/wes@2x.jpg);
     background-size: cover;
-    background-position: center;
+    background-position: center center;
   }
 
 
 footer {
   padding-top: 4em;
   padding-bottom: 4em;
-  font-size: .8em;
+  /*font-size: .8em;*/
   background-color: #F4F8F8;
   text-align: center;
 }
@@ -268,6 +289,7 @@ section.gift-text {
     padding-left: 0;
   }
 
+  .intro.halfsies > div,
   .halfsies > div {
     display: block;
   }
@@ -292,31 +314,29 @@ section.gift-text {
 -------------------------------------------------- */
 
 header  {
-  padding-top: 1em;
-  padding-bottom: 1em;
-  /*background-color: #2A3748;*/
-  /*background-color: #f6f9fb;*/
-  /*border-bottom: 1px solid #D6DBDE;*/
+  padding-top: 2em;
+  padding-bottom: 2em;
+  background-color: #fff;
+  border-bottom: 1px solid #F5F3F7;
 }
-header div.site-logo a {
-  text-decoration: none;
-  font-family: "Damion", cursive;
-  font-size: 2em;
-  color: #5EAA78
-}   
-
-/*header div.site-logo::before {
-  content: " ";
-  float: left;
-  text-decoration: none;
-  font-size: 1.5em;
-
-  display: block;
-  width: 49px;
-  height: 39px;
-  background-image: url(/img/mount.svg);
-  background-size: 49px 39px;
-}*/
+  header div.site-logo a {
+    text-decoration: none;
+    font-family: 'Gotu','Damion', cursive;
+    font-size: 1.3em;
+    color: #5EAA78;
+    line-height: .9
+  }   
+    header div.site-logo::before {
+      content: " ";
+      float: left;
+      text-decoration: none;
+      font-size: 1.5em;
+      display: block;
+      width: 30px;
+      height: 30px;
+      background-image: url(/img/mount.svg);
+      background-size: 30px 30px;
+    }
 
 
 nav {
@@ -333,11 +353,12 @@ nav {
       list-style: none;
 
       display: flex;
+      line-height: .9;
       flex: 0 0 auto;
     }
     nav ul.nav-menu li a {
       /*text-decoration: none;*/
-      padding-top: .7em;
+      /*padding-top: .5em;*/
       /*color: #F4F8F8;*/
     }
 
@@ -346,17 +367,11 @@ nav {
         position: absolute;
         left: 51%;
         right: 51%;
-        top: -20px;
+        top: -36px;
         background-color: #5EAA78;
         height: 1px;
-        -ms-transition-property: left,right;
-        -webkit-transition-property: left,right;
         transition-property: left,right;
-        -ms-transition-duration: .3s;
-        -webkit-transition-duration: .3s;
-        transition-duration: .3s;
-        -ms-transition-timing-function: ease-out;
-        -webkit-transition-timing-function: ease-out;
+        transition-duration: .2s;
         transition-timing-function: ease-out;
       }
       nav ul.nav-menu li a.active:before,
@@ -367,9 +382,16 @@ nav {
 @media only screen and (max-width: 800px) {
 
   header div.site-logo a {
-    font-size: 1.4em;
+    font-size: 1em;
     word-wrap: normal;
   }
+  nav ul.nav-menu li {
+    font-size: .9em;
+    margin-left: 1em;
+  }
+    nav ul.nav-menu li a {
+      padding-top: .4em;
+    }
 
 }
 
@@ -396,8 +418,6 @@ section.theme--dark {
     margin-bottom: .5em;
    }
 
-}
-
 
 
 
@@ -414,12 +434,21 @@ section.case-study h4 span {
   padding: .4em .8em;
   background-color: #5EAA78;
   color: #fff;
-  border
 }
 
 
 /* Serices: UI
 -------------------------------------------------- */
+/*
+.img-greyscale img {
+  filter: grayscale(100%);
+  opacity: .8;
+  transition: all .15s;
+}
+  .img-greyscale img:hover {
+    filter: grayscale(0%);
+    opacity: 1
+  }*/
 
 .ui-thumb {
   padding: 5em 0;
@@ -463,31 +492,48 @@ section.case-study h4 span {
 /* Gift page 
 -------------------------------------------------- */
 
-section.gift-text h1 {
-  font-size: 9em;
-  font-size: 14vw;
-  margin-top: 15%;
-  margin-bottom: 0;
-  font-family: 'Martel', sans-serif;
-
-  background: url('/img/trees.jpg') no-repeat;
-  background-clip: text;
-  -webkit-background-clip: text;
-  color: rgba(0,0,0,.2);
-  padding: 25px 50px 10px 0;
-  background-size: cover;
-  background-position: center; 
+section.gift {
+  overflow: hidden;
 }
 
-section.gift-text p {
-  font-size: 11vw;
-  margin-top: -.4em;
-  margin-left: .2em;
-  letter-spacing: -2px;
-  white-space: nowrap;
-}
+  section.gift-text h1 {
+    font-size: 9em;
+    font-size: 14vw;
+    margin-top: 15%;
+    margin-bottom: 0;
+    font-family: 'Martel', sans-serif;
 
+    background: url('/img/trees.jpg') no-repeat;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: rgba(0,0,0,.2);
+    padding: 25px 50px 10px 0;
+    background-size: cover;
+    background-position: center; 
+  }
 
+  section.gift-text p {
+    font-size: 11vw;
+    margin-top: -.4em;
+    margin-left: .2em;
+    letter-spacing: -2px;
+    white-space: nowrap;
+  }
+
+/* Inner Pages
+-------------------------------------------------- */
+  body > main {
+    display: block;
+  }
+
+/*  body > main::before {
+    background: linear-gradient(to bottom, rgba(255,255,255,0) 0%,rgba(255,255,255,1) 100%), url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 80 40' width='80' height='40'%3E%3Cpath fill='%23e8e5ed' fill-opacity='0.4' d='M0 40a19.96 19.96 0 0 1 5.9-14.11 20.17 20.17 0 0 1 19.44-5.2A20 20 0 0 1 20.2 40H0zM65.32.75A20.02 20.02 0 0 1 40.8 25.26 20.02 20.02 0 0 1 65.32.76zM.07 0h20.1l-.08.07A20.02 20.02 0 0 1 .75 5.25 20.08 20.08 0 0 1 .07 0zm1.94 40h2.53l4.26-4.24v-9.78A17.96 17.96 0 0 0 2 40zm5.38 0h9.8a17.98 17.98 0 0 0 6.67-16.42L7.4 40zm3.43-15.42v9.17l11.62-11.59c-3.97-.5-8.08.3-11.62 2.42zm32.86-.78A18 18 0 0 0 63.85 3.63L43.68 23.8zm7.2-19.17v9.15L62.43 2.22c-3.96-.5-8.05.3-11.57 2.4zm-3.49 2.72c-4.1 4.1-5.81 9.69-5.13 15.03l6.61-6.6V6.02c-.51.41-1 .85-1.48 1.33zM17.18 0H7.42L3.64 3.78A18 18 0 0 0 17.18 0zM2.08 0c-.01.8.04 1.58.14 2.37L4.59 0H2.07z'%3E%3C/path%3E%3C/svg%3E")0 50% repeat;
+    width: 100%;
+    height: 300px;
+    content: "";
+    position: absolute;
+    display: block;
+  }*/
 
 /* Homepage 
 -------------------------------------------------- */
@@ -510,35 +556,25 @@ section.gift-text p {
     background: radial-gradient(at bottom center, circle 400px, #FFF583, #2A3748);
   }
 
-  .hero h1  {
-    /*color: #fff;*/
-    /*margin: 0 0 -.2em 0;*/
-    /*font-size: 7.3vw;*/
-  }
   .hero img {
     vertical-align: bottom;
     display: table-cell;
   }
-
+  section.specialties {
+    background: linear-gradient(to bottom, rgba(255,255,255,0) 0%,rgba(255,255,255,1) 100%), url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 80 40' width='80' height='40'%3E%3Cpath fill='%23e8e5ed' fill-opacity='0.4' d='M0 40a19.96 19.96 0 0 1 5.9-14.11 20.17 20.17 0 0 1 19.44-5.2A20 20 0 0 1 20.2 40H0zM65.32.75A20.02 20.02 0 0 1 40.8 25.26 20.02 20.02 0 0 1 65.32.76zM.07 0h20.1l-.08.07A20.02 20.02 0 0 1 .75 5.25 20.08 20.08 0 0 1 .07 0zm1.94 40h2.53l4.26-4.24v-9.78A17.96 17.96 0 0 0 2 40zm5.38 0h9.8a17.98 17.98 0 0 0 6.67-16.42L7.4 40zm3.43-15.42v9.17l11.62-11.59c-3.97-.5-8.08.3-11.62 2.42zm32.86-.78A18 18 0 0 0 63.85 3.63L43.68 23.8zm7.2-19.17v9.15L62.43 2.22c-3.96-.5-8.05.3-11.57 2.4zm-3.49 2.72c-4.1 4.1-5.81 9.69-5.13 15.03l6.61-6.6V6.02c-.51.41-1 .85-1.48 1.33zM17.18 0H7.42L3.64 3.78A18 18 0 0 0 17.18 0zM2.08 0c-.01.8.04 1.58.14 2.37L4.59 0H2.07z'%3E%3C/path%3E%3C/svg%3E")0 50% repeat;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
+    
 section.specialties h1  {
-  margin-bottom: 0
-}
-
-section.gift h2,
-section.intro.halfsies h2 {
-
-}
+    margin-bottom: 0
+  }
 
 section.gift h1,
 section.gift h2 {
   text-align: center;
 }
 
-@media only screen and (max-width: 800px) {
-  .halfsies h2 {
-    font-size: inherit; /* not sure why this isnt working, setting it manually for now */
-    font-size: 2em;
-  }
 
-}
 
