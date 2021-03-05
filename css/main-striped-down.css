@@ -123,16 +123,13 @@ h1 {
   margin-bottom: 1em;
   margin-top: 2em;
   font-family: "Damion", cursive;
+  /*color: #00a6e8*/
 }
 h2 {
   font-size: 3em;
   letter-spacing: -0.025em;
   margin-bottom: .5em;
 }
-  h2.beefy {
-    font-size: 2.8em;
-    margin: 0
-  }
 
 h3 {
   letter-spacing: -0.025em;
@@ -145,6 +142,8 @@ h4 {
   font-size: .8em;
   margin-bottom: .5em;
   text-transform: uppercase;
+  letter-spacing: 2px;
+  opacity: 8;
 }
 
 p {
@@ -161,10 +160,6 @@ p {
   h1 {
     font-size: 3em;
     margin: 2em 0 1em;
-  }
-
-  h2.beefy {
-    font-size: 1.7em; 
   }
   
   h2 {
@@ -263,14 +258,6 @@ nav {
   }
 
 
-footer {
-  padding-top: 4em;
-  padding-bottom: 4em;
-  /*font-size: .8em;*/
-  background-color: #F4F8F8;
-  text-align: center;
-}
-
 section.gift-text {
   margin-bottom: 8em;
 }
@@ -310,28 +297,67 @@ section.gift-text {
 
 }
 
+
+/* Footer
+-------------------------------------------------- */
+
+footer {
+  overflow: hidden;
+  background-color: #F4F8F8;
+  text-align: center;
+  background: #F4F8F8 url(/img/mount.svg) bottom center no-repeat;
+}
+  footer h1 {
+    color: #1BA6E9;
+    font-size: 2.5em;
+    margin-bottom: 0;
+    padding: .5em;
+    background: linear-gradient(to left, #fff583 0%, #1ba6e9 55.17%, #3ea261 100%);
+    background: -webkit-linear-gradient(left, #fff583 0%, #1ba6e9 55.17%, #3ea261 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  footer nav {
+    font-size: .8em;
+    padding: 1em 0;
+  }
+
+
 /* Nav
 -------------------------------------------------- */
 
 header  {
-  padding-top: 2em;
-  padding-bottom: 2em;
   background-color: #fff;
-  border-bottom: 1px solid #F5F3F7;
+  /*border-bottom: 1px solid #F5F3F7;*/
 }
+  footer::after,
+  header::after {
+    content: "";
+    height: 5px;
+    background: linear-gradient(to left, #fff583 0%, #1ba6e9 55.17%, #3ea261 100%);
+    width: 100%;
+    position: relative;
+    display: block;
+  }
+
   header div.site-logo a {
     text-decoration: none;
     font-family: 'Gotu','Damion', cursive;
     font-size: 1.3em;
     color: #5EAA78;
-    line-height: .9
+    line-height: .9;
+    padding-top: 1.5em;
+    padding-bottom: 2em;
+    display: block;
+    float: left;
   }   
     header div.site-logo::before {
       content: " ";
       float: left;
+      position: relative;
+      top: 1em;
       text-decoration: none;
       font-size: 1.5em;
-      display: block;
       width: 30px;
       height: 30px;
       background-image: url(/img/mount.svg);
@@ -351,15 +377,13 @@ nav {
       margin: 0 0 0 2em;
       position: relative;
       list-style: none;
-
       display: flex;
       line-height: .9;
       flex: 0 0 auto;
     }
-    nav ul.nav-menu li a {
-      /*text-decoration: none;*/
-      /*padding-top: .5em;*/
-      /*color: #F4F8F8;*/
+    header nav ul.nav-menu li a{
+      padding-top: 2em;
+      padding-bottom: 2em;
     }
 
       nav ul.nav-menu li a:before {
@@ -367,7 +391,7 @@ nav {
         position: absolute;
         left: 51%;
         right: 51%;
-        top: -36px;
+        top: 0;
         background-color: #5EAA78;
         height: 1px;
         transition-property: left,right;
@@ -390,7 +414,7 @@ nav {
     margin-left: 1em;
   }
     nav ul.nav-menu li a {
-      padding-top: .4em;
+      /*padding-top: .4em;*/
     }
 
 }
@@ -405,7 +429,6 @@ section.theme--dark {
 }
   section.theme--dark p, 
   section.theme--dark li, 
-  section.theme--dark h1, 
   section.theme--dark h2, 
   section.theme--dark h3, 
   section.theme--dark h4, 
@@ -413,6 +436,9 @@ section.theme--dark {
   section.theme--dark a:visited, 
   section.theme--dark a:link {
     color: #fff;
+  }
+  section.theme--dark h1 {
+    color: #FFF583
   }
   section.theme--dark h1 {
     margin-bottom: .5em;
