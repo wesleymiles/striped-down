@@ -13,7 +13,7 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
 
 html {
   font-family: system, -apple-system, ".SFNSText-Regular", "San Francisco", "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", sans-serif;
-  font-size: 18px;
+  font-size: 20px;
   line-height: 1.5;
   background: #fff;
   color: #2a3748;
@@ -34,8 +34,8 @@ body {
 }
   body::before {
 
-    background-color: #ffffff;
-    background: linear-gradient(to bottom, rgba(255,255,255,0) 0%,rgba(255,255,255,1) 100%), url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 80 40' width='80' height='40'%3E%3Cpath fill='%23e8e5ed' fill-opacity='0.4' d='M0 40a19.96 19.96 0 0 1 5.9-14.11 20.17 20.17 0 0 1 19.44-5.2A20 20 0 0 1 20.2 40H0zM65.32.75A20.02 20.02 0 0 1 40.8 25.26 20.02 20.02 0 0 1 65.32.76zM.07 0h20.1l-.08.07A20.02 20.02 0 0 1 .75 5.25 20.08 20.08 0 0 1 .07 0zm1.94 40h2.53l4.26-4.24v-9.78A17.96 17.96 0 0 0 2 40zm5.38 0h9.8a17.98 17.98 0 0 0 6.67-16.42L7.4 40zm3.43-15.42v9.17l11.62-11.59c-3.97-.5-8.08.3-11.62 2.42zm32.86-.78A18 18 0 0 0 63.85 3.63L43.68 23.8zm7.2-19.17v9.15L62.43 2.22c-3.96-.5-8.05.3-11.57 2.4zm-3.49 2.72c-4.1 4.1-5.81 9.69-5.13 15.03l6.61-6.6V6.02c-.51.41-1 .85-1.48 1.33zM17.18 0H7.42L3.64 3.78A18 18 0 0 0 17.18 0zM2.08 0c-.01.8.04 1.58.14 2.37L4.59 0H2.07z'%3E%3C/path%3E%3C/svg%3E")0 50% repeat;
+    /*background-color: #ffffff;*/
+    /*background: linear-gradient(to bottom, rgba(255,255,255,0) 0%,rgba(255,255,255,1) 100%), url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 80 40' width='80' height='40'%3E%3Cpath fill='%23e8e5ed' fill-opacity='0.4' d='M0 40a19.96 19.96 0 0 1 5.9-14.11 20.17 20.17 0 0 1 19.44-5.2A20 20 0 0 1 20.2 40H0zM65.32.75A20.02 20.02 0 0 1 40.8 25.26 20.02 20.02 0 0 1 65.32.76zM.07 0h20.1l-.08.07A20.02 20.02 0 0 1 .75 5.25 20.08 20.08 0 0 1 .07 0zm1.94 40h2.53l4.26-4.24v-9.78A17.96 17.96 0 0 0 2 40zm5.38 0h9.8a17.98 17.98 0 0 0 6.67-16.42L7.4 40zm3.43-15.42v9.17l11.62-11.59c-3.97-.5-8.08.3-11.62 2.42zm32.86-.78A18 18 0 0 0 63.85 3.63L43.68 23.8zm7.2-19.17v9.15L62.43 2.22c-3.96-.5-8.05.3-11.57 2.4zm-3.49 2.72c-4.1 4.1-5.81 9.69-5.13 15.03l6.61-6.6V6.02c-.51.41-1 .85-1.48 1.33zM17.18 0H7.42L3.64 3.78A18 18 0 0 0 17.18 0zM2.08 0c-.01.8.04 1.58.14 2.37L4.59 0H2.07z'%3E%3C/path%3E%3C/svg%3E")0 50% repeat;*/
     content: "";
     height: 100%;
     width: 100%;
@@ -48,26 +48,41 @@ body {
     z-index: -1;
   }
 
-
+hr {
+    height: 2px;
+    background: #FFF583;
+    border: 0;
+    margin: 2em 0;
+}
 ol, ul {
   padding-left: 2em;
   padding-inline-start: 2em;
 }
 li {
   line-height: 1.2;
-  margin-bottom: 1em;
+  margin-bottom: 1.5em;
 }
   li + p {
     margin-top: -.7em;
   }
 
+  .checks li {
+    list-style: none;
+  }
+    .checks li:before {
+      content: '✓  ';
+      color: #3ea261;
+      font-weight: bold;
+      margin-left: -21px;
+    }
+
 blockquote p {
   font-style: italic;
-  font-family: Georgia,"Book Antiqua","Palatino Linotype", Palatino, Palladio, "URW Palladio L", Baskerville, "Bookman Old Style", "Bitstream Charter", "Nimbus Roman No9 L", Garamond, "Apple Garamond", "ITC Garamond Narrow", "New Century Schoolbook", "Century Schoolbook", "Century Schoolbook L", Georgia, serif;
+  font-family: 'Space Grotesk',Georgia,"Book Antiqua","Palatino Linotype", Palatino, Palladio, "URW Palladio L", Baskerville, "Bookman Old Style", "Bitstream Charter", "Nimbus Roman No9 L", Garamond, "Apple Garamond", "ITC Garamond Narrow", "New Century Schoolbook", "Century Schoolbook", "Century Schoolbook L", Georgia, serif;
   font-size: 1.2em;
   margin-bottom: 4em;
   margin-top: 4em;
-  border-left: #5EAA78 1px solid;
+  border-left: #5EAA78 2px solid;
   padding-left: 2em;
 }
 
@@ -78,6 +93,10 @@ blockquote p {
   blockquote cite::before {
     content:'\2014';
   }
+
+a.external:after {
+    content:' ↗';
+}
 
 p.caption {
   font-size: .7em;
@@ -110,19 +129,18 @@ audio, canvas, progress, video {
 /* Fonts
 -------------------------------------------------- */
 
-h1, h2, h3 {
-  font-family: 'Gotu', 'Martel', Georgia,"Book Antiqua","Palatino Linotype", Palatino, Palladio, "URW Palladio L", Baskerville, "Bookman Old Style", "Bitstream Charter", "Nimbus Roman No9 L", Garamond, "Apple Garamond", "ITC Garamond Narrow", "New Century Schoolbook", "Century Schoolbook", "Century Schoolbook L", Georgia, serif;
-  line-height: 1.2;
+h1, h2, h3, h4 {
+  font-family: 'Space Grotesk', 'Gotu', 'Martel', Georgia,"Book Antiqua","Palatino Linotype", Palatino, Palladio, "URW Palladio L", Baskerville, "Bookman Old Style", "Bitstream Charter", "Nimbus Roman No9 L", Garamond, "Apple Garamond", "ITC Garamond Narrow", "New Century Schoolbook", "Century Schoolbook", "Century Schoolbook L", Georgia, serif;
+  line-height: 1;
   margin-top: 1.5em;
   font-weight: normal;
 }
 
 h1 {
-  font-size: 5em;
+  font-size: 3.8em;
   line-height: .8;
   margin-bottom: 1em;
   margin-top: 2em;
-  font-family: "Damion", cursive;
   /*color: #00a6e8*/
 }
 h2 {
@@ -133,17 +151,19 @@ h2 {
 
 h3 {
   letter-spacing: -0.025em;
-  font-size: 2em;
-  margin-bottom: .2em;
+  font-size: 1.3em;
+  margin-bottom: 1em;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 2px;
 }
 
 h4 {
   font-weight: normal;
-  font-size: .8em;
+  font-size: 1em;
   margin-bottom: .5em;
   text-transform: uppercase;
   letter-spacing: 2px;
-  opacity: 8;
 }
 
 p {
@@ -176,8 +196,31 @@ p {
 /* Layout 
 -------------------------------------------------- */
 
+section {
+  position: relative;
+  margin: 0 auto;
+  padding: 4em 5%;
+}
 
-/* narrow content container */
+footer,
+header.mast {
+  padding-top: 0;
+  padding-bottom: 0;
+  position: relative;
+  padding: 0 5%;
+  margin: 0 auto;
+}
+
+.align--left {
+  max-width: 800px;
+}
+
+.align--center {
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 nav,
 .hero div,
 main.content-main,
@@ -217,6 +260,14 @@ main.content-main,
 footer,
 nav {
   max-width: inherit;
+}
+
+ul.halfsies {
+  columns: 2;
+  display: inherit;
+}
+  ul.halfsies li {
+    padding-right: 7%;
 }
 
 .halfsies {
@@ -297,16 +348,47 @@ section.gift-text {
 
 }
 
+/* Header
+-------------------------------------------------- */
+
+
+header.mast .site-logo {
+  margin-top: 2em;
+}
+
+  header.mast .site-logo a {
+    text-decoration: none;
+  }
+  header.mast .site-logo span {
+    text-decoration: none;
+
+  } 
+  header.mast .site-logo img {
+    display: block;
+    width: 80px;
+  }
+
+  footer::after,
+  header::before {
+    content: "";
+    height: 5px;
+    background: linear-gradient(to left, #fff583 0%, #1ba6e9 55.17%, #3ea261 100%);
+    width: 100%;
+    position: relative;
+    display: block;
+  }
 
 /* Footer
 -------------------------------------------------- */
 
 footer {
-  overflow: hidden;
   background-color: #F4F8F8;
   text-align: center;
   background: #F4F8F8 url(/img/mount.svg) bottom center no-repeat;
+  padding-top: 3em;
+  margin-top: 3em
 }
+
   footer h1 {
     color: #1BA6E9;
     font-size: 2.5em;
@@ -317,53 +399,25 @@ footer {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
-  footer nav {
-    font-size: .8em;
-    padding: 1em 0;
+  footer h4 {
+    margin-top: 0
   }
 
+  footer nav {
+    font-size: .8em;
+    padding: 5em 0 1em;
+  }
+  footer picture.avatar {
+    margin-top: -8em;
+    margin-bottom: -3em;
+    display: block;
+  }
+    footer picture.avatar img {
+      border-radius: 50%;
+    }
 
 /* Nav
 -------------------------------------------------- */
-
-header  {
-  background-color: #fff;
-  /*border-bottom: 1px solid #F5F3F7;*/
-}
-  footer::after,
-  header::after {
-    content: "";
-    height: 5px;
-    background: linear-gradient(to left, #fff583 0%, #1ba6e9 55.17%, #3ea261 100%);
-    width: 100%;
-    position: relative;
-    display: block;
-  }
-
-  header div.site-logo a {
-    text-decoration: none;
-    font-family: 'Gotu','Damion', cursive;
-    font-size: 1.3em;
-    color: #5EAA78;
-    line-height: .9;
-    padding-top: 1.5em;
-    padding-bottom: 2em;
-    display: block;
-    float: left;
-  }   
-    header div.site-logo::before {
-      content: " ";
-      float: left;
-      position: relative;
-      top: 1em;
-      text-decoration: none;
-      font-size: 1.5em;
-      width: 30px;
-      height: 30px;
-      background-image: url(/img/mount.svg);
-      background-size: 30px 30px;
-    }
-
 
 nav {
   display: flex;
@@ -381,12 +435,12 @@ nav {
       line-height: .9;
       flex: 0 0 auto;
     }
-    header nav ul.nav-menu li a{
+/*    header nav ul.nav-menu li a{
       padding-top: 2em;
       padding-bottom: 2em;
-    }
+    }*/
 
-      nav ul.nav-menu li a:before {
+/*      nav ul.nav-menu li a:before {
         content: "";
         position: absolute;
         left: 51%;
@@ -402,8 +456,8 @@ nav {
       nav ul.nav-menu li a:hover:before {
         left: 0;
         right: 0;
-      }
-@media only screen and (max-width: 800px) {
+      }*/
+/*@media only screen and (max-width: 800px) {
 
   header div.site-logo a {
     font-size: 1em;
@@ -413,16 +467,17 @@ nav {
     font-size: .9em;
     margin-left: 1em;
   }
-    nav ul.nav-menu li a {
-      /*padding-top: .4em;*/
-    }
 
 }
 
-
+*/
 
 /* Colored themes
 -------------------------------------------------- */
+section.bg--light {
+  background-color: #F4F8F8
+}
+
 
 section.theme--dark {
   background-color: #2A3748;
@@ -518,9 +573,9 @@ section.case-study h4 span {
 /* Gift page 
 -------------------------------------------------- */
 
-section.gift {
+/*section.gift {
   overflow: hidden;
-}
+}*/
 
   section.gift-text h1 {
     font-size: 9em;
@@ -552,55 +607,50 @@ section.gift {
     display: block;
   }
 
-/*  body > main::before {
-    background: linear-gradient(to bottom, rgba(255,255,255,0) 0%,rgba(255,255,255,1) 100%), url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 80 40' width='80' height='40'%3E%3Cpath fill='%23e8e5ed' fill-opacity='0.4' d='M0 40a19.96 19.96 0 0 1 5.9-14.11 20.17 20.17 0 0 1 19.44-5.2A20 20 0 0 1 20.2 40H0zM65.32.75A20.02 20.02 0 0 1 40.8 25.26 20.02 20.02 0 0 1 65.32.76zM.07 0h20.1l-.08.07A20.02 20.02 0 0 1 .75 5.25 20.08 20.08 0 0 1 .07 0zm1.94 40h2.53l4.26-4.24v-9.78A17.96 17.96 0 0 0 2 40zm5.38 0h9.8a17.98 17.98 0 0 0 6.67-16.42L7.4 40zm3.43-15.42v9.17l11.62-11.59c-3.97-.5-8.08.3-11.62 2.42zm32.86-.78A18 18 0 0 0 63.85 3.63L43.68 23.8zm7.2-19.17v9.15L62.43 2.22c-3.96-.5-8.05.3-11.57 2.4zm-3.49 2.72c-4.1 4.1-5.81 9.69-5.13 15.03l6.61-6.6V6.02c-.51.41-1 .85-1.48 1.33zM17.18 0H7.42L3.64 3.78A18 18 0 0 0 17.18 0zM2.08 0c-.01.8.04 1.58.14 2.37L4.59 0H2.07z'%3E%3C/path%3E%3C/svg%3E")0 50% repeat;
-    width: 100%;
-    height: 300px;
-    content: "";
-    position: absolute;
-    display: block;
-  }*/
 
 /* Homepage 
 -------------------------------------------------- */
 
-
-/* eventually tie to homepage only */
-.hero {
-  /*background-color: #2A3748;*/
-}
-  .hero h1 {
-    margin-bottom: 0
-  }
-
-  .hero div {
-    text-align: center;
-    /*padding-top: 4em;*/
-    padding-bottom: 4em;
-
-    /* radial gradient */
-    background: radial-gradient(at bottom center, circle 400px, #FFF583, #2A3748);
-  }
-
-  .hero img {
-    vertical-align: bottom;
-    display: table-cell;
-  }
   section.specialties {
-    background: linear-gradient(to bottom, rgba(255,255,255,0) 0%,rgba(255,255,255,1) 100%), url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 80 40' width='80' height='40'%3E%3Cpath fill='%23e8e5ed' fill-opacity='0.4' d='M0 40a19.96 19.96 0 0 1 5.9-14.11 20.17 20.17 0 0 1 19.44-5.2A20 20 0 0 1 20.2 40H0zM65.32.75A20.02 20.02 0 0 1 40.8 25.26 20.02 20.02 0 0 1 65.32.76zM.07 0h20.1l-.08.07A20.02 20.02 0 0 1 .75 5.25 20.08 20.08 0 0 1 .07 0zm1.94 40h2.53l4.26-4.24v-9.78A17.96 17.96 0 0 0 2 40zm5.38 0h9.8a17.98 17.98 0 0 0 6.67-16.42L7.4 40zm3.43-15.42v9.17l11.62-11.59c-3.97-.5-8.08.3-11.62 2.42zm32.86-.78A18 18 0 0 0 63.85 3.63L43.68 23.8zm7.2-19.17v9.15L62.43 2.22c-3.96-.5-8.05.3-11.57 2.4zm-3.49 2.72c-4.1 4.1-5.81 9.69-5.13 15.03l6.61-6.6V6.02c-.51.41-1 .85-1.48 1.33zM17.18 0H7.42L3.64 3.78A18 18 0 0 0 17.18 0zM2.08 0c-.01.8.04 1.58.14 2.37L4.59 0H2.07z'%3E%3C/path%3E%3C/svg%3E")0 50% repeat;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
+    display: flex;
+    /*background: linear-gradient(to bottom, rgba(255,255,255,0) 0%,rgba(255,255,255,1) 100%), url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 80 40' width='80' height='40'%3E%3Cpath fill='%23e8e5ed' fill-opacity='0.4' d='M0 40a19.96 19.96 0 0 1 5.9-14.11 20.17 20.17 0 0 1 19.44-5.2A20 20 0 0 1 20.2 40H0zM65.32.75A20.02 20.02 0 0 1 40.8 25.26 20.02 20.02 0 0 1 65.32.76zM.07 0h20.1l-.08.07A20.02 20.02 0 0 1 .75 5.25 20.08 20.08 0 0 1 .07 0zm1.94 40h2.53l4.26-4.24v-9.78A17.96 17.96 0 0 0 2 40zm5.38 0h9.8a17.98 17.98 0 0 0 6.67-16.42L7.4 40zm3.43-15.42v9.17l11.62-11.59c-3.97-.5-8.08.3-11.62 2.42zm32.86-.78A18 18 0 0 0 63.85 3.63L43.68 23.8zm7.2-19.17v9.15L62.43 2.22c-3.96-.5-8.05.3-11.57 2.4zm-3.49 2.72c-4.1 4.1-5.81 9.69-5.13 15.03l6.61-6.6V6.02c-.51.41-1 .85-1.48 1.33zM17.18 0H7.42L3.64 3.78A18 18 0 0 0 17.18 0zM2.08 0c-.01.8.04 1.58.14 2.37L4.59 0H2.07z'%3E%3C/path%3E%3C/svg%3E")0 50% repeat;*/
+    position: relative;
+    padding: 1em 0% 3em 5%;
   }
-    
-section.specialties h1  {
-    margin-bottom: 0
+
+  section.specialties picture {
+    margin-top: -6em;
+    margin-bottom: -8em;
+    max-width: 800px;
+    min-width: 40%;
+
+    /* ignoring the height, so the parent can let it overflow out of it */
+    flex-basis: content;
   }
 
 section.gift h1,
-section.gift h2 {
+section.gift h3 {
   text-align: center;
 }
 
+section.specialties h3 {
+  margin-top: 3em;
+}
 
+section.gift h1 {
+  margin-bottom: .2em;
+}
+
+
+
+@media only screen and (max-width: 600px) {
+
+  section.specialties { overflow: hidden; }
+  section.specialties picture {
+      margin-top: 0;
+      min-width: 80%;
+      margin-right: -49%;
+  }
+
+}
 

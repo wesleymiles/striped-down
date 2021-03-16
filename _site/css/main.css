@@ -1,0 +1,656 @@
+
+
+
+/* Reset
+-------------------------------------------------- */
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, cite, code, em, img, small, strong, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, section, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    vertical-align: baseline;
+}
+
+html {
+  font-family: system, -apple-system, ".SFNSText-Regular", "San Francisco", "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", sans-serif;
+  font-size: 20px;
+  line-height: 1.5;
+  background: #fff;
+  color: #2a3748;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  font-variant-ligatures: common-ligatures;
+  font-feature-settings: "liga","clig";
+}
+
+*,html,body {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+  body::before {
+
+    /*background-color: #ffffff;*/
+    /*background: linear-gradient(to bottom, rgba(255,255,255,0) 0%,rgba(255,255,255,1) 100%), url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 80 40' width='80' height='40'%3E%3Cpath fill='%23e8e5ed' fill-opacity='0.4' d='M0 40a19.96 19.96 0 0 1 5.9-14.11 20.17 20.17 0 0 1 19.44-5.2A20 20 0 0 1 20.2 40H0zM65.32.75A20.02 20.02 0 0 1 40.8 25.26 20.02 20.02 0 0 1 65.32.76zM.07 0h20.1l-.08.07A20.02 20.02 0 0 1 .75 5.25 20.08 20.08 0 0 1 .07 0zm1.94 40h2.53l4.26-4.24v-9.78A17.96 17.96 0 0 0 2 40zm5.38 0h9.8a17.98 17.98 0 0 0 6.67-16.42L7.4 40zm3.43-15.42v9.17l11.62-11.59c-3.97-.5-8.08.3-11.62 2.42zm32.86-.78A18 18 0 0 0 63.85 3.63L43.68 23.8zm7.2-19.17v9.15L62.43 2.22c-3.96-.5-8.05.3-11.57 2.4zm-3.49 2.72c-4.1 4.1-5.81 9.69-5.13 15.03l6.61-6.6V6.02c-.51.41-1 .85-1.48 1.33zM17.18 0H7.42L3.64 3.78A18 18 0 0 0 17.18 0zM2.08 0c-.01.8.04 1.58.14 2.37L4.59 0H2.07z'%3E%3C/path%3E%3C/svg%3E")0 50% repeat;*/
+    content: "";
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    display: block;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    display: block;
+    z-index: -1;
+  }
+
+hr {
+    height: 2px;
+    background: #FFF583;
+    border: 0;
+    margin: 2em 0;
+}
+ol, ul {
+  padding-left: 2em;
+  padding-inline-start: 2em;
+}
+li {
+  line-height: 1.2;
+  margin-bottom: 1.5em;
+}
+  li + p {
+    margin-top: -.7em;
+  }
+
+  .checks li {
+    list-style: none;
+  }
+    .checks li:before {
+      content: '✓  ';
+      color: #3ea261;
+      font-weight: bold;
+      margin-left: -21px;
+    }
+
+blockquote p {
+  font-style: italic;
+  font-family: 'Space Grotesk',Georgia,"Book Antiqua","Palatino Linotype", Palatino, Palladio, "URW Palladio L", Baskerville, "Bookman Old Style", "Bitstream Charter", "Nimbus Roman No9 L", Garamond, "Apple Garamond", "ITC Garamond Narrow", "New Century Schoolbook", "Century Schoolbook", "Century Schoolbook L", Georgia, serif;
+  font-size: 1.2em;
+  margin-bottom: 4em;
+  margin-top: 4em;
+  border-left: #5EAA78 2px solid;
+  padding-left: 2em;
+}
+
+  blockquote cite {
+    margin-top: 1em;
+    display: block;
+  }
+  blockquote cite::before {
+    content:'\2014';
+  }
+
+a.external:after {
+    content:' ↗';
+}
+
+p.caption {
+  font-size: .7em;
+  margin-bottom: 3em;
+ }
+
+a:link, a:visited {
+  color: #4D5151;
+  transition: all .2s;
+}
+a:hover, a:active {
+  color: #5EAA78;
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+video {
+  box-shadow: 0 2px 8px rgba(0,0,0,.3);
+  width: 100%;
+}
+audio, canvas, progress, video {
+  display: inline-block;
+  vertical-align: baseline;
+}
+
+
+/* Fonts
+-------------------------------------------------- */
+
+h1, h2, h3, h4 {
+  font-family: 'Space Grotesk', 'Gotu', 'Martel', Georgia,"Book Antiqua","Palatino Linotype", Palatino, Palladio, "URW Palladio L", Baskerville, "Bookman Old Style", "Bitstream Charter", "Nimbus Roman No9 L", Garamond, "Apple Garamond", "ITC Garamond Narrow", "New Century Schoolbook", "Century Schoolbook", "Century Schoolbook L", Georgia, serif;
+  line-height: 1;
+  margin-top: 1.5em;
+  font-weight: normal;
+}
+
+h1 {
+  font-size: 3.8em;
+  line-height: .8;
+  margin-bottom: 1em;
+  margin-top: 2em;
+  /*color: #00a6e8*/
+}
+h2 {
+  font-size: 3em;
+  letter-spacing: -0.025em;
+  margin-bottom: .5em;
+}
+
+h3 {
+  letter-spacing: -0.025em;
+  font-size: 1.3em;
+  margin-bottom: 1em;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+h4 {
+  font-weight: normal;
+  font-size: 1em;
+  margin-bottom: .5em;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+p {
+  margin-bottom: 1em;
+}
+
+
+@media only screen and (max-width: 800px) {
+
+  html {
+    font-size: 18px;
+  }
+
+  h1 {
+    font-size: 3em;
+    margin: 2em 0 1em;
+  }
+  
+  h2 {
+    font-size: 1.5em; 
+  }
+
+ h3 {
+    font-size: 1.2em; 
+  }
+
+}
+
+
+/* Layout 
+-------------------------------------------------- */
+
+section {
+  position: relative;
+  margin: 0 auto;
+  padding: 4em 5%;
+}
+
+footer,
+header.mast {
+  padding-top: 0;
+  padding-bottom: 0;
+  position: relative;
+  padding: 0 5%;
+  margin: 0 auto;
+}
+
+.align--left {
+  max-width: 800px;
+}
+
+.align--center {
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+nav,
+.hero div,
+main.content-main,
+.content-inner,
+.content-container {
+  position: relative;
+  margin: 0 auto;
+  max-width: 800px;
+  width: 90%;
+}
+
+.content-container {
+  margin-bottom: 5em;
+}
+
+  .content-container.--right {
+    padding-left: 20%;
+    padding-right: 20%;
+    max-width: inherit;
+    /*border-left: 10px solid #F4F8F8;*/
+    /*border-right: 10px solid #F4F8F8;*/
+  }
+
+  .content-container.--left {
+    padding-right: 40%;
+    max-width: inherit;
+  }
+
+
+
+  .content-inner {
+    padding-bottom: 3em
+  }
+
+
+/* wide content container */
+footer,
+nav {
+  max-width: inherit;
+}
+
+ul.halfsies {
+  columns: 2;
+  display: inherit;
+}
+  ul.halfsies li {
+    padding-right: 7%;
+}
+
+.halfsies {
+  display: flex;
+}
+  .halfsies > .halfsies-inner {
+    display: flex;
+  }
+  .halfsies > div {
+    flex: 1;
+  }
+
+  .halfsies .left-half,
+  .halfsies .right-half {
+    flex: 1;
+    padding: 8em 4em;
+  }
+  .halfsies .left-half h1,
+  .halfsies .right-half h1 { 
+    margin-top: 0;
+   }
+
+/* homepage */
+.intro.halfsies {
+  flex-direction: column;
+  justify-content: center;
+}
+  .intro.halfsies > div {
+    display: flex;
+  }
+
+  .intro.halfsies .left-half {
+    background-color: #F4F8F8
+  }
+  .intro.halfsies .right-half {
+    background: url(/img/wes@2x.jpg);
+    background-size: cover;
+    background-position: center center;
+  }
+
+
+section.gift-text {
+  margin-bottom: 8em;
+}
+
+
+@media only screen and (max-width: 800px) {
+
+
+  .content-container {
+    margin-bottom: 3em;
+  }
+
+  .content-container.--right,
+  .content-container.--left {
+    padding-right: 0;
+    padding-left: 0;
+  }
+
+  .intro.halfsies > div,
+  .halfsies > div {
+    display: block;
+  }
+
+  .halfsies .right-half {
+    padding-bottom: 12em;
+    background-position: top;
+  }
+
+  .halfsies .left-half {
+    padding-right: 4%;
+    padding-left: 4%;
+  }
+
+  .content-container.--left {
+    padding-right: inherit;
+  }
+
+}
+
+/* Header
+-------------------------------------------------- */
+
+
+header.mast .site-logo {
+  margin-top: 2em;
+}
+
+  header.mast .site-logo a {
+    text-decoration: none;
+  }
+  header.mast .site-logo span {
+    text-decoration: none;
+
+  } 
+  header.mast .site-logo img {
+    display: block;
+    width: 80px;
+  }
+
+  footer::after,
+  header::before {
+    content: "";
+    height: 5px;
+    background: linear-gradient(to left, #fff583 0%, #1ba6e9 55.17%, #3ea261 100%);
+    width: 100%;
+    position: relative;
+    display: block;
+  }
+
+/* Footer
+-------------------------------------------------- */
+
+footer {
+  background-color: #F4F8F8;
+  text-align: center;
+  background: #F4F8F8 url(/img/mount.svg) bottom center no-repeat;
+  padding-top: 3em;
+  margin-top: 3em
+}
+
+  footer h1 {
+    color: #1BA6E9;
+    font-size: 2.5em;
+    margin-bottom: 0;
+    padding: .5em;
+    background: linear-gradient(to left, #fff583 0%, #1ba6e9 55.17%, #3ea261 100%);
+    background: -webkit-linear-gradient(left, #fff583 0%, #1ba6e9 55.17%, #3ea261 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  footer h4 {
+    margin-top: 0
+  }
+
+  footer nav {
+    font-size: .8em;
+    padding: 5em 0 1em;
+  }
+  footer picture.avatar {
+    margin-top: -8em;
+    margin-bottom: -3em;
+    display: block;
+  }
+    footer picture.avatar img {
+      border-radius: 50%;
+    }
+
+/* Nav
+-------------------------------------------------- */
+
+nav {
+  display: flex;
+  justify-content: space-between;
+}
+  nav ul.nav-menu {
+    display: flex;
+    padding: 0;
+  }
+    nav ul.nav-menu li {
+      margin: 0 0 0 2em;
+      position: relative;
+      list-style: none;
+      display: flex;
+      line-height: .9;
+      flex: 0 0 auto;
+    }
+/*    header nav ul.nav-menu li a{
+      padding-top: 2em;
+      padding-bottom: 2em;
+    }*/
+
+/*      nav ul.nav-menu li a:before {
+        content: "";
+        position: absolute;
+        left: 51%;
+        right: 51%;
+        top: 0;
+        background-color: #5EAA78;
+        height: 1px;
+        transition-property: left,right;
+        transition-duration: .2s;
+        transition-timing-function: ease-out;
+      }
+      nav ul.nav-menu li a.active:before,
+      nav ul.nav-menu li a:hover:before {
+        left: 0;
+        right: 0;
+      }*/
+/*@media only screen and (max-width: 800px) {
+
+  header div.site-logo a {
+    font-size: 1em;
+    word-wrap: normal;
+  }
+  nav ul.nav-menu li {
+    font-size: .9em;
+    margin-left: 1em;
+  }
+
+}
+
+*/
+
+/* Colored themes
+-------------------------------------------------- */
+section.bg--light {
+  background-color: #F4F8F8
+}
+
+
+section.theme--dark {
+  background-color: #2A3748;
+}
+  section.theme--dark p, 
+  section.theme--dark li, 
+  section.theme--dark h2, 
+  section.theme--dark h3, 
+  section.theme--dark h4, 
+  section.theme--dark a, 
+  section.theme--dark a:visited, 
+  section.theme--dark a:link {
+    color: #fff;
+  }
+  section.theme--dark h1 {
+    color: #FFF583
+  }
+  section.theme--dark h1 {
+    margin-bottom: .5em;
+   }
+
+
+
+
+
+/* Work page 
+-------------------------------------------------- */
+
+section.case-study h4 span {
+  display: inline-block;
+  margin-bottom: 1em;
+  /*margin-left: 1em;*/
+  /*border-left: solid 1px #333;*/
+  /*padding-left: 1em;*/
+  padding: .4em .8em;
+  background-color: #5EAA78;
+  color: #fff;
+}
+
+
+/* Serices: UI
+-------------------------------------------------- */
+/*
+.img-greyscale img {
+  filter: grayscale(100%);
+  opacity: .8;
+  transition: all .15s;
+}
+  .img-greyscale img:hover {
+    filter: grayscale(0%);
+    opacity: 1
+  }*/
+
+.ui-thumb {
+  padding: 5em 0;
+}
+  .ui-thumb h2 {
+    text-align: center;
+  }
+  .ui-thumb img {
+    box-shadow: 0 3px 50px rgba(0,0,0,.15);
+    margin-bottom: 1em;
+  }
+
+  .ui-thumb.--green {
+    background-color: #CCD52C;
+  }
+  .ui-thumb.--green h2,
+  .ui-thumb.--green p,
+  .ui-thumb.--green a {
+    color: #064864;
+  }
+
+  .ui-thumb.--teal {
+    background-color: #1AACA2;
+  }
+  .ui-thumb.--teal h2,
+  .ui-thumb.--teal p,
+  .ui-thumb.--teal a {
+    color: #fff;
+  }
+
+  .ui-thumb.--blue {
+    background-color: #0E3563;
+  }
+  .ui-thumb.--blue h2,
+  .ui-thumb.--blue p,
+  .ui-thumb.--blue a {
+    color: #fff;
+  }
+
+
+/* Gift page 
+-------------------------------------------------- */
+
+/*section.gift {
+  overflow: hidden;
+}*/
+
+  section.gift-text h1 {
+    font-size: 9em;
+    font-size: 14vw;
+    margin-top: 15%;
+    margin-bottom: 0;
+    font-family: 'Martel', sans-serif;
+
+    background: url('/img/trees.jpg') no-repeat;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: rgba(0,0,0,.2);
+    padding: 25px 50px 10px 0;
+    background-size: cover;
+    background-position: center; 
+  }
+
+  section.gift-text p {
+    font-size: 11vw;
+    margin-top: -.4em;
+    margin-left: .2em;
+    letter-spacing: -2px;
+    white-space: nowrap;
+  }
+
+/* Inner Pages
+-------------------------------------------------- */
+  body > main {
+    display: block;
+  }
+
+
+/* Homepage 
+-------------------------------------------------- */
+
+  section.specialties {
+    display: flex;
+    /*background: linear-gradient(to bottom, rgba(255,255,255,0) 0%,rgba(255,255,255,1) 100%), url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 80 40' width='80' height='40'%3E%3Cpath fill='%23e8e5ed' fill-opacity='0.4' d='M0 40a19.96 19.96 0 0 1 5.9-14.11 20.17 20.17 0 0 1 19.44-5.2A20 20 0 0 1 20.2 40H0zM65.32.75A20.02 20.02 0 0 1 40.8 25.26 20.02 20.02 0 0 1 65.32.76zM.07 0h20.1l-.08.07A20.02 20.02 0 0 1 .75 5.25 20.08 20.08 0 0 1 .07 0zm1.94 40h2.53l4.26-4.24v-9.78A17.96 17.96 0 0 0 2 40zm5.38 0h9.8a17.98 17.98 0 0 0 6.67-16.42L7.4 40zm3.43-15.42v9.17l11.62-11.59c-3.97-.5-8.08.3-11.62 2.42zm32.86-.78A18 18 0 0 0 63.85 3.63L43.68 23.8zm7.2-19.17v9.15L62.43 2.22c-3.96-.5-8.05.3-11.57 2.4zm-3.49 2.72c-4.1 4.1-5.81 9.69-5.13 15.03l6.61-6.6V6.02c-.51.41-1 .85-1.48 1.33zM17.18 0H7.42L3.64 3.78A18 18 0 0 0 17.18 0zM2.08 0c-.01.8.04 1.58.14 2.37L4.59 0H2.07z'%3E%3C/path%3E%3C/svg%3E")0 50% repeat;*/
+    position: relative;
+    padding: 1em 0% 3em 5%;
+  }
+
+  section.specialties picture {
+    margin-top: -6em;
+    margin-bottom: -8em;
+    max-width: 800px;
+    min-width: 40%;
+
+    /* ignoring the height, so the parent can let it overflow out of it */
+    flex-basis: content;
+  }
+
+section.gift h1,
+section.gift h3 {
+  text-align: center;
+}
+
+section.specialties h3 {
+  margin-top: 3em;
+}
+
+section.gift h1 {
+  margin-bottom: .2em;
+}
+
+
+
+@media only screen and (max-width: 600px) {
+
+  section.specialties { overflow: hidden; }
+  section.specialties picture {
+      margin-top: 0;
+      min-width: 80%;
+      margin-right: -49%;
+  }
+
+}
+

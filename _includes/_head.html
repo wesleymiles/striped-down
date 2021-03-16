@@ -5,20 +5,24 @@
     <meta name="robots" content="noindex,nofollow">		
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ title }} — Wes Carr</title>
-    <link rel="stylesheet" href="{{ '/css/main-striped-down.css' | url }}">
+    <link rel="stylesheet" href="{{ '/css/main.css' | url }}">
     <link href="https://fonts.googleapis.com/css2?family=Gotu&?family=Damion&family=Martel:wght@900&display=swap" rel="stylesheet"> 
+
+    <link rel="icon" href="/img/favicon.ico"><!-- 32×32 -->
+		<link rel="icon" href="/img/icon.svg" type="image/svg+xml">
+		<link rel="apple-touch-icon" href="/img/apple-touch-icon.png"><!-- 180×180 -->
   </head>
 
 	<body class="{{ title }}">
-		<header>
-			<nav>
+		<header class="mast">
+			<div class="align--left">
 				<div class="site-logo">
-					<a href="/" class="">Wes Carr</a>
+					<a href="/" />
+						<img src="/img/mount.svg" />
+						<span>Wes Carr</span>
+					</a>
 				</div>
-				<ul class="nav-menu">
-					{%- for main-page in collections.main-page -%}
-					  <li><a {% if main-page.url == page.url %} class="active" {% endif %} href="{{ main-page.url }}">{{ main-page.data.title }}</a></li>
-					{%- endfor -%}
-				</ul>
-			</nav>
-	</header>
+			</div>
+		</header>
+
+		<main>
