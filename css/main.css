@@ -269,6 +269,9 @@ ul.halfsies {
 }
   ul.halfsies li {
     padding-right: 7%;
+    -webkit-column-break-inside: avoid;
+    page-break-inside: avoid;
+    break-inside: avoid;
 }
 
 .halfsies {
