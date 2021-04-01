@@ -60,7 +60,8 @@ ol, ul {
 }
 li {
   line-height: 1.2;
-  margin-bottom: 1.5em;
+  margin-bottom: 1em;
+  font-size: .9em;
 }
   li + p {
     margin-top: -.7em;
@@ -290,24 +291,6 @@ ul.halfsies {
     margin-top: 0;
    }
 
-/* homepage */
-.intro.halfsies {
-  flex-direction: column;
-  justify-content: center;
-}
-  .intro.halfsies > div {
-    display: flex;
-  }
-
-  .intro.halfsies .left-half {
-    background-color: #F4F8F8
-  }
-  .intro.halfsies .right-half {
-    background: url(/img/wes@2x.jpg);
-    background-size: cover;
-    background-position: center center;
-  }
-
 
 section.gift-text {
   margin-bottom: 8em;
@@ -386,7 +369,6 @@ footer {
   text-align: center;
   background: #F4F8F8 url(/img/mount.svg) bottom center no-repeat;
   padding-top: 3em;
-  margin-top: 3em
 }
 
   footer h1 {
@@ -416,6 +398,14 @@ footer {
       border-radius: 50%;
     }
 
+/* account for space around avatar */
+
+  body > main {
+    display: block;
+    padding-bottom: 7em;
+  }
+
+
 /* Nav
 -------------------------------------------------- */
 
@@ -435,42 +425,6 @@ nav {
       line-height: .9;
       flex: 0 0 auto;
     }
-/*    header nav ul.nav-menu li a{
-      padding-top: 2em;
-      padding-bottom: 2em;
-    }*/
-
-/*      nav ul.nav-menu li a:before {
-        content: "";
-        position: absolute;
-        left: 51%;
-        right: 51%;
-        top: 0;
-        background-color: #5EAA78;
-        height: 1px;
-        transition-property: left,right;
-        transition-duration: .2s;
-        transition-timing-function: ease-out;
-      }
-      nav ul.nav-menu li a.active:before,
-      nav ul.nav-menu li a:hover:before {
-        left: 0;
-        right: 0;
-      }*/
-/*@media only screen and (max-width: 800px) {
-
-  header div.site-logo a {
-    font-size: 1em;
-    word-wrap: normal;
-  }
-  nav ul.nav-menu li {
-    font-size: .9em;
-    margin-left: 1em;
-  }
-
-}
-
-*/
 
 /* Colored themes
 -------------------------------------------------- */
@@ -520,16 +474,6 @@ section.case-study h4 span {
 
 /* Serices: UI
 -------------------------------------------------- */
-/*
-.img-greyscale img {
-  filter: grayscale(100%);
-  opacity: .8;
-  transition: all .15s;
-}
-  .img-greyscale img:hover {
-    filter: grayscale(0%);
-    opacity: 1
-  }*/
 
 .ui-thumb {
   padding: 5em 0;
@@ -561,7 +505,7 @@ section.case-study h4 span {
   }
 
   .ui-thumb.--blue {
-    background-color: #0E3563;
+    background-color: #0E3563;=
   }
   .ui-thumb.--blue h2,
   .ui-thumb.--blue p,
@@ -569,13 +513,17 @@ section.case-study h4 span {
     color: #fff;
   }
 
+/* account for space around avatar */
+
+  body.UI.Design > main {
+    padding-bottom: 0;
+  }
+  .ui-thumb.--blue {
+    padding-bottom: 7em;
+  }
 
 /* Gift page 
 -------------------------------------------------- */
-
-/*section.gift {
-  overflow: hidden;
-}*/
 
   section.gift-text h1 {
     font-size: 9em;
@@ -601,11 +549,7 @@ section.case-study h4 span {
     white-space: nowrap;
   }
 
-/* Inner Pages
--------------------------------------------------- */
-  body > main {
-    display: block;
-  }
+
 
 
 /* Homepage 
