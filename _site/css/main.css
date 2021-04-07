@@ -79,7 +79,7 @@ li {
 
 blockquote p {
   font-style: italic;
-  font-family: 'Space Grotesk',Georgia,"Book Antiqua","Palatino Linotype", Palatino, Palladio, "URW Palladio L", Baskerville, "Bookman Old Style", "Bitstream Charter", "Nimbus Roman No9 L", Garamond, "Apple Garamond", "ITC Garamond Narrow", "New Century Schoolbook", "Century Schoolbook", "Century Schoolbook L", Georgia, serif;
+  font-family: 'Space Grotesk', Georgia,"Book Antiqua","Palatino Linotype", Palatino, Palladio, "URW Palladio L", Baskerville, "Bookman Old Style", "Bitstream Charter", "Nimbus Roman No9 L", Garamond, "Apple Garamond", "ITC Garamond Narrow", "New Century Schoolbook", "Century Schoolbook", "Century Schoolbook L", Georgia, serif;
   font-size: 1.2em;
   margin-bottom: 4em;
   margin-top: 4em;
@@ -131,7 +131,7 @@ audio, canvas, progress, video {
 -------------------------------------------------- */
 
 h1, h2, h3, h4 {
-  font-family: 'Space Grotesk', 'Gotu', 'Martel', Georgia,"Book Antiqua","Palatino Linotype", Palatino, Palladio, "URW Palladio L", Baskerville, "Bookman Old Style", "Bitstream Charter", "Nimbus Roman No9 L", Garamond, "Apple Garamond", "ITC Garamond Narrow", "New Century Schoolbook", "Century Schoolbook", "Century Schoolbook L", Georgia, serif;
+  font-family: 'Space Grotesk', "Space Generic", Arial, system, -apple-system, ".SFNSText-Regular", "San Francisco", "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", sans-serif;
   line-height: 1;
   margin-top: 1.5em;
   font-weight: normal;
@@ -190,6 +190,13 @@ p {
     font-size: 1.2em; 
   }
 
+}
+
+/* Define the heading fallback font family */
+@font-face {
+  font-family: Space Generic;
+  letter-spacing: 2px;
+  src: local("Arial");
 }
 
 
