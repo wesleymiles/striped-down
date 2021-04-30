@@ -344,7 +344,7 @@ section.gift-text {
 
 
 header.mast .site-logo {
-  margin-top: 2em;
+  margin-top: 1em;
 }
 
   header.mast .site-logo a {
@@ -378,9 +378,9 @@ header.mast .site-logo {
         position: absolute;
         left: 51%;
         right: 51%;
-        top: 0;
-        background-color: #5EAA78;
-        height: 1px;
+        top: -5px;
+        background-color: #fff;
+        height: 5px;
         transition-property: left,right;
         transition-duration: .2s;
         transition-timing-function: ease-out;
@@ -647,6 +647,10 @@ section.case-study h4 span {
     flex-basis: content;
   }
 
+  section.specialties div {
+    padding-right: 3em;
+  }
+
 section.gift h1,
 section.gift h3 {
   text-align: center;
@@ -670,6 +674,7 @@ section.gift h1 {
       min-width: 80%;
       margin-right: -49%;
   }
+  section.specialties div { padding-right: 0  }
 
 }
 
