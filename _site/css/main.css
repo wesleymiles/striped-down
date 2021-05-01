@@ -71,6 +71,7 @@ li {
   }
     .checks li:before {
       content: '✓  ';
+      content: '✅  ';
       color: #3ea261;
       font-weight: bold;
       margin-left: -21px;
@@ -78,7 +79,6 @@ li {
 
 blockquote p {
   font-style: italic;
-  font-family: 'Space Grotesk', Georgia,"Book Antiqua","Palatino Linotype", Palatino, Palladio, "URW Palladio L", Baskerville, "Bookman Old Style", "Bitstream Charter", "Nimbus Roman No9 L", Garamond, "Apple Garamond", "ITC Garamond Narrow", "New Century Schoolbook", "Century Schoolbook", "Century Schoolbook L", Georgia, serif;
   font-size: 1.2em;
   margin-bottom: 4em;
   margin-top: 4em;
@@ -96,6 +96,12 @@ blockquote p {
 
 a.external:after {
     content:' ↗';
+}
+
+.hero h1 em,
+blockquote p,
+p em {
+  font-family: Georgia,"Book Antiqua","Palatino Linotype", Palatino, Palladio, "URW Palladio L", Baskerville, "Bookman Old Style", "Bitstream Charter", "Nimbus Roman No9 L", Garamond, "Apple Garamond", "ITC Garamond Narrow", "New Century Schoolbook", "Century Schoolbook", "Century Schoolbook L", Georgia, serif;
 }
 
 p.caption {
@@ -130,7 +136,7 @@ audio, canvas, progress, video {
 -------------------------------------------------- */
 
 h1, h2, h3, h4 {
-  font-family: 'Space Grotesk', "Space Generic", Arial, system, -apple-system, ".SFNSText-Regular", "San Francisco", "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", sans-serif;
+  font-family: 'Space Grotesk', -apple-system, BlinkMacSystemFont, avenir next, avenir, segoe ui, helvetica neue, helvetica, Ubuntu, roboto, noto, arial, sans-serif; 
   line-height: 1;
   margin-top: 1.5em;
   font-weight: normal;
@@ -477,7 +483,7 @@ nav {
 
 /* Colored themes
 -------------------------------------------------- */
-section.bg--light {
+section.theme--light {
   background-color: #F4F8F8
 }
 
@@ -495,6 +501,10 @@ section.theme--dark {
   section.theme--dark a:link {
     color: #fff;
   }
+    section.theme--dark a:hover, 
+    section.theme--dark a:active {
+      color: #fffde0;
+    }
   section.theme--dark h1 {
     color: #FFF583
   }
@@ -534,11 +544,15 @@ section.case-study h4 span {
     margin: 1em 0 2em;
   }
 
+  span.highlight,
   .ux-case-study h2 {
+    padding: 5px;
     background-color: #fffde0;
-    font-size: 2em;
   }
 
+.ux-case-study h2 {
+    font-size: 2em;
+  }
 .ux-case-study p.lessons-learned {
   background-color: #f4f4f4;
   border-radius: 1em;
@@ -555,6 +569,7 @@ section.case-study h4 span {
 }
   .ui-thumb h2 {
     text-align: center;
+    font-size: 5em;
   }
   .ui-thumb img {
     box-shadow: 0 3px 50px rgba(0,0,0,.15);
@@ -580,13 +595,23 @@ section.case-study h4 span {
   }
 
   .ui-thumb.--blue {
-    background-color: #0E3563;=
+    background-color: #0E3563;
   }
   .ui-thumb.--blue h2,
   .ui-thumb.--blue p,
   .ui-thumb.--blue a {
     color: #fff;
   }
+
+  .ui-thumb.--black {
+    background-color: #333;
+  }
+  .ui-thumb.--black h2,
+  .ui-thumb.--black p,
+  .ui-thumb.--black a {
+    color: #f9d872;
+  }
+
 
 /* account for space around avatar */
 
@@ -600,7 +625,7 @@ section.case-study h4 span {
 /* Gift page 
 -------------------------------------------------- */
 
-  section.gift-text h1 {
+/*  section.gift-text h1 {
     font-size: 9em;
     font-size: 14vw;
     margin-top: 15%;
@@ -623,7 +648,7 @@ section.case-study h4 span {
     letter-spacing: -2px;
     white-space: nowrap;
   }
-
+*/
 
 
 
