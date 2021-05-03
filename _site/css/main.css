@@ -79,16 +79,18 @@ li {
 
 blockquote p {
   font-style: italic;
-  font-size: 1.2em;
+  /*font-size: 1.2em;*/
   margin-bottom: 4em;
   margin-top: 4em;
   border-left: #5EAA78 2px solid;
-  padding-left: 2em;
+  padding-left: 1.5em;
 }
 
   blockquote cite {
     margin-top: 1em;
     display: block;
+    font-family: system, -apple-system, ".SFNSText-Regular", "San Francisco", "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", sans-serif;
+    font-size: .9em;
   }
   blockquote cite::before {
     content:'\2014';
@@ -96,10 +98,11 @@ blockquote p {
 
 a.external:after {
     content:' ↗';
-}
+    }
 
 .hero h1 em,
 blockquote p,
+li em,  
 p em {
   font-family: Georgia,"Book Antiqua","Palatino Linotype", Palatino, Palladio, "URW Palladio L", Baskerville, "Bookman Old Style", "Bitstream Charter", "Nimbus Roman No9 L", Garamond, "Apple Garamond", "ITC Garamond Narrow", "New Century Schoolbook", "Century Schoolbook", "Century Schoolbook L", Georgia, serif;
 }
@@ -534,7 +537,6 @@ section.case-study h4 span {
 -------------------------------------------------- */
 
 .ux-case-study {
-  border-bottom: solid 2px #1ba6e9;
   padding-bottom: 2em;
 }
   
@@ -542,7 +544,15 @@ section.case-study h4 span {
     -webkit-filter: drop-shadow(0 5px 15px rgba(42, 55, 72,.1));
     filter: drop-shadow(0 5px 15px rgba(42, 55, 72,.1));
     margin: 1em 0 2em;
+    transition: .3s all;
   }
+
+      .ux-case-study a:hover img {
+        transform: scale(1.4);
+        box-shadow: 0 0 10px rgba(0, 0, 20px, 0.2);
+        background-color: #fff;
+        outline: 10px solid #fff;
+    }
 
   span.highlight,
   .ux-case-study h2 {
@@ -557,19 +567,22 @@ section.case-study h4 span {
   background-color: #f4f4f4;
   border-radius: 1em;
   padding: 1em 1.5em;
-  font-style: italic;
 }
+
+
 
 
 /* Serices: UI
 -------------------------------------------------- */
 
 .ui-thumb {
-  padding: 5em 0;
+  padding: 3em 1em;
 }
   .ui-thumb h2 {
     text-align: center;
+    word-break: break-word;
     font-size: 5em;
+    margin-bottom: 1em;
   }
   .ui-thumb img {
     box-shadow: 0 3px 50px rgba(0,0,0,.15);
@@ -618,8 +631,8 @@ section.case-study h4 span {
   body.UI.Design > main {
     padding-bottom: 0;
   }
-  .ui-thumb.--blue {
-    padding-bottom: 7em;
+  .ui-thumb.--black {
+    padding-bottom: 8em;
   }
 
 /* Gift page 
