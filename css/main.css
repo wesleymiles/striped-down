@@ -100,7 +100,7 @@ a.external:after {
     content:' ↗';
     }
 
-.hero h1 em,
+h1 em,
 blockquote p,
 li em,  
 p em {
@@ -184,20 +184,16 @@ p {
   html {
     font-size: 18px;
   }
-
+/*
   h1 {
     font-size: 3em;
      margin: 2em 0 1em;
   }
   
   h2 {
-    font-size: 1.5em; 
+    font-size: 2.5em; 
   }
-
- h3 {
-    font-size: 1.2em; 
-  }
-
+*/
 }
 
 /* Define the heading fallback font family */
@@ -379,7 +375,7 @@ header.mast .site-logo {
   }
 
     header nav ul.nav-menu li a{
-      padding-top: 2.5em;
+      padding: 2.5em 5px 0;
     }
 
       header nav ul.nav-menu li a:before {
@@ -388,7 +384,7 @@ header.mast .site-logo {
         left: 51%;
         right: 51%;
         top: -5px;
-        background-color: #fff;
+        background-color: #3EA261;
         height: 5px;
         transition-property: left,right;
         transition-duration: .2s;
@@ -563,7 +559,8 @@ section.case-study h4 span {
 
   span.highlight,
   .ux-case-study h2 {
-    padding: 5px;
+    padding-top: 5px;
+    padding-bottom: 5px;
     background-color: #fffde0;
   }
 
@@ -692,6 +689,7 @@ section.case-study h4 span {
     max-width: 800px;
     min-width: 35%;
 
+
     /* ignoring the height, so the parent can let it overflow out of it */
     flex-basis: content;
   }
@@ -723,9 +721,9 @@ section.gift h1 {
 
   section.specialties { overflow: hidden; }
   section.specialties picture {
-      max-height: 800px;
-      min-width: 80%;
-      margin-right: -49%;
+    min-width: 80%;
+    padding-left: 1em;
+    margin: 9em -54% 0 0;
   }
   section.specialties div { padding-right: 0  }
 
