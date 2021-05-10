@@ -150,6 +150,7 @@ h1 {
   line-height: .9;
   margin-bottom: 1em;
   margin-top: 2em;
+  word-wrap: break-word;
 }
 h2 {
   font-size: 3em;
@@ -376,6 +377,7 @@ header.mast .site-logo {
 
     header nav ul.nav-menu li a{
       padding: 2.5em 5px 0;
+      word-wrap: normal;
     }
 
       header nav ul.nav-menu li a:before {
@@ -398,10 +400,6 @@ header.mast .site-logo {
 
 @media only screen and (max-width: 800px) {
 
-  header div.site-logo a {
-    font-size: 1em;
-    word-wrap: normal;
-  }
   nav ul.nav-menu li {
     font-size: .9em;
     margin-left: 1em;
@@ -412,6 +410,13 @@ header.mast .site-logo {
 
 }
 
+@media only screen and (max-width: 600px) {
+
+  header div.site-logo a span {
+    display: none;
+  }
+
+}
 
 
 
@@ -472,7 +477,7 @@ nav {
     padding: 0;
   }
     nav ul.nav-menu li {
-      margin: 0 0 0 2em;
+      margin: 0 0 0 1em;
       position: relative;
       list-style: none;
       display: flex;
