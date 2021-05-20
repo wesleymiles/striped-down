@@ -1,5 +1,5 @@
 module.exports = function(eleventyConfig) {
-  eleventyConfig.setTemplateFormats(["html", "liquid", "njk", "img", "mp4", "webm", "md", "js", "jpg", "svg", "png", "webp" ]);
+  eleventyConfig.setTemplateFormats(["html", "pdf", "liquid", "njk", "img", "mp4", "webm", "md", "js", "jpg", "svg", "png", "webp" ]);
 };
 
 
@@ -8,6 +8,7 @@ module.exports = function(eleventyConfig) {
   // Output directory: _site
   // Copy `img/` to `_site/img`
   // Copy `mp4/` to `_site/mp4`
+  eleventyConfig.addPassthroughCopy("pdf");
   eleventyConfig.addPassthroughCopy("img");
   eleventyConfig.addPassthroughCopy("mp4");
   eleventyConfig.addPassthroughCopy("webm");
