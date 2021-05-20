@@ -4,18 +4,15 @@ module.exports = function(eleventyConfig) {
 
 
 module.exports = function(eleventyConfig) {
-
   // Output directory: _site
   // Copy `img/` to `_site/img`
-  // Copy `mp4/` to `_site/mp4`
-  eleventyConfig.addPassthroughCopy("pdf");
+  // This will copy these folders to the output without modifying them at all
   eleventyConfig.addPassthroughCopy("img");
-  eleventyConfig.addPassthroughCopy("mp4");
-  eleventyConfig.addPassthroughCopy("webm");
-  eleventyConfig.addPassthroughCopy("/posts");
-  eleventyConfig.addPassthroughCopy("/drop");
   eleventyConfig.addPassthroughCopy("css");
-
+  eleventyConfig.addPassthroughCopy("posts");
+  eleventyConfig.addPassthroughCopy("work");
+  eleventyConfig.addPassthroughCopy("bucket");
+    eleventyConfig.addPassthroughCopy({ "**/*.pdf": "bucket" });
 };
 
 
