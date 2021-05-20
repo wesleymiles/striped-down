@@ -13,6 +13,7 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy("mp4");
   eleventyConfig.addPassthroughCopy("webm");
   eleventyConfig.addPassthroughCopy("/posts");
+  eleventyConfig.addPassthroughCopy("/drop");
   eleventyConfig.addPassthroughCopy("css");
 
 };
