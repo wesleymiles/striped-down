@@ -1,81 +1,63 @@
 ---
-layout: layout.liquid
-title: Full-Stack Designer
-description: Dad, Naturalist, and Senior Designer currently helping home-services contractors get more leads, at a Vermont agency. Freelancing in the Gift-Economy.
+layout: layout_hi.liquid
+title: Hi
+company: google
+role: Senior UX/UI Designer
+description: "Dad, Naturalist, and Senior Designer currently helping home-services contractors get more leads, at a Vermont agency. Freelancing in the Gift-Economy."
 ---
-
-<div class="content-container --left hero">
-
-  	<h1>Senior UX/UI Designer</h1>
-		<p>Websites with Character That Convert</p>			
-
-	</div>
-
 
 
 <section class="case-studies theme--light">
 
-	<div>
-		<h2>Some UI Projects I’ve worked on</h3>
+		<h2>Some UI Projects I’ve worked on</h2>
+	
 
-			<div class="card">
-			  <img src="/img/ux/case-studies/charter.jpg" alt="Sailing themed HVAC website" >
-				<h4>Nautical-Themed Design for HVAC Company</h4>
-				<p>Expressed a fresh rebrand onto a new custom site and optimized it for conversion.</p>
-				<a href="/nautical" class="button">See Project</a>
-			</div>
+		<div class="cards">
+			 {% for post in collections.uiProject %}
 
-			<div class="card">
-			  <img src="/img/ux/case-studies/charter.jpg" alt="Sailing themed HVAC website" >
-				<h4>Nautical-Themed Design for HVAC Company</h4>
-				<p>Expressed a fresh rebrand onto a new custom site and optimized it for conversion.</p>
-				<a href="/nautical" class="button">See Project</a>
-			</div>
+			<a  class="card" href="{{ post.url | url }}" aria-label="Read more on {{ post.data.projectTitle }}">
+        <figure>
+     			<img src="{{ post.data.thumbnail }}" >
+          <figcaption>
+          	<h4>{{ post.data.projectTitle }} </h4>
+						<p>{{ post.data.description }}</p>
+          </figcaption>
+        </figure>
+      </a>
 
-			<div class="card">
-			  <img src="/img/ux/case-studies/charter.jpg" alt="Sailing themed HVAC website" >
-				<h4>Nautical-Themed Design for HVAC Company</h4>
-				<p>Expressed a fresh rebrand onto a new custom site and optimized it for conversion.</p>
-				<a href="/nautical" class="button">See Project</a>
-			</div>
+		  {% endfor %}
+
+		</div>
 
 	</div>
-
-		<picture>
-			 <source 
-			    srcset="img/bg-specialties.png"
-			    media="(min-width: 1000px)"
-			  />
-			  <img 
-			    src="img/bg-specialties-sm.png" 
-			    alt="3 image collage of a site design including a style guide"
-			  />
-		</picture>
 
 </section>
 
-<section class="gift">
-	<div class="align--center">
 
-		<h1>Working in the Gift</h1>
-		<h3>A method of exchange based on trust. </h3>
-		
-		<p>There are no formal contracts. Just a consensual willingness to trust. Don’t worry&mdash;we’ll still have time lines, deliverables, and super-fun strategy sessions. The websites and logos aren’t free and value-less. They have value. What precisely that value is&mdash;is up to you.</p>
-		<p><span class="highlight">The time is ripe for alternatives. I know. It feels weird. It’s my way of taking a step toward a world I want to live in. A world with more personal weight tied to every transaction.</span></p>
-		<p>I'm moved and inspired by a local <a href="https://www.brushbrookcommunityfarm.org/" target="blank" class="external">bakery/farm</a> trying it. They pulled their sourdough bread off the shelves and now give hundreds of loaves away every weekend. They make enough money to meet their needs and, more importantly, are making waves.</p>
-		<p>I’ve had the honor of working on four projects so far in the Gift. We’ve exchanged branding and websites for cash, handmade beds, carved signs, beer, and bread. </p>
+<section class="case-studies theme--dark">
 
-		<p>🎁 <a href="{{ '/gift' | url }}">Join me</a>.</p>
+		<h2>Some UX Projects I’ve worked on</h2>
+		<div class="cards">
 
+			{% for post in collections.uxProject %}
+
+			<a class="card" href="{{ post.url | url }}" aria-label="Read more on {{ post.data.projectTitle }}">
+        <figure>
+     			<img src="{{ post.data.thumbnail }}" >
+          <figcaption>
+          	<h4>{{ post.data.projectTitle }} </h4>
+						<p>{{ post.data.description }}</p>
+          </figcaption>
+        </figure>
+      </a>
+
+		  {% endfor %}
+
+		</div>
 	</div>
 
-	<picture>
-	  <source srcset="/img/branding@2x.png" type="image/png" media="(min-width: 800px)">
-	  <img src="/img/branding-sm.png" alt="Ten logos I’ve created for small businesses, 4 of which were done in the gift" >
-	</picture>
+</section>
 
-
- </section>
 
 
 

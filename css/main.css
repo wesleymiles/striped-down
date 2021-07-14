@@ -58,10 +58,13 @@ ol, ul {
   padding-left: 2em;
   padding-inline-start: 2em;
 }
+  ol ol,
+  ul ul {
+    margin-top: 1em;
+  }
 li {
   line-height: 1.35;
   margin-bottom: 1em;
-  font-size: .9em;
 }
   li + p {
     margin-top: -.7em;
@@ -83,8 +86,8 @@ blockquote p {
   /*font-size: 1.2em;*/
   margin-bottom: 4em;
   margin-top: 4em;
-  border-left: #5EAA78 2px solid;
-  padding-left: 1.5em;
+  /*border-left: #5EAA78 2px solid;*/
+  /*padding-left: 1.5em;*/
 }
 
   blockquote cite {
@@ -101,6 +104,8 @@ a.external:after {
     content:' ↗';
     }
 
+.roles li,
+p.caption,
 h1 em,
 blockquote p,
 li em,  
@@ -109,8 +114,10 @@ p em {
 }
 
 p.caption {
-  font-size: .7em;
-  margin-bottom: 3em;
+  font-size: .9em;
+  margin: 1em 0 0;
+  font-style: italic;
+  text-align: center;
  }
 
 a:link, a:visited {
@@ -125,6 +132,10 @@ a:hover, a:active {
 img {
   max-width: 100%;
 }
+  img.full{
+    width: 100%;
+    margin-bottom: -10px;
+  }
 
 video {
   box-shadow: 0 2px 8px rgba(0,0,0,.3);
@@ -140,6 +151,8 @@ picture {
 }
 
 
+
+
 /* Fonts
 -------------------------------------------------- */
 
@@ -147,37 +160,35 @@ h1, h2, h3, h4 {
   font-family: 'Space Grotesk', -apple-system, BlinkMacSystemFont, avenir next, avenir, segoe ui, helvetica neue, helvetica, Ubuntu, roboto, noto, arial, sans-serif; 
   line-height: 1;
   margin-top: 1.5em;
-  font-weight: normal;
+  margin-bottom: .5em;
 }
 
 h1 {
   font-size: 3.8em;
   line-height: .9;
-  margin-bottom: 1em;
-  margin-top: 2em;
+  margin-bottom: .5em;
+  font-weight: normal;
   word-wrap: break-word;
 }
 h2 {
   font-size: 3em;
+  font-weight: normal;
   letter-spacing: -0.025em;
-  margin-bottom: .5em;
+  margin: 0 0 .5em;
 }
 
 h3 {
-  letter-spacing: -0.025em;
-  font-size: 1.3em;
-  margin-bottom: 1em;
+  font-size: 1.5em;
   font-weight: bold;
-  text-transform: uppercase;
-  letter-spacing: 2px;
+  /*margin-bottom: 1.5em;*/
 }
 
 h4 {
   font-weight: bold;
   font-size: 1.2em;
   margin-bottom: .5em;
-  text-transform: uppercase;
-  letter-spacing: 2px;
+  /*text-transform: uppercase;*/
+  /*letter-spacing: 2px;*/
 }
 
 p {
@@ -212,13 +223,75 @@ p {
 
 /* cards
 -------------------------------------------------- */
-.case-studies {
-   display: flex;
 
+
+.cards {
+  display: flex;
 }
+  .card {
+    background-color: #fff;
+    margin-bottom: 2em;
+    margin-right: 2em;
+  }
+  .card:hover {
+    box-shadow: 2px 2px 30px rgba(0,0,0,.1);
+  }
 
-.card {
-   /*display: flex;*/
+    .card img {
+      object-position: top;
+      object-fit: cover;
+      max-height: 180px;
+      width: 100%;
+      height: 100%;
+    }
+    .cards .card {
+      /*max-width: 30%;*/
+      /* DO I WANT THEM EQUAL SIZED? */
+    }
+    .cards .card h3 {
+      margin-top: 0;
+      color: inherit;
+    }
+    .cards .card h4 {
+      margin-top: 1em;
+    }
+    .cards .card p {
+      line-height: 1.2;
+      font-size: .9em;
+    }
+    .cards a {
+      text-decoration: none;
+    }
+    .cards .card figcaption {
+      padding: 0 1.5em 1em;
+    }
+
+  section.theme--dark a.card:link h4,
+  section.theme--dark a.card:visited h4,
+  section.theme--dark a.card:link p,
+  section.theme--dark a.card:visited p {
+    color: #4D5151;
+    transition: all .2s;
+  }
+  section.theme--dark a.card:hover h4,
+  section.theme--dark a.card:active h4,
+  section.theme--dark a.card:hover p,
+  section.theme--dark a.card:active p {
+    color: #5EAA78;
+    text-decoration: none;
+  }
+
+@media only screen and (max-width: 800px) {
+
+.cards,
+a.card {
+  display: block;
+}
+  .cards .card {
+    max-width: 100%;
+  }
+
+
 }
 
 
@@ -233,10 +306,13 @@ a.button {
   text-transform: uppercase;
   letter-spacing: 2px;
   text-decoration: none;
+  margin: .5em 0;
+  display: inline-block;
 }
   a.button:active, a.button:hover {
     background-color: #3ea261;
   }
+
 
 
 /* Layout 
@@ -265,13 +341,14 @@ header.mast {
   max-width: 800px;
   margin-left: auto;
   margin-right: auto;
+  text-align: center;
 }
 
 /*header nav,*/
-.hero div,
+/*.hero div,*/
 main.content-main,
-.content-inner,
-.content-container {
+/*.content-container,*/
+.content-inner{
   position: relative;
   margin: 0 auto;
   max-width: 800px;
@@ -279,7 +356,7 @@ main.content-main,
 }
 
 .content-container {
-  margin-bottom: 5em;
+  margin-bottom: 3em;
 }
 
   .content-container.--right {
@@ -294,12 +371,46 @@ main.content-main,
     padding-right: 40%;
     max-width: inherit;
   }
-
+  .--center {
+    text-align: center;
+  }
 
 
   .content-inner {
     padding-bottom: 3em
   }
+
+.cols {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+  /*margin-bottom: 2em;*/
+}
+  .cols .col {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 100%;
+    flex: 1;
+    margin-right: 2em;
+  }
+
+  .col.stretch-right {
+    margin-right: calc(50% - 50vw);
+  }
+    .col.stretch-right p {
+      padding-right: 2em;
+    }
+
+  .cols .col h3 {
+    margin-top: 0;
+  }
+
+  .width-limiter {
+    max-width: 1296px;
+    margin: 0 auto;
+  }
+
 
 
 /* wide content container */
@@ -317,6 +428,7 @@ ul.halfsies {
     -webkit-column-break-inside: avoid;
     page-break-inside: avoid;
     break-inside: avoid;
+    font-size: .9em;
 }
 
 .halfsies {
@@ -338,24 +450,30 @@ ul.halfsies {
     margin-top: 0;
    }
 
-
 section.gift-text {
   margin-bottom: 8em;
 }
 
 
+
 @media only screen and (max-width: 800px) {
 
-
-  .content-container {
-    margin-bottom: 3em;
+  section {
+    padding-right: 5%;
+    padding-left: 5%;
   }
-
+  
   .content-container.--right,
   .content-container.--left {
+    margin-right: 0;
+    margin-left: 0;
     padding-right: 0;
     padding-left: 0;
+    width: 100%;
   }
+    .content-container {
+      margin-bottom: 3em;
+    }
 
   .intro.halfsies > div,
   .halfsies > div {
@@ -372,8 +490,9 @@ section.gift-text {
     padding-left: 4%;
   }
 
-  .content-container.--left {
-    padding-right: inherit;
+  .cols .col {
+    flex: inherit;
+    margin-top: 1em;
   }
 
 }
@@ -497,6 +616,11 @@ footer {
     padding-bottom: 7em;
   }
 
+  /* last section element adds the padding  */
+  main section:last-of-type {
+    padding-bottom: 9em;
+    margin-bottom: -8em;
+  }
 
 /* Nav (header and footer)
 -------------------------------------------------- */
@@ -521,32 +645,35 @@ nav {
 
 /* Colored themes
 -------------------------------------------------- */
-section.theme--light {
+.theme--light {
   background-color: #F4F8F8
 }
 
 
-section.theme--dark {
+.theme--dark {
   background-color: #2A3748;
 }
-  section.theme--dark p, 
-  section.theme--dark li, 
-  section.theme--dark h2, 
-  section.theme--dark h3, 
-  section.theme--dark h4, 
-  section.theme--dark a, 
-  section.theme--dark a:visited, 
-  section.theme--dark a:link {
+  .theme--dark p, 
+  /*.theme--dark p.caption,*/
+  .theme--dark li, 
+  .theme--dark h2, 
+  .theme--dark cite, 
+  .theme--dark h3, 
+  .theme--dark h4,
+  .theme--dark .site-logo span,
+  .theme--dark a, 
+  .theme--dark a:visited, 
+  .theme--dark a:link {
     color: #fff;
   }
-    section.theme--dark a:hover, 
-    section.theme--dark a:active {
+    .theme--dark a:hover, 
+    .theme--dark a:active {
       color: #fffde0;
     }
-  section.theme--dark h1 {
+  .theme--dark h1 {
     color: #FFF583
   }
-  section.theme--dark h1 {
+  .theme--dark h1 {
     margin-bottom: .5em;
    }
 
@@ -567,6 +694,57 @@ section.case-study h4 span {
   background-color: #5EAA78;
   color: #fff;
 }
+
+.roles ul {
+  list-style: none;
+  padding-left: 0;
+}
+  .roles ul li {
+    margin-bottom: 0;
+  }
+
+
+body.hi blockquote {
+  margin: 2em 0;
+}
+  body.hi blockquote p {
+    font-size: 2.5em;
+    margin: 0;
+   line-height: 1.1;
+  }
+
+ol.legend {
+  list-style: none;
+  counter-reset: my-awesome-counter;
+  padding-left: 35px;
+}
+  ol.legend li {
+    counter-increment: my-awesome-counter;
+    position: relative;
+  }
+    ol.legend li::before {
+      content: counter(my-awesome-counter) ". ";
+      color: #fff;
+      font-family: "Space Grotesk";
+      border-radius: 50%;
+      background-color: #3EA261;
+      font-weight: bold;
+      position: absolute;
+      left: -35px;
+      height: 28px;
+      width: 28px;
+      text-align: center;
+    }
+
+.mini-nav a {
+  margin-right: 2%;
+}
+  .mini-nav a::after {
+    content:' ↓'  ;
+  }
+
+
+
 
 /* Services: UX
 -------------------------------------------------- */
@@ -669,15 +847,6 @@ section.case-study h4 span {
   }
 
 
-/* account for space around avatar */
-
-  body.UI.Design > main {
-    padding-bottom: 0;
-  }
-  .ui-thumb.--black {
-    padding-bottom: 8em;
-  }
-
 /* Gift page 
 -------------------------------------------------- */
 
@@ -711,15 +880,9 @@ section.case-study h4 span {
 /* Homepage 
 -------------------------------------------------- */
 
-  .hero {
+.hero {
   margin-bottom: 0;
 }
-
-  section.specialties {
-    position: relative;
-    padding: 1em 0% 3em 5%;
-  }
-
 
   section.specialties picture {
     /*aligning the photo up in a hacky way. Can't figure out why the picture element can't go flush to the bottom? */
@@ -730,6 +893,7 @@ section.case-study h4 span {
     font-size: 6em;
     margin-top: 0;
   }
+
   section.specialties section {
     padding-bottom: 0;
   }
@@ -749,7 +913,6 @@ section.gift h1,
 section.gift h3 {
   text-align: center;
 }
-
 
 
 

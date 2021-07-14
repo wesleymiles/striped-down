@@ -1,9 +1,6 @@
 module.exports = function(eleventyConfig) {
   eleventyConfig.setTemplateFormats(["html", "pdf", "liquid", "njk", "img", "mp4", "webm", "md", "js", "jpg", "svg", "png", "webp" ]);
-};
 
-
-module.exports = function(eleventyConfig) {
   // Output directory: _site
   // Copy `img/` to `_site/img`
   // This will copy these folders to the output without modifying them at all
@@ -11,8 +8,9 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy("css");
   eleventyConfig.addPassthroughCopy("posts");
   eleventyConfig.addPassthroughCopy("work");
-  eleventyConfig.addPassthroughCopy("bucket");
-    eleventyConfig.addPassthroughCopy({ "**/*.pdf": "bucket" });
+  eleventyConfig.addPassthroughCopy("work/mockup");
+  eleventyConfig.addPassthroughCopy("play");
+    eleventyConfig.addPassthroughCopy({ "**/*.pdf": "play" });
 };
 
 
