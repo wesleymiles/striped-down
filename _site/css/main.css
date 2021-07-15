@@ -175,6 +175,7 @@ h2 {
   font-weight: normal;
   letter-spacing: -0.025em;
   margin: 0 0 .5em;
+  word-break: break-all;
 }
 
 h3 {
