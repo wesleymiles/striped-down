@@ -1,0 +1,63 @@
+---
+layout: layout_hi.liquid
+title: Hi
+company: Generic
+role: Senior UX/UI Designer
+description: "<em>Hi there. Nice to meet you.</em><br/><br/> I'm excited about your opening. I'm a design generalist with 15 years experience, looking to work with: design systems, some CSS, large impactful projects, and accessibility."
+---
+
+
+<section class="case-studies theme--light">
+
+		<h2>Some UI Projects I’ve worked on</h2>
+	
+
+		<div class="cards">
+			 {% for post in collections.uiProject %}
+
+			<a  class="card" href="{{ post.url | url }}" aria-label="Read more on {{ post.data.projectTitle }}">
+        <figure>
+     			<img src="{{ post.data.thumbnail }}" >
+          <figcaption>
+          	<h4>{{ post.data.projectTitle }} </h4>
+						<p>{{ post.data.description }}</p>
+          </figcaption>
+        </figure>
+      </a>
+
+		  {% endfor %}
+
+		</div>
+
+	</div>
+
+</section>
+
+
+<section class="case-studies theme--dark">
+
+		<h2>Some UX Projects I’ve worked on</h2>
+		<div class="cards">
+
+			{% for post in collections.uxProject %}
+
+			<a class="card" href="{{ post.url | url }}" aria-label="Read more on {{ post.data.projectTitle }}">
+        <figure>
+     			<img src="{{ post.data.thumbnail }}" >
+          <figcaption>
+          	<h4>{{ post.data.projectTitle }} </h4>
+						<p>{{ post.data.description }}</p>
+          </figcaption>
+        </figure>
+      </a>
+
+		  {% endfor %}
+
+		</div>
+	</div>
+
+</section>
+
+
+
+
