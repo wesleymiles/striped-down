@@ -56,7 +56,7 @@
 		
 <section class="theme--light">
 	<div class="mini-nav">
-		<p><a href="#best">Best Practices</a>  <a href="#analytics">Analytics Research</a>  <a href="#ab">AB Testing</a>  <a href="#gtm">Click Tracking</a>  <a href="#phone">Heatmaps</a> </p>
+		<p><a href="#best">Best Practices</a>  <a href="#analytics">Analytics Research</a>  <a href="#ab">AB Testing</a>  <a href="#click">Click Tracking</a>  <a href="#heatmaps">Heatmaps</a> </p>
 	</div>
 </section>
 
@@ -176,15 +176,20 @@
 		<div class="cols">
 
 			<div class="col">
-				<h3>Determined browsers being used by audience</h3>
+				<h3>Browser Support</h3>
 				<p>Looked at a year of data for our top traffic clients to determine what percentage of traffic was coming from various browsers.</p>
 				<h4>Result: Stopped support for older browsers which freed up dev time</h4>
 				<p>We determined to fully support browsers which contribute 1%+ of traffic to our top sites. Decided to support browsers that provide .05%-1% on an as requested basis. Stopped supporting browsers that provide less than .04% of traffic.</p>
+
+				<h4>What I did</h4>
+				<ul>
+					<li>Data Gathering</li>
+				</ul>
 			</div>
 
 			<div class="col stretch-right">
 				<picture>
-				  <!-- <source srcset="/img/work/data/browsers.webp" type="image/webp"> -->
+				  <source srcset="/img/work/data/browsers.webp" type="image/webp">
 				  <source srcset="/img/work/data/browsers.jpg" type="image/jpg">
 					<img src="/img/work/data/browsers.jpg" alt="" />
 				</picture>
@@ -197,20 +202,27 @@
 		<div class="cols">
 
 			<div class="col">
-				<h3>New data and styles were added, but navigating around pages was clunky.</h3>
-				<p>Here's what we did:</p>
-				<ol class="legend">
-					<li><strong>Nav overhaul.</strong> We use 3 main sections: side menu, header, and content area. Then broke horizontal nav bars into a header and vertical menu. This follows a convention people are used to and separates the multiple stacked navigations. </li>
-					<li><strong>Emphasized company.</strong> Because this upgrade was primarily for clients, we wanted to let them know it was THEIR dashboard by adding their logo and a big company name.</li>
-					<li><strong>Breadcrumbs.</strong> To let client know how to get home and go back while digging into their data.</li>
-				</ol>
+				<h3>Promotion conversion</h3>
+				<p>Featuring discounts and sales are a big part of our client's marketing. They often ask us what ones to choose. We had some insight, but didn't align as a company. To get some data, we: </p>
+				<ul>
+					<li>Researched a years worth of data for 40 clients</li>
+					<li>Categorized promotions top 11 promotions types</li>
+					<li>Calculated the direct conversion rate based page views / phone calls made from that page.</li>
+				</ul>
+				<h4>Result: a list of the highest-converting promo types (and ones not to use)</h4>
+				<p>This research lead to PDFs to help clients choose what to promote and to the company being the expert in this area. </p>
+				<h4>What I did</h4>
+				<ul>
+					<li>Data Gathering</li>
+				</ul>
 			</div>
 
 			<div class="col stretch-right">
 				<picture>
-				  <!-- <source srcset="/img/work/data/promos.webp" type="image/webp"> -->
+				  <source srcset="/img/work/data/promos.webp" type="image/webp">
 				  <source srcset="/img/work/data/promos.jpg" type="image/jpg">
 					<img src="/img/work/data/promos.jpg" alt="" />
+					<p class="caption">Spreadsheet summary of findings, sorted by highest converting</p>
 				</picture>
 			</div>
 
@@ -295,10 +307,91 @@
 	</div>
 
 
-
 	</div>
 </section>
 
+
+<section  id="click" 	class="theme--light">
+	<div class="content-container --left">
+		<h2>Click Tracking</h2>
+		<p><em>When Analytics data isn’t enough, you we collected engagement stats from specific triggers. </em></p>
+	</div>
+
+	<div class="content-container">
+		<div class="cols">
+
+			<div class="col">
+				<h3>Measuring quicklink conversion rates</h3>
+				<p>These big buttons send folks to a service page as opposed to a form. They seem like a good idea, but we wanted to find out if that was true. </p>
+				<p>We tracked who clicked the button then filled out a form. </p>
+				<p>Our data set included 2,751 form leads from 10 sites. </p>
+				<h4>Results:</h4>
+				<ul>
+					<li>Average conversion rate: 14.09% (not bad compared to industry-standards).</li>
+					<li>This accounted for 20.78% of all form leads and 4.83% of all leads. It proved safe to keep using them as we were. </li>
+					<li>Established a baseline for other click-tracking-conversion experiments.</li>
+				</ul>
+			</div>
+
+			<div class="col stretch-right">
+				<picture>
+				  <source srcset="/img/work/data/quicklinks.webp" type="image/webp">
+				  <source srcset="/img/work/data/quicklinks.jpg" type="image/jpg">
+					<img src="/img/work/data/quicklinks.jpg" alt="" />
+					<p class="caption">The “quicklinks” we’re talking about</p>
+				</picture>
+			</div>
+
+		</div>
+	</div>
+
+</section>
+
+
+<section id="heatmaps" class="theme--dark">
+	<div class="content-container --left">
+		<h2>Heatmaps</h2>
+		<p><em>These are a weak data-type, but I still think there's value to peeking behind the curtain of how your site is being used. </em></p>
+	</div>
+
+	<div class="content-container">
+
+		<div class="cols flex-grid-half">
+			<div class="col">
+				<h3>An aid to Conversion Analysis</h3>
+				<p>We had an unhappy client who was convinced their site was under-performing.</p>
+				<p>We had no data that suggested there is a serious problem with conversion, since organic Cost Per Lead was strong. We performed this analysis in light of the client’s concerns about the drop in leads.</p>
+				<p>Overall, the analysis showed that their site was overdue for a redesign. It was outdated, too busy, and broke current internal best practice</p>
+				<h4>To support these claims heatmaps proved:</h4>
+				<ul>
+					<li>Poor design choices. Users didn’t always know what is a link and what’s not</li>
+					<li>Excessive items in the nav. One had very low engagement that could be de-emphasized. </li>
+					<li>Little engagement on one of the two main CTA buttons. This supported a best practice of having only one.</li>
+				</ul>
+
+		    <h4>Results:</h4>
+				<p>Heatmaps helped visualize why they were in need for a redesign. They ended up pulling the trigger on one. </p>
+		    
+				<div class="roles">
+					<h4>What I did</h4>
+					<ul>
+						<li>Data gathering</li>
+						<li>Client presentation</li>
+					</ul>
+				</div>
+			</div>
+
+			<div class="col">
+				<picture>
+				  <source srcset="/img/work/data/heatmap.webp" type="image/webp">
+				  <source srcset="/img/work/data/heatmap.jpg" type="image/jpg">
+					<img src="/img/work/data/heatmap.jpg" alt="" />
+					<p class="caption">Example heatmap of a homepage.</p>
+				</picture>
+			</div>
+
+		</div>
+	</div>
 
 	
 
