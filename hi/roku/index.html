@@ -1,0 +1,69 @@
+---
+layout: layout_hi.liquid
+title: Hi
+company: Roku
+role: This UX Product Designer Wants To Work with You
+description: "<em>Hi there, Roku. I think we have a match!</em><br/><br/>
+I love collaborating, I'm an idea-machine, and I'm excited to make a difference."
+highlight-title: "<h4>Career Highlights relevant to role:</h4>"
+highlights: "<ul><li><strong>First designer at agency startup.</strong> Helped grow to 3-person design team. But, also worked with larger companies like Fidelity.</li>
+	<li><strong>Strong interest in scaling design. </strong>Participaged in year-long project implementing a pattern library & design system. <a href='/work/ux/#pattern_library'>More here</a>.</li> 
+	<li><strong>Sat in developer role</strong>. Knowing semantic HTML/CSS makes communicating between engineering teams smooth.</li>
+	<li><strong>Brought critique to agency.</strong> As a low-ego designer, I believe design is a team sport.</li>
+</ul>"
+---
+
+
+<section class="case-studies theme--light">
+	<h2>Some UI Projects I’ve worked on</h2>
+	
+
+		<div class="cards">
+			 {% for post in collections.uiProject %}
+
+			<a  class="card" href="{{ post.url | url }}" aria-label="Read more on {{ post.data.projectTitle }}">
+        <figure>
+     			<img src="{{ post.data.thumbnail }}" >
+          <figcaption>
+          	<h4>{{ post.data.projectTitle }} </h4>
+						<p>{{ post.data.description }}</p>
+          </figcaption>
+        </figure>
+      </a>
+
+		  {% endfor %}
+
+		</div>
+
+	</div>
+
+</section>
+
+
+<section class="case-studies theme--dark">
+
+		<h2>Some UX Projects I’ve worked on</h2>
+		<div class="cards">
+
+			{% for post in collections.uxProject %}
+
+			<a class="card" href="{{ post.url | url }}" aria-label="Read more on {{ post.data.projectTitle }}">
+        <figure>
+     			<img src="{{ post.data.thumbnail }}" >
+          <figcaption>
+          	<h4>{{ post.data.projectTitle }} </h4>
+						<p>{{ post.data.description }}</p>
+          </figcaption>
+        </figure>
+      </a>
+
+		  {% endfor %}
+
+		</div>
+	</div>
+
+</section>
+
+
+
+

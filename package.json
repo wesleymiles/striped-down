@@ -10,6 +10,7 @@
     "@11ty/eleventy": "^0.10.0"
   },
   "dependencies": {
+    "debug": "^4.3.2",
     "markdown-it": "^10.0.0"
   }
 }

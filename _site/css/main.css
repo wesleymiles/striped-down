@@ -688,6 +688,19 @@ html,body {
   /* Work page 
   -------------------------------------------------- */
 
+.hero.theme--dark h2 {
+  color: #FFF583;
+}
+
+.hero.theme--dark h4 {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #FFF583;
+  font-weight: normal;
+  margin-top: 2em;
+}
+
+
   section.case-study h4 span {
     display: inline-block;
     margin-bottom: 1em;
