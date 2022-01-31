@@ -12,5 +12,14 @@
   "dependencies": {
     "debug": "^4.3.2",
     "markdown-it": "^10.0.0"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wesleymiles/striped-down.git"
+  },
+  "keywords": [],
+  "bugs": {
+    "url": "https://github.com/wesleymiles/striped-down/issues"
+  },
+  "homepage": "https://github.com/wesleymiles/striped-down#readme"
 }
