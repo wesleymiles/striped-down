@@ -1,6 +1,4 @@
 
-
-
   /* Reset
   -------------------------------------------------- */
 
@@ -29,27 +27,17 @@ html,body {
     box-sizing: border-box;
   }
 
+
+  /* Base styles
+  -------------------------------------------------- */
+
   body {
     margin: 0;
     padding: 0;
-    /*background: linear-gradient(to left, rgba(249,247,235,0) 0%,rgba(249,247,235,1) 100%), url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 80 40' width='80' height='40'%3E%3Cpath fill='%23e8e5ed' fill-opacity='0.4' d='M0 40a19.96 19.96 0 0 1 5.9-14.11 20.17 20.17 0 0 1 19.44-5.2A20 20 0 0 1 20.2 40H0zM65.32.75A20.02 20.02 0 0 1 40.8 25.26 20.02 20.02 0 0 1 65.32.76zM.07 0h20.1l-.08.07A20.02 20.02 0 0 1 .75 5.25 20.08 20.08 0 0 1 .07 0zm1.94 40h2.53l4.26-4.24v-9.78A17.96 17.96 0 0 0 2 40zm5.38 0h9.8a17.98 17.98 0 0 0 6.67-16.42L7.4 40zm3.43-15.42v9.17l11.62-11.59c-3.97-.5-8.08.3-11.62 2.42zm32.86-.78A18 18 0 0 0 63.85 3.63L43.68 23.8zm7.2-19.17v9.15L62.43 2.22c-3.96-.5-8.05.3-11.57 2.4zm-3.49 2.72c-4.1 4.1-5.81 9.69-5.13 15.03l6.61-6.6V6.02c-.51.41-1 .85-1.48 1.33zM17.18 0H7.42L3.64 3.78A18 18 0 0 0 17.18 0zM2.08 0c-.01.8.04 1.58.14 2.37L4.59 0H2.07z'%3E%3C/path%3E%3C/svg%3E")0 50% repeat;*/
     background: #F9F7EB url(/img/noise.png) repeat;
     border: 10px solid #ffffff;
     border-bottom: 0;
   }
-  /*  body::before {
-      background-color: #ffffff;
-      content: "";
-      height: 100%;
-      width: 100%;
-      position: absolute;
-      display: block;
-      height: 100%;
-      width: 100%;
-      position: absolute;
-      display: block;
-      z-index: -1;
-    }*/
 
   hr {
       height: 2px;
@@ -86,11 +74,8 @@ html,body {
 
   blockquote p {
     font-style: italic;
-    /*font-size: 1.2em;*/
     margin-bottom: 4em;
     margin-top: 4em;
-    /*border-left: #5EAA78 2px solid;*/
-    /*padding-left: 1.5em;*/
   }
 
     blockquote cite {
@@ -139,13 +124,6 @@ html,body {
       width: 100%;
       margin-bottom: -10px;
     }
-    /*picture.grayscale source,*/
-    picture.grayscale {
-      filter: gray; /* IE6-9 */
-      -webkit-filter: grayscale(1); /* Google Chrome, Safari 6+ & Opera 15+ */
-      filter: grayscale(1); /* Microsoft Edge and Firefox 35+ */
-      background-blend-mode: luminosity;
-    }
 
   video {
     box-shadow: 0 2px 8px rgba(0,0,0,.3);
@@ -191,7 +169,6 @@ html,body {
   h3 {
     font-size: 1.5em;
     font-weight: bold;
-    /*margin-bottom: 1.5em;*/
   }
 
   h4 {
@@ -199,8 +176,6 @@ html,body {
     font-size: 1.2em;
     margin-bottom: .5em;
     margin-top: .5em;
-    /*text-transform: uppercase;*/
-    /*letter-spacing: 2px;*/
   }
 
   p {
@@ -214,26 +189,12 @@ html,body {
       font-size: 18px;
     }
 
-    h2 {
-      /*word-break: break-all;*/
-      /* the h2 is pretty big on mobile, this breaks it so it doesn't push the edges */
-    }
-
-
   }
 
-  /* Define the heading fallback font family */
-/*  @font-face {
-    font-family: Space Generic;
-    letter-spacing: 2px;
-    src: local("Arial");
-  }
-*/
+
 
   /* cards
   -------------------------------------------------- */
-
-
   .cards {
     display: flex;
   }
@@ -252,10 +213,6 @@ html,body {
         max-height: 180px;
         width: 100%;
         height: 100%;
-      }
-      .cards .card {
-        /*max-width: 30%;*/
-        /* DO I WANT THEM EQUAL SIZED? */
       }
       .cards .card h3 {
         margin-top: 0;
@@ -333,7 +290,6 @@ a.button {
     }
 
 
-
   /* Layout 
   -------------------------------------------------- */
 
@@ -363,37 +319,27 @@ a.button {
     text-align: center;
   }
 
-  /*header nav,*/
-  /*.hero div,*/
   main.content-main,
-  /*.content-container,*/
-  .content-inner{
+  .content-inner {
     position: relative;
     margin: 0 auto;
     max-width: 800px;
     width: 90%;
   }
-/*
-  .content-container {
-    margin-bottom: 3em;
-  }*/
-
     .content-container.--right {
       padding-left: 20%;
       padding-right: 20%;
       max-width: inherit;
-      /*border-left: 10px solid #F4F8F8;*/
-      /*border-right: 10px solid #F4F8F8;*/
     }
 
     .content-container.--left {
       padding-right: 44%;
       max-width: inherit;
     }
+
     .--center {
       text-align: center;
     }
-
 
     .content-inner {
       padding-bottom: 3em
@@ -416,19 +362,6 @@ a.button {
     .cols .col:last-child {
       margin-right: 0;
     }
-
-/*     .flex-grid-half .col {
-      width: 48%;
-      margin: 0;
-    }*/
-
-/*    Pausing for now
-    .cols .col.stretch-right {
-      margin-right: calc(50% - 50vw);
-    }
-      .col.stretch-right p {
-        padding-right: 2em;
-      }*/
 
     .cols .col h3 {
       margin-top: 0;
@@ -462,8 +395,7 @@ a.button {
   .halfsies {
     display: flex;
   }
-    .halfsies > .halfsies-inner {
-    }
+
     .halfsies > * {
       flex: 1;
     }
@@ -537,9 +469,7 @@ a.button {
       opacity: .85;
       transition: .3s all;
     }
-/*    header.mast .site-logo span {
-      text-decoration: none;
-    } */
+
     header.mast .site-logo img {
       display: block;
       width: 56px;
@@ -550,7 +480,6 @@ a.button {
       content: "";
       height: 10px;
       background-color: #F49F0A;
-      /*background: linear-gradient(to left, #fff583 0%, #1ba6e9 55.17%, #3ea261 100%);*/
       width: 100%;
       position: relative;
       display: block;
@@ -579,26 +508,6 @@ a.button {
           right: 0;
         }
 
-  @media only screen and (max-width: 800px) {
-
-    nav ul.nav-menu li {
-      font-size: .9em;
-      margin-left: 1em;
-    }
-      nav ul.nav-menu li a {
-        /*padding-top: .4em;*/
-      }
-
-  }
-/*
-  @media only screen and (max-width: 600px) {
-
-    header div.site-logo a span {
-      display: none;
-    }
-
-  }
-*/
 
 
   /* Footer
@@ -611,50 +520,12 @@ a.button {
     background-color: #ffffff; 
   }
 
-/*    footer h1 {
-      color: #1BA6E9;
-      font-size: 2.5em;
-      margin-bottom: 0;
-      padding: .5em;
-      background: linear-gradient(to left, #fff583 0%, #1ba6e9 55.17%, #3ea261 100%);
-      background: -webkit-linear-gradient(left, #fff583 0%, #1ba6e9 55.17%, #3ea261 100%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-    }
-    footer h4 {
-      margin-top: 0
-    }*/
 
     footer nav {
       font-size: .8em;
-      /*opacity: .7;*/
       padding-top: 5em;
-      /*padding-bottom: 2em;*/
-      /*border-bottom: 10px solid #F49F0A;*/
-      /*margin-bottom: -10px;*/
     }
 
-/*    footer picture.avatar {
-      margin-top: -8em;
-      margin-bottom: -3em;
-      display: block;
-    }
-      footer picture.avatar img {
-        border-radius: 50%;
-      }*/
-
-  /* account for space around avatar */
-/*
-    body > main {
-      display: block;
-      padding-bottom: 7em;
-    }
-*/
-    /* last section element adds the padding  */
-/*    main section:last-of-type {
-      padding-bottom: 9em;
-      margin-bottom: -8em;
-    }*/
 
   /* Nav (header and footer)
   -------------------------------------------------- */
@@ -662,6 +533,7 @@ a.button {
   nav {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
   }
     nav .nav-menu {
       display: flex;
@@ -673,10 +545,10 @@ a.button {
         list-style: none;
         display: flex;
         line-height: .9;
-        flex: 0 0 auto;
-        /*text-transform: uppercase;*/
         font-size: .8em;
       }
+
+
 
 
   /* Colored themes
@@ -715,8 +587,6 @@ a.button {
 
 
 
-
-
   /* HERO
   -------------------------------------------------- */
 
@@ -739,7 +609,6 @@ a.button {
 
 .hero img {
   border: 10px solid #ffffff;
-  /*margin: 0 3em;*/
 }
 .hero .halfsies {
   justify-content: space-between;
@@ -747,16 +616,12 @@ a.button {
 
 .hero .halfsies > * {
   max-width: 43%;
-  /*flex: unset;*/
 }
 
 
   section.case-study h4 span {
     display: inline-block;
     margin-bottom: 1em;
-    /*margin-left: 1em;*/
-    /*border-left: solid 1px #333;*/
-    /*padding-left: 1em;*/
     padding: .4em .8em;
     background-color: #5EAA78;
     color: #fff;
@@ -844,27 +709,7 @@ a.button {
     }
 
 
-    /*  only zoom on hover for large screens */
-/*    @media only screen and (min-width: 800px) {
-
-        .ux-case-study a:hover img {
-          transform: scale(1.4);
-          box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-          background-color: #fff;
-          outline: 10px solid #fff;
-      }
-
-    }*/
-
-/*    span.highlight,
-    .ux-case-study h2 {
-      padding-top: 5px;
-      padding-bottom: 5px;
-      background-color: #ffffff;
-    }*/
-
   .ux-case-study h2 {
-      /*font-size: 2em;*/
       margin-bottom: 1em;
     }
   .ux-case-study p.lessons-learned {
@@ -927,35 +772,6 @@ a.button {
     .ui-thumb.--black a {
       color: #f9d872;
     }
-
-
-  /* Gift page 
-  -------------------------------------------------- */
-
-  /*  section.gift-text h1 {
-      font-size: 9em;
-      font-size: 14vw;
-      margin-top: 15%;
-      margin-bottom: 0;
-      font-family: 'Martel', sans-serif;
-
-      background: url('/img/trees.jpg') no-repeat;
-      background-clip: text;
-      -webkit-background-clip: text;
-      color: rgba(0,0,0,.2);
-      padding: 25px 50px 10px 0;
-      background-size: cover;
-      background-position: center; 
-    }
-
-    section.gift-text p {
-      font-size: 11vw;
-      margin-top: -.4em;
-      margin-left: .2em;
-      letter-spacing: -2px;
-      white-space: nowrap;
-    }
-  */
 
 
 
