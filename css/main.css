@@ -734,6 +734,7 @@ a.button {
 
 .hero h1 {
   font-weight: normal;
+  margin-top: .5em;
 }
 
 .hero img {
