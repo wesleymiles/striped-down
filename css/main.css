@@ -23,7 +23,7 @@
     height: 100%;
   }
 
-html,body {
+  html,body {
     box-sizing: border-box;
   }
 
@@ -34,8 +34,8 @@ html,body {
   body {
     margin: 0;
     padding: 0;
-    background: #F9F7EB url(/img/noise.png) repeat;
-    border: 10px solid #ffffff;
+    background: #F4F4F4 url(/img/noise.png) repeat;
+    border: 25px solid #003B57;
     border-bottom: 0;
   }
 
@@ -89,8 +89,18 @@ html,body {
     }
 
   .external:after {
-      content:' ↗';   
-      }
+    /*content:' ↗';*/
+    display: inline-block;
+    content: '';
+    -webkit-mask-size: contain;
+    mask-size: contain;
+    background-color: currentColor;
+    -webkit-mask: url('/img/fa-external-link-alt.svg') no-repeat 50% 50%;
+    mask: url('/img/fa-external-link-alt.svg') no-repeat 50% 50%;
+    margin-left: 3px;
+    width: 14px;
+    height: 14px;
+    }
 
   .roles li,
   p.caption,
@@ -153,9 +163,9 @@ html,body {
 
   h1 {
     color: #62A87C;
-    font-size: 3.8em;
+    font-size: 4.5em;
     line-height: .9;
-    margin-bottom: .5em;
+    margin-bottom: .25em;
     font-weight: normal;
     word-wrap: break-word;
   }
@@ -168,6 +178,7 @@ html,body {
 
   h3 {
     font-size: 1.5em;
+    line-height: 1.3;
     font-weight: bold;
   }
 
@@ -188,6 +199,8 @@ html,body {
     html {
       font-size: 18px;
     }
+    h1 { font-size: 3em; }
+    h2 { font-size: 2em; }
 
   }
 
@@ -243,7 +256,7 @@ html,body {
     section.theme--dark a.card:active h4,
     section.theme--dark a.card:hover p,
     section.theme--dark a.card:active p {
-      color: #5EAA78;
+      color ##FFFADB;
       text-decoration: none;
     }
 
@@ -272,9 +285,9 @@ a.button {
   .theme--dark a.button:visited,
   a.button:visited,
   a.button:link {
-    color: #003B57;
+    color: #ffffff;
     padding: 1em;
-    background-color: #F49F0A;
+    background-color: #064864;
     text-transform: uppercase;
     letter-spacing: 2px;
     text-decoration: none;
@@ -286,7 +299,7 @@ a.button {
     a.button:active,
     a.button:hover {
       background-color: #3ea261;
-      color: #fff;
+      color: #fff;  
     }
 
 
@@ -305,7 +318,8 @@ a.button {
     padding-bottom: 0;
     position: relative;
     padding: 0 5%;
-    margin: -10px auto 0;
+    margin: -25px auto 0;
+    background-color: #003B57;
   }
 
   .align--left {
@@ -419,8 +433,10 @@ a.button {
   @media only screen and (max-width: 800px) {
 
     section {
-      padding-right: 5%;
-      padding-left: 5%;
+      padding: 1em 5%;
+      /*padding-right: 5%;*/
+      /*padding-left: 5%;*/
+
     }
     
     .content-container.--right,
@@ -435,10 +451,15 @@ a.button {
         margin-bottom: 3em;
       }
 
-    .intro.halfsies > *,
-    .halfsies > * {
+    .halfsies {
       display: block;
     }
+
+
+/*    .intro.halfsies > *,
+    .halfsies > * {
+      display: block;
+    }*/
 
     .halfsies .right-half {
       padding-bottom: 12em;
@@ -454,6 +475,7 @@ a.button {
       flex: inherit;
       margin-top: 1em;
     }
+
 
   }
 
@@ -472,14 +494,14 @@ a.button {
 
     header.mast .site-logo img {
       display: block;
-      width: 56px;
+      width: 70px;
     }
 
     /*footer::after,*/
     header::before {
       content: "";
-      height: 10px;
-      background-color: #F49F0A;
+      height: 25px;
+      /*background-color: #62A87C;*/
       width: 100%;
       position: relative;
       display: block;
@@ -495,9 +517,9 @@ a.button {
           position: absolute;
           left: 51%;
           right: 51%;
-          top: -10px;
-          background-color: #003B57;
-          height: 10px;
+          top: -25px;
+          background-color: #ffffff;
+          height: 25px;
           transition-property: left,right;
           transition-duration: .2s;
           transition-timing-function: ease-out;
@@ -510,6 +532,59 @@ a.button {
 
 
 
+    .skip-link {
+      padding-top: 1em;
+      transform: translateY(-200%);
+    }
+      .skip-link:focus {
+        transform: translateY(0%);
+      }
+
+  .nav-tab {
+    background: #fefadb;
+    color: #fff;
+    padding: .75em 1.5em;
+    font-size: .7em;
+    display: inline-block;
+    position: absolute;
+    z-index: 2;
+    transition: all 125ms ease;
+    white-space: nowrap;
+  }
+
+    .nav-tab span {
+      display: inline-block;
+      margin-right: 0.125rem;
+    }
+
+    .nav-tab:focus,
+    .nav-tab:hover {
+      text-decoration: none;
+      filter: brightness(1.1);
+    }
+
+    header .nav-tab {
+      top: -0.375rem;
+      padding-top: 1rem;
+    }
+
+      header .nav-tab:focus,
+      header .nav-tab:hover {
+        padding-top: 1.3125rem;
+      }
+
+    main .nav-tab {
+      bottom: 0;
+      padding-top: 0.625rem;
+      padding-bottom: 0.875rem;
+    }
+
+      main .nav-tab:focus,
+      main .nav-tab:hover {
+        padding-bottom: 1.3125rem;
+      }
+
+
   /* Footer
   -------------------------------------------------- */
 
@@ -517,14 +592,14 @@ a.button {
     text-align: center;
     background: url(/img/mount.svg) bottom center no-repeat;
     padding-top: 3em;
-    background-color: #ffffff; 
   }
-
 
     footer nav {
       font-size: .8em;
       padding-top: 5em;
     }
+
+
 
 
   /* Nav (header and footer)
@@ -548,6 +623,23 @@ a.button {
         font-size: .8em;
       }
 
+  @media only screen and (max-width: 800px) {
+
+      body {
+        border-width: 10px;
+      }
+      header nav ul.nav-menu li a {
+        padding-top: 1em;
+        padding-bottom: 1em;
+      }
+      header.mast .site-logo {
+        margin: 0 auto;
+      }
+      footer nav p {
+        margin: -4em 0 4em;
+      }
+
+  }
 
 
 
@@ -568,15 +660,18 @@ a.button {
     .theme--dark cite, 
     .theme--dark h3, 
     .theme--dark h4,
-    .theme--dark .site-logo span,
+    .theme--dark .site-logo span{
+      color: #ffffff;
+    }
+
     .theme--dark a, 
     .theme--dark a:visited, 
     .theme--dark a:link {
-      color: #fff;
+      color: #FFFADB;
     }
       .theme--dark a:hover, 
       .theme--dark a:active {
-        color: #fffde0;
+        color: #ffffff;
       }
     .theme--dark h1 {
       color: #FFF583
@@ -589,34 +684,39 @@ a.button {
 
   /* HERO
   -------------------------------------------------- */
+  .hero {
+    margin: 5em 0 0;
+  }
 
-.hero.theme--dark h2 {
-  color: #FFF583;
-}
+  .hero.theme--dark h2 {
+    color: #FFF583;
+  }
 
-.hero.theme--dark h4 {
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  color: #FFF583;
-  font-weight: normal;
-  margin-top: 2em;
-}
+  .hero.theme--dark h4 {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #FFF583;
+    font-weight: normal;
+    margin-top: 2em;
+  }
 
-.hero h1 {
-  font-weight: normal;
-  margin-top: .5em;
-}
+  .hero h1 {
+    font-weight: normal;
+    margin-top: .5em;
+  }
 
-.hero img {
-  border: 10px solid #ffffff;
-}
-.hero .halfsies {
-  justify-content: space-between;
-}
+  .hero img {
+    border: 1px solid #ffffff;
+    /*margin: -25px;*/
+    /*border-radius: 25%;*/
+  }
+  .hero .halfsies {
+    justify-content: space-between;
+  }
 
-.hero .halfsies > * {
-  max-width: 43%;
-}
+  .hero .halfsies > * {
+    max-width: 47%;
+  }
 
 
   section.case-study h4 span {
@@ -682,6 +782,9 @@ a.button {
 
   @media only screen and (max-width: 800px) {
 
+    .hero {
+      margin-top: 1em;
+    }
     .hero .halfsies {
       display: block;
       flex: unset;
@@ -689,6 +792,7 @@ a.button {
     .hero .halfsies > * {
       max-width: 100%;
     }
+
 
   }
 
@@ -704,7 +808,7 @@ a.button {
       -webkit-filter: drop-shadow(0 5px 15px rgba(42, 55, 72,.1));
       filter: drop-shadow(0 5px 15px rgba(42, 55, 72,.1));
       margin: 1em 0 2em;
-          outline: 10px solid #fff;
+      outline: 10px solid #fff;
       transition: .3s all;
     }
 
@@ -735,6 +839,9 @@ a.button {
     .ui-thumb img {
       box-shadow: 0 3px 50px rgba(0,0,0,.15);
       margin-bottom: 1em;
+      border: 1px solid #003B57;
+      /*margin: -25px;*/
+      /*border-radius: 25%;*/
     }
 
     .ui-thumb.--green {
@@ -747,7 +854,7 @@ a.button {
     }
 
     .ui-thumb.--teal {
-      background-color: #1AACA2;
+      background-color: #2f938c;
     }
     .ui-thumb.--teal h2,
     .ui-thumb.--teal p,
@@ -756,7 +863,7 @@ a.button {
     }
 
     .ui-thumb.--blue {
-      background-color: #0E3563;
+      background-color:#003B57
     }
     .ui-thumb.--blue h2,
     .ui-thumb.--blue p,
@@ -773,35 +880,48 @@ a.button {
       color: #f9d872;
     }
 
+@media only screen and (max-width: 800px) {
+
+  .ui-thumb h2 {
+    font-size: 3em;
+  }
+
+}
 
 
   /* Homepage 
   -------------------------------------------------- */
 
-  .hero {
-    margin: 5em 0 0;
-  }
+   section.specialties section {
+      margin: 0 auto 2em;
+    }
+
+    section.specialties .content-container {
+      margin-bottom: inherit;
+    }
 
     section.specialties picture {
-      /*aligning the photo up in a hacky way. Can't figure out why the picture element can't go flush to the bottom? */
-      margin: 1em -5.55% -8px;
-    }
-
-    section.specialties h2 {
-      font-size: 10em;
-      margin: 0;
-    }
-
-    section.specialties section {
-      padding-bottom: 0;
-      margin-top: 5em;
-    }
-
-      section.specialties section div.button {
-        display: flex;
-        align-items: center;
-        justify-content: center;
+        /*aligning the photo up in a hacky way. Can't figure out why the picture element can't go flush to the bottom? */
+        /*margin: 1em -5.55% -8px;*/
+       margin-bottom: -11px;
       }
+
+      section.specialties .halfsies h2 {
+        /*font-size: 10em;*/
+        font-family: 'Space Grotesk', -apple-system, BlinkMacSystemFont, avenir next, avenir, segoe ui, helvetica neue, helvetica, Ubuntu, roboto, noto, arial, sans-serif; 
+          margin: 0;
+      }
+
+        section.specialties section div.button {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+
+      section.specialties section  p {
+          margin-bottom: 0;
+      }
+
 
 
   section.gift h1 {
@@ -814,12 +934,10 @@ a.button {
   }
 
 
+@media only screen and (max-width: 800px) {
 
-  @media only screen and (max-width: 600px) {
-
-    section.specialties .halfsies,
     section.specialties section div.button {
-      display: block;
+      justify-content: inherit;
     }
 
   }
