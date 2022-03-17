@@ -10,7 +10,7 @@
   }
 
   html {
-    font-family: Gotu, system, -apple-system, ".SFNSText-Regular", "San Francisco", "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", sans-serif;
+    font-family: "Public Sans", system, -apple-system, ".SFNSText-Regular", "San Francisco", "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", sans-serif;
     font-size: 22px;
     line-height: 1.5;
     background: #fff;
@@ -102,14 +102,14 @@
     height: 14px;
     }
 
-  .roles li,
+ /* .roles li,
   p.caption,
   h1 em,
   blockquote p,
   li em,  
   p em {
     font-family: Georgia,"Book Antiqua","Palatino Linotype", Palatino, Palladio, "URW Palladio L", Baskerville, "Bookman Old Style", "Bitstream Charter", "Nimbus Roman No9 L", Garamond, "Apple Garamond", "ITC Garamond Narrow", "New Century Schoolbook", "Century Schoolbook", "Century Schoolbook L", Georgia, serif;
-  }
+  }*/
 
   p.caption {
     font-size: .9em;
@@ -155,7 +155,7 @@
   -------------------------------------------------- */
 
   h1, h2, h3, h4 {
-    font-family: 'Space Grotesk', -apple-system, BlinkMacSystemFont, avenir next, avenir, segoe ui, helvetica neue, helvetica, Ubuntu, roboto, noto, arial, sans-serif; 
+    /*font-family: 'Space Grotesk', -apple-system, BlinkMacSystemFont, avenir next, avenir, segoe ui, helvetica neue, helvetica, Ubuntu, roboto, noto, arial, sans-serif; */
     line-height: 1.1;
     margin-top: 1.5em;
     margin-bottom: .5em;
@@ -166,13 +166,12 @@
     font-size: 4.5em;
     line-height: .9;
     margin-bottom: .25em;
-    font-weight: normal;
+    /*font-weight: normal;*/
     word-wrap: break-word;
   }
   h2 {
-    font-family: Gotu;
     font-size: 3em;
-    font-weight: normal;
+    /*font-weight: normal;*/
     margin: 0 0 .5em;
   }
 
@@ -279,7 +278,7 @@
 
 
 a.button {
-  font-family: 'Space Grotesk', -apple-system, BlinkMacSystemFont, avenir next, avenir, segoe ui, helvetica neue, helvetica, Ubuntu, roboto, noto, arial, sans-serif;
+  /*font-family: 'Space Grotesk', -apple-system, BlinkMacSystemFont, avenir next, avenir, segoe ui, helvetica neue, helvetica, Ubuntu, roboto, noto, arial, sans-serif;*/
 }
   .theme--dark a.button:link,
   .theme--dark a.button:visited,
@@ -701,7 +700,7 @@ a.button {
   }
 
   .hero h1 {
-    font-weight: normal;
+    /*font-weight: normal;*/
     margin-top: .5em;
   }
 
@@ -761,7 +760,7 @@ a.button {
       ol.legend li::before {
         content: counter(my-awesome-counter) ". ";
         color: #fff;
-        font-family: 'Space Grotesk', -apple-system, BlinkMacSystemFont, avenir next, avenir, segoe ui, helvetica neue, helvetica, Ubuntu, roboto, noto, arial, sans-serif; 
+        /*font-family: 'Space Grotesk', -apple-system, BlinkMacSystemFont, avenir next, avenir, segoe ui, helvetica neue, helvetica, Ubuntu, roboto, noto, arial, sans-serif; */
         border-radius: 50%;
         background-color: #3EA261;
         font-weight: bold;
@@ -908,7 +907,7 @@ a.button {
 
       section.specialties .halfsies h2 {
         /*font-size: 10em;*/
-        font-family: 'Space Grotesk', -apple-system, BlinkMacSystemFont, avenir next, avenir, segoe ui, helvetica neue, helvetica, Ubuntu, roboto, noto, arial, sans-serif; 
+        /*font-family: 'Space Grotesk', -apple-system, BlinkMacSystemFont, avenir next, avenir, segoe ui, helvetica neue, helvetica, Ubuntu, roboto, noto, arial, sans-serif; */
           margin: 0;
       }
 
