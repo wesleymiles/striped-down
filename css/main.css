@@ -711,6 +711,7 @@ a.button {
   }
   .hero .halfsies {
     justify-content: space-between;
+    align-items: center;
   }
 
   .hero .halfsies > * {
