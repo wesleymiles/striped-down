@@ -922,6 +922,11 @@ a.button {
       }
 
 
+   section.competecies .halfsies {
+    justify-content: space-between;
+    column-gap: 4em; 
+   }
+
 
   section.gift h1 {
     margin-bottom: .2em;
