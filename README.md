@@ -1,3 +1,7 @@
-# striped-down
+# Personal website
 
-Working on a new site with eleventy, progressively updating as I go.
+Made with eleventy
+
+Started as a homebase for the job search
+
+Maybe blog and notes section to come
