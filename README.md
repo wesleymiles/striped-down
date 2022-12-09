@@ -1,7 +1,7 @@
 # Personal website
 
-Made with eleventy
+Made with eleventy, hosting on github, deploying with netlify 
 
 Started as a homebase for the job search
 
-Maybe blog and notes section to come
+Blog and old projects to come
