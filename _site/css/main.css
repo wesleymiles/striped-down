@@ -148,8 +148,8 @@
 
   h1, h2, h3, h4 {
     line-height: 1.1;
-/*    margin-top: 1em;*/
     margin-bottom: .5em;
+    font-weight: normal;
   }
 
   h1 {
@@ -167,11 +167,9 @@
   h3 {
     font-size: 1.5em;
     line-height: 1.3;
-    font-weight: bold;
   }
 
   h4 {
-    font-weight: bold;
     font-size: 1.2em;
     margin-bottom: .5em;
     margin-top: .5em;
@@ -660,14 +658,15 @@ a.button {
       margin-bottom: .5em;
      }
 
+  footer.theme--dark {
+    border-top: 2px solid #3fa261;
 
+  }
 
-  /* HERO
-  -------------------------------------------------- */
-  .hero {
-    overflow-wrap: break-word;
-    hyphens: auto;
-}
+  .hero.theme--dark {
+    border-top: 2px solid #3fa261;
+    margin-top: -2px; 
+  }
 
 
   .hero.theme--dark h2 {
@@ -681,6 +680,18 @@ a.button {
     font-weight: normal;
     margin-top: 2em;
   }
+
+
+
+
+  /* HERO
+  -------------------------------------------------- */
+  .hero {
+    overflow-wrap: break-word;
+    hyphens: auto;
+}
+
+
 
   .hero h1 {
     /*font-weight: normal;*/

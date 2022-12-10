@@ -1,0 +1,50 @@
+---
+layout: layout.liquid
+title: Archive
+---
+
+
+<section class="case-studies">
+
+		<h2>Previous work</h2>
+	
+
+		<div class="cards">
+			 {% for post in collections.uiProject %}
+
+			<a  class="card" href="{{ post.url | url }}" aria-label="Read more on {{ post.data.projectTitle }}">
+        <figure>
+     			<img src="{{ post.data.thumbnail }}" >
+          <figcaption>
+          	<h4>{{ post.data.projectTitle }} </h4>
+						<p>{{ post.data.description }}</p>
+          </figcaption>
+        </figure>
+      </a>
+
+		  {% endfor %}
+
+
+
+			{% for post in collections.uxProject %}
+
+			<a class="card" href="{{ post.url | url }}" aria-label="Read more on {{ post.data.projectTitle }}">
+        <figure>
+     			<img src="{{ post.data.thumbnail }}" >
+          <figcaption>
+          	<h4>{{ post.data.projectTitle }} </h4>
+						<p>{{ post.data.description }}</p>
+          </figcaption>
+        </figure>
+      </a>
+
+		  {% endfor %}
+
+		</div>
+	</div>
+
+</section>
+
+
+
+
