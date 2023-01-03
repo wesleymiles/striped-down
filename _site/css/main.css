@@ -10,8 +10,8 @@
   }
 
   html {
-    font-family: "Public Sans", system, -apple-system, ".SFNSText-Regular", "San Francisco", "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", sans-serif;
-    font-size: 22px;
+    font-family: 'Erode', "Public Sans", system, -apple-system, ".SFNSText-Regular", "San Francisco", "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", sans-serif;
+    font-size: 23px;
     line-height: 1.5;
     background: #fff;
     color: #003B57;
@@ -34,16 +34,16 @@
   body {
     margin: 0;
     padding: 0;
-    background: #F4F4F4 url(/img/noise.png) repeat;
+    background: #FFFFE3 url(/img/noise.png) repeat;
     border: 25px solid #003B57;
     border-bottom: 0;
   }
 
   hr {
       height: 2px;
-      background: #FFF583;
+      background: #5EAA78;
       border: 0;
-      margin: 2em 0;
+      /* margin: 2em 0; */
   }
   ol, ul {
     padding-left: 2em;
@@ -81,7 +81,7 @@
     blockquote cite {
       margin-top: 1em;
       display: block;
-      font-family: system, -apple-system, ".SFNSText-Regular", "San Francisco", "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", sans-serif;
+      /* font-family: system, -apple-system, ".SFNSText-Regular", "San Francisco", "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", sans-serif; */
       font-size: .9em;
     }
     blockquote cite::before {
@@ -141,31 +141,58 @@
   }
 
 
+  ol {
+    counter-reset: my-awesome-counter;
+    list-style: none;
+    padding-left: 40px;
+  }
+    ol li {
+      counter-increment: my-awesome-counter;
+      position: relative;
+    }
+      ol li::before {
+        content: counter(my-awesome-counter);
+        color: #FFFADB;
+        font-weight: bold;
+        position: absolute;
+        --size: 26px;
+        left: calc(-1 * var(--size) - 10px);
+        line-height: var(--size);
+        width: var(--size);
+        height: var(--size);
+        top: 3px;
+        background: #002a3e;
+        border-radius: 50%;
+        text-align: center;  
+        font-size: 0.9em;
+      }
 
 
   /* Fonts
   -------------------------------------------------- */
 
   h1, h2, h3, h4 {
+    font-family: 'Cabinet Grotesk';
     line-height: 1.1;
-    margin-bottom: .5em;
+    margin-bottom: 1em;
     font-weight: normal;
   }
 
   h1 {
     color: #62A87C;
-    font-size: 4em;
+    font-size: 3.7em;
     line-height: .9;
     margin-bottom: .25em;
     word-wrap: break-word;
   }
   h2 {
-    font-size: 2em;
+    font-size: 2.5em;
     margin: 0 0 .5em;
   }
 
   h3 {
-    font-size: 1.5em;
+    font-size: 1.8em;
+    margin-bottom: .3em;
     line-height: 1.3;
   }
 
@@ -264,6 +291,8 @@
 
 a.button {
   /*font-family: 'Space Grotesk', -apple-system, BlinkMacSystemFont, avenir next, avenir, segoe ui, helvetica neue, helvetica, Ubuntu, roboto, noto, arial, sans-serif;*/
+  font-family: 'Cabinet Grotesk';
+  font-size: .7em;
 }
   .theme--dark a.button:link,
   .theme--dark a.button:visited,
@@ -293,7 +322,7 @@ a.button {
   section {
     position: relative;
     margin: 0 auto;
-    padding: 6em 8%;
+    padding: 5em 8%;
   }
 
   footer,
@@ -755,7 +784,6 @@ a.button {
       ol.legend li::before {
         content: counter(my-awesome-counter) ". ";
         color: #fff;
-        /*font-family: 'Space Grotesk', -apple-system, BlinkMacSystemFont, avenir next, avenir, segoe ui, helvetica neue, helvetica, Ubuntu, roboto, noto, arial, sans-serif; */
         border-radius: 50%;
         background-color: #3EA261;
         font-weight: bold;
@@ -813,9 +841,13 @@ a.button {
   .ux-case-study p.lessons-learned {
     background-color: #ffffff;
     border-radius: 1em;
-    padding: 1em 1.5em;
+    padding: 1.5em;
+    font-size: .9em;
+    line-height: 1.3;
   }
-
+  .ux-case-study p.lessons-learned::before {
+    content: '💡'
+  }
 
 
 
@@ -888,6 +920,7 @@ a.button {
 
    section.specialties section {
       margin: 0 auto 2em;
+      padding: 3em 3em;
     }
 
     section.specialties .content-container {
@@ -898,12 +931,6 @@ a.button {
         /*aligning the photo up in a hacky way. Can't figure out why the picture element can't go flush to the bottom? */
         /*margin: 1em -5.55% -8px;*/
        margin-bottom: -11px;
-      }
-
-      section.specialties .halfsies h2 {
-        /*font-size: 10em;*/
-        /*font-family: 'Space Grotesk', -apple-system, BlinkMacSystemFont, avenir next, avenir, segoe ui, helvetica neue, helvetica, Ubuntu, roboto, noto, arial, sans-serif; */
-          margin: 0;
       }
 
         section.specialties section div.button {
@@ -917,10 +944,30 @@ a.button {
       }
 
 
-   section.competecies .halfsies {
+   section.about .halfsies {
     justify-content: space-between;
     column-gap: 4em; 
    }
+   section.about h3 {
+    text-align: center;
+   }
+
+   div.competencies {
+    text-align: center;
+  }
+    div.competencies ul {
+      display: grid;
+      gap: .5rem 1rem;
+      grid-template-columns: repeat(auto-fill, minmax(8rem, 1fr));
+    }
+      div.competencies ul li {
+        list-style: none;
+        margin-left: 0;
+        /* font-family: 'Cabinet Grotesk'; */
+        text-transform: uppercase;
+        font-size: .9em;
+        letter-spacing: .5px;
+      }
 
 
   section.gift h1 {
@@ -931,6 +978,8 @@ a.button {
   section.gift h3 {
     text-align: center;
   }
+
+
 
 
 @media only screen and (max-width: 800px) {
