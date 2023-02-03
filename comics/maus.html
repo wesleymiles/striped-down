@@ -1,0 +1,19 @@
+---
+tags: post
+title: Maus II
+layout: layout.liquid
+author: Art Speigalman
+notes: gut wrenching
+---
+
+{%- for post in collections.post -%}
+  <section class="hero">
+    <div class="content-inner">
+
+      <h1>{{ post.data.title }}</h1>
+      <p>{{ post.data.author }}</p>
+      <p>{{ post.data.notes }}</p>
+      </div>
+
+{%- endfor -%}
+

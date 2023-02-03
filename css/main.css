@@ -168,6 +168,26 @@
       }
 
 
+
+ .checks ul {
+    list-style: none;
+    padding-left: 40px;
+  }
+   .checks ul li {
+      position: relative;
+        list-style: none;
+        margin-left: 0;
+  
+    }
+     .checks ul li::before {
+        content: '✓';
+        color: #62A87C;
+        position: absolute;
+        top: 3px;
+      }
+
+
+
   /* Fonts
   -------------------------------------------------- */
 
@@ -180,18 +200,20 @@
 
   h1 {
     color: #62A87C;
-    font-size: 3.7em;
+    font-size: 3em;
     line-height: .9;
     margin-bottom: .25em;
     word-wrap: break-word;
+    /* margin-top: .5em; */
   }
+  
   h2 {
-    font-size: 2.5em;
+    font-size: 2.1em;
     margin: 0 0 .5em;
   }
 
   h3 {
-    font-size: 1.8em;
+    font-size: 1.5em;
     margin-bottom: .3em;
     line-height: 1.3;
   }
@@ -209,9 +231,12 @@
 
   @media only screen and (max-width: 800px) {
 
-    html { font-size: 18px; }
-    h1 { font-size: 3em; }
-    h2 { font-size: 2em; }
+    /* html { font-size: 18px; } */
+    h1 { font-size: 2em; }
+    h2 { font-size: 1.5em; }
+    body { border: 0 }
+    footer, header { padding: 1em;}
+    
 
   }
 
@@ -346,9 +371,7 @@ a.button {
   main.content-primary,
   .content-inner {
     position: relative;
-    margin: 0 auto;
     max-width: 800px;
-    width: 90%;
   }
     .content-container.--right {
       padding-left: 20%;
@@ -356,9 +379,10 @@ a.button {
       max-width: inherit;
     }
 
+    .hero .content-inner,
     .content-container.--left {
-      padding-right: 44%;
-      max-width: inherit;
+      padding-bottom: 0;
+      margin-left: 0;
     }
 
     .--center {
@@ -443,7 +467,7 @@ a.button {
   @media only screen and (max-width: 800px) {
 
     section {
-      padding: 1em 5%;
+      padding: 2em 5%;
       /*padding-right: 5%;*/
       /*padding-left: 5%;*/
 
@@ -715,30 +739,19 @@ a.button {
 
   /* HERO
   -------------------------------------------------- */
-  .hero {
-    overflow-wrap: break-word;
-    hyphens: auto;
-}
 
-
-
-  .hero h1 {
-    /*font-weight: normal;*/
-    margin-top: .5em;
-  }
-
-  .hero img {
+  .homepage section img {
     border: 1px solid #ffffff;
     /*margin: -25px;*/
     /*border-radius: 25%;*/
   }
-  .hero .halfsies {
+  .homepage .halfsies {
     justify-content: space-between;
     align-items: center;
   }
 
-  .hero .halfsies > * {
-    max-width: 43%;
+  .homepage .halfsies > * {
+    max-width: 45%;
   }
 
 
@@ -763,14 +776,6 @@ a.button {
     }
 
 
-  body.hi blockquote {
-    margin: 2em 0;
-  }
-    body.hi blockquote p {
-      font-size: 2.5em;
-      margin: 0;
-     line-height: 1.1;
-    }
 
   ol.legend {
     list-style: none;
@@ -804,14 +809,11 @@ a.button {
 
   @media only screen and (max-width: 800px) {
 
-    .hero {
-      margin-top: 1em;
-    }
-    .hero .halfsies {
+    .homepage .halfsies {
       display: block;
       flex: unset;
     }
-    .hero .halfsies > * {
+    .homepage .halfsies > * {
       max-width: 100%;
     }
 
@@ -829,14 +831,23 @@ a.button {
     .ux-case-study img {
       -webkit-filter: drop-shadow(0 5px 15px rgba(42, 55, 72,.1));
       filter: drop-shadow(0 5px 15px rgba(42, 55, 72,.1));
-      margin: 1em 0 2em;
-      outline: 10px solid #fff;
-      transition: .3s all;
+      margin: .7em 0;
+      /* outline: 10px solid #fff; */
+      /* transition: .3s all; */
+      /* max-width: 900px; */
+      /* margin-left: -25%; */
+      /* left: 50%; */
+      /* margin-left: -50vw; */
+      /* margin-right: -50vw; */
+      max-width: 60vw;
+      position: relative;
+      /* right: 50%; */
+      /* width: 60vw; */
     }
 
 
   .ux-case-study h2 {
-      margin-bottom: 1em;
+      margin: 1em 0;
     }
   .ux-case-study p.lessons-learned {
     background-color: #ffffff;
@@ -849,6 +860,20 @@ a.button {
     content: '💡'
   }
 
+  /*  scoping an experiment of a narrow bucket for content */
+  
+  @media only screen and (min-width: 800px) {
+
+    /* section.hero {
+      max-width: 700px;
+      padding-left: 0;
+      padding-right: 0;
+    } */
+
+    body.UX section.hero {
+      
+    }
+  }
 
 
   /* Serices: UI
@@ -857,6 +882,9 @@ a.button {
   .ui-thumb {
     padding: 3em 1em;
   }
+    .ui-thumb .content-inner{
+      margin: 0 auto;
+    }
     .ui-thumb h2 {
       text-align: center;
       word-break: break-word;
@@ -944,30 +972,21 @@ a.button {
       }
 
 
-   section.about .halfsies {
+   .homepage section.about .halfsies {
     justify-content: space-between;
     column-gap: 4em; 
+    align-items: inherit;
    }
    section.about h3 {
     text-align: center;
    }
 
-   div.competencies {
-    text-align: center;
-  }
     div.competencies ul {
       display: grid;
       gap: .5rem 1rem;
       grid-template-columns: repeat(auto-fill, minmax(8rem, 1fr));
     }
-      div.competencies ul li {
-        list-style: none;
-        margin-left: 0;
-        /* font-family: 'Cabinet Grotesk'; */
-        text-transform: uppercase;
-        font-size: .9em;
-        letter-spacing: .5px;
-      }
+
 
 
   section.gift h1 {
@@ -990,3 +1009,10 @@ a.button {
 
   }
 
+
+  /* work archive 
+  -------------------------------------------------- */
+
+body.archive .branding img {
+   max-height: 200px;
+}
