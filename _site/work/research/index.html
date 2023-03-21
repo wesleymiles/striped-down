@@ -1,14 +1,59 @@
----
-layout: layout.liquid
-title: UX Design
-description: 3 UX case studies of contributing, guiding, and shipping projects.
----
-	<section class="hero">
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="robots" content="noindex,nofollow">		
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Research — Wes Carr</title>
+
+	<!-- SEO Tags -->
+	<meta property="og:title" content="true"/>
+	<meta property="og:url" content="/work/research/ "/>
+	<meta property="og:description" content="true "/>
+	<meta property="og:image" content="/img/social-thumbnail.jpg" />
+
+    <link rel="stylesheet" href="/css/main.css">
+
+	<!-- fonts -->
+	<link href="https://api.fontshare.com/v2/css?f[]=erode@600,601,401,400&f[]=cabinet-grotesk@500&display=swap" rel="stylesheet"> 
+
+	
+    <link rel="icon" href="/img/favicon.ico">
+	<link rel="icon" href="/img/icon.svg" type="image/svg+xml">
+	<link rel="apple-touch-icon" href="/img/apple-touch-icon.png">
+
+  </head>
+
+	<body class="Research">
+  	<a class="skip-link nav-tab" href='#main'>Skip to content</a>
+		<header class="mast">
+			<nav aria-label="Main" class="theme--dark">
+
+				<div class="site-logo">
+					<a href="/">
+						<img src="/img/mount.svg" alt="cartoon mountain" />
+						Wes Carr
+					</a>
+				</div>
+
+				<ul class="nav-menu">
+					<li><a href="/work/web/">Web</a></li>
+					<li><a href="/work/branding/">Branding</a></li>
+					<li><a href="/work/research/">Research</a></li>
+					<li><a href="/gift/">Gift</a></li>
+				</ul>
+			</nav>
+
+		</header>
+
+	<main id="main">
+
+
+    	<section class="hero">
 		<div class="content-inner">
 
-			<h1>User experience design</h1>
-			<p>3 examples of contributing, guiding, and shipping projects.</p>
-			<p><a class="button" href="#pattern_library">Pattern Library ↓</a>     <a class="button" href="#landing_pages">Landing Page Research ↓</a>     <a class="button" href="#ab_testing">AB Testing ↓</a></p>
+			<h1>Research</h1>
+			<p>At iMarket, I was part of a CRO team. We answered questions and tested hypothesis then ideas cascaded them to the company. At Red Hat I'm carrying this torch as a member of a larger, but still immature research team.</p>
 		
 		</div>
 	</section>
@@ -19,36 +64,72 @@ description: 3 UX case studies of contributing, guiding, and shipping projects.
 
 		<div class="content-inner">
 
-			<h2 id="pattern_library">1. Pattern Library Cuts Days Off Build Time</h2>
-			<h3>Situation:</h3>
-			<ul>
-			    <li>My agency built sites mostly from scratch. Devs and designers used personal methods of reusing code and design for efficiency.</li>
-			    <li>Designers delivered desktop mockups only, so devs were responsible for all breakdowns. Because many design decisions were made by non-designers, the mobile ux wasn't optimal.</li>
-			</ul>
-			<h3>Action:</h3>
-			<ul>
-			    <li>
-			    	I was excited 🤩 and drooly 🤤 about <a href="https://atomicdesign.bradfrost.com" target="blank" class="external">Atomic Design</a> and pitched wireframes and a vision to the tech team explaining how a design system would improve our reusing methods. <em>To be clear, each site had a mini design system itself comprised of reusable elements like colors, buttons, and styles. The agency design system model would to make building the mini systems easier. Similar to the WYSIWYG of Square Space.</em> 
-			    	<img src="/img/ux/pattern-library/early-wireframe.png" alt="early wireframe of pattern library idea" />
-			    </li>
-			    <li>
-			    	It didn't catch on, but the spark surfaced a need to unify the names of every single site piece. A new committee and I created a company-wide glossary, so everyone knew what you meant when you said "Hero" and we banished the use of "Banner."
-			    	<img src="/img/ux/pattern-library/glossary.png" alt="Anatomy of a website document screenshot" />
-			    </li>
-			    <li>
-			    	A year later, the company was ready to implement. My team and I designed three responsive views for each piece of functionality, based on  existing sites.
-			    	<img src="/img/ux/pattern-library/progress.png" alt="responsive views of 5 pattern variations, with live sites" />
-			    </li>
-			    <li>Since I understand front-end code, I acted as the conduit to development during build.</li>
-			</ul>
-			<h3>Result</h3>
-			<ul>
-			    <li>Months later we had a working library of 100+ patterns for dev and design to leverage reusing work.</li>
-			    <li>We had a process for library maintenance (retiring and adding new patterns).</li>
-			    <li>It decreased dev's and design's build-time by a day.</li>
-			    <li>It improved our mobile ux because each pattern included breakdowns of 3 responsive views.</li>
-			</ul>	
-			<p class="lessons-learned"><em>Lesson learned: Ideas turn into realities much faster when you have top-down approval. Keep pitching until one gets prioritized.</em></p>
+			<h2>AB testing</h2>
+			<p> </p>
+
+			<div class="cols flex-grid-half">
+				<div class="col">
+					<h3>Test 1: “Do shorter pages convert less?”</h3>
+					<p>I helped run and strategize an AB test for existing content length vs shorter content length. Our hypothesis was that less words wouldn’t hurt conversion.</p>
+				<p>Our page-views were low, so we bundled the test on 5 clients and aggregated the data.</p>
+				<h4>Results:</h4>
+				<ul>
+					<li>Growth in conversions by 16.65% </li>
+						<li>No negative effect on keyword visibility. (This was found after assessing the experiment 6 months after launch)</li>
+					</ul>
+					<h4>Impact:</h4>
+				<ul>
+						<li>Reduced the load of what writers had to write by half! </li>
+						<li>UX benefits: Allows users to get their answer faster. Quicker to digest. More to-the-point.</li>
+					</ul>
+					<div class="roles">
+						<h4>What I did</h4>
+						<ul>
+							<li>Data gathering</li>
+						</ul>
+					</div>
+				</div>
+	
+				<div class="col">
+					<picture>
+					  <source srcset="/img/work/data/bayonet.webp" type="image/webp">
+					  <source srcset="/img/work/data/bayonet.png" type="image/png">
+						<img src="/img/work/data/bayonet.png" alt="" />
+						<p class="caption">Before and after of shortened word-length experiment</p>
+					</picture>
+				</div>
+
+
+
+		<div class="cols flex-grid-half">
+			<div class="col">
+				<h3>Test 2: “What CTA button converts better, <em>Contact Us</em> or <em>Get in Touch</em>?”</h3>
+				<p>On our first AB test, we sought to follow takeaways from bigger brands and test button wording. Our sites have the button wording vary from about 10 different options. </p>
+				<p>The statistical significance calculator told us we needed a pretty big boost in conversions to make this test useful.</p>
+		    <h4>Results:</h4>
+		    <p>We didn’t get it. Optimize went to its timing limit of 3 months over 3,471 Sessions and found no leader. Although inconclusive as a whole, the opposite of our hypothesis was leading the way —  “Contact Us” did better than “Get in Touch.” We learned we'd need to make changes with a bigger impact for this amount of traffic.</p>
+				<div class="roles">
+					<h4>What I did</h4>
+					<ul>
+						<li>Project lead</li>
+						<li>Data gathering</li>
+					</ul>
+				</div>
+			</div>
+
+			<div class="col stretch-right">
+				<picture>
+				  <source srcset="/img/work/data/no-leader.webp" type="image/webp">
+				  <source srcset="/img/work/data/no-leader.jpg" type="image/jpg">
+					<img src="/img/work/data/no-leader.jpg" alt=""  />
+					<p class="caption">Our first AB test with no clear winner.</p>
+				</picture>
+			</div>
+
+		</div>
+
+
+
 
 
 			<h2 id="landing_pages">2. Improved Outdated Landing Page Designs with Research</h2>
@@ -146,3 +227,27 @@ description: 3 UX case studies of contributing, guiding, and shipping projects.
 
 		</div>
 </section>
+
+
+
+	</main>
+
+	<footer class="theme--dark">
+		<div class="align--center">
+			<nav>
+				<p class="colophon">
+					Built with <a href="https://www.11ty.dev/">eleventy</a>
+				</p>
+				<p class="social">
+					<a href="https://www.linkedin.com/in/wes-carr-8918b99/">linkedin</a>  |  
+					<a href="https://unsplash.com/@wescarr">unsplash</a>  |  
+					<a href="mailto:hi@wescarr.com">email</a>
+				</p>
+			</nav>
+
+		</div>
+
+	</footer>
+
+	</body>
+</html>
