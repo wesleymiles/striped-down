@@ -3,28 +3,30 @@
   <head>
     <meta charset="UTF-8">
 
-	{% if page.url == '/work/research/' %}
-		<meta name="robots" content="noindex,nofollow">		
-	{% endif %}
-	
+		{% if page.url == '/work/research/' %}
+			<meta name="robots" content="noindex,nofollow">		
+		{% endif %}
+		
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ title }} — Wes Carr</title>
 
-	<!-- SEO Tags -->
-	<meta property="og:title" content="{{ title or renderData.title or metadata.title }}"/>
-	<meta property="og:url" content="{{ page.url }} "/>
-	<meta property="og:description" content="{{ description or renderData.description }} "/>
-	<meta property="og:image" content="/img/social-thumbnail.jpg" />
+		<!-- SEO Tags -->
+		<meta property="og:title" content="{{ title or renderData.title or metadata.title }}"/>
+		<meta property="og:url" content="{{ page.url }} "/>
+		<meta property="og:description" content="{{ description or renderData.description }} "/>
+		<meta property="og:image" content="/img/social-thumbnail.jpg" />
 
     <link rel="stylesheet" href="{{ '/css/main.css' | url }}">
 
-	<!-- fonts -->
-	<link href="https://api.fontshare.com/v2/css?f[]=erode@600,601,401,400&f[]=cabinet-grotesk@500&display=swap" rel="stylesheet"> 
-
-	
+		<!-- fonts -->
+		<link href="https://api.fontshare.com/v2/css?
+			f[]=erode@600,601,401,400&
+			f[]=cabinet-grotesk@400,500&
+			display=swap" rel="stylesheet"> 
+		
     <link rel="icon" href="/img/favicon.ico">
-	<link rel="icon" href="/img/icon.svg" type="image/svg+xml">
-	<link rel="apple-touch-icon" href="/img/apple-touch-icon.png">
+		<link rel="icon" href="/img/icon.svg" type="image/svg+xml">
+		<link rel="apple-touch-icon" href="/img/apple-touch-icon.png">
 
   </head>
 
@@ -50,4 +52,4 @@
 
 		</header>
 
-	<main id="main">
+	<main>
