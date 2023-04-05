@@ -42,7 +42,8 @@
   body > main {
     background: #FFFDFA url(/img/noise.png) repeat;
     border-radius: 20px;
-    overflow: hidden;
+    overflow: hidden; 
+    box-shadow: 0 0 50px #3562bd;
   }
   
   hr {
@@ -72,11 +73,14 @@
     }
       .checks li:before {
         content: '✓  ';
-        content: '✅ ';
         color: #3ea261;
         font-weight: bold;
         margin-left: -1.3em;
       }
+      .checks.cross li:before {
+          content: '❌  ';
+      }
+
 
   blockquote p {
     font-style: italic;
@@ -94,24 +98,9 @@
       content:'\2014';
     }
 
-  .external:after {
-    /*content:' ↗';*/
-    display: inline-block;
-    content: '';
-    -webkit-mask-size: contain;
-    mask-size: contain;
-    background-color: currentColor;
-    -webkit-mask: url('/img/fa-external-link-alt.svg') no-repeat 50% 50%;
-    mask: url('/img/fa-external-link-alt.svg') no-repeat 50% 50%;
-    margin-left: 3px;
-    width: 14px;
-    height: 14px;
-    }
-
-
   p.caption {
     font-size: .9em;
-    margin: 1em 0 0;
+    /* margin-top: 1em; */
     font-style: italic;
     text-align: center;
    }
@@ -127,7 +116,7 @@
 
   img {
     max-width: 100%;
-    height: auto;
+    height: 100%;
   }
     img.full{
       width: 100%;
@@ -173,8 +162,6 @@
         text-align: center;  
         font-size: 0.9em;
       }
-
-
 
  .checks ul {
     list-style: none;
@@ -230,104 +217,30 @@
   h4 {
     font-size: 1.2em;
     margin-bottom: .5em;
-    margin-top: .5em;
+    margin-top: 2em;
   }
 
   p {
     margin-bottom: 1em;
   }
 
-
   @media only screen and (max-width: 800px) {
 
-    /* html { font-size: 18px; } */
+    html { font-size: 20px; }
     h1 { font-size: 2em; }
     h2 { font-size: 1.5em; }
     h3 { font-size: 1.2em; }
     h4 { font-size: 1.1em; }
     body { border: 0 }
     footer { padding: 1em;}
-    
 
   }
-
-
-
-  /* cards
-  -------------------------------------------------- */
-/*   
-  .cards {
-    display: flex;
-  }
-    .card {
-      background-color: #fff;
-      margin-bottom: 2em;
-      margin-right: 2em;
-    }
-    .card:hover {
-      box-shadow: 2px 2px 30px rgba(0,0,0,.1);
-    }
-
-      .card img {
-        object-position: top;
-        object-fit: cover;
-        max-height: 180px;
-        width: 100%;
-        height: 100%;
-      }
-      .cards .card h3 {
-        margin-top: 0;
-        color: inherit;
-      }
-      .cards .card h4 {
-        margin-top: 1em;
-      }
-      .cards .card p {
-        line-height: 1.2;
-        font-size: .9em;
-      }
-      .cards a {
-        text-decoration: none;
-      }
-      .cards .card figcaption {
-        padding: 0 1.5em 1em;
-      }
-
-    section.theme--dark a.card:link h4,
-    section.theme--dark a.card:visited h4,
-    section.theme--dark a.card:link p,
-    section.theme--dark a.card:visited p {
-      color: #4D5151;
-      transition: all .2s;
-    }
-    section.theme--dark a.card:hover h4,
-    section.theme--dark a.card:active h4,
-    section.theme--dark a.card:hover p,
-    section.theme--dark a.card:active p {
-      color ##FFFADB;
-      text-decoration: none;
-    }
-
-  @media only screen and (max-width: 800px) {
-
-    .cards,
-    a.card {
-      display: block;
-    }
-    .cards .card {
-      max-width: 100%;
-    }
-
-  } */
-
 
 
   /* button
   -------------------------------------------------- */
 
-
 div.button a {
-  /*font-family: 'Space Grotesk', -apple-system, BlinkMacSystemFont, avenir next, avenir, segoe ui, helvetica neue, helvetica, Ubuntu, roboto, noto, arial, sans-serif;*/
   font-family: 'Cabinet Grotesk';
   font-size: .7em;
 }
@@ -344,6 +257,7 @@ div.button a {
     margin: .5em 0;
     display: inline-block;.theme--dark
   }
+
 
     .theme--dark div.button a:active,
     .theme--dark div.button a:hover,
@@ -367,7 +281,6 @@ div.button a {
   header.mast {
     padding-top: 0;
     padding-bottom: 0;
-    background-color: #003B57;
   }
 
   .align--left {
@@ -383,8 +296,6 @@ div.button a {
 
 
 /* CLEAN UP INNER CONTENT BOX */
-
-
 
   main.content-primary,
   .content-inner {
@@ -403,21 +314,38 @@ div.button a {
       margin-left: 0;
     }
 
+    .side-by-side {
+      display: flex;
+    }
+    .content-inner .break-out--left {
+      margin-right: -800px;
+    }
+
     .--center {
       text-align: center;
     }
 
     .content-inner {
-      padding-bottom: 3em
+      /* padding-bottom: 3em */
     }
+      .content-inner:last-child,
+      /* .cols .content-inner  */
+      {
+        padding-bottom: 0;
+      }
 
-  .cols {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    width: 100%;
-    justify-content: space-between;
-  }
+      .cols {
+        /* display:grid;
+        grid-template-columns: 2fr 1fr;
+        gap: 1.5em */
+
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: 100%;
+        justify-content: space-between;
+      }
+
     .cols .col {
       display: flex;
       flex: 1;
@@ -484,13 +412,10 @@ div.button a {
 
   @media only screen and (max-width: 800px) {
 
-    section {
-      padding: 2em 5%;
-      /*padding-right: 5%;*/
-      /*padding-left: 5%;*/
+    section { padding: 2em 5%;   }
 
-    }
-    
+    .cols { display:block;   }
+
     .content-container.--right,
     .content-container.--left {
       margin-right: 0;
@@ -507,13 +432,12 @@ div.button a {
       display: block;
     }
 
-
-/*    .intro.halfsies > *,
+   /* .intro.halfsies > *, */
     .halfsies > * {
       display: block;
-    }*/
+    }
 
-    .halfsies .right-half {
+     .halfsies .right-half {
       padding-bottom: 12em;
       background-position: top;
     }
@@ -528,8 +452,9 @@ div.button a {
       margin-top: 1em;
     }
 
-
   }
+
+
 
   /* Header nav
   -------------------------------------------------- */
@@ -540,9 +465,9 @@ div.button a {
 
   header.mast .site-logo {
     color: #62a87c;
+    margin: 0;
   }
   
-
   header.mast .site-logo img {
     width: 30px;
   }
@@ -552,11 +477,11 @@ div.button a {
       transition: .3s all;
     }
 
-
       header nav a {
         padding: 0 5px 0;
         word-wrap: normal;
         text-decoration: none;
+        display: block;
       }
 
 
@@ -570,12 +495,13 @@ div.button a {
       }
 
 
+
   /* Footer
   -------------------------------------------------- */
 
   footer {
     text-align: center;
-    background: url(/img/mount.svg) bottom center no-repeat;
+    background: transparent url(/img/mount.svg) bottom center no-repeat;
     padding-top: 3em;
   }
 
@@ -583,7 +509,6 @@ div.button a {
       font-size: .8em;
       padding-top: 5em;
     }
-
 
 
 
@@ -603,21 +528,20 @@ div.button a {
         margin: 0 0 0 1em;
         position: relative;
         list-style: none;
-        display: flex;
       }
 
   @media only screen and (max-width: 800px) {
 
-      header nav ul.nav-menu li a {
-        padding-top: 1em;
-        padding-bottom: 1em;
-      }
-
-      footer nav p { margin: -4em 0 4em; }
-      header.mast .site-logo { margin-top: 1em; }
-      nav.nav-menu {  margin: 0 auto; }
-      nav .nav-menu li {  margin-left: 0 }
-
+    footer nav p { margin: -4em 0 4em; }
+    header.mast .site-logo { margin-top: 1em; }
+    header nav { display: block;text-align: center;}
+      header nav.nav-menu {  margin: 0 auto }
+        header nav .nav-menu li {  margin-left: 0; flex: auto; }
+          header nav ul.nav-menu li a {
+            padding-top: 1em;
+            padding-bottom: 1em;
+          }
+    
   }
 
 
@@ -628,6 +552,9 @@ div.button a {
     background-color: #ffffff
   }
 
+  .theme--grey {
+    background-color: #eeeeee
+  }
 
   .theme--dark {
     background-color: #003B57;
@@ -653,12 +580,13 @@ div.button a {
         color: #FFF583
       }
     .theme--dark h1 {
-      color: #FFF583
-    }
-    .theme--dark h1 {
+      color: #FFF583;
       margin-bottom: .5em;
      }
 
+  .theme--dark h2 {
+    color: #69BB87;
+  }
 
 
   /* HERO
@@ -737,7 +665,6 @@ div.button a {
       content:' ↓'  ;
     }
 
-
   @media only screen and (max-width: 800px) {
 
     .homepage .halfsies {
@@ -748,61 +675,26 @@ div.button a {
       max-width: 100%;
     }
 
-
   }
 
 
-  /* Services: UX
+  /* Resesarch
   -------------------------------------------------- */
-
-  .ux-case-study {
-    padding-bottom: 2em;
-  }
-    
-    .ux-case-study img {
-      -webkit-filter: drop-shadow(0 5px 15px rgba(42, 55, 72,.1));
-      filter: drop-shadow(0 5px 15px rgba(42, 55, 72,.1));
-      margin: .7em 0;
-      /* outline: 10px solid #fff; */
-      /* transition: .3s all; */
-      /* max-width: 900px; */
-      /* margin-left: -25%; */
-      /* left: 50%; */
-      /* margin-left: -50vw; */
-      /* margin-right: -50vw; */
-      max-width: 60vw;
-      position: relative;
-      /* right: 50%; */
-      /* width: 60vw; */
-    }
+  .ux-case-study img {margin-top: 2em;  }
+  .ux-case-study p.caption { margin-bottom: 2em;}
 
 
-  .ux-case-study h2 {
-      margin: 1em 0;
-    }
-  .ux-case-study p.lessons-learned {
-    background-color: #ffffff;
-    border-radius: 1em;
-    padding: 1.5em;
-    font-size: .9em;
-    line-height: 1.3;
-  }
-  .ux-case-study p.lessons-learned::before {
-    content: '💡'
-  }
 
-
-  /* Work: both 'branding' and 'web' pages
+  /* styles for work pages
+    "work" applies to both
+    "branding" for /branding
+    "web" for /web
   -------------------------------------------------- */
 
   body.work section[class^="--"] {
-    padding: 6em 0;
+    padding-top: 6em;
+    padding-bottom: 6em;
   }
-
-    body.work section h2 {
-      word-break: break-word;
-      font-size: 4em;
-    }
 
     body.work section[class^="--"] div.button,
     body.work section[class^="--"] p,
@@ -811,27 +703,104 @@ div.button a {
       margin-right: auto;
       margin-left: auto;
       max-width: 800px;
-      text-align: center;
     }
 
-    body.work section div.button a:visited,
-    body.work section div.button a:link {
+    body.web section div.button a:visited,
+    body.web section div.button a:link {
       background-color: rgba(0, 59, 87, 0.8);
     }
 
-    body.work section.theme--dark div.button a:visited,
-    body.work section.theme--dark div.button a:link {
+    body.web section.theme--dark div.button a:visited,
+    body.web section.theme--dark div.button a:link {
       background-color: rgba(255, 255, 255, 0.8);
       color: initial;
     }
 
-    body.work section div.button a:hover {
+    body.web section div.button a:hover {
       mix-blend-mode: difference;
     }
 
+    body.work section[class^="--"] img {
+      box-shadow: 0 3px 50px rgba(0,0,0,.15);
+      display: block;
+      margin: 2em auto;
+    }
+   
+
+    body.work section[class^="--"].--bg_gr {
+      background-color: #ece9d6;
+    }
+    body.work section[class^="--"].--bg_dc {
+      background-color: #eaf3fa;
+    }
+    body.work section[class^="--"].--bg_thayer {
+      background-color: #133980;
+    }
+    body.work section[class^="--"].--bg_complete {
+      background-color: #42cbce;
+    }
+    body.work section[class^="--"].--bg_altoff {
+      background-color: #f8f8f8;
+    }
+    body.work section[class^="--"].--bg_neyer {
+      background-color: #0133a2;
+    }
+    body.work section[class^="--"].--bg_brush {
+      background-color: #FFF1A7;
+    }
+    body.work section[class^="--"].--bg_crown {
+      background-color: #f8d788;
+    }
+    body.work section[class^="--"].--bg_ccs {
+      background-color: #B43817;
+    }
+    body.work section[class^="--"].--bg_capital,
+    body.work section[class^="--"].--bg_millriver {
+      background-color: #B1E3D8;
+    }
+    body.work section[class^="--"].--bg_inlaw {
+      background-color: #ffffff;
+    }
+    body.work section[class^="--"].--bg_harvest-crossing {
+      background-color: #CFF0B6;
+    }
+    body.work section[class^="--"].--bg_ginger-woodworks {
+      background-color: #ECDAC7;
+    }
+    body.work section[class^="--"].--bg_marblehead {
+      background-color: #D6E9FF;
+    }
+    body.work section[class^="--"].--charter {
+      background-color: #CCD52C;
+    }
+    body.work section[class^="--"].--natals {
+      background-color: #2f938c;
+    }
+    body.work section[class^="--"].--bg_saddleback {
+      background-color:#003B57
+    }
+    body.work section[class^="--"].--thayer {
+      background-color: #fff;
+    }
+    
+    body.Branding section[class^="--"]  {
+      text-align: center;
+    }
+      body.Branding section[class^="--"] img {
+      box-shadow: none;
+      max-width: 300px
+    }
 
 
-/* from CP */
+    @media only screen and (max-width: 800px) {
+
+      body.Branding section[class^="--"] img { max-width: 250px  }
+      body.work section[class^="--"] img { max-width: 100%;  }
+    
+    }
+
+    /* from CP
+-------------------------------------------------- */
 
 .--cp svg {
   display: inline-block;
@@ -901,98 +870,6 @@ div.button a {
 
 
 
-
-    
-
-    body.work section[class^="--"] img {
-      box-shadow: 0 3px 50px rgba(0,0,0,.15);
-      display: block;
-      margin: 2em auto;
-    }
-   
-
-    body.work section[class^="--"].--bg_gr {
-      background-color: #ece9d6;
-    }
-    body.work section[class^="--"].--bg_dc {
-      background-color: #eaf3fa;
-    }
-    body.work section[class^="--"].--bg_thayer {
-      background-color: #133980;
-    }
-    body.work section[class^="--"].--bg_complete {
-      background-color: #42cbce;
-    }
-    body.work section[class^="--"].--bg_complete {
-      background-color: #42cbce;
-    }
-    body.work section[class^="--"].--bg_complete {
-      background-color: #42cbce;
-    }
-    body.work section[class^="--"].--bg_altoff {
-      background-color: #f8f8f8;
-    }
-    body.work section[class^="--"].--bg_neyer {
-      background-color: #0133a2;
-    }
-    body.work section[class^="--"].--bg_brush {
-      background-color: #FFF1A7;
-    }
-    body.work section[class^="--"].--bg_crown {
-      background-color: #f8d788;
-    }
-    body.work section[class^="--"].--bg_ccs {
-      background-color: #B43817;
-    }
-    body.work section[class^="--"].--bg_capital {
-      background-color: #B1E3D8;
-    }
-    body.work section[class^="--"].--bg_inlaw {
-      background-color: #ffffff;
-    }
-    body.work section[class^="--"].--bg_harvest-crossing {
-      background-color: #FAEBD2;
-    }
-    body.work section[class^="--"].--bg_ginger-woodworks {
-      background-color: #ECDAC7;
-    }
-    body.work section[class^="--"].--bg_marblehead {
-      background-color: #D6E9FF;
-    }
-
-    body.work section[class^="--"].--charter {
-      background-color: #CCD52C;
-    }
- 
-    body.work section[class^="--"].--natals {
-      background-color: #2f938c;
-    }
-    body.work section[class^="--"].--bg_saddleback {
-      background-color:#003B57
-    }
-
-    body.work section[class^="--"].--thayer {
-      background-color: #fff;
-    }
-
-    /* branding only */
-    body.branding section[class^="--"] img {
-      box-shadow: none;
-      max-width: 300px
-    }
-
-
-    @media only screen and (max-width: 800px) {
-
-      body.work section h2 {
-        font-size: 3em;
-      }
-      body.work section[class^="--"] img {
-        max-width: 100%;
-      }
-    
-    }
-
  /* Homepage
 -------------------------------------------------- */
 
@@ -1001,7 +878,6 @@ div.button a {
     padding: 2em 0;
     font-weight: bold;
   }
-
   body.homepage h1 span {
     display: block;
     color: #003B57;
@@ -1020,36 +896,30 @@ body.homepage .hero {
       margin-bottom: inherit;
     }
 
-    body.homepage picture {
+    body.homepage .hero picture {
        margin-bottom: -10px;
       }
 
-    body.homepage picture img {
+    body.homepage .hero picture img {
       margin-bottom: inherit;
     }
 
 
-body.homepage section.about {
-  background: url(/img/mount.svg) no-repeat;
-  background-position: 1000px 920px;
-  background-size: 1000px;
-}
-
-
-    /* div.competencies ul {
-      display: grid;
-      gap: .5rem 1rem;
-      grid-template-columns: repeat(auto-fill, minmax(8rem, 1fr));
-    } */
-
-
-.work-status { 
-  display: grid;
-  
-  .work-status h3 {
-    
+  body.homepage section.about {
+    display: flex;
+    border-bottom: 25px solid #f0e8d6;
   }
-  .work-status .position  {
-    
-  }
+    /* putting my photo in a croppable box that matches the content height */
+    body.homepage section.about picture { margin-left: 2em;  }
+      body.homepage section.about picture img {   object-fit: cover;    }
 
+
+  body.homepage section.services {
+    background: url(/img/bg-mount.svg) no-repeat;
+    background-position: bottom right;
+  }
+    /*  make the text readable on top of an inverse background, if needed  */
+    body.homepage section.services p {
+      mix-blend-mode: difference;
+      color: rgb(255, 255, 255); 
+    }

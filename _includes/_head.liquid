@@ -3,18 +3,20 @@
   <head>
     <meta charset="UTF-8">
 
-	
+	{% if page.url == '/work/research/' %}
+		<meta name="robots" content="noindex,nofollow">		
+	{% endif %}
 	
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Oops! Not Found — Wes Carr</title>
+    <title>{{ title }} — Wes Carr</title>
 
 	<!-- SEO Tags -->
-	<meta property="og:title" content="true"/>
-	<meta property="og:url" content="/404.html "/>
-	<meta property="og:description" content="false "/>
+	<meta property="og:title" content="{{ title or renderData.title or metadata.title }}"/>
+	<meta property="og:url" content="{{ page.url }} "/>
+	<meta property="og:description" content="{{ description or renderData.description }} "/>
 	<meta property="og:image" content="/img/social-thumbnail.jpg" />
 
-    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="{{ '/css/main.css' | url }}">
 
 	<!-- fonts -->
 	<link href="https://api.fontshare.com/v2/css?f[]=erode@600,601,401,400&f[]=cabinet-grotesk@500&display=swap" rel="stylesheet"> 
@@ -26,7 +28,7 @@
 
   </head>
 
-	<body class="Oops! Not Found">
+	<body class="{{ title }}">
   	<a class="skip-link nav-tab" href='#main'>Skip to content</a>
 		<header class="mast">
 			<nav aria-label="Main" class="theme--dark">
@@ -49,37 +51,3 @@
 		</header>
 
 	<main id="main">
-
-    <section>
-    <div class="content-container --left">
-
-        <h1>404</h1>
-        <p>Sorry about that. That link you just clicked isn't connected anymore. Please give something else a shot.</p>
-        <img src="/img/404.jpg" alt="Spaceman graffiti with afternoon shadows" />
-
-    </div>
-</section>   
-
-
-
-	</main>
-
-	<footer class="theme--dark">
-		<div class="align--center">
-			<nav>
-				<p class="colophon">
-					Built with <a href="https://www.11ty.dev/">eleventy</a>
-				</p>
-				<p class="social">
-					<a href="https://www.linkedin.com/in/wes-carr-8918b99/">linkedin</a>  |  
-					<a href="https://unsplash.com/@wescarr">unsplash</a>  |  
-					<a href="mailto:hi@wescarr.com">email</a>
-				</p>
-			</nav>
-
-		</div>
-
-	</footer>
-
-	</body>
-</html>
