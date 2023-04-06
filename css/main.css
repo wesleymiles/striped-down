@@ -130,6 +130,7 @@ audio, canvas, progress, video {
 
 picture {
   display:block;
+  align-self: normal;
 }
 
 
