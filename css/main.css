@@ -112,8 +112,6 @@ a:hover, a:active {
 
 img {
   max-width: 100%;
-  height: 100%;
-  align-self: normal; /* trying to prevent ios from stretching images */
 }
   img.full{
     width: 100%;
@@ -853,8 +851,8 @@ body.homepage section.about {
   border-bottom: 25px solid #f0e8d6;
 }
   /* putting my photo in a croppable box that matches the content height */
-  body.homepage section.about picture { margin-left: 2em;  }
-    body.homepage section.about picture img {   object-fit: cover;    }
+  body.homepage section.about picture { margin-left: 2em; display:flex; }
+    body.homepage section.about picture img {   object-fit: cover; }
 
 
 body.homepage section.services {
