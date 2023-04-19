@@ -47,7 +47,7 @@ body > main {
 hr {
     height: 2px;
     background: #5EAA78;
-    border: 0;
+    border: 0; 
 }
 
 ol, ul {
@@ -250,6 +250,7 @@ div.button a {
 font-family: 'Cabinet Grotesk';
 font-size: .7em;
 }
+
 .theme--dark div.button a:link,
 .theme--dark div.button a:visited,
 div.button a:visited,
@@ -261,7 +262,7 @@ div.button a:link {
   letter-spacing: 2px;
   text-decoration: none;
   margin: .5em 0;
-  display: inline-block;.theme--dark
+  display: inline-block;
 }
 
 
@@ -495,10 +496,14 @@ header.mast .site-logo img {
 
 
   .skip-link {
-    padding-top: 1em;
     transform: translateY(-200%);
     position: absolute;
-  }
+    z-index: 1;
+    color: #fff!important;
+    padding: .5em;
+    background-color: #62A87C;
+/*    top: 100px;*/
+    }
     .skip-link:focus {
       transform: translateY(0%);
     }

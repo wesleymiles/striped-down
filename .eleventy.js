@@ -5,6 +5,7 @@ module.exports = function(eleventyConfig) {
 
 
   return {
+    
     // Control which files Eleventy will process
     // e.g.: *.md, *.njk, *.html, *.liquid
     templateFormats: [
@@ -20,4 +21,6 @@ module.exports = function(eleventyConfig) {
     // Pre-process *.html files with: (default: `liquid`)
     htmlTemplateEngine: "njk",
 
+  }
+  
 };
