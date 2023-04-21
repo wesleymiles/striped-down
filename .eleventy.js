@@ -3,11 +3,13 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy("img");
   eleventyConfig.addPassthroughCopy("css");
 
+  // maintaining image directories
+  eleventyConfig.addPassthroughCopy({ "project/img": "project/img" });
 
   return {
     
+
     // Control which files Eleventy will process
-    // e.g.: *.md, *.njk, *.html, *.liquid
     templateFormats: [
       "md",
       "njk",
