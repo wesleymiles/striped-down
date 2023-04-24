@@ -37,11 +37,17 @@ body {
   border-bottom: 0;
 }
 
-body > main {
-  background: #FFFDFA url(/img/noise.png) repeat;
-  border-radius: 20px;
-  overflow: hidden; 
-  box-shadow: 0 0 50px #3562bd;
+  body > main {
+    background: #FFFDFA url(/img/noise.png) repeat;
+    border-radius: 20px;
+    overflow: hidden; 
+    box-shadow: 0 0 50px #3562bd;
+  }
+/* width limiter */
+  body > header,
+  body > main {
+    max-width: 1400px;
+    margin: 0 auto;
 }
 
 hr {
@@ -435,53 +441,6 @@ header.mast .site-logo img {
 
 
 
-/* Footer
--------------------------------------------------- */
-
-footer {
-  text-align: center;
-  background: transparent url(/img/mount.svg) bottom center no-repeat;
-  padding-top: 3em;
-}
-
-  footer nav {
-    font-size: .8em;
-    padding-top: 5em;
-  }
-
-
-
-/* Nav (header and footer)
--------------------------------------------------- */
-
-nav {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-}
-  nav .nav-menu {
-    display: flex;
-    padding: 0;
-  }
-    nav .nav-menu li {
-      margin: 0 0 0 1em;
-      position: relative;
-      list-style: none;
-    }
-
-@media only screen and (max-width: 800px) {
-
-  footer nav p { margin: -4em 0 4em; }
-  header nav { display: block;text-align: center;}
-    header nav.nav-menu {  margin: 0 auto }
-      header nav .nav-menu li {  margin-left: 0; flex: auto; font-size: .9em;}
-        header nav ul.nav-menu li a {
-          padding-top: 1em;
-        }
-  
-}
-
-
 
 /* Colored themes
 -------------------------------------------------- */
@@ -524,6 +483,58 @@ nav {
 .theme--dark h2 {
   color: #69BB87;
 }
+
+
+
+
+/* Footer
+-------------------------------------------------- */
+
+body > footer {
+  text-align: center;
+  background: transparent url(/img/mount.svg) bottom center no-repeat;
+  padding-top: 3em;
+  background-color: none;
+}
+
+  body > footer nav {
+    font-size: .8em;
+    padding-top: 5em;
+  }
+
+
+
+/* Nav (header and footer)
+-------------------------------------------------- */
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+  nav .nav-menu {
+    display: flex;
+    padding: 0;
+  }
+    nav .nav-menu li {
+      margin: 0 0 0 1em;
+      position: relative;
+      list-style: none;
+      font-size: .8em;
+    }
+
+@media only screen and (max-width: 800px) {
+
+  body > footer nav p { margin: -4em 0 4em; }
+  header nav { display: block;text-align: center;}
+    header nav.nav-menu {  margin: 0 auto }
+      header nav .nav-menu li {  margin-left: 0; flex: auto; font-size: .9em;}
+        header nav ul.nav-menu li a {
+          padding-top: 1em;
+        }
+  
+}
+
 
 
 /* HERO
