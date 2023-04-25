@@ -12,10 +12,10 @@
 
 		<!-- SEO Tags -->
 		<meta property="og:title" content="{{ title or renderData.title or metadata.title }}"/>
-		<meta property="og:url" content="{{ page.url }} "/>
+		<meta property="og:url" content="{{ page.url | url }} "/>
 		<meta property="og:description" content="{{ description or renderData.description }} "/>
-		<meta property="og:image" content="/img/social-thumbnail.jpg" />
-
+		<meta property="og:image" content="{{ page.url | url ~ '/img/social-thumbnail.jpg' }}" />
+ 
     <link rel="stylesheet" href="{{ '/css/main.css' | url }}">
 
 		<!-- fonts -->
