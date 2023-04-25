@@ -4,14 +4,14 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy("css");
 
   // maintaining image directories
-  eleventyConfig.addPassthroughCopy({ "project/img": "project/img" });
+  eleventyConfig.addPassthroughCopy({ "project/wobblies/img": "project/wobblies/img" }); 
 
   return {
     
 
     // Control which files Eleventy will process
     templateFormats: [
-      "md",
+      "md", 
       "njk",
       "html",
       "liquid"
