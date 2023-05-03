@@ -14,7 +14,7 @@
 		<meta property="og:title" content="{{ title }}"/>
 		<meta property="og:url" content="{{ page.url | url }} "/>
 		<meta property="og:description" content="{{ description }}"/>
-		<meta property="og:image" content="{{ page.url | url }}img/social-thumbnail.jpg" />
+		<meta property="og:image" content="{{ page.filePathStem }}{{ 'img/social-thumbnail.jpg' | url }}"  /> 
  
     <link rel="stylesheet" href="{{ '/css/main.css' | url }}">
 
@@ -22,7 +22,8 @@
 		<!-- <link rel="preload" href="/typefesse.woff2" as="font" type="font/woff2" crossorigin> -->
 		<link href="https://api.fontshare.com/v2/css?
 			f[]=erode@600,601,401,400&
-			f[]=cabinet-grotesk@400&
+			f[]=cabinet-grotesk@1&
+			f[]=telma@1&
 			display=swap" rel="stylesheet"> 
 		
     <link rel="icon" href="/img/favicon.ico">
@@ -34,7 +35,7 @@
 	<body class="{{ title }}">
   	<a class="skip-link nav-tab" href='#main'>Skip to content</a>
 		<header class="mast">
-			<nav aria-label="Main" class="theme--dark">
+			<nav aria-label="Main">
 
 				<div class="site-logo">
 					<a href="/">
@@ -48,6 +49,7 @@
 					<li><a href="/branding/">Branding</a></li>
 					<li><a href="/research/">Research</a></li>
 					<li><a href="/gift/">Gift</a></li>
+					<li><a href="/blog/">Blog</a></li>
 				</ul>
 			</nav>
 

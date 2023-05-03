@@ -3,8 +3,9 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy("img");
   eleventyConfig.addPassthroughCopy("css");
 
-  // maintaining image directories
+  // maintaining image directories manually for now
   eleventyConfig.addPassthroughCopy({ "project/wobblies/img": "project/wobblies/img" }); 
+  eleventyConfig.addPassthroughCopy({ "blog/andy-shauf-plays-norm/img": "blog/andy-shauf-plays-norm/img" }); 
 
   return {
     

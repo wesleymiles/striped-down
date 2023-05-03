@@ -10,6 +10,7 @@
     "@11ty/eleventy": "^1.0.2"
   },
   "dependencies": {
+    "@11ty/eleventy-img": "^3.1.0",
     "@11ty/eleventy-upgrade-help": "^1.0.1",
     "debug": "^4.3.2",
     "markdown-it": "^13.0.1"

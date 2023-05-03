@@ -182,3 +182,70 @@ description: My experience with UI and how I can help you!
     <p>Good on ya for making it all the way down here. Well done. Thanks for looking, friend.</p>
 </section>
 
+<style>
+.--cp svg {
+display: inline-block;
+vertical-align: top;
+-webkit-transition-property: -webkit-transform;
+transition-property: -webkit-transform;
+-o-transition-property: transform;
+transition-property: transform;
+-webkit-transition-duration: 2s;
+-o-transition-duration: 2s;
+transition-duration: 2s;
+width: 21px;
+}
+.--cp svg circle {
+  opacity: 0;
+  -webkit-transition: opacity 0.25s;
+  -o-transition: opacity 0.25s;
+  transition: opacity 0.25s;
+}
+.--cp a:hover circle,
+.--cp a:active circle,
+.--cp a:focus circle {
+  opacity: 1;
+}
+
+.--cp a:hover svg,
+.--cp a:active svg,
+.--cp a:focus svg {
+  -webkit-animation-name: rotate;
+  animation-name: rotate;
+  -webkit-animation-duration: 2s;
+  animation-duration: 2s;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+}
+
+@keyframes rotate {
+from {  transform: rotate(0deg);  }
+to { transform: rotate(360deg);   }
+}
+.site-attribution p a:hover,
+.site-attribution p a:active,
+.site-attribution p a:focus {
+  color: #fff;
+}
+.--cp a:hover path,
+.--cp a:active path,
+.--cp a:focus path {
+  fill: #F04E38;
+}
+.--cp svg path {
+  fill: rgba(255, 255, 255, 0.6);
+  -webkit-transition: fill 0.25s;
+  -o-transition: fill 0.25s;
+  transition: fill 0.25s;
+}
+
+.screen-reader-text, .sr-only {
+  clip: rect(1px,1px,1px,1px);
+  position: absolute !important;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+}
+</style>
