@@ -46,7 +46,7 @@ body {
 
 body {
   margin: 0;
-  padding: 0 2%;
+  padding-right: 2%;
   background-color: var(--bg-dark);
 }
 
@@ -61,7 +61,6 @@ body {
   body > footer,
   body > main {
     max-width: 1400px;
-    margin: 0 auto;
 }
 
 hr {
@@ -241,7 +240,7 @@ h3 {
   margin-bottom: .3em;
   line-height: 1.3;
 }
-/*h3:not(:first-child) {  margin-top: 2em; }*/
+h3:not(:first-child) {  margin-top: 2em; }
 
 h4 {
   font-size: 1.2em;
@@ -303,7 +302,7 @@ div.button a:link {
 
 section {
   margin: 0 auto 0 0;
-  padding: 5em 35% 5em 8%;
+  padding: 5em 35% 5em 5%;
 }
   section p:last-child {
     margin-bottom: 0;
@@ -428,11 +427,12 @@ nav {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
+  padding-left: 5%;
+  padding-right: 2%;
 }
 
   nav .nav-menu {
     display: flex;
-/*    padding: 0;*/
     align-self: center;
   }
   
@@ -453,6 +453,7 @@ nav {
 
 @media only screen and (max-width: 800px) {
 
+  nav {padding-left: 0;padding-right: 0}
   body > footer nav p { margin: -4em 0 4em; }
   header nav { display: block; text-align: center;}
     header nav.nav-menu {  margin: 0 auto }
@@ -471,7 +472,8 @@ nav {
 -------------------------------------------------- */
 
 header nav {
-  padding: 3em 0 2em;
+  padding-top: 3em;
+  padding-bottom: 2em;
   font-family: var(--sans-serif);
 }
 
@@ -537,7 +539,7 @@ header.mast .site-logo img {
 }
 
 .theme--dark {
-  background-color: #153a55
+  background-color: #003b57
 }
 
   .theme--dark p, 
@@ -605,7 +607,7 @@ body > footer {
     font-size: .9em;
     font-weight: 600;
     font-family: 'Telma', cursive;
-    margin-top: -15px;
+/*    margin-top: -15px;*/
   }
 
 /* Resesarch
@@ -621,18 +623,18 @@ body > footer {
   "web" for /web
 -------------------------------------------------- */
 
-body.work section[class^="--"] {
-  padding:6em 8%;
-}
+/*body.work section[class^="--"] {
+  padding:6em 10% 6em 5%;
+}*/
 
-  body.work section[class^="--"] div.button,
+/*  body.work section[class^="--"] div.button,
   body.work section[class^="--"] p,
   body.work section[class^="--"] picture,
     body.work section[class^="--"] h2 {
     margin-right: auto;
     margin-left: auto;
     max-width: 800px;
-  }
+  }*/
 
   body.web section div.button a:visited,
   body.web section div.button a:link {
@@ -712,7 +714,8 @@ body.work section[class^="--"] {
   }
   
   body.Branding section[class^="--"]  {
-    text-align: center;
+/*    text-align: center;*/
+    padding:10em 10% 10em 5%;
   }
     body.Branding section[class^="--"] img {
     box-shadow: none;
@@ -746,7 +749,7 @@ body.homepage h1 {
   
 /* lining up the homepage hero  */
 body.homepage section.hero {
-  text-align: center;
+/*  text-align: center;*/
   margin: 0 auto;
   padding-bottom: 0;
 }
@@ -803,11 +806,7 @@ body.homepage section.services {
 
   @media only screen and (max-width: 800px) {
 
-    h1 span {
-      margin-top: inherit;
-    }
-    body.homepage section.services {
-    background-position-x: 15em; 
-  }
+/*    h1 span { margin-top: inherit }*/
+    body.homepage section.services { background-position-x: 15em;  }
 
 }
