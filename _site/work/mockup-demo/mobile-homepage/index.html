@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Mobile Homepage</title>
+    <meta name="description" content="">
+    <meta name="robots" content="NOINDEX,NOFOLLOW" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <link href="assets/css/mockup-demo-mobile-v4.css" rel="stylesheet">
+    <script type="text/javascript" src="assets/js/util-wes-v4.js"></script>
+    <link rel="shortcut icon" href="assets/img/favicon.ico" type="image/x-icon" />
+
+  <style>
+    .menu-cover::before {
+      background-image: url(images/footer-menu.png);
+    }
+  </style> 
+
+</head>
+
+  <body class='huddle mobile'>
+    <header class="menu-header">
+      <div class="menu-inner">
+
+        <ul class="nav">
+          <li class="prev"><a href="intro.html"><span>Home</span><img src="assets/img/imarket-i.svg" /></a></li>
+          <li class="label"><span class="mobile">Mobile</span></li>
+          <li class="active-page"><a class="button" href="mobile-homepage.html">Homepage</a></li>
+          <li><a class="button" href="mobile-subpage.html">Subpage</a></li>
+          <li class="label"><span class="desktop">Desktop</span></li>
+          <li><a class="button" href="desktop-homepage.html">Homepage</a></li>
+          <li><a class="button" href="desktop-subpage.html">Subpage</a></li>
+          <li><a class="button" href="desktop-hovers-homepage.html">Hovers</a></li>
+        </ul>
+
+      </div>
+    </header>
+
+    <div id='mobile-mockup'>
+      <div class="mockup">
+        <img src="images/homepage-mobile.png" id="mobile-mockup-image"/>
+      </div>
+      <div class="loader"></div>
+    </div>
+    <div id="phone-cutout">
+      <img class="phone-cutout" src="assets/img/phone-cutout-cropped.png" />
+      <div class="hotspots">
+        <a href="#menu-mockup" class="toggle-menu"></a>
+        <!-- <span id="toggle-form"></span> -->
+      </div>
+      <div class="menu-cover"></div>
+      <img src="images/menu-mobile.png" id="menu-mockup" class="toggle-menu" />
+    </div>
+  </body>
+</html>
