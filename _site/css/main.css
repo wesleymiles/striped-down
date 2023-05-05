@@ -788,7 +788,7 @@ body.homepage section.about div {
 body.homepage section.services {
   background: url(/img/bg-mount.svg) no-repeat;
   background-repeat: no-repeat;
-  background-position: bottom right;
+  background-position: bottom right; 
 }
 
   /*  make the text readable on top of an inverse background, if needed  */
