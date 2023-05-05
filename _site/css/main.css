@@ -149,6 +149,9 @@ picture {
     width: 100vw;
     padding: 3em 0;
   }
+  picture.full img {
+    width: 100%;
+  }
 
 
 
