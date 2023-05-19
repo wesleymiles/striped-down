@@ -72,6 +72,7 @@ hr {
 ol, ul {
   padding-left: 2em;
   padding-inline-start: 2em;
+  margin-bottom: 2em;
 }
   ol ol,
   ul ul {
@@ -79,7 +80,7 @@ ol, ul {
   }
 li {
   line-height: 1.35;
-  margin-bottom: 1em;
+  margin-bottom: .7em;
 }
   li + p {
     margin-top: -.7em;
@@ -100,9 +101,13 @@ li {
 
 
 blockquote p {
+/*  font-family: var(--sans-serif);*/
+  font-size: 2em;
   font-style: italic;
   margin-bottom: 4em;
   margin-top: 4em;
+  border-left: 5px solid #62a87c;
+  padding-left: 1.6em;
 }
 
   blockquote cite {
@@ -136,19 +141,18 @@ img {
 }
 
 picture {
+  padding-top: 2em; 
   display:block;
 }
 
   picture.full{
-    left: 50%;
-    margin-left: -50vw;
+    max-width: 1200px;
+    margin-left: -5vw;
     margin-right: -50vw;
-    max-width: 100vw;
     position: relative;
-    right: 50%;
-    width: 100vw;
-    padding: 3em 0;
+    padding: 3em 0; 
   }
+
   picture.full img {
     width: 100%;
   }
@@ -307,7 +311,7 @@ section {
   margin: 0 auto 0 0;
   padding: 5em 35% 5em 5%;
 }
-  section p:last-child {
+  section > p:last-child {
     margin-bottom: 0;
   }
   section.stretch {
@@ -596,7 +600,13 @@ body > footer {
 -------------------------------------------------- */
 
 .hero {
-  background-color: #FFF583;
+  background-color: #DEECEC;
+}
+
+section.hero h1 {
+  max-width: 1200px;
+  margin-right: -50vw;
+  padding-top: 1em;
 }
 
   .hero p {
@@ -604,7 +614,7 @@ body > footer {
   }
 
   h1 span {
-    display: block;
+/*    display: block;*/
 /*    color: var(--bg-dark);*/
     color: #3ea261;
     font-size: .9em;
@@ -744,7 +754,7 @@ body > footer {
 
 /* homepage heading */
 body.homepage h1 {
-  padding: 1em 0;
+  padding-bottom: 1em;
   font-weight: 900;
 }
 
@@ -752,11 +762,8 @@ body.homepage h1 {
   
 /* lining up the homepage hero  */
 body.homepage section.hero {
-/*  text-align: center;*/
-  margin: 0 auto;
   padding-bottom: 0;
 }
-
 
   body.homepage .hero picture {
      margin-bottom: -4px;

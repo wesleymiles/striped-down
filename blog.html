@@ -7,8 +7,8 @@ description: A blog about design, music, and planting
 <section class="hero">
 	<div class="content-inner">
 
-		<h1>{{title}}</h1>
-		<p>I don't write much, but I intend to write about some subjects close to me: design, music, and planting stuff.</p> 
+		<h1>{{ title }}</h1>
+		<p>Some writings on design, music, and planting.</p> 
 
 	</div>
 </section>
@@ -19,8 +19,8 @@ description: A blog about design, music, and planting
 		<ul>
 			{%- for post in collections.post -%}
 			  <li><a href="{{ post.url }}">{{ post.data.title }}</a><span class="excerpt">: {{ post.data.description }}</span></li>
-			{%- endfor -%}
+			{%- endfor -%} 
 		</ul>
 
 	</div>
-</section>
+</section> 
