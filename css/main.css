@@ -634,6 +634,16 @@ section.hero {
 /*    margin-top: -15px;*/
   }
 
+
+  @media only screen and (max-width: 800px) {
+
+  .hero p {
+    padding-right: inherit;
+  }
+
+}
+
+
 /* Resesarch
 -------------------------------------------------- */
 .ux-case-study img {margin-top: 2em;  }
