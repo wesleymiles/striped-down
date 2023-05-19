@@ -232,6 +232,10 @@ h1 {
   font-weight: 900;
   word-wrap: break-word;
   line-height:1;
+
+/*  max-width: 1200px;*/
+/*  margin-right: -25vw;*/
+  padding-top: 1em;
 }
 
 h2 {
@@ -262,12 +266,21 @@ p {
 @media only screen and (max-width: 800px) {
 
   html { font-size: 20px; }
-  h1 { font-size: 3em; text-align: center; margin-right: inherit !important;}
+  h1 { font-size: 3em; 
+/*    text-align: center; */
+padding-top: 0;
+margin-right: inherit !important; }
   h2 { font-size: 2em; }
   h3 { font-size: 1.2em; }
   h4 { font-size: 1.1em; }
   body { padding:0 }
   footer { padding: 1em;}
+  blockquote p {
+    font-size: 1.2em;
+    border-left-width: 2px;
+    padding-left: .5em;
+    margin-top: 2em;
+  }
 
 }
 
@@ -600,18 +613,15 @@ body > footer {
 /* HERO
 -------------------------------------------------- */
 
-.hero {
+section.hero {
   background-color: #DEECEC;
+  padding-right: 5%;
 }
 
-section.hero h1 {
-/*  max-width: 1200px;*/
-  margin-right: -25vw;
-  padding-top: 1em;
-}
 
   .hero p {
     color: var(--bg-dark);
+    padding-right: 35%;
   }
 
   h1 span {
