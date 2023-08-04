@@ -3,6 +3,7 @@ layout: layout.liquid
 title: Welcoming an orchard into the community
 description: My first major contribution to Underhill, VT
 tags: post
+date: 2023-06-01
 ---
 
 
@@ -24,6 +25,7 @@ Okay, calling it an orchard is a bit aspirational. There’s six apple trees, ni
 			<!-- <source srcset="img/underhill-community-orchard-map.jpg" type="image/jpg"> -->
 			<img src="img/underhill-community-orchard-map.png" alt="Map" />
 		</picture>
+		<figcaption>See full map with descriptions</figcaption>
 	</a>
 	</figure>
 

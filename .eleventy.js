@@ -12,7 +12,8 @@ module.exports = function(eleventyConfig) {
 
   // Maintain image directories manually for now
   // eleventyConfig.addPassthroughCopy({ "project/wobblies/img": "project/wobblies/img" }); 
-  // eleventyConfig.addPassthroughCopy({ "blog/andy-shauf-plays-norm/img": "blog/// andy-shauf-plays-norm/img" }); 
+  eleventyConfig.addPassthroughCopy({ "blog/local-logos/img": "blog/local-logos/img" }); 
+  // eleventyConfig.addPassthroughCopy({ "blog/andy-shauf-plays-norm/img": "blog/ andy-shauf-plays-norm/img" }); 
   eleventyConfig.addPassthroughCopy({ "work/mockup-demo": "work/mockup-demo" });   
 
   // Set the output directory for the example directory
