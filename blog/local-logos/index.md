@@ -23,7 +23,7 @@ In both cases we’re talking about logos on signs, so part of this is work desi
 
 ## My message here is: many undervalue branding
 
-Marketing is often seen as "if it ain’t broke, don't fix it.” True, word-of-mouth is still the most potent way to spread the word. Good work really does speak for itself. But here's the catch: new customers who don't know your company and its reputation only see the old sign outside.
+Marketing is often seen as if it ain’t broke, don't fix it." True, word-of-mouth is still the most potent way to spread the word. Good work really does speak for itself. But here's the catch: new customers who don't know your company and its reputation only see the old sign outside.
 
 So, while word-of-mouth is great, marketing is about inviting others in. Maintaining your brand helps you connect with new customers and create lasting bonds. 
 
@@ -70,7 +70,7 @@ To move from ideas to the real, I searched the web for images using "Vermont nur
 
 <figure>
 	<picture>
-	 	<source srcset="img/dribbble-cgn.webp" type="image/webp">
+	 	<source srcset="img/google-cgn.webp" type="image/webp">
 		<source srcset="img/google-cgn.jpg" type="image/jpg">
 		<img src="img/google-cgn.jpg" alt="A smattering of image search results for a nursery company" />
 	</picture>
@@ -102,7 +102,7 @@ Lastly, I approach the color scheme. It’s essential for the design to look goo
 
 Note: when preparing the result image, I checked their site and realized their company name is different than the signs. 🤦🏼‍♂️ Yet, another reason to revamp. 
 
-For the site application, I removed the 5 words from the primary logo. If needed, an icon-only version could be used. The yellow, green, and plant would be recognizable on its own if the other version’s impact sticks. 
+There are options for many applications here, one without the 5 words from the primary logo. If needed, an icon-only version could be used. The yellow, green, and plant would be recognizable on its own if the other version’s impact sticks. 
 
 <figure class="full">
 	<picture>
@@ -204,20 +204,18 @@ There’s enough elements the brand can be oriented vertical, horizontal, or jus
 Here’s the process to upgrade a logo:
 
 1. #### Discovery & strategy
-   * Assess of the current brand what working and what’s not working
-   * Explore the mission 
-   * Understand the client's business, target audience, and competitors
-   * What does the business owner want to change? *(not applicable here)*
+   * Assess the current brand to determine what working and what’s not
+   * Understand the client’s business, mission, target audience, and competitors
+   * Learn what elements of the brand are essential *(not applicable here)*
 2. #### Research
    * Familiarize myself with the industry
    * Learn how other designers address branding in this 
 3. #### Design
-   * Define brand messaging and tone of voice   
-   * Explore fonts that fit personality 
-   * Explore imagery that fit personality
+   * Refine brand messaging and tone of voice
+   * Explore fonts and imagery that fit the companies personality 
    * Design the logo and visual elements
 4. #### Refinement *(not applicable here)*
-   *  Present initial brand concepts for feedback
+   *  Present brand concepts for feedback
    *  Incorporate client feedback to refine concepts
 5. #### Launch! *(not applicable here)*
    * Implement the new brand across various touchpoints
@@ -228,7 +226,7 @@ I want to be clear that a real logo project involves A LOT of talking with the o
 
 ## What now?
 
-I suppose here I would add in a call-to-action to you, reader. But, it’s summer and I’m not sure I have time for more freelance work.
+I suppose here I would add in a call-to-action to you, reader. But, it’s summer and I’m not sure I have time for more freelance work. 
 
 However, my drive to make things is sometimes stronger than the logic of planning. These fake logos got created somehow, didn’t they?
 
