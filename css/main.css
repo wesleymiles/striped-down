@@ -256,7 +256,7 @@ h1 {
   word-wrap: break-word;
   line-height:.9;
   color: var(--text-light);
-  font-variation-settings: "wdth" 85;
+  font-variation-settings: 'wdth' 85;
   font-stretch: 85%;  
   max-width: 1200px;
 
@@ -936,9 +936,6 @@ body.homepage section.about div {
     display: flex;
   }
 
-  section.text-image {
-    padding-right: 8%;
-  }
     body.homepage section.about picture img {   object-fit: cover; 
     }
 
