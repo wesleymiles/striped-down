@@ -1,0 +1,26 @@
+[
+  {
+    "title": "Barefoot Gen Volume 1: A Cartoon Story of Hiroshima",
+    "author": "Keiji Nakazawa",
+    "coverImage": "https://covers.openlibrary.org/b/isbn/1442207485-M.jpg",
+    "genre": "Genre 1",
+    "bestLink": "https://www.studiesinthenovel.org/content/teaching-barefoot-gen",
+    "blurb": "Mollit ad sint cupidatat veniam nisi voluptate aliqua ea nulla dolor consequat quis et duis aliquip dolore enim eu irure sint voluptate est id do eiusmod. Mollit ad sint cupidatat veniam nisi voluptate aliqua ea nulla dolor consequat quis et duis aliquip dolore enim eu irure sint voluptate est id do eiusmod. Mollit ad sint cupidatat veniam nisi voluptate aliqua ea nulla dolor consequat quis et duis aliquip dolore enim eu irure sint voluptate est id do eiusmod."
+  },
+  {
+    "title": "Ducks: Two Years in the Oil Sands",
+    "author": "Kate Beaton",
+    "coverImage": "https://covers.openlibrary.org/b/isbn/9781770462892-M.jpg",
+    "genre": "non-fiction, memoir",
+    "bestLink": "https://www.studiesinthenovel.org/content/teaching-barefoot-gen",
+    "blurb": "Mollit ad sint cupida"
+  },
+  {
+    "title": "Book Title 3",
+    "author": "Author 3",
+    "coverImage": "https://covers.openlibrary.org/b/isbn/9780385533225-M.jpg",
+    "genre": "Genre 3",
+    "bestLink": "https://www.studiesinthenovel.org/content/teaching-barefoot-gen",
+    "blurb": "Mollit ad sint cupida"
+  }
+]

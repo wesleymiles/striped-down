@@ -121,6 +121,9 @@ That’ll be in the next phase.
 	<figcaption>apples outside the fence</figcaption>
 </figure>
 
+</section>
+<section>
+
 ## Links on community orchards / food forests
 General
 

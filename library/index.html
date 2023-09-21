@@ -1,0 +1,26 @@
+---
+layout: layout.liquid
+title: Radical comics library
+description: My collection of radical graphic novels
+---
+
+<section class="hero">
+
+		<h1>{{ title }}</h1>
+		<p>My collection of radical graphic novelsss</p> 
+
+</section>
+
+<section class="library stretch">
+
+  {% for book in books %}  
+	<div class="book-card" itemscope itemtype="https://schema.org/Book">
+    {% include 'books.liquid' %}
+	</div>
+  {% endfor %}
+
+</div>
+ 
+</section>
+
+
