@@ -263,7 +263,6 @@ h1 {
 }
 
 h2 {
-/*  color: #62A87C;*/
   font-size: 2.5em;
   margin: 0 0 .5em;
 }
@@ -272,7 +271,6 @@ h2 {
 
 h3 {
   font-size: 1.5em;
-/*  margin-bottom: .3em;*/
   line-height: 1.3;
 }
 h3:not(:first-child) {  margin-top: 2em; }
@@ -285,7 +283,6 @@ h4 {
 
 p {
   margin-bottom: var(--gap);
-  /*  margin-bottom: 1em;*/
 }
 
 @media only screen and (max-width: 800px) {
@@ -349,7 +346,7 @@ section {
     margin-bottom: 0;
   }
   section.stretch {
-    padding-right: 8%;
+    padding-right: 5%;
   }
 
 
@@ -497,15 +494,13 @@ nav {
 
 @media only screen and (max-width: 800px) {
 
+  html {font-size: 20px;}
   nav {padding-left: 0;padding-right: 0}
-
-  body > footer nav p { margin: -4em 0 4em; }
   header nav { display: block; text-align: center;}
     header nav.nav-menu {  margin: 0 auto }
       header nav .nav-menu li { 
         margin-left: 0;
-        flex: auto;
-        font-size: .9em;}
+        flex: auto;}
   
 }
 
@@ -513,14 +508,9 @@ nav {
 /* Header nav
 -------------------------------------------------- */
 
-header nav {
-/*  padding-top: 3em;*/
-/*  padding-bottom: 2em;*/
-}
+
 
 header.mast .site-logo {
-/*  font-weight: 300;*/
-/*  font-size: 1.5em;*/
   margin: 0;
 }
 
@@ -533,14 +523,6 @@ header.mast .site-logo img {
     transition: .3s all;
   }
 
-/*    header.mast .site-logo a:link,
-    header.mast .site-logo a:visited {
-      color: #cdd3d6;
-    }  */
-/*    header.mast a:hover,
-    header.mast a:active {
-      color: #FFF583;
-    }*/
 
     header nav a {
       padding: 0 5px 0;
@@ -557,7 +539,6 @@ header.mast .site-logo img {
     color: #fff!important;
     padding: .5em;
     background-color: #62A87C;
-/*    top: 100px;*/
     }
     .skip-link:focus {
       transform: translateY(0%);
@@ -575,7 +556,6 @@ header.mast .site-logo img {
 body > footer {
   text-align: center;
   background: transparent url(/img/mount.svg) bottom center no-repeat;
-/*  padding-top: 3em;*/
   background-color: none;
 }
 
@@ -680,19 +660,26 @@ body > footer {
 /*  }*/
 
 
+
   @media only screen and (max-width: 800px) {
 
-  .hero p {
-    padding-right: inherit;
+  .hero p {  padding-right: inherit;   }
+  .hero {  background-attachment: initial; 
+    /*  unfixes bg so it will work on ios  */
   }
+  .homepage h1 { margin: 0; }
 
 }
 
+
+
 /* hero images */
-.homepage .hero{
+.homepage .hero {
   background-image: url(/img/bg-trees.webp);
   background-image: url(/img/bg-trees.jpg);
 }
+
+
 
 
 /* Resesarch
@@ -932,6 +919,7 @@ body.homepage section.about div {
 }
 
   /* putting my photo in a croppable box that matches the content height */
+  body.homepage section.about figure,
   body.homepage section.about picture {
     display: flex;
   }
