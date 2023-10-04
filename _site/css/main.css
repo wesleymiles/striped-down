@@ -674,11 +674,26 @@ body > footer {
 }
 
 
+/* custom hero images
+-------------------------------------------------- */
 
-/* hero images */
+
 .homepage .hero {
-  background-image: url(/img/bg-trees.webp);
-  background-image: url(/img/bg-trees.jpg);
+  background-image: url(/img/bg-barn.jpg);
+}
+
+.speedy-brand .hero {
+  background-image: url(/img/bg-sumac.jpg);
+  text-align: center;
+}
+.Web.design .hero {
+  background-image: url(/img/bg-hose.jpg); 
+}
+.Blog .hero {
+  background-image: url(/img/bg-trees.jpg); 
+}
+.Research .hero {
+  background-image: url(/img/bg-fence.jpg); 
 }
 
 
@@ -823,10 +838,6 @@ section.--bg_empty {
 /* speedy branding
 -------------------------------------------------- */
 
-.speedy-brand .hero {
-  background-image: url(/img/bg-sumac.jpg);
-  text-align: center;
-}
 
 /*.speedy-brand h1 {
   font-size: 30vw;
@@ -908,27 +919,19 @@ margin: 0;
 
 
   
-/* lining up the homepage hero  */
-body.homepage section.hero {
-/*  padding-bottom: 1em;*/
+
+/*  overlapping thumbnails  */
+body.homepage .hero figure {
+  margin-bottom: -10em;
 }
 
-  body.homepage .hero picture {
-/*     margin-bottom: -1em;*/
-    }
-
-  body.homepage .hero picture img {
-    margin-bottom: inherit;
-  }
-
-/*
-body.homepage section.about {
-  border-bottom: 25px solid #f0e8d6;
-}*/
+body.homepage section.about div {
+  margin-top: 5em;
+}
 
 body.homepage section.about div {
-    display:flex;
-    gap: 2em;
+  display:flex;
+  gap: 2em;
 }
 
   /* putting my photo in a croppable box that matches the content height */
