@@ -41,6 +41,7 @@ body {
   --gapSm: 20px;
   --sans-serif: 'Bricolage Grotesque','Cabinet Grotesk', Arial, "Helvetica Neue", Helvetica, sans-serif;
   --gap: 1.5rem;
+  --texture: #F2F0ED url(/img/noise.png) repeat;
 }
 
 
@@ -52,7 +53,7 @@ body {
   margin: 0;
   padding: var(--gapSm) var(--gapSm) 0 var(--gapSm);
 /*  background-color: var(--bg-dark);*/
-  background: #F2F0ED url(/img/noise.png) repeat;
+  background: var(--texture);
 }
 
   body > main {
@@ -682,7 +683,6 @@ body > footer {
 
 
 
-
 /* Resesarch
 -------------------------------------------------- */
 .ux-case-study img {margin-top: 2em;  }
@@ -800,6 +800,11 @@ body > footer {
     max-width: 300px
   }
 
+section.--bg_empty { 
+  background: var(--texture);
+}
+
+
 
   @media only screen and (max-width: 800px) {
 
@@ -811,6 +816,8 @@ body > footer {
     }
 
   }
+
+
 
 
 /* speedy branding
