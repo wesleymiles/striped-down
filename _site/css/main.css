@@ -144,6 +144,7 @@ img {
   height: auto;
 }
 
+
 picture {
 /*  padding-top: 2em; */
   display:block;
@@ -727,8 +728,13 @@ body > footer {
     box-shadow: 0 3px 50px rgba(0,0,0,.15);
     margin: 2em auto;
   }
- 
+  body.work section[class^="--"] picture.no-shadow img {
+    box-shadow: none;
+  }
 
+  body.work section[class^="--"].--bg_rh {
+    background-color: #222222;
+  }
   body.work section[class^="--"].--bg_gr {
     background-color: #ece9d6;
   }
