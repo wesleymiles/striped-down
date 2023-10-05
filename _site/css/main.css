@@ -757,7 +757,10 @@ body > footer {
     background-color: #eaf3fa;
   }
   body.work section[class^="--"].--bg_thayer {
-    background-color: #133980;
+    background-color: #0f1d4e;
+  }
+  body.work section[class^="--"].--bg_mesaba {
+    background-color: #fffab9;
   }
   body.work section[class^="--"].--bg_complete {
     background-color: #42cbce;
@@ -766,13 +769,13 @@ body > footer {
     background-color: #f8f8f8;
   }
   body.work section[class^="--"].--bg_neyer {
-    background-color: #0133a2;
+    background-color: #2732a0;
   }
   body.work section[class^="--"].--bg_brush {
     background-color: #FFF1A7;
   }
   body.work section[class^="--"].--bg_crown {
-    background-color: #f8d788;
+/*    background-color: #f8d788;*/
   }
   body.work section[class^="--"].--bg_ccs {
     background-color: #B43817;
