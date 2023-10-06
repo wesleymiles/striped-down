@@ -1,25 +1,21 @@
 ---
 layout: layout.liquid
 title: Blog
-description: A blog about design, music, and planting
+description: Some writings about design, music, and planting
 ---
 
 <section class="hero">
-	<div class="content-inner">
 
 		<h1>{{ title }}</h1>
-		<p>Some writings on design, music, and planting.</p> 
+		<p>{{ description }}</p> 
 
-	</div>
 </section>
 
 <section class="">
-	<div class="content-inner">
 
 		{%- for post in collections.post reversed -%}
 		  <h3><a href="{{ post.url }}">{{ post.data.title }}</a></h3>
 		  <p><span class="excerpt">{{ post.data.description }}</span></p>
 		{%- endfor -%} 
 
-	</div>
 </section> 

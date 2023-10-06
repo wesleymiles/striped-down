@@ -52,26 +52,15 @@ body {
 body {
   margin: 0;
   padding: var(--gapSm) var(--gapSm) 0 var(--gapSm);
-/*  background-color: var(--bg-dark);*/
   background: var(--texture);
 }
-
   body > main {
-/*    border-radius: 0 2em 2em 0;*/
-/*    overflow: hidden; */
     background-color: #fff;
   }
-
   body > main section:last-child {
     background-color: var(--text-light)
   }
 
- /* width limiter */
-  body > header,
-  body > footer,
-  body > main {
-/*    max-width: 1400px;*/
-}
 
 hr {
     height: 2px;
@@ -89,13 +78,14 @@ ol, ul {
   ul ul {
     margin-top: 1em;
   }
-li {
-  line-height: 1.35;
-  margin-bottom: .7em;
-}
-  li + p {
-    margin-top: -.7em;
+
+  li {
+    line-height: 1.35;
+    margin-bottom: .7em;
   }
+    li + p {
+      margin-top: -.7em;
+    }
 
   .checks li {
     list-style: none;
@@ -112,7 +102,6 @@ li {
 
 
 blockquote p {
-/*  font-family: var(--sans-serif);*/
   font-size: 2em;
   font-style: italic;
   margin-bottom: 4em;
@@ -237,8 +226,8 @@ h1, h2, h3, h4{
   /*  fallback styles */
   font-family:  Arial, "Helvetica Neue", Helvetica;
   line-height: 1.6; 
-  font-weight: 600; 
-  letter-spacing: -0.4px; 
+  font-weight: 700; 
+  letter-spacing: 1px; 
   font-size: .9em;
 
   /* ideal font styles */
@@ -674,6 +663,7 @@ body > footer {
 }
 
 
+
 /* custom hero images
 -------------------------------------------------- */
 
@@ -914,14 +904,28 @@ box-shadow: none;
 margin: 0;
 }
 
+/* wrap text around book images */
+
+body.novels picture {
+  float: left;
+  margin: 5px 1em .5em 0;
+}
+
+
+/* Blog
+-------------------------------------------------- */
+
+/* making the heading smaller on individual blog pages -- not sure how to specify it though...*/
+
+.hero.blog h1 {
+  font-size: 8vw;
+}
+
+
 
 
 /* Homepage
 -------------------------------------------------- */
-
-
-
-  
 
 /*  overlapping thumbnails  */
 body.homepage .hero figure {
@@ -942,8 +946,8 @@ body.homepage section.about div {
   body.homepage section.about picture {
     display: flex;
   }
-
-    body.homepage section.about picture img {   object-fit: cover; 
+    body.homepage section.about picture img { 
+      object-fit: cover; 
     }
 
 

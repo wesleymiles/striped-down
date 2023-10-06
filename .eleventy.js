@@ -1,6 +1,7 @@
 
 module.exports = function(eleventyConfig) {
 
+
   // Copy the `img` and `css` folders to the output
   eleventyConfig.addPassthroughCopy("img");
   eleventyConfig.addPassthroughCopy("css");
@@ -13,6 +14,7 @@ module.exports = function(eleventyConfig) {
   // Maintain image directories manually for now
   // eleventyConfig.addPassthroughCopy({ "project/wobblies/img": "project/wobblies/img" }); 
   eleventyConfig.addPassthroughCopy({ "blog/local-logos/img": "blog/local-logos/img" }); 
+  eleventyConfig.addPassthroughCopy({ "blog/non-fiction-comics/img": "blog/non-fiction-comics/img" }); 
   // eleventyConfig.addPassthroughCopy({ "blog/andy-shauf-plays-norm/img": "blog/ andy-shauf-plays-norm/img" }); 
   eleventyConfig.addPassthroughCopy({ "work/mockup-demo": "work/mockup-demo" });   
 
