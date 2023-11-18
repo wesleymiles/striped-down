@@ -604,6 +604,20 @@ body > footer {
 
 
 
+/* animate a gif when its hovered via https://codepen.io/QDeltaE/pen/VWGYOB
+-------------------------------------------------- */
+
+.static {
+  position:absolute;
+  background: white;
+}
+
+.static:hover {
+  opacity:0;
+}
+
+
+
 
 /* HERO
 -------------------------------------------------- */
@@ -676,6 +690,12 @@ body > footer {
   background-image: url(/img/bg-sumac.jpg);
   text-align: center;
 }
+.speedy-brand .hero h3 {
+  max-width: 800px;
+  padding-right: 0;
+  margin: 0 auto;
+}
+
 .Web.design .hero {
   background-image: url(/img/bg-hose.jpg); 
 }
@@ -813,7 +833,6 @@ section.--bg_empty {
 }
 
 
-
   @media only screen and (max-width: 800px) {
 
     body.work section[class^="--"] img { margin-bottom:1em }
@@ -906,7 +925,7 @@ margin: 0;
 
 /* wrap text around book images */
 
-body.novels picture {
+body.Graphic.lit picture {
   float: left;
   margin: 5px 1em .5em 0;
 }
