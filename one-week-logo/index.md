@@ -14,7 +14,6 @@ tags: design
 </section>
 
 <!-- <section class="stretch">
-
     <picture>
       <source srcset="/img/speedy/logo-highlights.webp" type="image/webp" >
       <source srcset="/img/speedy/logo-highlights.png" type="image/png" >
@@ -22,30 +21,19 @@ tags: design
     </picture>
 </section> -->
 
- <section class="">
-
-## Benefits
-
-<!-- To do this, we minimize meetings. We will have a kickoff call, but all remaining back-and-forths are through a task management tool. To make use of the short timeline, we offer as many revisions as we can fit in the week. -->
-<!-- (nicely designed) -->
-  <ul>
-    <h4><li>unlimited revisions within the week </li></h4>
-    <h4><li>no meetings -- async communication</li></h4>
-    <h4><li>no arduous process -- keep it simple</li></h4>
-    <h4><li>100% custom logo not made by a robot</li></h4>
-  </ul>
 
 
-## This only works if we follow a tight process
+<section class="stretch theme--grey"> 
 
-  <ol>
-    <li><strong>Kickoff</strong>: We we align on your vision and needs at our one and only meeting.</li>
-    <li><strong>Draft</strong>: I share 2-3 rough concepts with you. You pick one.</li>
-    <li><strong>Refine</strong>: I go back to nip and tuck, button up, and dial in your new logo. A many revisions as we can fit into a week.
-    <li><strong>Deliver</strong>: I email you the logo, colors, and fonts -- all you need for web and print.</li>
-</ol>
+    <picture>
+      <!-- <source srcset="/img/speedy/logo-collection.webp" type="image/webp" > -->
+      <source srcset="/img/speedy/logo-collection.png" type="image/png" >
+      <img src="/img/speedy/logo-collection.png"  alt="" />
+    </picture>
 
+</section>
 
+<section>
 
 ## It’s not for everyone
 
@@ -59,7 +47,7 @@ The constraint prevents sprawl, prevents scope creep, and laser-focuses the deci
 
 Meetings, revisions, and corralling everyone’s input can be arduous. It's all in the name of doing it right, for this mark will represent your organization for hopefully decades.
 
-## It’s for...
+## It is for...
 
 those who want a handmade logo—<em>fast.</em> Yes, handmade by an actual human. Moi. 👋🏻 I promise not to subcontract an AI. 
 
@@ -76,8 +64,33 @@ Meaning I’m prepared to give you this as a gift and you are welcome at the end
 
 I think this is important right now. Assigning a dollar amount to every thing in our lives slowly corrodes relationships. This is a pro-relationship business.
 
-I’ve used this model for many projects and I’m excited to expand it to this one. 
+I’ve used this model for many projects and I’m excited to expand it
 
+</section>
+
+
+ <section class="stretch theme--grey --center">
+
+  ## Benefits
+
+  <ul class="results checks cols sside-by-side">
+    <li>Unlimited revisions within the week </li>
+    <li>No meetings -- async communication</li>
+    <li>No arduous process -- keep it simple</li>
+    <li>100% custom logo not made by a robot</li>
+  </ul>
+</section>
+
+<section>
+
+## This only works if we follow a tight process
+
+  <ol>
+    <li><strong>Kickoff</strong>: We we align on your vision and needs at our one and only meeting.</li>
+    <li><strong>Draft</strong>: I share 2-3 rough concepts with you. You pick one.</li>
+    <li><strong>Refine</strong>: I go back to nip and tuck, button up, and dial in your new logo. A many revisions as we can fit into a week.</li>
+    <li><strong>Deliver</strong>: I email you the logo, colors, and fonts -- all you need for web and print.</li>
+</ol>
 
 
 ## FAQ
@@ -92,22 +105,20 @@ And it forces me, the designer, to also make decisions and crank out excellent d
 
 And make sure it can be good for creative things.
 
+
 ### Why you?
 
-lorem...
+<strong>Experience.</strong> Dozens of folks have trusted me to create their branding and half a dozen have taken a jump into the gift-world with me. 
+
+<strong>Passion.</strong> Behind this idea is an urge to help small local orgs succeed. 
+
+When you see that old pizza shop on Main Street getting cornered by Chili's and Texas Roadhouse -- the pizza shop's food may be delish, but their logo and branding are nothing enticing compared to those big shots.
+
+I aim to help you expand your reach by creating a crunchy promise you can sink your teeth into, creating something recognizable, memorable, professional.
 
 
 </section>
 
-<section class="stretch theme--grey"> 
-
-    <picture>
-      <!-- <source srcset="/img/speedy/logo-collection.webp" type="image/webp" > -->
-      <source srcset="/img/speedy/logo-collection.png" type="image/png" >
-      <img src="/img/speedy/logo-collection.png"  alt="" />
-    </picture>
-
-</section>
 
 <section>
 
@@ -128,8 +139,10 @@ The logo is the promise that you will.
 </section>
 
 
- <section class="">
-  <h2>Schedule a quick zoom call to see if this service is right for you</h2>
+ <section class="cta">
+
+## Schedule a quick zoom call to see if this service is right for you
+
 If it’s a fit, I’ll send you a form. Take your time to fill it out with your vision and goals for the logo.
 
 Then we’ll have one call and as many revisions as we can fit in a week.

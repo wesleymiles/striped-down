@@ -134,6 +134,9 @@ img {
   height: auto;
 }
 
+figure {
+  margin-bottom: 2em;
+}
 
 picture {
 /*  padding-top: 2em; */
@@ -264,7 +267,7 @@ h3 {
   font-size: 1.5em;
   line-height: 1.3;
 }
-h3:not(:first-child) {  margin-top: 2em; }
+/*h3:not(:first-child) {  margin-top: 2em; }*/
 
 h4 {
   font-size: 1.2em;
@@ -395,20 +398,20 @@ main.content-primary,
   flex-wrap: wrap;
   width: 100%;
   justify-content: space-between;
+  padding: 0;
+  margin: 0;
 }
 
-  .cols .col {
-    display: flex;
+  .cols > * {
     flex: 1;
     margin-right: 2em;
-    flex-direction: column;
   }
 
-    .cols .col:last-child {
+    .cols > *:last-child {
       margin-right: 0;
     }
 
-    .cols .col h3 {
+    .cols > * h3 {
       margin-top: 0;
     }
 
@@ -440,7 +443,7 @@ header nav {
       margin-bottom: 3em;
     }*/
 
-  .cols .col {
+  .cols > * {
     flex: inherit;
     margin-top: 1em;
   }
@@ -567,13 +570,20 @@ body > footer {
 }
 
 .theme--grey {
-  background-color: #eeeeee
+/*  background-color: #eeeeee;*/
+  background: var(--texture);
 }
 
 .theme--dark {
   background-color: #003b57
 }
 
+
+  .hero figcaption,
+  .hero p,
+  .hero h3,
+  .hero h2,
+  .theme--dark figcaption,
   .theme--dark p, 
   .theme--dark li, 
   .theme--dark cite, 
@@ -633,11 +643,10 @@ body > footer {
 
   .hero h3,
   .hero p {
-    color: #ffffff;
     padding-right: 35%;
   }
+
   .hero figcaption {
-    color: #ffffff;
   }
 
   .hero a:visited, 
@@ -681,8 +690,8 @@ body > footer {
 /* custom hero images
 -------------------------------------------------- */
 
-
-.homepage .hero {
+/*  default hero  */
+.hero {
   background-image: url(/img/bg-barn.jpg);
 }
 
@@ -690,11 +699,11 @@ body > footer {
   background-image: url(/img/bg-sumac.jpg);
   text-align: center;
 }
-.speedy-brand .hero h3 {
-  max-width: 800px;
-  padding-right: 0;
-  margin: 0 auto;
-}
+  .speedy-brand .hero h3 {
+    max-width: 800px;
+    padding-right: 0;
+    margin: 0 auto;
+  }
 
 .Web.design .hero {
   background-image: url(/img/bg-hose.jpg); 
@@ -708,10 +717,11 @@ body > footer {
 
 
 
+
 /* Resesarch
 -------------------------------------------------- */
-.ux-case-study img {margin-top: 2em;  }
-.ux-case-study p.caption { margin-bottom: 2em;}
+/*.ux-case-study img {margin-top: 2em;  }*/
+/*.ux-case-study p.caption { margin-bottom: 2em;}*/
 
 
 
@@ -994,4 +1004,58 @@ body.homepage section.services {
 /*    h1 span { margin-top: inherit }*/
     body.homepage section.services { background-position-x: 15em;  }
 
+}
+
+
+
+
+
+/*BOKSHELF IDEA */
+/* 
+-------------------------------------------------- */
+
+
+.bookshelf {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; /* Adjust spacing between books */
+    align-items: flex-start; /* Align books to the top of the shelf */
+    padding: 20px;
+    background-color: #8b4513; /* Wooden color */
+}
+
+.book {
+    width: 100px;
+    height: 150px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    overflow: hidden;
+    margin-bottom: 10px; /* Adjust spacing between books */
+}
+
+.book img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.tags {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.tags button {
+    padding: 8px 16px;
+    margin: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    background-color: #4caf50; /* Green */
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+}
+
+.tags button:hover {
+    background-color: #45a049;
 }

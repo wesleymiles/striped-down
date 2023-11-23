@@ -11,6 +11,8 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy("*/**.{jpg,png,webp,gif,svg}");
 
 
+  eleventyConfig.addPassthroughCopy("js/script.js");
+
   // Maintain image directories manually for now
   // eleventyConfig.addPassthroughCopy({ "project/wobblies/img": "project/wobblies/img" }); 
   eleventyConfig.addPassthroughCopy({ "blog/local-logos/img": "blog/local-logos/img" }); 
