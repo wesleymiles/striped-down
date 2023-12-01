@@ -415,6 +415,27 @@ main.content-primary,
       margin-top: 0;
     }
 
+    ol.cols li::before {
+      margin: 1em auto -1.5em;
+      display: block;
+      position: relative;
+      left: initial;
+      background: #62a87c;
+   }
+
+    .cols .card { 
+      text-align: center;
+      margin-top: 2em;  
+    }
+
+      .cols .card svg { 
+        max-width: 15%;
+        display: block;
+        margin: 0 auto -1em;
+        color: #3ea261;
+      }
+
+
 
 /* wide content container */
 footer,
@@ -838,9 +859,7 @@ body > footer {
     max-width: 300px
   }
 
-section.--bg_empty { 
-  background: var(--texture);
-}
+
 
 
   @media only screen and (max-width: 800px) {
