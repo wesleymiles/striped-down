@@ -896,6 +896,32 @@ body > footer {
   }*/
 
 
+/* CSS-only accordion - using native HTML elements
+-------------------------------------------------- */
+
+details {
+/*  width: 300px;*/
+  border: 1px solid #ddd;
+  margin-bottom: 10px;
+}
+
+summary {
+  background-color: #f1f1f1;
+  padding: 10px;
+  cursor: pointer;
+  position: relative;
+}
+  summary::marker {
+    margin-right: 1em;
+  }
+
+  details > div {
+    padding: 2em;
+  }
+  details > div p:last-child {
+    margin-bottom: 0;
+  }
+
 
 /* radical library
 -------------------------------------------------- */
@@ -1029,8 +1055,7 @@ body.homepage section.services {
 
 
 
-/*BOKSHELF IDEA */
-/* 
+/*. BOOKSHELF IDEA 
 -------------------------------------------------- */
 
 
@@ -1078,3 +1103,45 @@ body.homepage section.services {
 .tags button:hover {
     background-color: #45a049;
 }
+
+/* HORIZONTALLY SLIDING GALLERY 
+-------------------------------------------------- */
+
+.homepage .gallery-container {
+/*  margin-top: -7em;*/
+}
+
+.gallery-container {
+  width: 100%;
+  overflow-y: hidden;
+}
+
+  .gallery {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    align-items: baseline;
+  }
+
+    .gallery-item {
+      flex: 0 0 100%;
+      padding: 15px;
+      min-width: 400px;
+      max-width: 500px;
+    }
+
+/*img {
+  max-width: 100%;
+  height: auto;
+}
+
+p {
+  margin-top: 10px;
+}
+*/
+/* Adjustments for larger screens */
+@media (min-width: 768px) {
+  .gallery-item {
+    flex: 0 0 33.3333%;
+  }
+}
+
