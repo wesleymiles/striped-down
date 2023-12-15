@@ -13,17 +13,22 @@ tags: design
 
 </section>
 
-<section class="stretch">
-    <picture>
-      <!-- <source srcset="/img/speedy/logo-highlights.webp" type="image/webp" > -->
-      <!-- <source srcset="/img/speedy/logo-highlights.png" type="image/png" > -->
-      <img src="/img/speedy/logo-collection.png"  alt="" />
-    </picture>
+
+<section class="logo-wall stretch">
+  <span class="callout">
+    <p>Newest logos</p>
+  </span>
+  <img src="/img/speedy/example/logo-wildcats.png" alt="" />
+  <img src="/img/speedy/example/logo-our-scruptious-lake.png" alt="" />
+  <img src="/img/speedy/example/logo-harvest-crossing.png" alt="" />
+  <img src="/img/speedy/example/logo-ginger-woodworks.png" alt="" />
 </section>
 
 
 
-<section class="stretch theme--grey --center"> 
+
+
+<section class="features stretch theme--grey --center"> 
 
   ## A twist on logo creation
 
@@ -31,19 +36,18 @@ tags: design
 
   <div class="results checks cols">
     <div class="card">
-      <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 14"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 7 1 4l3-3m0 12h6.5a4.5 4.5 0 1 0 0-9H2"/></svg>
+      <div class="lottie" data-animation="/animations/loop.json">
+      </div>
       <h4>Unlimited revisions within the week </h4>
     </div>
     <div class="card">
-      <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 18"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 5h9M5 9h5m8-8H2a1 1 0 0 0-1 1v10a1 1 0 0 0 1 1h4l3.5 4 3.5-4h5a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1Z"/></svg>
+      <div class="lottie" data-animation="/animations/speed.json">
+      </div>
       <h4>No meetings -- async communication</h4>
     </div>
-<!--<div class="card">
-      <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M10 19C14.9706 19 19 14.9706 19 10C19 5.02944 14.9706 1 10 1C5.02944 1 1 5.02944 1 10C1 14.9706 5.02944 19 10 19Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M15 11C15 13.038 12.761 15.5 10 15.5C7.239 15.5 5 13.038 5 11C5 12.444 15 12.444 15 11Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M6.5 8C7.32843 8 8 7.32843 8 6.5C8 5.67157 7.32843 5 6.5 5C5.67157 5 5 5.67157 5 6.5C5 7.32843 5.67157 8 6.5 8Z" fill="currentColor"/><path d="M13.5 8C14.3284 8 15 7.32843 15 6.5C15 5.67157 14.3284 5 13.5 5C12.6716 5 12 5.67157 12 6.5C12 7.32843 12.6716 8 13.5 8Z" fill="currentColor"/></svg>
-      <h4>No arduous process -- keep it simple</h4>
-    </div> -->
     <div class="card">
-      <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 21 21"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7.418 17.861 1 20l2.139-6.418m4.279 4.279 10.7-10.7a3.027 3.027 0 0 0-2.14-5.165c-.802 0-1.571.319-2.139.886l-10.7 10.7m4.279 4.279-4.279-4.279m2.139 2.14 7.844-7.844m-1.426-2.853 4.279 4.279"/></svg>
+      <div class="lottie" data-animation="/animations/heart.json">
+      </div>
       <h4>100% custom logo not made by a robot</h4>
     </div>
   </div>
@@ -52,49 +56,49 @@ tags: design
 
 <section>
 
-## It’s not for everyone
+## This service might be for you, if...
+
+1. You live in Vermont.
+2. You’re open to working in the Gift economy.
+3. You’re ready, or can be soon, to get a new logo.
+
+<!-- those who want a handmade logo—<em>fast.</em> Yes, handmade by an actual human. Moi. 👋🏻 I promise not to subcontract an AI. 
+
+It’s also only for Vermonters at the moment. It’s where I live and my method of starting small. 
+
+You also have to be open to a  that goes against every way of thinking of commerce and buying things and exchanging services for money...
+ -->
+
+### No, it’s not for everyone.
 
 
 The long drawn-out process of brand creation absolutely has a place and is here to stay, but it’s not for all of us.
 
-<i>Logo in-a-week</i> argues that constraint prevents sprawl and scope-creep and laser-focuses the decision-making process.
+<i>Logo in-a-week</i> argues that constraint prevents sprawl and scope-creep. And laser focuses the decision making process.
 
 Meetings, revisions, and corralling everyone’s input can be arduous. 
 
-Take a breather and get it done quick.
-
-
-## It <em>IS</em> for...
-
-those who want a handmade logo—<em>fast.</em> Yes, handmade by an actual human. Moi. 👋🏻 I promise not to subcontract an AI. 
-
-It’s also only for Vermonters at the moment. It’s where I live and my method of starting small. 
-
-You also have to be open to a completely radical idea that goes against every way of thinking of commerce and buying things and exchanging services for money...
+Get it done quick so you can take a breather.
 
 
 ## Cost
 
 This service follows the gift-economy model.
 
-Meaning I’m prepared to give you this as a gift and you are welcome at the end of it to pay me, in money or other, or some other way.
+Meaning, I’m prepared to give you this as a gift and you are welcome at the end of it to pay me, in money or in some other way.
 
-I think this is important right now. Assigning a dollar amount to every thing in our lives slowly corrodes relationships. This is a pro-relationship business.
+I think this completely radical idea is important right now. Commerce-as-usual is the air we breathe. It reinforces the idea that every task should be monetized and counted. This tends to minimize relationships. 
+
+This service is an experiment toward pro-relationship business.
 
 I’ve used this model for many projects and I’m excited to expand it.
 
-(check out where I wrote more about <a href="/blog/gift/">freelancing in the gift</a>.)
+I wrote more about <a href="/blog/gift/">freelancing in the gift here</a>.
 
 </section>
 
+<section class="stretch theme--dark --center">
 
-<section class="stretch theme--grey --center">
-
-<!--     <picture>
-      <source srcset="/img/speedy/logo-collection.png" type="image/png" >
-      <img src="/img/speedy/logo-collection.png"  alt="" />
-    </picture>
- -->
  ## Here’s how it works
 
   <ol class="cols">
@@ -114,7 +118,25 @@ I’ve used this model for many projects and I’m excited to expand it.
     </li>
 </ol>
 
+</section>
 
+
+<section class="logo-wall --smaller stretch theme--grey">
+  <span class="callout --alternate">
+    <p>more logos!</p>
+  </span>
+  <img src="/img/speedy/example/logo-ed-camp-vt.png" alt="" />
+  <img src="/img/speedy/example/logo-millriver-carpenters.png" alt="" />
+  <img src="/img/speedy/example/logo-orbit.png" alt="" />
+  <img src="/img/speedy/example/logo-ux-burlington-conference.png" alt="" />
+  <img src="/img/speedy/example/logo-inlaw-brewing.png" alt="" />
+  <img src="/img/speedy/example/logo-creative-wood-designs.png" alt="" />
+  <img src="/img/speedy/example/logo-bromin.png" alt="" />
+  <img src="/img/speedy/example/logo-fulham.png" alt="" />
+  <img src="/img/speedy/example/logo-barcrab.png" alt="" />
+  <img src="/img/speedy/example/logo-knobhill-partners.png" alt="" />
+  <img src="/img/speedy/example/logo-brush-brook-community-farm.png" alt="" />
+  <img src="/img/speedy/example/logo-marblehead-on-harbor.png" alt="" />
 </section>
 
 
@@ -188,5 +210,10 @@ If it’s a fit, I’ll send you a form. Take your time to fill it out with your
  Or <a href="mailto:hi@wescarr.com">email me</a>
 
 
+</section>
 
-  </section>
+
+
+
+<script src="/js/animate.js" type="text/javascript"></script>
+

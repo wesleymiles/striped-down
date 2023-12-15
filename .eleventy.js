@@ -5,10 +5,11 @@ module.exports = function(eleventyConfig) {
   // Copy the `img` and `css` folders to the output
   eleventyConfig.addPassthroughCopy("img");
   eleventyConfig.addPassthroughCopy("css");
-  eleventyConfig.addPassthroughCopy("js");
+  eleventyConfig.addPassthroughCopy("js");  
+  eleventyConfig.addPassthroughCopy("animations");
 
   //attempting to pass through image files and maintain the dir structure
-  eleventyConfig.addPassthroughCopy("*/**.{jpg,png,webp,gif,svg}");
+  eleventyConfig.addPassthroughCopy("*/**.{jpg,png,webp,gif,svg,json}");
 
 
   eleventyConfig.addPassthroughCopy("js/script.js");
