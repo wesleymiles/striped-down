@@ -1070,10 +1070,6 @@ body.homepage .hero figcaption {
 }
 
 body.homepage section.about div {
-/*  margin-top: 5em;*/
-}
-
-body.homepage section.about div {
   display:flex;
   gap: 2em;
 }
