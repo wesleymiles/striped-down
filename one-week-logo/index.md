@@ -54,46 +54,51 @@ tags: design
 
 </section>
 
+
 <section>
 
-## This service might be for you, if...
+  ## This service might be for you, if...
+  
+  <ul class="checks">
+    <li>You live in Vermont.</li>
+    <li>You’re open to working in the Gift economy.</li>
+    <li>You’re ready, or can be soon, to get a new logo.</li>
+  </ul>
 
-1. You live in Vermont.
-2. You’re open to working in the Gift economy.
-3. You’re ready, or can be soon, to get a new logo.
+  
+  ### No, it’s not for everyone.
+  
+  The long drawn-out process of brand creation absolutely has a place and is here to stay, but it’s not for all of us.
+  
+  <i>Logo in-a-week</i> argues that constraint prevents sprawl and scope-creep. And laser focuses the decision making process.
+  
+  Meetings, revisions, and corralling everyone’s input can be arduous. 
+  
+  Get it done quick so you can take a breather.
+  
+  
+  ## Cost
+  
+  This service follows the gift-economy model.
+  
+  Meaning, I’m prepared to give you this as a gift and you are welcome at the end of it to pay me, in money or in some other way.
+  
+  I think this completely radical idea is important right now. Commerce-as-usual is the air we breathe. It reinforces the idea that every task should be monetized and counted. This tends to minimize relationships. 
+  
+  This service is an experiment toward pro-relationship business.
+  
+  I’ve used this model for many projects and I’m excited to expand it.
+  
+  I wrote more about <a href="/blog/gift/">freelancing in the gift here</a>.
+  
+  
+  ## Proof that good branding pays
+  
+  I had the pleasure of working with this branding companies logos before.
 
-<!-- those who want a handmade logo—<em>fast.</em> Yes, handmade by an actual human. Moi. 👋🏻 I promise not to subcontract an AI. 
+  They track the impact of their logos in terms of client revenue. 
 
-It’s also only for Vermonters at the moment. It’s where I live and my method of starting small. 
-
-You also have to be open to a  that goes against every way of thinking of commerce and buying things and exchanging services for money...
- -->
-
-### No, it’s not for everyone.
-
-
-The long drawn-out process of brand creation absolutely has a place and is here to stay, but it’s not for all of us.
-
-<i>Logo in-a-week</i> argues that constraint prevents sprawl and scope-creep. And laser focuses the decision making process.
-
-Meetings, revisions, and corralling everyone’s input can be arduous. 
-
-Get it done quick so you can take a breather.
-
-
-## Cost
-
-This service follows the gift-economy model.
-
-Meaning, I’m prepared to give you this as a gift and you are welcome at the end of it to pay me, in money or in some other way.
-
-I think this completely radical idea is important right now. Commerce-as-usual is the air we breathe. It reinforces the idea that every task should be monetized and counted. This tends to minimize relationships. 
-
-This service is an experiment toward pro-relationship business.
-
-I’ve used this model for many projects and I’m excited to expand it.
-
-I wrote more about <a href="/blog/gift/">freelancing in the gift here</a>.
+  See the <a href="https://www.kickcharge.com/portfolio/client-stats/" class="external" >GIGANTIC percentage increases</a> on fifty rebrands. 
 
 </section>
 
@@ -164,14 +169,15 @@ I wrote more about <a href="/blog/gift/">freelancing in the gift here</a>.
 <details>
   <summary >Why you? </summary>
   <div>
+    In the last 10 years, i helped 342 orgs create a positive, memorable impression. Half a dozen have taken a jump into the gift-world with me. 
+  
+    Behind this idea is an urge to help small local orgs succeed. 
+  
+    I want to give that old pizza shop getting cornered by Chili’s and Texas Roadhouse a fighting chance.
+  
+    I aim to help you expand your reach by creating a crunchy promise your potential customers can sink your teeth into.
 
-    <p><strong>Experience.</strong> Dozens of folks have trusted me to create their branding and half a dozen have taken a jump into the gift-world with me. </p>
-  
-    <p><strong>Passion.</strong> Behind this idea is an urge to help small local orgs succeed. </p>
-  
-    <p>I want to give that old pizza shop getting cornered by Chili’s and Texas Roadhouse a fighting chance.</p>
-  
-    <p>I aim to help you expand your reach by creating a crunchy promise you can sink your teeth into, creating something recognizable, memorable, professional.</p>
+    Lastly, taste. This is a real reason why people hire designers. I know what good design looks like and can help channel your vision into something pleasing.
 
   </div>
 </details>
@@ -195,25 +201,34 @@ I wrote more about <a href="/blog/gift/">freelancing in the gift here</a>.
    </div>
 </details>
 
-</section>
+<details>
+  <summary> If logos are so magic, why are we rushing this?</summary>
+  <div>
 
+    Very astute question, reader. 
+
+    This is the crux of my offering. 
+
+    I believe logos matter a lot, but I also believe people tend to waste time on them. Let’s meet in the middle and see if we can’t get you a top-notch logo, fast.
+    
+   </div>
+</details>
+
+</section>
 
  <section class="cta">
 
-## Schedule a quick call
+  ## Schedule a quick call
 
-If it’s a fit, I’ll send you a form. Take your time to fill it out with your vision and goals for the logo. 
-
-<div class="button">
-  <a href="https://calendly.com/vermont-logo/30min?month=2023-11">Schedule a no-pressure, informational 15 minute call</a>
-</div>
- Or <a href="mailto:hi@wescarr.com">email me</a>
-
+  If it’s a fit, I’ll send you a form. Take your time to fill it out with your vision and goals for the logo. 
+  
+  <div class="button">
+    <a href="https://calendly.com/vermont-logo/30min?month=2023-11">Schedule a no-pressure, informational 15 minute call</a>
+  </div>
+   Or <a href="mailto:hi@wescarr.com">email me</a>
 
 </section>
-
-
-
-
 <script src="/js/animate.js" type="text/javascript"></script>
+
+
 

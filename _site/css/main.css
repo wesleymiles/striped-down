@@ -57,7 +57,7 @@ body {
   body > main {
     background-color: #fff;
   }
-  body > main section:last-child {
+  body > main section:last-of-type {
     background-color: var(--text-light)
   }
 
