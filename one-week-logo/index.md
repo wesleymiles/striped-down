@@ -83,7 +83,7 @@ tags: design
   
   Meaning, I’m prepared to give you this as a gift and you are welcome at the end of it to pay me, in money or in some other way.
   
-  I think this completely radical idea is important right now. Commerce-as-usual is the air we breathe. It reinforces the idea that every task should be monetized and counted. This tends to minimize relationships. 
+  I think this completely radical idea is important right now. Commerce-as-usual is the air we breathe. It reinforces the idea that every task should be monetized and counted. This tends to minimize relationships and cease them at moment of transaction.
   
   This service is an experiment toward pro-relationship business.
   
@@ -148,71 +148,59 @@ tags: design
 
 <section>
 
+    ## FAQ
 
+    <details>
+      <summary> Why not 2 weeks? </summary>
+      <div>
+        I believe that working within constraints allows space for excellent work.
+      
+        It forces you, the business owner, to make decisions and not waddle, waffle.
+      
+        And it forces me, the designer, to also make decisions and crank out excellent designs.
+      </div>
+    </details>
 
+    <details>
+      <summary >Why you? </summary>
+      <div>
+        In the last 10 years, i helped 342 orgs create a positive, memorable impression. Half a dozen have taken a jump into the gift-world with me. 
+      
+        Behind this idea is an urge to help small local orgs succeed. 
+      
+        I want to give that old pizza shop getting cornered by Chili’s and Texas Roadhouse a fighting chance.
+      
+        I aim to help you expand your reach by creating a crunchy promise your potential customers can sink your teeth into.
 
-## FAQ
+        Lastly, taste. This is a real reason why people hire designers. I know what good design looks like and can help channel your vision into something pleasing.
+      </div>
+    </details>
 
-<details>
-  <summary> Why not 2 weeks? </summary>
-  <div>
+    <details>
+      <summary> Why are logos magic?</summary>
+      <div>
+        They have the power to communicate your values, philosophy, reputation, and what customers can expect by using succinct imagery.
+        
+        Your logo is the core of your brand.
+        
+        Branding is the whole thing - the combination of messaging and visuals you consistently use.
+        
+        With this service, it’s up to <i>you</i> to apply and express the logo in ways that resonate with your audience. 
+        
+        It’s also up to you to back up the promise of a logo with action. 
+       </div>
+    </details>
 
-    <p>I believe that working within constraints allows space for excellent work.</p>
-  
-    <p>It forces you, the business owner, to make decisions and not waddle, waffle.</p>
-  
-    <p>And it forces me, the designer, to also make decisions and crank out excellent designs.</p>
+    <details>
+      <summary> If logos are so magic, why are we rushing this?</summary>
+      <div>
+        Very astute question, reader. 
 
-  </div>
-</details>
+        This is the crux of my offering. 
 
-<details>
-  <summary >Why you? </summary>
-  <div>
-    In the last 10 years, i helped 342 orgs create a positive, memorable impression. Half a dozen have taken a jump into the gift-world with me. 
-  
-    Behind this idea is an urge to help small local orgs succeed. 
-  
-    I want to give that old pizza shop getting cornered by Chili’s and Texas Roadhouse a fighting chance.
-  
-    I aim to help you expand your reach by creating a crunchy promise your potential customers can sink your teeth into.
-
-    Lastly, taste. This is a real reason why people hire designers. I know what good design looks like and can help channel your vision into something pleasing.
-
-  </div>
-</details>
-
-<details>
-  <summary> Why are logos magic?</summary>
-  <div>
-
-    They have the power to communicate your values, philosophy, reputation, and what customers can expect by using succinct imagery.
-    
-    Your logo is the core of your brand.
-    
-    Branding is the whole thing - the combination of messaging and visuals you consistently use.
-    
-    With this service, it’s up to <i>you</i> to apply and express the logo in ways that resonate with your audience. 
-    
-    It’s also up to you to back up the promise of a logo with action. 
-    
-    Let’s do this.
-    
-   </div>
-</details>
-
-<details>
-  <summary> If logos are so magic, why are we rushing this?</summary>
-  <div>
-
-    Very astute question, reader. 
-
-    This is the crux of my offering. 
-
-    I believe logos matter a lot, but I also believe people tend to waste time on them. Let’s meet in the middle and see if we can’t get you a top-notch logo, fast.
-    
-   </div>
-</details>
+        I believe logos matter a lot, but I also believe people tend to waste time on them. Let’s meet in the middle and see if we can’t get you a top-notch logo, fast.
+       </div>
+    </details>
 
 </section>
 
@@ -220,7 +208,7 @@ tags: design
 
   ## Schedule a quick call
 
-  If it’s a fit, I’ll send you a form. Take your time to fill it out with your vision and goals for the logo. 
+  Let’s chat! If it’s a fit, I’ll send you a form. Take your time to fill it out with your vision and goals for the logo. 
   
   <div class="button">
     <a href="https://calendly.com/vermont-logo/30min?month=2023-11">Schedule a no-pressure, informational 15 minute call</a>
