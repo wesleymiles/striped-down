@@ -1,59 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8">
-
-		
-		
-		
-
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Radical comics library — Wes Carr</title>
-
-		<!-- SEO Tags -->
-		<meta property="og:title" content="Radical comics library"/>
-		<meta property="og:url" content="/blog/non-fiction-comics/ "/>
-		<meta property="og:description" content="A catalog of my collection of graphic novels. Many are memoirs. Most are considered radical."/>
-		<meta property="og:image" content="/blog/non-fiction-comics/indeximg/social-thumbnail.jpg"  /> 
- 
-    <link rel="stylesheet" href="/css/main.css">
-		<link rel="preconnect" href="https://fonts.googleapis.com">
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-		<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wdth,wght@85..100,400;85..100,800&display=swap" rel="stylesheet">
-
-    <link rel="icon" href="/img/favicon.ico">
-		<link rel="icon" href="/img/icon.svg" type="image/svg+xml">
-		<link rel="apple-touch-icon" href="/img/apple-touch-icon.png">
-
-  </head>
-
-	<body class="Radical comics library">
-  	<a class="skip-link nav-tab" href='#main'>Skip to content</a>
-		<header class="mast">
-			<nav aria-label="Main">
-
-				<div class="site-logo">
-					<a href="/">
-						<img src="/img/mount.svg" alt="cartoon mountain" />
-						Wes Carr
-					</a>
-				</div>
-
-				<ul class="nav-menu">
-					<li><a href="/one-week-logo/">Logo (in a week?!)</a></li>
-					<li><a href="/web/">Web</a></li>
-					<li><a href="/research/">Research</a></li>
-					<li><a href="/blog/">Blog</a></li>
-				</ul>
-			</nav>
-
-		</header>
-
-	<main id="main">
-
-    <section class="books hero">
-    <h1> Radical comics library</h1>
-    <p>A catalog of my collection of graphic novels. Many are memoirs. Most are considered radical.</p>
+---
+layout: layout.liquid
+title: Radical comics library
+description: A catalog of my collection of graphic novels. Many are memoirs. Most are considered radical.
+tags: post
+date: 2023-10-01
+---
+<section class="books hero">
+    <h1> {{ title }}</h1>
+    <p>{{ description }}</p>
 </section>
 <section class="library stretch">
     <article itemscope itemtype="https://schema.org/Book">
@@ -81,8 +35,8 @@
 
         <figure>
             <picture>
-                <source srcset="/blog/non-fiction-comics/img/barefoot-gen-snippet.jpg" type="image/jpg">
-                <img src="/blog/non-fiction-comics/img/barefoot-gen-snippet.jpg"  alt="Barefoot gen page with the two brothers wanting to support their family during war.">
+                <source srcset="{{ page.url | url }}img/barefoot-gen-snippet.jpg" type="image/jpg">
+                <img src="{{ page.url | url }}img/barefoot-gen-snippet.jpg"  alt="Barefoot gen page with the two brothers wanting to support their family during war.">
                 <figcaption>Snippet from book 1 of 10</figcaption>
             </picture>
         </figure>
@@ -119,10 +73,10 @@
 
             <figure>
                  <video id="shubeik-lubeik" autoplay="" loop="" muted="" playsinline="" width="100%">
-                    <source src="/blog/non-fiction-comics/img/shubeik-lubeik-sm.mp4" type="video/mp4">
+                    <source src="{{ page.url | url }}img/shubeik-lubeik-sm.mp4" type="video/mp4">
                         <p>
                         Your browser doesn't support HTML video. Here is a
-                        <a href="/blog/non-fiction-comics/img/shubeik-lubeik-sm.mp4">link to the video</a> instead.
+                        <a href="{{ page.url | url }}img/shubeik-lubeik-sm.mp4">link to the video</a> instead.
                       </p>
                 </video>
                 <figcaption>Watch a flip-through (27 seconds)</figcaption>
@@ -617,26 +571,4 @@
 <section>
         <p>I like experimenting with organizing.</p> 
     <p>The plan is to add notes and sorting eventually.</p>
-</section>   
-
-
-	</main>
-
-	<footer>
-		
-			<nav>
-				<p class="colophon">
-					Built with <a href="https://www.11ty.dev/">eleventy</a>
-				</p>
-				<p class="social">
-					<a href="https://www.linkedin.com/in/wes-carr-8918b99/">linkedin</a>  |  
-					<a href="https://unsplash.com/@wescarr">unsplash</a>  |  
-					<a href="mailto:hi@wescarr.com">email</a>
-				</p>
-			</nav>
-
-
-	</footer>
-
-	</body>
-</html>
+</section>

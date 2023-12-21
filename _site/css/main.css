@@ -57,7 +57,7 @@ body {
   body > main {
     background-color: #fff;
   }
-  body > main section:last-of-type {
+  body > main > section:last-of-type {
     background-color: var(--text-light)
   }
 
@@ -253,7 +253,6 @@ h1 {
   font-variation-settings: 'wdth' 85;
   font-stretch: 85%;  
   max-width: 1200px;
-
 }
 
 h2 {
@@ -277,6 +276,10 @@ h4 {
 
 p {
   margin-bottom: var(--gap);
+}
+
+small {
+  font-size: .6em;
 }
 
 @media only screen and (max-width: 800px) {
@@ -332,14 +335,14 @@ div.button a:link {
 /* Layout 
 -------------------------------------------------- */
 
-section {
+main#main > section {
   margin: 0 auto 0 0;
   padding: calc(var(--gap) * 3) 35% calc(var(--gap) * 3) 5%;
 }
-  section > p:last-child {
+  main#main > section > p:last-child {
     margin-bottom: 0;
   }
-  section.stretch {
+  main#main > section.stretch {
     padding-right: 5%;
   }
 
@@ -448,7 +451,7 @@ header nav {
 
 @media only screen and (max-width: 800px) {
 
-  section { padding: 3em 5%;  }
+  main#main > section { padding: 3em 5%;  }
 
   .cols { display:block;   }
 
@@ -653,7 +656,7 @@ body > footer {
 /* HERO
 -------------------------------------------------- */
 
-.hero {
+main#main > section.hero {
   padding-right: 5%;
   background-color: var(--bg-dark);
   margin-top: var(--gapSm);
@@ -684,22 +687,11 @@ body > footer {
     margin-bottom: 0;
   }
 
-/*  h1 span {*/
-/*    display: block;*/
-/*    color: var(--bg-dark);*/
-/*    color: #fff;*/
-/*    font-size: .9em;*/
-/*    font-weight: 600;*/
-/*    font-family: 'Telma', cursive;*/
-/*    margin-top: -15px;*/
-/*  }*/
-
 
 
   @media only screen and (max-width: 800px) {
 
   .hero p {  padding-right: inherit;   }
-  .hero {  background-attachment: initial; 
     /*  unfixes bg so it will work on ios  */
   }
   .homepage h1 { margin: 0; }
@@ -987,19 +979,10 @@ span.callout {
 /* radical library
 -------------------------------------------------- */
 
-.library {
-   display: flex;
-   justify-content: space-between; 
-   flex-wrap: wrap;
-}
 
-.book-card {
-  flex: 1 1 0%;
-  background-color: #fff;
-  padding: 1em;
-  margin: .3em;
-}
-  .book-card p {
+
+
+/*  .book-card p {
     font-size: .7em;
     line-height: 1.2;
     margin-bottom: 0;
@@ -1025,10 +1008,10 @@ span.callout {
   .book-card a {
     text-align: center;
     display: block;
-  }
+  }*/
 
 
-{
+/*{
   position: relative;
 -moz-perspective: 100px;
 -moz-transform: rotateY(-3deg);
@@ -1038,13 +1021,71 @@ outline: 1px solid transparent;
 box-shadow: none;
 margin: 0;
 }
+*/
 
-/* wrap text around book images */
-
-body.Graphic.lit picture {
-  float: left;
-  margin: 5px 1em .5em 0;
+section.library {
+  /*  grid works better for */
+/*   display: flex;*/
+/*   flex-wrap: wrap;*/
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(30%, 1fr));
+  gap: var(--gapSm);
 }
+
+
+
+  section.library article {
+    flex: 1 0 20%;
+    padding: var(--gapSm);
+    background: var(--texture);
+    display: flex;
+    flex-direction: column;
+  }
+
+    /*  text styling  */
+    section.library article h2 {
+      margin-bottom: 0;
+      font-size: 1em;
+      font-weight: normal;
+    }
+
+      /*  scoping the years only */
+      section.library article small {
+        text-align: right;
+        display: block;
+        vertical-align: bottom;
+      }
+      /*  scoping the author only */
+      section.library article header span.book-intro h2 :nth-child(1)  {
+        font-weight: 700;
+      }
+
+
+     section.library article header {
+        flex-grow: 1;
+    }
+
+       section.library article header:not(:first-child) {
+         margin-top: calc(8*var(--gapSm));
+      }
+
+
+       section.library article picture {
+        margin: calc(3*(var(--gapSm)))  auto;
+      }
+
+       section.library article picture img {
+          height: 300px;
+          min-width: 200px;
+          object-fit: cover;
+      }
+
+
+  @media only screen and (max-width: 768px) {
+    section.library { grid-template-columns: 1fr; }
+      section.library article picture { margin: 0 auto;  }
+        section.library article picture img { height: 200px; min-width: 150px;   }
+  }
 
 
 /* Blog
@@ -1055,7 +1096,6 @@ body.Graphic.lit picture {
 .hero.blog h1 {
   font-size: 8vw;
 }
-
 
 
 
@@ -1163,6 +1203,8 @@ body.homepage section.services {
     background-color: #45a049;
 }
 
+
+
 /* HORIZONTALLY SLIDING GALLERY 
 -------------------------------------------------- */
 
@@ -1188,14 +1230,6 @@ body.homepage section.services {
       max-width: 500px;
     }
 
-/*img {
-  max-width: 100%;
-  height: auto;
-}
-
-p {
-  margin-top: 10px;
-}
 */
 /* Adjustments for larger screens */
 @media (min-width: 768px) {
