@@ -15,7 +15,6 @@ html {
 font-family: 'Iowan Old Style', 'Palatino Linotype', 'URW Palladio L', P052, Apple Garamond, Baskerville, Times New Roman, Droid Serif, Times, Source Serif Pro, serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbolserif;
   font-size: 22px;
   line-height: 1.6;
-  background: #fff;
   color: #003B57;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -42,6 +41,7 @@ body {
   --sans-serif: 'Bricolage Grotesque','Cabinet Grotesk', Arial, "Helvetica Neue", Helvetica, sans-serif;
   --gap: 1.5rem;
   --texture: #F2F0ED url(/img/noise.png) repeat;
+  --curve: 8px;
 }
 
 
@@ -51,11 +51,12 @@ body {
 
 body {
   margin: 0;
-  padding: var(--gapSm) var(--gapSm) 0 var(--gapSm);
+  padding: var(--gap) var(--gap) 0 var(--gap);
   background: var(--texture);
 }
   body > main {
     background-color: #fff;
+    border-radius: var(--curve) var(--curve) 0 0;
   }
   body > main > section:last-of-type {
     background-color: var(--text-light)
@@ -663,6 +664,9 @@ main#main > section.hero {
   background-attachment: fixed;
   background-position: center;
   background-size: cover;
+
+/*  fix gallery overflow*/
+  overflow: hidden;
 }
 
   .hero h3,
@@ -693,10 +697,9 @@ main#main > section.hero {
 
   .hero p {  padding-right: inherit;   }
     /*  unfixes bg so it will work on ios  */
-  }
   .homepage h1 { margin: 0; }
 
-}
+  }
 
 
 
@@ -706,6 +709,7 @@ main#main > section.hero {
 /*  default hero  */
 .hero {
   background-image: url(/img/bg-barn.jpg);
+  border-radius: var(--curve) var(--curve) 0 0;
 }
 
 .speedy-brand .hero {
@@ -1209,7 +1213,8 @@ body.homepage section.services {
 -------------------------------------------------- */
 
 .homepage .gallery-container {
-/*  margin-top: -7em;*/
+  width: 105%;
+
 }
 
 .gallery-container {
@@ -1230,7 +1235,12 @@ body.homepage section.services {
       max-width: 500px;
     }
 
-*/
+    .gallery:last-child {
+      margin-right: 5em;
+      padding-right: 5em;
+/*  padding-right: calc(var(--gap) * 2);*/
+    }
+
 /* Adjustments for larger screens */
 @media (min-width: 768px) {
   .gallery-item {

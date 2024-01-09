@@ -1,7 +1,7 @@
 ---
 layout: layout.liquid
 title: Radical comics library
-description: A catalog of my collection of graphic novels. Many are memoirs. Most are considered radical.
+description: A catalog of my collection of graphic novels. All are non-fiction. Many are memoirs. Most are considered radical.
 tags: post
 date: 2023-10-01
 ---
@@ -9,8 +9,34 @@ date: 2023-10-01
     <h1> {{ title }}</h1>
     <p>{{ description }}</p>
 </section>
-<section class="library stretch">
-    <article itemscope itemtype="https://schema.org/Book">
+
+<div class="">
+
+    <div id="filterOptions">
+<!--       <button data-filter="all">All</button>
+      <button data-filter="drama">Before 1990</button>
+      <button data-filter="drama">1990-2000</button>
+      <button data-filter="drama">2001-today</button>
+      <button data-filter="drama">Memoir</button>
+      <button data-filter="history">History</button>
+      <button data-filter="history">Journalistic</button> -->
+
+      <small>Published:</small>
+      <label><input type="checkbox" value="before-1990"> Before 1990</label>
+      <label><input type="checkbox" value="1990-2000"> 1990-2000</label>
+      <label><input type="checkbox" value="2001-today"> 2001-today</label>
+      <small>Genres:</small>
+      <label><input type="checkbox" value="drama"> Drama</label>
+      <label><input type="checkbox" value="english"> English</label>
+      <label><input type="checkbox" value="paperback"> Paperback</label>
+
+    </div>
+
+</div>
+
+
+<section id="BookList" class="library stretch">
+    <article data-genre="Memoir" itemscope itemtype="https://schema.org/Book">
         <header>
             <span class="book-intro">
                 <h2>
@@ -53,7 +79,7 @@ date: 2023-10-01
         </section> -->
     </article>
 
-    <article itemscope itemtype="https://schema.org/Book">
+    <article data-genre="Drama" itemscope itemtype="https://schema.org/Book">
         <header>
             <span class="book-intro">
                 <h2>
@@ -85,7 +111,7 @@ date: 2023-10-01
         </section> -->
     </article>
 
-    <article itemscope itemtype="https://schema.org/Book">
+    <article data-genre="Drama" itemscope itemtype="https://schema.org/Book">
         <header>
             <span class="book-intro">
                 <h2>
@@ -106,7 +132,7 @@ date: 2023-10-01
         </section> -->
     </article>
 
-    <article itemscope itemtype="https://schema.org/Book">
+    <article data-genre="Drama" itemscope itemtype="https://schema.org/Book">
         <header>
             <span class="book-intro">
                 <h2>
@@ -124,7 +150,7 @@ date: 2023-10-01
         </section>
     </article>
 
-    <article itemscope itemtype="https://schema.org/Book">
+    <article data-genre="Drama" itemscope itemtype="https://schema.org/Book">
         <header>
             <span class="book-intro">
                 <h2>
@@ -142,7 +168,7 @@ date: 2023-10-01
         </section>
     </article>
 
-    <article itemscope itemtype="https://schema.org/Book">
+    <article data-genre="Drama" itemscope itemtype="https://schema.org/Book">
         <header>
             <span class="book-intro">
                 <h2>
@@ -160,7 +186,7 @@ date: 2023-10-01
         </section>
     </article>
 
-    <article itemscope itemtype="https://schema.org/Book">
+    <article data-genre="Drama" itemscope itemtype="https://schema.org/Book">
         <header>
             <span class="book-intro">
                 <h2>
@@ -178,7 +204,7 @@ date: 2023-10-01
         </section>
     </article>
 
-    <article itemscope itemtype="https://schema.org/Book">
+    <article data-genre="Drama" itemscope itemtype="https://schema.org/Book">
         <header>
             <span class="book-intro">
                 <h2>
@@ -196,7 +222,7 @@ date: 2023-10-01
         </section>
     </article>
 
-    <article itemscope itemtype="https://schema.org/Book">
+    <article data-genre="Drama" itemscope itemtype="https://schema.org/Book">
         <header>
             <span class="book-intro">
                 <h2>
@@ -214,7 +240,7 @@ date: 2023-10-01
         </section>
     </article>
 
-    <article itemscope itemtype="https://schema.org/Book">
+    <article data-genre="Drama" itemscope itemtype="https://schema.org/Book">
         <header>
             <span class="book-intro">
                 <h2>
@@ -232,7 +258,7 @@ date: 2023-10-01
         </section>
     </article>
 
-    <article itemscope itemtype="https://schema.org/Book">
+    <article data-genre="Drama" itemscope itemtype="https://schema.org/Book">
         <header>
             <span class="book-intro">
                 <h2>
@@ -250,7 +276,7 @@ date: 2023-10-01
         </section>
     </article>
 
-    <article itemscope itemtype="https://schema.org/Book">
+    <article data-genre="Drama" itemscope itemtype="https://schema.org/Book">
         <header>
             <span class="book-intro">
                 <h2>
@@ -268,7 +294,7 @@ date: 2023-10-01
         </section>
     </article>
 
-    <article itemscope itemtype="https://schema.org/Book">
+    <article data-genre="Drama" itemscope itemtype="https://schema.org/Book">
         <header>
             <span class="book-intro">
                 <h2>
@@ -286,7 +312,7 @@ date: 2023-10-01
         </section>
     </article>
 
-    <article itemscope itemtype="https://schema.org/Book">
+    <article data-genre="Drama" itemscope itemtype="https://schema.org/Book">
         <header>
             <span class="book-intro">
                 <h2>
@@ -304,7 +330,7 @@ date: 2023-10-01
         </section>
     </article>
 
-    <article itemscope itemtype="https://schema.org/Book">
+    <article data-genre="Drama" itemscope itemtype="https://schema.org/Book">
         <header>
             <span class="book-intro">
                 <h2>
@@ -322,7 +348,7 @@ date: 2023-10-01
         </section>
     </article>
 
-    <article itemscope itemtype="https://schema.org/Book">
+    <article data-genre="Drama" itemscope itemtype="https://schema.org/Book">
         <header>
             <span class="book-intro">
                 <h2>
@@ -340,7 +366,7 @@ date: 2023-10-01
         </section>
     </article>
 
-    <article itemscope itemtype="https://schema.org/Book">
+    <article data-genre="Drama" itemscope itemtype="https://schema.org/Book">
         <header>
             <span class="book-intro">
                 <h2>
@@ -358,7 +384,7 @@ date: 2023-10-01
         </section>
     </article>
 
-    <article itemscope itemtype="https://schema.org/Book">
+    <article data-genre="Drama" itemscope itemtype="https://schema.org/Book">
         <header>
             <span class="book-intro">
                 <h2>
@@ -374,7 +400,7 @@ date: 2023-10-01
         <small>Read: 2020, Published: <span itemprop="copyrightYear">2020</span></small>
     </article>
 
-    <article itemscope itemtype="https://schema.org/Book">
+    <article data-genre="Drama" itemscope itemtype="https://schema.org/Book">
         <header>
             <span class="book-intro">
                 <h2>
@@ -390,7 +416,7 @@ date: 2023-10-01
         <small>Read: 2020, Published: <span itemprop="copyrightYear">2020</span></small>
     </article>
 
-    <article itemscope itemtype="https://schema.org/Book">
+    <article data-genre="Drama" itemscope itemtype="https://schema.org/Book">
         <header>
             <span class="book-intro">
                 <h2>
@@ -406,7 +432,7 @@ date: 2023-10-01
         <small>Read: 1995, Published: <span itemprop="copyrightYear">1958</span></small>
     </article>
 
-    <article itemscope itemtype="https://schema.org/Book">
+    <article data-genre="Drama" itemscope itemtype="https://schema.org/Book">
         <header>
             <span class="book-intro">
                 <h2>
@@ -422,7 +448,7 @@ date: 2023-10-01
         <small>Read: 2020, Published: <span itemprop="copyrightYear">2004</span></small>
     </article>
 
-    <article itemscope itemtype="https://schema.org/Book">
+    <article data-genre="Drama" itemscope itemtype="https://schema.org/Book">
         <header>
             <span class="book-intro">
                 <h2>
@@ -438,7 +464,7 @@ date: 2023-10-01
         <small>Read: 2022, Published: <span itemprop="copyrightYear">2021</span><br /><a href="https://www.benningtonbanner.com/the-most-costly-journey-illustrates-the-trials-triumphs-of-vermonts-migrant-farmworkers/article_4f27a3b2-f3fc-11eb-96e6-07e483c00a54.html">Legit source to learn more</a></small>
     </article>
 
-    <article itemscope itemtype="https://schema.org/Book">
+    <article data-genre="Drama" itemscope itemtype="https://schema.org/Book">
         <header>
             <span class="book-intro">
                 <h2>
@@ -454,7 +480,7 @@ date: 2023-10-01
         <small>Read: 2020, Published: <span itemprop="copyrightYear">2016</span></small>
     </article>
 
-    <article itemscope itemtype="https://schema.org/Book">
+    <article data-genre="Drama" itemscope itemtype="https://schema.org/Book">
         <header>
             <span class="book-intro">
                 <h2>
@@ -470,7 +496,7 @@ date: 2023-10-01
         <small>Read: 2020, Published: <span itemprop="copyrightYear">2009</span></small>
     </article>
 
-    <article itemscope itemtype="https://schema.org/Book">
+    <article data-genre="Drama" itemscope itemtype="https://schema.org/Book">
         <header>
             <span class="book-intro">
                 <h2>
@@ -486,7 +512,7 @@ date: 2023-10-01
         <small>Read: 2012, Published: <span itemprop="copyrightYear">2012</span></small>
     </article>
 
-    <article itemscope itemtype="https://schema.org/Book">
+    <article data-genre="Drama" itemscope itemtype="https://schema.org/Book">
         <header>
             <span class="book-intro">
                 <h2>
@@ -502,7 +528,7 @@ date: 2023-10-01
         <small>Read: 2001, Published: <span itemprop="copyrightYear">1986</span></small>
     </article>
 
-    <article itemscope itemtype="https://schema.org/Book">
+    <article data-genre="Drama" itemscope itemtype="https://schema.org/Book">
         <header>
             <span class="book-intro">
                 <h2>
@@ -518,7 +544,7 @@ date: 2023-10-01
         <small>Read: 2021, Published: <span itemprop="copyrightYear">2021</span></small>
     </article>
 
-    <article itemscope itemtype="https://schema.org/Book">
+    <article data-genre="Drama" itemscope itemtype="https://schema.org/Book">
         <header>
             <span class="book-intro">
                 <h2>
@@ -534,7 +560,7 @@ date: 2023-10-01
         <small>Read: 2020, Published: <span itemprop="copyrightYear">2020</span></small>
     </article>
 
-    <article itemscope itemtype="https://schema.org/Book">
+    <article data-genre="Drama" itemscope itemtype="https://schema.org/Book">
         <header>
             <span class="book-intro">
                 <h2>
@@ -550,7 +576,7 @@ date: 2023-10-01
         <small>Read: 2023, Published: <span itemprop="copyrightYear">1996</span></small>
     </article>
 
-    <article itemscope itemtype="https://schema.org/Book">
+    <article data-genre="Drama" itemscope itemtype="https://schema.org/Book">
         <header>
             <span class="book-intro">
                 <h2>
@@ -567,8 +593,29 @@ date: 2023-10-01
     </article>
 
 </section>
+<script>
+    const bookList = document.getElementById('bookList');
+const filterOptions = document.getElementById('filterOptions');
 
+filterOptions.addEventListener('change', () => {
+  const filters = [...filterOptions.querySelectorAll('input:checked')].map(checkbox => checkbox.value);
+
+  [...bookList.children].forEach(article => {
+    const articleGenres = article.dataset.genre.toLowerCase();
+    const articleLanguages = article.dataset.language.toLowerCase();
+    const articleFormats = article.dataset.format.toLowerCase();
+
+    const isVisible = filters.every(filter => {
+      return articleGenres.includes(filter) || articleLanguages.includes(filter) || articleFormats.includes(filter);
+    });
+
+    article.style.display = isVisible ? 'block' : 'none';
+  });
+});
+</script>
 <section>
-        <p>I like experimenting with organizing.</p> 
+    <p>I like experimenting with organizing.</p> 
     <p>The plan is to add notes and sorting eventually.</p>
+    <p>And to create a lending library of them.</p>
+    <p>It's still a fringe genre that could benefit from s
 </section>
