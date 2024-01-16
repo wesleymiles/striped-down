@@ -245,10 +245,14 @@ h1 {
   word-wrap: break-word;
   line-height:.9;
   color: var(--text-light);
-  font-variation-settings: 'wdth' 85;
-  font-stretch: 85%;  
+  font-variation-settings: 'wdth' 75;
+  font-stretch: 75%;  
   max-width: 1200px;
 }
+  h1 span {
+    font-weight: 400; 
+  }
+
 
 h2 {
   font-size: 2.5em;
