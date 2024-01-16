@@ -224,7 +224,7 @@ Here’s the process to upgrade a logo:
 I want to be clear that a real logo project involves A LOT of talking with the owner. We want to ensure it communicates the right thing. With this blog post and project I skipped all that in order to give a truncated version of the high-level steps.
 
 </section>
-<section>
+<section class="cta">
 	
 ## What now?
 

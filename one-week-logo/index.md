@@ -28,7 +28,7 @@ tags: design
 
 
 
-<section class="features stretch theme--grey --center"> 
+<section class="features stretch theme--grey --center --curvy"> 
 
   ## A twist on logo creation
 
@@ -102,7 +102,7 @@ tags: design
 
 </section>
 
-<section class="stretch theme--dark --center">
+<section class="stretch theme--dark --center --curvy">
 
  ## Here’s how it works
 
@@ -126,7 +126,7 @@ tags: design
 </section>
 
 
-<section class="logo-wall --smaller stretch theme--grey">
+<section class="logo-wall stretch">
   <span class="callout --alternate">
     <p>more logos!</p>
   </span>
@@ -148,7 +148,7 @@ tags: design
 
 <section>
 
-    ## FAQ
+  ## FAQ
 
     <details>
       <summary> Why not 2 weeks? </summary>
@@ -204,7 +204,7 @@ tags: design
 
 </section>
 
- <section class="cta">
+ <section class="cta stretch">
 
   ## Schedule a quick call
 
