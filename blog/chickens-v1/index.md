@@ -1,7 +1,7 @@
 ---
 layout: layout.liquid
 title: Chickens, part 1
-description: My experience in doing design work in the Gift economy
+description: My anxiety-ridden adventure of what they call the gateway farm animal
 tags: post
 date: 2024-02-09
 ---
