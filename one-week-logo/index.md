@@ -9,7 +9,7 @@ tags: design
 
   <img src="/img/speedy/logo-in-a-week.svg" alt="Logo in a week - currently available for Vermont folks only" />
   
-### Skip the agency. Skip the meetings. <br /> Get a new hand-made logo or redesign an old one with limited back and forths.
+## Skip the agency. <br /> <br /> Skip the meetings. <br /> <br /> Get a new hand-made logo or redesign an old one with limited back and forths.
 
 </section>
 
@@ -204,7 +204,7 @@ tags: design
 
 </section>
 
- <section class="cta stretch">
+ <section class="cta stretch theme--dark">
 
   ## Schedule a quick call
 
@@ -213,7 +213,9 @@ tags: design
   <div class="button">
     <a href="https://calendly.com/vermont-logo/30min?month=2023-11">Schedule a no-pressure, informational 15 minute call</a>
   </div>
-   Or <a href="mailto:hi@wescarr.com">email me</a>
+  
+  Or
+   <a href="mailto:hi@wescarr.com">email me</a>
 
 </section>
 <script src="/js/animate.js" type="text/javascript"></script>
