@@ -1,6 +1,16 @@
 
 module.exports = function(eleventyConfig) {
 
+  // making dates more readable
+  // Import prior to `module.exports` within `.eleventy.js`
+  const { DateTime } = require("luxon");
+
+  eleventyConfig.addFilter("postDate", (dateObj) => {  
+    return DateTime.fromJSDate(dateObj).toLocaleString(DateTime.DATE_MED);
+  });
+
+
+
 
   // Copy the `img` and `css` folders to the output
   eleventyConfig.addPassthroughCopy("img");
@@ -14,7 +24,7 @@ module.exports = function(eleventyConfig) {
 
   eleventyConfig.addPassthroughCopy("js/script.js");
 
-  // Maintain image directories manually for now 😡
+  // Maintain image directories manually for now 😡 
   // eleventyConfig.addPassthroughCopy({ "project/wobblies/img": "project/wobblies/img" }); 
   eleventyConfig.addPassthroughCopy({ "blog/chickens-v1/img": "blog/chickens-v1/img" }); 
   eleventyConfig.addPassthroughCopy({ "blog/local-logos/img": "blog/local-logos/img" }); 

@@ -3,7 +3,7 @@ layout: layout.liquid
 title: Revamping 2 local logos
 description: I redesigned the logos of three local businesses without their input or consent
 tags: post
-date: 2023-08-04
+date: 2023-08-04 
 ---
 
 
