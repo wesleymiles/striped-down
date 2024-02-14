@@ -316,10 +316,10 @@ small {
 @media only screen and (max-width: 800px) {
 
   html { font-size: 20px; }
-/*  h1 { font-size: 3em; }*/
-  h2 { font-size: 1.5em; }
-  h3 { font-size: 1.2em; }
-  h4 { font-size: 1.1em; }
+  h1 { font-size: 14.5vw; }
+  h2 { font-size: 1.3em; }
+  h3 { font-size: 1.1em; }
+  h4 { font-size: 1em; }
   body { padding:0 }
   footer { padding: 1em;}
   blockquote p {
@@ -382,11 +382,11 @@ div.button a:link {
     }
 
 
-    body > main > section:last-of-type {
+/*    body > main > section:last-of-type {
     border-radius: var(--curve);
     overflow: hidden;
     background: var(--texture);  
-    }
+    }*/
 
 
 body > main > section.cta.theme--dark {
@@ -448,36 +448,13 @@ header.mast {
   text-align: center;
 }
 
-
-/* todo: CLEAN UP INNER CONTENT BOX */
-
-main.content-primary,
-/*.content-inner*/
-{
-  position: relative;
-  max-width: 800px;
+.side-by-side {
+  display: flex;
 }
-  .content-inner.--right {
-    padding-left: 20%;
-    padding-right: 20%;
-    max-width: inherit;
-  }
 
-
-  .side-by-side {
-    display: flex;
-  }
-/*  .content-inner .break-out--left {
-    margin-right: -800px;
-  }*/
-
-  .--center {
-    text-align: center;
-  }
-
-/*    .content-inner:last-child{
-      padding-bottom: 0;
-    }*/
+.--center {
+  text-align: center;
+}
 
 .cols {
   display: flex;
@@ -544,21 +521,17 @@ header nav {
   body > main > section.stretch,
   body > main > section.hero { padding: 3em 5%}
 
-  .content-inner.--right,
-  .content-inner.--left {
-    margin-right: 0;
-    margin-left: 0;
-    padding-right: 0;
-    padding-left: 0;
-    width: 100%;
+  section.hero { 
+    margin:8px;
   }
-/*    .content-inner {
-      margin-bottom: 3em;
-    }*/
 
   .cols > * {
     flex: inherit;
     margin-top: 1em;
+  }
+
+ .--curvy {
+    border-radius: 0
   }
 
 }
@@ -768,7 +741,9 @@ body > main > section.hero {
     max-width: 855px;
     margin: 0 auto;
     padding: calc(var(--gap) * 3) 0;
+/*    color: var(--text-light);*/
   }
+
   .hero time {
     text-align: center;
     display: block;
@@ -800,6 +775,11 @@ body > main > section.hero {
     .homepage h1 { margin: 0; }
 
     .hero h2 { padding-left:0;padding-right:0 }
+    .hero h2,.hero h3,.hero p { 
+      padding-top: inherit;
+      padding-bottom: 0;
+    }
+
 
   }
 
@@ -845,15 +825,6 @@ body.work section[class^="--"] {
   border-radius: var(--curve);
   margin-bottom: var(--gap);
 }
-
-/*  body.work section[class^="--"] div.button,
-  body.work section[class^="--"] p,
-  body.work section[class^="--"] picture,
-    body.work section[class^="--"] h2 {
-    margin-right: auto;
-    margin-left: auto;
-    max-width: 800px;
-  }*/
 
   body.web section div.button a:visited,
   body.web section div.button a:link {
@@ -906,7 +877,7 @@ body.work section[class^="--"] {
     background-color: #FFF1A7;
   }
   body.work section[class^="--"].--bg_crown {
-/*    background-color: #f8d788;*/
+    background-color: #f8d788;
   }
   body.work section[class^="--"].--bg_ccs {
     background-color: #B43817;
@@ -959,6 +930,9 @@ body.work section[class^="--"] {
     body.Web section[class^="--"] {
       padding-top: 0;
       padding-bottom: 2em;
+    }
+    body.work section[class^="--"] {
+      border-radius: 0;
     }
 
   }
@@ -1188,7 +1162,7 @@ section.library {
       }
 
 
-  @media only screen and (max-width: 768px) {
+  @media only screen and (max-width: 800px) {
     section.library { grid-template-columns: 1fr; }
       section.library article picture { margin: 0 auto;  }
         section.library article picture img { height: 200px; min-width: 150px;   }
@@ -1238,60 +1212,30 @@ body.homepage .hero  {
 }
 
 
-  body.homepage .hero h2 {
-    margin-top: var(--gap);
-    color: var(--text-light);
-  }
-
-
-
-/*body.homepage section.about div {
-  display:flex;
-  gap: 2em;
-}*/
-
   /* putting my photo in a croppable box that matches the content height */
   body.homepage section.about figure,
   body.homepage section.about picture {
     display: flex;
     z-index: 2;
   }
-    body.homepage section.about picture img { 
+    body.homepage section.about picture img {
       object-fit: cover; 
     }
 
-
-body.homepage section.services {
-  background: url(/img/bg-mount.svg) no-repeat;
-  background-repeat: no-repeat;
-  background-position: bottom right; 
-}
-
-  /*  make the text readable on top of an inverse background, if needed  */
-  body.homepage section.services p {
-    mix-blend-mode: difference;
-    color: rgb(255, 255, 255); 
-  }
-
   body.homepage section.work-status {
     border-radius: var(--curve);
+}
 
-  /* dark, i mean a really dark background */
-/*    background-color: #153a55*/
-  }
 
   @media only screen and (max-width: 800px) {
+    
     body.homepage .hero  {
-      margin-bottom: -200px;
+      margin-bottom: -110px;
       padding-bottom: 100px;
     }
 
 
-/*    h1 span { margin-top: inherit }*/
-/*    body.homepage section.services { background-position-x: 15em;  }*/
-
-}
-
+  }
 
 
 
@@ -1388,7 +1332,7 @@ body.homepage section.services {
     }
 
 /* Adjustments for larger screens */
-@media (min-width: 768px) {
+@media (min-width: 800px) {
 
   .homepage .gallery-container {  margin-top: calc(var(--gap)); }
   .gallery-item {  flex: 0 0 33.3333%;   }

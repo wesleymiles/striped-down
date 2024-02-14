@@ -1,6 +1,6 @@
 ---
 layout: layout.liquid
-title: Wes’s one week logo AKA speedy-brand
+title: Logo creation in a week, speedy-brand
 description: sdfsdfdsf 
 tags: design
 ---
@@ -9,7 +9,7 @@ tags: design
 
   <img src="/img/speedy/logo-in-a-week.svg" alt="Logo in a week - currently available for Vermont folks only" />
   
-## Skip the agency. <br /> <br /> Skip the meetings. <br /> <br /> Get a new hand-made logo or redesign an old one with limited back and forths.
+## Skip the agency. <br /> <br /> Skip the meetings. <br /> <br /> Get a fresh logo or touch up an old one with limited back and forths.
 
 </section>
 
@@ -61,7 +61,7 @@ tags: design
   
   <ul class="checks">
     <li>You live in Vermont.</li>
-    <li>You’re open to working in the Gift economy.</li>
+    <li>You’re open to working in the gift economy.</li>
     <li>You’re ready, or can be soon, to get a new logo.</li>
   </ul>
 
@@ -79,7 +79,7 @@ tags: design
   
   ## Cost
   
-  This service follows the gift-economy model.
+  This service follows the gift economy model.
   
   Meaning, I’m prepared to give you this as a gift and you are welcome at the end of it to pay me, in money or in some other way.
   
