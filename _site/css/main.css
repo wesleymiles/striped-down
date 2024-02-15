@@ -39,7 +39,7 @@ body {
   --bg-dark: #005275;
   --highlight: rgba(255, 255, 255, .3);
   --bg-light: #FAFAF7;
-  --gapSm: 20px;
+  --gapSm: 21px;
   --sans-serif: 'Bricolage Grotesque','Arial Narrow', Impact, Bahnschrift, 'DIN Alternate', 'Franklin Gothic Medium', 'Nimbus Sans Narrow', sans-serif-condensed, sans-serif;
   --gap: 1.5rem;
   --texture: #F2F0ED url(/img/noise.png)x repeat;
@@ -316,7 +316,7 @@ small {
 
 @media only screen and (max-width: 800px) {
 
-  html { font-size: 20px; }
+  html { font-size: 18px; }
   h1 { font-size: 14.5vw; }
   h2 { font-size: 1.3em; }
   h3 { font-size: 1.1em; }
@@ -1376,4 +1376,161 @@ body.homepage .hero  {
   .homepage .gallery-container {  margin-top: calc(var(--gap)); }
   .gallery-item {  flex: 0 0 33.3333%;   }
 }
+
+
+
+/* Timeline styles - for wobblies page only for now
+-------------------------------------------------- */
+
+.tl ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    list-style-type: none;
+    padding: 0;
+}
+
+  .tl ul li {
+      position: relative;
+      flex-grow: 1;
+      flex-basis: auto;
+      border-bottom: 2px solid #EAE0CB;
+      margin-top: 20px;
+      padding-bottom: 35px;
+      padding-top: 20px;
+  }
+
+  .tl-content strong {
+      font-family: var(--sans-serif);
+      background-color: #FFFADB;
+      padding: 3px;
+  }
+
+
+@media screen and (min-width: 45em) {
+    .tl-content {
+        max-width: 350px;
+        padding: 0 10px 10px;
+    }
+
+    .tl ul li {
+        font-size: .8em;
+    }
+
+    .tl .tl-intro img {
+        max-width: 300px;
+        margin-right: 10px;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    .tl-intro .tl-content {
+        max-width: 400px;
+    }
+
+    .tl-intro .tl-year {
+        left: 128px;
+    }
+
+}
+
+p.tl-year {
+    border: 2px solid #EAE0CB;
+    background: #fff;
+    padding: 1px 6px;
+    font-size: 16px;
+    position: absolute;
+    bottom: -35px;
+    left: 0;
+    width: 50px;
+    text-align: center;
+    font-family: var(--sans-serif);
+}
+
+@media only screen and (max-width: 800px) {
+
+    p.tl-year { bottom: -32px; }
+    body > main > section.stretch--bg { padding-left: 3%;padding-right:3% }
+    
+}
+
+p.tl-year:before {
+    content: '';
+    height: 21px;
+    width: 2px;
+    background-color: #EAE0CB;
+    left: 29px;
+    position: absolute;
+    bottom: 26px;
+}
+
+.tl img {
+    max-width: 85%;
+}
+
+.tl blockquote p {
+    margin: 0 0 1em;
+    font-size: 1.1em;
+    padding-left: 0;
+    border: none;
+}
+
+.tl .tl-text {
+    margin-top: 10px;
+}
+
+/* footnotes */
+.footnotes li {
+    font-size: .8em;
+    transition: opacity 0.3s ease-in-out;
+}
+    .footnotes ol {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-column-gap: 10%;
+    }
+        .footnotes li:target {
+            display: block;
+            opacity: 1;
+            background-color: #002a3e;
+        }
+
+    /* Initializing a `footnotes` counter on the wrapper   */
+    .tl {
+        counter-reset: footnotes;
+    }
+
+    /*Inline footnotes references
+         * 1. Increment the counter at each new reference
+         * 2. Reset link styles to make it appear like regular text */
+
+    [aria-describedby="footnote-label"] {
+        counter-increment: footnotes;
+    }
+
+    /**
+         * Actual numbered references
+         * 1. Display the current state of the counter (e.g. `[1]`)
+         * 2. Align text as superscript
+         * 3. Make the number smaller (since it's superscript)
+         * 4. Slightly offset the number from the text
+         * 5. Reset link styles on the number to show it's usable */
+        
+    [aria-describedby="footnote-label"]::after {
+        content: '['counter(footnotes) ']';
+        text-decoration: underline;
+        font-size: 12px;
+        cursor: pointer;
+    }
+
+    /* Resetting the default focused styles on the number*/
+    [aria-describedby="footnote-label"]:focus::after {
+        outline: thin dotted;
+        outline-offset: 2px;
+    }
+
+    [aria-label="Back to content"] {
+        font-size: .8em;
+    }
 

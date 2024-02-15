@@ -1,0 +1,75 @@
+---
+layout: layout.liquid
+title: Mt Waumbek, 2014, the best sledding of my lif
+description: A timeline of the prominent figures from the IWW based on the Wobblies! graphic novel
+tags: post, trip-report
+date: 2015-04-04
+---
+
+ 
+Mt Waumbek: the best sledding of my life</h1>
+
+<div id="content" class="site-content torso container">
+<div class="row">
+
+  <div class="hike-details">
+	<h3>. 26° on top</h3>
+
+    <ul>
+      <li>March 23, 2014</li>
+      <li>Elevation: 4,006 feet</li>
+      <li>Distance round trip: 7.2 miles</li>
+      <li>Time up: 3 hours</li>
+      <li>Time down: 2 hours</li>
+    </ul>
+  </div>
+       
+  <div class="eight columns omega">
+    <img src="https://web.archive.org/web/20150404032626im_/http://4000footers.com/map%20waumbek2.jpg" title="via: http://4000footers.com/waumbek.shtml">
+<p class="caption">the route</p>
+  </div>
+  <br class="clear">
+
+  <div class="thirteen offset-by-three columns">
+<hr>
+  <h3>Real quick</h3>
+  <p>A thing to note, the trailhead according to google and the trailhead parking lot are different. An 8 minute walk and a steep road and/or driveway different. Complications with the meeting place ensued. </p>
+  <h3>Ascending</h3>
+  <p>The starr king trail is 2.6 miles and is mostly a gradual slope. The forest seems young and the trees are very sparse, allowing you to see quite a ways into the wood. I prefer a fast, steep hike, covering a lot of elevation, like the last stretch of mt hancock. Sprints over marathons. Trudge seems like a good word to use here. Yes. I know, it’ll get easier with practice and conditioning.</p>
+  <p>There are a number of photographable sites along the hike up. My camera is new and I need to find a comfortable method of taking it out quickly and safely. A young cowboy with a new 6-shooter. Anxious and excited. Perfecting the draw technique. I managed to bumble a few shots in.</p>
+
+<p>
+<a href="https://web.archive.org/web/20150404032626/https://www.flickr.com/photos/wesleymiles/13394155234" title="4,006-ish', pliny range by Wesley Carr, on Flickr"><img src="https://web.archive.org/web/20150404032626im_/https://farm4.staticflickr.com/3665/13394155234_a022fbabb8_c.jpg" alt="4,006-ish', pliny range" width="800" height="600"></a>
+</p>
+<p class="caption">pine detail</p>
+
+  <p>The weather got increasingly worse as we continued toward mt starr king, the first peak. The fear crept in heavy as we ascended to ¾ of the way up. It’s a distance that cannot be descended quickly. We were invested. It was the cloudiest, snowiest, snowiest, windiest hike I’ve witnessed. With five winter hikes under my belt, I had apparently been blessed with good weather so far. A series of what-ifs sank in. What if we slip we haven’t seen anyone yet and I don’t know if the people we told about our whereabouts would do anything quickly enough. Would they realize the haste? Can you run in this mess? Maybe a seasoned rescuer who has the endurance that I don’t could cover ground well enough to get to the scene. Conversation quelled these some. </p>
+  <h3>The top</h3>
+  <p>Between the peaks is one mile and mostly flat. However, due to the conditions the trail was mostly blown in. Just like that, snowshoes were mentally added to the list of gear to get. </p>
+  <p>“Trail-breakers” were also added to the list of those who previously went unappreciated. What a task!</p>
+  <p>On starr king, we did cross paths with two groups. Exchanged the photo favor and bid farewells.</p>
+
+<p>
+<a href="https://web.archive.org/web/20150404032626/https://www.flickr.com/photos/wesleymiles/13393825053" title="view from starr king summit by Wesley Carr, on Flickr"><img src="https://web.archive.org/web/20150404032626im_/https://farm8.staticflickr.com/7378/13393825053_8d4bd4c505_c.jpg" alt="view from starr king summit" width="800" height="600"></a>
+</p>
+<p class="caption">view from starr king summit</p>
+
+<p><a href="https://web.archive.org/web/20150404032626/https://www.flickr.com/photos/wesleymiles/13393819603" title="mt waumbek summit / limoncello by Wesley Carr, on Flickr"><img src="https://web.archive.org/web/20150404032626im_/https://farm8.staticflickr.com/7326/13393819603_91b06252ed_c.jpg" alt="mt waumbek summit / limoncello" width="800" height="600"></a></p>
+<p class="caption">mt waumbek summit / limoncello</p>
+
+  <h3>Two reasons for spectacular sledding </h3>
+  <h4>1. The grade</h4>
+  <p>The annoyance on the way up was absolutely perfect for coming down on my trusty sled. Slow, controllable, enough to let gravity do the work. </p>
+  <p>Prior sledding trips I’ve questioned the efficiency of sledding down. On a steeper route, you’d speed along for a sprint, fall over on the trail or off the edge, giggle / hee-haw, get back up and do it again. Tested by other hikers walking behind, as a constant, the “sprint stop sprint stop” method equalled their pace. The slow sled-run is the way to go. Efficiency was not in question. It saved many, many, many minutes and muscles.</p>
+  <h4>2. The forest</h4>
+  <p>My last (4) sledding endeavors had the trees tightly edge the trail, like marblehead’s cobbled roads, a hard bumper. If one were to go off of the trail, they would likely bump one. On waumbek, the forest life was not the edge, the path was. This allowed for the bobsled effect, smooth corners, leaning and all. Bliss. Joy. And enough freedom to pull out my camera for a pic.</p>
+  <p>It should also be noted that the distance we could see ahead gave extra confidence to pull up on the breaks and open her up. No blind turns. </p>
+
+  <h3>Live action</h3>
+  <iframe src="//web.archive.org/web/20150404032626if_/http://www.youtube.com/embed/jLJlA8gfIXc?rel=0" allowfullscreen="" data-ruffle-polyfilled="" width="800" height="600" frameborder="0"></iframe>
+
+<p><a href="https://web.archive.org/web/20150404032626/https://www.flickr.com/photos/wesleymiles/13393686495" title="north from tripoli road by Wesley Carr, on Flickr"><img src="https://web.archive.org/web/20150404032626im_/https://farm4.staticflickr.com/3716/13393686495_abcb83ceae_c.jpg" alt="north from tripoli road" width="800" height="476"></a></p>
+<p class="caption">the drive home</p>
+</div></div></div>
+
+    	
