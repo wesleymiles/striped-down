@@ -16,7 +16,7 @@ description: Some writings about design, music, and planting
 		{%- for post in collections.post reversed -%}
 			<li>
 				<article class="archive-entry">
-				  <h3><a href="{{ post.url }}">{{ post.data.title }}</a></h3>
+				  <h4><a href="{{ post.url }}">{{ post.data.title }}</a></h4>
 				  <time class="meta-date" datetime="{{ post.data.date | postDate }}">{{ post.date | postDate }}</time>
 				  <p><span class="excerpt">{{ post.data.description }}</span></p>
 				</article>

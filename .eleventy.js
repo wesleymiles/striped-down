@@ -21,7 +21,6 @@ module.exports = function(eleventyConfig) {
   //attempting to pass through image files and maintain the dir structure
   eleventyConfig.addPassthroughCopy("*/**.{jpg,png,webp,gif,svg,json}");
 
-
   eleventyConfig.addPassthroughCopy("js/script.js");
 
   // Maintain image directories manually for now 😡 

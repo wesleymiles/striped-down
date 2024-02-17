@@ -2,7 +2,7 @@
 layout: layout.liquid
 title: Why I Don’t Have Set Prices - A Different Way to Freelance
 description: ------
-tags: post
+tags: posty
 date: 2016-12-20
 ---
 

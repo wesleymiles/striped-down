@@ -1,16 +1,21 @@
 ---
 layout: layout.liquid
-title: Mt Waumbek, 2014, the best sledding of my lif
+title: Mt Waumbek, 2014, the best sledding of my life
 description: A timeline of the prominent figures from the IWW based on the Wobblies! graphic novel
-tags: post, trip-report
+tags:
+  - posty
+  - trip report
 date: 2015-04-04
 ---
 
- 
-Mt Waumbek: the best sledding of my life</h1>
+<section class="hero">
 
-<div id="content" class="site-content torso container">
-<div class="row">
+<h1>Mt Waumbek: the best sledding of my life</h1>
+
+</section>
+
+<section>
+
 
   <div class="hike-details">
 	<h3>. 26° on top</h3>
@@ -25,7 +30,7 @@ Mt Waumbek: the best sledding of my life</h1>
   </div>
        
   <div class="eight columns omega">
-    <img src="https://web.archive.org/web/20150404032626im_/http://4000footers.com/map%20waumbek2.jpg" title="via: http://4000footers.com/waumbek.shtml">
+    <img src="http://4000footers.com/map%20waumbek2.jpg" title="via: http://4000footers.com/waumbek.shtml">
 <p class="caption">the route</p>
   </div>
   <br class="clear">
@@ -39,7 +44,7 @@ Mt Waumbek: the best sledding of my life</h1>
   <p>There are a number of photographable sites along the hike up. My camera is new and I need to find a comfortable method of taking it out quickly and safely. A young cowboy with a new 6-shooter. Anxious and excited. Perfecting the draw technique. I managed to bumble a few shots in.</p>
 
 <p>
-<a href="https://web.archive.org/web/20150404032626/https://www.flickr.com/photos/wesleymiles/13394155234" title="4,006-ish', pliny range by Wesley Carr, on Flickr"><img src="https://web.archive.org/web/20150404032626im_/https://farm4.staticflickr.com/3665/13394155234_a022fbabb8_c.jpg" alt="4,006-ish', pliny range" width="800" height="600"></a>
+<a href="https://www.flickr.com/photos/wesleymiles/13394155234" title="4,006-ish', pliny range by Wesley Carr, on Flickr"><img src="https://farm4.staticflickr.com/3665/13394155234_a022fbabb8_c.jpg" alt="4,006-ish', pliny range" width="800" height="600"></a>
 </p>
 <p class="caption">pine detail</p>
 
@@ -50,11 +55,11 @@ Mt Waumbek: the best sledding of my life</h1>
   <p>On starr king, we did cross paths with two groups. Exchanged the photo favor and bid farewells.</p>
 
 <p>
-<a href="https://web.archive.org/web/20150404032626/https://www.flickr.com/photos/wesleymiles/13393825053" title="view from starr king summit by Wesley Carr, on Flickr"><img src="https://web.archive.org/web/20150404032626im_/https://farm8.staticflickr.com/7378/13393825053_8d4bd4c505_c.jpg" alt="view from starr king summit" width="800" height="600"></a>
+<a href="https://www.flickr.com/photos/wesleymiles/13393825053" title="view from starr king summit by Wesley Carr, on Flickr"><img src="https://farm8.staticflickr.com/7378/13393825053_8d4bd4c505_c.jpg" alt="view from starr king summit" width="800" height="600"></a>
 </p>
 <p class="caption">view from starr king summit</p>
 
-<p><a href="https://web.archive.org/web/20150404032626/https://www.flickr.com/photos/wesleymiles/13393819603" title="mt waumbek summit / limoncello by Wesley Carr, on Flickr"><img src="https://web.archive.org/web/20150404032626im_/https://farm8.staticflickr.com/7326/13393819603_91b06252ed_c.jpg" alt="mt waumbek summit / limoncello" width="800" height="600"></a></p>
+<p><a href="https://www.flickr.com/photos/wesleymiles/13393819603" title="mt waumbek summit / limoncello by Wesley Carr, on Flickr"><img src="https://farm8.staticflickr.com/7326/13393819603_91b06252ed_c.jpg" alt="mt waumbek summit / limoncello" width="800" height="600"></a></p>
 <p class="caption">mt waumbek summit / limoncello</p>
 
   <h3>Two reasons for spectacular sledding </h3>
@@ -66,9 +71,9 @@ Mt Waumbek: the best sledding of my life</h1>
   <p>It should also be noted that the distance we could see ahead gave extra confidence to pull up on the breaks and open her up. No blind turns. </p>
 
   <h3>Live action</h3>
-  <iframe src="//web.archive.org/web/20150404032626if_/http://www.youtube.com/embed/jLJlA8gfIXc?rel=0" allowfullscreen="" data-ruffle-polyfilled="" width="800" height="600" frameborder="0"></iframe>
+  <iframe src="http://www.youtube.com/embed/jLJlA8gfIXc?rel=0" allowfullscreen="" data-ruffle-polyfilled="" width="800" height="600" frameborder="0"></iframe>
 
-<p><a href="https://web.archive.org/web/20150404032626/https://www.flickr.com/photos/wesleymiles/13393686495" title="north from tripoli road by Wesley Carr, on Flickr"><img src="https://web.archive.org/web/20150404032626im_/https://farm4.staticflickr.com/3716/13393686495_abcb83ceae_c.jpg" alt="north from tripoli road" width="800" height="476"></a></p>
+<p><a href="https://www.flickr.com/photos/wesleymiles/13393686495" title="north from tripoli road by Wesley Carr, on Flickr"><img src="https://farm4.staticflickr.com/3716/13393686495_abcb83ceae_c.jpg" alt="north from tripoli road" width="800" height="476"></a></p>
 <p class="caption">the drive home</p>
 </div></div></div>
 

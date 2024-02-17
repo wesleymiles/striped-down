@@ -28,7 +28,7 @@ tags: design
 
 
 
-<section class="features stretch theme--grey --center --curvy"> 
+<section class="features stretch theme--emp --center --curvy"> 
 
   ## A twist on logo creation
 

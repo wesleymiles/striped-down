@@ -2,7 +2,7 @@
 layout: layout.liquid
 title: Assessing intentions and systems as your company grows
 description: My first major contribution to Underhill, VT
-tags: post
+tags: posty
 date: 2016-04-12
 ---
 

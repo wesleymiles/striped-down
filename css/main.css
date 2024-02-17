@@ -8,7 +8,7 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
 }
 
 html {
-  font-size: 20px;
+  font-size: 21px;
   line-height: 1.6;
   color: #003B57;
   -webkit-font-smoothing: antialiased;
@@ -110,7 +110,7 @@ blockquote p {
   font-style: italic;
   margin-bottom: 3em;
   margin-top: 3em;
-  border-left: 2px solid #62a87c;
+  border-left: var(--border);
   padding-left: 1.6em;
 }
 
@@ -141,9 +141,17 @@ img {
 figure {
   margin-bottom: 2em;
 }
+  figure.aside--right {
+    width: 50%;
+    float: right;
+    margin: var(--gapSm) -5em var(--gapSm) var(--gapSm);
+    outline: var(--border);
+    padding: var(--gapSm);
+    border-radius: var(--curve);
+    background-color: #fff;
+  }
 
 picture {
-/*  padding-top: 2em; */
   display:block;
 }
 
@@ -160,7 +168,7 @@ picture {
     font-size: .9em;
     font-style: italic;
     text-align: right;
-/*    padding: 1em 0 2em;*/
+    line-height: 1.1;
    }
 
 
@@ -169,6 +177,15 @@ picture {
   figure.full {
     margin: initial;
     padding: initial;
+  }
+
+  figure.aside--right {
+    margin: 0 0 3em 0;
+    padding: initial;
+    width: initial;
+    border: initial;
+    outline: initial;
+    background-color: initial;
   }
 
 }
@@ -301,7 +318,7 @@ h3 {
 h3:not(:first-child) {  margin-top: 2em; }
 
 h4 {
-  font-size: 1.2em;
+  font-size: 1.1em;
   margin-bottom: .5em;
   margin-top: 2em;
 }
@@ -373,6 +390,7 @@ div.button a:link {
     border-radius: var(--curve) var(--curve);
     outline-offset: calc(var(--gap)*-1);
     outline: 1px solid var(--highlight);
+    background: linear-gradient(90deg, rgba(255,255,255,0) 15%, rgba(255,255,255,1) 15%, rgba(255,255,255,1) 96%, rgba(255,255,255,0) 96%);
   }
 
     /* set every section to have a small column in the middle  */
@@ -398,14 +416,11 @@ body > main > section.cta.theme--dark {
   background-color: #285E50;
 }
 
-
-
   body > main > section > p:last-child {
     margin-bottom: 0;
   }
 
-/* override that small middle column for sections that need a colored background */
-
+  /* override that small middle column for sections that need a colored background */
   body > main > section.stretch,
   body > main > section.hero {
     padding: calc(var(--gap) * 3) calc(var(--contentWidth) / 3);
@@ -416,14 +431,14 @@ body > main > section.cta.theme--dark {
   }
 
 
+
+
   body.work section[class^="--"] > * {
     max-width: 855px;
     margin-left: auto;
     margin-right: auto;
   }
 
-    body > main > section.stretch > * {
-  }
 
 /* helper classes */
  .--curvy {
@@ -510,10 +525,12 @@ header nav {
 
 
 
-
 @media only screen and (max-width: 800px) {
 
-  body > main { outline-offset: -.75em;}
+  body > main {
+    outline-offset: -.75em;
+    background: none;
+  }
 
   body > main > section { padding: 3em 5%;  }
   body > main > section.cta { padding-left: 5%; }
@@ -690,9 +707,8 @@ body > footer img.pine:hover {
   background-color: #ffffff
 }
 
-.theme--grey {
-/*  background-color: #eeeeee;*/
-  background: var(--texture);
+.theme--emp {
+  background-color: #fffadb;
 }
 
 .theme--dark {
@@ -884,6 +900,8 @@ body.work section[class^="--"] {
     box-shadow: none;
   }
 
+
+  /*  ims screenshot backgrounds */
   body.work section[class^="--"].--bg_rh {
     background-color: #222222;
   }
@@ -903,7 +921,10 @@ body.work section[class^="--"] {
     background-color: #42cbce;
   }
   body.work section[class^="--"].--bg_altoff {
-    background-color: #f8f8f8;
+    background-color: #f2f0ed;
+  }
+  body.work section[class^="--"].--bg_dehart {
+    background-color: #e1e1e1;
   }
   body.work section[class^="--"].--bg_neyer {
     background-color: #2732a0;
@@ -933,23 +954,22 @@ body.work section[class^="--"] {
   body.work section[class^="--"].--bg_marblehead {
     background-color: #D6E9FF;
   }
-  body.work section[class^="--"].--charter {
+  body.work section[class^="--"].--bg_charter {
     background-color: #CCD52C;
   }
-  body.work section[class^="--"].--natals {
+  body.work section[class^="--"].--bg_natals {
     background-color: #2f938c;
   }
   body.work section[class^="--"].--bg_saddleback {
     background-color:#003B57
   }
-  body.work section[class^="--"].--thayer {
-    background-color: #fff;
-  }
-  
+
+
+
   body.Branding section[class^="--"]  {
-/*    text-align: center;*/
     padding:10em 10% 10em 5%;
   }
+
     body.Branding section[class^="--"] img {
     box-shadow: none;
     max-width: 300px
@@ -1059,6 +1079,7 @@ span.callout {
   align-items: center;
   flex-wrap: wrap;
   position: relative;
+  background-color: #fff;
 }
 
 .speedy-brand .logo-wall img {
@@ -1226,7 +1247,7 @@ body.post img {
   flex-wrap: wrap;
   justify-content: space-between;
   border-bottom: var(--border);
-  margin-bottom: 4em;
+  margin-bottom: 2em;
   padding-bottom: 1em;
 }
   .meta-date {
@@ -1236,8 +1257,9 @@ body.post img {
   .archive-entry p {
     max-width: 30em;
   }
-    .archive-entry h3 {
+    .archive-entry h4 {
     min-width: 20em;
+    margin-top: 0;
   }
 
 

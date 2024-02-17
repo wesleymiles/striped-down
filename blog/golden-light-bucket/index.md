@@ -2,7 +2,7 @@
 layout: layout.liquid
 title: Golden Light Bucket
 description: 
-tags: post
+tags: posty
 date: 2016-12-20
 ---
 
