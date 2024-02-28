@@ -169,6 +169,7 @@ picture {
     font-style: italic;
     text-align: right;
     line-height: 1.1;
+    margin: var(--gapSm) 0;
    }
 
 
@@ -274,7 +275,6 @@ h1 {
   font-weight: 600;
   letter-spacing: inherit;
   font-size: inherit;
-
 
   font-size: 13.4vw;
   text-align: center;
@@ -398,6 +398,8 @@ div.button a:link {
       margin: 0 auto;
       padding: calc(var(--gap) * 3) var(--contentWidth);
       position: relative;
+      /*  ensure this, as a parent, doesn't let any children overflow */
+      overflow: auto;
     }
 
 
@@ -421,16 +423,25 @@ body > main > section.cta.theme--dark {
   }
 
   /* override that small middle column for sections that need a colored background */
-  body > main > section.stretch,
   body > main > section.hero {
     padding: calc(var(--gap) * 3) calc(var(--contentWidth) / 3);
   }
+
+  body > main > section.stretch {
+    padding: 0 calc(var(--contentWidth) / 3);
+  }
+
   body > main > section.stretch--bg {
     padding-left: 0; 
     padding-right: 0; 
   }
 
 
+/* 3 columns of photos in a stretched section */
+
+body > main > section.stretch .masonry {
+
+}
 
 
   body.work section[class^="--"] > * {
@@ -565,9 +576,14 @@ nav {
   justify-content: space-between;
   flex-wrap: wrap;
 /*  padding-left: 5%;*/
-  font-family: var(--sans-serif);
 /*  padding-right: 2%;*/
 }
+
+nav p,
+nav li {
+  font-family: var(--sans-serif);
+}
+
 
   nav .nav-menu {
     display: flex;
@@ -856,6 +872,10 @@ body > main > section.hero {
   .Blog .hero { background-image: url(/img/bg-trees.jpg); }
   .Research .hero { background-image: url(/img/bg-fence.jpg); }
 
+  /* option to override pre-made photos with css-based filters */
+  .Blog .hero. {
+      
+  }
 
 
 
@@ -1075,7 +1095,7 @@ span.callout {
 
 .logo-wall {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
   position: relative;
@@ -1083,19 +1103,28 @@ span.callout {
 }
 
 .speedy-brand .logo-wall img {
-  max-width: 300px;
+  max-width: 32%;
   padding: 1em 0;
+  margin-bottom: 1em;
   transition: .2s all;
   border-radius: var(--curve);
-}
+  background: var(--bg-light);}
 
-.speedy-brand .logo-wall img:hover {
+/* angle every logo */
+/*.speedy-brand .logo-wall img:nth-child(4n-7) { transform: rotate(2.2deg); }
+.speedy-brand .logo-wall img:nth-child(3n-7) { transform: rotate(-2.2deg); }
+.speedy-brand .logo-wall img:nth-child(2n-7) { transform: rotate(1deg); }
+.speedy-brand .logo-wall img:nth-child(1n-7) { transform: rotate(-1deg); }
+*/
+/*.speedy-brand .logo-wall img:hover {
   transform: scale(1.4);
+  transform: translateY(0);
+  transform: rotate(0);
   box-shadow: 1px 1px 10px #ccc;
   background: #fff;
-  background: var(--text-light);
+  background: var(--bg-light);
 }
-
+*/
 
 @media only screen and (max-width: 800px) {
 
@@ -1555,4 +1584,36 @@ p.tl-year:before {
     [aria-label="Back to content"] {
         font-size: .8em;
     }
+
+
+/* 
+ *
+masonry layout with css columns 
+https://griffadev.medium.com/building-a-responsive-progressively-enhanced-masonry-layout-with-only-css-and-html-998b2de89cf2
+*/
+
+.masonry {
+      display: grid;
+      gap: 1rem;
+      grid-template-rows: masonry;
+      grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+      /* no more wonky bottom */
+      align-tracks: stretch;
+}
+
+  /* no more wonky bottom */
+  .masonry picture {
+    height: 100%;
+  }
+  .masonry img {
+    object-fit: cover;
+    height: 100%;
+  }
+
+/* some styling not important */
+.brick {
+    color: var(--Text, #F0F0F0);
+    background: var(--Primary, #74baff);
+    padding:1rem;
+}
 
