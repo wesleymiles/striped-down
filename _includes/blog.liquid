@@ -1,0 +1,35 @@
+{% include '_head.liquid' %}
+
+    {{ content }}
+
+<section class ="post-footer">
+<hr>
+    <nav class="posts-next-previous">
+
+    {%- if collections.post %}
+
+        {%- assign previousPost = collections.post | getPreviousCollectionItem %}
+        {%- assign nextPost = collections.post | getNextCollectionItem %}
+
+        {%- if nextPost or previousPost %}
+            
+                {%- if previousPost %}
+                <p>
+                    <span class="label-prevnext">Previously:</span>
+                    <span class="title-prevnext"><a href="{{ previousPost.url }}">{{ previousPost.data.title }}</a></span>
+                </p>{%- endif %}
+                {%- if nextPost %}
+                <p>
+                    <span class="label-prevnext">Next:</span>
+                    <span class="title-prevnext"><a href="{{ nextPost.url }}">{{ nextPost.data.title }}</a></span>
+                </p>{%- endif %}
+            </ul>
+        {%- endif %}
+
+    {%- endif %}
+
+    </nav>
+
+    </section>
+
+{% include '_foot.html' %}

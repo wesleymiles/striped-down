@@ -1,5 +1,5 @@
 ---
-layout: layout.liquid
+layout: blog.liquid
 title: Mt Waumbek, 2014, the best sledding of my life
 description: A timeline of the prominent figures from the IWW based on the Wobblies! graphic novel
 tags:

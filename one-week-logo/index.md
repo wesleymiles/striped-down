@@ -14,14 +14,12 @@ tags: design
 </section>
 
 
-<section class="logo-wall stretch">
-  <span class="callout">
-    <p>Newest logos</p>
-  </span>
-  <img src="/img/speedy/example/logo-wildcats.png" alt="" />
-  <img src="/img/speedy/example/logo-our-scruptious-lake.png" alt="" />
-  <img src="/img/speedy/example/logo-harvest-crossing.png" alt="" />
-  <img src="/img/speedy/example/logo-ginger-woodworks.png" alt="" />
+<section class="stretch--bg theme--light --center --curvy">
+  <div class="logo-wall">
+    <img src="/img/speedy/branding/browns-river-farm-logo.jpg" alt="" />
+    <img src="/img/speedy/branding/saxon-hill-school-logo.jpg" alt="" />
+    <img src="/img/speedy/branding/hampshire-logo.jpg" alt="" />
+  </div>
 </section>
 
 
@@ -126,22 +124,28 @@ tags: design
 </section>
 
 
-<section class="logo-wall stretch">
-  <span class="callout --alternate">
-    <p>more logos!</p>
-  </span>
-  <img src="/img/speedy/example/logo-ed-camp-vt.png" alt="" />
-  <img src="/img/speedy/example/logo-millriver-carpenters.png" alt="" />
-  <img src="/img/speedy/example/logo-orbit.png" alt="" />
-  <img src="/img/speedy/example/logo-ux-burlington-conference.png" alt="" />
-  <img src="/img/speedy/example/logo-inlaw-brewing.png" alt="" />
-  <img src="/img/speedy/example/logo-creative-wood-designs.png" alt="" />
-  <img src="/img/speedy/example/logo-bromin.png" alt="" />
-  <img src="/img/speedy/example/logo-fulham.png" alt="" />
-  <img src="/img/speedy/example/logo-barcrab.png" alt="" />
-  <img src="/img/speedy/example/logo-knobhill-partners.png" alt="" />
-  <img src="/img/speedy/example/logo-brush-brook-community-farm.png" alt="" />
-  <img src="/img/speedy/example/logo-marblehead-on-harbor.png" alt="" />
+<section class="stretch--bg theme--light --center --curvy">
+    <p class="--center"><em>Branding not done with the one week framework, but it should give you an idea of what we're going toward.</em></p>
+  <div class="logo-wall">
+    <img src="/img/speedy/branding/ginger-woodworks-1.jpg" alt="" />
+    <img src="/img/speedy/branding/ginger-woodworks-logo.jpg" alt="" />
+    <img src="/img/speedy/branding/ginger-woodworks-2.jpg" alt="" />
+    <img src="/img/speedy/branding/in-law-brewing-logo-1.jpg" alt="" />
+    <img src="/img/speedy/branding/in-law-brewing-1.jpg" alt="" />
+    <img src="/img/speedy/branding/in-law-brewing-logo-2.jpg" alt="" />
+    <img src="/img/speedy/branding/millriver-carpenters-logo.jpg" alt="" />
+    <img src="/img/speedy/branding/creative-carved-signs-logo.jpg" alt="" />
+    <img src="/img/speedy/branding/orbit-logo.jpg" alt="" />
+    <img src="/img/speedy/branding/marblehead-on-harbor-logo.jpg" alt="" />
+    <img src="/img/speedy/branding/harvest-crossing-logo.jpg" alt="" />
+    <img src="/img/speedy/branding/brush-brook-community-farm-logo.jpg" alt="" />
+  </div>
+
+<!--   <img src="/img/speedy/branding/ux-burlington-conference-logo.jpg" alt="" />
+  <img src="/img/speedy/branding/bromin-logo.jpg" alt="" />
+  <img src="/img/speedy/branding/fulham-logo.jpg" alt="" />
+  <img src="/img/speedy/branding/barcrab-logo.jpg" alt="" />
+  <img src="/img/speedy/branding/knobhill-partners-logo.jpg" alt="" /> -->
 </section>
 
 

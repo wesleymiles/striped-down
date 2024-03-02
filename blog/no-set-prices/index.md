@@ -1,5 +1,5 @@
 ---
-layout: layout.liquid
+layout: blog.liquid
 title: Why I Don’t Have Set Prices - A Different Way to Freelance
 description: ------
 tags: posty

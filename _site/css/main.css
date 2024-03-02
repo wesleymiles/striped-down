@@ -83,6 +83,12 @@ ol, ul {
     margin-top: 1em;
   }
 
+  ul[class], ol[class] {
+    list-style: none;
+    margin: 0;
+    padding-left: 6px;
+  }
+
   li {
     line-height: 1.35;
     margin-bottom: .7em;
@@ -91,9 +97,6 @@ ol, ul {
       margin-top: -.7em;
     }
 
-  .checks li {
-    list-style: none;
-  }
     .checks li:before {
       content: '✓  ';
       color: #3ea261;
@@ -366,7 +369,7 @@ div.button a:link {
   padding: 1em;
   background-color: #064864;
   text-transform: uppercase;
-  letter-spacing: 2px;
+  letter-spacing: 1px;
   text-decoration: none;
   margin: .5em 0;
   display: inline-block;
@@ -428,7 +431,8 @@ body > main > section.cta.theme--dark {
   }
 
   body > main > section.stretch {
-    padding: 0 calc(var(--contentWidth) / 3);
+/*    padding: 0 calc(var(--contentWidth) / 3);*/
+
   }
 
   body > main > section.stretch--bg {
@@ -626,6 +630,7 @@ nav li {
 
 header.mast .site-logo {
   display: flex;
+  font-family: var(--sans-serif);
 }
 
   header.mast .site-logo img {
@@ -1062,26 +1067,25 @@ summary {
   }
 
 span.callout {
-  background-color: #f49f0a;
-/*  color: var(--text-light);*/
-  border-radius: 100%;
-  display: block;
-  position: absolute;
-  padding: 2em;
-  top: -20px;
-  left:10%;
+/*  background-color: #f49f0a;*/
+/*  border-radius: 100%;*/
+/*  display: block;*/
+/*  position: absolute;*/
+/*  padding: 2em;*/
+/*  top: -20px;*/
+/*  left:10%;*/
   font-size: .8em;
   font-style: italic;
-  transform: rotate(-9deg);
-  outline: 1px solid var(--text-light);
-  animation: slowSpin 8s linear infinite; 
+/*  transform: rotate(-9deg);*/
+/*  outline: 1px solid var(--text-light);*/
+/*  animation: slowSpin 8s linear infinite; */
 }
 
-  span.callout.--alternate {
+/*  span.callout.--alternate {
     right: 10%;
     left: initial;
     transform: rotate(9deg);
-  }
+  }*/
 
   span.callout > * {
     margin: 0;
@@ -1099,13 +1103,12 @@ span.callout {
   align-items: center;
   flex-wrap: wrap;
   position: relative;
-  background-color: #fff;
+  padding: var(--gap);
 }
 
 .speedy-brand .logo-wall img {
-  max-width: 32%;
-  padding: 1em 0;
-  margin-bottom: 1em;
+  max-width: 31%;
+  margin-bottom: calc(var(--gap)*1.5);
   transition: .2s all;
   border-radius: var(--curve);
   background: var(--bg-light);}
@@ -1291,6 +1294,38 @@ body.post img {
     margin-top: 0;
   }
 
+/* previous and next links on posts */
+
+.post-footer {
+  padding-top: 0;
+}
+
+.links-nextprev {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.post-footer hr {
+  margin-bottom: var(--gap);
+}
+
+.label-prevnext {
+  display: block;
+   text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+
+
+/* remove column from main
+-------------------------------------------------- */
+
+body > main {
+
+}
 
 
 
@@ -1299,6 +1334,7 @@ body.post img {
 body.homepage .hero  {
   margin-bottom: -300px;
   padding-bottom: 250px;
+  padding-top: 6em;
 }
 
 
@@ -1584,6 +1620,7 @@ p.tl-year:before {
     [aria-label="Back to content"] {
         font-size: .8em;
     }
+
 
 
 /* 

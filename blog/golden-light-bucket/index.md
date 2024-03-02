@@ -1,5 +1,5 @@
 ---
-layout: layout.liquid
+layout: blog.liquid
 title: Golden Light Bucket
 description: 
 tags: posty

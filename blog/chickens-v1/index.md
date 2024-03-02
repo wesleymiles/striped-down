@@ -1,5 +1,5 @@
 ---
-layout: layout.liquid
+layout: blog.liquid
 title: Chickens, part 1
 description: My anxiety-ridden adventure of what they call the gateway farm animal
 tags: post
@@ -14,9 +14,8 @@ date: 2024-02-09
 
 So, we don’t have them yet. This post intends to show the progress we’ve made. And I’ve always wanted to try the blogging techniques of writing as you go. Learning live. 
 
-
 </section>
-
+ 
 <section>
     <div class="content-inner">
 
@@ -217,11 +216,4 @@ Another option is free-range. Our plot is sandwiched between two neighbor fences
 I’m going all out with this coop structure, yet I’m hesitant to invest in gadgetry too early. It’s a character trait like my thriftiness. The automatic chicken door is a-calling, but I feel it’s only proper to see what it’s like without it first.
 
 To truly see the value of automation, you should understand the problem through experience first.
-
-</section>
-
-<section class="cta --curvy theme--dark">
-
-This post is a work in progress. Thanks for stopping by. 
-
 </section>

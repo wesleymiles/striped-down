@@ -1,5 +1,5 @@
 ---
-layout: layout.liquid
+layout: blog.liquid
 title: Welcoming an orchard into the community
 description: My first major contribution to Underhill, VT
 tags: post
