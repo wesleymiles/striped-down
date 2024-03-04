@@ -17,7 +17,8 @@ tags: design
 <section class="stretch--bg theme--light --center --curvy">
   <div class="logo-wall">
     <img src="/img/speedy/branding/browns-river-farm-logo.jpg" alt="" />
-    <img src="/img/speedy/branding/saxon-hill-school-logo.jpg" alt="" />
+    <img src="/img/speedy/branding/wildcats-logo.jpg" alt="" />
+    <!-- <img src="/img/speedy/branding/saxon-hill-school-logo.jpg" alt="" /> -->
     <img src="/img/speedy/branding/hampshire-logo.jpg" alt="" />
   </div>
 </section>
@@ -58,7 +59,6 @@ tags: design
   ## This service might be for you, if...
   
   <ul class="checks">
-    <li>You live in Vermont.</li>
     <li>You’re open to working in the gift economy.</li>
     <li>You’re ready, or can be soon, to get a new logo.</li>
   </ul>
@@ -90,13 +90,9 @@ tags: design
   I wrote more about <a href="/blog/gift/">freelancing in the gift here</a>.
   
   
-  ## Proof that good branding pays
+  ## Need proof that branding works?
   
-  I had the pleasure of working with this branding companies logos before.
-
-  They track the impact of their logos in terms of client revenue. 
-
-  See the <a href="https://www.kickcharge.com/portfolio/client-stats/" class="external" >GIGANTIC percentage increases</a> on fifty rebrands. 
+  I had the pleasure of working with this branding companies logos before. They track the impact of their logos in terms of client revenue. See the <a href="https://www.kickcharge.com/portfolio/client-stats/" class="external" >GIGANTIC percentage increases</a> on fifty rebrands. 
 
 </section>
 
@@ -154,57 +150,61 @@ tags: design
 
   ## FAQ
 
-    <details>
-      <summary> Why not 2 weeks? </summary>
-      <div>
-        I believe that working within constraints allows space for excellent work.
+  <details>
+    <summary> Why not 2 weeks? </summary>
+    <div>
+
+    I believe that working within constraints allows space for excellent work.
+    
+      It forces you, the business owner, to make decisions and not waddle, waffle.
+    
+      And it forces me, the designer, to also make decisions and crank out excellent designs.
+    </div>
+  </details>
+
+  <details>
+    <summary >Why you? </summary>
+    <div>
+
+     In the last 10 years, i helped 322 orgs create a positive, memorable impression. Half a dozen have taken a jump into the gift-world with me.
+    
+      Behind this idea is an urge to help small local orgs succeed. 
+    
+      I want to give that old pizza shop getting cornered by Chili’s and Texas Roadhouse a fighting chance.
+    
+      I aim to help you expand your reach by creating a crunchy promise your potential customers can sink your teeth into.
+
+      Lastly, taste. This is a real reason why people hire designers. I know what good design looks like and can help channel your vision into something pleasing.
+    </div>
+  </details>
+
+  <details>
+    <summary> Why are logos magic?</summary>
+    <div>
+
+      They have the power to communicate your values, philosophy, reputation, and what customers can expect by using succinct imagery.
       
-        It forces you, the business owner, to make decisions and not waddle, waffle.
+      Your logo is the core of your brand.
       
-        And it forces me, the designer, to also make decisions and crank out excellent designs.
-      </div>
-    </details>
-
-    <details>
-      <summary >Why you? </summary>
-      <div>
-        In the last 10 years, i helped 342 orgs create a positive, memorable impression. Half a dozen have taken a jump into the gift-world with me. 
+      Branding is the whole thing - the combination of messaging and visuals you consistently use.
       
-        Behind this idea is an urge to help small local orgs succeed. 
+      With this service, it’s up to <i>you</i> to apply and express the logo in ways that resonate with your audience. 
       
-        I want to give that old pizza shop getting cornered by Chili’s and Texas Roadhouse a fighting chance.
-      
-        I aim to help you expand your reach by creating a crunchy promise your potential customers can sink your teeth into.
+      It’s also up to you to back up the promise of a logo with action. 
+     </div>
+  </details>
 
-        Lastly, taste. This is a real reason why people hire designers. I know what good design looks like and can help channel your vision into something pleasing.
-      </div>
-    </details>
+  <details>
+    <summary> If logos are so magic, why are we rushing this?</summary>
+    <div>
 
-    <details>
-      <summary> Why are logos magic?</summary>
-      <div>
-        They have the power to communicate your values, philosophy, reputation, and what customers can expect by using succinct imagery.
-        
-        Your logo is the core of your brand.
-        
-        Branding is the whole thing - the combination of messaging and visuals you consistently use.
-        
-        With this service, it’s up to <i>you</i> to apply and express the logo in ways that resonate with your audience. 
-        
-        It’s also up to you to back up the promise of a logo with action. 
-       </div>
-    </details>
+      Very astute question, reader.
 
-    <details>
-      <summary> If logos are so magic, why are we rushing this?</summary>
-      <div>
-        Very astute question, reader. 
+      This is the crux of my offering. 
 
-        This is the crux of my offering. 
-
-        I believe logos matter a lot, but I also believe people tend to waste time on them. Let’s meet in the middle and see if we can’t get you a top-notch logo, fast.
-       </div>
-    </details>
+      I believe logos matter a lot, but I also believe people tend to waste time on them. Let’s meet in the middle and see if we can’t get you a top-notch logo, fast.
+     </div>
+  </details>
 
 </section>
 
