@@ -18,7 +18,6 @@ tags: design
   <div class="logo-wall">
     <img src="/img/speedy/branding/browns-river-farm-logo.jpg" alt="" />
     <img src="/img/speedy/branding/wildcats-logo.jpg" alt="" />
-    <!-- <img src="/img/speedy/branding/saxon-hill-school-logo.jpg" alt="" /> -->
     <img src="/img/speedy/branding/hampshire-logo.jpg" alt="" />
   </div>
 </section>
