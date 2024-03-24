@@ -588,7 +588,6 @@ nav li {
   font-family: var(--sans-serif);
 }
 
-
   nav .nav-menu {
     display: flex;
     align-self: center;
@@ -600,6 +599,18 @@ nav li {
       margin: 0 0 0 1em;
       list-style: none;
     }
+
+    nav .nav-menu li.active-nav a:visited,
+    nav .nav-menu li.active-nav a:link {
+      color: #285E50;
+    }
+    nav .nav-menu li.active-nav{
+      border-top: var(--border);
+      padding-top: .5em;
+      margin-top: -.5em;
+    }
+
+
     nav p, 
     nav a:visited, 
     nav a:link {

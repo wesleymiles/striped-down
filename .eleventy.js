@@ -1,4 +1,11 @@
+  // adding plugin to allow for active navigation
+  const eleventyNavigationPlugin = require("@11ty/eleventy-navigation");
+  
 module.exports = function(eleventyConfig) {
+
+
+  // adding plugin to allow for active navigation
+  eleventyConfig.addPlugin(eleventyNavigationPlugin);
 
   // allowing for more langages -- liquid is the default, and what i'm using 
   eleventyConfig.setTemplateFormats("html,liquid,njk,md");
