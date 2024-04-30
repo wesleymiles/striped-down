@@ -107,11 +107,23 @@ ol, ul {
         content: '❌  ';
     }
 
+blockquote {
+  position: relative;
+}
+
+  blockquote p:before {
+    content: '“';
+    position: absolute;
+    color: #5EAA78;
+    top: -11px;
+    left: 27px;
+    font-size: 1.3em; /* Adjust size as needed */
+  }
 
 blockquote p {
   font-size: 1.5em;
   font-style: italic;
-  margin-bottom: 3em;
+  margin-bottom: 2em;
   margin-top: 3em;
   border-left: var(--border);
   padding-left: 1.6em;
@@ -439,6 +451,12 @@ body > main > section.cta.theme--dark {
     padding-left: 0; 
     padding-right: 0; 
   }
+
+
+/*  give a bg to a pitcure element if not in a section element  */
+body > main > picture {
+  background-color: #fff;
+}
 
 
 /* 3 columns of photos in a stretched section */
@@ -1054,13 +1072,13 @@ body.work section[class^="--"] {
 /* CSS-only accordion - using native HTML elements
 -------------------------------------------------- */
 
-details {
+.faq details {
 /*  width: 300px;*/
   border: 1px solid #ddd;
   margin-bottom: 10px;
 }
 
-summary {
+.faq summary {
   background-color: #f1f1f1;
   padding: 10px;
   cursor: pointer;
@@ -1070,10 +1088,10 @@ summary {
     margin-right: 1em;
   }
 
-  details > div {
+  .faq details > div {
     padding: 2em;
   }
-  details > div p:last-child {
+  .faq details > div p:last-child {
     margin-bottom: 0;
   }
 
@@ -1203,24 +1221,38 @@ margin: 0;
 */
 
 section.library {
+   display: flex;
+   flex-wrap: wrap;
+   gap: var(--gapSm);
   /*  grid works better for */
-/*   display: flex;*/
-/*   flex-wrap: wrap;*/
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(30%, 1fr));
-  gap: var(--gapSm);
+/*  display: grid;*/
+/*  grid-template-columns: repeat(auto-fill, minmax(30%, 1fr));*/
+/*  gap: var(--gapSm);*/
 }
 
 
+.library details[open] summary {
 
-  section.library article {
-    flex: 1 0 20%;
+}
+
+.library summary::marker {
+
+}
+
+  section.library details summary {
+    flex: 1 0 29%;
+/*    min-width: 30%;*/
     padding: var(--gapSm);
     background: #fff;
     display: flex;
     flex-direction: column;
     border-radius: var(--curve);
-    outline: 1px solid #c2e1c3;
+    border: 1px solid #c2e1c3;
+  }
+
+/*  set the width so when the details opens, this stays put */
+  section.library article {
+    max-width: 400px;
   }
 
     /*  text styling  */
@@ -1276,7 +1308,6 @@ body.post img {
   border-radius: var(--curve);
 }
 
-
 .archive-list {
   list-style: none;
   margin: 0;
@@ -1289,10 +1320,17 @@ body.post img {
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-between;
-  border-bottom: var(--border);
   margin-bottom: 2em;
+  border-bottom: var(--border);
   padding-bottom: 1em;
 }
+  /* border on all but the last one */
+ul.archive-list li:last-child .archive-entry {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+
   .meta-date {
     margin-top: 0.5em;
     font-size: .7em;
@@ -1329,6 +1367,16 @@ body.post img {
   letter-spacing: 1px;
 }
 
+/* remove footer section from blog index page. feels hacky for now, but whatevs. */
+body.Blog section.post-footer {
+  padding: 0;
+}
+  .post-footer hr {
+    border-width: 0;
+    background-color: transparent;
+    border: none;
+    margin: 0
+  }
 
 
 /* remove column from main

@@ -1,0 +1,9 @@
+---
+layout: tab.liquid
+band:
+song:
+tags: tab
+date: 2024-04-06
+---
+Drop C#/Db Tuning (Everything tuned 3 half steps down)  Capo: 2nd Fret  [Intro]  G  C  Am  C  G  C  Am  C  G  C  Am  C  G  C  Am  C    [Verse]  G      C            Am              C I went out the front door, went out into the night G        C           Am             C I took out a cigarette, and then I felt for my light Em     Am          D        G             C In my front pocket it was no-where to be found   G        C                      Am             C So I went back in the front door, I kicked off both of my shoes, G        C                Am                   C I looked around for your coat, and then went looking for you, Em         Am       D                G           C Thought I heard you left and stepping down the stairs,  G            C             Am                C So I walked there to your door, until I was almost half way, G      C          Am         C I saw two closed doors, so I let my heart break, Em      Am          D         G        C Are you running around or just running away?   [Chorus]  Bm       Am             Bm Why do I always find the worst in you,  Am                 Bm You always see the worst in me, Am                       D Though I only see the worst in you.   [Verse]  G       C            Am           C So I sit still for a while trying to hear again, G             C         Am                 C But then from the living room, I heard you calling my name, Em           Am           D        G     C I found you smiling asking me where I am again   [Chorus]  Bm     Am                Bm Why do I always see the worst in you,  Am                 Bm You always see the worst in me, Am                     D Though I only see the worst in you.   [Outro]   G  C  Am  C  G  C  Am  C  G  C  Am  C  G  C  Am  C
+

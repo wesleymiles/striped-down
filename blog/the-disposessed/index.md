@@ -1,0 +1,74 @@
+---
+layout: blog.liquid
+title: The Disposessed, Le Guin
+description: A thorough, gripping, and honest exploration of a plantet of people choosing to test out anarchy for 174 years
+tags:
+    - post
+    - book-notes
+date: 2024-04-29
+---
+
+
+<section class="hero">
+    <time class="meta-date" datetime="{{ date | postDate }}">{{ date | postDate }}</time>
+    <h1><span class="book-name">The Dispossessed</span>, by <span class="author"><span itemprop="author">Ursula K. Le Guin</span></span></h1>
+    <p><span class="book-genre" itemprop="genre">Genre: Science fiction</span>. Published <span itemprop="copyrightYear">1974. Themes: anarchism, utopia / dystopia, individualism / collectivism, gender / sexuality, social justice, freedom of expression, alienation / belonging, the nature of power</p> 
+</section>
+
+<section>
+
+<h2>Anarres: the moonish planet the revolutionaries settled</h2>
+
+
+<blockquote>
+    <p>No. [Anarres] is not wonderful. It is an ugly world. Not like this one. Anarres is all dust and dry hills. All meager, all dry. And the people aren't beautiful. They have big hands and feet, like me and the waiter there. But not big bellies. They get very dirty, and take baths together, nobody here does that. The towns are very small and dull, they are dreary. No palaces. Life is dull, and hard work. You can't always have what you want, or even what you need, because there isn't enough. You Urrasti have enough. Enough air, enough rain, grass, oceans, food, music, buildings, factories, machines, books, clothes, history. You are rich, you own. We are poor, we lack. You have, we do not have. Everything is beautiful, here. Only not the faces. On Anarres nothing is beautiful, nothing but the faces. The other faces, the men and women. We have nothing but that, nothing but each other. Here you see the jewels, there you see the eyes. And in the eyes you see the splendor, the splendor of the human spirit. Because our men and women are free, possessing nothing they are free. And you the possessors are possessed. You are all in jail. Each alone, solitary, with a heap of what he owns. You live in prison, die in prison. It is all I can see in your eyes—the wall, the wall!<cite>Shevek's drunken speech to the wealthy partiers, page 167</cite></p>
+
+<blockquote>
+    <p>To oppose something is to maintain it... You must go somewhere else; you must have another goal; then you walk a different road. What, then, is to be done? We must learn to see the world anew. We must learn to see the people in it as our equals. We must learn to see each other not as enemies, but as brothers and sisters, bound by our shared humanity. Only then can we truly break free from the chains of oppression and build a better world for all.<cite>page 155</cite></p>
+
+</blockquote>
+
+<blockquote>
+    <p>Excess is excrement.<cite>page 127</cite></p>
+</blockquote>
+
+
+<blockquote>
+    <p>Freedom is never very safe. It is a constant struggle, a constant battle against the forces that seek to control us. But it is also the most precious thing we have. It is the essence of our humanity, the source of our creativity, our resilience, our ability to imagine and to dream. And so we must fight for it, fiercely and tirelessly, knowing that the road will be long and difficult, but believing that in the end, it will be worth it.<cite>page 273</cite></p>
+
+</blockquote>
+
+
+<blockquote>
+    <p>It is our suffering that brings us together. It is not love. Love does not obey the mind, and turns to hate when forced. The bond that binds us is beyond choice. We are brothers. We are brothers in what we share.
+    <cite>page 84</cite></p>
+</blockquote>
+
+
+<blockquote>
+    <p>Nothing is yours. It is to use. It is to share. If you will not share it, you cannot use it. This is the fundamental truth of our existence, the foundation upon which our society is built. We are not here to accumulate wealth or power for ourselves, but to work together, to support one another, to lift each other up. Only by embracing this truth can we hope to create a world that is truly just and equitable.<cite>page 245</cite></p>
+</blockquote>
+
+
+<blockquote>
+    <p>If you evade suffering you also evade the chance of joy. Pleasure you may get, or pleasures, but you will not be fulfilled. Fulfillment comes from embracing the full spectrum of human experience, from the deepest lows to the highest highs. It comes from confronting our pain, our fear, our anger, and transforming them into something beautiful, something meaningful. It comes from living authentically, passionately, fully.<cite>page 240</cite></p>
+</blockquote>
+
+
+<h2>Urras: the planet resembling ours, slightly futurized</h2>
+
+   <blockquote>
+    <p>The city sprawled across the plains and hillsides, rich and luxurious as a treasure hoard... here everything, everything, was owned; and yet all this wealth, all this poverty, could not buy any one thing, could not even buy the slave his freedom.
+    <cite>page 48</cite></p>
+</blockquote>
+
+<blockquote>
+    <p>The soil, the air, the grass, the water were wealth not to be bought or sold. They were not property. They were property only when they were locked up; then they were theft. But to live, to live and use, that was property in its proper sense. <br><br>
+    He had begun to see the city's glitter as a kind of loss, like the loss of a limb, the loss of blood. Something must leak away, to make that light, to make the streets shine so; something must be destroyed, exhausted, used up. He had begun to see the shine of the city as blood on the streets.
+    <cite>page 127</cite></p>
+
+<blockquote>
+    <p>Because there is nothing, nothing on Urras that we Anarresti need! We left with empty hands, a hundred and seventy years ago, and we were right. We took nothing. Because there is nothing here but States and their weapons, the rich and their lies, and the poor and their misery. There is no way to act rightly, with a clear heart, on Urras. There is nothing you can do that profit does not enter into, and fear of loss, and the wish for power. You cannot say good morning without knowing which of you is ‘superior’ to the other, or trying to prove it. You cannot act like a brother to other people, you must manipulate them, or command them, or obey them, or trick them. You cannot touch another person, yet they will not leave you alone. There is no freedom. It is a box—Urras is a box, a package, with all the beautiful wrapping of blue sky and meadows and forests and great cities. And you open the box, and what is inside it? A black cellar full of dust, and a dead man. A man whose hand was shot off because he held it out to others.<cite>page 278</cite></p>
+
+</section>
+

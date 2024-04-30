@@ -1,0 +1,11 @@
+---
+layout: tab.liquid
+band:
+song:
+tags: tab
+date: 2024-04-06
+---
+Left And Leaving Chords by The Weakerthans
+
+Intro: B5  G#m7  F#sus4  Esus2 x2  Verse 1: B5               G#m7                        F#sus4     My city's still breathing, but barely it's true        Esus2                         B5    Through buildings gone missing like teeth                  G#m7                    F#sus4  The sidewalks are watching me think about you Esus2                  Sparkled with broken glass G#m7   F#/A#     B5       E      I'm back with scars to show G#m7    F#/A#    B5        E    Back with the streets I know     C#m/F#  Will never take me anywhere but here.  (Intro 1x)  Verse 2: B5                 G#m7                     F#sus4   The stain in the carpet, this drink in my hand     Esus2                   B5 The strangers whose faces I know                  G#m7                   F#sus4 We meet here for our dress rehearsal to say    Esus2      "I wanted it this way" G#m7    F#/A#   B5      E    Wait for the year to drown G#m7      F#/A#    B5        E    Spring forward, fall back down     C#m/F#                         B5/G#  B5/F#  B5/E  I'm trying not to wonder where you are.  B5/G#  B5/F#  B5/E  Bridge: B5/G#     B5/F#     B5/E      All  this   time B5/G#      B5/F#  B5/E      Lin - gers   undefined B5/G#       B5/F#  B5/E      Should  one  choose          F#     Who's left and who's leaving  (Intro 1x)  Verse 3:   B5            G#m7                F#sus4      Memory will rust and erode into lists    Esus2                 B5 Of all that you gave me                 G#m7                     F#sus4 A blanket, some matches, this pain in my chest     Esus2               G#m7 The best parts of lonely      F#/A#    B5       E Duct tape and soldered wires G#m7  F#/A#     B5    E  New   words for old desires     C#m/F# And every birthday card I threw away  Solo:  B5  G#m7  F#sus4  Esus2 (4x)  Verse 4: G#m7  F#/A#     B5  E     I  wait  in 4/4 time G#m7      F#/A#  B5      E     Count yellow highway lines      C#m/F#                        B5  G#m7  F#sus4  Esus2       That you're relying on to lead you home. That you're relying on to lead you home. That you're relying on to lead you home.
+

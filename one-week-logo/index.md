@@ -147,7 +147,7 @@ eleventyNavigation:
 
 
 
-<section>
+<section class="faq">
 
   ## FAQ
 

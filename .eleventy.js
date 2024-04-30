@@ -16,6 +16,23 @@ module.exports = function(eleventyConfig) {
     return DateTime.fromJSDate(dateObj).toLocaleString(DateTime.DATE_MED);
   });
 
+  // fixing how 11ty skipped spaces and new lines in tabs
+      // eleventyConfig.setLibrary('md', null); // Disable Markdown rendering
+
+const markdownIt = require("markdown-it");
+
+module.exports = function (eleventyConfig) {
+  let options = {
+    html: true,
+    breaks: false,
+    typographer: true,
+    space:false,
+    htmlWhitespaceSensitivity:css,
+  };
+
+  eleventyConfig.setLibrary("md", markdownIt(options));
+};
+
 
   // Copy the `img` and `css` folders to the output
   eleventyConfig.addPassthroughCopy("img");

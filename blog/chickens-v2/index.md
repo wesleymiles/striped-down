@@ -1,7 +1,7 @@
 ---
 layout: blog.liquid
 title: Chickens, part 2
-description: Chipping away at the coop, one month in.
+description: Chipping away at the coop this winter, one month in.
 tags: post
 date: 2024-02-29
 ---
