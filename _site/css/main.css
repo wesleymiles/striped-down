@@ -875,9 +875,12 @@ body > main > section.hero {
     /*  unfixes bg so it will work on ios  */
     .homepage h1 { margin: 0; }
 
-    .hero h2 { padding-left:0;padding-right:0 }
-    .hero h2,.hero h3,.hero p { 
-      padding-top: inherit;
+    .homepage .hero h2 { 
+      padding: 0 10%;
+    }
+
+    .hero h3,.hero p { 
+      padding-top: initial;
       padding-bottom: 0;
     }
 
@@ -1220,14 +1223,22 @@ margin: 0;
 }
 */
 
+/* stretch but give it a max */
+section.library.stretch--bg {
+  max-width: 1500px;
+}
+
 section.library {
-   display: flex;
-   flex-wrap: wrap;
-   gap: var(--gapSm);
+/* flexbox layout */
+/*   display: flex;*/
+/*   flex-wrap: wrap;*/
+/*   gap: var(--gapSm);*/
+
+
   /*  grid works better for */
-/*  display: grid;*/
-/*  grid-template-columns: repeat(auto-fill, minmax(30%, 1fr));*/
-/*  gap: var(--gapSm);*/
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(30%, 1fr));
+  grid-gap: var(--gapSm);
 }
 
 
@@ -1239,21 +1250,34 @@ section.library {
 
 }
 
+
   section.library details summary {
-    flex: 1 0 29%;
-/*    min-width: 30%;*/
     padding: var(--gapSm);
     background: #fff;
     display: flex;
     flex-direction: column;
     border-radius: var(--curve);
     border: 1px solid #c2e1c3;
+
+
+
   }
 
+    section.library article {
+
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: stretch;
+    justify-content: center;
+    flex-grow: 1;
+    min-height: 600px;
+    }
+
 /*  set the width so when the details opens, this stays put */
-  section.library article {
+/*  section.library article {
     max-width: 400px;
-  }
+  }*/
 
     /*  text styling  */
     section.library article h2 {
@@ -1284,7 +1308,12 @@ section.library {
 
 
        section.library article picture {
-        margin: calc(3*(var(--gapSm)))  auto;
+        margin: calc(2*(var(--gapSm)))  auto;
+        flex-grow: 1;
+        display: flex;
+        align-items: stretch;
+        justify-content: flex-start;
+
       }
 
        section.library article picture img {
@@ -1415,7 +1444,7 @@ body.homepage .hero  {
   @media only screen and (max-width: 800px) {
     
     body.homepage .hero  {
-      margin-bottom: -110px;
+      margin-bottom: -84px;
       padding-bottom: 100px;
     }
 
