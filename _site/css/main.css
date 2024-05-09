@@ -1242,14 +1242,9 @@ section.library {
 }
 
 
-.library details[open] summary {
-
-}
-
 .library summary::marker {
 
 }
-
 
   section.library details summary {
     padding: var(--gapSm);
@@ -1258,13 +1253,13 @@ section.library {
     flex-direction: column;
     border-radius: var(--curve);
     border: 1px solid #c2e1c3;
+  }
 
-
-
+  section.library details {
+    /* animate open? */
   }
 
     section.library article {
-
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
@@ -1273,6 +1268,21 @@ section.library {
     flex-grow: 1;
     min-height: 600px;
     }
+
+
+
+    /*. when details are opened, stretch everything, but constrain the summary back to where it was. */
+    section.library details[open] {
+      /* Allow details content to stretch outside grid */
+      width: 80%;
+      grid-column: 1 / -1;
+    }
+
+      section.library details[open] summary {
+        width: 32%;
+      }
+
+
 
 /*  set the width so when the details opens, this stays put */
 /*  section.library article {
