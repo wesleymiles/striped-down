@@ -5,41 +5,38 @@ description: A catalog of my collection of graphic novels. All are non-fiction. 
 tags: post
 date: 2023-10-01
 ---
+
 <section class="books hero">
-    <h1> {{ title }}</h1>
+    <h1>{{ title }}</h1>
     <p>{{ description }}</p>
-</section> 
+</section>
 
-<div class="">
-
-    <div id="filterOptions">
-<!--       <button data-filter="all">All</button>
-      <button data-filter="drama">Before 1990</button>
-      <button data-filter="drama">1990-2000</button>
-      <button data-filter="drama">2001-today</button>
-      <button data-filter="drama">Memoir</button>
-      <button data-filter="history">History</button>
-      <button data-filter="history">Journalistic</button> -->
-
-  <!--     <small>Published:</small>
-      <label><input type="checkbox" value="before-1990"> Before 1990</label>
-      <label><input type="checkbox" value="1990-2000"> 1990-2000</label>
-      <label><input type="checkbox" value="2001-today"> 2001-today</label>
-      <small>Genres:</small>
-      <label><input type="checkbox" value="drama"> Drama</label>
-      <label><input type="checkbox" value="english"> English</label>
-      <label><input type="checkbox" value="paperback"> Paperback</label> -->
-
-    </div>
-
-</div>
-
+<section id="filters">
+    <input type="radio" id="all" name="tag" value="All" checked>
+    <label for="all">All</label>
+    <input type="radio" id="adaptation" name="tag" value="Adaptation">
+    <label for="adaptation">Adaptation</label>
+    <input type="radio" id="biography" name="tag" value="Biography">
+    <label for="biography">Biography</label>
+    <input type="radio" id="identity" name="tag" value="Identity">
+    <label for="identity">Identity</label>
+    <input type="radio" id="journalism" name="tag" value="Journalism">
+    <label for="journalism">Journalism</label>
+    <input type="radio" id="memoir" name="tag" value="Memoir">
+    <label for="memoir">Memoir</label>
+    <input type="radio" id="social" name="tag" value="Social">
+    <label for="social">Social issues</label>
+    <input type="radio" id="resistance" name="tag" value="Resistance">
+    <label for="resistance">Resistance</label>
+    <input type="radio" id="war" name="tag" value="War">
+    <label for="war">War</label>
+</section>
 
 <section id="BookList" class="library stretch--bg">
-        <details>
-            <summary>
-    <article data-genre="Memoir" itemscope itemtype="https://schema.org/Book">
-
+    <details>
+        <summary>
+            <article data-tags="Memoir, War" itemscope itemtype="https://schema.org/Book">
+            <article data-tags="Memoir" itemscope itemtype="https://schema.org/Book">
                 <header>
                     <span class="book-intro">
                         <h2>
@@ -56,49 +53,39 @@ date: 2023-10-01
                 </picture>
                 <small>Read: 10/2023, Published: <span itemprop="copyrightYear">1972</span><br /><a href="https://www.studiesinthenovel.org/content/teaching-barefoot-gen">Legit source to learn more</a></small>
             </article>
-            </summary>
-
+        </summary>
         Originally this was a series of comic books published first in Japan, then translated to in english. My first manga. I stumbled on it while visiting a friend, going through a stack of their dad’s old radical comics, and read the whole thing aggressively. When done, I sat there stunned, wondering what I just experienced.
-
         It’s a model for the non-fiction, memoir graphic novel genre. It felt real. It felt true. The art aligned with the story.
-
         I was transported before and after the bombing of Hiroshima. And saw it through the innocent eyes of a six-year-old boy, Gen. He's the son of a dissenter. The pro-war propaganda was the air the Japanese people breathed. Because of this, the family are ostracized and deprived of community, save for a Korean family who receives much discrimination and also struggles to assimilate.
-
         <figure>
             <picture>
                 <source srcset="{{ page.url | url }}img/barefoot-gen-snippet.jpg" type="image/jpg">
-                <img src="{{ page.url | url }}img/barefoot-gen-snippet.jpg"  alt="Barefoot gen page with the two brothers wanting to support their family during war.">
+                <img src="{{ page.url | url }}img/barefoot-gen-snippet.jpg" alt="Barefoot gen page with the two brothers wanting to support their family during war.">
                 <figcaption>Snippet from book 1 of 10</figcaption>
             </picture>
         </figure>
-
         The propaganda part fascinated me. It illustrated how an entire society was mobilized for the war effort to the extent that families guarded each grain of rice with rage. For families like Gen's labeled as traitors, asking friends for extra food meant putting those friends at risk of being labeled traitors themselves. Dissenting meant starving. Gen’s older brother tries to restore his families honor by joining the army.
-
         The story is told matter-of-factly with no sense of preachiness. The authors objectiveness is startling and exemplifies his character.
-
         While the illustrations are fairly simple compared to others I've encountered, they are still captivating, creating an immersive world. Whatever their low level of detail is evened out by the choked detail of the story.
-
-        I'm not brave enough to watch the movie version. 
-
-
-</details>
-        <details>
-            <summary>
-    <article data-genre="Drama" itemscope itemtype="https://schema.org/Book">
-        <header>
-            <span class="book-intro">
-                <h2>
-                    <span itemprop="name">Shubeik Lubeik</span>, <br />by
-                    <span itemprop="author" itemscope itemtype="https://schema.org/Person" itemid="#author">Deena Mohamed</span>
-                </h2>
-            </span>
-        </header>
-        <picture>
-            <source srcset="https://cdn.thestorygraph.com/u5ju3tp2sa5xk7v8dg9g0ed2vu1p" type="image/jpg">
-            <img src="https://cdn.thestorygraph.com/u5ju3tp2sa5xk7v8dg9g0ed2vu1p" alt="">
-        </picture>
-        <small>Read: 6/2023, Published: <span itemprop="copyrightYear">1/2023</span><br /><a href="https://www.comicsbeat.com/graphic-novel-review-shubeik-lubeik-3-magical-tales-in-egypt/">Legit source to learn more</a></small>
-        <!--         <section>
+        I'm not brave enough to watch the movie version.
+    </details>
+    <details>
+        <summary>
+            <article data-tags="Memoir,Identity" itemscope itemtype="https://schema.org/Book">
+                <header>
+                    <span class="book-intro">
+                        <h2>
+                            <span itemprop="name">Shubeik Lubeik</span>, <br />by
+                            <span itemprop="author" itemscope itemtype="https://schema.org/Person" itemid="#author">Deena Mohamed</span>
+                        </h2>
+                    </span>
+                </header>
+                <picture>
+                    <source srcset="https://cdn.thestorygraph.com/u5ju3tp2sa5xk7v8dg9g0ed2vu1p" type="image/jpg">
+                    <img src="https://cdn.thestorygraph.com/u5ju3tp2sa5xk7v8dg9g0ed2vu1p" alt="">
+                </picture>
+                <small>Read: 6/2023, Published: <span itemprop="copyrightYear">1/2023</span><br /><a href="https://www.comicsbeat.com/graphic-novel-review-shubeik-lubeik-3-magical-tales-in-egypt/">Legit source to learn more</a></small>
+                <!--         <section>
 
             A very thick graphic novel about buying and selling wishes. A moving-to-tears, beautiful, mega-thick comic 🥹 👏
 
@@ -114,600 +101,604 @@ date: 2023-10-01
             </figure>
 
         </section> -->
-    </article>
-</summary>
-</details>
-        <details>
-            <summary>
-    <article data-genre="Drama" itemscope itemtype="https://schema.org/Book">
-        <header>
-            <span class="book-intro">
-                <h2>
-                    <span itemprop="name">The Great American Dust Bowl</span>, <br />by
-                    <span itemprop="author" itemscope itemtype="https://schema.org/Person" itemid="#author">Don Brown</span>
-                </h2>
-            </span>
-        </header>
-        <picture>
-            <source srcset="https://cdn.thestorygraph.com/wxv30nssj1qlbjp9f9yu4tpin9oh" type="image/jpg">
-            <img src="https://cdn.thestorygraph.com/wxv30nssj1qlbjp9f9yu4tpin9oh" alt="" />
-        </picture>
-        <small>Read: 5/2023, Published: <span itemprop="copyrightYear">2013</span></small>
-        <!--         <section>
+            </article>
+        </summary>
+    </details>
+    <details>
+        <summary>
+            <article data-tags="Social" itemscope itemtype="https://schema.org/Book">
+                <header>
+                    <span class="book-intro">
+                        <h2>
+                            <span itemprop="name">The Great American Dust Bowl</span>, <br />by
+                            <span itemprop="author" itemscope itemtype="https://schema.org/Person" itemid="#author">Don Brown</span>
+                        </h2>
+                    </span>
+                </header>
+                <picture>
+                    <source srcset="https://cdn.thestorygraph.com/wxv30nssj1qlbjp9f9yu4tpin9oh" type="image/jpg">
+                    <img src="https://cdn.thestorygraph.com/wxv30nssj1qlbjp9f9yu4tpin9oh" alt="" />
+                </picture>
+                <small>Read: 5/2023, Published: <span itemprop="copyrightYear">2013</span></small>
+                <!--         <section>
             Learned a bunch from the emotional 20 minute read. I picked it up from a free libary.
     
             For not having many words, at 80 pages with huge panels, the sources section is immense. think this is due to footnoting many actual quotes into the story.
         </section> -->
-    </article>
-</summary>
-</details>
-        <details>
-            <summary>
-    <article data-genre="Drama" itemscope itemtype="https://schema.org/Book">
-        <header>
-            <span class="book-intro">
-                <h2>
-                    <span itemprop="name">Hidden Systems</span>, <br />by
-                    <span itemprop="author" itemscope itemtype="https://schema.org/Person" itemid="#author">Dan Nott</span>
-                </h2>
-            </span>
-        </header>
-        <picture>
-            <source srcset="https://cdn.thestorygraph.com/c8wpjzpp71rb0wd7klzzrwmj74pi" type="image/jpg">
-            <img src="https://cdn.thestorygraph.com/c8wpjzpp71rb0wd7klzzrwmj74pi" alt="" />
-        </picture>
-        <small>Read: 10/2023, Published: <span itemprop="copyrightYear">2023</span></small>
-        <section>
-        </section>
-    </article>
-</summary>
-</details>
-        <details>
-            <summary>
-    <article data-genre="Drama" itemscope itemtype="https://schema.org/Book">
-        <header>
-            <span class="book-intro">
-                <h2>
-                    <span itemprop="name">The High Desert: Black. Punk. Nowhere.</span>, <br />by
-                    <span itemprop="author" itemscope itemtype="https://schema.org/Person" itemid="#author">James Spooner</span>
-                </h2>
-            </span>
-        </header>
-        <picture>
-            <source srcset="https://cdn.thestorygraph.com/lrcjfo729e70tbnphjklntol7eya" type="image/jpg">
-            <img src="https://cdn.thestorygraph.com/lrcjfo729e70tbnphjklntol7eya" alt="" />
-        </picture>
-        <small>Read: 10/2022, Published: <span itemprop="copyrightYear">2022</span></small>
-        <section>
-        </section>
-    </article>
-</summary>
-</details>
-        <details>
-            <summary>
-    <article data-genre="Drama" itemscope itemtype="https://schema.org/Book">
-        <header>
-            <span class="book-intro">
-                <h2>
-                    <span itemprop="name">Ginseng Roots comic series 1-12</span>, <br />by
-                    <span itemprop="author" itemscope itemtype="https://schema.org/Person" itemid="#author">Craig Thompson</span>
-                </h2>
-            </span>
-        </header>
-        <picture>
-            <source srcset="https://cdn.thestorygraph.com/b8ynr6brhv36ovmsmoxj3od0b3ij" type="image/jpg">
-            <img src="https://cdn.thestorygraph.com/b8ynr6brhv36ovmsmoxj3od0b3ij" alt="" />
-        </picture>
-        <small>Read: 2023, Published: <span itemprop="copyrightYear">2020</span></small>
-        <section>
-        </section>
-    </article>
-</summary>
-</details>
-        <details>
-            <summary>
-    <article data-genre="Drama" itemscope itemtype="https://schema.org/Book">
-        <header>
-            <span class="book-intro">
-                <h2>
-                    <span itemprop="name">Barefoot Gen Volume 2: The Day After</span>, <br />by
-                    <span itemprop="author" itemscope itemtype="https://schema.org/Person" itemid="#author">Keiji Nakazawa</span>
-                </h2>
-            </span>
-        </header>
-        <picture>
-            <source srcset="https://cdn.thestorygraph.com/nh1u8iyf6rah8yrmi6tnd0k88ilh" type="image/jpg">
-            <img src="https://cdn.thestorygraph.com/nh1u8iyf6rah8yrmi6tnd0k88ilh" alt="" />
-        </picture>
-        <small>Read: 2023, Published: <span itemprop="copyrightYear">1973</span></small>
-        <section>
-        </section>
-    </article>
-</summary>
-</details>
-        <details>
-            <summary>
-    <article data-genre="Drama" itemscope itemtype="https://schema.org/Book">
-        <header>
-            <span class="book-intro">
-                <h2>
-                    <span itemprop="name">Red Rosa: A Graphic Biography of Rosa Luxemburg</span>, <br />by
-                    <span itemprop="author" itemscope itemtype="https://schema.org/Person" itemid="#author">Kate Evans</span>
-                </h2>
-            </span>
-        </header>
-        <picture>
-            <source srcset="https://cdn.thestorygraph.com/9l2jdkr5awqap0hlhlwrxdjthiib" type="image/jpg">
-            <img src="https://cdn.thestorygraph.com/9l2jdkr5awqap0hlhlwrxdjthiib" alt="" />
-        </picture>
-        <small>Read: 2022, Published: <span itemprop="copyrightYear">2015</span></small>
-        <section>
-        </section>
-    </article>
-</summary>
-</details>
-        <details>
-            <summary>
-    <article data-genre="Drama" itemscope itemtype="https://schema.org/Book">
-        <header>
-            <span class="book-intro">
-                <h2>
-                    <span itemprop="name">Not the Israel My Parents Promised Me</span>, <br />by
-                    <span itemprop="author" itemscope itemtype="https://schema.org/Person" itemid="#author">Harvey Pekar</span>
-                </h2>
-            </span>
-        </header>
-        <picture>
-            <source srcset="https://cdn.thestorygraph.com/iuey26nzweru6d6uendur4thknov" type="image/jpg">
-            <img src="https://cdn.thestorygraph.com/iuey26nzweru6d6uendur4thknov" alt="" />
-        </picture>
-        <small>Read: 2023, Published: <span itemprop="copyrightYear">2014</span></small>
-        <section>
-        </section>
-    </article>
-</summary>
-</details>
-        <details>
-            <summary>
-    <article data-genre="Drama" itemscope itemtype="https://schema.org/Book">
-        <header>
-            <span class="book-intro">
-                <h2>
-                    <span itemprop="name">Ducks: Two Years in the Oil Sands</span>, <br />by
-                    <span itemprop="author" itemscope itemtype="https://schema.org/Person" itemid="#author">Kate Beaton</span>
-                </h2>
-            </span>
-        </header>
-        <picture>
-            <source srcset="https://cdn.thestorygraph.com/14zx0fu6lecc89ej2ndq5yreblvb" type="image/jpg">
-            <img src="https://cdn.thestorygraph.com/14zx0fu6lecc89ej2ndq5yreblvb" alt="" />
-        </picture>
-        <small>Read: 2022, Published: <span itemprop="copyrightYear">2022</span></small>
-        <section>
-        </section>
-    </article>
-</summary>
-</details>
-        <details>
-            <summary>
-    <article data-genre="Drama" itemscope itemtype="https://schema.org/Book">
-        <header>
-            <span class="book-intro">
-                <h2>
-                    <span itemprop="name">Radical: My Year with a Socialist Senator</span>, <br />by
-                    <span itemprop="author" itemscope itemtype="https://schema.org/Person" itemid="#author">Sofia Warren</span>
-                </h2>
-            </span>
-        </header>
-        <picture>
-            <source srcset="https://cdn.thestorygraph.com/0ij0qtcme203pfexovnhwvzcyloi" type="image/jpg">
-            <img src="https://cdn.thestorygraph.com/0ij0qtcme203pfexovnhwvzcyloi" alt="" />
-        </picture>
-        <small>Read: 2022, Published: <span itemprop="copyrightYear">2022</span></small>
-        <section>
-        </section>
-    </article>
-</summary>
-</details>
-        <details>
-            <summary>
-    <article data-genre="Drama" itemscope itemtype="https://schema.org/Book">
-        <header>
-            <span class="book-intro">
-                <h2>
-                    <span itemprop="name">Paying the Land</span>, <br />by
-                    <span itemprop="author" itemscope itemtype="https://schema.org/Person" itemid="#author">Joe Sacco</span>
-                </h2>
-            </span>
-        </header>
-        <picture>
-            <source srcset="https://cdn.thestorygraph.com/s69s6gup1p608ts5jrbxhc77va4j" type="image/jpg">
-            <img src="https://cdn.thestorygraph.com/s69s6gup1p608ts5jrbxhc77va4j" alt="" />
-        </picture>
-        <small>Read: 2022, Published: <span itemprop="copyrightYear">2020</span></small>
-        <section>
-        </section>
-    </article>
-</summary>
-</details>
-        <details>
-            <summary>
-    <article data-genre="Drama" itemscope itemtype="https://schema.org/Book">
-        <header>
-            <span class="book-intro">
-                <h2>
-                    <span itemprop="name">What is Home, Mum?</span>, <br />by
-                    <span itemprop="author" itemscope itemtype="https://schema.org/Person" itemid="#author">Sabba Khan</span>
-                </h2>
-            </span>
-        </header>
-        <picture>
-            <source srcset="https://cdn.thestorygraph.com/wydpilwezdpd8ct0jaqukt5oxyc4" type="image/jpg">
-            <img src="https://cdn.thestorygraph.com/wydpilwezdpd8ct0jaqukt5oxyc4" alt="" />
-        </picture>
-        <small>Read: 2022, Published: <span itemprop="copyrightYear">2022</span></small>
-        <section>
-        </section>
-    </article>
-</summary>
-</details>
-        <details>
-            <summary>
-    <article data-genre="Drama" itemscope itemtype="https://schema.org/Book">
-        <header>
-            <span class="book-intro">
-                <h2>
-                    <span itemprop="name">Run: 1</span>, <br />by
-                    <span itemprop="author" itemscope itemtype="https://schema.org/Person" itemid="#author">John Lewis with Andrew Aydin</span>
-                </h2>
-            </span>
-        </header>
-        <picture>
-            <source srcset="https://cdn.thestorygraph.com/g7104xyejizz4y5xqu2jzo20i173" type="image/jpg">
-            <img src="https://cdn.thestorygraph.com/g7104xyejizz4y5xqu2jzo20i173" alt="" />
-        </picture>
-        <small>Read: 2021, Published: <span itemprop="copyrightYear">2021</span></small>
-        <section>
-        </section>
-    </article>
-</summary>
-</details>
-        <details>
-            <summary>
-    <article data-genre="Drama" itemscope itemtype="https://schema.org/Book">
-        <header>
-            <span class="book-intro">
-                <h2>
-                    <span itemprop="name">March: Series 1-3</span>, <br />by
-                    <span itemprop="author" itemscope itemtype="https://schema.org/Person" itemid="#author">John Lewis with Andrew Aydin</span>
-                </h2>
-            </span>
-        </header>
-        <picture>
-            <source srcset="https://cdn.vox-cdn.com/thumbor/iQsyJtAQsA2edYVbGCMrwNeeyyc=/1400x1400/filters:format(png)/cdn.vox-cdn.com/uploads/chorus_asset/file/6696777/1466706228262.png" type="image/png">
-            <img src="https://cdn.vox-cdn.com/thumbor/iQsyJtAQsA2edYVbGCMrwNeeyyc=/1400x1400/filters:format(png)/cdn.vox-cdn.com/uploads/chorus_asset/file/6696777/1466706228262.png" alt="" />
-        </picture>
-        <small>Read: 2021, Published: <span itemprop="copyrightYear">2016</span></small>
-        <section>
-        </section>
-    </article>
-</summary>
-</details>
-        <details>
-            <summary>
-    <article data-genre="Drama" itemscope itemtype="https://schema.org/Book">
-        <header>
-            <span class="book-intro">
-                <h2>
-                    <span itemprop="name">Persepolis: 1-4</span>, <br />by
-                    <span itemprop="author" itemscope itemtype="https://schema.org/Person" itemid="#author">Marjane Satrapi</span>
-                </h2>
-            </span>
-        </header>
-        <picture>
-            <source srcset="https://cdn.thestorygraph.com/zyjs6ua7t7n0ii6smzh2k8lce2z6" type="image/jpg">
-            <img src="https://cdn.thestorygraph.com/zyjs6ua7t7n0ii6smzh2k8lce2z6" alt="" />
-        </picture>
-        <small>Read: 2020, Published: <span itemprop="copyrightYear">2003</span></small>
-        <section>
-        </section>
-    </article>
-</summary>
-</details>
-        <details>
-            <summary>
-    <article data-genre="Drama" itemscope itemtype="https://schema.org/Book">
-        <header>
-            <span class="book-intro">
-                <h2>
-                    <span itemprop="name">Blankets</span>, <br />by
-                    <span itemprop="author" itemscope itemtype="https://schema.org/Person" itemid="#author">Craig Thompson</span>
-                </h2>
-            </span>
-        </header>
-        <picture>
-            <source srcset="https://cdn.thestorygraph.com/aibfrvek7aejy6n2xfcaxs4lq0um" type="image/jpg">
-            <img src="https://cdn.thestorygraph.com/aibfrvek7aejy6n2xfcaxs4lq0um" alt="" />
-        </picture>
-        <small>Read: 2020, Published: <span itemprop="copyrightYear">2003</span></small>
-        <section>
-        </section>
-    </article>
-</summary>
-</details>
-        <details>
-            <summary>
-    <article data-genre="Drama" itemscope itemtype="https://schema.org/Book">
-        <header>
-            <span class="book-intro">
-                <h2>
-                    <span itemprop="name">Unrig: How to Fix Our Broken Democracy</span>, <br />by
-                    <span itemprop="author" itemscope itemtype="https://schema.org/Person" itemid="#author">World Citizen Comics</span>
-                </h2>
-            </span>
-        </header>
-        <picture>
-            <source srcset="https://cdn.thestorygraph.com/w616wgeqbhy7q2epnpetfgw6vi5r" type="image/jpg">
-            <img src="https://cdn.thestorygraph.com/w616wgeqbhy7q2epnpetfgw6vi5r" alt="Unrig: How to Fix Our Broken Democracy Cover Image" itemprop="image">
-        </picture>
-        <small>Read: 2020, Published: <span itemprop="copyrightYear">2020</span></small>
-    </article>
-</summary>
-</details>
-        <details>
-            <summary>
-    <article data-genre="Drama" itemscope itemtype="https://schema.org/Book">
-        <header>
-            <span class="book-intro">
-                <h2>
-                    <span itemprop="name">Oak Flat: A Fight for Sacred Land in the American West</span>, <br />by
-                    <span itemprop="author" itemscope itemtype="https://schema.org/Person" itemid="#author">Lauren Redniss</span>
-                </h2>
-            </span>
-        </header>
-        <picture>
-            <source srcset="https://cdn.thestorygraph.com/b57es4tw9v090f4oxv9t78b3so1s" type="image/jpg">
-            <img src="https://cdn.thestorygraph.com/b57es4tw9v090f4oxv9t78b3so1s" alt="Oak Flat: A Fight for Sacred Land in the American West Cover Image" itemprop="image">
-        </picture>
-        <small>Read: 2020, Published: <span itemprop="copyrightYear">2020</span></small>
-    </article>
-</summary>
-</details>
-        <details>
-            <summary>
-    <article data-genre="Drama" itemscope itemtype="https://schema.org/Book">
-        <header>
-            <span class="book-intro">
-                <h2>
-                    <span itemprop="name">Diary of an Early American Boy</span>, <br />by
-                    <span itemprop="author" itemscope itemtype="https://schema.org/Person" itemid="#author">Eric Sloane</span>
-                </h2>
-            </span>
-        </header>
-        <picture>
-            <source srcset="https://cdn.thestorygraph.com/kfqax5kvtwpejs7zfoglpg598eqb" type="image/jpg">
-            <img src="https://cdn.thestorygraph.com/kfqax5kvtwpejs7zfoglpg598eqb" alt="Diary of an Early American Boy Cover Image" itemprop="image">
-        </picture>
-        <small>Read: 1995, Published: <span itemprop="copyrightYear">1958</span></small>
-    </article>
-</summary>
-</details>
-        <details>
-            <summary>
-    <article data-genre="Drama" itemscope itemtype="https://schema.org/Book">
-        <header>
-            <span class="book-intro">
-                <h2>
-                    <span itemprop="name">Chicken with Plums</span>, <br />by
-                    <span itemprop="author" itemscope itemtype="https://schema.org/Person" itemid="#author">Marjane Satrapi</span>
-                </h2>
-            </span>
-        </header>
-        <picture>
-            <source srcset="https://cdn.thestorygraph.com/n9l3txgnjjo3vglpliguxtuixf16" type="image/jpg">
-            <img src="https://cdn.thestorygraph.com/n9l3txgnjjo3vglpliguxtuixf16" alt="Chicken with Plums Cover Image" itemprop="image">
-        </picture>
-        <small>Read: 2020, Published: <span itemprop="copyrightYear">2004</span></small>
-    </article>
-</summary>
-</details>
-        <details>
-            <summary>
-    <article data-genre="Drama" itemscope itemtype="https://schema.org/Book">
-        <header>
-            <span class="book-intro">
-                <h2>
-                    <span itemprop="name">The Most Costly Journey</span>, <br />by
-                    <span itemprop="author" itemscope itemtype="https://schema.org/Person" itemid="#author">Andy Kolovos, Marek Bennett, Julia Grand Doucet</span>
-                </h2>
-            </span>
-        </header>
-        <picture>
-            <source srcset="https://cdn.thestorygraph.com/5crdp874absv5ig2zdbexezrsf41" type="image/jpg">
-            <img src="https://cdn.thestorygraph.com/5crdp874absv5ig2zdbexezrsf41" alt="The Most Costly Journey Cover Image" itemprop="image">
-        </picture>
-        <small>Read: 2022, Published: <span itemprop="copyrightYear">2021</span><br /><a href="https://www.benningtonbanner.com/the-most-costly-journey-illustrates-the-trials-triumphs-of-vermonts-migrant-farmworkers/article_4f27a3b2-f3fc-11eb-96e6-07e483c00a54.html">Legit source to learn more</a></small>
-    </article>
-</summary>
-</details>
-        <details>
-            <summary>
-    <article data-genre="Drama" itemscope itemtype="https://schema.org/Book">
-        <header>
-            <span class="book-intro">
-                <h2>
-                    <span itemprop="name">Freedom Hospital: A Syrian Story</span>, <br />by
-                    <span itemprop="author" itemscope itemtype="https://schema.org/Person" itemid="#author">Hamid Sulaiman</span>
-                </h2>
-            </span>
-        </header>
-        <picture>
-            <source srcset="https://cdn.thestorygraph.com/pkuhzm7tnfpjd3pn4vo0uscxcsbh" type="image/jpg">
-            <img src="https://cdn.thestorygraph.com/pkuhzm7tnfpjd3pn4vo0uscxcsbh" alt="Freedom Hospital: A Syrian Story Cover Image" itemprop="image">
-        </picture>
-        <small>Read: 2020, Published: <span itemprop="copyrightYear">2016</span></small>
-    </article>
-</summary>
-</details>
-        <details>
-            <summary>
-    <article data-genre="Drama" itemscope itemtype="https://schema.org/Book">
-        <header>
-            <span class="book-intro">
-                <h2>
-                    <span itemprop="name">The Beats: A Graphic History</span>, <br />by
-                    <span itemprop="author" itemscope itemtype="https://schema.org/Person" itemid="#author">Various</span>
-                </h2>
-            </span>
-        </header>
-        <picture>
-            <source srcset="https://cdn.thestorygraph.com/yo80db2bkelsbsual6ga6ceqydhu" type="image/jpg">
-            <img src="https://cdn.thestorygraph.com/yo80db2bkelsbsual6ga6ceqydhu" alt="The Beats: A Graphic History Cover Image" itemprop="image">
-        </picture>
-        <small>Read: 2020, Published: <span itemprop="copyrightYear">2009</span></small>
-    </article>
-</summary>
-</details>
-        <details>
-            <summary>
-    <article data-genre="Drama" itemscope itemtype="https://schema.org/Book">
-        <header>
-            <span class="book-intro">
-                <h2>
-                    <span itemprop="name">Are You My Mother?: A Comic Drama</span>, <br />by
-                    <span itemprop="author" itemscope itemtype="https://schema.org/Person" itemid="#author">Alison Bechdel</span>
-                </h2>
-            </span>
-        </header>
-        <picture>
-            <source srcset="https://cdn.thestorygraph.com/q2llfle0hjcrairtnxcn9xgl532k" type="image/jpg">
-            <img src="https://cdn.thestorygraph.com/q2llfle0hjcrairtnxcn9xgl532k" alt="Are You My Mother?: A Comic Drama Cover Image" itemprop="image">
-        </picture>
-        <small>Read: 2012, Published: <span itemprop="copyrightYear">2012</span></small>
-    </article>
-</summary>
-</details>
-        <details>
-            <summary>
-    <article data-genre="Drama" itemscope itemtype="https://schema.org/Book">
-        <header>
-            <span class="book-intro">
-                <h2>
-                    <span itemprop="name">Maus: 1-2</span>, <br />by
-                    <span itemprop="author" itemscope itemtype="https://schema.org/Person" itemid="#author">Art Spiegelman</span>
-                </h2>
-            </span>
-        </header>
-        <picture>
-            <source srcset="https://cdn.thestorygraph.com/51v4n0w8aivhrfl54er1rwf636o5" type="image/jpg">
-            <img src="https://cdn.thestorygraph.com/51v4n0w8aivhrfl54er1rwf636o5" alt="Maus: 1-2 Cover Image" itemprop="image">
-        </picture>
-        <small>Read: 2001, Published: <span itemprop="copyrightYear">1986</span></small>
-    </article>
-</summary>
-</details>
-        <details>
-            <summary>
-    <article data-genre="Drama" itemscope itemtype="https://schema.org/Book">
-        <header>
-            <span class="book-intro">
-                <h2>
-                    <span itemprop="name">1984: The Graphic Novel</span>, <br />by
-                    <span itemprop="author" itemscope itemtype="https://schema.org/Person" itemid="#author">George Orwell with Fido Nesti</span>
-                </h2>
-            </span>
-        </header>
-        <picture>
-            <source srcset="https://cdn.thestorygraph.com/8o4ws3uq6kkj5g7uapyd611bj3ux" type="image/jpg">
-            <img src="https://cdn.thestorygraph.com/8o4ws3uq6kkj5g7uapyd611bj3ux" alt="1984: The Graphic Novel Cover Image" itemprop="image">
-        </picture>
-        <small>Read: 2021, Published: <span itemprop="copyrightYear">2021</span></small>
-    </article>
-</summary>
-</details>
-        <details>
-            <summary>
-    <article data-genre="Drama" itemscope itemtype="https://schema.org/Book">
-        <header>
-            <span class="book-intro">
-                <h2>
-                    <span itemprop="name">The Middle Ages: A Graphic History</span>, <br />by
-                    <span itemprop="author" itemscope itemtype="https://schema.org/Person" itemid="#author">Eleanor Janega with Neil Max Emmanuel</span>
-                </h2>
-            </span>
-        </header>
-        <picture>
-            <source srcset="https://cdn.thestorygraph.com/xr8hyr79vbsh4gar7yxd209gjrq4" type="image/jpg">
-            <img src="https://cdn.thestorygraph.com/xr8hyr79vbsh4gar7yxd209gjrq4" alt="The Middle Ages: A Graphic History Cover Image" itemprop="image">
-        </picture>
-        <small>Read: 2020, Published: <span itemprop="copyrightYear">2020</span></small>
-    </article>
-</summary>
-</details>
-        <details>
-            <summary>
-    <article data-genre="Drama" itemscope itemtype="https://schema.org/Book">
-        <header>
-            <span class="book-intro">
-                <h2>
-                    <span itemprop="name">Palestine: 1-2</span>, <br />by
-                    <span itemprop="author" itemscope itemtype="https://schema.org/Person" itemid="#author">Joe Sacco</span>
-                </h2>
-            </span>
-        </header>
-        <picture>
-            <source srcset="https://i.cbc.ca/1.4657051.1525971551!/fileImage/httpImage/image.png_gen/derivatives/original_1180/book-cover-palestine-by-joe-sacco.png" type="image/png">
-            <img src="https://i.cbc.ca/1.4657051.1525971551!/fileImage/httpImage/image.png_gen/derivatives/original_1180/book-cover-palestine-by-joe-sacco.png" alt="Palestine: 1-2 Cover Image" itemprop="image">
-        </picture>
-        <small>Read: 2023, Published: <span itemprop="copyrightYear">1996</span></small>
-    </article>
-</summary>
-</details>
-        <details>
-            <summary>
-    <article data-genre="Drama" itemscope itemtype="https://schema.org/Book">
-        <header>
-            <span class="book-intro">
-                <h2>
-                    <span itemprop="name">Marx's Capital Illustrated</span>, <br />by 
-                    <span itemprop="author" itemscope itemtype="https://schema.org/Person" itemid="#author">David Smith with Phil Evans</span>
-                </h2>
-            </span>
-        </header>
-        <picture>
-            <source srcset="https://cdn.thestorygraph.com/wvnpik6m1mu9wx0mfoqmrc5y1i4t" type="image/jpg">
-            <img src="https://cdn.thestorygraph.com/wvnpik6m1mu9wx0mfoqmrc5y1i4t" alt="Marx's Capital Illustrated Cover Image" itemprop="image">
-        </picture>
-        <small>Read: 2023, Published: <span itemprop="copyrightYear">1982</span></small>
-    </article>
-</summary>
-</details>
-
+            </article>
+        </summary>
+    </details>
+    <details>
+        <summary>
+            <article data-tags="Social, Journalism" itemscope itemtype="https://schema.org/Book">
+                <header>
+                    <span class="book-intro">
+                        <h2>
+                            <span itemprop="name">Hidden Systems</span>, <br />by
+                            <span itemprop="author" itemscope itemtype="https://schema.org/Person" itemid="#author">Dan Nott</span>
+                        </h2>
+                    </span>
+                </header>
+                <picture>
+                    <source srcset="https://cdn.thestorygraph.com/c8wpjzpp71rb0wd7klzzrwmj74pi" type="image/jpg">
+                    <img src="https://cdn.thestorygraph.com/c8wpjzpp71rb0wd7klzzrwmj74pi" alt="" />
+                </picture>
+                <small>Read: 10/2023, Published: <span itemprop="copyrightYear">2023</span></small>
+                <section>
+                </section>
+            </article>
+        </summary>
+    </details>
+    <details>
+        <summary>
+            <article data-tags="Identity, Memoir" itemscope itemtype="https://schema.org/Book">
+                <header>
+                    <span class="book-intro">
+                        <h2>
+                            <span itemprop="name">The High Desert: Black. Punk. Nowhere.</span>, <br />by
+                            <span itemprop="author" itemscope itemtype="https://schema.org/Person" itemid="#author">James Spooner</span>
+                        </h2>
+                    </span>
+                </header>
+                <picture>
+                    <source srcset="https://cdn.thestorygraph.com/lrcjfo729e70tbnphjklntol7eya" type="image/jpg">
+                    <img src="https://cdn.thestorygraph.com/lrcjfo729e70tbnphjklntol7eya" alt="" />
+                </picture>
+                <small>Read: 10/2022, Published: <span itemprop="copyrightYear">2022</span></small>
+                <section>
+                </section>
+            </article>
+        </summary>
+    </details>
+    <details>
+        <summary>
+            <article data-tags="Memoir" itemscope itemtype="https://schema.org/Book">
+                <header>
+                    <span class="book-intro">
+                        <h2>
+                            <span itemprop="name">Ginseng Roots comic series 1-12</span>, <br />by
+                            <span itemprop="author" itemscope itemtype="https://schema.org/Person" itemid="#author">Craig Thompson</span>
+                        </h2>
+                    </span>
+                </header>
+                <picture>
+                    <source srcset="https://cdn.thestorygraph.com/b8ynr6brhv36ovmsmoxj3od0b3ij" type="image/jpg">
+                    <img src="https://cdn.thestorygraph.com/b8ynr6brhv36ovmsmoxj3od0b3ij" alt="" />
+                </picture>
+                <small>Read: 2023, Published: <span itemprop="copyrightYear">2020</span></small>
+                <section>
+                </section>
+            </article>
+        </summary>
+    </details>
+    <details>
+        <summary>
+            <article data-tags="War, Memoir" itemscope itemtype="https://schema.org/Book">
+                <header>
+                    <span class="book-intro">
+                        <h2>
+                            <span itemprop="name">Barefoot Gen Volume 2: The Day After</span>, <br />by
+                            <span itemprop="author" itemscope itemtype="https://schema.org/Person" itemid="#author">Keiji Nakazawa</span>
+                        </h2>
+                    </span>
+                </header>
+                <picture>
+                    <source srcset="https://cdn.thestorygraph.com/nh1u8iyf6rah8yrmi6tnd0k88ilh" type="image/jpg">
+                    <img src="https://cdn.thestorygraph.com/nh1u8iyf6rah8yrmi6tnd0k88ilh" alt="" />
+                </picture>
+                <small>Read: 2023, Published: <span itemprop="copyrightYear">1973</span></small>
+                <section>
+                </section>
+            </article>
+        </summary>
+    </details>
+    <details>
+        <summary>
+            <article data-tags="Resistance, Biography" itemscope itemtype="https://schema.org/Book">
+                <header>
+                    <span class="book-intro">
+                        <h2>
+                            <span itemprop="name">Red Rosa: A Graphic Biography of Rosa Luxemburg</span>, <br />by
+                            <span itemprop="author" itemscope itemtype="https://schema.org/Person" itemid="#author">Kate Evans</span>
+                        </h2>
+                    </span>
+                </header>
+                <picture>
+                    <source srcset="https://cdn.thestorygraph.com/9l2jdkr5awqap0hlhlwrxdjthiib" type="image/jpg">
+                    <img src="https://cdn.thestorygraph.com/9l2jdkr5awqap0hlhlwrxdjthiib" alt="" />
+                </picture>
+                <small>Read: 2022, Published: <span itemprop="copyrightYear">2015</span></small>
+                <section>
+                </section>
+            </article>
+        </summary>
+    </details>
+    <details>
+        <summary>
+            <article data-tags="Memoir, War" itemscope itemtype="https://schema.org/Book">
+                <header>
+                    <span class="book-intro">
+                        <h2>
+                            <span itemprop="name">Not the Israel My Parents Promised Me</span>, <br />by
+                            <span itemprop="author" itemscope itemtype="https://schema.org/Person" itemid="#author">Harvey Pekar</span>
+                        </h2>
+                    </span>
+                </header>
+                <picture>
+                    <source srcset="https://cdn.thestorygraph.com/iuey26nzweru6d6uendur4thknov" type="image/jpg">
+                    <img src="https://cdn.thestorygraph.com/iuey26nzweru6d6uendur4thknov" alt="" />
+                </picture>
+                <small>Read: 2023, Published: <span itemprop="copyrightYear">2014</span></small>
+                <section>
+                </section>
+            </article>
+        </summary>
+    </details>
+    <details>
+        <summary>
+            <article data-tags="Memoir, Journalism" itemscope itemtype="https://schema.org/Book">
+                <header>
+                    <span class="book-intro">
+                        <h2>
+                            <span itemprop="name">Ducks: Two Years in the Oil Sands</span>, <br />by
+                            <span itemprop="author" itemscope itemtype="https://schema.org/Person" itemid="#author">Kate Beaton</span>
+                        </h2>
+                    </span>
+                </header>
+                <picture>
+                    <source srcset="https://cdn.thestorygraph.com/14zx0fu6lecc89ej2ndq5yreblvb" type="image/jpg">
+                    <img src="https://cdn.thestorygraph.com/14zx0fu6lecc89ej2ndq5yreblvb" alt="" />
+                </picture>
+                <small>Read: 2022, Published: <span itemprop="copyrightYear">2022</span></small>
+                <section>
+                </section>
+            </article>
+        </summary>
+    </details>
+    <details>
+        <summary>
+            <article data-tags="Biography" itemscope itemtype="https://schema.org/Book">
+                <header>
+                    <span class="book-intro">
+                        <h2>
+                            <span itemprop="name">Radical: My Year with a Socialist Senator</span>, <br />by
+                            <span itemprop="author" itemscope itemtype="https://schema.org/Person" itemid="#author">Sofia Warren</span>
+                        </h2>
+                    </span>
+                </header>
+                <picture>
+                    <source srcset="https://cdn.thestorygraph.com/0ij0qtcme203pfexovnhwvzcyloi" type="image/jpg">
+                    <img src="https://cdn.thestorygraph.com/0ij0qtcme203pfexovnhwvzcyloi" alt="" />
+                </picture>
+                <small>Read: 2022, Published: <span itemprop="copyrightYear">2022</span></small>
+                <section>
+                </section>
+            </article>
+        </summary>
+    </details>
+    <details>
+        <summary>
+            <article data-tags="Journalism" itemscope itemtype="https://schema.org/Book">
+                <header>
+                    <span class="book-intro">
+                        <h2>
+                            <span itemprop="name">Paying the Land</span>, <br />by
+                            <span itemprop="author" itemscope itemtype="https://schema.org/Person" itemid="#author">Joe Sacco</span>
+                        </h2>
+                    </span>
+                </header>
+                <picture>
+                    <source srcset="https://cdn.thestorygraph.com/s69s6gup1p608ts5jrbxhc77va4j" type="image/jpg">
+                    <img src="https://cdn.thestorygraph.com/s69s6gup1p608ts5jrbxhc77va4j" alt="" />
+                </picture>
+                <small>Read: 2022, Published: <span itemprop="copyrightYear">2020</span></small>
+                <section>
+                </section>
+            </article>
+        </summary>
+    </details>
+    <details>
+        <summary>
+            <article data-tags="Memoir, Identity" itemscope itemtype="https://schema.org/Book">
+                <header>
+                    <span class="book-intro">
+                        <h2>
+                            <span itemprop="name">What is Home, Mum?</span>, <br />by
+                            <span itemprop="author" itemscope itemtype="https://schema.org/Person" itemid="#author">Sabba Khan</span>
+                        </h2>
+                    </span>
+                </header>
+                <picture>
+                    <source srcset="https://cdn.thestorygraph.com/wydpilwezdpd8ct0jaqukt5oxyc4" type="image/jpg">
+                    <img src="https://cdn.thestorygraph.com/wydpilwezdpd8ct0jaqukt5oxyc4" alt="" />
+                </picture>
+                <small>Read: 2022, Published: <span itemprop="copyrightYear">2022</span></small>
+                <section>
+                </section>
+            </article>
+        </summary>
+    </details>
+    <details>
+        <summary>
+            <article data-tags="Resistance" itemscope itemtype="https://schema.org/Book">
+                <header>
+                    <span class="book-intro">
+                        <h2>
+                            <span itemprop="name">Run: 1</span>, <br />by
+                            <span itemprop="author" itemscope itemtype="https://schema.org/Person" itemid="#author">John Lewis with Andrew Aydin</span>
+                        </h2>
+                    </span>
+                </header>
+                <picture>
+                    <source srcset="https://cdn.thestorygraph.com/g7104xyejizz4y5xqu2jzo20i173" type="image/jpg">
+                    <img src="https://cdn.thestorygraph.com/g7104xyejizz4y5xqu2jzo20i173" alt="" />
+                </picture>
+                <small>Read: 2021, Published: <span itemprop="copyrightYear">2021</span></small>
+                <section>
+                </section>
+            </article>
+        </summary>
+    </details>
+    <details>
+        <summary>
+            <article data-tags="Resistance" itemscope itemtype="https://schema.org/Book">
+                <header>
+                    <span class="book-intro">
+                        <h2>
+                            <span itemprop="name">March: Series 1-3</span>, <br />by
+                            <span itemprop="author" itemscope itemtype="https://schema.org/Person" itemid="#author">John Lewis with Andrew Aydin</span>
+                        </h2>
+                    </span>
+                </header>
+                <picture>
+                    <source srcset="https://cdn.vox-cdn.com/thumbor/iQsyJtAQsA2edYVbGCMrwNeeyyc=/1400x1400/filters:format(png)/cdn.vox-cdn.com/uploads/chorus_asset/file/6696777/1466706228262.png" type="image/png">
+                    <img src="https://cdn.vox-cdn.com/thumbor/iQsyJtAQsA2edYVbGCMrwNeeyyc=/1400x1400/filters:format(png)/cdn.vox-cdn.com/uploads/chorus_asset/file/6696777/1466706228262.png" alt="" />
+                </picture>
+                <small>Read: 2021, Published: <span itemprop="copyrightYear">2016</span></small>
+                <section>
+                </section>
+            </article>
+        </summary>
+    </details>
+    <details>
+        <summary>
+            <article data-tags="Memoir, Identity" itemscope itemtype="https://schema.org/Book">
+                <header>
+                    <span class="book-intro">
+                        <h2>
+                            <span itemprop="name">Persepolis: 1-4</span>, <br />by
+                            <span itemprop="author" itemscope itemtype="https://schema.org/Person" itemid="#author">Marjane Satrapi</span>
+                        </h2>
+                    </span>
+                </header>
+                <picture>
+                    <source srcset="https://cdn.thestorygraph.com/zyjs6ua7t7n0ii6smzh2k8lce2z6" type="image/jpg">
+                    <img src="https://cdn.thestorygraph.com/zyjs6ua7t7n0ii6smzh2k8lce2z6" alt="" />
+                </picture>
+                <small>Read: 2020, Published: <span itemprop="copyrightYear">2003</span></small>
+                <section>
+                </section>
+            </article>
+        </summary>
+    </details>
+    <details>
+        <summary>
+            <article data-tags="Memoir" itemscope itemtype="https://schema.org/Book">
+                <header>
+                    <span class="book-intro">
+                        <h2>
+                            <span itemprop="name">Blankets</span>, <br />by
+                            <span itemprop="author" itemscope itemtype="https://schema.org/Person" itemid="#author">Craig Thompson</span>
+                        </h2>
+                    </span>
+                </header>
+                <picture>
+                    <source srcset="https://cdn.thestorygraph.com/aibfrvek7aejy6n2xfcaxs4lq0um" type="image/jpg">
+                    <img src="https://cdn.thestorygraph.com/aibfrvek7aejy6n2xfcaxs4lq0um" alt="" />
+                </picture>
+                <small>Read: 2020, Published: <span itemprop="copyrightYear">2003</span></small>
+                <section>
+                </section>
+            </article>
+        </summary>
+    </details>
+    <details>
+        <summary>
+            <article data-tags="Resistance, Social" itemscope itemtype="https://schema.org/Book">
+                <header>
+                    <span class="book-intro">
+                        <h2>
+                            <span itemprop="name">Unrig: How to Fix Our Broken Democracy</span>, <br />by
+                            <span itemprop="author" itemscope itemtype="https://schema.org/Person" itemid="#author">World Citizen Comics</span>
+                        </h2>
+                    </span>
+                </header>
+                <picture>
+                    <source srcset="https://cdn.thestorygraph.com/w616wgeqbhy7q2epnpetfgw6vi5r" type="image/jpg">
+                    <img src="https://cdn.thestorygraph.com/w616wgeqbhy7q2epnpetfgw6vi5r" alt="Unrig: How to Fix Our Broken Democracy Cover Image" itemprop="image">
+                </picture>
+                <small>Read: 2020, Published: <span itemprop="copyrightYear">2020</span></small>
+            </article>
+        </summary>
+    </details>
+    <details>
+        <summary>
+            <article data-tags="Resistance, Journalism" itemscope itemtype="https://schema.org/Book">
+                <header>
+                    <span class="book-intro">
+                        <h2>
+                            <span itemprop="name">Oak Flat: A Fight for Sacred Land in the American West</span>, <br />by
+                            <span itemprop="author" itemscope itemtype="https://schema.org/Person" itemid="#author">Lauren Redniss</span>
+                        </h2>
+                    </span>
+                </header>
+                <picture>
+                    <source srcset="https://cdn.thestorygraph.com/b57es4tw9v090f4oxv9t78b3so1s" type="image/jpg">
+                    <img src="https://cdn.thestorygraph.com/b57es4tw9v090f4oxv9t78b3so1s" alt="Oak Flat: A Fight for Sacred Land in the American West Cover Image" itemprop="image">
+                </picture>
+                <small>Read: 2020, Published: <span itemprop="copyrightYear">2020</span></small>
+            </article>
+        </summary>
+    </details>
+    <details>
+        <summary>
+            <article data-tags="Biography" itemscope itemtype="https://schema.org/Book">
+                <header>
+                    <span class="book-intro">
+                        <h2>
+                            <span itemprop="name">Diary of an Early American Boy</span>, <br />by
+                            <span itemprop="author" itemscope itemtype="https://schema.org/Person" itemid="#author">Eric Sloane</span>
+                        </h2>
+                    </span>
+                </header>
+                <picture>
+                    <source srcset="https://cdn.thestorygraph.com/kfqax5kvtwpejs7zfoglpg598eqb" type="image/jpg">
+                    <img src="https://cdn.thestorygraph.com/kfqax5kvtwpejs7zfoglpg598eqb" alt="Diary of an Early American Boy Cover Image" itemprop="image">
+                </picture>
+                <small>Read: 1995, Published: <span itemprop="copyrightYear">1958</span></small>
+            </article>
+        </summary>
+    </details>
+    <details>
+        <summary>
+            <article data-tags="Memoir, Identity" itemscope itemtype="https://schema.org/Book">
+                <header>
+                    <span class="book-intro">
+                        <h2>
+                            <span itemprop="name">Chicken with Plums</span>, <br />by
+                            <span itemprop="author" itemscope itemtype="https://schema.org/Person" itemid="#author">Marjane Satrapi</span>
+                        </h2>
+                    </span>
+                </header>
+                <picture>
+                    <source srcset="https://cdn.thestorygraph.com/n9l3txgnjjo3vglpliguxtuixf16" type="image/jpg">
+                    <img src="https://cdn.thestorygraph.com/n9l3txgnjjo3vglpliguxtuixf16" alt="Chicken with Plums Cover Image" itemprop="image">
+                </picture>
+                <small>Read: 2020, Published: <span itemprop="copyrightYear">2004</span></small>
+            </article>
+        </summary>
+    </details>
+    <details>
+        <summary>
+            <article data-tags="Biography" itemscope itemtype="https://schema.org/Book">
+                <header>
+                    <span class="book-intro">
+                        <h2>
+                            <span itemprop="name">The Most Costly Journey</span>, <br />by
+                            <span itemprop="author" itemscope itemtype="https://schema.org/Person" itemid="#author">Andy Kolovos, Marek Bennett, Julia Grand Doucet</span>
+                        </h2>
+                    </span>
+                </header>
+                <picture>
+                    <source srcset="https://cdn.thestorygraph.com/5crdp874absv5ig2zdbexezrsf41" type="image/jpg">
+                    <img src="https://cdn.thestorygraph.com/5crdp874absv5ig2zdbexezrsf41" alt="The Most Costly Journey Cover Image" itemprop="image">
+                </picture>
+                <small>Read: 2022, Published: <span itemprop="copyrightYear">2021</span><br /><a href="https://www.benningtonbanner.com/the-most-costly-journey-illustrates-the-trials-triumphs-of-vermonts-migrant-farmworkers/article_4f27a3b2-f3fc-11eb-96e6-07e483c00a54.html">Legit source to learn more</a></small>
+            </article>
+        </summary>
+    </details>
+    <details>
+        <summary>
+            <article data-tags="War, Resistance" itemscope itemtype="https://schema.org/Book">
+                <header>
+                    <span class="book-intro">
+                        <h2>
+                            <span itemprop="name">Freedom Hospital: A Syrian Story</span>, <br />by
+                            <span itemprop="author" itemscope itemtype="https://schema.org/Person" itemid="#author">Hamid Sulaiman</span>
+                        </h2>
+                    </span>
+                </header>
+                <picture>
+                    <source srcset="https://cdn.thestorygraph.com/pkuhzm7tnfpjd3pn4vo0uscxcsbh" type="image/jpg">
+                    <img src="https://cdn.thestorygraph.com/pkuhzm7tnfpjd3pn4vo0uscxcsbh" alt="Freedom Hospital: A Syrian Story Cover Image" itemprop="image">
+                </picture>
+                <small>Read: 2020, Published: <span itemprop="copyrightYear">2016</span></small>
+            </article>
+        </summary>
+    </details>
+    <details>
+        <summary>
+            <article data-tags="Biography" itemscope itemtype="https://schema.org/Book">
+                <header>
+                    <span class="book-intro">
+                        <h2>
+                            <span itemprop="name">The Beats: A Graphic History</span>, <br />by
+                            <span itemprop="author" itemscope itemtype="https://schema.org/Person" itemid="#author">Various</span>
+                        </h2>
+                    </span>
+                </header>
+                <picture>
+                    <source srcset="https://cdn.thestorygraph.com/yo80db2bkelsbsual6ga6ceqydhu" type="image/jpg">
+                    <img src="https://cdn.thestorygraph.com/yo80db2bkelsbsual6ga6ceqydhu" alt="The Beats: A Graphic History Cover Image" itemprop="image">
+                </picture>
+                <small>Read: 2020, Published: <span itemprop="copyrightYear">2009</span></small>
+            </article>
+        </summary>
+    </details>
+    <details>
+        <summary>
+            <article data-tags="Memoir" itemscope itemtype="https://schema.org/Book">
+                <header>
+                    <span class="book-intro">
+                        <h2>
+                            <span itemprop="name">Are You My Mother?: A Comic Poverty</span>, <br />by
+                            <span itemprop="author" itemscope itemtype="https://schema.org/Person" itemid="#author">Alison Bechdel</span>
+                        </h2>
+                    </span>
+                </header>
+                <picture>
+                    <source srcset="https://cdn.thestorygraph.com/q2llfle0hjcrairtnxcn9xgl532k" type="image/jpg">
+                    <img src="https://cdn.thestorygraph.com/q2llfle0hjcrairtnxcn9xgl532k" alt="Are You My Mother?: A Comic Poverty Cover Image" itemprop="image">
+                </picture>
+                <small>Read: 2012, Published: <span itemprop="copyrightYear">2012</span></small>
+            </article>
+        </summary>
+    </details>
+    <details>
+        <summary>
+            <article data-tags="War, Memoir" itemscope itemtype="https://schema.org/Book">
+                <header>
+                    <span class="book-intro">
+                        <h2>
+                            <span itemprop="name">Maus: 1-2</span>, <br />by
+                            <span itemprop="author" itemscope itemtype="https://schema.org/Person" itemid="#author">Art Spiegelman</span>
+                        </h2>
+                    </span>
+                </header>
+                <picture>
+                    <source srcset="https://cdn.thestorygraph.com/51v4n0w8aivhrfl54er1rwf636o5" type="image/jpg">
+                    <img src="https://cdn.thestorygraph.com/51v4n0w8aivhrfl54er1rwf636o5" alt="Maus: 1-2 Cover Image" itemprop="image">
+                </picture>
+                <small>Read: 2001, Published: <span itemprop="copyrightYear">1986</span></small>
+            </article>
+        </summary>
+    </details>
+    <details>
+        <summary>
+            <article data-tags="Adaptation" itemscope itemtype="https://schema.org/Book">
+                <header>
+                    <span class="book-intro">
+                        <h2>
+                            <span itemprop="name">1984: The Graphic Novel</span>, <br />by
+                            <span itemprop="author" itemscope itemtype="https://schema.org/Person" itemid="#author">George Orwell with Fido Nesti</span>
+                        </h2>
+                    </span>
+                </header>
+                <picture>
+                    <source srcset="https://cdn.thestorygraph.com/8o4ws3uq6kkj5g7uapyd611bj3ux" type="image/jpg">
+                    <img src="https://cdn.thestorygraph.com/8o4ws3uq6kkj5g7uapyd611bj3ux" alt="1984: The Graphic Novel Cover Image" itemprop="image">
+                </picture>
+                <small>Read: 2021, Published: <span itemprop="copyrightYear">2021</span></small>
+            </article>
+        </summary>
+    </details>
+    <details>
+        <summary>
+            <article data-tags="Adaptation" itemscope itemtype="https://schema.org/Book">
+                <header>
+                    <span class="book-intro">
+                        <h2>
+                            <span itemprop="name">The Middle Ages: A Graphic History</span>, <br />by
+                            <span itemprop="author" itemscope itemtype="https://schema.org/Person" itemid="#author">Eleanor Janega with Neil Max Emmanuel</span>
+                        </h2>
+                    </span>
+                </header>
+                <picture>
+                    <source srcset="https://cdn.thestorygraph.com/xr8hyr79vbsh4gar7yxd209gjrq4" type="image/jpg">
+                    <img src="https://cdn.thestorygraph.com/xr8hyr79vbsh4gar7yxd209gjrq4" alt="The Middle Ages: A Graphic History Cover Image" itemprop="image">
+                </picture>
+                <small>Read: 2020, Published: <span itemprop="copyrightYear">2020</span></small>
+            </article>
+        </summary>
+    </details>
+    <details>
+        <summary>
+            <article data-tags="War, Journalism" itemscope itemtype="https://schema.org/Book">
+                <header>
+                    <span class="book-intro">
+                        <h2>
+                            <span itemprop="name">Palestine: 1-2</span>, <br />by
+                            <span itemprop="author" itemscope itemtype="https://schema.org/Person" itemid="#author">Joe Sacco</span>
+                        </h2>
+                    </span>
+                </header>
+                <picture>
+                    <source srcset="https://i.cbc.ca/1.4657051.1525971551!/fileImage/httpImage/image.png_gen/derivatives/original_1180/book-cover-palestine-by-joe-sacco.png" type="image/png">
+                    <img src="https://i.cbc.ca/1.4657051.1525971551!/fileImage/httpImage/image.png_gen/derivatives/original_1180/book-cover-palestine-by-joe-sacco.png" alt="Palestine: 1-2 Cover Image" itemprop="image">
+                </picture>
+                <small>Read: 2023, Published: <span itemprop="copyrightYear">1996</span></small>
+            </article>
+        </summary>
+    </details>
+    <details>
+        <summary>
+            <article data-tags="Social" itemscope itemtype="https://schema.org/Book">
+                <header>
+                    <span class="book-intro">
+                        <h2>
+                            <span itemprop="name">Marx's Capital Illustrated</span>, <br />by
+                            <span itemprop="author" itemscope itemtype="https://schema.org/Person" itemid="#author">David Smith with Phil Evans</span>
+                        </h2>
+                    </span>
+                </header>
+                <picture>
+                    <source srcset="https://cdn.thestorygraph.com/wvnpik6m1mu9wx0mfoqmrc5y1i4t" type="image/jpg">
+                    <img src="https://cdn.thestorygraph.com/wvnpik6m1mu9wx0mfoqmrc5y1i4t" alt="Marx's Capital Illustrated Cover Image" itemprop="image">
+                </picture>
+                <small>Read: 2023, Published: <span itemprop="copyrightYear">1982</span></small>
+            </article>
+        </summary>
+    </details>
 </section>
-
-
 <section>
-    <p>This is an ongoing experiment in organizing. The plan is to add notes and sorting eventually.</p>
+    <p>This is an ongoing experiment in organizing.</p>
     <p>Maybe create a local lending library.</p>
 </section>
 
-<script>
-    const bookList = document.getElementById('bookList');
-const filterOptions = document.getElementById('filterOptions');
 
-filterOptions.addEventListener('change', () => {
-  const filters = [...filterOptions.querySelectorAll('input:checked')].map(checkbox => checkbox.value);
 
-  [...bookList.children].forEach(article => {
-    const articleGenres = article.dataset.genre.toLowerCase();
-    const articleLanguages = article.dataset.language.toLowerCase();
-    const articleFormats = article.dataset.format.toLowerCase();
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const filters = document.querySelectorAll('#filters input[type="radio"]');
+            const bookList = document.querySelectorAll('#BookList article');
 
-    const isVisible = filters.every(filter => {
-      return articleGenres.includes(filter) || articleLanguages.includes(filter) || articleFormats.includes(filter);
-    });
+            filters.forEach(filter => {
+                filter.addEventListener('change', () => {
+                    const selectedTag = document.querySelector('#filters input[type="radio"]:checked').value;
+                    filterBooks(selectedTag);
+                });
+            });
 
-    article.style.display = isVisible ? 'block' : 'none';
-  });
-});
-</script>
+            function filterBooks(tag) {
+                bookList.forEach(book => {
+                    const bookTags = book.getAttribute('data-tags').split(', ').map(tag => tag.trim());
+                    const isVisible = tag === 'All' || bookTags.includes(tag);
+                    book.closest('details').style.display = isVisible ? 'block' : 'none';
+                });
+            }
+        });
+    </script>
+
+ <style>
+       
+    </style>
