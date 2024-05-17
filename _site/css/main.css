@@ -1280,8 +1280,16 @@ section.library {
     }
 
       section.library details[open] summary {
-        width: 32%;
+        width: 37%;
       }
+      section.library details[open]  {
+
+      }
+
+
+/*      when the details are opened,  */
+  section.library .popover {
+  }
 
 
 
@@ -1332,6 +1340,8 @@ section.library {
           min-width: 200px;
           object-fit: cover;
       }
+
+
 
 
   @media only screen and (max-width: 800px) {
