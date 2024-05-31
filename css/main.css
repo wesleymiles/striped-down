@@ -46,9 +46,6 @@ body {
   --curve: 8px;
   --contentWidth: 20vw;
   --border: 1px solid #c2e1c3;
-  --
-
-
   background: var(--bg-light);
 }
 
@@ -60,7 +57,6 @@ body {
 body {
   margin: 0;
   padding: var(--gap) var(--gap) 0 var(--gap);
-/*  background: var(--texture);*/
 }
 
 
@@ -402,11 +398,10 @@ div.button a:link {
 -------------------------------------------------- */
 
   body > main {
-/*    background-color: #fff;*/
-    border-radius: var(--curve) var(--curve);
+    border-radius: var(--curve) var(--curve) 0 0;
     outline-offset: calc(var(--gap)*-1);
     outline: 1px solid var(--highlight);
-    background: linear-gradient(90deg, rgba(255,255,255,0) 15%, rgba(255,255,255,1) 15%, rgba(255,255,255,1) 96%, rgba(255,255,255,0) 96%);
+    background: linear-gradient(90deg, rgba(255,255,255,0) 15%, rgba(255,255,255,1) 15%, rgba(255,255,255,1) 100%, rgba(255,255,255,0) 100%);
   }
 
     /* set every section to have a small column in the middle  */
@@ -896,8 +891,7 @@ body > main > section.hero {
 /*  default hero  */
 .hero {
   background-image: url(/img/bg-barn.jpg);
-  border-radius: var(--curve) var(--curve);
-/*  background: url("https://www.transparenttextures.com/patterns/stardust.png") repeat;*/
+  border-radius: var(--curve) var(--curve) 0 0;
 }
 
 .speedy-brand .hero {

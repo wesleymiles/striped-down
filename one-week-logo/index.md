@@ -16,7 +16,7 @@ eleventyNavigation:
 </section>
 
 
-<section class="stretch--bg theme--light --center --curvy">
+<section class="stretch--bg theme--light --center">
   <div class="logo-wall">
     <img src="/img/speedy/branding/browns-river-farm-logo.jpg" alt="" />
     <img src="/img/speedy/branding/wildcats-logo.jpg" alt="" />
@@ -121,7 +121,7 @@ eleventyNavigation:
 </section>
 
 
-<section class="stretch--bg theme--light --center --curvy">
+<section class="stretch--bg theme--light --center">
     <p class="--center"><em>Branding not done with the one week framework, but it should give you an idea of what we're going toward.</em></p>
   <div class="logo-wall">
     <img src="/img/speedy/branding/ginger-woodworks-1.jpg" alt="" />
