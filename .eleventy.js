@@ -3,7 +3,6 @@
   
 module.exports = function(eleventyConfig) {
 
-
   // adding plugin to allow for active navigation
   eleventyConfig.addPlugin(eleventyNavigationPlugin);
 
@@ -33,7 +32,6 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.setLibrary("md", markdownIt(options));
 };
 
-
   // Copy the `img` and `css` folders to the output
   eleventyConfig.addPassthroughCopy("img");
   eleventyConfig.addPassthroughCopy("css");
@@ -56,7 +54,7 @@ module.exports = function (eleventyConfig) {
 
   // Maintain image directories manually for now 😡 
   eleventyConfig.addPassthroughCopy({ "project/wobblies/img": "project/wobblies/img" }); 
-  eleventyConfig.addPassthroughCopy({ "blog/chickens-v1/img": "blog/chickens-v1/img" }); 
+  eleventyConfig.addPassthroughCopy({ "blog/chickens-v3/img": "blog/chickens-v3/img" }); 
   eleventyConfig.addPassthroughCopy({ "blog/identifying-bark-in-winter/img": "blog/identifying-bark-in-winter/img" }); 
   eleventyConfig.addPassthroughCopy({ "blog/local-logos/img": "blog/local-logos/img" }); 
   eleventyConfig.addPassthroughCopy({ "blog/non-fiction-comics/img": "blog/non-fiction-comics/img" });
