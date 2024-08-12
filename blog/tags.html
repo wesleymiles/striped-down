@@ -3,12 +3,14 @@ pagination:
   data: collections
   size: 1
   alias: tag
-  addAllPagesToCollections: true
+  filter: ["post", "all"]
 layout: blog.liquid
 permalink: /blog/tag/{{ tag | slugify }}/index.html
 eleventyComputed:
   title: Posts Tagged with "{{ tag }}"
 ---
+
+
 
 <section class="hero">
 
