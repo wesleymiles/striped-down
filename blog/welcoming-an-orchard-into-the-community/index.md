@@ -2,7 +2,7 @@
 layout: blog.liquid
 title: Welcoming an orchard into the community
 description: My first major contribution to Underhill, VT
-tags: post
+tags: ["post", "community", "permaculture"]
 date: 2023-06-01
 ---
 

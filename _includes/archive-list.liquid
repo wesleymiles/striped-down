@@ -1,23 +1,5 @@
----
-layout: blog.liquid
-title: Blog
-description: Some writings about design, music, and planting
-eleventyNavigation: 
-  key: Blog
----
-
-<section class="hero">
-
-	<h1>{{ title }}</h1>
-	<p>{{ description }}</p> 
-
-</section>
-
-<section>
-
-    <ul class="archive-list">
+<ul class="archive-list">
         {%- for post in collections.post reversed -%}
-
             <li>
                 <article class="archive-entry">
                   <h3><a href="{{ post.url }}">{{ post.data.title }}</a></h3>
@@ -26,14 +8,10 @@ eleventyNavigation:
                 </article>
                     <dl class="blog-tags">
                         <dt>Tags:</dt>
-                        {% for tag in post.data.tags ) %}
-                            {% if tag != 'post' %}
-                                <dd class="tag"><a href="/blog/tag/{{ tag }}">{{ tag }}</a></dd>
-                             {% endif %}
+                        {% for tag in post.data.tags %}
+                            <dd class="tag"><a href="/blog/tag/{{ tag }}">{{ tag }}</a></dd>
                         {% endfor %}
                     </dl>
             </li>
         {%- endfor -%} 
-    </ul>
-
-</section> 
+</ul>

@@ -2,12 +2,9 @@
 layout: blog.liquid
 title: Chickens, part 2
 description: Chipping away at the coop this winter, one month in.
-tags: 
-    - post
-    - homesteading
+tags: ["post", "homesteading"]
 date: 2024-02-29
 ---
-
 
 
 <section class="hero"><time class="meta-date" datetime="{{ date | postDate }}">{{ date | postDate }}</time>

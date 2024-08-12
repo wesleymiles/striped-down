@@ -2,9 +2,7 @@
 layout: blog.liquid
 title: Chickens, part 1
 description: My anxiety-ridden adventure of what they call the gateway farm animal
-tags: 
-    - post
-    - homesteading
+tags: ["post", "homesteading"]
 date: 2024-02-09
 ---
 

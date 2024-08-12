@@ -4,6 +4,7 @@ title: Lightening on the way to a work conference
 description: Where he travels to Denver to do UX research to make websites better
 tags:
     - post
+    - journal
 date: 2024-05-06
 ---
 

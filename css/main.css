@@ -273,7 +273,6 @@ h1, h2, h3, h4{
 
 
 h1 {
-
    /*  fallback styles */
   font-family: 'Arial Narrow', Impact, Bahnschrift, 'DIN Alternate', 'Franklin Gothic Medium', 'Nimbus Sans Narrow', sans-serif-condensed, sans-serif;
   letter-spacing: -20px; 
@@ -288,7 +287,7 @@ h1 {
   letter-spacing: inherit;
   font-size: inherit;
 
-  font-size: 13.4vw;
+  font-size: 13vw;
   text-align: center;
   margin: .25em 0;
   word-wrap: break-word;
@@ -726,11 +725,6 @@ body > footer {
   border-top: var(--border);
 }
 
-/* gentil shake and move on image hover  */
-
-body > footer img.pine:hover {
-  animation: tilt-n-move-shaking 0.25s infinite;
-}
 
   body > footer nav {
     padding-top: calc(var(--gap)*10);
@@ -837,7 +831,8 @@ body > main > section.hero {
   .hero p {
     max-width: 855px;
     margin: 0 auto;
-    padding: calc(var(--gap) * 3) 0;
+    padding: var(--gap) 0;
+    text-align:center;
 /*    color: var(--text-light);*/
   }
 
@@ -1347,6 +1342,7 @@ section.library {
 
 /* Blog
 -------------------------------------------------- */
+
 
 body.post img {
   border-radius: var(--curve);

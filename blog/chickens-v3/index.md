@@ -2,9 +2,7 @@
 layout: blog.liquid
 title: Chickens, part 3
 description: Testing the coop and all other theories with real live chickens
-tags: 
-    - post
-    - homesteading
+tags: ["post", "homesteading"]
 date: 2024-08-02
 ---
 
@@ -69,8 +67,17 @@ Recently, we've discovered that one of the wyandotte's is a rooster. So, we'll s
 </figure>
 
 ## Summer is fast
-Now though, I've become used to them being around and generally becoming a chicken-person. I turn off the fence in the mornings and open it for them to roam (an automating opportunity.) I try to remember to feed them before starting on work. Then I close it in the evenings when they've cooped themselves and turn it back on. I  experiement with what scraps they'll eat and what organics can skip the path to compost. I lean on neighors when we want to go away. I like having them around. 
-
-
+Now though, I've become used to them being around and slowly transforming into a chicken-person. I turn off the fence in the mornings and open it for them to roam (an automating opportunity.) I try to remember to feed them before starting on work. Then I close it in the evenings when they've cooped themselves and turn it back on. I  experiement with what scraps they'll eat and what organics can skip the path to compost. I lean on neighors when we want to go away. I like having them around. 
+</div>
 </section>
+
+<figure>
+    <picture class="full" >
+
+        <source srcset="img/coup-coop-11.webp" type="image/webp">
+        <source srcset="img/coup-coop-11.jpg" type="image/jpg">
+        <img src="img/coup-coop-11.jpg" alt="6 chickens almost at adult size: two golden, two black, and two hybrid of each." >
+    </picture>
+    <figcaption>Five ladies and our surprise rooster</figcaption>
+</figure>
 
