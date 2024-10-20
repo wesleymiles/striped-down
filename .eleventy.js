@@ -1,6 +1,11 @@
-  // adding plugin to allow for active navigation
-  const eleventyNavigationPlugin = require("@11ty/eleventy-navigation");
-  
+// adding plugin to allow for active navigation
+const eleventyNavigationPlugin = require("@11ty/eleventy-navigation");
+
+// fixing how 11ty skipped spaces and new lines in tabs
+// eleventyConfig.setLibrary('md', null); // Disable Markdown rendering
+const markdownIt = require("markdown-it");
+
+
 module.exports = function(eleventyConfig) {
 
   // adding plugin to allow for active navigation
@@ -15,22 +20,17 @@ module.exports = function(eleventyConfig) {
     return DateTime.fromJSDate(dateObj).toLocaleString(DateTime.DATE_MED);
   });
 
-  // fixing how 11ty skipped spaces and new lines in tabs
-      // eleventyConfig.setLibrary('md', null); // Disable Markdown rendering
 
-const markdownIt = require("markdown-it");
-
-module.exports = function (eleventyConfig) {
   let options = {
     html: true,
     breaks: false,
     typographer: true,
     space:false,
-    htmlWhitespaceSensitivity:css,
+    //htmlWhitespaceSensitivity:css,
   };
-
   eleventyConfig.setLibrary("md", markdownIt(options));
-};
+
+
 
   // Copy the `img` and `css` folders to the output
   eleventyConfig.addPassthroughCopy("img");
@@ -60,8 +60,5 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy({ "blog/non-fiction-comics/img": "blog/non-fiction-comics/img" });
   eleventyConfig.addPassthroughCopy({ "work/mockup-demo": "work/mockup-demo" });   
 
-
-
   
 };
-

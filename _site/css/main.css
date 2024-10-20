@@ -8,7 +8,7 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
 }
 
 html {
-  font-size: 21px;
+  font-size: 20px;
   line-height: 1.6;
   color: #003B57;
   -webkit-font-smoothing: antialiased;
@@ -19,10 +19,6 @@ html {
   height: 100%;
 }
 
-p, li, time {
-/*system font - old style*/
-  font-family: 'Iowan Old Style', 'Palatino Linotype', 'URW Palladio L', P052, Apple Garamond, Baskerville, Times New Roman, Droid Serif, Times, Source Serif Pro, serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbolserif;
-}
 
 html,body {
   box-sizing: border-box;
@@ -41,11 +37,14 @@ body {
   --bg-light: #FAFAF7;
   --gapSm: 21px;
   --sans-serif: 'Bricolage Grotesque','Arial Narrow', Impact, Bahnschrift, 'DIN Alternate', 'Franklin Gothic Medium', 'Nimbus Sans Narrow', sans-serif-condensed, sans-serif;
+  --serif-system: 'Iowan Old Style', 'Palatino Linotype', 'URW Palladio L', P052, Apple Garamond, Baskerville, Times New Roman, Droid Serif, Times, Source Serif Pro, serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbolserif;
+  --sans-serif-system: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   --gap: 1.5rem;
   --texture: #F2F0ED url(/img/noise.png)x repeat;
   --curve: 8px;
   --contentWidth: 20vw;
   --border: 1px solid #c2e1c3;
+
   background: var(--bg-light);
 }
 
@@ -57,6 +56,12 @@ body {
 body {
   margin: 0;
   padding: var(--gap) var(--gap) 0 var(--gap);
+}
+
+p, li, time {
+/*system font - old style*/
+  font-family: var(--sans-serif-system);
+  color: #44555E;
 }
 
 
@@ -167,6 +172,12 @@ picture {
   display:block;
 }
 
+  picture.cover {
+    float: left;
+    padding: 0 var(--gap) var(--gap) 0; 
+    max-width: 25%;
+  }
+
   picture.full  {
     padding-top: 3em ; 
   }
@@ -259,9 +270,6 @@ ol {
 /* Fonts
 -------------------------------------------------- */
 
-/*   */
-
-
 
 h1, h2, h3, h4{
   font-family: var(--sans-serif);
@@ -269,7 +277,6 @@ h1, h2, h3, h4{
   margin-bottom: 1em;
   font-weight: 600;
 }
-
 
 
 h1 {
@@ -310,7 +317,7 @@ h2 {
   font-size: 2.2em;
   margin: 0 0 1em;
   font-variation-settings:
-   "wght" 400, 
+   "wght" 500, 
    "wdth" 100,
    "opsz" 50; 
 }
@@ -318,11 +325,11 @@ h2 {
 
 
 h3 {
-  font-size: 1.3em;
-  margin-bottom: .5em;
+  font-size: 1.4em;
+  margin-bottom: .75em;
   line-height: 1.3;
   font-variation-settings:
-   "wght" 500, 
+   "wght" 600, 
    "wdth" 100,
    "opsz" 90; 
 }
@@ -878,31 +885,26 @@ body > main > section.hero {
 
   }
 
-
-
-/* custom hero images
--------------------------------------------------- */
-
 /*  default hero  */
+
 .hero {
   background-image: url(/img/bg-barn.jpg);
   border-radius: var(--curve) var(--curve) 0 0;
 }
+
+/* custom hero images  */
 
 .speedy-brand .hero {
   background-image: url(/img/bg-sumac.jpg);
   text-align: center;
 }
 
-
   .Web.design .hero { background-image: url(/img/bg-hose.jpg); }
   .Blog .hero { background-image: url(/img/bg-trees.jpg); }
   .Research .hero { background-image: url(/img/bg-fence.jpg); }
+  [class*="books"] .hero {
+    background-image: url(/img/bg-books.jpg); }
 
-  /* option to override pre-made photos with css-based filters */
-  .Blog .hero. {
-      
-  }
 
 
 
@@ -1089,25 +1091,9 @@ body.work section[class^="--"] {
   }
 
 span.callout {
-/*  background-color: #f49f0a;*/
-/*  border-radius: 100%;*/
-/*  display: block;*/
-/*  position: absolute;*/
-/*  padding: 2em;*/
-/*  top: -20px;*/
-/*  left:10%;*/
   font-size: .8em;
   font-style: italic;
-/*  transform: rotate(-9deg);*/
-/*  outline: 1px solid var(--text-light);*/
-/*  animation: slowSpin 8s linear infinite; */
 }
-
-/*  span.callout.--alternate {
-    right: 10%;
-    left: initial;
-    transform: rotate(9deg);
-  }*/
 
   span.callout > * {
     margin: 0;
@@ -1135,21 +1121,7 @@ span.callout {
   border-radius: var(--curve);
   background: var(--bg-light);}
 
-/* angle every logo */
-/*.speedy-brand .logo-wall img:nth-child(4n-7) { transform: rotate(2.2deg); }
-.speedy-brand .logo-wall img:nth-child(3n-7) { transform: rotate(-2.2deg); }
-.speedy-brand .logo-wall img:nth-child(2n-7) { transform: rotate(1deg); }
-.speedy-brand .logo-wall img:nth-child(1n-7) { transform: rotate(-1deg); }
-*/
-/*.speedy-brand .logo-wall img:hover {
-  transform: scale(1.4);
-  transform: translateY(0);
-  transform: rotate(0);
-  box-shadow: 1px 1px 10px #ccc;
-  background: #fff;
-  background: var(--bg-light);
-}
-*/
+
 
 @media only screen and (max-width: 800px) {
 
@@ -1388,7 +1360,7 @@ body.post img {
     font-size: .7em;
   }
   .archive-entry p {
-    max-width: 30em;
+    max-width: 35em;
     margin-bottom: calc(var(--gap)/2);
   }
     .archive-entry h3 {
@@ -1558,7 +1530,7 @@ body.homepage .hero  {
 
 /* HORIZONTALLY SLIDING GALLERY 
 -------------------------------------------------- */
-
+/*
   .gallery-container figure {
     margin-bottom: 0;
   }
@@ -1593,16 +1565,15 @@ body.homepage .hero  {
     .gallery:last-child {
       margin-right: 5em;
       padding-right: 5em;
-/*  padding-right: calc(var(--gap) * 2);*/
     }
-
+*/
 /* Adjustments for larger screens */
-@media (min-width: 800px) {
 
+/*@media (min-width: 800px) {
   .homepage .gallery-container {  margin-top: calc(var(--gap)); }
   .gallery-item {  flex: 0 0 33.3333%;   }
 }
-
+*/
 
 
 /* Timeline styles - for wobblies page only for now
