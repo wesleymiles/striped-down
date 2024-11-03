@@ -1,7 +1,7 @@
 ---
 layout: blog.liquid
 title: The Bezzle
-description: A neo-noir about private prisons and white-collar frauds
+description: A neo-noir about private prisons and white-collar frauds set in 2009
 tags: ["post", "books"]
 date: 2024-10-16
 ---
@@ -21,7 +21,7 @@ Author: Cory Doctorow  • Published: 2024
 
 <figure>
     <picture class="cover">
-        <source srcset="https://images-na.ssl-images-amazon.com/images/P/B0C1X73SYZ.01._SX360_SCLZZZZZZZ_.jpg.jpg" type="image/jpg">
+        <source srcset="https://images-na.ssl-images-amazon.com/images/P/B0C1X73SYZ.01._SX360_SCLZZZZZZZ_.jpg" type="image/jpg">
         <img src="https://images-na.ssl-images-amazon.com/images/P/B0C1X73SYZ.01._SX360_SCLZZZZZZZ_.jpg" alt="The Bezzle: A Martin Hench Novel book cover" >
     </picture>
 </figure>

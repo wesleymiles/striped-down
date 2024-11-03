@@ -190,9 +190,8 @@ picture {
   p.caption {
     font-size: .9em;
     font-style: italic;
-    text-align: right;
     line-height: 1.1;
-    margin: var(--gapSm) 0;
+    margin: 0 var(--gapSm) 0 0;
    }
 
 

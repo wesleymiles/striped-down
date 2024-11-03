@@ -53,6 +53,9 @@ module.exports = function(eleventyConfig) {
 
 
   // Maintain image directories manually for now 😡 
+  eleventyConfig.addPassthroughCopy({ "blog/lunch-break-sacred-places/img": "blog/lunch-break-sacred-places/img" }); 
+  eleventyConfig.addPassthroughCopy({ "blog/lunch-break-sacred-places/img/warwick": "blog/lunch-break-sacred-places/img/warwick" }); 
+  eleventyConfig.addPassthroughCopy({ "blog/red-team-blues/img": "blog/red-team-blues/img" }); 
   eleventyConfig.addPassthroughCopy({ "project/wobblies/img": "project/wobblies/img" }); 
   eleventyConfig.addPassthroughCopy({ "blog/chickens-v3/img": "blog/chickens-v3/img" }); 
   eleventyConfig.addPassthroughCopy({ "blog/identifying-bark-in-winter/img": "blog/identifying-bark-in-winter/img" }); 
