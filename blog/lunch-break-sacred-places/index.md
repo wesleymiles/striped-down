@@ -11,8 +11,8 @@ date-updated: 2024-11-03
 	<time class="meta-date" datetime="{{ date | postDate }}">Written: {{ date | postDate }} | Updated: {{ date-updated | postDate}}</time>
 
 	<h1>Lunch break sacred places</h1>
-
-	A journal photo collection of my inclination toward nature during breaks. At every job, I wound up finding a nearby place that became a home base of sorts. My lunch break became a break from people and screens. This happened viscerally and unintentionally, not to 'forest bathe.' My mind and body required it and I abided.
+ 
+    At each of my computer jobs, I wound up finding a nearby place that became a home base of sorts, on lunch breaks - my break from people and screens. This happened viscerally and unintentionally. Apparently, my mind and body required it and I abided.
 
 </section>
 
@@ -29,16 +29,16 @@ When I was thinking about writing this post, previous sacred places from my past
 Below is a snapshot of places like this in adulthood.
 
 
-## Brady People ID, Burlington
+## Brady People ID, Burlington, MA
 
-Ok. This job stint didn’t have a non-human-made element to it, but Newbury Comics and Barns & Noble did offer separation from the screen. Also my phone during this era had little photographic capabilities, so I have few image records from then.
+I don't have photos from this era because this was before phones had a decent camera and my lunch spots weren't photogenic anyway. They took place either in the office or browsing Newbury Comics and Barns & Noble.  
 
-I cherish browsing record stores. I didn’t buy things often but meandering was darn fulfilling and I’d always exit with the batteries charged. This time was the dawn of podcasting. I’d often listen while scarfing down dollar menu items. In hindsight, aside from my amazement of insights from shows like Radiolab, the memory of sitting in a parking lot eating cheap food and listening to the radio brings up more regret than fulfillment.
+Meandering the aisles was darn fulfilling and I’d always exit with my mental batteries topped off. This era was also the dawn of podcasting. I’d often listen to shows like radiolab while scarfing down wendy's dollar menu items. Though more commercial and not sacred, these were my retreats.
 
 
 ## Brady People ID, Billerica, MA
 
-The office moved and my breaks were spent outside exploring. I don’t remember having one specific spot, but I got that hip new Instagram app and an even hipper panorama app which inspired capturing photos.
+The office moved and more of my breaks were spent outside exploring. This north-central region of Massachusetts was new to me. I don’t remember having one specific spot, but I got that hip new Instagram app and an even hipper panorama app which inspired capturing photos. 
 
  
 <figure>
@@ -141,9 +141,9 @@ The office moved and my breaks were spent outside exploring. I don’t remember 
  
 ## Adlife Office, Warwick, RI
 
-The office was tucked into a gross strip mall. Looking back, I understand how I came to adopt regular retreats to fresh air, plants, and dirt. While the endless pavement became too much, I did frequent some of the shops, like Boloco's burritos.
+The web design studio was tucked into a strip mall and had a store front. Looking back, I understand how I came to adopt regular retreats to fresh air, plants, and dirt. While the endless pavement became too much, I did frequent some of the shops, like Boloco for their decent burritos.
 
-There was a bike path on an old rail bed nearby that was just beautiful. Sometimes it was quite packed by like-minded pavement haters.
+There was a bike path on an old rail bed nearby that was just beautiful. It was often packed with like-minded pavement cynics.
 
 <figure>
     <picture>
@@ -222,9 +222,13 @@ There was a bike path on an old rail bed nearby that was just beautiful. Sometim
 
 ## iMarket, Winooski, VT
 
-When I joined the company, I brought with me my recharging ritual. The location was phenomenal. It sat right next to the mouth of the Winooski river, downstream from the dam. I had a spot I would go that allowed me to explore and linger a few moments during lunch. The spot was no secret. There was evidence of drinkers and other lingerers, and further back still, ruins of woolen mills.
+When I joined the company, I brought with me my recharging ritual. The location was phenomenal for it. The office sat near the mouth of the Winooski river, downstream from the dam. I had a spot I would go that allowed me to explore and linger a few moments during lunch. The spot was no secret. There was evidence of drinkers and other lingerers, and further back still, ruins of woolen mills.
 
-One winter day, my spot gave strong medicine in the form of a frozen coyote carcass. At the time, I was reading Naturalist Tom Brown Jr. who uses the term medicine as Native Americans do. “Medicine means the presence and power embodied in or demonstrated by a person, a place, an event, an object, or a natural phenomenon.” My initial awe, of brushing off the snow to the sight and presence, can still be conjured. I couldn’t get enough. Being with it felt magical and sacred. As winter passed into spring, one day the body was gone.
+One winter day, my spot gave strong medicine in the form of a frozen coyote carcass. At the time, I was reading the work of Naturalist Tom Brown Jr. He uses the term medicine that follows Native American traditions, referring to a spiritual force rather than its conventional association with physical healing.
+
+*“Medicine means the presence and power embodied in or demonstrated by a person, a place, an event, an object, or a natural phenomenon.”*
+
+My initial awe, of brushing off the snow to the sight and presence, can still be conjured. I couldn’t get enough. Being with it felt magical and sacred. As winter passed into spring, one day the body was gone.
 
 </figure>
     <picture>
@@ -232,7 +236,7 @@ One winter day, my spot gave strong medicine in the form of a frozen coyote carc
         <source srcset="img/winooski/winooski-frozen.jpg" type="image/jpg">
         <img src="img/winooski/winooski-frozen.jpg" alt=" Snow covered rocks, and ice on the Winooski river" >
     </picture>
-    <figcaption>Winooski river</figcaption>
+    <figcaption>Winooski river rocks in winter</figcaption>
 <figure>
 
 </figure>
@@ -251,7 +255,7 @@ One winter day, my spot gave strong medicine in the form of a frozen coyote carc
         <source srcset="img/winooski/office-shadows.jpg" type="image/jpg">
         <img src="img/winooski/office-shadows.jpg" alt=" Golden hour shadows from a cedar tree next to a residential/office building" >
     </picture>
-    <figcaption>Office shadows</figcaption>
+    <figcaption>Office shadows from cedars</figcaption>
 <figure>
 
 </figure>
@@ -278,7 +282,7 @@ One winter day, my spot gave strong medicine in the form of a frozen coyote carc
         <source srcset="img/winooski/grafitti-light.jpg" type="image/jpg">
         <img src="img/winooski/grafitti-light.jpg" alt=" light peeking through a concrete column that's covered in graffiti" >
     </picture>
-    <figcaption>On-ramp light </figcaption>
+    <figcaption>Under the onramp</figcaption>
 <figure>
 
 </figure>
@@ -296,9 +300,9 @@ One winter day, my spot gave strong medicine in the form of a frozen coyote carc
  
 ## iMarket, Colchester, Vermont
 
-The company moved to the third floor of the business park. You wouldn’t think there would be much break from the pavement, but remember, this was Vermont. There was a loop in an adjacent business park other walkers would take. When the air and light were right, we’d be out there circling. There was also a path through a 200-yard corridor of woods that led to the back of a Shaws. This was air conditioning in the summer, a canvas for animal tracks in the winter, and a decent spot to watch birds.
+The company moved to the third floor of a business park. You wouldn’t think there would be much break from the pavement, but remember, this was Vermont. There was a loop in an adjacent business park other walkers would take. When the air and light were right, we’d be out there circling. There was also a path through a 200-yard corridor of woods that led to the back of a Shaws. This was air conditioning in the summer, a canvas for animal tracks in the winter, and a decent spot to watch birds.
 
-The apps: iNaturalist and Merlin Bird ID also did their part to pull me outside and prompt me to observe and identify.
+The apps iNaturalist and Merlin Bird ID also did their part to pull me outside and prompt me to observe and identify.
 
 </figure>
     <picture>

@@ -1,7 +1,7 @@
 ---
 layout: blog.liquid
 title: Red Team Blues
-description: A neo-noir about private prisons and white-collar frauds
+description: A mystery thriller set in current times about a forensic accountant applying his powers of tracing and recovering funds to crypto.
 tags: ["post", "books"]
 date: 2024-11-03
 ---
@@ -33,7 +33,7 @@ This was my second in the Martin Hench series. This one is set in modern times a
 
 ## Words & phrases earmarked
 
-**Shift pod**: a legendarily, easy to assemble shelter I associate with burning man types. I'd run into a campgrounds.” “…the shelter, the futuristic, silver foil thing with quilted walls and circular, zip out port holes, as well as a fabric vestibule.”
+**Shift pod**: *“a legendarily, easy to assemble shelter I associate with burning man types. I'd run into a campgrounds.”* *“…the shelter, the futuristic, silver foil thing with quilted walls and circular, zip out port holes, as well as a fabric vestibule.” p.39*
 
 <figure>
     <picture >
@@ -42,7 +42,7 @@ This was my second in the Martin Hench series. This one is set in modern times a
     </picture>
 </figure>
 
-**Atmospheric river:** “a narrow corridor or filament of concentrated water vapor transported in the atmosphere. It’s like a river in the sky that can be 1,000 miles long.“ Atmospheric river floods: It’s the “consecutive atmospheric rivers, known as AR families, can cause significant flooding.” - [PBS](https://www.pbs.org/newshour/science/what-is-an-atmospheric-river-a-hydrologist-explains-the-good-the-bad-and-how-theyre-changing)
+**Atmospheric river:** *“a narrow corridor or filament of concentrated water vapor transported in the atmosphere. It’s like a river in the sky that can be 1,000 miles long.“* Atmospheric river floods: It’s the *“consecutive atmospheric rivers, known as AR families, can cause significant flooding.”* - [PBS](https://www.pbs.org/newshour/science/what-is-an-atmospheric-river-a-hydrologist-explains-the-good-the-bad-and-how-theyre-changing)
 
 **Faraday bag**: a way to make your phone untraceable. No signals can enter or leave it. 
 
@@ -59,13 +59,17 @@ This was my second in the Martin Hench series. This one is set in modern times a
 - In the us, no federal law regulates ALPR technology
 - All this constant surveillance poses serious privacy concerns
 
+## Quotes
+
 > Sleep eludes me because I am fraught. The compartments, I once housed my work in while I slumbered have long rotted away. Everything mixes now, the greatest hits real of my worries, my fears, my regrets. Those those most of all.”
 
 > The San Francisco Public library was the first public library branch in the country to hire a full-time social worker.”  p. 162 This was in 2009 and the role had a focus on the local homeless population.
     
 
 ## Critique
-Doctorow is smart and has a great conversational tone to teach us about tech without being bro-ey. His characters are flat though. There’s no feeling or emotionality as they see horrid scenes or toil. The lead, the accountant, never misses a perfect comeback and is icy like 007, which makes him unreliable. He actually has no flaws come to think of it. 
+Doctorow is smart and has a great conversational tone to teach us about tech without being bro-ey. His characters are flat though. There’s little feeling or emotionality as they see horrid scenes or participate in love scenes. The lead, the accountant, never misses a perfect comeback and is icy like 007. He actually has no flaws come to think of it. 
+
+I also learned **plot armor** through reading other critiques of the book. Wherein a fictional character is preserved from harm due to their necessity for the plot to proceed.
 
 
 
