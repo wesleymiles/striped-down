@@ -31,9 +31,9 @@ Below is a snapshot of places like this in adulthood.
 
 ## Brady People ID, Burlington, MA
 
-I don't have photos from this era because this was before phones had a decent camera and my lunch spots weren't photogenic anyway. They took place either in the office or browsing Newbury Comics and Barns & Noble.  
+I don't have photos from this era because this was before phones had a decent camera and my lunch spots weren't photogenic anyway. They took place either in the office or browsing Newbury Comics and Barns & Noble. 
 
-Meandering the aisles was darn fulfilling and I’d always exit with my mental batteries topped off. This era was also the dawn of podcasting. I’d often listen to shows like radiolab while scarfing down wendy's dollar menu items. Though more commercial and not sacred, these were my retreats.
+Meandering the aisles was darn fulfilling and I’d always exit with my mental batteries topped off. I'd take an hour to flip through the new heavy-paged Rosenfeld Media book on ux or css. This era was also the dawn of podcasting. I’d often listen to shows like radiolab while scarfing down wendy's dollar menu items. Though more commercial and not sacred, these were my retreats.
 
 
 ## Brady People ID, Billerica, MA

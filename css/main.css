@@ -117,18 +117,19 @@ blockquote {
     content: '“';
     position: absolute;
     color: #5EAA78;
-    top: -11px;
+    top: -.7em;
     left: 27px;
-    font-size: 1.3em; /* Adjust size as needed */
+    font-size: 1.5em; /* Adjust size as needed */
   }
 
 blockquote p {
-  font-size: 1.5em;
+  font-size: 1.2em;
   font-style: italic;
   margin-bottom: 2em;
   margin-top: 3em;
   border-left: var(--border);
   padding-left: 1.6em;
+  font-family: var(--serif-system);
 }
 
   blockquote cite {
@@ -415,7 +416,7 @@ div.button a:link {
       padding: calc(var(--gap) * 3) var(--contentWidth);
       position: relative;
       /*  ensure this, as a parent, doesn't let any children overflow */
-      overflow: auto;
+      overflow: inherit;
     }
 
 
@@ -1203,18 +1204,51 @@ section.library {
 }
 
 
-.library summary::marker {
-
+section.library summary::marker,
+section.library summary::-webkit-details-marker {
+  display: none;
 }
 
+  section.library details summary h2::before {
+    content: '';
+    position: relative;
+    float: right;
+    width: 20px;
+    height: 20px;
+    background: url(/img/icon-expand.svg) no-repeat center center;
+    background-size: 20px 20px;
+    border-radius: 50%;
+    border: solid 1px #ddd;
+    padding: 5px;
+  }
+
+
+  section.library .no-details summary,
   section.library details summary {
+    list-style-type: none;
     padding: var(--gapSm);
     background: #fff;
-    display: flex;
+    /*    display: flex; /* this will remove the triangle   */
     flex-direction: column;
     border-radius: var(--curve);
     border: 1px solid #c2e1c3;
+    transition: all 0.2s ease-in-out;
   }
+
+    section.library details summary:hover {
+      cursor: pointer;
+      border-color: var(--bg-dark);
+      box-shadow:
+        0 1px 1px hsl(0deg 0% 0% / 0.075),
+        0 2px 2px hsl(0deg 0% 0% / 0.075),
+        0 4px 4px hsl(0deg 0% 0% / 0.075),
+        0 8px 8px hsl(0deg 0% 0% / 0.075),
+        0 16px 16px hsl(0deg 0% 0% / 0.075)
+      ;
+      /* transform causing issues with background... */
+/*      transform: translate(-1px, -3px);*/
+    }
+
 
   section.library details {
     /* animate open? */
@@ -1235,7 +1269,7 @@ section.library {
     /*. when details are opened, stretch everything, but constrain the summary back to where it was. */
     section.library details[open] {
       /* Allow details content to stretch outside grid */
-      width: 80%;
+/*      width: 80%;
       grid-column: 1 / -1;
     }
 
@@ -1243,14 +1277,66 @@ section.library {
         width: 37%;
       }
       section.library details[open]  {
-
+*/
       }
 
 
+/* OPEN AS A MODAL
+-------------------------------------------------- */
+
 /*      when the details are opened,  */
-  section.library .popover {
+  section.library details .popover {
+    width: 20em;
+    border: 2px solid var(--border);
+    padding: 3em;
+    border-radius: var(--curve);
+    position: fixed;
+    max-width: 900px;
+    width: 80%;
+    height: 80%;
+    top: 2em;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    background: #fff;
+    z-index: 3;
+    box-shadow: 10px 10px 10px DIMGRAY;
+    overflow: auto;
   }
 
+
+/* THE "X" */
+section.library details[open] summary::after { 
+  content: "×"; 
+  color: #fff;
+  font-size: 25px;  
+/*  float: right;*/
+  padding: 10px 0 10px 10px;
+  z-index: 9;
+  position: fixed;
+  right: 5%;
+  top: 5px;
+}
+
+/* THE OVERLAY */
+section.library details[open] summary::before {
+  content: '';
+  display: block;
+  width: 100vw;
+  height: 100vh;
+  background: black;
+  position: fixed;
+  top: 0;
+  left: 0;
+  opacity: 0.5;
+  z-index: 1;
+}
+
+/* LOCK THE BACKGOUND WHEN THE MODAL IS OPEN */
+body:has(section.library details[open]){
+  overflow: hidden
+}
 
 
 /*  set the width so when the details opens, this stays put */
@@ -1299,6 +1385,7 @@ section.library {
           height: 300px;
           min-width: 200px;
           object-fit: cover;
+          outline: 1px solid #ddd;
       }
 
 
@@ -1492,7 +1579,7 @@ body.homepage .hero  {
     padding: 20px;
     background-color: #8b4513; /* Wooden color */
 }
-
+/*
 .book {
     width: 100px;
     height: 150px;
@@ -1500,7 +1587,7 @@ body.homepage .hero  {
     border: 1px solid #ccc;
     border-radius: 5px;
     overflow: hidden;
-    margin-bottom: 10px; /* Adjust spacing between books */
+    margin-bottom: 10px; 
 }
 
 .book img {
@@ -1515,7 +1602,7 @@ body.homepage .hero  {
     margin: 5px;
     font-size: 14px;
     cursor: pointer;
-    background-color: #4caf50; /* Green 
+    background-color: #4caf50;  
     color: #fff;
     border: none;
     border-radius: 4px;
@@ -1523,8 +1610,8 @@ body.homepage .hero  {
 
 .tags button:hover {
     background-color: #45a049;
-}*/
-
+}
+*/
 
 
 /* HORIZONTALLY SLIDING GALLERY 
@@ -1667,10 +1754,15 @@ p.tl-year:before {
 
 .tl blockquote p {
     margin: 0 0 1em;
-    font-size: 1.1em;
+    font-size: 1.2em;
     padding-left: 0;
     border: none;
 }
+
+  .tl blockquote p::before {
+    left: initial;
+  }
+
 
 .tl .tl-text {
     margin-top: 10px;
