@@ -4,9 +4,11 @@ title: Radical comics library
 description: A catalog of my collection of graphic novels. All are non-fiction. Many are memoirs. Most are considered radical.
 tags: ["post", "books"]
 date: 2023-10-01
+date-updated: 2024-11-22
 ---
 
 <section class="books hero">
+    <time class="meta-date" datetime="{{ date | postDate }}">Written: {{ date | postDate }} | Updated: {{ date-updated | postDate}}</time>
     <h1>{{ title }}</h1>
     <p>{{ description }}</p>
 </section>
@@ -223,8 +225,8 @@ date: 2023-10-01
                     </span>
                 </header>
                 <picture>
-                    <source srcset="https://cdn.thestorygraph.com/b8ynr6brhv36ovmsmoxj3od0b3ij" type="image/jpg">
-                    <img src="https://cdn.thestorygraph.com/b8ynr6brhv36ovmsmoxj3od0b3ij" alt="" />
+                    <source srcset="{{ page.url | url }}img/ginseng-cover.jpg" type="image/jpg">
+                    <img src="{{ page.url | url }}img/ginseng-cover.jpg" alt="" />
                 </picture>
                 <small>Read: 2023, Published: <span itemprop="copyrightYear">2020</span></small>
                 <section>

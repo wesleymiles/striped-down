@@ -124,7 +124,7 @@ blockquote {
 
 blockquote p {
   font-size: 1.2em;
-  font-style: italic;
+/*  font-style: italic;*/
   margin-bottom: 2em;
   margin-top: 3em;
   border-left: var(--border);
@@ -136,6 +136,7 @@ blockquote p {
     margin-top: 1em;
     display: block;
     font-size: 20px;
+    font-style: normal;
   }
   blockquote cite::before {
     content:'\2014';
