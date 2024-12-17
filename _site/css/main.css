@@ -70,9 +70,6 @@ hr {
     background-color: var(--bg-light);
     border-bottom: var(--border);
     margin-top: 3em;
-/*    margin: calc(var(--gap)*2) 0;*/
-/*    height: 10px;*/
-/*    border-top: 1px solid #c2e1c3;*/
 }
 
 ol, ul {
@@ -139,11 +136,29 @@ blockquote p {
     display: block;
     font-size: 20px;
     font-style: normal;
+    font-family: var(--sans-serif-system);
+    font-size: .8em;
   }
   blockquote cite::before {
     content:'\2014';
   }
 
+@media only screen and (max-width: 800px) {
+
+  blockquote p:before {
+    position: relative;
+    left: inherit;
+    top: inherit;
+    font-size: inherit;
+  }
+  blockquote p {
+    padding-left: 0;
+    border: 0;
+  }
+
+
+
+}
 
 a:link, a:visited {
   color: #005275;
@@ -217,7 +232,6 @@ picture {
   }
 
 }
-
 
 
 ol {
@@ -355,19 +369,13 @@ small {
 
 @media only screen and (max-width: 800px) {
 
-  html { font-size: 18px; }
+/*  html { font-size: 16px; }*/
   h1 { font-size: 14.5vw; }
   h2 { font-size: 1.3em; }
   h3 { font-size: 1.1em; }
   h4 { font-size: 1em; }
   body { padding:0 }
   footer { padding: 1em;}
-  blockquote p {
-    font-size: 1.2em;
-    border-left-width: 2px;
-    padding-left: .5em;
-    margin-top: 2em;
-  }
 
 }
 
@@ -647,7 +655,6 @@ nav li {
 
 @media only screen and (max-width: 800px) {
 
-  html {font-size: 20px;}
   nav {padding-left: 0;padding-right: 0}
   header nav { display: block; text-align: center;}
     header nav.nav-menu {  margin: 0 auto }
@@ -1481,6 +1488,15 @@ p.law-description {
 }
 */
 
+
+.Commonplace h2 {
+  background-color: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+
 .Commonplace hr {
   width: 15%;
   margin: 0 auto 4em;
@@ -1500,10 +1516,13 @@ p.law-description {
     padding: 0 0.25em;
     background-color: #fff;
     color: #69bb87;
-
 }
 
+@media only screen and (max-width: 800px) {
+  
+  .Commonplace h2, .Commonplace hr:after {  background-color: var(--bg-light); }
 
+}
 
 
 /* Blog

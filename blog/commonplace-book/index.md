@@ -40,13 +40,16 @@ date-updated: 2024-12-15
             <cite>Dieter Rams, influential industrial designer</cite>
         </p>
     </blockquote>
-    <blockquote>
-        <p>The closer the end-users' needs are analyzed and answered, the more successful the adoption or purchase of a solution."
-        <cite>Olivier Delarue, entrepreneur, philanthropist
-        </cite>
+
+<hr> 
+
+<blockquote>
+    <p>The closer the end-users' needs are analyzed and answered, the more successful the adoption or purchase of a solution."
+    <cite>Olivier Delarue, entrepreneur, philanthropist</cite>
     </p>
 </blockquote>
 
+<hr> 
 
 <blockquote>
     <p>Categories are both powerful and fundamentally arbitrary, which is a dangerous combination."
@@ -78,11 +81,9 @@ How to write for the way your coworkers actually read. Loved this <a href="https
         <source srcset="img/writing-pyramid.png" type="image/png">
         <img src="img/writing-pyramid.png" alt="The figure is titled: Inverted Pyramid News Writing. The top level is the widest, and is labeled Must-Have information. The middle level is labeled Additional useful context. The smallest level at the bottom point of the pyramid is labeled Minor, nice to know details. Two additional notes read: &quot;Critical info must go at the beginning&quot; and &quot;They could stop reading at any time.&quot;" >
     </picture>
-    <figcaption>District #5 Schoolhouse with Mount Mansfield in Background
-</figcaption>
 </figure>
 
-
+<hr>
 
  <blockquote>
     <p>
