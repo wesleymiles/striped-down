@@ -53,6 +53,7 @@ module.exports = function(eleventyConfig) {
 
 
   // Maintain image directories manually for now 😡 
+  eleventyConfig.addPassthroughCopy({ "blog/ims/img": "blog/ims/img" }); 
   eleventyConfig.addPassthroughCopy({ "blog/commonplace-book/img": "blog/commonplace-book/img" }); 
   eleventyConfig.addPassthroughCopy({ "blog/hack-day-2023/img": "blog/hack-day-2023/img" }); 
   eleventyConfig.addPassthroughCopy({ "blog/lunch-break-sacred-places/img": "blog/lunch-break-sacred-places/img" }); 

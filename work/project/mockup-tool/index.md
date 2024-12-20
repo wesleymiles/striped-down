@@ -2,8 +2,9 @@
 layout: layout.liquid
 tags: uxProject
 thumbnail: /img/mockup-tool.jpg
-projectTitle: Mockup Tool
+title: Mockup Tool
 description: I lead a project that improved the way our agency presented high-fidelity mockups to clients, before an Invision option was available.
+noindex: true
 ---
 
 	<section class="hero theme--dark">

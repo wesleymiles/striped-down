@@ -808,10 +808,13 @@ body > footer {
     margin-bottom: .5em;
    }
 
-.theme--dark h3 {
-  color: #69BB87;
-}
+  .theme--dark h3 {
+    color: #69BB87;
+  }
 
+  .theme--dark blockquote p::before {
+    color: #69BB87;
+  }
 
 
 

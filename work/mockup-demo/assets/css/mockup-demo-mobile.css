@@ -8,59 +8,44 @@
  
  
  body {
-	 font: 62.5%/1.8em -apple-system, BlinkMacSystemFont, avenir next, avenir, segoe ui, helvetica neue, helvetica, Ubuntu, roboto, noto, arial, sans-serif;
+	 font: 18px -apple-system, BlinkMacSystemFont, avenir next, avenir, segoe ui, helvetica neue, helvetica, Ubuntu, roboto, noto, arial, sans-serif;
 	 background: #161617;
 	 text-align: left;
 	 min-width: 320px;
-	 color: #222;
+	 color: #fff;
 	 line-height: 1;
 	 margin: 0;
  }
  
  h1,
+ h2,
  h3,
  ol.before-we-start > li::before {
 	 font-style: italic;
-	 font-family: Bitter, Iowan Old Style, Apple Garamond, Baskerville, Times New Roman, Droid Serif, Times, Source Serif Pro, serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
+	 font-family: Iowan Old Style, Apple Garamond, Baskerville, Times New Roman, Droid Serif, Times, Source Serif Pro, serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
 	 text-transform: none;
-	 /*line-height: 1.15em;*/
 	 letter-spacing: unset;
  }
+
+
  h1 {
-	 color: #2e3393;
-	 font-size: 5em;
-	 position: relative;
-	 margin: 1em 0 -0.5em;
- }
- 
- ol.before-we-start li p::before,
- h1::before {
-	 content: "";
-	 width: 210px;
-	 height: 2px;
-	 background: #27A3DA;
-	 margin-bottom: 15px;
-	 animation: stretch .25s ease;
-	 position: absolute;
-	 top: -22px;
- }
-	 ol.before-we-start li p::before {
-		 top: -9px;
-	 }
- 
- @keyframes stretch {
-	 0% { width: 0; }
-	 100% { width: 210px; }
- }
- h2 {
-	 margin: 1.2em 0 2em;
+	 margin-bottom: 1em;
 	 font-size: 3em;
-	 font-style: italic;
+ }
+
+ 
+
+
+ h2 {
+	 margin-bottom: 2em;
+	 font-size: 2em;
    font-weight: 400;
  }
  h3 {
-	 color: #2e3393;
+	 font-size: 1.5em;
  }
+
+
  
  a { transition: ease-in-out .25s all transparent;}
  a:link, a:visited {
@@ -77,10 +62,10 @@
 	 margin: 1em 0 1.5em;
  }
  p, li {
-	 font-size: 1.85em;
 	 line-height: 1.5;
  }
- 
+
+
  /* position mockup images */
  #wrapper .mockup {
 	 background-position: center top;
@@ -115,88 +100,36 @@
  
  /* --- INTRO PAGE --------------------------------------------------------------------------------------------------------------------------------- */
  
- .intro {
-	 background-color: #0461a7;
-	 background-image: url('../img/bg-intro.jpg');
-	 background-position: center bottom;
-	 background-repeat: no-repeat;
-	 background-size: cover;
-	 height: 100%;
-	 position: relative;
- }
- /* animate background */
-	 .intro {
-	   background-color: #0461a7;
-	   animation: fadebackground .5s;
-	 }
-	 @keyframes fadebackground {
-	   from {background-color: #000000;}
-	   to {background-color: #0461a7;}
-	 }
- 
- .intro p,
- .intro h1,
- .intro h2,
- .intro h3,
- .intro li {
-	 color: #fff;
- }
- 
- 
- .intro .image-width {
-	 margin: 0 auto;
-	 width: 100%;
-	 height: 100%;
-	 padding: 4em;
-	 border-top: #e4eefa solid 5px;
-	 overflow: auto; /* to help fill the height of the page with this container */
- }
- 
- .intro img.logo { 
-	 display: block;
-	 text-align: center;
-	 margin: 0 auto;
- }
- 
+
  .intro .main {
 	 max-width: 900px;
-	 margin: 0 auto;
-	 margin-top: 8em;
-	 margin-bottom: 9em;
+	 margin: 8em auto;
  }
  
  /* custom list numbers */
  ol.before-we-start {
 	 counter-reset: section;
-	 padding-left: 3em;
+	 padding-left: 1.5em;
  }
- ol.before-we-start > li {
-	 /*margin-bottom: 2em;*/
-	 list-style: none;
- }
- ol.before-we-start > li::before {
-	 counter-increment: section;
-	 content: counter(section) ". ";
-	 color: #d71920;
-	 font-size: 2em;
-	 line-height: 1;
-	 margin-left: -1em;
- }
- ol.before-we-start li h3 { 
-	 display: inline;
-	 font-size: 1.5em;
-   line-height: 1;
-   padding-left: 6px;
- }
- ol.before-we-start li p {
-	 position: relative;
- }
- ol.before-we-start li p,
- ol.before-we-start li li { 
-	 font-size: 1.2em;
-	 list-style: inside;
- }
- 
+	 ol.before-we-start > li {
+		 list-style: none;
+    	margin-bottom: 3em;
+	 }
+		 ol.before-we-start > li::before {
+			 counter-increment: section;
+			 content: counter(section) ". ";
+			 font-size: 1.5em;
+			 line-height: 1;
+			 margin-left: -1em;
+		 }
+		 ol.before-we-start li h3 { 
+			 display: inline;
+		 }
+		 ol.before-we-start li p,
+		 ol.before-we-start li li { 
+			 list-style: inside;
+		 }
+	 
  
  @media all and (max-width: 800px) {
  
@@ -219,13 +152,7 @@
 	 margin-bottom: 0;
  }
  
- /* slide up animate on the first page only */
- .intro header {	animation: slide .5s ease; }
- @keyframes slide {
-	 0% { bottom: -60px }
-	 100% { bottom: 0 }
- }
- 
+
  .menu-inner {
 	 position: absolute;
 	 top: 0;
