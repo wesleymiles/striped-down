@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+
+		
+		
+		
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hackday 2023 - automating accessbility within our CMS — Wes Carr</title>
+
+		<!-- SEO Tags -->
+		<meta property="og:title" content="Hackday 2023 - automating accessbility within our CMS"/>
+		<meta property="og:url" content="/blog/hack-day-2023/ "/>
+		<meta property="og:description" content="A concept our team came up with during our companies hackathon"/>
+		<meta property="og:image" content="/blog/hack-day-2023/indeximg/social-thumbnail.jpg"  /> 
+ 
+    <link rel="stylesheet" href="/css/main.css">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,400..800&display=swap" rel="stylesheet">
+
+    <link rel="icon" href="/img/favicon.ico">
+		<link rel="icon" href="/img/icon.svg" type="image/svg+xml">
+		<link rel="apple-touch-icon" href="/img/apple-touch-icon.png">
+
+  </head>
+
+	<body class="Hackday 2023 - automating accessbility within our CMS posthackathon">
+  	<a class="skip-link nav-tab" href='#main'>Skip to content</a>
+		<header class="mast">
+			<nav aria-label="Main">
+
+				<div class="site-logo">
+						<img src="/img/juniper-left.png" alt="juniper bough illustration" />
+					<a href="/">
+						Wes Carr
+					</a>
+				</div>
+
+				
+				<ul class="nav-menu">
+					  <li>
+					    	<a href="/web/">Web</a>
+				  	</li>
+					  <li>
+					    	<a href="/blog/">Blog</a>
+				  	</li>
+					  <li>
+					    	<a href="/one-week-logo/">Logo in-a-week</a>
+				  	</li>
+					</ul>
+
+			</nav>
+
+		</header>
+
+	<main id="main">
+
+    <section class="hero">
+    <time class="meta-date" datetime="Nov 4, 2023">Written: Nov 4, 2023 | Updated: Dec 18, 2024</time>
+<h1>Hackday 2023: <span>automating accessbility within our CMS</span></h1>
+<p>Sharing the results from a cross-team collab session.</p>
+</section>
+<section>
+<p>The Red Hat website marketing group hosted a hacktoberfest in 2023. About 25 people signed up and we broke into five teams each. It’s inspired by an agency we look up to <a href="https://hacktoberfest.com/about/">DigitalOcean</a>.</p>
+<p>The focus this year was unsurprisingly on how to leverage AI and automation to achieve our goals. My team rallied around automating accessibility.</p>
+<h2>Problem: lots o pages, lots o accessibility fails</h2>
+<p>We chose to focus on automating accessibility work. Starting with developers as an audience but laying a foundation for design and content teams. Our site(s) face accessibility challenges across thousands of pages, with varying issues. While our industry recognizes automation can’t solve all accessibility issues, it can solve <em>some</em>.</p>
+<p>We have tooling to score live pages, but nothing for checking unpublished ones. Nor do we have anything scalable to check against our internally adopted accessibility requirements.</p>
+<h3>Our idea: An automated tool that checks accessibility compliance <em>before</em> they’re published to the site.</h3>
+<p>The benefits</p>
+<ul>
+<li>No more spreadsheets (we use one for every project now)</li>
+<li>View a page’s accessibility score easily (see previous item)</li>
+<li>CMS as a single source of truth for page-accessibility</li>
+<li>Serves all three focus areas (design, dev, content)</li>
+<li>Eventually could supports progressive completion via the waterfall workflow (ex. starts in Figma and is at 55/100 items, and when finally ready to publish by a content strategist/publisher is at 95/100.)</li>
+<li>Issue creating and resolving log</li>
+</ul>
+<h2>Visuals</h2>
+<p>Each page on the website would have an “accessibility page health” page. This would allow anybody with access to the CMS to pop in and monitor accessibility. They could also sort all the pages based on the numerical number of health.</p>
+<figure>
+    <picture class="full">
+        <!-- <source srcset="img/cms-scorecard.webp"  type="image/webp"> -->
+        <source srcset="img/cms-scorecard.jpg"  type="image/jpg">
+        <img src="img/cms-scorecard.jpg" alt="" >
+    </picture>
+</figure>
+<p>Separating the items into human and non-human buckets is a key feature. See the subjective section below.</p>
+<figure>
+    <picture class="full">
+        <!-- <source srcset="img/cms-scorecard-2.webp"  type="image/webp"> -->
+        <source srcset="img/cms-scorecard-2.jpg"  type="image/jpg">
+        <img src="img/cms-scorecard-2.jpg" alt="" >
+    </picture>
+</figure>
+<p>While editing, the tool will constantly check itself against our standards. There will be a dedicated widget alerting the editor if any change they made breaks a guideline.</p>
+<figure>
+    <picture>
+        <!-- <source srcset="img/cms-scorecard-3.webp"  type="image/webp"> -->
+        <source srcset="img/cms-scorecard-3.jpg"  type="image/jpg">
+        <img src="img/cms-scorecard-3.jpg" alt="" >
+    </picture>
+</figure>
+<p>The widget was based on similar small-spaced solutions linked below.</p>
+<figure>
+    <picture>
+        <!-- <source srcset="img/cms-scorecard-4.webp"  type="image/webp"> -->
+        <source srcset="img/cms-scorecard-4.jpg"  type="image/jpg">
+        <img src="img/cms-scorecard-4.jpg" alt="" >
+    </picture>
+</figure>
+<p>The widget allows you to locate the offenders directly on the editor page, and also explore more to learn why its offending.</p>
+<figure>
+    <picture>
+        <!-- <source srcset="img/cms-scorecard-5.webp"  type="image/webp"> -->
+        <source srcset="img/cms-scorecard-5.jpg"  type="image/jpg">
+        <img src="img/cms-scorecard-5.jpg" alt="" >
+    </picture>
+    <figcaption>An element that's not following a guideline including a tooltip offering context</figcaption>
+</figure>
+<h2>Figma checks</h2>
+<p>We didn’t get to applying the idea to the designers’ workflow. But the work on the widget above could be rebuilt and applied to a Figma plug-in that had a similar UX and UI. Some parts of it, like color contrast and spacing, we could automate, and the other half would be a checklist. In this case, Figma would be the source of truth for design accessibility health.</p>
+<h2>Inspo</h2>
+<p>The widget was influenced by <a href="https://www.deque.com/axe/devtools/">Deque Axe devtools browser extenstion</a> and the <a href="https://www.drupal.org/docs/contributed-modules/ckeditor-accessibility-auditor">Drupal CKEditor Accessibility Auditor</a>, as they already had fantastically similar solutions.</p>
+<figure>
+    <picture>
+        <!-- <source srcset="img/inspo.webp"  type="image/webp"> -->
+        <source srcset="img/inspo.jpg"  type="image/jpg">
+        <img src="img/inspo.jpg" alt="" >
+    </picture>
+</figure>
+<figure>
+    <picture>
+        <!-- <source srcset="img/inspo-2.webp"  type="image/webp"> -->
+        <source srcset="img/inspo-2.jpg"  type="image/jpg">
+        <img src="img/cms-scorecard-2.jpg" alt="" >
+    </picture>
+</figure>
+<h2>Doing vision work like this has long-term effects</h2>
+<p>This was my second hack-esque event and it was a blast. You get to exercise your ability to dream beyond constraints in ways that aren’t possible in daily work.</p>
+<p><em>Sidebar:</em></p>
+<p>This morning I was thinking about how valuable a research-based analyst would be. Someone dedicated to tracking updates based on research would be ideal. We lack a way to measure how much research truly moves the needle…</p>
+<p>Spending time in vision-land, jolted this idea alive.</p>
+</section>
+
+
+<section class ="post-footer">
+<hr>
+    <nav class="posts-next-previous">
+                <p>
+                    <span class="label-prevnext">Previously:</span>
+                    <span class="title-prevnext"><a href="/blog/non-fiction-comics/">Radical comics library</a></span>
+                </p>
+                <p>
+                    <span class="label-prevnext">Next:</span>
+                    <span class="title-prevnext"><a href="/blog/chickens-v1/">Chickens, part 1</a></span>
+                </p>
+            </ul>
+
+    </nav>
+
+    </section>
+
+
+	</main>
+
+	<footer>
+		
+			<nav>
+				<p class="colophon">
+					Built with <a href="https://www.11ty.dev/">eleventy</a>
+				</p>
+				<p class="social">
+					<a href="https://www.linkedin.com/in/wes-carr-8918b99/">linkedin</a>  |  
+					<a href="https://unsplash.com/@wescarr">unsplash</a>  |  
+					<a href="mailto:hi@wescarr.com">email</a>
+				</p>
+			</nav>
+
+
+	</footer>
+
+	</body>
+</html>

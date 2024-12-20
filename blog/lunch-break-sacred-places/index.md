@@ -42,7 +42,7 @@ The office moved and more of my breaks were spent outside exploring. This north-
 
  
 <figure>
-    <picture>
+    <picture class="full">
     	<source srcset="img/burlington-billerica/edge-of-parking-lot-mist.webp" type="image/webp">
     	<source srcset="img/burlington-billerica/edge-of-parking-lot-mist.jpg" type="image/jpg">
         <img src="img/burlington-billerica/edge-of-parking-lot-mist.jpg" alt="A low mist covering sillhouetted dead stags behind a clouded blue sky" >
@@ -51,7 +51,7 @@ The office moved and more of my breaks were spent outside exploring. This north-
 </figure>
 
 <figure>
-    <picture>
+    <picture class="full">
     	<source srcset="img/burlington-billerica/coke-break.webp"  type="image/webp">
     	<source srcset="img/burlington-billerica/coke-break.jpg"  type="image/jpg">
         <img src="img/burlington-billerica/coke-break.jpg" alt="A red coca cola plastic bin on the edge of a parking lot" >
@@ -59,7 +59,7 @@ The office moved and more of my breaks were spent outside exploring. This north-
     <figcaption>Coke break</figcaption>
 </figure>
 <figure>
-    <picture>
+    <picture class="full">
     	<source srcset="img/burlington-billerica/office-grass.webp"  type="image/webp">
     	<source srcset="img/burlington-billerica/office-grass.jpg"  type="image/jpg">
         <img src="img/burlington-billerica/office-grass.jpg" alt="A large clump of grasses hiding an HVAC unit in an office park in the fall" >
@@ -67,7 +67,7 @@ The office moved and more of my breaks were spent outside exploring. This north-
     <figcaption>Ornamental, probably non-native grass</figcaption>
 </figure>
 <figure>
-    <picture>
+    <picture class="full">
     	<source srcset="img/burlington-billerica/two-and-four.webp"  type="image/webp">
     	<source srcset="img/burlington-billerica/two-and-four.jpg"  type="image/jpg">
         <img src="img/burlington-billerica/two-and-four.jpg" alt="Two mailboxes one over the other, mounted to a large tree" >
@@ -76,7 +76,7 @@ The office moved and more of my breaks were spent outside exploring. This north-
 </figure>
 
 <!-- <figure>
-    <picture>
+    <picture class="full">
     <source srcset="img/burlington-billerica/billerica-wormhole.jpg" alt="Misty clouded sunset reflected on a car roof in webpommercial parking lotwebp
     <source srcset="img/burlington-billerica/billerica-wormhole.jpg" alt="Misty clouded sunset reflected on a car roof in a commercial parking lot" >
         <img src="img/burlington-billerica/billerica-wormhole.jpg" alt="Misty clouded sunset reflected on a car roof in a commercial parking lot" >
@@ -85,7 +85,7 @@ The office moved and more of my breaks were spent outside exploring. This north-
 </figure> -->
 
 <figure>
-    <picture>
+    <picture class="full">
         <source srcset="img/burlington-billerica/lot-and-grasses.webp" type="image/webp">
         <source srcset="img/burlington-billerica/lot-and-grasses.jpg" type="image/jpg">
         <img src="img/burlington-billerica/lot-and-grasses.jpg" alt="From foreground to background, parking lot lines, a row of yellow grasses, telephone lines, then a house" >
@@ -94,7 +94,7 @@ The office moved and more of my breaks were spent outside exploring. This north-
 </figure>
 
 <figure>
-    <picture>
+    <picture class="full">
     	<source srcset="img/burlington-billerica/jim-farmer.webp"  type="image/webp">
     	<source srcset="img/burlington-billerica/jim-farmer.jpg"  type="image/jpg">
         <img src="img/burlington-billerica/jim-farmer.jpg" alt=" a feeding gym farmer, general contractor, sign above an abandoned shop" >
@@ -103,7 +103,7 @@ The office moved and more of my breaks were spent outside exploring. This north-
 </figure>
 
 <figure>
-    <picture>
+    <picture class="full">
     	<source srcset="img/burlington-billerica/off-season-pergola.webp"  type="image/webp">
     	<source srcset="img/burlington-billerica/off-season-pergola.jpg"  type="image/jpg">
         <img src="img/burlington-billerica/off-season-pergola.jpg" alt=" mostly blue sky, with a vast empty wooden pergola in the lower part of the photo" >
@@ -112,7 +112,7 @@ The office moved and more of my breaks were spent outside exploring. This north-
 </figure>
 
 <figure>
-    <picture>
+    <picture class="full">
     	<source srcset="img/burlington-billerica/spring-forest-path.webp"  type="image/webp">
     	<source srcset="img/burlington-billerica/spring-forest-path.jpg"  type="image/jpg">
         <img src="img/burlington-billerica/spring-forest-path.jpg" alt="panoramic fisheye effect on a spring-brown tree-filled forest path" >
@@ -121,7 +121,7 @@ The office moved and more of my breaks were spent outside exploring. This north-
 </figure>
 
 <figure>
-    <picture>
+    <picture class="full">
         <source srcset="img/burlington-billerica/water-tower-kmart-parking-lot.webp" type="image/webp">
         <source srcset="img/burlington-billerica/water-tower-kmart-parking-lot.jpg" type="image/jpg">
         <img src="img/burlington-billerica/water-tower-kmart-parking-lot.jpg" alt=" photograph looking into the sun of a fish eye panorama where the town water tower and clouds is blocking the sun" >
@@ -130,7 +130,7 @@ The office moved and more of my breaks were spent outside exploring. This north-
 </figure>
 
 <figure>
-    <picture>
+    <picture class="full">
     	<source srcset="img/burlington-billerica/billerica-rain-forest.webp"  type="image/webp">
     	<source srcset="img/burlington-billerica/billerica-rain-forest.jpg"  type="image/jpg">
       <img src="img/burlington-billerica/billerica-rain-forest.jpg" alt="walking path in the woods lined with lush tall green ferns" >
@@ -146,7 +146,7 @@ The web design studio was tucked into a strip mall and had a store front. Lookin
 There was a bike path on an old rail bed nearby that was just beautiful. It was often packed with like-minded pavement cynics.
 
 <figure>
-    <picture>
+    <picture class="full">
         <source srcset="img/warwick/fences-and-golden-hour.webp" type="image/webp">
         <source srcset="img/warwick/fences-and-golden-hour.jpg" type="image/jpg">
         <img src="img/warwick/fences-and-golden-hour.jpg" alt=" Young forest behind a parking lot fence" >
@@ -154,7 +154,7 @@ There was a bike path on an old rail bed nearby that was just beautiful. It was 
     <figcaption>Fall golden hour from a strip mall parking lot</figcaption>
 </figure>
 <figure>
-    <picture>
+    <picture class="full">
         <source srcset="img/warwick/rail-trail.webp" type="image/webp">
         <source srcset="img/warwick/rail-trail.jpg" type="image/jpg">
         <img src="img/warwick/rail-trail.jpg" alt="A bright and green paved trail surrounded by trees" >
@@ -162,7 +162,7 @@ There was a bike path on an old rail bed nearby that was just beautiful. It was 
     <figcaption>Nearby rail trail</figcaption>
 </figure>
 <figure>
-    <picture>
+    <picture class="full">
         <source srcset="img/warwick/abandonded-post.webp" type="image/webp">
         <source srcset="img/warwick/abandonded-post.jpg" type="image/jpg">
         <img src="img/warwick/abandonded-post.jpg" alt="A forest grown in around a short electric post" >
@@ -170,7 +170,7 @@ There was a bike path on an old rail bed nearby that was just beautiful. It was 
     <figcaption>Evidence of posts used by a railroad</figcaption>
 </figure>
 <figure>
-    <picture>
+    <picture class="full">
         <source srcset="img/warwick/cement.webp" type="image/webp">
         <source srcset="img/warwick/cement.jpg" type="image/jpg">
         <img src="img/warwick/cement.jpg" alt="a cement pier on a dirt bank" >
@@ -178,7 +178,7 @@ There was a bike path on an old rail bed nearby that was just beautiful. It was 
     <figcaption>Leaf shadows on cement</figcaption>
 </figure>
 <figure>
-    <picture>
+    <picture class="full">
         <source srcset="img/warwick/yellows.webp" type="image/webp">
         <source srcset="img/warwick/yellows.jpg" type="image/jpg">
         <img src="img/warwick/yellows.jpg" alt="Two yellow posts protecting a red fire hidrant surrounded by yellowing leaves." >
@@ -186,7 +186,7 @@ There was a bike path on an old rail bed nearby that was just beautiful. It was 
     <figcaption>Yellows</figcaption>
 </figure>
 <figure>
-    <picture>
+    <picture class="full">
         <source srcset="img/warwick/patriot-disposal.webp" type="image/webp">
         <source srcset="img/warwick/patriot-disposal.jpg" type="image/jpg">
         <img src="img/warwick/patriot-disposal.jpg" alt="A rocky, viney, hill behind a parking lot with a blue commercial trash bin" >
@@ -194,7 +194,7 @@ There was a bike path on an old rail bed nearby that was just beautiful. It was 
     <figcaption>Patriot disposal</figcaption>
 </figure>
 <figure>
-    <picture>
+    <picture class="full">
         <source srcset="img/warwick/overgrown-wall.webp" type="image/webp">
         <source srcset="img/warwick/overgrown-wall.jpg" type="image/jpg">
         <img src="img/warwick/overgrown-wall.jpg" alt="A stone wall with 20 year old trees growing up around it" >
@@ -202,7 +202,7 @@ There was a bike path on an old rail bed nearby that was just beautiful. It was 
     <figcaption>30-50 year old overgrown stone wall</figcaption>
 </figure>
 <figure>
-    <picture>
+    <picture class="full">
         <source srcset="img/warwick/breakroom.webp" type="image/webp">
         <source srcset="img/warwick/breakroom.jpg" type="image/jpg">
         <img src="img/warwick/breakroom.jpg" alt="Harsh shadows in a nook behind a strip mall with a red picnic table in the center" >
@@ -210,7 +210,7 @@ There was a bike path on an old rail bed nearby that was just beautiful. It was 
     <figcaption>Someone's break room</figcaption>
 </figure>
 <figure>
-    <picture>
+    <picture class="full">
         <source srcset="img/warwick/abandoned-barn.webp" type="image/webp">
         <source srcset="img/warwick/abandoned-barn.jpg" type="image/jpg">
         <img src="img/warwick/abandoned-barn.jpg" alt="A brown and patched barn coveredwith shadows from unseen trees" >
@@ -231,7 +231,7 @@ One winter day, my spot gave strong medicine in the form of a frozen coyote carc
 My initial awe, of brushing off the snow to the sight and presence, can still be conjured. I couldn’t get enough. Being with it felt magical and sacred. As winter passed into spring, one day the body was gone.
 
 </figure>
-    <picture>
+    <picture class="full">
         <source srcset="img/winooski/winooski-frozen.webp" type="image/webp">
         <source srcset="img/winooski/winooski-frozen.jpg" type="image/jpg">
         <img src="img/winooski/winooski-frozen.jpg" alt=" Snow covered rocks, and ice on the Winooski river" >
@@ -240,7 +240,7 @@ My initial awe, of brushing off the snow to the sight and presence, can still be
 <figure>
 
 </figure>
-    <picture>
+    <picture class="full">
         <source srcset="img/winooski/winooski-bare.webp" type="image/webp">
         <source srcset="img/winooski/winooski-bare.jpg" type="image/jpg">
         <img src="img/winooski/winooski-bare.jpg" alt=" winooski River with trees in the foreground, just starting to grow leaves in spring" >
@@ -250,7 +250,7 @@ My initial awe, of brushing off the snow to the sight and presence, can still be
 
 
 </figure>
-    <picture>
+    <picture class="full">
         <source srcset="img/winooski/office-shadows.webp" type="image/webp">
         <source srcset="img/winooski/office-shadows.jpg" type="image/jpg">
         <img src="img/winooski/office-shadows.jpg" alt=" Golden hour shadows from a cedar tree next to a residential/office building" >
@@ -259,7 +259,7 @@ My initial awe, of brushing off the snow to the sight and presence, can still be
 <figure>
 
 </figure>
-    <picture>
+    <picture class="full">
         <source srcset="img/winooski/snow-lines.webp" type="image/webp">
         <source srcset="img/winooski/snow-lines.jpg" type="image/jpg">
         <img src="img/winooski/snow-lines.jpg" alt=" yellow yellow, telephone pole support wires against the black-and-white winter backdrop" >
@@ -268,7 +268,7 @@ My initial awe, of brushing off the snow to the sight and presence, can still be
 <figure>
 
 </figure>
-    <picture>
+    <picture class="full">
         <source srcset="img/winooski/boat-steps.webp" type="image/webp">
         <source srcset="img/winooski/boat-steps.jpg" type="image/jpg">
         <img src="img/winooski/boat-steps.jpg" alt="stairs down a steep ravine into the river for humans and their boats" >
@@ -277,7 +277,7 @@ My initial awe, of brushing off the snow to the sight and presence, can still be
 <figure>
 
 </figure>
-    <picture>
+    <picture class="full">
         <source srcset="img/winooski/grafitti-light.webp" type="image/webp">
         <source srcset="img/winooski/grafitti-light.jpg" type="image/jpg">
         <img src="img/winooski/grafitti-light.jpg" alt=" light peeking through a concrete column that's covered in graffiti" >
@@ -286,7 +286,7 @@ My initial awe, of brushing off the snow to the sight and presence, can still be
 <figure>
 
 </figure>
-    <picture>
+    <picture class="full">
         <source srcset="img/winooski/arborvitae.webp" type="image/webp">
         <source srcset="img/winooski/arborvitae.jpg" type="image/jpg">
         <img src="img/winooski/arborvitae.jpg" alt="arborvitae trees in front of a small family SUV with golden hour light" >
@@ -305,7 +305,7 @@ The company moved to the third floor of a business park. You wouldn’t think th
 The apps iNaturalist and Merlin Bird ID also did their part to pull me outside and prompt me to observe and identify.
 
 </figure>
-    <picture>
+    <picture class="full">
         <source srcset="img/colchester/parking-lot-shapes.webp" type="image/webp">
         <source srcset="img/colchester/parking-lot-shapes.jpg" type="image/jpg">
         <img src="img/colchester/parking-lot-shapes.jpg" alt=" abstract shapes of a parking lot, snow edge, and dried grass" >
@@ -314,7 +314,7 @@ The apps iNaturalist and Merlin Bird ID also did their part to pull me outside a
 <figure>
 
 </figure>
-    <picture>
+    <picture class="full">
         <source srcset="img/colchester/wolf-tree.webp" type="image/webp">
         <source srcset="img/colchester/wolf-tree.jpg" type="image/jpg">
         <img src="img/colchester/wolf-tree.jpg" alt=" a large sprawling tree in the middle of a young forest" >
@@ -323,7 +323,7 @@ The apps iNaturalist and Merlin Bird ID also did their part to pull me outside a
 <figure>
 
 </figure>
-    <picture>
+    <picture class="full">
         <source srcset="img/colchester/tree-on-hill.webp" type="image/webp">
         <source srcset="img/colchester/tree-on-hill.jpg" type="image/jpg">
         <img src="img/colchester/tree-on-hill.jpg" alt=" a photo of a red truck and red tree from a low angle with the sky in the background" >
@@ -332,7 +332,7 @@ The apps iNaturalist and Merlin Bird ID also did their part to pull me outside a
 <figure>
 
 </figure>
-    <picture>
+    <picture class="full">
         <source srcset="img/colchester/adk-crispy.webp" type="image/webp">
         <source srcset="img/colchester/adk-crispy.jpg" type="image/jpg">
         <img src="img/colchester/adk-crispy.jpg" alt=" new York's Adirondack mountains from Vermont on a crispy snow-covered winter day" >
@@ -341,7 +341,7 @@ The apps iNaturalist and Merlin Bird ID also did their part to pull me outside a
 <figure>
 
 </figure>
-    <picture>
+    <picture class="full">
         <source srcset="img/colchester/adk-orange.webp" type="image/webp">
         <source srcset="img/colchester/adk-orange.jpg" type="image/jpg">
         <img src="img/colchester/adk-orange.jpg" alt="the Adirondack Mountains from afar with a bright orange foliage maple in the foreground" >
@@ -350,7 +350,7 @@ The apps iNaturalist and Merlin Bird ID also did their part to pull me outside a
 <figure>
 
 </figure>
-    <picture>
+    <picture class="full">
         <source srcset="img/colchester/parking-lot-colors.webp" type="image/webp">
         <source srcset="img/colchester/parking-lot-colors.jpg" type="image/jpg">
         <img src="img/colchester/parking-lot-colors.jpg" alt="Two leaved plants in the distance are tuning fall colors while others are green, pavement in foreground." >
@@ -359,7 +359,7 @@ The apps iNaturalist and Merlin Bird ID also did their part to pull me outside a
 <figure>
 
 </figure>
-    <picture>
+    <picture class="full">
         <source srcset="img/colchester/pooling-leaves.webp" type="image/webp">
         <source srcset="img/colchester/pooling-leaves.jpg" type="image/jpg">
         <img src="img/colchester/pooling-leaves.jpg" alt=" Photo from a three-story building down to a parking lot of yellow leaves, pooling in the rain" >
@@ -369,7 +369,7 @@ The apps iNaturalist and Merlin Bird ID also did their part to pull me outside a
 
 
 </figure>
-    <picture>
+    <picture class="full">
         <source srcset="img/colchester/forest-air-conditioner.webp" type="image/webp">
         <source srcset="img/colchester/forest-air-conditioner.jpg" type="image/jpg">
         <img src="img/colchester/forest-air-conditioner.jpg" alt="A forest grown in around a short electric post" >
@@ -378,7 +378,7 @@ The apps iNaturalist and Merlin Bird ID also did their part to pull me outside a
 <figure>
 
 </figure>
-    <picture>
+    <picture class="full">
         <source srcset="img/colchester/mansfield-in-winter.webp" type="image/webp">
         <source srcset="img/colchester/mansfield-in-winter.jpg" type="image/jpg">
         <img src="img/colchester/mansfield-in-winter.jpg" alt="View of mount mainsfield covered in snow" >

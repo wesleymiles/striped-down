@@ -21,6 +21,73 @@ date-updated: 2024-12-15
 ## 2024
 
 
+
+
+<hr>
+
+Spent some time thinking about running meetings... 
+
+- This book, Death by meetings, is recommended:
+    - "If you want your meetings to be more effective, and ultimate contribute to the bottom line of your business, then introduce healthy conflict within a light weight structure. Let the attendees emotion be the driving energy behind good decisions and business success.”
+    - "I usually practice out loud on and off for a day or two before hand. Once I’m in the meeting I will be freer to speak because as I interact, it will just flow, and I will be able to a adjust as I go, because I’ve heard how it comes across in my practice times."
+    - "Once you have spoken at meetings, leading a conversation actually becomes easy, and in fact, too easy."
+- Reddit tips: https://www.reddit.com/r/startups/s/vy8TQriVM6
+
+
+
+<hr>
+
+Came across someone sayinng, "Anxiety is excitement."" 
+
+Apparently, in our body there is no physiological difference between anxiety and excitement. 🤔
+
+<hr>
+
+<blockquote>
+    <p>We find what we seek”</p>
+</blockquote>
+
+<hr>
+
+
+On an <a href="https://www.artnet.com/artists/eric-sloane/">Eric Sloane</a> kick. Someone <a href="https://www.myfonts.com/search?query=queensland">made a font</a> based on his work and it's pretty good.  
+
+
+<figure>
+    <picture>
+        <source srcset="img/sloane.jpg" type="image/jpg">
+        <img src="img/sloane.jpg" alt="ERIC SLOANE, American (1905-1985), &quot;Sugar Season&quot;, ink on paper " >
+    </picture>
+    <figcaption>Sugar Season</figcaption>
+</figure>
+
+
+<hr>
+
+
+<blockquote>
+    <p>You have to act as if it were possible to radically transform the world. And you have to do it all the time.” <cite>Angela Davis.</cite>
+</p>
+</blockquote>
+
+<hr> 
+
+<blockquote>
+    <p>Through practices of reckless generosity and inter-generational table fellowship, the Farm sparks a lively conversation about how we might feed one another without buying and selling food.” <cite>Adam Wilson</cite>
+    </p>
+</blockquote>
+
+
+We need more [calm companies](https://justinjackson.ca/calm-company). See also, [it doesn't have to be crazy at work](https://basecamp.com/books/calm) and it’s okay to reject the growth-at-all-costs pursuit and [stay small](https://www.joachimeeckhout.com/p/company-of-one).
+
+<hr>
+
+Wall pass-through firewood door is a thing, albeit small.
+
+<hr>
+
+🛷 happy to discover new sled method of wood hauling
+
 <hr> 
 
 
