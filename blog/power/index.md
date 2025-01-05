@@ -1,7 +1,7 @@
 ---
 layout: blog.liquid
 title: 48 laws of power cards
-description: Summary of the laws stylized in a card format. An old idea I just made come to life but I'm still working on. Not sure what the future of it is.
+description: Summary of the laws stylized in a card format. An old idea I just made come to life but I'm still working on. Playground for styling cards.
 tags: ["post", "books"]
 date: 2024-12-01
 # date-updated: 2024-11-03

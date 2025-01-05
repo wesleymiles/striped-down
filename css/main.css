@@ -37,7 +37,7 @@ body {
   --bg-light: #FAFAF7;
   --gapSm: 21px;
   --sans-serif: 'Bricolage Grotesque','Arial Narrow', Impact, Bahnschrift, 'DIN Alternate', 'Franklin Gothic Medium', 'Nimbus Sans Narrow', sans-serif-condensed, sans-serif;
-  --serif-system: 'Iowan Old Style', 'Palatino Linotype', 'URW Palladio L', P052, Apple Garamond, Baskerville, Times New Roman, Droid Serif, Times, Source Serif Pro, serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbolserif;
+  --serif-system: Times New Roman, Droid Serif, Times, Source Serif Pro, serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbolserif;
   --sans-serif-system: X, -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   --gap: 1.5rem;
   --texture: #F2F0ED url(/img/noise.png)x repeat;
@@ -301,33 +301,20 @@ h1, h2, h3, h4{
 h1 {
    /*  fallback styles */
   font-family: 'Arial Narrow', Impact, Bahnschrift, 'DIN Alternate', 'Franklin Gothic Medium', 'Nimbus Sans Narrow', sans-serif-condensed, sans-serif;
-  letter-spacing: -20px; 
-  font-weight: bold;
-  font-size: 10em;
 
   /* ideal font styles */
   font-family: var(--sans-serif);
-  line-height: 1.1;
-  margin-bottom: 1em;
-  font-weight: 600;
-  letter-spacing: inherit;
-  font-size: inherit;
-  font-size: 8.3vw;
+  font-size: 8vw;
   margin: .25em 0 0;
-  word-wrap: break-word;
   line-height:.85; 
   color: var(--text-light);
-  letter-spacing: -0.029em;
   font-variation-settings:
    "wght" 800, 
    "wdth" 75,
-   "opsz" 30; 
+   "opsz" 50;
+  font-weight: 800;
 }
-
-  h1 span {
-    color: #c2e1c3;
-
-  }
+  h1 span { color: #c2e1c3  }
 
 
 h2 {
@@ -345,10 +332,6 @@ h3 {
   font-size: 1.4em;
   margin-bottom: .75em;
   line-height: 1.3;
-  font-variation-settings:
-   "wght" 600, 
-   "wdth" 100,
-   "opsz" 90; 
 }
 h3:not(:first-child) {  margin-top: 2em; }
 

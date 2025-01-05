@@ -14,7 +14,7 @@ Ironically, we each yearned for what the other had. I thought my work could use 
 
 These organizational systems occurred naturally during the growth each company.
 
-<aside>By systems I mean the structure of getting things done. Process flow. Production.</aside
+<aside>By systems I mean the structure of getting things done. Process flow. Production.</aside>
 
 Ours is a process of organized to-dos. The high level is a ‘sequence’, which can be triggered, then managers assign ‘to-dos’ out of that sequence to appropriate people, finally, the to-dos are done like checklists, such as, “style the 404 page”.
 

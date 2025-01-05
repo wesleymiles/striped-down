@@ -25,6 +25,45 @@ date-updated: 2024-12-15
 
 <hr>
 
+Been digging deep into observational, documentary, street photography. It took me a while to figure out the aesthetic I was after. I landed on:
+
+<em>Photos of built environments; quiet shadows on buildings, mundane and overlooked subjects, architectural details, the interplay of light and shadow emphasizing abstraction and geometry, and mood over human presence.</em>
+
+<figure>
+    <picture>
+        <source srcset="img/stephen-shore.jpg" type="image/jpg">
+        <img src="img/stephen-shore.jpg"  >
+    </picture>
+    <figcaption><a href="http://www.stephenshore.net/m/index.php">Stephen Shore</a></figcaption>
+</figure>
+
+<figure>
+    <picture>
+        <source srcset="img/ray-metzker.webp" type="image/webp">
+        <img src="img/ray-metzker.webp"  >
+    </picture>
+    <figcaption>Ray K Metzker <a href="https://www.theguardian.com/artanddesign/gallery/2021/feb/03/abstract-genius-ray-k-metzker-photographs-in-pictures">in this excellent page layout of a photo gallery on the guardian</a></figcaption>
+</figure>
+
+<figure>
+    <picture>
+        <source srcset="img/luigi-ghirri.webp" type="image/webp">
+        <img src="img/luigi-ghirri.webp"  >
+    </picture>
+    <figcaption><a href="https://www.theguardian.com/artanddesign/gallery/2024/sep/24/subversive-holiday-snaps-the-travels-of-luigi-ghirri-in-pictures">Luigi Ghirri</a> in the same guardian page template</figcaption>
+</figure>
+
+<hr>
+
+
+<blockquote>
+    <p>We need to confront honestly the issue of scale. Bigness has a charm and a drama that are seductive, especially to politicians and financiers; but bigness promotes greed, indifference, and damage, and often bigness is not necessary. You may need a large corporation to run an airline or to manufacture cars, but you don't need a large corporation to raise a chicken or a hog. You don't need a large corporation to process local food or local timber and market it locally.</p>
+    <cite>Wendell Berry</cite>
+</blockquote>
+
+
+<hr>
+
 Spent some time thinking about running meetings... 
 
 - This book, Death by meetings, is recommended:
@@ -129,6 +168,17 @@ Wall pass-through firewood door is a thing, albeit small.
 
 
 ## 2023
+
+
+<blockquote>
+
+In the beginning is the scream. We scream. <br /><br />
+When we write or when we read, it is easy to forget that the beginning is not the word, but the scream. Faced with the mutilation of human lives by capitalism, a scream of sadness, a scream of horror, a scream of anger, a scream of refusal: NO.
+<cite> from Change the world without taking power: The meaning of revolution today, by John Holloway, via [The Anarchist Library](https://theanarchistlibrary.org/library/john-holloway-change-the-world-without-taking-power)</cite>
+
+</blockquote>
+
+
 
 <hr>
 
