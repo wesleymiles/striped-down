@@ -34,12 +34,12 @@ Most of my life is taken up with family and my job, and both of those are genera
 - camping trips: 4
 - big hikes: camels hump in winter, moosilauke mt in nh
 - concerts: Chris Cohen, Flaming Lips
-- favorite photo I took: weary travelers 
+- favorite photo I took: family waiting for the bus and a european trashcan
 <figure>
     <picture>
-        <source srcset="img/tired.webp" type="image/webp">
-        <source srcset="img/tired.jpg" type="image/jpg">
-        <img src="img/tired.jpg">
+        <source srcset="img/fam.webp" type="image/webp">
+        <source srcset="img/fam.jpg" type="image/jpg">
+        <img src="img/fam.jpg">
     </picture>
 </figure> 
 
