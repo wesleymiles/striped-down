@@ -1,7 +1,7 @@
 ---
 layout: blog.liquid
 title: What happened in 2024
-description: Obligitory yearly review. I traveled more than usual, discovered I’m an HSP (highly sensitive person), and read some good books.
+description: First yearly review in years. I traveled more than usual, discovered I’m an HSP (highly sensitive person), and read some good books.
 tags: ["post","journal"]
 date: 2025-01-01
 ---

@@ -36,7 +36,7 @@ body {
   --highlight: rgba(255, 255, 255, .3);
   --bg-light: #FAFAF7;
   --gapSm: 21px;
-  --sans-serif: 'Bricolage Grotesque','Arial Narrow', Impact, Bahnschrift, 'DIN Alternate', 'Franklin Gothic Medium', 'Nimbus Sans Narrow', sans-serif-condensed, sans-serif;
+  --sans-serif: 'bricolage','Arial Narrow', Impact, Bahnschrift, 'DIN Alternate', 'Franklin Gothic Medium', 'Nimbus Sans Narrow', sans-serif-condensed, sans-serif;
   --serif-system: Times New Roman, Droid Serif, Times, Source Serif Pro, serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbolserif;
   --sans-serif-system: X, -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   --gap: 1.5rem;
@@ -48,7 +48,34 @@ body {
   background: var(--bg-light);
 }
 
+@font-face {
+  font-family: "fallback-serif";
+  ascent-override: 90.20%;
+  descent-override: 22.48%;
+  line-gap-override: 0.00%;
+  size-adjust: 107.40%;
+  src: local("Arial");
+}
 
+/*
+@font-face {
+  font-family: 'bricolage condensed';
+  src: url('/fonts/BricolageGrotesque10ptCondensed-ExtraBold.woff2') format("woff2");
+  letter-spacing: inherit;
+  font-size: 7.5vw;
+  font-weight: 800;
+  font-variation-settings:
+   "wght" 800, 
+   "wdth" 75,
+   "opsz" 50;
+   font-display: swap;
+}
+
+@font-face {
+  font-family: 'bricolage';
+  src: url('/fonts/BricolageGrotesque-SemiBold.woff2') format("woff2");
+  font-display: swap;
+}*/
 
 /* Base styles
 -------------------------------------------------- */
@@ -290,40 +317,34 @@ ol {
 -------------------------------------------------- */
 
 
-h1, h2, h3, h4{
-  font-family: var(--sans-serif);
+h1, h2, h3, h4{  
+  /* fallback font attributes */
+  font-family: 'Arial Narrow', Impact, Bahnschrift, 'DIN Alternate', 'Franklin Gothic Medium', 'Nimbus Sans Narrow', sans-serif-condensed, sans-serif;
+  font-family: 'bricolage';
   line-height: 1.1;
   margin-bottom: 1em;
   font-weight: 600;
 }
 
-
 h1 {
-   /*  fallback styles */
-  font-family: 'Arial Narrow', Impact, Bahnschrift, 'DIN Alternate', 'Franklin Gothic Medium', 'Nimbus Sans Narrow', sans-serif-condensed, sans-serif;
+  /* fallback font attributes */
+  font-size: 8vw;
+  letter-spacing: -.05em;
+  font-stretch: 75%;
 
-  /* ideal font styles */
-  font-family: var(--sans-serif);
-  font-size: 7.5vw;
+  font-family: "bricolage condensed";
   margin: .25em 0 0;
   line-height:.85; 
   color: var(--text-light);
-  font-variation-settings:
-   "wght" 800, 
-   "wdth" 75,
-   "opsz" 50;
   font-weight: 800;
 }
+
   h1 span { color: #c2e1c3  }
 
 
 h2 {
   font-size: 2em;
   margin: 0 0 1em;
-  font-variation-settings:
-   "wght" 500, 
-   "wdth" 100,
-   "opsz" 50; 
 }
   h2:not(:first-child) {  margin-top: 2em; }
 
@@ -440,14 +461,9 @@ body > main > section.cta.theme--dark {
 
   /* override that small middle column for sections that need a colored background */
   body > main > section.hero {
-/*    padding: calc(var(--gap) * 3) calc(var(--contentWidth) / 3);*/
     padding: calc(var(--gap)* 3) calc(var(--contentWidth)* 1.2);
   }
 
-  body > main > section.stretch {
-/*    padding: 0 calc(var(--contentWidth) / 3);*/
-
-  }
 
   body > main > section.stretch--bg {
     padding-left: 0; 
@@ -458,13 +474,6 @@ body > main > section.cta.theme--dark {
 /*  give a bg to a pitcure element if not in a section element  */
 body > main > picture {
   background-color: #fff;
-}
-
-
-/* 3 columns of photos in a stretched section */
-
-body > main > section.stretch .masonry {
-
 }
 
 
@@ -682,7 +691,7 @@ header.mast .site-logo {
   }
 
     header nav a {
-      padding-left: 0 5px 0;
+      padding-left: 5px;
       word-wrap: normal;
       text-decoration: none;
       display: block;
@@ -704,7 +713,7 @@ header.mast .site-logo {
 @media only screen and (max-width: 800px) {
     
     header.mast .site-logo {
-      padding: var(--gapSm) 0;
+      padding: calc(var(--gapSm)/2) 0;
       display: inherit;
     }
 
