@@ -4,36 +4,42 @@
     <meta charset="UTF-8">
 
     {% if noindex %}
-   		<meta name="robots" content="noindex,nofollow">		
-		{% endif %}
-		
-		{% if page.url == '/one-week-logo/' %}
-			<!-- Include Lottie library -->
-			<script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.12.2/lottie.min.js" type="text/javascript"></script>
-		{% endif %}
+		<meta name="robots" content="noindex,nofollow">		
+	{% endif %}
+	
+	{% if page.url == '/one-week-logo/' %}
+		<!-- Include Lottie library -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.12.2/lottie.min.js" type="text/javascript"></script>
+	{% endif %}
+
+
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ title }} — Wes Carr</title>
 
-		<!-- SEO Tags -->
-		{% if description %}
-  		<meta name="description" content="{{ description }}" />
-		{% endif %}
-		<meta property="og:title" content="{{ title }}"/>
-		<meta property="og:url" content="{{ page.url | url }} "/>
-		<meta property="og:description" content="{{ description }}"/>
-		<meta property="og:image" content="{{ page.filePathStem }}{{ 'img/social-thumbnail.jpg' | url }}"  /> 
- 
+	<!-- SEO Tags -->
+	{% if description %}
+		<meta name="description" content="{{ description }}" />
+	{% endif %}
+
+	<meta property="og:title" content="{{ title }}"/>
+	<meta property="og:url" content="{{ page.url | url }} "/>
+	<meta property="og:description" content="{{ description }}"/>
+	<meta property="og:image" content="{{ page.filePathStem }}{{ 'img/social-thumbnail.jpg' | url }}"  />
+	 
     <link rel="stylesheet" href="{{ '/css/main.css' | url }}">
   	<link rel="stylesheet" href="{{ '/css/bricolage.css' | url }}">	
+	{% if tags contains 'tab' %}
+		<link rel="stylesheet" href="{{ '/css/tabs.css' | url }}">
+	{% endif %}
 
     <link rel="icon" href="/img/favicon.ico">
-		<link rel="icon" href="/img/icon.svg" type="image/svg+xml">
-		<link rel="apple-touch-icon" href="/img/apple-touch-icon.png">
+	<link rel="icon" href="/img/icon.svg" type="image/svg+xml">
+	<link rel="apple-touch-icon" href="/img/apple-touch-icon.png">
 
   </head>
 
-	<body class="{{ title }} {{ tags }}">
+	<body class="{{ title }} {{ tags | join: " " }}">
   	<a class="skip-link nav-tab" href='#main'>Skip to content</a>
 		<header class="mast">
 			<nav aria-label="Main">

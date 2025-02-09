@@ -39,6 +39,16 @@ body {
   --sans-serif: 'bricolage','Arial Narrow', Impact, Bahnschrift, 'DIN Alternate', 'Franklin Gothic Medium', 'Nimbus Sans Narrow', sans-serif-condensed, sans-serif;
   --serif-system: Times New Roman, Droid Serif, Times, Source Serif Pro, serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbolserif;
   --sans-serif-system: X, -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  --monospace-system:  ui-monospace, 
+  Menlo, Monaco, 
+  "Cascadia Mono", "Segoe UI Mono", 
+  "Roboto Mono", 
+  "Oxygen Mono", 
+  "Ubuntu Mono", 
+  "Source Code Pro",
+  "Fira Mono", 
+  "Droid Sans Mono", 
+  "Consolas", "Courier New", monospace;
   --gap: 1.5rem;
   --texture: #F2F0ED url(/img/noise.png)x repeat;
   --curve: 8px;
@@ -85,7 +95,7 @@ body {
   padding: var(--gap) var(--gap) 0 var(--gap);
 }
 
-p, li, time {
+p, li, time, table, dl {
 /*system font - old style*/
   font-family: var(--sans-serif-system);
   color: #44555E;
@@ -659,6 +669,37 @@ nav li {
         margin-left: 0;
         flex: auto;}
   
+}
+
+/* table defaults
+-------------------------------------------------- */
+
+table {
+  width: 100%; /* Full width */
+  border-collapse: collapse; /* Remove gaps between cells */
+  font-size: .8em;
+}
+
+th, td {
+  padding: 8px 12px; /* Add spacing inside cells */
+  /* border: 1px solid #ddd; Light border for clarity */
+}
+
+th {
+  background-color: #f4f4f4; /* Subtle header background */
+  font-weight: bold; /* Emphasize headers */
+}
+
+tr {
+border-bottom: 1px solid #e6e3e0;
+}
+
+tr:nth-child(even) {
+  /* background-color: #f9f9f9; Alternate row color */
+}
+
+tr:hover {
+  /* background-color: #f1f1f1; Highlight row on hover */
 }
 
 
@@ -1626,9 +1667,35 @@ body.Blog section.post-footer {
 
 }
 
+
+/* posts under the category of "art" = drawings and paintings */
+
+body.art > main > section.hero {
+  /* height: 20em; */
+  /* overflow: visible; */
+  padding-bottom: 10em;
+}
+  body.art picture.primary-image {
+    padding: 0;
+    margin-top: -10em;
+  }
+
+
 /* Basic styling for clickable tags 
 -------------------------------------------------- */
-
+label, .label {
+  font-family: var(--monospace-system);
+  display: inline-block;
+  text-transform: uppercase;
+  padding: 4px 10px;
+  margin-bottom: 5px;
+  font-weight: 500;
+  font-size: .8em;
+  border-radius: 20px;
+  color: #000;
+  background-color: #f5f3f1;
+  transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+}
 
 #filters {
   display: flex;
@@ -1637,15 +1704,8 @@ body.Blog section.post-footer {
   justify-content: center;
   padding-bottom: 0
 }
-  #filters label {
-    font-family: var(--sans-serif);
-    display: inline-block;
-    padding: 3px 12px;
-    border-radius: 20px;
-    font-size: .8em;
+#filters label {
     cursor: pointer;
-    background-color: #fff;
-    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
     }
     #filters input[type="radio"] {
         display: none;
@@ -1655,6 +1715,8 @@ body.Blog section.post-footer {
         color: #fff;
     }
 
+
+    
 
 /* remove column from main
 -------------------------------------------------- */

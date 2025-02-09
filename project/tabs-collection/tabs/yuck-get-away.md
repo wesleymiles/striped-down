@@ -7,11 +7,13 @@ date: 2024-04-06
 ---
 
 
-A F#m D x4
+<pre>
 
-Bm D Bm D
+<span>A</span> <span>F#m</span> <span>D</span> x4
 
-A         F#m
+<span>Bm</span> <span>D</span> <span>Bm</span> <span>D</span>
+
+A         <span>F#m</span>
 We break down          
 
           D
@@ -20,130 +22,136 @@ and then  break it up
 A
 again
 
-F#m       D
+<span>F#m</span>       D
 Me and my guitar,drowning
 
-A         F#m
+A         <span>F#m</span>
 down,down,down
 
 D              A
 not even  the pain kicks in
 
-F#m                D
+<span>F#m</span>                D
 Tell me when the pain kicks in 
 
 
-Bm             D
+<span>Bm</span>             D
 Oh I can't get away
 
-Bm             D
+<span>Bm</span>             D
 Oh I can't get away
 
-Bm             D
+<span>Bm</span>             D
 Oh I can't get away
 
-Bm             D
+<span>Bm</span>             D
 No I can't get away
 
-            A         F#m
+            A         <span>F#m</span>
 panoramic view
 
        D                A
 That's one thing I wont do
 
-F#m        D
+<span>F#m</span>        D
 no shouted abuse
 
-         A            F#m
+         A            <span>F#m</span>
          from the corner of my mind
 
 D              A
 not even  the pain kicks in
 
-F#m                D
+<span>F#m</span>                D
 Tell me when the pain kicks in 
 
-Bm             D
+<span>Bm</span>             D
 Oh I can't get away
 
-Bm             D
+<span>Bm</span>             D
 Oh I can't get away
 
-Bm             D
+<span>Bm</span>             D
 Oh I can't get away
 
-Bm             D
+<span>Bm</span>             D
 No I can't get away
 
-            A       E           Bm
+            A       E           <span>Bm</span>
 Summer sun says get out more,
-  D       Bm
+  D       <span>Bm</span>
   i need you
   D
   I want you but
-A                 E           Bm
+A                 E           <span>Bm</span>
 I can't get this feeling off my mind
-  D        Bm
+  D        <span>Bm</span>
   I want you
   D
   I need you 
 
-F#m D
-F#m D
-F#m D
-Bm Bm
+<span>F#m</span> D
+<span>F#m</span> D
+<span>F#m</span> D
+<span>Bm</span> <span>Bm</span>
 
-F#m D x4
+<span>F#m</span> D x4
 
 
-Bm             D
+<span>Bm</span>             D
 Oh I can't get away
 
-Bm             D
+<span>Bm</span>             D
 Oh I can't get away
 
-Bm             D
+<span>Bm</span>             D
 Oh I can't get away
 
-Bm             D
+<span>Bm</span>             D
 No I can't get away
 
-            A       E           Bm
+            A       E           <span>Bm</span>
 Summer sun says get out more,
 
-  D       Bm
+  D       <span>Bm</span>
 i need you
 
 D
 I want you but
 
-A                 E           Bm
+A                 E           <span>Bm</span>
 I can't get this feeling off my mind
 
-D        Bm
+D        <span>Bm</span>
 I want you
 
 D
 I need you 
 
-A       E           Bm
+A       E           <span>Bm</span>
 Summer sun says get out more,
 
-D       Bm
+D       <span>Bm</span>
 i need you
 
 D
 I want you but
 
-A                 E           Bm
+A                 E           <span>Bm</span>
 I can't get this feeling off my mind
 
-D        Bm
+D        <span>Bm</span>
 I want you
 
 D
 I need you 
 
 
-End on F#m
+End on <span>F#m</span>
 
+
+
+
+
+
+</pre>

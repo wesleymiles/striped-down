@@ -25,8 +25,8 @@ eleventyNavigation:
                   <p><span class="excerpt">{{ post.data.description }}</span></p>
                 </article>
                     <dl class="blog-tags">
-                        <dt>Tags:</dt>
-                        {% for tag in post.data.tags ) %}
+                        <dt>Tagged:</dt>
+                        {% for tag in post.data.tags %}
                             {% if tag != 'post' %}
                                 <dd class="tag"><a href="/blog/tag/{{ tag }}">{{ tag }}</a></dd>
                              {% endif %}

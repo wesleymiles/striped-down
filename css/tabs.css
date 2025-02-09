@@ -1,0 +1,12 @@
+pre {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: .9em;
+  font-weight: 500;
+}
+
+pre span {
+  padding: 2px;
+  background-color: #eee;
+  font-family: var(--sans-serif-system);
+  font-weight: 400;
+}

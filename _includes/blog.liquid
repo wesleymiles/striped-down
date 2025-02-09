@@ -3,6 +3,24 @@
     {{ content }}
 
 <section class ="post-footer">
+
+
+<dl class="blog-tags">
+    {% if tags %}
+        <dt>Tagged:</dt>
+  
+        {% for tag in tags %}
+            {% if tag != 'post' %}
+                
+                <a href="/blog/tag/{{ tag }}">{{ tag }}</a>
+
+            {% endif %}
+        {% endfor %}
+  
+    {% endif %}
+</dl>
+          
+
 <hr>
     <nav class="posts-next-previous">
 

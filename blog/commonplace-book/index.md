@@ -1,13 +1,13 @@
 ---
 layout: blog.liquid
 title: Commonplace book
-description: An ongoing collection of quotes and notes that were originally jotted down from a weekly notion journal. Intending to be an extension of my brain.
+description: An ongoing collection of quotes and notes that were originally jotted down from a weekly notion journal.Intending to be an extension of my brain.
 tags: ["post", "books"]
 date: 2024-11-11
 date-updated: 2024-12-15
 ---
 
-<section class="hero">
+    <section class="hero">
     <time class="meta-date" datetime="{{ date | postDate }}">Written: {{ date | postDate }} | Updated: {{ date-updated | postDate}}</time>
 
 # {{title}}
@@ -15,8 +15,25 @@ date-updated: 2024-12-15
 
 </section>
 
-<section>
+https: //bjhess.com/commonplace
+
+
+<section id="filters">
+    <input type="radio" id="all" name="tag" value="All" checked>
+    <label for="all">All</label>
+    <input type="radio" id="quotes" name="tag" value="Quotes">
+    <label for="quotes">Quotes</label>
+    <input type="radio" id="art" name="tag" value="Art">
+    <label for="art">Art</label>
+    <input type="radio" id="ideas" name="tag" value="Ideas">
+    <label for="ideas">Ideas</label>
+    <input type="radio" id="biz-ness" name="tag" value="Biz-ness">
+    <label for="biz-ness">Biz-ness</label>
+</section>
+
+<section >
     <div class="content-inner">
+
 
 ## 2024
 
@@ -25,42 +42,45 @@ date-updated: 2024-12-15
 
 <hr>
 
-Been digging deep into observational, documentary, street photography. It took me a while to figure out the aesthetic I was after. I landed on:
+<div data-tags="art">
+    Been digging deep into observational, documentary, street photography. It took me a while to figure out the aesthetic I was after. I landed on:
 
-<em>Photos of built environments; quiet shadows on buildings, mundane and overlooked subjects, architectural details, the interplay of light and shadow emphasizing abstraction and geometry, and mood over human presence.</em>
+    <em>Photos of built environments; quiet shadows on buildings, mundane and overlooked subjects, architectural details, the interplay of light and shadow emphasizing abstraction and geometry, and mood over human presence.</em>
 
-<figure>
-    <picture>
-        <source srcset="img/stephen-shore.jpg" type="image/jpg">
-        <img src="img/stephen-shore.jpg"  >
-    </picture>
-    <figcaption><a href="http://www.stephenshore.net/m/index.php">Stephen Shore</a></figcaption>
-</figure>
+    <figure>
+        <picture>
+            <source srcset="img/stephen-shore.jpg" type="image/jpg">
+            <img src="img/stephen-shore.jpg"  >
+        </picture>
+        <figcaption><a href="http://www.stephenshore.net/m/index.php">Stephen Shore</a></figcaption>
+    </figure>
 
-<figure>
-    <picture>
-        <source srcset="img/ray-metzker.webp" type="image/webp">
-        <img src="img/ray-metzker.webp"  >
-    </picture>
-    <figcaption>Ray K Metzker <a href="https://www.theguardian.com/artanddesign/gallery/2021/feb/03/abstract-genius-ray-k-metzker-photographs-in-pictures">in this excellent page layout of a photo gallery on the guardian</a></figcaption>
-</figure>
+    <figure>
+        <picture>
+            <source srcset="img/ray-metzker.webp" type="image/webp">
+            <img src="img/ray-metzker.webp"  >
+        </picture>
+        <figcaption>Ray K Metzker <a href="https://www.theguardian.com/artanddesign/gallery/2021/feb/03/abstract-genius-ray-k-metzker-photographs-in-pictures">in this excellent page layout of a photo gallery on the guardian</a></figcaption>
+    </figure>
 
-<figure>
-    <picture>
-        <source srcset="img/luigi-ghirri.webp" type="image/webp">
-        <img src="img/luigi-ghirri.webp"  >
-    </picture>
-    <figcaption><a href="https://www.theguardian.com/artanddesign/gallery/2024/sep/24/subversive-holiday-snaps-the-travels-of-luigi-ghirri-in-pictures">Luigi Ghirri</a> in the same guardian page template</figcaption>
-</figure>
+    <figure>
+        <picture>
+            <source srcset="img/luigi-ghirri.webp" type="image/webp">
+            <img src="img/luigi-ghirri.webp"  >
+        </picture>
+        <figcaption><a href="https://www.theguardian.com/artanddesign/gallery/2024/sep/24/subversive-holiday-snaps-the-travels-of-luigi-ghirri-in-pictures">Luigi Ghirri</a> in the same guardian page template</figcaption>
+    </figure>
+</div>
 
 <hr>
 
+<div data-tags="quote">
 
 <blockquote>
     <p>We need to confront honestly the issue of scale. Bigness has a charm and a drama that are seductive, especially to politicians and financiers; but bigness promotes greed, indifference, and damage, and often bigness is not necessary. You may need a large corporation to run an airline or to manufacture cars, but you don't need a large corporation to raise a chicken or a hog. You don't need a large corporation to process local food or local timber and market it locally.</p>
     <cite>Wendell Berry</cite>
 </blockquote>
-
+</div> 
 
 <hr>
 
@@ -81,13 +101,17 @@ Came across someone sayinng, "Anxiety is excitement.""
 Apparently, in our body there is no physiological difference between anxiety and excitement. 🤔
 
 <hr>
+<div data-tags="quote">
 
 <blockquote>
     <p>We find what we seek”</p>
 </blockquote>
 
+</div>
+
 <hr>
 
+<div data-tags="art">
 
 On an <a href="https://www.artnet.com/artists/eric-sloane/">Eric Sloane</a> kick. Someone <a href="https://www.myfonts.com/search?query=queensland">made a font</a> based on his work and it's pretty good.  
 
@@ -100,16 +124,20 @@ On an <a href="https://www.artnet.com/artists/eric-sloane/">Eric Sloane</a> kick
     <figcaption>Sugar Season</figcaption>
 </figure>
 
+</div>
 
 <hr>
 
-
-<blockquote>
-    <p>You have to act as if it were possible to radically transform the world. And you have to do it all the time.” <cite>Angela Davis.</cite>
-</p>
-</blockquote>
+<div data-tags="quote">
+    <blockquote>
+        <p>You have to act as if it were possible to radically transform the world. And you have to do it all the time.” <cite>Angela Davis.</cite>
+    </p>
+    </blockquote>
+</div>
 
 <hr> 
+
+<div data-tags="quote">
 
 <blockquote>
     <p>Through practices of reckless generosity and inter-generational table fellowship, the Farm sparks a lively conversation about how we might feed one another without buying and selling food.” <cite>Adam Wilson</cite>
@@ -118,17 +146,24 @@ On an <a href="https://www.artnet.com/artists/eric-sloane/">Eric Sloane</a> kick
 
 
 We need more [calm companies](https://justinjackson.ca/calm-company). See also, [it doesn't have to be crazy at work](https://basecamp.com/books/calm) and it’s okay to reject the growth-at-all-costs pursuit and [stay small](https://www.joachimeeckhout.com/p/company-of-one).
+</div>
 
 <hr>
 
+<div>
 Wall pass-through firewood door is a thing, albeit small.
 
 <hr>
 
+<div>
 🛷 happy to discover new sled method of wood hauling
+
+
+</div>
 
 <hr> 
 
+<div>
 
     Reynolds Woodcock's extreme need for control in Phantom Thread: 
 
@@ -138,24 +173,33 @@ Wall pass-through firewood door is a thing, albeit small.
 
 
 
+</div>
 
 <hr> 
+
+<div data-tags="quote">
 
   <blockquote>
         <p>The best design is one that solves a problem without calling attention to itself." 
             <cite>Dieter Rams, influential industrial designer</cite>
         </p>
     </blockquote>
+</div>
 
 <hr> 
+
+<div data-tags="quote">
 
 <blockquote>
     <p>The closer the end-users' needs are analyzed and answered, the more successful the adoption or purchase of a solution."
     <cite>Olivier Delarue, entrepreneur, philanthropist</cite>
     </p>
 </blockquote>
+</div>
 
 <hr> 
+
+<div data-tags="quote">
 
 <blockquote>
     <p>Categories are both powerful and fundamentally arbitrary, which is a dangerous combination."
@@ -170,7 +214,8 @@ Wall pass-through firewood door is a thing, albeit small.
 ## 2023
 
 
-<blockquote>
+<div data-tags="quote">
+
 
 In the beginning is the scream. We scream. <br /><br />
 When we write or when we read, it is easy to forget that the beginning is not the word, but the scream. Faced with the mutilation of human lives by capitalism, a scream of sadness, a scream of horror, a scream of anger, a scream of refusal: NO.
@@ -178,16 +223,18 @@ When we write or when we read, it is easy to forget that the beginning is not th
 
 </blockquote>
 
-
+</div>
 
 <hr>
 
+<div>
 I'm a few months into working on Red Hat Docs. I appreciated Hashicorp's internal practices made public.
 
 Or as they put it, "A website dedicated to making our implicit practices explicit."
 
 Their [PRD template](https://works.hashicorp.com/articles/prd-template)
 
+</div>
 
 <hr>
 
@@ -257,17 +304,22 @@ The local historical society identified the 15 spots <a href="https://underhillh
 </figure>
 
 
+</div>
 
 <hr> 
+
+<div data-tags="quote">
 
     <blockquote>
         <p>All fluids in the body, including the lymph, are connected to emotions. **Emotions are meant to be felt so they can *flow*.”** 
         <cite>GNMers(German New Medicine) https://itsanneandsteve.com/journal/energy-causes-of-swollen-lymph-nodes-that-will-surprise-you</cite>
         </p>
     </blockquote>
+</div>
 
 <hr> 
 
+<div>
 How to Disagree with Someone More Powerful than You:
 
 - risk assess NOT saying something
@@ -280,6 +332,8 @@ How to Disagree with Someone More Powerful than You:
 
 <hr>
 
+<div data-tags="art">
+
 Liked these pseudo-psychedelic cartoons and their messages.
 
 <figure>
@@ -290,22 +344,26 @@ Liked these pseudo-psychedelic cartoons and their messages.
     <figcaption>- Artist Nelson's <a href="https://www.instagram.com/madebynelson">instagram</a></figcaption>
 </figure>
 
+</div>
 
 <hr>
+<div data-tags="quote">
 
 <blockquote>
     <p>If a monkey hoarded more bananas than it could eat, while most of the other monkeys starved, scientists would study that monkey to figure out what the heck was wrong with it. When humans do it, we put them on the cover of Forbes.
     <cite>David Graeber</cite></p>
 </blockquote>
-
+</div>
 
 <hr>
 
-
+<div>
 Critically reviewed selection of multicultural and social justice books for children, young adults, and educators: [socialjusticebooks.org](https://socialjusticebooks.org/)
+</div>
 
 <hr> 
 
+<div data-tags="quote">
 
 ✊🏼
 
@@ -323,18 +381,22 @@ We forget to feed our fear
 
 -- *Confessions of a Futon-Revolutionist, The Weakerthans*
 
+</div>
 
 <hr> 
 
+<div>
     <blockquote>
         <p>Open source is about inverting power structures and creating access and opportunities for everyone"
             <cite>from github, via <a href="https://data.collectiveaction.tech/action/217">Collective action in tech</a></cite>
         </p>
     </blockquote>    
 
+</div>
 
 <hr> 
 
+<div>
 Loved this idea that a local farmers market offers a cider press. You bring your own apples. Those presses are beasts and make sense to share.
 
 <figure>
@@ -356,9 +418,11 @@ Loved this idea that a local farmers market offers a cider press. You bring your
 </figure>
 
 
+</div>
 
 <hr> 
 
+<div>
 
     Critique of rationalism
 
@@ -368,9 +432,11 @@ Loved this idea that a local farmers market offers a cider press. You bring your
         </p>
     </blockquote>
 
+</div>
 
 <hr> 
 
+<div>
     <blockquote>
         <p>Hold  the sadness and pain of samsara in your heart and at the same time the power and vision of the Great Eastern Sun. Then the warrior can make a proper cup of tea.”
         <cite>Chogyam Trungpa. <br />
@@ -381,9 +447,11 @@ Loved this idea that a local farmers market offers a cider press. You bring your
 
 
 
+</div>
 
 <hr> 
 
+<div>
     <blockquote>
         <p>Your mind is the garden, your thoughts are the seeds. The harvest can either be flowers or weeds.”
         <cite> William Wordsworth</cite>
@@ -391,9 +459,11 @@ Loved this idea that a local farmers market offers a cider press. You bring your
     </blockquote>
 
 
+</div>
 
 <hr> 
 
+<div>
     <figure>
         <picture>
             <source srcset="img/take-up-more-space.jpg" type="image/jpg">
@@ -403,17 +473,21 @@ Loved this idea that a local farmers market offers a cider press. You bring your
     </figure>
 
 
+</div>
 
 <hr> 
 
+<div>
     <blockquote>
         <p>what you resist persists.”</p>
     </blockquote>
 
 
+</div>
 
 <hr> 
 
+<div>
     <blockquote>
         <p>Perhaps she had never confronted the voice in her head because it had been easier to listen to it. It had been safer to sustain the belief that she was a bad person. At least then she was in control.”
         <cite>From <a href="https://www.bookofthemonth.com/all-hardcovers/evil-eye-1462">Evil eye</a> </cite>
@@ -429,9 +503,11 @@ Loved this idea that a local farmers market offers a cider press. You bring your
 
 
 
+</div>
 
 <hr> 
 
+<div>
 
     Inspiring process and plant list of this community beaitification project. 
 
@@ -442,25 +518,31 @@ Loved this idea that a local farmers market offers a cider press. You bring your
     </blockquote>
 
 
+</div>
 
 <hr> 
 
+<div>
     <blockquote>
         <p>The Party is pure evil; therefore no act is evil if it is to overthrow the Party. Fervent belief in one’s own righteousness is all it takes for a person, or a nation, to commit atrocious acts.” CE</p>
     </blockquote>
 
 
+</div>
 
 <hr> 
 
+<div>
     
     💙 MVPs = ‘Minimum Lovable Products' to <a href="https://upstatement.com/blog/how-we-power-lovable-products-with-user-insights">upstatement</a>. 
 
 
 
+</div>
 
 <hr> 
 
+<div>
     <blockquote>
         <p>Treat it like it's your show. You're the host. You just have to act like this is your show and you have every reason to be there.”
             <cite>John Mulaney's advice to Birbigs</cite>
@@ -469,9 +551,11 @@ Loved this idea that a local farmers market offers a cider press. You bring your
 
 
 
+</div>
 
 <hr> 
 
+<div>
     <blockquote>
         <p>Children are not the people of tomorrow, but are people of today. They have a right to be taken seriously, and to  be treated with tenderness and respect. They should be allowed to grow into whoever they were meant to be. ‘The unknown person’ inside of them is our hope for the future.” 
             <cite><a href="https://en.wikipedia.org/wiki/Janusz_Korczak">Janusz Korczak</a>, Polish early child's rights advocate</cite>
@@ -482,9 +566,11 @@ Loved this idea that a local farmers market offers a cider press. You bring your
 
 
 
+</div>
 
 <hr> 
 
+<div>
     <blockquote>
         <p>All conflict
         Between friends, lovers,
@@ -498,9 +584,11 @@ Loved this idea that a local farmers market offers a cider press. You bring your
 
 
 
+</div>
 
 <hr> 
 
+<div>
     <blockquote>
         <p>We were told that “everything’s on streaming now”. We thought we’d have access to 120 years of cinema history. Instead, we have access only to the content that can be readily and easily monetised, trapped in garish and unreliable platforms. There’s no guarantee your favourite movie will still be streaming next month. It feels as if the internet’s vast early possibility has shrunk.” 
             <cite><a href="https://www.theguardian.com/commentisfree/2023/apr/27/rented-dvds-netflix-streaming-movie-fans-cinema-history">the guardian</a></cite>
@@ -508,9 +596,11 @@ Loved this idea that a local farmers market offers a cider press. You bring your
     </blockquote>
 
 
+</div>
 
 <hr> 
 
+<div>
     <blockquote>
         <p>Lonliness does not come from having no people around you, but from being unable to communicate the things that seem important to you.”
             <cite>Carl Jung</cite>
@@ -518,9 +608,11 @@ Loved this idea that a local farmers market offers a cider press. You bring your
     </blockquote>
 
 
+</div>
 
 <hr> 
 
+<div>
 
     <img src="https://vermontmasternaturalist.org/wp-content/uploads/2021/08/image-8-20-21-at-8.38-pm.jpg" />
 
@@ -528,9 +620,11 @@ Loved this idea that a local farmers market offers a cider press. You bring your
 
 
 
+</div>
 
 <hr> 
 
+<div>
 
 Hell of a <a href="https://www.are.na">homepage</a>: 
 
@@ -549,17 +643,21 @@ If this speaks to you, try it now:
 
 
 
+</div>
 
 <hr> 
 
+<div>
 
 [Pronoia](https://t.densediscovery.com/CL0/https:%2F%2Fen.wikipedia.org%2Fwiki%2FPronoia_(psychology)%3Futm_source=DenseDiscovery-252/1/0100018a1a30f0a7-39d2707b-ccf9-45e5-b908-e4c57a3e511d-000000/avEGflJsIFh32tDKKX63bzi8LNyMbXxa2bPq5BPv59Q=314), the belief that the universe is conspiring in your favour – the opposite of paranoia. We can all do with an anchoring belief in the eye of the storm that helps us sail through the chaotic life challenges that come our way.
 
 
 
+</div>
 
 <hr> 
 
+<div>
 
     <blockquote>
         <p>Clear is kind, unclear is unkind
@@ -569,25 +667,31 @@ If this speaks to you, try it now:
 
 
 
+</div>
 
 <hr> 
 
+<div>
 
     I've been an admirer of the Arlington, MA design firm <a href="https://goinvo.com">GoInvo</a> since I lived nearby. They're a small team who's narrowed their focus on one industry: healthcare, and they're dedicated to open source design. Anywho, they've put together a decent list of <a href="https://running.goinvo.com/design">design resources</a> within their team wiki.
 
 
 
+</div>
 
 <hr> 
 
+<div>
 
     Clinging to what is false causes of suffering. If you are suffering, study what you are clinging to.
 
 
 
+</div>
 
 <hr> 
 
+<div>
 
     Free online Human-centered design (HCD), courtesy of the Queensland Government offers. <a href="https://www.forgov.qld.gov.au/service-delivery-and-community-support/design-public-services/human-centred-design/human-centred-design-training">6-part series</a>
     
@@ -600,3 +704,27 @@ If this speaks to you, try it now:
 
 </section>
 
+
+
+    <script>
+        // hook up the tags 
+        document.addEventListener('DOMContentLoaded', () => {
+            const filters = document.querySelectorAll('#filters input[type="radio"]');
+            const bookList = document.querySelectorAll('#Commonplace div');
+
+            filters.forEach(filter => {
+                filter.addEventListener('change', () => {
+                    const selectedTag = document.querySelector('#filters input[type="radio"]:checked').value;
+                    filterBooks(selectedTag);
+                });
+            });
+
+            function filterBooks(tag) {
+                bookList.forEach(book => {
+                    const bookTags = book.getAttribute('data-tags').split(', ').map(tag => tag.trim());
+                    const isVisible = tag === 'All' || bookTags.includes(tag);
+                    book.closest('div').style.display = isVisible ? 'block' : 'none';
+                });
+            }
+        });
+    </script>
