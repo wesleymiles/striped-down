@@ -1,0 +1,92 @@
+---
+layout: blog.liquid
+title: Art
+description: A place to gather drawings from drawings from this year with pen and india ink. I also got to play with a slideshow tool.
+date-updated: 2025-03-05
+eleventyNavigation: 
+  key: Art
+---
+
+<section class="hero">
+
+    <time class="meta-date" datetime="{{ date | postDate }}">Last updated: {{ date-updated | postDate}}<time>
+	<h1>{{ title }}</h1>
+	<p>{{ description }}</p> 
+
+</section>
+
+<section>
+  
+
+  <div class="pswp-gallery pswp-gallery--single-column" id="gallery">
+    <ul>
+      {% for image in collections.images %}
+        <li>
+          <a href="{{ image.url }}" data-pswp-width="{{ image.width }}" data-pswp-height="{{ image.height }}">
+            <img src="{{ image.url }}" alt="{{ image.alt }}">
+          </a>
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
+  
+
+</section> 
+
+
+
+
+<style>
+
+#gallery img {
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: transform 0.2s ease-in-out;
+  object-fit: cover;
+  object-position: 50% 50%;
+}
+
+#gallery img:hover {
+  transform: scale(1.05);
+}
+
+
+
+#gallery > ul {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-auto-rows: 200px;
+  grid-gap: 1em;
+  padding: 0;
+}
+
+#gallery > ul > li {
+  list-style: none;
+}
+
+#gallery li a {
+  display: block;
+  line-height: 0;
+  height: 200px;
+  max-height: 200px;
+}
+
+#gallery > ul > li img {
+  /* width: 100%; */
+  /* height: auto; */
+  /* max-height: 100%; */
+
+}
+
+@supports (grid-template-rows: masonry) {
+
+  #gallery > ul {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: masonry;
+  }
+  
+}
+
+</style>

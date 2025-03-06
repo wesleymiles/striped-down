@@ -1,0 +1,41 @@
+<p><code>umd/</code> folder contains transpiled version of PhotoSwipe in universal module definition format.</p>
+<p>Use it only if you are unable to use ESM version.</p>
+<p>Basic example:</p>
+<pre><code class="language-html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;Test Gallery&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+
+    &lt;script src=&quot;./photoswipe.umd.min.js&quot;&gt;&lt;/script&gt;
+    &lt;script src=&quot;./photoswipe-lightbox.umd.min.js&quot;&gt;&lt;/script&gt;
+    
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;../photoswipe.css&quot;&gt;
+
+    &lt;div class=&quot;test-gallery&quot;&gt;
+      &lt;a href=&quot;https://dummyimage.com/1200x600/000/fff&quot; data-pswp-width=&quot;1200&quot; data-pswp-height=&quot;600&quot;&gt;
+        &lt;img src=&quot;https://dummyimage.com/120x60/000/fff&quot; alt=&quot;&quot; /&gt;
+      &lt;/a&gt;
+      &lt;a href=&quot;https://dummyimage.com/1200x1200/000/fff&quot; data-pswp-width=&quot;1200&quot; data-pswp-height=&quot;1200&quot;&gt;
+        &lt;img src=&quot;https://dummyimage.com/60x60/000/fff&quot; alt=&quot;&quot; /&gt;
+      &lt;/a&gt;
+      &lt;a href=&quot;https://dummyimage.com/600x1200/000/fff&quot; data-pswp-width=&quot;600&quot; data-pswp-height=&quot;1200&quot;&gt;
+        &lt;img src=&quot;https://dummyimage.com/30x60/000/fff&quot; alt=&quot;&quot; /&gt;
+      &lt;/a&gt;
+    &lt;/div&gt;
+    
+    &lt;script type=&quot;text/javascript&quot;&gt;
+      var lightbox = new PhotoSwipeLightbox({
+        gallery: '.test-gallery',
+        children: 'a',
+        // dynamic import is not supported in UMD version
+        pswpModule: PhotoSwipe 
+      });
+      lightbox.init();
+    &lt;/script&gt;
+
+  &lt;/body&gt;
+&lt;/html&gt;
+
+</code></pre>

@@ -15,7 +15,8 @@ date-updated: 2024-12-15
 
 </section>
 
-https: //bjhess.com/commonplace
+<!-- https: //bjhess.com/commonplace -->
+
 
 
 <section id="filters">
@@ -30,6 +31,7 @@ https: //bjhess.com/commonplace
     <input type="radio" id="biz-ness" name="tag" value="Biz-ness">
     <label for="biz-ness">Biz-ness</label>
 </section>
+<img style="margin: 0 auto;display:block" src="img/coming-soon.png" width="150px">
 
 <section >
     <div class="content-inner">

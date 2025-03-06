@@ -3,8 +3,8 @@ layout: layout.liquid
 title: Logo creation in a week, speedy-brand
 description: sdfsdfdsf 
 tags: design
-eleventyNavigation: 
-  key: Logo in-a-week
+# eleventyNavigation: 
+  # key: Logo in-a-week
 ---
 
 <section class="hero">
