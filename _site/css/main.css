@@ -732,6 +732,7 @@ header.mast .site-logo {
     left: -3px;
     top: 0;
     transition: all .3s;
+    z-index: 1;
   }
 
 /*  when hovered, rotate to show my name */
@@ -924,6 +925,7 @@ body > main > section.hero {
   .hero a:visited, 
   .hero a:link {
     color: #FFFADB;
+    text-decoration-color: #FFF583;
   }
   .hero a:hover, 
   .hero a:active {

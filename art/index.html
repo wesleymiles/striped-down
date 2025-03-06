@@ -1,7 +1,7 @@
 ---
 layout: blog.liquid
 title: Art
-description: A place to gather drawings from drawings from this year with pen and india ink. I also got to play with a slideshow tool.
+description: A place to gather the drawings I've been doing this year so far, with pen and india ink. I also got to play with a slideshow tool and eleventy's plugin.
 date-updated: 2025-03-05
 eleventyNavigation: 
   key: Art
@@ -9,14 +9,15 @@ eleventyNavigation:
 
 <section class="hero">
 
-    <time class="meta-date" datetime="{{ date | postDate }}">Last updated: {{ date-updated | postDate}}<time>
-	<h1>{{ title }}</h1>
-	<p>{{ description }}</p> 
-
+  <h1>{{ title }}</h1>
+	<p>A place to gather the drawings I've been doing this year so far, with pen and india ink. I also got to play with a <a href="https://photoswipe.com/">slideshow tool</a> and eleventy's <a href="https://www.11ty.dev/docs/plugins/image/">plugin</a>.</p> 
+  
 </section>
 
 <section>
-  
+  <time class="meta-date" datetime="{{ date | postDate }}">Last updated: <span class="label">{{ date-updated | postDate}}</span></time>
+<br>   
+<br>   
 
   <div class="pswp-gallery pswp-gallery--single-column" id="gallery">
     <ul>
