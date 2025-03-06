@@ -67,6 +67,8 @@ module.exports = function(eleventyConfig) {
   passthroughPaths.forEach(path => eleventyConfig.addPassthroughCopy({ [path]: path }));
 
 
+  // Add site URL globally
+  eleventyConfig.addGlobalData("siteUrl", "https://wescarr.com");
 
   // preparing images for lightbox
 
