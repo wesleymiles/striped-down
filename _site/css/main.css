@@ -316,17 +316,10 @@ h1, h2, h3{
 }
 
 h1 {
-  /* fallback font attributes */
   font-size: 8.7vw;
   letter-spacing: -.02em;
-  /* font-stretch: 75%; */
-  /* font-family: 'Instrument Serif','freelunch', 'source-serif', 'bagnard', 'bricolage'; */
-
-  /* font-family: "bricolage condensed"; */
-  margin: .4em 0 0;
+  margin: .4em 0 0; 
   line-height:.85; 
-  color: var(--text-light);
-  /* font-weight: 900; */
 }
 
   h1 span { color: #c2e1c3;font-style: italic;  }
@@ -420,6 +413,7 @@ div.button a:link {
     rgba(255,255,255,1) 20%,
     rgba(255,255,255,1) 100%,
     rgba(255,255,255,0) 100%);
+    position: relative;
   }
   
   /* stroke around everything */
@@ -428,7 +422,7 @@ div.button a:link {
     position: absolute;
     height: 100%;
     width: 100%;
-    inset: 80px 0;
+    inset: 0;
     outline-offset: calc(var(--gap)*-3);
     outline: 1px solid var(--highlight);
     pointer-events: none;
@@ -577,14 +571,8 @@ header nav {
 
 @media only screen and (max-width: 800px) {
 
-  body > main {
-    /* outline-offset: -.75em; */
-    background: none;
-  }
-  body > main::after {
-    inset: 104px 0;
-    outline-offset: -30px;
-  }
+  body > main {  background: none;  }
+  body > main::after { outline-offset: calc(var(--gap)*-1);  }
 
   body > main > section { padding: 3em 5%;  }
   body > main > section.cta { padding-left: 5%; }
@@ -836,6 +824,7 @@ body > footer {
   .hero figcaption,
   .hero p,
   .hero time,
+  .hero h1,
   .hero h3,
   .hero h2,
   .theme--dark figcaption,
@@ -845,6 +834,7 @@ body > footer {
   .theme--dark h3, 
   .theme--dark h4 {
     color: #ffffff;
+    color: var(--text-light);
   }
 
   .theme--dark a:visited, 
@@ -1802,7 +1792,7 @@ body.homepage .hero::after  {
   @media only screen and (max-width: 800px) {
     
     body.homepage .hero  {
-      padding-top: 3em;
+      padding-top: 7em;
       margin-bottom: -130px;
       padding-bottom: 100px;
     }

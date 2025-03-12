@@ -34,3 +34,8 @@
   src: url('/fonts/FreeLunch-Regular.otf') format("opentype");
   font-display: swap;
 }
+@font-face {
+  font-family: 'sentient';
+  src: url('/fonts/Sentient-Variable.woff2') format("woff2");
+  font-display: swap;
+}

@@ -2,7 +2,7 @@
 layout: blog.liquid
 title: Art
 description: A place to gather the drawings I've been doing this year so far, with pen and india ink. I also got to play with a slideshow tool and eleventy's plugin.
-date-updated: 2025-03-05
+date-updated: 2025-03-13
 eleventyNavigation: 
   key: Art
 ---
@@ -19,18 +19,20 @@ eleventyNavigation:
 <br>   
 <br>   
 
-  <div class="pswp-gallery pswp-gallery--single-column" id="gallery">
-    <ul>
-      {% for image in collections.images %}
-        <li>
-          <a href="{{ image.url }}" data-pswp-width="{{ image.width }}" data-pswp-height="{{ image.height }}">
-            <img src="{{ image.url }}" alt="{{ image.alt }}">
-          </a>
-        </li>
-      {% endfor %}
-    </ul>
-  </div>
-  
+<div class="pswp-gallery pswp-gallery--single-column" id="gallery">
+  <ul>
+    {% for image in collections.images %}
+      <li>
+        <a href="{{ image.url }}" data-pswp-width="{{ image.width }}" data-pswp-height="{{ image.height }}">
+          <img src="{{ image.url }}" alt="{{ image.alt }}" width="{{ image.width }}" height="{{ image.height }}" loading="lazy">
+        </a>
+      </li>
+    {% endfor %}
+  </ul>
+</div>
+
+
+
 
 </section> 
 
@@ -72,13 +74,7 @@ eleventyNavigation:
   line-height: 0;
   height: 200px;
   max-height: 200px;
-}
-
-#gallery > ul > li img {
-  /* width: 100%; */
-  /* height: auto; */
-  /* max-height: 100%; */
-
+  overflow: hidden;
 }
 
 @supports (grid-template-rows: masonry) {
