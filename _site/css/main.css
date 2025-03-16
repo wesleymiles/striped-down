@@ -37,7 +37,7 @@ body {
   --bg-light: #FAFAF7;
   --gapSm: 21px;
   --sans-serif: 'bricolage','Arial Narrow', Impact, Bahnschrift, 'DIN Alternate', 'Franklin Gothic Medium', 'Nimbus Sans Narrow', sans-serif-condensed, sans-serif;
-  --serif: 'Instrument Serif';
+  --serif: 'instrument';
   --serif-system: Times New Roman, Droid Serif, Times, Source Serif Pro, serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbolserif;
   --sans-serif-system: X, -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   --monospace-system: ui-monospace, 'Nimbus Mono PS', 'Courier New', Menlo, Monaco, "Cascadia Mono", "Segoe UI Mono", "Roboto Mono", "Oxygen Mono", "Ubuntu Mono", "Source Code Pro", "Fira Mono", "Droid Sans Mono", "Consolas", "Courier New", monospace;
@@ -322,7 +322,7 @@ h1 {
   line-height:.85; 
 }
 
-  h1 span { color: #c2e1c3;font-style: italic;  }
+  h1 span { color: #c2e1c3; font-style: italic;  }
 
 
 h2 {
@@ -909,7 +909,7 @@ body > main > section.hero {
   .hero time {
     font-family: var(--monospace-system);
     display: block;
-    /* font-style: italic; */
+    margin-top: calc(var(--gap)* 3);
   }
 
   .hero a:visited, 
@@ -1604,7 +1604,7 @@ hr:after {
 -------------------------------------------------- */
 
 body.post img {
-  border-radius: var(--curve);
+  border-radius: calc(var(--curve)/2);
 }
 
 .blog-tags {

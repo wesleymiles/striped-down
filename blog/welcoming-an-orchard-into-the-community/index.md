@@ -19,11 +19,11 @@ Okay, calling it an orchard is a bit aspirational. There’s six apple trees, ni
 <section>
 
 <figure>
-	<a href="img/underhill-community-orchard-map-full.png">
+	<a href="{{ page.url | url }}img/underhill-community-orchard-map-full.png">
 		<picture>	 
-			<!-- <source srcset="img/underhill-community-orchard-map.webp" type="image/webp"> -->
-			<!-- <source srcset="img/underhill-community-orchard-map.jpg" type="image/jpg"> -->
-			<img src="img/underhill-community-orchard-map.png" alt="Map" />
+			<source srcset="{{ page.url | url }}img/underhill-community-orchard-map.webp" type="image/webp">
+			<source srcset="{{ page.url | url }}img/underhill-community-orchard-map.jpg" type="image/jpg">
+			<img src="{{ page.url | url }}img/underhill-community-orchard-map.png" alt="Map" />
 		</picture>
 		<figcaption>See full map with descriptions</figcaption>
 	</a>

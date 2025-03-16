@@ -1,4 +1,4 @@
-@font-face {
+/* @font-face {
   font-family: 'bricolage condensed';
   src: url('/fonts/BricolageGrotesque10ptCondensed-ExtraBold.woff2') format("woff2");
   font-size: 7.5vw;
@@ -12,8 +12,6 @@
 @font-face {
   font-family: 'bricolage';
   src: url('/fonts/BricolageGrotesque-Medium.woff2') format("woff2");
-  /* src: url('/fonts/BricolageGrotesque-Light.woff2') format("woff2"); */
-  /* src: url('/fonts/BricolageGrotesque-SemiBold.woff2') format("woff2"); */
   font-display: swap;
 }
 
@@ -38,4 +36,18 @@
   font-family: 'sentient';
   src: url('/fonts/Sentient-Variable.woff2') format("woff2");
   font-display: swap;
+} */
+@font-face {
+  font-family: 'instrument';
+  src: url('/fonts/InstrumentSerif-Regular.ttf') format("truetype");
+  font-display: swap;
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'instrument';
+  src: url('/fonts/InstrumentSerif-Italic.ttf') format("truetype");
+  font-display: swap;
+  font-weight: normal;
+  font-style: italic;
 }

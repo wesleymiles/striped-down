@@ -3,6 +3,7 @@ const markdownIt = require("markdown-it");
 const fs = require("fs");
 const path = require("path");
 const Image = require("@11ty/eleventy-img");
+const { DateTime } = require("luxon");
 
 module.exports = function (eleventyConfig) {
   // Plugins
@@ -12,7 +13,6 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.setTemplateFormats("html,liquid,njk,md");
 
   // Readable dates
-  const { DateTime } = require("luxon");
   eleventyConfig.addFilter("postDate", (dateObj) => {  
     return DateTime.fromJSDate(dateObj).toLocaleString(DateTime.DATE_MED);
   });
@@ -22,12 +22,22 @@ module.exports = function (eleventyConfig) {
 
   // Passthrough copy settings
   const passthroughPaths = [
-    "fonts", "font.woff", "img", "css", "js", "animations", "js/script.js", "photoswipe/", "blog/snow-barn/img", "blog/ims/img", "blog/2024-review/img", "blog/commonplace-book/img",
-    "blog/hack-day-2023/img", "blog/lunch-break-sacred-places/img", "blog/lunch-break-sacred-places/img/warwick",
-    "blog/red-team-blues/img", "project/wobblies/img", "blog/chickens-v3/img",
-    "blog/identifying-bark-in-winter/img", "blog/local-logos/img", "blog/non-fiction-comics/img",
+    "fonts", "font.woff","font.ttf", "img", "css", "js", "animations", "js/script.js", "photoswipe/",
+    "project/wobblies/img",
     "work/mockup-demo"
   ];
+
+  // Dynamically find all blog image directories
+  const blogPath = "blog/";
+  if (fs.existsSync(blogPath)) { // Ensure the blog directory exists
+    const blogDirs = fs.readdirSync(blogPath, { withFileTypes: true })
+      .filter(dirent => dirent.isDirectory())
+      .map(dirent => path.join(blogPath, dirent.name, "img"));
+
+    passthroughPaths.push(...blogDirs);
+  }
+
+  // Add passthrough copies
   passthroughPaths.forEach(path => eleventyConfig.addPassthroughCopy({ [path]: path }));
 
   // Global data
