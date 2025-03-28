@@ -1228,54 +1228,10 @@ body.speedy-brand section.logo-wall {
 -------------------------------------------------- */
 
 
-
-
-/*  .book-card p {
-    font-size: .7em;
-    line-height: 1.2;
-    margin-bottom: 0;
-  }
-
-  .book-card .book-name {
-    text-align: left;
-    max-width: 50%;
-    min-height: 100px;
-  }
-
-  .book-card img {
-    display: block;
-    margin: 0 auto;
-  }
-
-  .book-card .book-genre {
-    min-height: 100px;
-    text-align: right;
-    vertical-align: bottom;
-  }
-
-  .book-card a {
-    text-align: center;
-    display: block;
-  }*/
-
-
-/*{
-  position: relative;
--moz-perspective: 100px;
--moz-transform: rotateY(-3deg);
--webkit-transform: perspective(100px) rotateY(-3deg) translateZ(-7px);
-transform: perspective(100px) rotateY(-3deg) translateZ(-7px);
-outline: 1px solid transparent;
-box-shadow: none;
-margin: 0;
-}
-*/
-
 /* stretch but give it a max */
 section.library.stretch--bg {
   max-width: 1500px;
 }
-
 
 section.library {
 /* flexbox layout */
@@ -1288,6 +1244,15 @@ section.library {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(30%, 1fr));
   grid-gap: var(--gapSm);
+
+  
+
+}
+
+body.library > main,
+body.library > main > section.stretch--bg {
+  /* remove white bg */
+  background: inherit;
 }
 
 
@@ -1307,6 +1272,7 @@ section.library summary::-webkit-details-marker {
     border-radius: 50%;
     border: solid 1px #ddd;
     padding: 5px;
+    margin-left: 10px; /* Add spacing to prevent overlap */
   }
 
 
@@ -1332,8 +1298,6 @@ section.library summary::-webkit-details-marker {
         0 8px 8px hsl(0deg 0% 0% / 0.075),
         0 16px 16px hsl(0deg 0% 0% / 0.075)
       ;
-      /* transform causing issues with background... */
-/*      transform: translate(-1px, -3px);*/
     }
 
 
@@ -1351,21 +1315,15 @@ section.library summary::-webkit-details-marker {
     min-height: 600px;
     }
 
-
-
-    /*. when details are opened, stretch everything, but constrain the summary back to where it was. */
-    section.library details[open] {
-      /* Allow details content to stretch outside grid */
-/*      width: 80%;
-      grid-column: 1 / -1;
-    }
-
-      section.library details[open] summary {
-        width: 37%;
-      }
-      section.library details[open]  {
-*/
-      }
+/* stick filters to top of screen on scroll */
+.library #filters{
+  /* background-color: #fff; */
+  background: transparent;
+  padding-top: 2em;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
 
 
 /* OPEN AS A MODAL
@@ -1402,7 +1360,7 @@ section.library details[open] summary::after {
   padding: 10px 0 10px 10px;
   z-index: 9;
   position: fixed;
-  right: 5%;
+  right: 2%;
   top: 5px;
 }
 
@@ -1421,7 +1379,8 @@ section.library details[open] summary::before {
 }
 
 /* LOCK THE BACKGOUND WHEN THE MODAL IS OPEN */
-body:has(section.library details[open]){
+body:has(section.library details[open]),
+body.modal-open {
   overflow: hidden
 }
 
@@ -1479,9 +1438,12 @@ body:has(section.library details[open]){
 
 
   @media only screen and (max-width: 800px) {
-    section.library { grid-template-columns: 1fr; }
-      section.library article picture { margin: 0 auto;  }
-        section.library article picture img { height: 200px; min-width: 150px;   }
+    section.library {   grid-template-columns: repeat( auto-fit, minmax(250px, 1fr) ); }
+      section.library article {   min-height: 430px;}
+        section.library article picture { margin: 0 auto;  }
+        /* section.library article picture img { height: 200px; min-width: 150px;   } */
+        /* move X inside the modal */
+        section.library details[open] summary::after { color: #000; right: 46px;}
   }
 
 
@@ -1728,9 +1690,15 @@ label, .label {
   font-size: 1em;
   border-radius: 20px;
   color: #000;
-  background-color: #f5f3f1;
+  background-color: #ddd;
   transition: background-color 0.3s, color 0.3s, border-color 0.3s;
 }
+
+label:hover, .label:hover {
+  background-color: #fff;
+}
+
+
 
 #filters {
   display: flex;
@@ -1746,7 +1714,7 @@ label, .label {
         display: none;
     }
     #filters input[type="radio"]:checked + label {
-        background-color: #0056b3;
+        background-color: #3ea261;
         color: #fff;
     }
 
