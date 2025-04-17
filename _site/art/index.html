@@ -83,17 +83,25 @@
 <section class="hero">
 
   <h1>Art</h1>
-	<p>A place to gather the drawings I've been doing this year so far, with pen and india ink. I also got to play with a <a href="https://photoswipe.com/">slideshow tool</a> and eleventy's <a href="https://www.11ty.dev/docs/plugins/image/">plugin</a>.</p> 
-  
+	<p>A place to gather the drawings I've been doing this year so far, with pen, india ink, and sometimes watercolor.</p>
+  <p>I'm excited to particpate in an art thing! This monmth-long fundraiser supports asylum seekers in my area, put on by <a href="https://secure.givelively.org/donate/chittenden-asylum-seekers-assistance-network/arts-for-asylum-seekers-2025/wes-carr">Chittenden Asylum Seekers Assistance Network</a>.
+  </p>
+
 </section>
 
 <section>
-  <time class="meta-date" datetime="Invalid DateTime">Last updated: <span class="label">Mar 24, 2025</span></time>
-<br>   
-<br>   
+  <time class="meta-date" datetime="Invalid DateTime">Last updated: <span class="label">Apr 14, 2025</span></time>
+<br>
+<br>
 
 <div class="pswp-gallery pswp-gallery--single-column" id="gallery">
   <ul>
+    
+      <li>
+        <a href="/art/img/aHAdhzVq0S-2000.jpeg" data-pswp-width="2000" data-pswp-height="1321">
+          <img src="/art/img/aHAdhzVq0S-2000.jpeg" alt="yellow bowl" width="2000" height="1321" loading="lazy">
+        </a>
+      </li>
     
       <li>
         <a href="/art/img/Wl-3N82ZM7-1439.jpeg" data-pswp-width="1439" data-pswp-height="971">
@@ -180,8 +188,20 @@
       </li>
     
       <li>
+        <a href="/art/img/iD92jvYjWl-2000.jpeg" data-pswp-width="2000" data-pswp-height="1344">
+          <img src="/art/img/iD92jvYjWl-2000.jpeg" alt="remote setup" width="2000" height="1344" loading="lazy">
+        </a>
+      </li>
+    
+      <li>
         <a href="/art/img/ZnBOxI-RsX-1335.jpeg" data-pswp-width="1335" data-pswp-height="873">
           <img src="/art/img/ZnBOxI-RsX-1335.jpeg" alt="playground in snow 1 18 25" width="1335" height="873" loading="lazy">
+        </a>
+      </li>
+    
+      <li>
+        <a href="/art/img/80Ud6zwUyf-2000.jpeg" data-pswp-width="2000" data-pswp-height="1391">
+          <img src="/art/img/80Ud6zwUyf-2000.jpeg" alt="new pup mt mansfield" width="2000" height="1391" loading="lazy">
         </a>
       </li>
     
@@ -210,6 +230,18 @@
       </li>
     
       <li>
+        <a href="/art/img/bw5vH6UNkw-2000.jpeg" data-pswp-width="2000" data-pswp-height="1378">
+          <img src="/art/img/bw5vH6UNkw-2000.jpeg" alt="late spring sap buckets" width="2000" height="1378" loading="lazy">
+        </a>
+      </li>
+    
+      <li>
+        <a href="/art/img/lT4kjsL4eZ-2000.jpeg" data-pswp-width="2000" data-pswp-height="1371">
+          <img src="/art/img/lT4kjsL4eZ-2000.jpeg" alt="drying sap buckets by river" width="2000" height="1371" loading="lazy">
+        </a>
+      </li>
+    
+      <li>
         <a href="/art/img/2FanUDi8ph-1426.jpeg" data-pswp-width="1426" data-pswp-height="971">
           <img src="/art/img/2FanUDi8ph-1426.jpeg" alt="craftsbury vermont eclectic farm stand" width="1426" height="971" loading="lazy">
         </a>
@@ -221,11 +253,18 @@
         </a>
       </li>
     
+      <li>
+        <a href="/art/img/_O0umvPloT-2000.jpeg" data-pswp-width="2000" data-pswp-height="1419">
+          <img src="/art/img/_O0umvPloT-2000.jpeg" alt="april snow" width="2000" height="1419" loading="lazy">
+        </a>
+      </li>
+    
   </ul>
 </div>
 
 
 
+<p> Making this page also provided a chance to play with a <a href="https://photoswipe.com/">slideshow tool</a> and eleventy's <a href="https://www.11ty.dev/docs/plugins/image/">plugin</a>.
 
 </section> 
 
@@ -243,12 +282,9 @@
   object-fit: cover;
   object-position: 50% 50%;
 }
-
-#gallery img:hover {
-  transform: scale(1.05);
-}
-
-
+  #gallery img:hover {
+    transform: scale(1.05);
+  }
 
 #gallery > ul {
   display: grid;
@@ -257,18 +293,26 @@
   grid-gap: 1em;
   padding: 0;
 }
+  #gallery > ul > li {
+    list-style: none;
+  }
+    #gallery li a {
+      display: block;
+      line-height: 0;
+      height: 200px;
+      max-height: 200px;
+      overflow: hidden;
+      border-radius: 8px;
+    }
+    #gallery > ul > li:nth-child(7n) {
+        grid-column: span 2;
+        grid-row: span 2;
+    }
+    #gallery > ul > li:nth-child(7n) a {
+      height: 400px;
+      max-height: 400px;
+    }
 
-#gallery > ul > li {
-  list-style: none;
-}
-
-#gallery li a {
-  display: block;
-  line-height: 0;
-  height: 200px;
-  max-height: 200px;
-  overflow: hidden;
-}
 
 @supports (grid-template-rows: masonry) {
 

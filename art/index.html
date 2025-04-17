@@ -2,7 +2,7 @@
 layout: blog.liquid
 title: Art
 description: A place to gather the drawings I've been doing this year so far, with pen and india ink. I also got to play with a slideshow tool and eleventy's plugin.
-date-updated: 2025-03-25
+date-updated: 2025-04-15
 eleventyNavigation: 
   key: Art
 ---
@@ -10,14 +10,16 @@ eleventyNavigation:
 <section class="hero">
 
   <h1>{{ title }}</h1>
-	<p>A place to gather the drawings I've been doing this year so far, with pen and india ink. I also got to play with a <a href="https://photoswipe.com/">slideshow tool</a> and eleventy's <a href="https://www.11ty.dev/docs/plugins/image/">plugin</a>.</p> 
-  
+	<p>A place to gather the drawings I've been doing this year so far, with pen, india ink, and sometimes watercolor.</p>
+  <p>I'm excited to particpate in an art thing! This monmth-long fundraiser supports asylum seekers in my area, put on by <a href="https://secure.givelively.org/donate/chittenden-asylum-seekers-assistance-network/arts-for-asylum-seekers-2025/wes-carr">Chittenden Asylum Seekers Assistance Network</a>.
+  </p>
+
 </section>
 
 <section>
   <time class="meta-date" datetime="{{ date | postDate }}">Last updated: <span class="label">{{ date-updated | postDate}}</span></time>
-<br>   
-<br>   
+<br>
+<br>
 
 <div class="pswp-gallery pswp-gallery--single-column" id="gallery">
   <ul>
@@ -33,6 +35,7 @@ eleventyNavigation:
 
 
 
+<p> Making this page also provided a chance to play with a <a href="https://photoswipe.com/">slideshow tool</a> and eleventy's <a href="https://www.11ty.dev/docs/plugins/image/">plugin</a>.
 
 </section> 
 
@@ -50,12 +53,9 @@ eleventyNavigation:
   object-fit: cover;
   object-position: 50% 50%;
 }
-
-#gallery img:hover {
-  transform: scale(1.05);
-}
-
-
+  #gallery img:hover {
+    transform: scale(1.05);
+  }
 
 #gallery > ul {
   display: grid;
@@ -64,18 +64,26 @@ eleventyNavigation:
   grid-gap: 1em;
   padding: 0;
 }
+  #gallery > ul > li {
+    list-style: none;
+  }
+    #gallery li a {
+      display: block;
+      line-height: 0;
+      height: 200px;
+      max-height: 200px;
+      overflow: hidden;
+      border-radius: 8px;
+    }
+    #gallery > ul > li:nth-child(7n) {
+        grid-column: span 2;
+        grid-row: span 2;
+    }
+    #gallery > ul > li:nth-child(7n) a {
+      height: 400px;
+      max-height: 400px;
+    }
 
-#gallery > ul > li {
-  list-style: none;
-}
-
-#gallery li a {
-  display: block;
-  line-height: 0;
-  height: 200px;
-  max-height: 200px;
-  overflow: hidden;
-}
 
 @supports (grid-template-rows: masonry) {
 
