@@ -889,14 +889,7 @@ body > main > section.hero {
 
   /* reverting positioning allows the outline from the body element to show*/
   /* position: inherit; */
-
-/*  fix gallery overflow*/
-/*MOVE TO GALLERY SECTION */
-  /* overflow: hidden; */
 }
-
-
-
 
   .hero h2,
   .hero h3,
@@ -1814,54 +1807,6 @@ body.homepage .hero::after  {
 
 .tags button:hover {
     background-color: #45a049;
-}
-*/
-
-
-/* HORIZONTALLY SLIDING GALLERY 
--------------------------------------------------- */
-/*
-  .gallery-container figure {
-    margin-bottom: 0;
-  }
-  .gallery-container figcaption {
-    text-align: center;
-  }
-
-
-.homepage .gallery-container {
-  width: 105%;
-  margin-top: 0;
-}
-
-.gallery-container {
-  width: 100%;
-  overflow-y: hidden;
-}
-
-  .gallery {
-    display: flex;
-    transition: transform 0.5s ease-in-out;
-    align-items: baseline;
-  }
-
-    .gallery-item {
-      flex: 0 0 100%;
-      padding: 15px;
-      min-width: 400px;
-      max-width: 500px;
-    }
-
-    .gallery:last-child {
-      margin-right: 5em;
-      padding-right: 5em;
-    }
-*/
-/* Adjustments for larger screens */
-
-/*@media (min-width: 800px) {
-  .homepage .gallery-container {  margin-top: calc(var(--gap)); }
-  .gallery-item {  flex: 0 0 33.3333%;   }
 }
 */
 
