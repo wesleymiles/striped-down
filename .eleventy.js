@@ -4,6 +4,7 @@ const fs = require("fs");
 const path = require("path");
 const Image = require("@11ty/eleventy-img");
 const { DateTime } = require("luxon");
+const { feedPlugin } = require("@11ty/eleventy-plugin-rss");
 
 module.exports = function (eleventyConfig) {
   // Plugins
@@ -22,7 +23,7 @@ module.exports = function (eleventyConfig) {
 
   // Passthrough copy settings
   const passthroughPaths = [
-    "fonts", "font.woff","font.ttf", "img", "css", "js", "animations", "js/script.js", "photoswipe/",
+    "fonts", "feed.xsl", "font.woff","font.ttf", "img", "css", "js", "animations", "js/script.js", "photoswipe/",
     "project/wobblies/img",
     "work/mockup-demo"
   ];
@@ -77,4 +78,35 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addLiquidShortcode("image", (src, alt) => {
     return `<img src="${src}" alt="${alt}" loading="lazy">`;
   });
+
+
+
+  // adding RSS
+  eleventyConfig.addPlugin(feedPlugin, {
+		type: "rss", // or "rss", "json"
+		outputPath: "/feed.xml",
+		collection: {
+			name: "post", // iterate over `collections.posts`
+			limit: 0,     // 0 means no limit
+		},
+		metadata: {
+			language: "en",
+			title: "Blog",
+			subtitle: "This is a longer description about your blog.",
+			base: "https://wescarr.com/",
+			author: {
+				name: "Wes Carr",
+				//email: "",
+			},
+		},
+    //stylesheet: "/feed.xsl", // stylesheet reference
+	});
+
+
+
+
 };
+
+
+
+

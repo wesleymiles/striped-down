@@ -12,6 +12,7 @@
   },
   "dependencies": {
     "@11ty/eleventy-img": "^6.0.1",
+    "@11ty/eleventy-plugin-rss": "^2.0.4",
     "@11ty/eleventy-upgrade-help": "^1.0.1",
     "debug": "^4.3.2",
     "liquidjs": "^10.7.1",
