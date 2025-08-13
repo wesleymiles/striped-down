@@ -44,6 +44,8 @@ module.exports = function (eleventyConfig) {
   // Global data
   eleventyConfig.addGlobalData("siteUrl", "https://wescarr.com");
 
+
+
   // Image processing & collection (JPG ONLY)
   const imageDir = "art/img/";
   eleventyConfig.addCollection("images", async function () {
@@ -52,6 +54,7 @@ module.exports = function (eleventyConfig) {
     let images = [];
     for (let file of files) {
       let imagePath = path.join(imageDir, file);
+      const stats = fs.statSync(imagePath);// Get file system stats to access the creation date
       let options = {
         widths: [450, null], // Thumbnail + original
         formats: ["jpg"], // No WebP
@@ -67,10 +70,15 @@ module.exports = function (eleventyConfig) {
         url: imageInfo.url,
         alt: file.replace(/\.\w+$/, "").replace(/[-_]/g, " "), // Auto alt text
         width: imageInfo.width,
-        height: imageInfo.height
+        height: imageInfo.height,
+        date: stats.birthtime// Add the date object to the collection item
       });
     }
 
+        // ADDITION: Sort the array of images by date in descending order (newest first)
+    images.sort((a, b) => b.date - a.date);
+
+    
     return images;
   });
 

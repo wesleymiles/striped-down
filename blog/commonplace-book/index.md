@@ -40,7 +40,161 @@ date-updated: 2024-12-15
 ## 2024
 
 
+### 
 
+<hr>
+
+<div data-tags="Design Quote">
+
+[Why aren't designers getting invited into big fun meeting where all the imagineering happens?](https://www.designleadershipmemos.com/p/why-arent-designers-getting-invited) 
+
+<aside>
+💡 There is no secret WhatsApp group where executives, product leaders and investors are trying to work out how to keep designers away from setting long-term strategy and creating ambitious visions of the future. We are doing that to ourselves. 
+</aside>
+</div>
+
+
+<hr>
+
+<div data-tags="Idea">
+
+Dan Mall says <a href="https://danmall.com/posts/move-authority-to-the-information/">Move Authority to the Information</a>. Give people on the ground the authority to make decisions.  “Don’t take control; give control.” 🫡
+
+<div>
+
+<hr>
+
+<div data-tags="Quote">
+
+<blockquote>
+    <p>If you want a new world, start making it right now, in whatever you are doing.</p>
+    <cite> Brian Eno.</cite>
+</blockquote> 
+
+</div>
+
+<hr>
+
+<div data-tags="Quote">
+
+
+<blockquote>
+    <p>Cultivate a habit of small acts of sedition. Making little paper cuts in the flesh of the beast which add up over time. You can't stop the machine by yourself, but you can sure as hell throw sand in its gears.</p>
+    <cite>Caitlin Johnstone</cite>
+</blockquote> 
+</div>
+
+<hr>
+
+<div data-tags="Idea">
+
+
+Don't remember where I came across this, but it resonated. 
+
+The Core Principles of Radical Honesty
+
+1. Lying is the primary cause of suffering
+2. Living honestly is the antidote to lying and the root of its power is in distinguishing *noticing* from *thinking*. You can only *notice* in the moment. And you can only notice three categories of things: sensations, thoughts, and your external surroundings.
+3. Sharing honestly what you notice frees you from the suffering caused by attachment to lying, withholding, phoniness, and ideals.
+4. Sharing honestly what you notice also deepens love, connection, understanding and forgiveness (eventually). 
+5. Radical Honesty is a living, walking, talking out-loud meditation that moves you from reactivity to being a creator of your own life.
+</div>
+
+<hr>
+
+<div data-tags="Quote">
+
+11 minute documentary called <a href="https://www.campfire-stories.org/the-shoe-shop">The Shoe Shop</a>. Toward the end, Dougald Hine suggests that the compounding crises of our time are asking us to 
+  
+<blockquote>
+    <p>see ourselves as creatures that can be part of the on-going-ness of the world. That making scars is not all we’re good for. That scars heal over time. That we have been, and can yet be again, a part of the process by which forests live in the world.</p>
+</blockquote>
+
+<hr>
+
+<div data-tags="Note">
+
+Memorized poem
+    
+    *”When despair for the world grows in me*
+    
+    *and I wake in the night at the least sound*
+    
+    *in fear of what my life and my children’s lives may be,*
+    
+    *I go and lie down where the wood drake*
+    
+    *rests in his beauty on the water, and the great heron feeds.*
+    
+    *I come into the peace of wild things*
+    
+    *who do not tax their lives with forethought*
+    
+    *of grief. I come into the presence of still water.*
+    
+    *And I feel above me the day-blind stars*
+    
+    *waiting with their light. For a time*
+    
+    *I rest in the grace of the world, and am free.”*
+    
+    - Wendell Berry, "The Peace of Wild Things"
+</div>
+
+<hr>
+
+<div data-tags="Ideas">
+
+Random notes from picup soccer on a may sunday. 
+- 6 on 7
+- 2 toe stomps!
+- 1 shot on goal!
+- many attaboys!
+
+</div>
+
+<hr>
+
+<div data-tags="Ideas Gift">
+
+Really enjoying the continuing conversation between Adam Wilson and Sam Bliss, kicked off in a series called "The Anarchist and the Animist" <a href="https://peasantryschool.substack.com/p/radical-hospitality">Adam's newsletter</a> in 2022. The podcast <a href="https://www.micaylajean.com/the-podcast">Finding Wilder</a> had them both on discussing the gift economy where the two "have a few stories worth telling about the magic that happens when food is turned back into a gift."
+
+My notes on the pod: 
+
+Alternative Terms for "Gift Economy"
+- Reckless Generosity: A proactive and unconditional giving without calculation of return.
+- Voluntary Impoverishment: The inverse of above. Of course no one likes how that feels.
+- Radical Hospitality: The generous and welcoming nature of the natural world. Adam's "translation of what the landscaping is doing".
+
+The Paradox of Open Giving: There's an observation that when one adopts a stance of complete generosity—"people have free reign to take what they want from me"—the expected outcome of being depleted does not happen. 
+
+The Prerequisite of Worthiness for Receiving: To be able to accept profound gifts from others—especially those that cannot be repaid—a person must possess a "multitude of worthiness."
+
+The story of "Old Sally," who, after injuring her leg, had her cows milked by neighbors for six weeks. This illustrates a community's response to a member deemed worthy of such a non-transactional gift.
+
+The Call to Community: A central theme is a deep "longing for community" and belonging. This longing is framed not as a response to an absence, but as a recognition of the potential for community that is "around us everywhere." The core action is to work "against the forces that will make us all strangers to one another."
+
+Guidance from the "Non-Human": There is a spiritual or ecological dimension suggesting that "the non-humans are asking us is to focus on how we treat each others as humans." This also involves embracing a "non-professional way" of doing things, valuing authentic human connection over polished expertise.
+
+Personal action item: <a href="https://scholarworks.uvm.edu/graddis/1791/">READ SAM BLISSES DISSERTATION</a>!!
+
+</div>
+
+<hr>
+
+<div data-tags="art">
+
+    Got called for jury duty. Didn’t get picked and spent the afternoon in burlington.
+    
+    <figure>
+        <picture>
+            <source srcset="img/burlington-april-2024.jpg" type="image/jpg">
+            <img src="img/burlington-april-2024.jpg">
+        </picture>
+        <figcaption>Lake champlain, looking west</figcaption>
+    </figure>
+    
+</div>
 
 <hr>
 
