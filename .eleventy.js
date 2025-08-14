@@ -73,23 +73,36 @@ module.exports = function (eleventyConfig) {
   // Gallery collection (sorted by file creation date, newest first)
   // -----------------
   const galleryDir = path.join(__dirname, "art/img/");
-  eleventyConfig.addCollection("images", async () => {
-    if (!fs.existsSync(galleryDir)) return [];
-    let files = fs.readdirSync(galleryDir).filter(file => /\.(jpe?g|png|gif|webp)$/i.test(file));
-    let images = [];
+eleventyConfig.addCollection("images", async function () {
+  const imageDir = "art/img/";
+  let files = fs.readdirSync(imageDir).filter(file => /\.(jpg|png|gif)$/i.test(file));
 
-    for (let file of files) {
-      let imgPath = path.join(galleryDir, file);
-      const stats = fs.statSync(imgPath); // access file creation date
-      let alt = path.basename(file, path.extname(file)).replace(/[-_]/g, " ");
-      let { imageInfo } = await getImageData("art/img/" + file, alt);
+  let images = [];
+  for (let file of files) {
+    let imagePath = path.join(imageDir, file);
+    const stats = fs.statSync(imagePath);
+
+    let options = {
+      widths: [750, null], // First = thumbnail, last = original
+      formats: ["jpg"], // No WebP
+      outputDir: "./_site/art/img/",
+      urlPath: "/art/img/"
+    };
+
+    let metadata = await Image(imagePath, options);
+
+    let thumb = metadata.jpeg[0]; // smallest
+    let full = metadata.jpeg[metadata.jpeg.length - 1]; // largest
 
       images.push({
-        url: imageInfo.url,
-        alt,
-        width: imageInfo.width,
-        height: imageInfo.height,
-        date: stats.birthtime // add the date
+        thumbUrl: metadata.jpeg[0].url,
+        thumbWidth: metadata.jpeg[0].width,
+        thumbHeight: metadata.jpeg[0].height,
+        fullUrl: metadata.jpeg[metadata.jpeg.length - 1].url,
+        fullWidth: metadata.jpeg[metadata.jpeg.length - 1].width,
+        fullHeight: metadata.jpeg[metadata.jpeg.length - 1].height,
+        alt: file.replace(/\.\w+$/, "").replace(/[-_]/g, " "),
+        date: stats.birthtime
       });
     }
 
