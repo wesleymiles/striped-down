@@ -6,6 +6,28 @@ const Image = require("@11ty/eleventy-img");
 const { DateTime } = require("luxon");
 const { feedPlugin } = require("@11ty/eleventy-plugin-rss");
 
+async function getImageData(src, alt) {
+  // Resolve absolute path to source file
+  const absPath = path.join(__dirname, src);
+
+  // Output into /_site/art/img/... or /_site/blog/post-1/img/... exactly
+  const outputDir = path.join(__dirname, "_site", path.dirname(src));
+
+  let metadata = await Image(absPath, {
+    widths: [450, null],
+    formats: [path.extname(src).slice(1)],
+    outputDir: outputDir,
+    urlPath: "/" + path.dirname(src),
+    cache: false  // optional while editing
+  });
+
+  const formatKey = Object.keys(metadata)[0];
+  const imageInfo = metadata[formatKey][metadata[formatKey].length - 1];
+
+  return { imageInfo, alt: alt || "" };
+}
+
+
 module.exports = function (eleventyConfig) {
   // Plugins
   eleventyConfig.addPlugin(eleventyNavigationPlugin);
@@ -45,63 +67,57 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addGlobalData("siteUrl", "https://wescarr.com");
 
 
+    
 
-  // Image processing & collection (JPG ONLY)
-  const imageDir = "art/img/";
-  eleventyConfig.addCollection("images", async function () {
-    let files = fs.readdirSync(imageDir).filter(file => /\.(jpg|png|gif)$/i.test(file));
-
+  // -----------------
+  // Gallery collection (sorted by file creation date, newest first)
+  // -----------------
+  const galleryDir = path.join(__dirname, "art/img/");
+  eleventyConfig.addCollection("images", async () => {
+    if (!fs.existsSync(galleryDir)) return [];
+    let files = fs.readdirSync(galleryDir).filter(file => /\.(jpe?g|png|gif|webp)$/i.test(file));
     let images = [];
-    for (let file of files) {
-      let imagePath = path.join(imageDir, file);
-      const stats = fs.statSync(imagePath);// Get file system stats to access the creation date
-      let options = {
-        widths: [450, null], // Thumbnail + original
-        formats: ["jpg"], // No WebP
-        outputDir: "./_site/art/img/",
-        urlPath: "/art/img/"
-      };
 
-      // Process image
-      let metadata = await Image(imagePath, options);
-      let imageInfo = metadata.jpeg[metadata.jpeg.length - 1];
+    for (let file of files) {
+      let imgPath = path.join(galleryDir, file);
+      const stats = fs.statSync(imgPath); // access file creation date
+      let alt = path.basename(file, path.extname(file)).replace(/[-_]/g, " ");
+      let { imageInfo } = await getImageData("art/img/" + file, alt);
 
       images.push({
         url: imageInfo.url,
-        alt: file.replace(/\.\w+$/, "").replace(/[-_]/g, " "), // Auto alt text
+        alt,
         width: imageInfo.width,
         height: imageInfo.height,
-        date: stats.birthtime// Add the date object to the collection item
+        date: stats.birthtime // add the date
       });
     }
 
-        // ADDITION: Sort the array of images by date in descending order (newest first)
+    // Sort by date, newest first
     images.sort((a, b) => b.date - a.date);
-
-    
     return images;
   });
 
-  // Register the image shortcode (JPG ONLY)
-  eleventyConfig.addLiquidShortcode("image", (src, alt) => {
-    return `<img src="${src}" alt="${alt}" loading="lazy">`;
-  });
+
+
+
+
 
 
 
   // adding RSS
   eleventyConfig.addPlugin(feedPlugin, {
 		type: "rss", // or "rss", "json"
-		outputPath: "/feed.xml",
+		outputPath: "/art-feed.xml",
 		collection: {
-			name: "post", // iterate over `collections.posts`
+			name: "art", // iterate over `collections.posts`
 			limit: 0,     // 0 means no limit
 		},
 		metadata: {
 			language: "en",
-			title: "Blog",
+			title: "Art feed",
 			subtitle: "This is a longer description about your blog.",
-			base: "https://wescarr.com/",
+			base: "https://wescarr.com/blog/art",
 			author: {
 				name: "Wes Carr",
 				//email: "",
@@ -110,6 +126,13 @@ module.exports = function (eleventyConfig) {
     //stylesheet: "/feed.xsl", // stylesheet reference
 	});
 
+
+  eleventyConfig.addCollection("artblogPosts", function(collectionApi) {
+  // Filter all posts for those having the 'art' tag
+  return collectionApi.getAll().filter(item => {
+    return item.data.tags && item.data.tags.includes("art");
+  });
+});
 
 
 

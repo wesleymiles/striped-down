@@ -67,7 +67,7 @@ body {
   padding: var(--gap) var(--gap) 0 var(--gap);
 }
 
-p, li, time, table, dl {
+p, li, time, table, dl, label, button {
 /*system font - old style*/
   font-family: var(--sans-serif-system);
   color: #44555E;
@@ -173,10 +173,10 @@ a {
   text-decoration-thickness: 0.03em;
   /* text-decoration-skip-ink: none; */
   text-decoration-color: #005275;
+  transition: all .15s;
 }
   a:link, a:visited {
     color: #005275;
-    transition: all .2s;
   }
   a:hover, a:active {
     color: #5EAA78;
@@ -372,11 +372,14 @@ small {
 /* button
 -------------------------------------------------- */
 
-div.button a {
+div.button a
+button, {
 font-family: var(--sans-serif);
+transition: all .15s;
 font-size: .8em;
 }
 
+button,
 .theme--dark div.button a:link,
 .theme--dark div.button a:visited,
 div.button a:visited,
@@ -391,7 +394,7 @@ div.button a:link {
   display: inline-block;
 }
 
-
+  button:hover, button:active,
   .theme--dark div.button a:active,
   .theme--dark div.button a:hover,
   div.button a:active,
@@ -1689,6 +1692,26 @@ label, .label {
 
 label:hover, .label:hover {
   background-color: #fff;
+}
+
+/* overriding for actual labels on forms */
+
+form label {
+  /* font-family: initial; */
+  /* display: initial; */
+  text-transform: initial;
+  padding: initial;
+  margin-bottom: initial;
+  font-weight: initial;
+  font-size: .9em;
+  background-color: initial;
+}
+
+form legend {
+  font-family: var(--serif);
+  font-size: 1.7em;
+  line-height: 1.2;
+  margin-bottom: .5em;
 }
 
 
