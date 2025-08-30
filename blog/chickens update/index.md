@@ -2,7 +2,7 @@
 layout: blog.liquid
 title: Chicken grief
 description: We suffered a loss of our newest chicks from the spring
-tags: ["post", "homesteading"]
+// tags: ["post", "homesteading"]
 date: 2024-08-08
 ---
 

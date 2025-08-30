@@ -17,6 +17,27 @@ html {
   font-variant-ligatures: common-ligatures;
   font-feature-settings: "liga","clig";
   height: 100%;
+  background-color: var(--bg-light);
+
+
+  --text-non-em: #928d78;
+  --text-em: #3ea261;
+  --text-light: #FFFADB;
+  --bg-dark: #005275;
+  --highlight: rgba(255, 255, 255, .3);
+  --bg-light: #FAFAF7;
+  --gapSm: 21px;
+  --sans-serif-var: 'bagnard';
+  --sans-serif: 'Public','bricolage','Arial Narrow', Impact, Bahnschrift, 'DIN Alternate', 'Franklin Gothic Medium', 'Nimbus Sans Narrow', sans-serif-condensed, sans-serif;
+  --serif: 'instrument';
+  --serif-system: Times New Roman, Droid Serif, Times, Source Serif Pro, serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbolserif;
+  --sans-serif-system: X, -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  --monospace-system: ui-monospace, 'Nimbus Mono PS', 'Courier New', Menlo, Monaco, "Cascadia Mono", "Segoe UI Mono", "Roboto Mono", "Oxygen Mono", "Ubuntu Mono", "Source Code Pro", "Fira Mono", "Droid Sans Mono", "Consolas", "Courier New", monospace;
+  --gap: 1.5rem;
+  --texture: #F2F0ED url(/img/noise.png)x repeat;
+  --curve: 25px;
+  --contentWidth: 20vw;
+  --border: 1px solid #c2e1c3;
 }
 
 
@@ -30,23 +51,10 @@ html,body {
 
 
 body {
-  --text-em: #3ea261;
-  --text-light: #FFFADB;
-  --bg-dark: #005275;
-  --highlight: rgba(255, 255, 255, .3);
-  --bg-light: #FAFAF7;
-  --gapSm: 21px;
-  --sans-serif: 'bricolage','Arial Narrow', Impact, Bahnschrift, 'DIN Alternate', 'Franklin Gothic Medium', 'Nimbus Sans Narrow', sans-serif-condensed, sans-serif;
-  --serif: 'instrument';
-  --serif-system: Times New Roman, Droid Serif, Times, Source Serif Pro, serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbolserif;
-  --sans-serif-system: X, -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-  --monospace-system: ui-monospace, 'Nimbus Mono PS', 'Courier New', Menlo, Monaco, "Cascadia Mono", "Segoe UI Mono", "Roboto Mono", "Oxygen Mono", "Ubuntu Mono", "Source Code Pro", "Fira Mono", "Droid Sans Mono", "Consolas", "Courier New", monospace;
-  --gap: 1.5rem;
-  --texture: #F2F0ED url(/img/noise.png)x repeat;
-  --curve: 25px;
-  --contentWidth: 20vw;
-  --border: 1px solid #c2e1c3;
-  background: var(--bg-light);
+  background-color: #fff;
+  background-clip: content-box;
+  /* font-family: var(--sans-serif-system); */
+  font-family: var(--sans-serif);
 }
 
 @font-face {
@@ -64,12 +72,11 @@ body {
 
 body {
   margin: 0;
-  padding: var(--gap) var(--gap) 0 var(--gap);
+  padding: var(--gap) var(--gap) 0 13vw;
+  border-radius: var(--curve) var(--curve) 0 0;
 }
 
 p, li, time, table, dl, label, button {
-/*system font - old style*/
-  font-family: var(--sans-serif-system);
   color: #44555E;
 }
 
@@ -172,11 +179,11 @@ a {
   text-underline-offset: .25rem; 
   text-decoration-thickness: 0.03em;
   /* text-decoration-skip-ink: none; */
-  text-decoration-color: #005275;
+  text-decoration-color: #466a79;
   transition: all .15s;
 }
   a:link, a:visited {
-    color: #005275;
+    color: #466a79;
   }
   a:hover, a:active {
     color: #5EAA78;
@@ -212,14 +219,16 @@ picture {
   }
 
   picture.full  {
-    padding-top: 3em; 
-    width: 70vw;
-    margin-left: -10vw;
+    width: 75vw;
+  }
+  picture.mid  {
+    width: 60vw;
   }
 
-  picture.full img {
-    width: 100%;
-  }
+    picture.full img,
+    picture.mid img {
+      width: 100%;
+    }
 
   figcaption,
   p.caption {
@@ -307,35 +316,36 @@ ol {
 h1, h2, h3{  
   /* fallback font attributes */
   /* font-family: 'Arial Narrow', Impact, Bahnschrift, 'DIN Alternate', 'Franklin Gothic Medium', 'Nimbus Sans Narrow', sans-serif-condensed, sans-serif; */
-  font-family: var(--serif-system);
-  font-family: var(--serif);
+  /* font-family: var(--sans-serif-system); */
+  /* font-family: var(--serif-system); */
+  /* font-family: var(--serif); */
   line-height: 1.1;
   margin-bottom: 1em;
   color: #466a79;
-  font-weight: 400;
+  font-weight:600;
+  margin-bottom: .8em; 
 }
 
 h1 {
-  font-size: 8.7vw;
-  letter-spacing: -.02em;
-  margin: .4em 0 0; 
-  line-height:.85; 
+  font-size: 3em;
+  font-family: var(--sans-serif-var), var(--sans-serif-system);
+  font-weight: normal;
+  letter-spacing: -2px;
 }
 
-  h1 span { color: #c2e1c3; font-style: italic;  }
+  /* h1 span { color: #587155; font-style: italic;  } */
 
 
 h2 {
-  font-size: 3em;
+  font-size: 1.5em;
   margin: 0 0 .5em;
-  color: #466a79;
 }
-  h2:not(:first-child) {  margin-top: 1.2em; }
+  h2:not(:first-child) {  margin-top: 2em; }
 
 
 h3 {
-  font-size: 2.3em;
-  margin-bottom: .3em;
+  font-size: 1.2em;
+  /* margin-bottom: .3em; */
   line-height: 1.3;
 }
 h3:not(:first-child) {  margin-top: 1.5em; }
@@ -359,9 +369,9 @@ small {
 @media only screen and (max-width: 800px) {
 
  html { font-size: 16px; }
-  h1 { font-size: 15vw; }
-  h2 { font-size: 2.2em; }
-  h3 { font-size: 1.6em; }
+  h1 { font-size: 2em; }
+  /* h2 { font-size: 2.2em; } */
+  /* h3 { font-size: 1.6em; } */
   /* h4 { font-size: 1.3em; } */
   body { padding: 0 }
   footer { padding: 1em;}
@@ -408,19 +418,14 @@ div.button a:link {
 -------------------------------------------------- */
 
   body > main {
-    border-radius: var(--curve) var(--curve) 0 0;
-    /* z-index: 1; */
-    background: 
-    linear-gradient(90deg,
-    rgba(255,255,255,0) 20%,
-    rgba(255,255,255,1) 20%,
-    rgba(255,255,255,1) 100%,
-    rgba(255,255,255,0) 100%);
     position: relative;
+    background-color: #fff;
+    padding: calc(var(--gap)*2);
+    max-width: 900px;
   }
   
   /* stroke around everything */
-  body > main::after {
+  /* body > main::after {
     content: "";
     position: absolute;
     height: 100%;
@@ -429,16 +434,11 @@ div.button a:link {
     outline-offset: calc(var(--gap)*-3);
     outline: 1px solid var(--highlight);
     pointer-events: none;
-  }
+  } */
 
     /* set every section to have a small column in the middle  */
     body > main > section {
-      margin: 0 auto;
-      padding: calc(var(--gap) * 3) calc(var(--contentWidth) * 1.2);
-      position: relative;
-
-      /*  ensure this, as a parent, doesn't let any children overflow */
-      overflow: inherit;
+      margin-bottom: calc(var(--gap) * 3);
     }
 
 
@@ -457,34 +457,12 @@ body > main > section.cta.theme--dark {
   background-color: #285E50;
 }
 
-  body > main > section > p:last-child {
-    margin-bottom: 0;
-  }
-
-  /* override that small middle column for sections that need a colored background */
-  body > main > section.hero {
-    padding: calc(var(--gap)* 3) calc(var(--contentWidth)* 1.2);
-  }
-
-
-  body > main > section.stretch--bg {
-    padding-left: 0; 
-    padding-right: 0; 
-    background-color: #fff;
-  }
 
 
 /*  give a bg to a pitcure element if not in a section element  */
 body > main > picture {
   background-color: #fff;
 }
-
-
-  body.work section[class^="--"] > * {
-    max-width: 855px;
-    margin-left: auto;
-    margin-right: auto;
-  }
 
 
 /* helper classes */
@@ -570,23 +548,39 @@ header nav {
   max-width: inherit;
 }
 
+  body > main > section.stretch {
+    width: 75vw;
+    margin: 1em;
+  }
+    
 
+
+  body > main > section.stretch p,
+  body > main > section.stretch h2
+
+   {
+    max-width: 900px;
+  }
 
 @media only screen and (max-width: 800px) {
 
-  body > main {  background: none;  }
-  body > main::after { outline-offset: calc(var(--gap)*-1);  }
+  /* body > main {  background: none;  } */
 
-  body > main > section { padding: 3em 5%;  }
+  body > main { padding: var(--gap); }
+
+  /* body > main::after { outline-offset: calc(var(--gap)*-1);  } */
+
+  /* body > main > section { padding: 3em 5%;  } */
+
   body > main > section.cta { padding-left: 5%; }
   .cols { display:block;   }
 
-  body > main > section.stretch,
-  body > main > section.hero { padding: 3em 5%}
+  /* body > main > section.stretch,
+  body > main > section.hero { padding: 3em 5%} */
 
-  section.hero { 
-    margin:8px;
-  }
+  /* section.hero { 
+    margin-bottom: var(--gap);
+  } */
 
   .cols > * {
     flex: inherit;
@@ -612,6 +606,14 @@ header nav {
 /* Nav (header and footer)
 -------------------------------------------------- */
 
+header.mast {
+  background-color: var(--bg-light);
+  padding: 1em 0;
+  border-bottom: 4px solid transparent; 
+  border-image-source: linear-gradient(to right, #A4B177 75%, #587155 25%);
+  border-image-slice: 1;
+} 
+
 nav {
   font-size: .9em;
   display: flex;
@@ -623,7 +625,8 @@ nav {
 
 nav p,
 nav li {
-/*  font-family: var(--sans-serif);*/
+  font-family: var(--sans-serif-var), var(--sans-serif-system);
+  
 }
 
   nav .nav-menu {
@@ -713,12 +716,12 @@ tr:hover {
 
 header.mast .site-logo {
   display: flex;
-      font-size: 2em;
-      font-family: var(--serif)
+      font-size: 1em;
+      /* font-family: var(--serif) */
 }
 
   header.mast .site-logo img {
-    width: 250px;
+    width: 300px;
     position: absolute;
     left: -3px;
     top: 0;
@@ -785,17 +788,18 @@ header.mast .site-logo {
 -------------------------------------------------- */
 
 body > footer {
+  padding-right: calc(var(--gap)*2);
+  padding-left: calc(var(--gap)*2);
   text-align: center;
   background: transparent url(/img/pine-bottom.png) bottom center no-repeat;
-  background-size: 8%;
-  border-top: var(--border);
+  background-size: 5%;
+  /* border-top: var(--border); */
   font-size: .8em;
-  /* background: radial-gradient(161% 103.8% at 75.9% 100%, #045779 0%, #101835 100%); */
 }
 
 
   body > footer nav {
-    padding-top: calc(var(--gap)*10);
+    padding-top: calc(var(--gap)*8);
   }
 
 @media only screen and (max-width: 800px) {
@@ -820,16 +824,16 @@ body > footer {
 }
 
 .theme--dark {
-  background-color: #003b57/*  !important*/
+  background-color: #003b57
 }
 
 
-  .hero figcaption,
+  /* .hero figcaption,
   .hero p,
   .hero time,
   .hero h1,
   .hero h3,
-  .hero h2,
+  .hero h2, */
   .theme--dark figcaption,
   .theme--dark p, 
   .theme--dark li, 
@@ -883,31 +887,26 @@ body > footer {
 /* HERO
 -------------------------------------------------- */
 
-body > main > section.hero {
+/* body > main > section.hero {
   background-color: var(--bg-dark);
   margin-top: var(--gapSm);
   background-attachment: fixed;
   background-position: center;
   background-size: cover;
+} */
 
-  /* reverting positioning allows the outline from the body element to show*/
-  /* position: inherit; */
-}
-
-  .hero h2,
+  /* .hero h2,
   .hero h3,
   .hero p {
     max-width: 855px;
     margin: 0 auto;
     padding: var(--gap) 0;
-  }
+  } */
 
   .hero time {
-    font-family: var(--monospace-system);
-    display: block;
-    margin-top: calc(var(--gap)* 3);
+    display: block;    
   }
-
+/* 
   .hero a:visited, 
   .hero a:link {
     color: #FFFADB;
@@ -916,18 +915,12 @@ body > main > section.hero {
   .hero a:hover, 
   .hero a:active {
       color: #FFF583
-    }
+    } */
 
-
-  .hero p:last-child {
-    margin-bottom: 0;
-  }
 
 
 
   @media only screen and (max-width: 800px) {
-
-    .homepage h1 { margin: 0;}
 
     .hero h3,.hero p { 
       padding-bottom: 0;
@@ -938,15 +931,13 @@ body > main > section.hero {
 /*  default hero  */
 
 .hero {
-  border-radius: var(--curve) var(--curve) 0 0;
-  /* background: url(/img/bg-barn.jpg) no-repeat center/cover; */
-  /* background-image: url(/img/bg-barn.png); */
-  background: radial-gradient(161% 103.8% at 75.9% 100%, #045779 0%, #101835 100%);
+  /* border-radius: var(--curve) var(--curve) 0 0; */
+  /* background: radial-gradient(161% 103.8% at 75.9% 100%, #045779 0%, #101835 100%); */
 
   /* to contain the background pseudo within */
-  overflow: hidden;
-  position: relative;
-  z-index: 0;
+  /* overflow: hidden; */
+  /* position: relative; */
+  /* z-index: 0; */
 
 
   /* background: rgb(0,82,117);
@@ -956,15 +947,17 @@ body > main > section.hero {
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#005275",endColorstr="#0a181d",GradientType=1);  */
 }
 .hero > * {
-  z-index: 1; /* Keeps children above ::after */
+  /* z-index: 1;  */
+  /* Keeps children above ::after */
 }
 
 
 /* images as pseudos */
-.hero::after {
+/* Inset for Shorter way to set top, right, bottom, left to 0 */
+/* .hero::after {
   content: "";
   position: absolute;
-  inset: 0; /* Shorter way to set top, right, bottom, left to 0 */
+  inset: 0; 
   width: 100%;
   height: 100%;
   background: url(/img/bg-barn.jpg) no-repeat center/cover;
@@ -972,7 +965,7 @@ body > main > section.hero {
   z-index: -1;
   pointer-events: none;
   mix-blend-mode: lighten;
-}
+} */
 
 /* custom hero images  */
 .speedy-brand .hero::after {
@@ -1004,8 +997,10 @@ body > main > section.hero {
 -------------------------------------------------- */
 
 body.work section[class^="--"] {
-  border-radius: var(--curve);
+  /* border-radius: var(--curve); */
   margin-bottom: var(--gap);
+  margin-left: calc(var(--gap)*-2);
+  padding: calc(var(--gap)*2);
 }
 
   body.web section div.button a:visited,
@@ -1602,7 +1597,9 @@ body.post img {
 
   .meta-date {
     margin-top: 0.5em;
-    font-size: .7em;
+    margin-bottom: 1em;
+    font-size: .8em;
+    color: var(--text-non-em);
   }
   .archive-entry p {
     max-width: 35em;
@@ -1612,7 +1609,6 @@ body.post img {
       margin-bottom: .1em;
       max-width: 13em;
       min-width: 19em;
-      font-size: 1.8em;
       margin-top: 0;
   }
 
@@ -1663,15 +1659,15 @@ body.Blog section.post-footer {
 
 /* posts under the category of "art" = drawings and paintings */
 
-body.art > main > section.hero {
+/* body.art > main > section.hero { */
   /* height: 20em; */
   /* overflow: visible; */
-  padding-bottom: 10em;
-}
-  body.art picture.primary-image {
+  /* padding-bottom: 10em; */
+/* } */
+  /* body.art picture.primary-image {
     padding: 0;
     margin-top: -10em;
-  }
+  } */
 
 
 /* Basic styling for clickable tags 
@@ -1735,20 +1731,25 @@ form legend {
     }
 
 
-    
-
-/* remove column from main
--------------------------------------------------- */
-
-body > main {
-
-}
 
 
 
 /* Homepage
 -------------------------------------------------- */
-body.homepage .hero  {
+
+.homepage h1
+/* , .homepage h2, */
+/* .homepage h3  */
+{ 
+  /* font-size: 1em; */
+}
+
+.homepage main svg {
+  width: 18px;
+  height: auto;
+}
+
+/* body.homepage .hero  {
   margin-bottom: -300px;
   padding-bottom: 250px;
   padding-top: 6em;
@@ -1756,7 +1757,7 @@ body.homepage .hero  {
 
 body.homepage .hero::after  {
   
-}
+} */
 
   /* putting my photo in a croppable box that matches the content height */
   body.homepage section.about figure,
@@ -1773,7 +1774,7 @@ body.homepage .hero::after  {
 }
 
 
-  @media only screen and (max-width: 800px) {
+  /* @media only screen and (max-width: 800px) {
     
     body.homepage .hero  {
       padding-top: 7em;
@@ -1782,7 +1783,7 @@ body.homepage .hero::after  {
     }
 
 
-  }
+  } */
 
 
 
@@ -1842,6 +1843,7 @@ section.tl.stretch--bg {
   padding-left: 1em;
   padding-right: 1em;
   background-color: #fff;
+  width: 80vw;
 }
 
 
@@ -1916,7 +1918,7 @@ p.tl-year {
 @media only screen and (max-width: 800px) {
 
     p.tl-year { bottom: -32px; }
-    body > main > section.stretch--bg { padding-left: 3%;padding-right:3% }
+    /* body > main > section.stretch--bg { padding-left: 3%;padding-right:3% } */
     
 }
 
