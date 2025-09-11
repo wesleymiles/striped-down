@@ -24,11 +24,13 @@ html {
   --text-em: #3ea261;
   --text-light: #FFFADB;
   --bg-dark: #005275;
+  --bg-dark-alt: #a2cbdd;
   --highlight: rgba(255, 255, 255, .3);
-  --bg-light: #FAFAF7;
+  --bg-light: #f4f2e8;
+  --bg-light-alt: #e7e5d9;
   --gapSm: 21px;
   --sans-serif-var: 'bagnard';
-  --sans-serif: 'Public','bricolage','Arial Narrow', Impact, Bahnschrift, 'DIN Alternate', 'Franklin Gothic Medium', 'Nimbus Sans Narrow', sans-serif-condensed, sans-serif;
+  --sans-serif: 'Public','bricolage', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   --serif: 'instrument';
   --serif-system: Times New Roman, Droid Serif, Times, Source Serif Pro, serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbolserif;
   --sans-serif-system: X, -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
@@ -37,7 +39,7 @@ html {
   --texture: #F2F0ED url(/img/noise.png)x repeat;
   --curve: 25px;
   --contentWidth: 20vw;
-  --border: 1px solid #c2e1c3;
+  --border: 1px solid var(--bg-light-alt);
 }
 
 
@@ -72,7 +74,7 @@ body {
 
 body {
   margin: 0;
-  padding: var(--gap) var(--gap) 0 13vw;
+  padding: var(--gap) var(--gap) var(--gap) 13vw;
   border-radius: var(--curve) var(--curve) 0 0;
 }
 
@@ -609,8 +611,8 @@ header nav {
 header.mast {
   background-color: var(--bg-light);
   padding: 1em 0;
-  border-bottom: 4px solid transparent; 
-  border-image-source: linear-gradient(to right, #A4B177 75%, #587155 25%);
+  border-bottom: 2px solid transparent; 
+  border-image-source: linear-gradient(to right, var(--bg-dark-alt) 75%, var(--bg-light-alt) 25%);
   border-image-slice: 1;
 } 
 
@@ -646,7 +648,7 @@ nav li {
       color: #285E50;
     }
     nav .nav-menu li.active-nav{
-      border-top: var(--border);
+      border-top: 1px solid var(--bg-dark-alt);
       padding-top: .5em;
       margin-top: -.5em;
     }
@@ -716,12 +718,12 @@ tr:hover {
 
 header.mast .site-logo {
   display: flex;
-      font-size: 1em;
-      /* font-family: var(--serif) */
+  font-size: 1em;
+  z-index: 1;
 }
 
-  header.mast .site-logo img {
-    width: 300px;
+  header.mast .site-logo > img {
+    width: 350px;
     position: absolute;
     left: -3px;
     top: 0;
@@ -730,14 +732,17 @@ header.mast .site-logo {
   }
 
 /*  when hovered, rotate to show my name */
-  header.mast .site-logo:hover img {
+  header.mast .site-logo:hover > img {
     transform: rotate(30deg);
     transform-origin: center left;
   }
 
-  header.mast .site-logo:hover  a {
-    z-index: 1;
+  header.mast .site-logo a > img {
+    margin-bottom: -40px;
+    margin-left: -20px;
   }
+
+
 
     header nav a {
       padding-left: 5px;
@@ -770,7 +775,7 @@ header.mast .site-logo {
         padding: 0;
       }
 
-      header.mast .site-logo img {
+      header.mast .site-logo > img {
         position: absolute;
         left: 0;
         width: 150px;
@@ -781,6 +786,18 @@ header.mast .site-logo {
         header.mast .site-logo:hover img {
           transform: none;
         }
+
+      header.mast .site-logo a > img {
+        width: 125px;
+        position: absolute;
+        z-index: 1;
+        top: 45px;
+        left: 0;
+      }
+      nav .nav-menu {
+        padding-left: 3em;;
+      }
+
 
   }
 
@@ -793,8 +810,8 @@ body > footer {
   text-align: center;
   background: transparent url(/img/pine-bottom.png) bottom center no-repeat;
   background-size: 5%;
-  /* border-top: var(--border); */
   font-size: .8em;
+  background-color: var(--bg-light-alt);
 }
 
 
