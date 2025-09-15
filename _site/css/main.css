@@ -1463,8 +1463,9 @@ body.modal-open {
 .card-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-    gap: 1rem;
-    padding: 1rem;
+    gap: 2rem;
+    /* padding: 2em; */
+    grid-auto-flow: dense; 
 }
 
 .card-container p,
@@ -1473,42 +1474,89 @@ body.modal-open {
   margin-top: 0;
 }
 
-
 .card {
     border-radius: var(--curve);
     background: var(--text-light);
     border: 1px solid #c2e1c3;
-    height: 300px;
+    height: 200px;
     display: flex;
     flex-direction: column;
     justify-content: flex-end; /* Align heading to the bottom */
-    padding: 1rem;
+    padding: 2em;
     position: relative;
+    transition: all 0.2s ease;
     overflow: hidden;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
+    grid-column: span 1;
 
-.card:hover,
-.card:focus {
+}
+    .card:nth-child(7n) { grid-column: span 2; }
+  /*  reset on small screens */
+  @media (max-width: 800px) {
+    .card:nth-child(7n) { grid-column: span 1; }
+  }
+
+  .card:hover,
+  .card:focus {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
-    transition: all 0.2s ease-in-out;
+    /* transition: all 0.2s ease; */
     transform: translateY(-5px);
-}
+    background-color: var(--bg-dark);
+    border-color: #fff;
+  }
+  .card:nth-child(7n) {
 
-h3.law-title {
+  }
+  
+  .card * {
+  transition: all 0.2s ease;
+  }
+
+/* icon for each law card */
+.card .law-icon {
+  display: block;
+  width: 40%;
+  max-width: 150px;
+  height: auto;
+  margin: 0 auto 0.5rem;
+  opacity: 0;
+  /* filter: saturate(100%) invert(63%) sepia(9%) saturate(1467%) hue-rotate(94deg) brightness(95%) contrast(86%); */
+
+  align-self: center;      /* horizontal center */
+  margin-top: auto;        /* push down from top */
+  margin-bottom: auto;     /* push up from bottom → vertical center */
+  /* transition: all 0.2s ease; */
+
+}
+  .card:hover .law-icon,
+  .card:focus  .law-icon {
+    filter: invert(100%);
+    width: 20%;
+    opacity: .5;
+  }
+
+.card h3.law-title {
     position: relative;
     padding-bottom: 0.5rem;
-    transition: all 1s ease;
+    transition: all .4s ease;
 }
+  .card:hover h3.law-title,
+  .card:focus h3.law-title {
+    /* font-size: 2em; */
+    color: var(--bg-light-alt);
+  }
 
-p.law-number {
+.card p.law-number {
   font-size: .7em;
+  position: absolute;
+  top: 17px;
 }
-p.law-description {
+.card p.law-description {
     opacity: 0;
     transform: translateY(100%);
     position: absolute;
     bottom: 0;
+    transition: all .3s ease;
+    color: #fff;
 }
 
 .card:hover .law-description,
@@ -1516,10 +1564,7 @@ p.law-description {
     opacity: 1;
     transform: translateY(0); /* Slide description into view */
     position: relative;
-}
-.card:hover {
-  background-color: #c2e1c3;
-  border-color: #fff;
+    transition: all .3s ease;
 }
 
   

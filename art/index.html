@@ -40,7 +40,7 @@ eleventyNavigation:
 <p> Making this page also provided a chance to play with a <a href="https://photoswipe.com/">slideshow tool</a> and eleventy's <a href="https://www.11ty.dev/docs/plugins/image/">plugin</a>.
 
 </section>
-
+<!-- 
 <section class=" theme--emp  ">
 
   <style>
@@ -79,8 +79,6 @@ eleventyNavigation:
       <div data-v-8541cdc9="" class="preview-heading">
     </div>
     <div data-v-8541cdc9="" class="preview-input-field">
-      <!-- <legend>Fresh, steaming art. Made by hand. Join the art newsletter.</legend> -->
-      <!-- <label for="email">Your email <span class="required"></span></label>     -->
       <input data-v-8541cdc9="" type="email" name="email" required aria-required="true" placeholder="Email address" spellcheck="false" >
     </div>
     <div data-v-8541cdc9="" class="preview-submit-button">
@@ -89,7 +87,7 @@ eleventyNavigation:
     
     <p><small><a href="https://follow.it" target="_blank" class="external powered-by-line">Powered by follow.it</a></small></p>
   </div>
-</section> 
+</section>  -->
 
 
 
@@ -111,8 +109,8 @@ eleventyNavigation:
 
 #gallery > ul {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-auto-rows: 200px;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-flow: dense;
   grid-gap: 1em;
   padding: 0;
 }
@@ -122,18 +120,13 @@ eleventyNavigation:
     #gallery li a {
       display: block;
       line-height: 0;
-      height: 200px;
-      max-height: 200px;
+      height: 300px;
+      max-height: 300px;
       overflow: hidden;
       border-radius: 8px;
     }
     #gallery > ul > li:nth-child(7n) {
         grid-column: span 2;
-        grid-row: span 2;
-    }
-    #gallery > ul > li:nth-child(7n) a {
-      height: 400px;
-      max-height: 400px;
     }
 
     .pswp img {
