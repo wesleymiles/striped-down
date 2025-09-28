@@ -9,7 +9,6 @@ eleventyNavigation:
 
 <section class="hero">
 
-  <h1>{{ title }}</h1>
 	<p>A place to gather the drawings I've been doing this year so far, with pen, india ink, and sometimes watercolor.</p>
   <p>I particpated in two art things! A month-long fundraiser in may <a href="https://secure.givelively.org/donate/chittenden-asylum-seekers-assistance-network/arts-for-asylum-seekers-2025/wes-carr">supporting asylum seekers in VT</a>, kicked off my interest in art this year and I've been trying to keep up with the 2 or 3 a week I created during the fundraiser. Then a <a href="https://www.sparrowartsupply.com/plein-air-festival">plein air</a> in june.</p>
   <p>The images toward the top are newer. You can see my transition to getting more comfortable with color.</p>
@@ -18,7 +17,6 @@ eleventyNavigation:
 </section>
 
 <section class="stretch">
-  <time class="meta-date" datetime="{{ date | postDate }}">Last updated: <span class="label">{{ date-updated | postDate}}</span></time>
 <br>
 <br>
 
@@ -141,6 +139,14 @@ eleventyNavigation:
     grid-template-rows: masonry;
   }
   
+}
+
+
+/* Two columns at 900px and below */
+@media (max-width: 900px) {
+  #gallery > ul {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 </style>

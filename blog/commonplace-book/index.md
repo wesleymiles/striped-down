@@ -8,9 +8,8 @@ date-updated: 2024-12-15
 ---
 
     <section class="hero">
-    <time class="meta-date" datetime="{{ date | postDate }}">Written: {{ date | postDate }} | Updated: {{ date-updated | postDate}}</time>
 
-# {{title}}
+
 {{description}}
 
 </section>
@@ -37,7 +36,7 @@ date-updated: 2024-12-15
     <div class="content-inner">
 
 
-## 2024
+<h2 class="keep-sticky">2024</h2>
 
 
 ### 
@@ -367,7 +366,8 @@ Wall pass-through firewood door is a thing, albeit small.
 
 
 
-## 2023
+<h2 class="keep-sticky">2023</h2>
+
 
 
 <div data-tags="quote">

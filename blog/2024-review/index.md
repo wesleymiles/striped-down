@@ -7,9 +7,8 @@ date: 2025-01-01
 ---
 
 <section class="hero">
-    <time class="meta-date" datetime="{{ date | postDate }}">Written: {{ date | postDate }}</time>
 
-# {{title}}
+
 {{description}}
 
 </section>

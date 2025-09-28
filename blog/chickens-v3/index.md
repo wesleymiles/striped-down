@@ -7,9 +7,8 @@ date: 2024-08-02
 ---
 
 
-<section class="hero"><time class="meta-date" datetime="{{ date | postDate }}">{{ date | postDate }}</time>
 
-# {{title}}
+
 
 Big update since the last post. We got chicks which don't look like chicks anymore.
 

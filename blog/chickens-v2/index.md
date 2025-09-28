@@ -7,9 +7,8 @@ date: 2024-02-29
 ---
 
 
-<section class="hero"><time class="meta-date" datetime="{{ date | postDate }}">{{ date | postDate }}</time>
 
-# {{title}}
+
 
 Chipping away at the coop, one month in.
 

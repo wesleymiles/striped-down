@@ -78,17 +78,25 @@ body {
   border-radius: var(--curve) var(--curve) 0 0;
 }
 
-p, li, time, table, dl, label, button {
+p, li, table, dl, label, button {
   color: #44555E;
 }
 
 
 hr {
     border-width:0;
-    background-color: var(--bg-light);
-    border-bottom: var(--border);
     margin-top: 3em;
 }
+
+main hr {
+  background:  url("/img/pine-divider.png") no-repeat 50% 50%/auto 100%;
+  height: 20px;
+}
+/* main hr:nth-of-type(2) {
+  background-image: url("/img/pine-divider-2.png");
+} */
+
+
 
 ol, ul {
   padding-left: 2em;
@@ -422,7 +430,7 @@ div.button a:link {
   body > main {
     position: relative;
     background-color: #fff;
-    padding: calc(var(--gap)*2);
+    padding: calc(var(--gap)*2) calc(var(--gap)*2) 0 calc(var(--gap)*2);
     max-width: 900px;
   }
   
@@ -498,50 +506,40 @@ header.mast {
 .--center {
   text-align: center;
 }
-
-.cols {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  width: 100%;
-  justify-content: space-between;
-  padding: 0;
-  margin: 0;
+/* Image grid container */
+.image-grid {
+  display: grid;
+  gap: 1rem;
+  margin: 2rem 0;
 }
 
-  .cols > * {
-    flex: 1;
-    margin-right: 2em;
+/* 1, 2, or 3 columns based on class */
+.image-grid.cols-1 { grid-template-columns: 1fr; }
+.image-grid.cols-2 { grid-template-columns: repeat(2, 1fr); }
+.image-grid.cols-3 { grid-template-columns: repeat(3, 1fr); }
+
+/* Break out of content container (but not body) */
+section.stretch,
+.image-grid.bleed {
+  position: relative;
+  left: 0;
+  right: calc(50% - 50vw - var(--gap));  
+  width: calc(100vw - 13vw - calc(var(--gap)*5));
+}
+
+/* Mobile: always stack */
+@media (max-width: 800px) {
+  .image-grid {
+    grid-template-columns: 1fr !important;
+    left: 0;
+    right: 0;
+    width: 100%;
   }
-
-    .cols > *:last-child {
-      margin-right: 0;
-    }
-
-    .cols > * h3 {
-      margin-top: 0;
-    }
-
-    ol.cols li::before {
-      margin: 1em auto -1.5em;
-      display: block;
-      position: relative;
-      left: initial;
-      background: #62a87c;
-   }
-
-    .cols .card { 
-      text-align: center;
-      margin-top: 2em;  
-    }
-
-      .cols .card svg { 
-        max-width: 35%;
-        display: block;
-        margin: 0 auto -1em;
-/*        color: #3ea261;*/
-      }
-
+  section.stretch,
+  .image-grid.bleed {
+    width: auto
+  }
+}
 
 
 /* wide content container */
@@ -550,59 +548,29 @@ header nav {
   max-width: inherit;
 }
 
+
   body > main > section.stretch {
-    width: 75vw;
-    margin: 1em;
+    position: relative;
+    /* calc + body side padding  */
+    width: calc(82vw - calc(var(--gap) * 2));
   }
-    
 
 
   body > main > section.stretch p,
-  body > main > section.stretch h2
-
-   {
+  body > main > section.stretch h2 {
     max-width: 900px;
   }
 
 @media only screen and (max-width: 800px) {
 
-  /* body > main {  background: none;  } */
-
   body > main { padding: var(--gap); }
 
-  /* body > main::after { outline-offset: calc(var(--gap)*-1);  } */
-
-  /* body > main > section { padding: 3em 5%;  } */
-
   body > main > section.cta { padding-left: 5%; }
-  .cols { display:block;   }
-
-  /* body > main > section.stretch,
-  body > main > section.hero { padding: 3em 5%} */
-
-  /* section.hero { 
-    margin-bottom: var(--gap);
-  } */
-
-  .cols > * {
-    flex: inherit;
-    margin-top: 1em;
-  }
-
- .--curvy {
-    border-radius: 0
-  }
+ .--curvy {  border-radius: 0 }
 
 }
 
-@media only screen and (max-width: 500px) {
 
-
-  body > main::after {
-    outline: none;
-  }
-
-}
 
 
 /* Nav (header and footer)
@@ -847,7 +815,7 @@ body > footer {
 
   /* .hero figcaption,
   .hero p,
-  .hero time,
+  
   .hero h1,
   .hero h3,
   .hero h2, */
@@ -885,6 +853,18 @@ body > footer {
   }
 
 
+  /*  helper classes
+  -------------------------------------------------- */
+
+  .keep-sticky {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    background-color: #fff;
+  }
+
+  
+
 
 /* animate a gif when its hovered via https://codepen.io/QDeltaE/pen/VWGYOB
 -------------------------------------------------- */
@@ -919,10 +899,6 @@ body > footer {
     margin: 0 auto;
     padding: var(--gap) 0;
   } */
-
-  .hero time {
-    display: block;    
-  }
 /* 
   .hero a:visited, 
   .hero a:link {
@@ -1019,6 +995,11 @@ body.work section[class^="--"] {
   margin-left: calc(var(--gap)*-2);
   padding: calc(var(--gap)*2);
 }
+
+  body.work section[class^="--"]:last-of-type {
+    margin-bottom: 0;
+}
+
 
   body.web section div.button a:visited,
   body.web section div.button a:link {
@@ -1131,6 +1112,9 @@ body.work section[class^="--"] {
     }
     body.work section[class^="--"] {
       border-radius: 0;
+    }
+    body > main > section.stretch {
+      width: calc(100vw - var(--gap));
     }
 
   }
@@ -1578,34 +1562,8 @@ body.modal-open {
 */
 
 
-.Commonplace h2 {
-  background-color: #fff;
-  position: sticky;
-  top: 0;
-  z-index: 1;
-}
 
 
-hr {
-  width: 15%;
-  margin: 0 auto 4em;
-  overflow: visible;
-  padding: 0;
-  text-align: center;
-  background-color: inherit;
-}
-
-hr:after {
-    content: "℘";
-    content: "§";
-    display: inline-block;
-    position: relative;
-    top: 17px;
-    font-size: 1.2em;
-    padding: 0 0.25em;
-    background-color: #fff;
-    color: #69bb87;
-}
 
 @media only screen and (max-width: 800px) {
   
@@ -1617,6 +1575,10 @@ hr:after {
 
 /* Blog
 -------------------------------------------------- */
+
+article header { 
+  margin-bottom: calc(var(--gap) * 2);
+}
 
 body.post img {
   border-radius: calc(var(--curve)/2);
@@ -1651,27 +1613,39 @@ body.post img {
     }
 
 .archive-entry {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
 }
 
-  .meta-date {
-    margin-top: 0.5em;
-    margin-bottom: 1em;
-    font-size: .8em;
+.entry-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin: 0;
+}
+
+.entry-header h3 {
+  margin: 0;
+  flex: 1;
+  margin-right: 1rem;
+}
+
+.archive-entry p {
+  max-width: 35em;
+  margin-bottom: calc(var(--gap)/2);
+}
+
+ul.metadata {
+  padding-left:0;
+  display: flex;
+  gap: var(--gap);
+}
+  .metadata li {
+    margin: 0;
+    font-size: 0.8em;
     color: var(--text-non-em);
-  }
-  .archive-entry p {
-    max-width: 35em;
-    margin-bottom: calc(var(--gap)/2);
-  }
-    .archive-entry h3 {
-      margin-bottom: .1em;
-      max-width: 13em;
-      min-width: 19em;
-      margin-top: 0;
+    white-space: nowrap;  
   }
 
 /* previous and next links on posts */
@@ -1710,13 +1684,6 @@ body.Blog section.post-footer {
   }
 
 
-@media only screen and (max-width: 800px) {
-
-  .meta-date {
-    margin-top: 0;
-  }
-
-}
 
 
 /* posts under the category of "art" = drawings and paintings */

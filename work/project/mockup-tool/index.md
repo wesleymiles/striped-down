@@ -10,7 +10,6 @@ noindex: true
 	<section class="hero theme--dark">
 		<div class="content-container --right">
 
-			<h1>{{ projectTitle }} {{ role }}</h1>
 			<p>{{ description }}</p>
 			{{ highlight-title }}
 			{{highlights}}

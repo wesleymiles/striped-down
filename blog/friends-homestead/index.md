@@ -6,15 +6,6 @@ tags: ["post","art"]
 date: 2025-08-14
 ---
 
-<section class="hero">
-    <time class="meta-date" datetime="{{ date | postDate }}">Written: {{ date | postDate }}</time>
-
-# {{title}}
-
-</section>
-
-<section>
-    <div class="content-inner">
 
 Two small scenes from a friend's porch in mass this weekend. The star of the show here, apparently, are house plants. One seemingly leafless and stick-y, another with exaggerated leaves, clearly an out-of-towner.
 

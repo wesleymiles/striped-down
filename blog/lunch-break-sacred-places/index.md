@@ -8,9 +8,7 @@ date-updated: 2024-11-03
 ---
 
 <section class="hero">
-	<time class="meta-date" datetime="{{ date | postDate }}">Written: {{ date | postDate }} | Updated: {{ date-updated | postDate}}</time>
 
-	<h1>Lunch break sacred places</h1>
  
     At each of my computer jobs, I wound up finding a nearby place that became a home base of sorts, on lunch breaks - my break from people and screens. This happened viscerally and unintentionally. Apparently, my mind and body required it and I abided.
 

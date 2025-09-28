@@ -7,16 +7,10 @@ date: 2024-10-16
 ---
 
 
-<section class="hero"><time class="meta-date" datetime="{{ date | postDate }}">{{ date | postDate }}</time>
 
-# {{title}}
 
 Author: Cory Doctorow  • Published: 2024
 
-</section>
-
-<section>
-    <div class="content-inner">
 
 
 <figure>

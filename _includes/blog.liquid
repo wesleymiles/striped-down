@@ -1,27 +1,63 @@
 {% include '_head.liquid' %}
 
+<article>
+
+    <header class="content-header">
+
+        <h1>{{ title }}</h1>
+        
+        <!-- if it's a post, and not the blog or tag page, include a date  -->
+        {% if date %}
+        <ul class="metadata">
+            <li><time class="meta-date" datetime="{{ date | postDate }}">Written: {{ date | postDate }}</time></li>
+
+        {% endif %}
+        
+            <!-- if it's a trip report, include trip report metadata  -->
+            {% if trips %}
+                {% if trips.peak %}
+                    <li>Peak: {{ trips.peak }}</li>
+                {% endif %}
+                {% if trips.elevation %}
+                    <li>Elevation: {{ trips.elevation }}</li>
+                {% endif %}
+                {% if trips.distance %}
+                    <li>Distance: {{ trips.distance }}</li>
+                {% endif %}
+                {% if trips.temp %}
+                    <li>Temp at highest point: {{ trips.temp }}</li>
+                {% endif %} 
+            {% endif %}
+
+        {% if date %}
+        </ul>
+        {% endif %}
+
+
+    </header>
+
     {{ content }}
+</article>
 
 <section class ="post-footer">
 
+    <dl class="blog-tags">
+        {% if tags %}
+            <dt>Tagged:</dt>
+    
+            {% for tag in tags %}
+                {% if tag != 'post' %}
+                    
+                    <a href="/blog/tag/{{ tag }}">{{ tag }}</a>
 
-<dl class="blog-tags">
-    {% if tags %}
-        <dt>Tagged:</dt>
-  
-        {% for tag in tags %}
-            {% if tag != 'post' %}
-                
-                <a href="/blog/tag/{{ tag }}">{{ tag }}</a>
+                {% endif %}
+            {% endfor %}
+    
+        {% endif %}
+    </dl>
+            
 
-            {% endif %}
-        {% endfor %}
-  
-    {% endif %}
-</dl>
-          
-
-<hr>
+    <hr>
     <nav class="posts-next-previous">
 
     {%- if collections.post %}
@@ -48,6 +84,6 @@
 
     </nav>
 
-    </section>
+</section>
 
 {% include '_foot.html' %}

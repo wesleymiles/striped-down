@@ -8,9 +8,8 @@ date: 2024-02-09
 
 
 
-<section class="hero"><time class="meta-date" datetime="{{ date | postDate }}">{{ date | postDate }}</time>
 
-# {{title}}
+
 
 So, we don’t have them yet. This post intends to show the progress we’ve made. And I’ve always wanted to try the blogging techniques of writing as you go. Learning live. 
 

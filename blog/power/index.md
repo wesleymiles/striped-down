@@ -8,9 +8,8 @@ date: 2024-12-01
 ---
 
 <section class="hero">
-    <time class="meta-date" datetime="{{ date | postDate }}">Written: {{ date | postDate }}<!-- | Updated: {{ date-updated | postDate}}--></time>
 
-# {{title}}
+
 
 [Intro about how I like reading these to bring awareness to the game. It's being played even if you don't participate.]
 

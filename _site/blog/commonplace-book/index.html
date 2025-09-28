@@ -60,13 +60,13 @@
 				
 				<ul class="nav-menu">
 					  <li>
-					    	<a href="/web/">Web</a>
+					    	<a href="/blog/">Blog</a>
 				  	</li>
 					  <li>
 					    	<a href="/art/">Art</a>
 				  	</li>
 					  <li>
-					    	<a href="/blog/">Blog</a>
+					    	<a href="/web/">Web</a>
 				  	</li>
 					  <li>
 					    	<a href="/now/">Now</a>
@@ -79,9 +79,30 @@
 
 	<main id="main">
 
-    <p><section class="hero">
-<time class="meta-date" datetime="Nov 10, 2024">Written: Nov 10, 2024 | Updated: Dec 14, 2024</time></p>
-<h1>Commonplace book</h1>
+<article>
+
+    <header class="content-header">
+
+        <h1>Commonplace book</h1>
+        
+        <!-- if it's a post, and not the blog or tag page, include a date  -->
+        
+        <ul class="metadata">
+            <li><time class="meta-date" datetime="Nov 10, 2024">Written: Nov 10, 2024</time></li>
+
+        
+        
+            <!-- if it's a trip report, include trip report metadata  -->
+            
+
+        
+        </ul>
+        
+
+
+    </header>
+
+    <p><section class="hero"></p>
 <p>An ongoing collection of quotes and notes that were originally jotted down from a weekly notion journal.Intending to be an extension of my brain.</p>
 </section>
 <!-- https: //bjhess.com/commonplace -->
@@ -100,7 +121,7 @@
 <img style="margin: 0 auto;display:block" src="img/coming-soon.png" width="150px">
 <section >
     <div class="content-inner">
-<h2>2024</h2>
+<h2 class="keep-sticky">2024</h2>
 <h3></h3>
 <hr>
 <div data-tags="Design Quote">
@@ -315,7 +336,7 @@ Wall pass-through firewood door is a thing, albeit small.
     <cite>Sarah Barrett,  Information architect at Microsoft <a href="https://sarahrbarrett.com/">Learn</a> (of all places!) This was a fitting quote because I found it when preparing for a workshop around Red Hat Learn.</cite>
     </p>
 </blockquote>
-<h2>2023</h2>
+<h2 class="keep-sticky">2023</h2>
 <div data-tags="quote">
 <p>In the beginning is the scream. We scream. <br /><br />
 When we write or when we read, it is easy to forget that the beginning is not the word, but the scream. Faced with the mutilation of human lives by capitalism, a scream of sadness, a scream of horror, a scream of anger, a scream of refusal: NO.
@@ -636,29 +657,29 @@ book.closest(‘div’).style.display = isVisible ? ‘block’ : ‘none’;
 });
 </script></p>
 
+</article>
 
 <section class ="post-footer">
 
-
-<dl class="blog-tags">
+    <dl class="blog-tags">
+        
+            <dt>Tagged:</dt>
     
-        <dt>Tagged:</dt>
-  
-        
-            
-        
             
                 
-                <a href="/blog/tag/books">books</a>
-
             
-        
-  
-    
-</dl>
-          
+                
+                    
+                    <a href="/blog/tag/books">books</a>
 
-<hr>
+                
+            
+    
+        
+    </dl>
+            
+
+    <hr>
     <nav class="posts-next-previous">
                 <p>
                     <span class="label-prevnext">Previously:</span>
@@ -672,7 +693,7 @@ book.closest(‘div’).style.display = isVisible ? ‘block’ : ‘none’;
 
     </nav>
 
-    </section>
+</section>
 
 
 	</main>
@@ -686,7 +707,11 @@ book.closest(‘div’).style.display = isVisible ? ‘block’ : ‘none’;
 				<p class="social">
 					<a href="https://www.linkedin.com/in/wes-carr-8918b99/">linkedin</a>  |  
 					<a href="https://unsplash.com/@wescarr">unsplash</a>  |  
+					<a href="https://www.are.na/wes-carr">are.na</a>   |  
+					<a href="https://www.last.fm/user/wesleymiles">last.fm</a>   |  
 					<a href="mailto:hi@wescarr.com">email</a>
+
+					
 				</p>
 			</nav>
 

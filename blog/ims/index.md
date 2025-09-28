@@ -9,9 +9,7 @@ date-updated: 2024-12-15
 ---
 
 <section class="hero">
-    <time class="meta-date" datetime="{{ date | postDate }}">Written: {{ date | postDate }} | Updated: {{ date-updated | postDate}}</time>
 
-# {{title}}
 {{description}}. At the time of this writing, my role I had been a ux designer for 3 years after having spent 1 year before as a developer.
 
 </section>

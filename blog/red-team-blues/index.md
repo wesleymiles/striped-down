@@ -7,9 +7,7 @@ date: 2024-11-03
 ---
 
 
-<section class="hero"><time class="meta-date" datetime="{{ date | postDate }}">{{ date | postDate }}</time>
 
-# {{title}}
 
 Author: Cory Doctorow  • Published: 2023
 

@@ -7,16 +7,11 @@ date: 2023-06-01
 ---
 
 
-<section class="hero">
 
-# Welcoming a<span> community orchard</span>
 As of May 6th, 2023, there’s an orchard at the Underhill town pond.
 
 Okay, calling it an orchard is a bit aspirational. There’s six apple trees, nine blueberries, and ten raspberries in the ground. Once they start producing, they’re up for grabs to anyone who comes by.
 
-</section>
-
-<section>
 
 <figure>
 	<a href="{{ page.url | url }}img/underhill-community-orchard-map-full.png">

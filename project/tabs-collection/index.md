@@ -8,9 +8,9 @@ date: 2024-04-06
 
 
 
-<section class="hero"><time class="meta-date" datetime="{{ date | postDate }}">{{ date | postDate }}</time>
+<section class="hero">
 
-# {{title}}
+
 
 {{description}}
 

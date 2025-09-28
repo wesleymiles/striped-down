@@ -8,7 +8,6 @@ date-updated: 2024-12-19
 ---
 
 <section class="hero">
-    <time class="meta-date" datetime="{{ date | postDate }}">Written: {{ date | postDate }} | Updated: {{ date-updated | postDate}}</time>
 
 # Hackday 2023: <span>automating accessbility within our CMS</span>
 
