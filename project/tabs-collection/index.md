@@ -8,13 +8,6 @@ date: 2024-04-06
 
 
 
-<section class="hero">
-
-
-
-{{description}}
-
-</section>
 
 <section>
 

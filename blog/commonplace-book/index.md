@@ -10,7 +10,6 @@ date-updated: 2024-12-15
     <section class="hero">
 
 
-{{description}}
 
 </section>
 

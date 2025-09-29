@@ -2,36 +2,41 @@
 layout: blog.liquid
 title: Designing at a niche-agency
 description: Republishing an old post about working as a ux designer at a small burlington agency
-tags: ["post"]
+tags:
+  - post
+  - design
 date: 2019-01-05
 noindex: true
 date-updated: 2024-12-15
 ---
 
-<section class="hero">
 
-{{description}}. At the time of this writing, my role I had been a ux designer for 3 years after having spent 1 year before as a developer.
 
-</section>
+
 
 <section>
     <div class="content-inner">
 
+(At the time of this writing, my role I had been a ux designer for 3 years after having spent 1 year before as a developer.)
   		
 <h2>In a nutshell...</h2>
 
 I helped literally hundreds of contractors succeed by providing custom site designs. 
 
-<p>Below are my contributions. The 4 big ones were Custom UI Design / Art Direction, Product Improvements, Documentation, and Conversion Rate Optimization. </p>
+Below are my contributions.
 
-<figure>
-<picture class="full">
-		<img src="img/ims-hero-2.jpg" alt="">
-	</picture>
-</figure>
+The 4 big ones were Custom UI Design / Art Direction, Product Improvements, Documentation, and Conversion Rate Optimization.
 
 
-<h2>The Company</h2>
+<div class="image-grid bleed">
+	<figure>
+		<picture>
+			<img src="img/ims-hero-2.jpg" alt="">
+		</picture>
+	</figure>
+</div>
+
+<h3>The Company</h3>
 <p>They offered marketing and strategy to small to midsize 
 contractors. They have over 300 clients and earned the Inc 5000 the last
  4 years. It’s made up of 42 people between offices in Vermont and 
@@ -40,7 +45,7 @@ California, and remote workers.</p>
  I put out into the world. They’ve become discerning when choosing 
 clients, have shortened site-build time tremendously, and even have 
 plans to hire an HR role.</p>
-<h2>Custom UI Design / Art Direction</h2>
+<h2>1. Custom UI Design / Art Direction</h2>
 <h3>Constraints stimulate innovation. No, really.</h3>
 <p>My primary charge was to design sites that provided leads. Making that phone ring. Making those forms complete. It was essentially the same site over and over again. That 
 constraint supported my growth as a designer as it encouraged 
@@ -52,7 +57,6 @@ first but ended up giving that little push toward innovation, such as:</p>
 <li>Quality of client photography (we did all we could to avoid stock photos)</li>
 <li>Quality of client branding (we didn’t do identity. I did touch up logos under the radar. I was thrilled when we'd get a client who had professional branding, like from <a href="https://www.kickcharge.com/portfolio/?_sft_category=logo-branding">kickcharge</a>. I knew they'd already invested in branding and, thus, knew its value and the assets would be in the right format and thorough.)</li>
 </ul>
-
 
 
 <h3>Deadlines</h3>
@@ -133,7 +137,7 @@ team chose certain patterns to reuse internally. We reeled in our creativity. We
 </div>
 </figure>
 
-<h2 id="product-improvements">Product Improvements</h2>
+<h2 id="product-improvements">2. Product Improvements</h2>
 <p>Bigger breakthroughs took place outside of client deadlines. Often, 
 innovation begins with questioning the norm — this is my bread and butter. My improvement highlights include:
 
@@ -164,7 +168,7 @@ the collective process each update follows:</p>
 
 
 
-<h2 id="documentation">Documentation</h2>
+<h2 id="documentation">3. Documentation</h2>
 <p>I was the first designer in our department. As we grew to 3, it 
 became crucial to share what was in my head with the team. This helped 
 not only with onboarding new designers, but also in bringing design into the 
@@ -187,7 +191,7 @@ open and giving it a seat at the big table. I wound up really enjoying the gover
 </figure>
 
 
-<h2 id="cro">Conversion Rate Optimization</h2>
+<h2 id="cro">4. Conversion Rate Optimization</h2>
 <p>I lead a project introducing Conversion Rate Optimization (CRO) to 
 the company. The outcome was a protocol for researching analytics 
 and heatmaps to find opportunities for CRO. After following the process, you end up with a 
@@ -205,13 +209,13 @@ formation of a CRO team and a plan for a stand-alone CRO product.</p>
 </picture>
 </figure>
 
-<h2>The stuff of teams</h2>
+<h3>The stuff of teams</h3>
 <p>Here's the disclaimer that every accomplishment with my name on it should have a giant <em>asterisk</em>
  thanking others. Looking at you 
 Development, Programming, SEO, CX, SEM, Content, Email Marketing, and 
 Social Media.</p>
 
-<h2>Launches (from 2018) and legacies</h2>
+<h3>Launches (from 2018) and legacies</h3>
 
 In the world of the web, legacies don't last long. It's rewarding to see sites you built still live years later—it means they’re doing their job. Losing a client to another agency was always a letdown, but they often carried over my design decisions (which they had every right to do). The work was portable: style guides, textures, backgrounds, flourishes, the overall vibe. Cheesy as it sounds, it felt good knowing the work would live on in some form.
 
@@ -241,13 +245,12 @@ In the world of the web, legacies don't last long. It's rewarding to see sites y
 	overflow-y: hidden;
 	white-space: nowrap;
 	width: 70vw;
-	-webkit-overflow-scrolling: touch; /*for smooth scrolling in iOS*/
 }
 	.scrolling-wrapper div {
 		display: inline-block;
 		vertical-align: middle;
-    	max-width: 900px;
-		margin: 0 1em;
+    	/* max-width: 900px; */
+		margin-right: 1em;
 	}
 
 @media screen and (max-width: 800px) {

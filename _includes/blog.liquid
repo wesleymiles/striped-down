@@ -4,7 +4,8 @@
 
     <header class="content-header">
 
-        <h1>{{ title }}</h1>
+        <h1 class="content-heading">{{ title }}</h1>
+        <p class="content-desc">{{ description }}</p>
         
         <!-- if it's a post, and not the blog or tag page, include a date  -->
         {% if date %}
@@ -15,6 +16,7 @@
         
             <!-- if it's a trip report, include trip report metadata  -->
             {% if trips %}
+                    <!-- <li><a href="/blog/tag/{{ tag }}">Trip report</a></li> -->
                 {% if trips.peak %}
                     <li>Peak: {{ trips.peak }}</li>
                 {% endif %}

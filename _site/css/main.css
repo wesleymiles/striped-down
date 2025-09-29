@@ -347,8 +347,10 @@ h1 {
 
 
 h2 {
-  font-size: 1.5em;
+  font-size: 1.8em;
+  font-weight: normal;
   margin: 0 0 .5em;
+  font-family: var(--sans-serif-var), var(--sans-serif-system);
 }
   h2:not(:first-child) {  margin-top: 2em; }
 
@@ -517,6 +519,7 @@ header.mast {
 .image-grid.cols-1 { grid-template-columns: 1fr; }
 .image-grid.cols-2 { grid-template-columns: repeat(2, 1fr); }
 .image-grid.cols-3 { grid-template-columns: repeat(3, 1fr); }
+.image-grid.cols-4 { grid-template-columns: repeat(4, 1fr); }
 
 /* Break out of content container (but not body) */
 section.stretch,
@@ -616,8 +619,8 @@ nav li {
       color: #285E50;
     }
     nav .nav-menu li.active-nav{
-      border-top: 1px solid var(--bg-dark-alt);
-      padding-top: .5em;
+      border-top: 2px solid var(--bg-dark-alt);
+      padding-top: 1em;
       margin-top: -.5em;
     }
 
@@ -701,7 +704,7 @@ header.mast .site-logo {
 
 /*  when hovered, rotate to show my name */
   header.mast .site-logo:hover > img {
-    transform: rotate(30deg);
+    transform: rotate(-30deg);
     transform-origin: center left;
   }
 
@@ -709,8 +712,6 @@ header.mast .site-logo {
     margin-bottom: -40px;
     margin-left: -20px;
   }
-
-
 
     header nav a {
       padding-left: 5px;
@@ -756,7 +757,7 @@ header.mast .site-logo {
         }
 
       header.mast .site-logo a > img {
-        width: 125px;
+        width: 109px;
         position: absolute;
         z-index: 1;
         top: 45px;
@@ -783,14 +784,19 @@ body > footer {
 }
 
 
-  body > footer nav {
-    padding-top: calc(var(--gap)*8);
-  }
+body > footer nav {
+  padding-top: calc(var(--gap)*8);
+  */
+  gap: 7em;
+}
 
+  body > footer nav p {
+    flex: 1;
+  }
 @media only screen and (max-width: 800px) {
 
   body > footer nav { padding-top: calc(var(--gap)*5);}
-  body > footer { background-size: 10%; }
+  body > footer { background-size: 10%; padding: var(--gap);}
 }
 
 
@@ -1311,7 +1317,7 @@ section.library summary::-webkit-details-marker {
 .library #filters{
   /* background-color: #fff; */
   background: transparent;
-  padding-top: 2em;
+  padding: 2em 0;
   position: sticky;
   top: 0;
   z-index: 1;
@@ -1576,8 +1582,16 @@ body.modal-open {
 /* Blog
 -------------------------------------------------- */
 
-article header { 
+article header.content-header { 
   margin-bottom: calc(var(--gap) * 2);
+}
+h1.content-heading {
+  margin-bottom: .2em;
+}
+
+p.content-desc {
+  font-size: 1.7em;
+  color: var(--text-non-em);
 }
 
 body.post img {
@@ -1638,9 +1652,11 @@ body.post img {
 
 ul.metadata {
   padding-left:0;
-  display: flex;
+  /* display: flex; */
   gap: var(--gap);
+  /* overflow: scroll; */
 }
+  .entry-header time, 
   .metadata li {
     margin: 0;
     font-size: 0.8em;

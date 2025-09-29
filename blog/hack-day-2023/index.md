@@ -7,16 +7,8 @@ date: 2023-11-05
 date-updated: 2024-12-19
 ---
 
-<section class="hero">
-
-# Hackday 2023: <span>automating accessbility within our CMS</span>
-
 
 Sharing the results from a cross-team collab session. 
-
-</section>
-
-<section>
 
 The Red Hat website marketing group hosted a hacktoberfest in 2023. About 25 people signed up and we broke into five teams each. It's inspired by an agency we look up to [DigitalOcean](https://hacktoberfest.com/about/).
 
