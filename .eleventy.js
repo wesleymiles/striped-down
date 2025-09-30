@@ -5,6 +5,7 @@ const path = require("path");
 const Image = require("@11ty/eleventy-img");
 const { DateTime } = require("luxon");
 const { feedPlugin } = require("@11ty/eleventy-plugin-rss");
+const htmlmin = require("html-minifier");
 
 // Unified image processing function for all use cases
 async function processImage(src, options = {}) {
@@ -210,7 +211,7 @@ module.exports = function (eleventyConfig) {
 
   // Passthrough copy settings
   const passthroughPaths = [
-    "fonts", "feed.xsl", "font.woff","font.ttf", "img", "css", "js", "animations", "js/script.js", "photoswipe/",
+    "fonts", "feed.xsl", "font.woff","font.ttf", "img", "css", "js", "vid/", "mp4", "webm", "animations", "js/script.js", "photoswipe/",
     "project/wobblies/img",
     "work/mockup-demo"
   ];
@@ -297,4 +298,22 @@ module.exports = function (eleventyConfig) {
       return item.data.tags && item.data.tags.includes("art");
     });
   });
+
+
+    // Only minify HTML in production
+    if (process.env.NODE_ENV === "production") {
+      eleventyConfig.addTransform("htmlmin", function(content, outputPath) {
+        if (outputPath && outputPath.endsWith(".html")) {
+          let minified = htmlmin.minify(content, {
+            // useShortDoctype: true,
+            removeComments: true,
+            // collapseWhitespace: true,
+          });
+          return minified;
+        }
+        return content;
+      });
+    }
+
+
 };

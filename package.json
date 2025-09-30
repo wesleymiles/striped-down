@@ -9,7 +9,8 @@
   "devDependencies": {
     "@11ty/eleventy": "^3.0.0",
     "@11ty/eleventy-img": "^6.0.4",
-    "@11ty/eleventy-navigation": "^0.3.5"
+    "@11ty/eleventy-navigation": "^0.3.5",
+    "html-minifier": "^4.0.0"
   },
   "dependencies": {
     "@11ty/eleventy-plugin-rss": "^2.0.4",
@@ -31,4 +32,8 @@
     "url": "https://github.com/wesleymiles/striped-down/issues"
   },
   "homepage": "https://github.com/wesleymiles/striped-down#readme"
+  },
+  "scripts": {
+  "start": "npx eleventy --serve",
+  "build": "NODE_ENV=production eleventy"
 }
