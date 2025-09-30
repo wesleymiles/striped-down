@@ -256,6 +256,9 @@ picture {
     padding: initial;
     width: initial;
   }
+  picture.mid  {
+    width: initial;
+  }
 
   figure.aside--right {
     margin: 0 0 3em 0;
@@ -1002,12 +1005,13 @@ body > footer nav {
   "branding" for /branding
   "web" for /web
 -------------------------------------------------- */
-
-body.work section[class^="--"] {
+body.Web article section[class^="--"] {
   /* border-radius: var(--curve); */
-  margin-bottom: var(--gap);
+  margin-bottom: calc(var(--gap)*3);
+  padding-bottom: calc(var(--gap)*2);
   /* margin-left: calc(var(--gap)*-2); */
   /* padding: calc(var(--gap)*2); */
+  border-bottom: var(--border);
 }
 /* 
   body.work section[class^="--"]:last-of-type {
@@ -1100,7 +1104,7 @@ body.work section[class^="--"] {
   }
   body.work section[class^="--"].--bg_saddleback {
     background-color:#003B57
-  } */ */
+  } */ 
 
 
 
