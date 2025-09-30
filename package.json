@@ -31,9 +31,9 @@
   "bugs": {
     "url": "https://github.com/wesleymiles/striped-down/issues"
   },
-  "homepage": "https://github.com/wesleymiles/striped-down#readme"
-  },
+  "homepage": "https://github.com/wesleymiles/striped-down#readme",
   "scripts": {
-  "start": "npx eleventy --serve",
-  "build": "NODE_ENV=production eleventy"
+    "start": "npx eleventy --serve",
+    "build": "NODE_ENV=production eleventy"
+  }
 }
