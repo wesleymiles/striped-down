@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8">
 
+	
     
 	
 	
@@ -17,7 +18,7 @@
 
 
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Art — Wes Carr</title>
+    <title>Art — Wes</title>
 
 	
 	
@@ -33,15 +34,13 @@
 
 <link rel="preload" as="font" type="font/woff2" crossorigin href="/fonts/BagnardSans.otf">
 <link rel="preload" as="font" type="font/woff2" crossorigin href="/fonts/PublicSans-Light.ttf">
-<link rel="preload" as="font" type="font/woff2" crossorigin href="/fonts/PublicSans-SemiBold.ttf">
+<link rel="preload" as="font" type="font/woff2" crossorigin href="/fonts/PublicSans-Medium.ttf">
 <link rel="preload" as="font" type="font/woff2" crossorigin href="/fonts/PublicSans-Regular.ttf">
 
 
     <link rel="stylesheet" href="/css/main.css">
   	<link rel="stylesheet" href="/css/fonts.css">	
 	
-
-
 
 
 
@@ -122,6 +121,42 @@
 
 <div class="pswp-gallery pswp-gallery--single-column" id="gallery">
   <ul>
+    
+      <li>
+        <a href="/art/img/EJX7glS5Ru-2000.jpeg" data-pswp-width="2000" data-pswp-height="1500">
+          <img src="/art/img/EJX7glS5Ru-450.jpeg" alt="cat on turntable" width="450" height="337" loading="lazy">
+        </a>
+      </li>
+    
+      <li>
+        <a href="/art/img/gC_vNMZxTV-2000.jpeg" data-pswp-width="2000" data-pswp-height="1542">
+          <img src="/art/img/gC_vNMZxTV-450.jpeg" alt="fall birdfeeder" width="450" height="346" loading="lazy">
+        </a>
+      </li>
+    
+      <li>
+        <a href="/art/img/IWGnO4PyHh-2000.jpeg" data-pswp-width="2000" data-pswp-height="1497">
+          <img src="/art/img/IWGnO4PyHh-450.jpeg" alt="orchard barn" width="450" height="336" loading="lazy">
+        </a>
+      </li>
+    
+      <li>
+        <a href="/art/img/IbTnDktuQS-2000.jpeg" data-pswp-width="2000" data-pswp-height="1341">
+          <img src="/art/img/IbTnDktuQS-450.jpeg" alt="ace red leaves" width="450" height="301" loading="lazy">
+        </a>
+      </li>
+    
+      <li>
+        <a href="/art/img/zORYUcgXlv-2000.jpeg" data-pswp-width="2000" data-pswp-height="1343">
+          <img src="/art/img/zORYUcgXlv-450.jpeg" alt="dragon remote" width="450" height="302" loading="lazy">
+        </a>
+      </li>
+    
+      <li>
+        <a href="/art/img/StxYIAxBhI-2000.jpeg" data-pswp-width="2000" data-pswp-height="1308">
+          <img src="/art/img/StxYIAxBhI-450.jpeg" alt="autumn umbrella" width="450" height="294" loading="lazy">
+        </a>
+      </li>
     
       <li>
         <a href="/art/img/RyjEuThX2A-2000.jpeg" data-pswp-width="2000" data-pswp-height="1308">
@@ -443,66 +478,6 @@
 
 
 
-<style>
-
-#gallery img {
-  width: 100%;
-  height: 100%;
-  cursor: pointer;
-  border-radius: 8px;
-  transition: transform 0.2s ease-in-out;
-  object-fit: cover;
-  object-position: 50% 50%;
-}
-  #gallery img:hover {
-    transform: scale(1.05);
-  }
-
-#gallery > ul {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-auto-flow: dense;
-  grid-gap: 1em;
-  padding: 0;
-}
-  #gallery > ul > li {
-    list-style: none;
-  }
-    #gallery li a {
-      display: block;
-      line-height: 0;
-      height: 300px;
-      max-height: 300px;
-      overflow: hidden;
-      border-radius: 8px;
-    }
-    #gallery > ul > li:nth-child(7n) {
-        grid-column: span 2;
-    }
-
-    .pswp img {
-      padding: 1em 2em;
-      background-color: #fff;
-    }
-
-@supports (grid-template-rows: masonry) {
-
-  #gallery > ul {
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: masonry;
-  }
-  
-}
-
-
-/* Two columns at 900px and below */
-@media (max-width: 900px) {
-  #gallery > ul {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-</style>
 </article>
 
 <section class="post-footer">
@@ -558,7 +533,7 @@
 
 
 	
-
+	
 	<script type="module">
 		import PhotoSwipeLightbox from '/photoswipe/dist/photoswipe-lightbox.esm.min.js';
 		  const galleryElement = document.querySelector("#gallery");

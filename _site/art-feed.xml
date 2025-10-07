@@ -26,6 +26,42 @@
   &lt;ul&gt;
     
       &lt;li&gt;
+        &lt;a href=&quot;https://wescarr.com/art/img/EJX7glS5Ru-2000.jpeg&quot; data-pswp-width=&quot;2000&quot; data-pswp-height=&quot;1500&quot;&gt;
+          &lt;img src=&quot;https://wescarr.com/art/img/EJX7glS5Ru-450.jpeg&quot; alt=&quot;cat on turntable&quot; width=&quot;450&quot; height=&quot;337&quot; loading=&quot;lazy&quot;&gt;
+        &lt;/a&gt;
+      &lt;/li&gt;
+    
+      &lt;li&gt;
+        &lt;a href=&quot;https://wescarr.com/art/img/gC_vNMZxTV-2000.jpeg&quot; data-pswp-width=&quot;2000&quot; data-pswp-height=&quot;1542&quot;&gt;
+          &lt;img src=&quot;https://wescarr.com/art/img/gC_vNMZxTV-450.jpeg&quot; alt=&quot;fall birdfeeder&quot; width=&quot;450&quot; height=&quot;346&quot; loading=&quot;lazy&quot;&gt;
+        &lt;/a&gt;
+      &lt;/li&gt;
+    
+      &lt;li&gt;
+        &lt;a href=&quot;https://wescarr.com/art/img/IWGnO4PyHh-2000.jpeg&quot; data-pswp-width=&quot;2000&quot; data-pswp-height=&quot;1497&quot;&gt;
+          &lt;img src=&quot;https://wescarr.com/art/img/IWGnO4PyHh-450.jpeg&quot; alt=&quot;orchard barn&quot; width=&quot;450&quot; height=&quot;336&quot; loading=&quot;lazy&quot;&gt;
+        &lt;/a&gt;
+      &lt;/li&gt;
+    
+      &lt;li&gt;
+        &lt;a href=&quot;https://wescarr.com/art/img/IbTnDktuQS-2000.jpeg&quot; data-pswp-width=&quot;2000&quot; data-pswp-height=&quot;1341&quot;&gt;
+          &lt;img src=&quot;https://wescarr.com/art/img/IbTnDktuQS-450.jpeg&quot; alt=&quot;ace red leaves&quot; width=&quot;450&quot; height=&quot;301&quot; loading=&quot;lazy&quot;&gt;
+        &lt;/a&gt;
+      &lt;/li&gt;
+    
+      &lt;li&gt;
+        &lt;a href=&quot;https://wescarr.com/art/img/zORYUcgXlv-2000.jpeg&quot; data-pswp-width=&quot;2000&quot; data-pswp-height=&quot;1343&quot;&gt;
+          &lt;img src=&quot;https://wescarr.com/art/img/zORYUcgXlv-450.jpeg&quot; alt=&quot;dragon remote&quot; width=&quot;450&quot; height=&quot;302&quot; loading=&quot;lazy&quot;&gt;
+        &lt;/a&gt;
+      &lt;/li&gt;
+    
+      &lt;li&gt;
+        &lt;a href=&quot;https://wescarr.com/art/img/StxYIAxBhI-2000.jpeg&quot; data-pswp-width=&quot;2000&quot; data-pswp-height=&quot;1308&quot;&gt;
+          &lt;img src=&quot;https://wescarr.com/art/img/StxYIAxBhI-450.jpeg&quot; alt=&quot;autumn umbrella&quot; width=&quot;450&quot; height=&quot;294&quot; loading=&quot;lazy&quot;&gt;
+        &lt;/a&gt;
+      &lt;/li&gt;
+    
+      &lt;li&gt;
         &lt;a href=&quot;https://wescarr.com/art/img/RyjEuThX2A-2000.jpeg&quot; data-pswp-width=&quot;2000&quot; data-pswp-height=&quot;1308&quot;&gt;
           &lt;img src=&quot;https://wescarr.com/art/img/RyjEuThX2A-450.jpeg&quot; alt=&quot;melissa&#39;s shed dighton ma&quot; width=&quot;450&quot; height=&quot;294&quot; loading=&quot;lazy&quot;&gt;
         &lt;/a&gt;
@@ -344,67 +380,7 @@
 
 
 
-
-&lt;style&gt;
-
-#gallery img {
-  width: 100%;
-  height: 100%;
-  cursor: pointer;
-  border-radius: 8px;
-  transition: transform 0.2s ease-in-out;
-  object-fit: cover;
-  object-position: 50% 50%;
-}
-  #gallery img:hover {
-    transform: scale(1.05);
-  }
-
-#gallery &gt; ul {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-auto-flow: dense;
-  grid-gap: 1em;
-  padding: 0;
-}
-  #gallery &gt; ul &gt; li {
-    list-style: none;
-  }
-    #gallery li a {
-      display: block;
-      line-height: 0;
-      height: 300px;
-      max-height: 300px;
-      overflow: hidden;
-      border-radius: 8px;
-    }
-    #gallery &gt; ul &gt; li:nth-child(7n) {
-        grid-column: span 2;
-    }
-
-    .pswp img {
-      padding: 1em 2em;
-      background-color: #fff;
-    }
-
-@supports (grid-template-rows: masonry) {
-
-  #gallery &gt; ul {
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: masonry;
-  }
-  
-}
-
-
-/* Two columns at 900px and below */
-@media (max-width: 900px) {
-  #gallery &gt; ul {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-&lt;/style&gt;</description>
+</description>
       <pubDate>Sat, 27 Sep 2025 23:52:07 EDT</pubDate>
       <dc:creator>Wes Carr</dc:creator>
       <guid>https://wescarr.com/art/</guid>

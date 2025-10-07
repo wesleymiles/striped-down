@@ -25,8 +25,8 @@
 
 
 
-	{% if page.url == '/art/' %}
-
+	{% if page.url == '/art/' or page.url == '/' %}
+	
 	<script type="module">
 		import PhotoSwipeLightbox from '/photoswipe/dist/photoswipe-lightbox.esm.min.js';
 		  const galleryElement = document.querySelector("#gallery");

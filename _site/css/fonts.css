@@ -65,9 +65,8 @@
 
 @font-face {
   font-family: "Public";
-  src: url("/fonts/PublicSans-SemiBold.ttf") format("truetype");
-  font-weight: bolder;
-  font-optical-sizing: auto;
+  src: url("/fonts/PublicSans-Medium.ttf") format("truetype");
+  font-weight: bold;
   font-display: swap;
   font-style: normal; 
 }

@@ -7,14 +7,14 @@ pagination:
 layout: blog.liquid
 permalink: /blog/tag/{{ tag | slugify }}/index.html
 eleventyComputed:
-  title: Posts Tagged with "{{ tag }}"
+  title: Posts tagged "{{ tag }}"
 ---
 
 
 
 <ul class="archive-list">
 
-  {% for post in collections[tag]  | filter("post") %}
+  {%- for post in collections[tag] reversed filter("post") -%}
    <li>
       <article class="archive-entry">
         <div class="entry-header">
@@ -24,7 +24,7 @@ eleventyComputed:
         <p><span class="excerpt">{{ post.data.description }}</span></p>
       </article>
     </li>
-  {% endfor %}
+  {%- endfor -%}
 </ul>
 
 

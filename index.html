@@ -1,21 +1,70 @@
 ---
 layout: blog.liquid
 title: Hi, Wes here.
-description: Currently supporting marketing & design efforts as a senior ux designer at the open source enterprise software company Red Hat. From time to time, I freelance locally. Occasionally, I get outside.
+description: Currently I support marketing & design as a senior ux designer at the open source enterprise software company Red Hat. Here and there, I freelance locally within the gift economy. I do try to get outside.
 ---
 
-<p></p>
 <hr />
+<section class="grid cols-2"> 
+	
+	<div>
+		<h2>Newest art</h2>
+		<article class="archive-entry">
+			<div class="pswp-gallery pswp-gallery--single-column" id="gallery">
+				
+				{%- for image in collections.images limit:1 -%}
+				<p><time class="meta-date" datetime="{{ image.date | postDate }}">{{ image.date | postDate }}</time></p>
+				<p><a href="{{ image.fullUrl }}" data-pswp-width="{{ image.fullWidth }}" data-pswp-height="{{ image.fullHeight }}">
+					<img src="{{ image.thumbUrl }}" alt="{{ image.alt }}" width="{{ image.thumbWidth }}" height="{{ image.thumbHeight }}" loading="lazy">
+					</a></p>
+				{%- endfor -%}
+			</div>
+		</article>
+  	</div>
+
+	<div>
+		<h2>Newest blog</h2>
+
+		<div class="archive-list">
+			{%- assign latestPosts = collections.post | reverse | slice: 0,  -%}
+				{%- for post in latestPosts -%}
+		
+				<article class="archive-entry">
+						<time class="meta-date" datetime="{{ post.data.date | postDate }}">{{ post.date | postDate }}</time>
+						<div class="entry-header">
+							<h3><a href="{{ post.url }}">{{ post.data.title }}</a></h3>
+						</div>
+					  <p><span class="excerpt">{{ post.data.description }}</span></p>
+					</article>
+						<dl class="blog-tags">
+							<dt>Tagged:</dt>
+							{%- for tag in post.data.tags -%}
+								{% if tag != 'post' -%}
+									<dd class="tag"><a href="/blog/tag/{{ tag }}">{{ tag }}</a></dd>
+								 {% endif -%}
+							{% endfor -%}
+						</dl>
+		
+			{% endfor -%}  
+		
+	</div>
+
+
+</section>
+
 
 <h2>Work </h2>
 <p>My sweet spot is untangling complex problems. Always collaborating. Reusing where possible and questioning boundries often. I aspire to empower other designers to unblock themselves and make their own informed decisions.</p>
-
+<section class="grid cols-2"> 
+	<div class="specialty">
 		<h3>🌳 <a href="/web">Web design</a></h3>
 		<p>Check out 17 online presences I spruced up. For personal projects, I code and design them; otherwise, it’s collaborating with engineers.</p>
-
+	</div>
+	<div class="specialty">
 		<h3>✂️ <a href="/research/">Research</a></h3>
 		<p>Orchards require pruning. Websites require maintenance. Read a few examples of user research I contributed to.</p>
-
+	</div>
+</section>
 	<hr />
 
 	<h2>Work status</h2>
@@ -79,7 +128,7 @@ description: Currently supporting marketing & design efforts as a senior ux desi
 	<p>John Steinbeck | Andy Shauf | Wendell Berry | Joe Sacco | Charles Eisenstein | David Wain | Neville Goddard | Jeffery Lewis | Studio Ghibli | Whitney | Protomartyr | Please dont destroy | David Graeber</p>
 
 	<h3>Edible perennials in my yard</h3>
-	<p>Aronia | Apple | Beach plum | Blueberry | Cherry | Cranberry bush| Currant | Gooseberry | Elderberry | <s>Native plum | Pawpaw</s> | Ramps | Raspberries | Rhubarb | Sun chokes | <s>Winterberry</s> | Witch hazel</p>
+	<p>Aronia | Apple (Sweet sixteen, Liberty, Baldwin standard, Reine De Reinette) | Beach plum | Blueberry | Cherry (Surefire) | Hazelbert | Honeyberry | <s>High bush cranberry</s> | Currant | Elderberry | Gooseberry | Mulberry | Nanking cherry | Native plum | <s>Pawpaw</s> | Pear | <s>Ramps</s> | Raspberries | Rhubarb | <s>Sun chokes</s> | <s>Winterberry</s> | Witch hazel</p>
 
 	<h3>Web homages to books</h3>
 	<p><a href="/blog/non-fiction-comics/">Radical comics library</a> | <a href="/blog/wobblies/">Wobblies graphic novel: timeline</a> | <a href="https://codepen.io/wesleymiles/full/XVVJdj">A People’s History of the US: CSS book cover</a> | <a href="https://codepen.io/wesleymiles/full/pVJOGY">Be Here Now: CSS book cover</a>.</p>

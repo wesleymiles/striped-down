@@ -53,7 +53,7 @@ html,body {
 
 
 body {
-  background-color: #fff;
+  background-color: #fdfcf9;
   background-clip: content-box;
   /* font-family: var(--sans-serif-system); */
   font-family: var(--sans-serif);
@@ -111,7 +111,6 @@ ol, ul {
   ul[class], ol[class] {
     list-style: none;
     margin: 0;
-    padding-left: 6px;
   }
 
   li {
@@ -438,7 +437,7 @@ div.button a:link {
 
   body > main {
     position: relative;
-    background-color: #fff;
+    /* background-color: #fff; */
     padding: calc(var(--gap)*2) calc(var(--gap)*2) 0 calc(var(--gap)*2);
     max-width: 900px;
   }
@@ -508,7 +507,7 @@ header.mast {
   text-align: center;
 }
 
-.side-by-side {
+.side-by-side-old {
   display: flex;
 }
 
@@ -516,21 +515,22 @@ header.mast {
   text-align: center;
 }
 /* Image grid container */
-.image-grid {
+.grid {
   display: grid;
   gap: 1rem;
   margin: 2rem 0;
 }
 
 /* 1, 2, or 3 columns based on class */
-.image-grid.cols-1 { grid-template-columns: 1fr; }
-.image-grid.cols-2 { grid-template-columns: repeat(2, 1fr); }
-.image-grid.cols-3 { grid-template-columns: repeat(3, 1fr); }
-.image-grid.cols-4 { grid-template-columns: repeat(4, 1fr); }
+.cols-1 { grid-template-columns: 1fr; }
+.cols-2 { grid-template-columns: repeat(2, 1fr); }
+.cols-3 { grid-template-columns: repeat(3, 1fr); }
+.cols-4 { grid-template-columns: repeat(4, 1fr); }
+
 
 /* Break out of content container (but not body) */
 section.stretch,
-.image-grid.bleed {
+.bleed {
   position: relative;
   left: 0;
   right: calc(50% - 50vw - var(--gap));  
@@ -539,14 +539,14 @@ section.stretch,
 
 /* Mobile: always stack */
 @media (max-width: 800px) {
-  .image-grid {
+  .grid {
     grid-template-columns: 1fr !important;
     left: 0;
     right: 0;
     width: 100%;
   }
   section.stretch,
-  .image-grid.bleed {
+  .grid.bleed {
     width: auto
   }
 }
@@ -605,7 +605,7 @@ nav {
 
 nav p,
 nav li {
-  font-family: var(--sans-serif-var), var(--sans-serif-system);
+  /* font-family: var(--sans-serif-var), var(--sans-serif-system); */
   
 }
 
@@ -1595,7 +1595,7 @@ body.modal-open {
 -------------------------------------------------- */
 
 article header.content-header { 
-  margin-bottom: calc(var(--gap) * 2);
+  margin: calc(var(--gap) * 2) 0 calc(var(--gap) * 5);
 }
 h1.content-heading {
 }
@@ -1673,7 +1673,7 @@ ul.metadata {
   gap: var(--gap);
   /* overflow: scroll; */
 }
-  .entry-header time, 
+.archive-entry time, 
   .metadata li {
     margin: 0;
     font-size: 0.8em;
@@ -1730,6 +1730,73 @@ body.Blog section.post-footer {
     padding: 0;
     margin-top: -10em;
   } */
+
+
+/* Art 
+
+Styles for https://photoswipe.com slideshow too
+& eleventy's https://www.11ty.dev/docs/plugins/image/
+-------------------------------------------------- */
+
+
+#gallery img {
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: transform 0.2s ease-in-out;
+  object-fit: cover;
+  object-position: 50% 50%;
+}
+  #gallery img:hover {
+    transform: scale(1.05);
+  }
+
+#gallery > ul {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-flow: dense;
+  grid-gap: 1em;
+  padding: 0;
+}
+  #gallery > ul > li {
+    list-style: none;
+  }
+    #gallery li a {
+      display: block;
+      line-height: 0;
+      height: 300px;
+      max-height: 300px;
+      overflow: hidden;
+      border-radius: 8px;
+    }
+    #gallery > ul > li:nth-child(7n) {
+        grid-column: span 2;
+    }
+
+    .pswp img {
+      padding: 1em 2em;
+      background-color: #fff;
+    }
+
+@supports (grid-template-rows: masonry) {
+
+  #gallery > ul {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: masonry;
+  }
+  
+}
+
+
+/* Two columns at 900px and below */
+@media (max-width: 900px) {
+  #gallery > ul {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+
 
 
 /* Basic styling for clickable tags 
