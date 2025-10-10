@@ -5,7 +5,7 @@ const path = require("path");
 const Image = require("@11ty/eleventy-img");
 const { DateTime } = require("luxon");
 const { feedPlugin } = require("@11ty/eleventy-plugin-rss");
-const htmlmin = require("html-minifier");
+const htmlmin = require("html-minifier-terser");
 
 // Unified image processing function for all use cases
 async function processImage(src, options = {}) {
@@ -247,7 +247,8 @@ module.exports = function (eleventyConfig) {
         widths: [450, 750, null], // thumbnail, medium, full
         formats: ["jpeg"], // Keep single format for slideshow
         outputDir: "./_site/art/img/",
-        urlPath: "/art/img/"
+        urlPath: "/art/img/",
+        fixOrientation: true, // because @11ty/eleventy-img doesn't always respect a photo's EXIF orientation metadata during processing
       });
 
       images.push({

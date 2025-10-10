@@ -17,6 +17,10 @@
             <!-- if it's a trip report, include trip report metadata  -->
             {% if trips %}
                     <!-- <li><a href="/blog/tag/{{ tag }}">Trip report</a></li> -->
+
+                {% if trips.dateHiked %}
+                    <li>Date hiked: {{ trips.dateHiked | postDate}}</li>
+                {% endif %}
                 {% if trips.peak %}
                     <li>Peak: {{ trips.peak }}</li>
                 {% endif %}
@@ -28,6 +32,14 @@
                 {% endif %}
                 {% if trips.temp %}
                     <li>Temp at highest point: {{ trips.temp }}</li>
+                {% endif %} 
+
+
+                {% if location.town %}
+                    <li>Town at highest point: {{ location.town }}</li>
+                {% endif %} 
+                {% if location.state %}
+                    <li>State at highest point: {{ location.state }}</li>
                 {% endif %} 
             {% endif %}
 

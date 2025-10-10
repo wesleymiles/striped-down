@@ -3,19 +3,25 @@
   "version": "1.0.0",
   "description": "\"With a package.json, you can install packages locally. –11ty",
   "main": ".eleventy.js",
-  "scripts": {},
+  "scripts": {
+    "start": "npx eleventy --serve",
+    "build": "NODE_ENV=production eleventy"
+  },
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "@11ty/eleventy": "^3.0.0",
     "@11ty/eleventy-img": "^6.0.4",
     "@11ty/eleventy-navigation": "^0.3.5",
-    "html-minifier": "^4.0.0"
+    "html-minifier-terser": "^7.2.0"
   },
   "dependencies": {
     "@11ty/eleventy-plugin-rss": "^2.0.4",
     "@11ty/eleventy-upgrade-help": "^1.0.1",
     "debug": "^4.3.2",
+    "exiftool-vendored": "^31.1.0",
+    "fast-glob": "^3.3.3",
+    "fs-extra": "^11.3.2",
     "liquidjs": "^10.7.1",
     "luxon": "^3.4.4",
     "markdown-it": "^13.0.1",
@@ -31,9 +37,5 @@
   "bugs": {
     "url": "https://github.com/wesleymiles/striped-down/issues"
   },
-  "homepage": "https://github.com/wesleymiles/striped-down#readme",
-  "scripts": {
-    "start": "npx eleventy --serve",
-    "build": "NODE_ENV=production eleventy"
-  }
+  "homepage": "https://github.com/wesleymiles/striped-down#readme"
 }
