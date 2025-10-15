@@ -4,7 +4,7 @@ title: Hiking Mt Waumbek in winter
 description: Literally the best sledding of my life
 tags:
   - post
-  - tripreport
+  - trip-report
 date: 2015-04-04
 trips:
   dateHiked: March 23, 2014

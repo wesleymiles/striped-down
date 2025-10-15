@@ -4,7 +4,7 @@ title: Hike on 2016-11-12
 description: Add your hike description here
 tags: 
   - postq
-  - tripreport
+  - trip-report
 date: 2016-11-12
 trips:
   dateHiked: 2016-11-12

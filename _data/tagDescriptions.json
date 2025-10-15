@@ -1,0 +1,14 @@
+{
+  "trip-report": {
+    "description": "I've started uploading some older trip reports with the criteria that they have to be semi-strenuous. Ever since becoming a dad, my hikes have become more local and photos less noteworthy.",
+    "customTemplate": "tripreports.liquid"
+  },
+  "art": {
+    "description": "Blog posts and pages about my arts",
+    "customTemplate": null
+  },
+  "journal": {
+    "description": "For writing that's more introspective and personal",
+    "customTemplate": null
+  }
+}

@@ -4,11 +4,11 @@ title: Mansfield in between jobs
 description: Hoofed it up the big one in my backyard during a before starting at Red Hat
 tags: 
   - post
-  - tripreport
+  - trip-report
 date: 2025-10-09
 trips:
   dateHiked: 2021-09-01
-  peak: Mt Mansfield
+  peak: Mt. Mansfield
   # totalTime: 0:00 hours
   elevation: 4,393 feet
   trail: Sunset Ridge

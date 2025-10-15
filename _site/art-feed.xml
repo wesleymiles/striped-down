@@ -7,7 +7,7 @@
     <description>This is a longer description about your blog.</description>
     <language>en</language>
     <item>
-      <title>Art</title>
+      <title>Art knoll</title>
       <link>https://wescarr.com/art/</link>
       <description>
 &lt;section class=&quot;hero&quot;&gt;
@@ -27,343 +27,343 @@
     
       &lt;li&gt;
         &lt;a href=&quot;https://wescarr.com/art/img/EooTswZjVp-2000.jpeg&quot; data-pswp-width=&quot;2000&quot; data-pswp-height=&quot;1500&quot;&gt;
-          &lt;img src=&quot;https://wescarr.com/art/img/EooTswZjVp-450.jpeg&quot; alt=&quot;cat on turntable&quot; width=&quot;450&quot; height=&quot;337&quot; loading=&quot;lazy&quot;&gt;
+          &lt;img src=&quot;https://wescarr.com/art/img/EooTswZjVp-450.jpeg&quot; srcset=&quot;https://wescarr.com/art/img/EooTswZjVp-450.jpeg 450w, https://wescarr.com/art/img/EooTswZjVp-750.jpeg 750w&quot; sizes=&quot;450px&quot; alt=&quot;cat on turntable&quot; width=&quot;450&quot; height=&quot;337&quot; loading=&quot;lazy&quot;&gt;
         &lt;/a&gt;
       &lt;/li&gt;
     
       &lt;li&gt;
         &lt;a href=&quot;https://wescarr.com/art/img/yciMSZHjo2-2000.jpeg&quot; data-pswp-width=&quot;2000&quot; data-pswp-height=&quot;1542&quot;&gt;
-          &lt;img src=&quot;https://wescarr.com/art/img/yciMSZHjo2-450.jpeg&quot; alt=&quot;fall birdfeeder&quot; width=&quot;450&quot; height=&quot;346&quot; loading=&quot;lazy&quot;&gt;
+          &lt;img src=&quot;https://wescarr.com/art/img/yciMSZHjo2-450.jpeg&quot; srcset=&quot;https://wescarr.com/art/img/yciMSZHjo2-450.jpeg 450w, https://wescarr.com/art/img/yciMSZHjo2-750.jpeg 750w&quot; sizes=&quot;450px&quot; alt=&quot;fall birdfeeder&quot; width=&quot;450&quot; height=&quot;346&quot; loading=&quot;lazy&quot;&gt;
         &lt;/a&gt;
       &lt;/li&gt;
     
       &lt;li&gt;
         &lt;a href=&quot;https://wescarr.com/art/img/jHP9SJpbfZ-2000.jpeg&quot; data-pswp-width=&quot;2000&quot; data-pswp-height=&quot;1497&quot;&gt;
-          &lt;img src=&quot;https://wescarr.com/art/img/jHP9SJpbfZ-450.jpeg&quot; alt=&quot;orchard barn&quot; width=&quot;450&quot; height=&quot;336&quot; loading=&quot;lazy&quot;&gt;
+          &lt;img src=&quot;https://wescarr.com/art/img/jHP9SJpbfZ-450.jpeg&quot; srcset=&quot;https://wescarr.com/art/img/jHP9SJpbfZ-450.jpeg 450w, https://wescarr.com/art/img/jHP9SJpbfZ-750.jpeg 750w&quot; sizes=&quot;450px&quot; alt=&quot;orchard barn&quot; width=&quot;450&quot; height=&quot;336&quot; loading=&quot;lazy&quot;&gt;
         &lt;/a&gt;
       &lt;/li&gt;
     
       &lt;li&gt;
         &lt;a href=&quot;https://wescarr.com/art/img/v5eBcGIRWk-2000.jpeg&quot; data-pswp-width=&quot;2000&quot; data-pswp-height=&quot;1341&quot;&gt;
-          &lt;img src=&quot;https://wescarr.com/art/img/v5eBcGIRWk-450.jpeg&quot; alt=&quot;ace red leaves&quot; width=&quot;450&quot; height=&quot;301&quot; loading=&quot;lazy&quot;&gt;
+          &lt;img src=&quot;https://wescarr.com/art/img/v5eBcGIRWk-450.jpeg&quot; srcset=&quot;https://wescarr.com/art/img/v5eBcGIRWk-450.jpeg 450w, https://wescarr.com/art/img/v5eBcGIRWk-750.jpeg 750w&quot; sizes=&quot;450px&quot; alt=&quot;ace red leaves&quot; width=&quot;450&quot; height=&quot;301&quot; loading=&quot;lazy&quot;&gt;
         &lt;/a&gt;
       &lt;/li&gt;
     
       &lt;li&gt;
         &lt;a href=&quot;https://wescarr.com/art/img/qIV5mJaV4B-2000.jpeg&quot; data-pswp-width=&quot;2000&quot; data-pswp-height=&quot;1308&quot;&gt;
-          &lt;img src=&quot;https://wescarr.com/art/img/qIV5mJaV4B-450.jpeg&quot; alt=&quot;autumn umbrella&quot; width=&quot;450&quot; height=&quot;294&quot; loading=&quot;lazy&quot;&gt;
+          &lt;img src=&quot;https://wescarr.com/art/img/qIV5mJaV4B-450.jpeg&quot; srcset=&quot;https://wescarr.com/art/img/qIV5mJaV4B-450.jpeg 450w, https://wescarr.com/art/img/qIV5mJaV4B-750.jpeg 750w&quot; sizes=&quot;450px&quot; alt=&quot;autumn umbrella&quot; width=&quot;450&quot; height=&quot;294&quot; loading=&quot;lazy&quot;&gt;
         &lt;/a&gt;
       &lt;/li&gt;
     
       &lt;li&gt;
         &lt;a href=&quot;https://wescarr.com/art/img/PTGOYeFE6t-2000.jpeg&quot; data-pswp-width=&quot;2000&quot; data-pswp-height=&quot;1343&quot;&gt;
-          &lt;img src=&quot;https://wescarr.com/art/img/PTGOYeFE6t-450.jpeg&quot; alt=&quot;dragon remote&quot; width=&quot;450&quot; height=&quot;302&quot; loading=&quot;lazy&quot;&gt;
+          &lt;img src=&quot;https://wescarr.com/art/img/PTGOYeFE6t-450.jpeg&quot; srcset=&quot;https://wescarr.com/art/img/PTGOYeFE6t-450.jpeg 450w, https://wescarr.com/art/img/PTGOYeFE6t-750.jpeg 750w&quot; sizes=&quot;450px&quot; alt=&quot;dragon remote&quot; width=&quot;450&quot; height=&quot;302&quot; loading=&quot;lazy&quot;&gt;
         &lt;/a&gt;
       &lt;/li&gt;
     
       &lt;li&gt;
         &lt;a href=&quot;https://wescarr.com/art/img/RyjEuThX2A-2000.jpeg&quot; data-pswp-width=&quot;2000&quot; data-pswp-height=&quot;1308&quot;&gt;
-          &lt;img src=&quot;https://wescarr.com/art/img/RyjEuThX2A-450.jpeg&quot; alt=&quot;melissa&#39;s shed dighton ma&quot; width=&quot;450&quot; height=&quot;294&quot; loading=&quot;lazy&quot;&gt;
+          &lt;img src=&quot;https://wescarr.com/art/img/RyjEuThX2A-450.jpeg&quot; srcset=&quot;https://wescarr.com/art/img/RyjEuThX2A-450.jpeg 450w, https://wescarr.com/art/img/RyjEuThX2A-750.jpeg 750w&quot; sizes=&quot;450px&quot; alt=&quot;melissa&#39;s shed dighton ma&quot; width=&quot;450&quot; height=&quot;294&quot; loading=&quot;lazy&quot;&gt;
         &lt;/a&gt;
       &lt;/li&gt;
     
       &lt;li&gt;
         &lt;a href=&quot;https://wescarr.com/art/img/Rm1DaLy9Ja-2000.jpeg&quot; data-pswp-width=&quot;2000&quot; data-pswp-height=&quot;1351&quot;&gt;
-          &lt;img src=&quot;https://wescarr.com/art/img/Rm1DaLy9Ja-450.jpeg&quot; alt=&quot;watercolor river dock sunset&quot; width=&quot;450&quot; height=&quot;303&quot; loading=&quot;lazy&quot;&gt;
+          &lt;img src=&quot;https://wescarr.com/art/img/Rm1DaLy9Ja-450.jpeg&quot; srcset=&quot;https://wescarr.com/art/img/Rm1DaLy9Ja-450.jpeg 450w, https://wescarr.com/art/img/Rm1DaLy9Ja-750.jpeg 750w&quot; sizes=&quot;450px&quot; alt=&quot;watercolor river dock sunset&quot; width=&quot;450&quot; height=&quot;303&quot; loading=&quot;lazy&quot;&gt;
         &lt;/a&gt;
       &lt;/li&gt;
     
       &lt;li&gt;
         &lt;a href=&quot;https://wescarr.com/art/img/-B7zDivuah-2000.jpeg&quot; data-pswp-width=&quot;2000&quot; data-pswp-height=&quot;1500&quot;&gt;
-          &lt;img src=&quot;https://wescarr.com/art/img/-B7zDivuah-450.jpeg&quot; alt=&quot;camp porch line drawing&quot; width=&quot;450&quot; height=&quot;337&quot; loading=&quot;lazy&quot;&gt;
+          &lt;img src=&quot;https://wescarr.com/art/img/-B7zDivuah-450.jpeg&quot; srcset=&quot;https://wescarr.com/art/img/-B7zDivuah-450.jpeg 450w, https://wescarr.com/art/img/-B7zDivuah-750.jpeg 750w&quot; sizes=&quot;450px&quot; alt=&quot;camp porch line drawing&quot; width=&quot;450&quot; height=&quot;337&quot; loading=&quot;lazy&quot;&gt;
         &lt;/a&gt;
       &lt;/li&gt;
     
       &lt;li&gt;
         &lt;a href=&quot;https://wescarr.com/art/img/O_oKX_00QS-2000.jpeg&quot; data-pswp-width=&quot;2000&quot; data-pswp-height=&quot;1330&quot;&gt;
-          &lt;img src=&quot;https://wescarr.com/art/img/O_oKX_00QS-450.jpeg&quot; alt=&quot;fishing on st lawrence river&quot; width=&quot;450&quot; height=&quot;299&quot; loading=&quot;lazy&quot;&gt;
+          &lt;img src=&quot;https://wescarr.com/art/img/O_oKX_00QS-450.jpeg&quot; srcset=&quot;https://wescarr.com/art/img/O_oKX_00QS-450.jpeg 450w, https://wescarr.com/art/img/O_oKX_00QS-750.jpeg 750w&quot; sizes=&quot;450px&quot; alt=&quot;fishing on st lawrence river&quot; width=&quot;450&quot; height=&quot;299&quot; loading=&quot;lazy&quot;&gt;
         &lt;/a&gt;
       &lt;/li&gt;
     
       &lt;li&gt;
         &lt;a href=&quot;https://wescarr.com/art/img/75wF_s_0HV-2500.jpeg&quot; data-pswp-width=&quot;2500&quot; data-pswp-height=&quot;1852&quot;&gt;
-          &lt;img src=&quot;https://wescarr.com/art/img/75wF_s_0HV-450.jpeg&quot; alt=&quot;lake house window&quot; width=&quot;450&quot; height=&quot;333&quot; loading=&quot;lazy&quot;&gt;
+          &lt;img src=&quot;https://wescarr.com/art/img/75wF_s_0HV-450.jpeg&quot; srcset=&quot;https://wescarr.com/art/img/75wF_s_0HV-450.jpeg 450w, https://wescarr.com/art/img/75wF_s_0HV-750.jpeg 750w&quot; sizes=&quot;450px&quot; alt=&quot;lake house window&quot; width=&quot;450&quot; height=&quot;333&quot; loading=&quot;lazy&quot;&gt;
         &lt;/a&gt;
       &lt;/li&gt;
     
       &lt;li&gt;
         &lt;a href=&quot;https://wescarr.com/art/img/KLamHtATI_-2000.jpeg&quot; data-pswp-width=&quot;2000&quot; data-pswp-height=&quot;1385&quot;&gt;
-          &lt;img src=&quot;https://wescarr.com/art/img/KLamHtATI_-450.jpeg&quot; alt=&quot;elementary school in august&quot; width=&quot;450&quot; height=&quot;311&quot; loading=&quot;lazy&quot;&gt;
+          &lt;img src=&quot;https://wescarr.com/art/img/KLamHtATI_-450.jpeg&quot; srcset=&quot;https://wescarr.com/art/img/KLamHtATI_-450.jpeg 450w, https://wescarr.com/art/img/KLamHtATI_-750.jpeg 750w&quot; sizes=&quot;450px&quot; alt=&quot;elementary school in august&quot; width=&quot;450&quot; height=&quot;311&quot; loading=&quot;lazy&quot;&gt;
         &lt;/a&gt;
       &lt;/li&gt;
     
       &lt;li&gt;
         &lt;a href=&quot;https://wescarr.com/art/img/tv1myaBRCv-2000.jpeg&quot; data-pswp-width=&quot;2000&quot; data-pswp-height=&quot;1337&quot;&gt;
-          &lt;img src=&quot;https://wescarr.com/art/img/tv1myaBRCv-450.jpeg&quot; alt=&quot;side of school&quot; width=&quot;450&quot; height=&quot;300&quot; loading=&quot;lazy&quot;&gt;
+          &lt;img src=&quot;https://wescarr.com/art/img/tv1myaBRCv-450.jpeg&quot; srcset=&quot;https://wescarr.com/art/img/tv1myaBRCv-450.jpeg 450w, https://wescarr.com/art/img/tv1myaBRCv-750.jpeg 750w&quot; sizes=&quot;450px&quot; alt=&quot;side of school&quot; width=&quot;450&quot; height=&quot;300&quot; loading=&quot;lazy&quot;&gt;
         &lt;/a&gt;
       &lt;/li&gt;
     
       &lt;li&gt;
         &lt;a href=&quot;https://wescarr.com/art/img/kJOfofPku3-2000.jpeg&quot; data-pswp-width=&quot;2000&quot; data-pswp-height=&quot;1354&quot;&gt;
-          &lt;img src=&quot;https://wescarr.com/art/img/kJOfofPku3-450.jpeg&quot; alt=&quot;late summer trailer&quot; width=&quot;450&quot; height=&quot;304&quot; loading=&quot;lazy&quot;&gt;
+          &lt;img src=&quot;https://wescarr.com/art/img/kJOfofPku3-450.jpeg&quot; srcset=&quot;https://wescarr.com/art/img/kJOfofPku3-450.jpeg 450w, https://wescarr.com/art/img/kJOfofPku3-750.jpeg 750w&quot; sizes=&quot;450px&quot; alt=&quot;late summer trailer&quot; width=&quot;450&quot; height=&quot;304&quot; loading=&quot;lazy&quot;&gt;
         &lt;/a&gt;
       &lt;/li&gt;
     
       &lt;li&gt;
         &lt;a href=&quot;https://wescarr.com/art/img/QqopOUoQHW-1500.jpeg&quot; data-pswp-width=&quot;1500&quot; data-pswp-height=&quot;1954&quot;&gt;
-          &lt;img src=&quot;https://wescarr.com/art/img/QqopOUoQHW-450.jpeg&quot; alt=&quot;watercolor fence heron river&quot; width=&quot;450&quot; height=&quot;586&quot; loading=&quot;lazy&quot;&gt;
+          &lt;img src=&quot;https://wescarr.com/art/img/QqopOUoQHW-450.jpeg&quot; srcset=&quot;https://wescarr.com/art/img/QqopOUoQHW-450.jpeg 450w, https://wescarr.com/art/img/QqopOUoQHW-750.jpeg 750w&quot; sizes=&quot;450px&quot; alt=&quot;watercolor fence heron river&quot; width=&quot;450&quot; height=&quot;586&quot; loading=&quot;lazy&quot;&gt;
         &lt;/a&gt;
       &lt;/li&gt;
     
       &lt;li&gt;
         &lt;a href=&quot;https://wescarr.com/art/img/4FylOhayv7-2000.jpeg&quot; data-pswp-width=&quot;2000&quot; data-pswp-height=&quot;1318&quot;&gt;
-          &lt;img src=&quot;https://wescarr.com/art/img/4FylOhayv7-450.jpeg&quot; alt=&quot;melissas porch dighton&quot; width=&quot;450&quot; height=&quot;296&quot; loading=&quot;lazy&quot;&gt;
+          &lt;img src=&quot;https://wescarr.com/art/img/4FylOhayv7-450.jpeg&quot; srcset=&quot;https://wescarr.com/art/img/4FylOhayv7-450.jpeg 450w, https://wescarr.com/art/img/4FylOhayv7-750.jpeg 750w&quot; sizes=&quot;450px&quot; alt=&quot;melissas porch dighton&quot; width=&quot;450&quot; height=&quot;296&quot; loading=&quot;lazy&quot;&gt;
         &lt;/a&gt;
       &lt;/li&gt;
     
       &lt;li&gt;
         &lt;a href=&quot;https://wescarr.com/art/img/_wdv6mtWOy-2000.jpeg&quot; data-pswp-width=&quot;2000&quot; data-pswp-height=&quot;1333&quot;&gt;
-          &lt;img src=&quot;https://wescarr.com/art/img/_wdv6mtWOy-450.jpeg&quot; alt=&quot;leanto at  branfort state park&quot; width=&quot;450&quot; height=&quot;299&quot; loading=&quot;lazy&quot;&gt;
+          &lt;img src=&quot;https://wescarr.com/art/img/_wdv6mtWOy-450.jpeg&quot; srcset=&quot;https://wescarr.com/art/img/_wdv6mtWOy-450.jpeg 450w, https://wescarr.com/art/img/_wdv6mtWOy-750.jpeg 750w&quot; sizes=&quot;450px&quot; alt=&quot;leanto at  branfort state park&quot; width=&quot;450&quot; height=&quot;299&quot; loading=&quot;lazy&quot;&gt;
         &lt;/a&gt;
       &lt;/li&gt;
     
       &lt;li&gt;
         &lt;a href=&quot;https://wescarr.com/art/img/8sEnIToo4Z-2000.jpeg&quot; data-pswp-width=&quot;2000&quot; data-pswp-height=&quot;1500&quot;&gt;
-          &lt;img src=&quot;https://wescarr.com/art/img/8sEnIToo4Z-450.jpeg&quot; alt=&quot;parents garage&quot; width=&quot;450&quot; height=&quot;337&quot; loading=&quot;lazy&quot;&gt;
+          &lt;img src=&quot;https://wescarr.com/art/img/8sEnIToo4Z-450.jpeg&quot; srcset=&quot;https://wescarr.com/art/img/8sEnIToo4Z-450.jpeg 450w, https://wescarr.com/art/img/8sEnIToo4Z-750.jpeg 750w&quot; sizes=&quot;450px&quot; alt=&quot;parents garage&quot; width=&quot;450&quot; height=&quot;337&quot; loading=&quot;lazy&quot;&gt;
         &lt;/a&gt;
       &lt;/li&gt;
     
       &lt;li&gt;
         &lt;a href=&quot;https://wescarr.com/art/img/tmc4l7pldz-2000.jpeg&quot; data-pswp-width=&quot;2000&quot; data-pswp-height=&quot;1386&quot;&gt;
-          &lt;img src=&quot;https://wescarr.com/art/img/tmc4l7pldz-450.jpeg&quot; alt=&quot;plein air middlebury no kings protest dead tree&quot; width=&quot;450&quot; height=&quot;311&quot; loading=&quot;lazy&quot;&gt;
+          &lt;img src=&quot;https://wescarr.com/art/img/tmc4l7pldz-450.jpeg&quot; srcset=&quot;https://wescarr.com/art/img/tmc4l7pldz-450.jpeg 450w, https://wescarr.com/art/img/tmc4l7pldz-750.jpeg 750w&quot; sizes=&quot;450px&quot; alt=&quot;plein air middlebury no kings protest dead tree&quot; width=&quot;450&quot; height=&quot;311&quot; loading=&quot;lazy&quot;&gt;
         &lt;/a&gt;
       &lt;/li&gt;
     
       &lt;li&gt;
         &lt;a href=&quot;https://wescarr.com/art/img/b6AyBgavE_-2000.jpeg&quot; data-pswp-width=&quot;2000&quot; data-pswp-height=&quot;1348&quot;&gt;
-          &lt;img src=&quot;https://wescarr.com/art/img/b6AyBgavE_-450.jpeg&quot; alt=&quot;plein air middlebury behind mad taco&quot; width=&quot;450&quot; height=&quot;303&quot; loading=&quot;lazy&quot;&gt;
+          &lt;img src=&quot;https://wescarr.com/art/img/b6AyBgavE_-450.jpeg&quot; srcset=&quot;https://wescarr.com/art/img/b6AyBgavE_-450.jpeg 450w, https://wescarr.com/art/img/b6AyBgavE_-750.jpeg 750w&quot; sizes=&quot;450px&quot; alt=&quot;plein air middlebury behind mad taco&quot; width=&quot;450&quot; height=&quot;303&quot; loading=&quot;lazy&quot;&gt;
         &lt;/a&gt;
       &lt;/li&gt;
     
       &lt;li&gt;
         &lt;a href=&quot;https://wescarr.com/art/img/ZDVu4zUpUl-1600.jpeg&quot; data-pswp-width=&quot;1600&quot; data-pswp-height=&quot;2255&quot;&gt;
-          &lt;img src=&quot;https://wescarr.com/art/img/ZDVu4zUpUl-450.jpeg&quot; alt=&quot;plein air middlebury shop&quot; width=&quot;450&quot; height=&quot;634&quot; loading=&quot;lazy&quot;&gt;
+          &lt;img src=&quot;https://wescarr.com/art/img/ZDVu4zUpUl-450.jpeg&quot; srcset=&quot;https://wescarr.com/art/img/ZDVu4zUpUl-450.jpeg 450w, https://wescarr.com/art/img/ZDVu4zUpUl-750.jpeg 750w&quot; sizes=&quot;450px&quot; alt=&quot;plein air middlebury shop&quot; width=&quot;450&quot; height=&quot;634&quot; loading=&quot;lazy&quot;&gt;
         &lt;/a&gt;
       &lt;/li&gt;
     
       &lt;li&gt;
         &lt;a href=&quot;https://wescarr.com/art/img/K8m4KZOhg9-1500.jpeg&quot; data-pswp-width=&quot;1500&quot; data-pswp-height=&quot;2165&quot;&gt;
-          &lt;img src=&quot;https://wescarr.com/art/img/K8m4KZOhg9-450.jpeg&quot; alt=&quot;plein air middlebury ben franklin&quot; width=&quot;450&quot; height=&quot;649&quot; loading=&quot;lazy&quot;&gt;
+          &lt;img src=&quot;https://wescarr.com/art/img/K8m4KZOhg9-450.jpeg&quot; srcset=&quot;https://wescarr.com/art/img/K8m4KZOhg9-450.jpeg 450w, https://wescarr.com/art/img/K8m4KZOhg9-750.jpeg 750w&quot; sizes=&quot;450px&quot; alt=&quot;plein air middlebury ben franklin&quot; width=&quot;450&quot; height=&quot;649&quot; loading=&quot;lazy&quot;&gt;
         &lt;/a&gt;
       &lt;/li&gt;
     
       &lt;li&gt;
         &lt;a href=&quot;https://wescarr.com/art/img/__wDf_TNXP-2500.jpeg&quot; data-pswp-width=&quot;2500&quot; data-pswp-height=&quot;1785&quot;&gt;
-          &lt;img src=&quot;https://wescarr.com/art/img/__wDf_TNXP-450.jpeg&quot; alt=&quot;meadowwood farm spring&quot; width=&quot;450&quot; height=&quot;321&quot; loading=&quot;lazy&quot;&gt;
+          &lt;img src=&quot;https://wescarr.com/art/img/__wDf_TNXP-450.jpeg&quot; srcset=&quot;https://wescarr.com/art/img/__wDf_TNXP-450.jpeg 450w, https://wescarr.com/art/img/__wDf_TNXP-750.jpeg 750w&quot; sizes=&quot;450px&quot; alt=&quot;meadowwood farm spring&quot; width=&quot;450&quot; height=&quot;321&quot; loading=&quot;lazy&quot;&gt;
         &lt;/a&gt;
       &lt;/li&gt;
     
       &lt;li&gt;
         &lt;a href=&quot;https://wescarr.com/art/img/Ymwpm_kv1w-2000.jpeg&quot; data-pswp-width=&quot;2000&quot; data-pswp-height=&quot;2667&quot;&gt;
-          &lt;img src=&quot;https://wescarr.com/art/img/Ymwpm_kv1w-450.jpeg&quot; alt=&quot;boston overgrown alley&quot; width=&quot;450&quot; height=&quot;600&quot; loading=&quot;lazy&quot;&gt;
+          &lt;img src=&quot;https://wescarr.com/art/img/Ymwpm_kv1w-450.jpeg&quot; srcset=&quot;https://wescarr.com/art/img/Ymwpm_kv1w-450.jpeg 450w, https://wescarr.com/art/img/Ymwpm_kv1w-750.jpeg 750w&quot; sizes=&quot;450px&quot; alt=&quot;boston overgrown alley&quot; width=&quot;450&quot; height=&quot;600&quot; loading=&quot;lazy&quot;&gt;
         &lt;/a&gt;
       &lt;/li&gt;
     
       &lt;li&gt;
         &lt;a href=&quot;https://wescarr.com/art/img/DmdCr7d-de-2500.jpeg&quot; data-pswp-width=&quot;2500&quot; data-pswp-height=&quot;1875&quot;&gt;
-          &lt;img src=&quot;https://wescarr.com/art/img/DmdCr7d-de-450.jpeg&quot; alt=&quot;poland summer getaway by the lake&quot; width=&quot;450&quot; height=&quot;337&quot; loading=&quot;lazy&quot;&gt;
+          &lt;img src=&quot;https://wescarr.com/art/img/DmdCr7d-de-450.jpeg&quot; srcset=&quot;https://wescarr.com/art/img/DmdCr7d-de-450.jpeg 450w, https://wescarr.com/art/img/DmdCr7d-de-750.jpeg 750w&quot; sizes=&quot;450px&quot; alt=&quot;poland summer getaway by the lake&quot; width=&quot;450&quot; height=&quot;337&quot; loading=&quot;lazy&quot;&gt;
         &lt;/a&gt;
       &lt;/li&gt;
     
       &lt;li&gt;
         &lt;a href=&quot;https://wescarr.com/art/img/9QUmTuVWMA-1500.jpeg&quot; data-pswp-width=&quot;1500&quot; data-pswp-height=&quot;1180&quot;&gt;
-          &lt;img src=&quot;https://wescarr.com/art/img/9QUmTuVWMA-450.jpeg&quot; alt=&quot;side yard of cottage&quot; width=&quot;450&quot; height=&quot;354&quot; loading=&quot;lazy&quot;&gt;
+          &lt;img src=&quot;https://wescarr.com/art/img/9QUmTuVWMA-450.jpeg&quot; srcset=&quot;https://wescarr.com/art/img/9QUmTuVWMA-450.jpeg 450w, https://wescarr.com/art/img/9QUmTuVWMA-750.jpeg 750w&quot; sizes=&quot;450px&quot; alt=&quot;side yard of cottage&quot; width=&quot;450&quot; height=&quot;354&quot; loading=&quot;lazy&quot;&gt;
         &lt;/a&gt;
       &lt;/li&gt;
     
       &lt;li&gt;
         &lt;a href=&quot;https://wescarr.com/art/img/q0Bulwxa---1200.jpeg&quot; data-pswp-width=&quot;1200&quot; data-pswp-height=&quot;977&quot;&gt;
-          &lt;img src=&quot;https://wescarr.com/art/img/q0Bulwxa---450.jpeg&quot; alt=&quot;pulling kids by town hall sketch&quot; width=&quot;450&quot; height=&quot;366&quot; loading=&quot;lazy&quot;&gt;
+          &lt;img src=&quot;https://wescarr.com/art/img/q0Bulwxa---450.jpeg&quot; srcset=&quot;https://wescarr.com/art/img/q0Bulwxa---450.jpeg 450w, https://wescarr.com/art/img/q0Bulwxa---750.jpeg 750w&quot; sizes=&quot;450px&quot; alt=&quot;pulling kids by town hall sketch&quot; width=&quot;450&quot; height=&quot;366&quot; loading=&quot;lazy&quot;&gt;
         &lt;/a&gt;
       &lt;/li&gt;
     
       &lt;li&gt;
         &lt;a href=&quot;https://wescarr.com/art/img/sFfQAnU0J1-2000.jpeg&quot; data-pswp-width=&quot;2000&quot; data-pswp-height=&quot;1322&quot;&gt;
-          &lt;img src=&quot;https://wescarr.com/art/img/sFfQAnU0J1-450.jpeg&quot; alt=&quot;library in town square&quot; width=&quot;450&quot; height=&quot;297&quot; loading=&quot;lazy&quot;&gt;
+          &lt;img src=&quot;https://wescarr.com/art/img/sFfQAnU0J1-450.jpeg&quot; srcset=&quot;https://wescarr.com/art/img/sFfQAnU0J1-450.jpeg 450w, https://wescarr.com/art/img/sFfQAnU0J1-750.jpeg 750w&quot; sizes=&quot;450px&quot; alt=&quot;library in town square&quot; width=&quot;450&quot; height=&quot;297&quot; loading=&quot;lazy&quot;&gt;
         &lt;/a&gt;
       &lt;/li&gt;
     
       &lt;li&gt;
         &lt;a href=&quot;https://wescarr.com/art/img/Bfpsi91SK7-2000.jpeg&quot; data-pswp-width=&quot;2000&quot; data-pswp-height=&quot;1384&quot;&gt;
-          &lt;img src=&quot;https://wescarr.com/art/img/Bfpsi91SK7-450.jpeg&quot; alt=&quot;dog walk stream culverts&quot; width=&quot;450&quot; height=&quot;311&quot; loading=&quot;lazy&quot;&gt;
+          &lt;img src=&quot;https://wescarr.com/art/img/Bfpsi91SK7-450.jpeg&quot; srcset=&quot;https://wescarr.com/art/img/Bfpsi91SK7-450.jpeg 450w, https://wescarr.com/art/img/Bfpsi91SK7-750.jpeg 750w&quot; sizes=&quot;450px&quot; alt=&quot;dog walk stream culverts&quot; width=&quot;450&quot; height=&quot;311&quot; loading=&quot;lazy&quot;&gt;
         &lt;/a&gt;
       &lt;/li&gt;
     
       &lt;li&gt;
         &lt;a href=&quot;https://wescarr.com/art/img/DZ7H6Y3jxY-2000.jpeg&quot; data-pswp-width=&quot;2000&quot; data-pswp-height=&quot;1351&quot;&gt;
-          &lt;img src=&quot;https://wescarr.com/art/img/DZ7H6Y3jxY-450.jpeg&quot; alt=&quot;modern barn snapshot&quot; width=&quot;450&quot; height=&quot;303&quot; loading=&quot;lazy&quot;&gt;
+          &lt;img src=&quot;https://wescarr.com/art/img/DZ7H6Y3jxY-450.jpeg&quot; srcset=&quot;https://wescarr.com/art/img/DZ7H6Y3jxY-450.jpeg 450w, https://wescarr.com/art/img/DZ7H6Y3jxY-750.jpeg 750w&quot; sizes=&quot;450px&quot; alt=&quot;modern barn snapshot&quot; width=&quot;450&quot; height=&quot;303&quot; loading=&quot;lazy&quot;&gt;
         &lt;/a&gt;
       &lt;/li&gt;
     
       &lt;li&gt;
         &lt;a href=&quot;https://wescarr.com/art/img/-nDsLuOu4B-2000.jpeg&quot; data-pswp-width=&quot;2000&quot; data-pswp-height=&quot;1419&quot;&gt;
-          &lt;img src=&quot;https://wescarr.com/art/img/-nDsLuOu4B-450.jpeg&quot; alt=&quot;april snow&quot; width=&quot;450&quot; height=&quot;319&quot; loading=&quot;lazy&quot;&gt;
+          &lt;img src=&quot;https://wescarr.com/art/img/-nDsLuOu4B-450.jpeg&quot; srcset=&quot;https://wescarr.com/art/img/-nDsLuOu4B-450.jpeg 450w, https://wescarr.com/art/img/-nDsLuOu4B-750.jpeg 750w&quot; sizes=&quot;450px&quot; alt=&quot;april snow&quot; width=&quot;450&quot; height=&quot;319&quot; loading=&quot;lazy&quot;&gt;
         &lt;/a&gt;
       &lt;/li&gt;
     
       &lt;li&gt;
         &lt;a href=&quot;https://wescarr.com/art/img/teIzwndxUV-2000.jpeg&quot; data-pswp-width=&quot;2000&quot; data-pswp-height=&quot;1344&quot;&gt;
-          &lt;img src=&quot;https://wescarr.com/art/img/teIzwndxUV-450.jpeg&quot; alt=&quot;remote setup&quot; width=&quot;450&quot; height=&quot;302&quot; loading=&quot;lazy&quot;&gt;
+          &lt;img src=&quot;https://wescarr.com/art/img/teIzwndxUV-450.jpeg&quot; srcset=&quot;https://wescarr.com/art/img/teIzwndxUV-450.jpeg 450w, https://wescarr.com/art/img/teIzwndxUV-750.jpeg 750w&quot; sizes=&quot;450px&quot; alt=&quot;remote setup&quot; width=&quot;450&quot; height=&quot;302&quot; loading=&quot;lazy&quot;&gt;
         &lt;/a&gt;
       &lt;/li&gt;
     
       &lt;li&gt;
         &lt;a href=&quot;https://wescarr.com/art/img/G3MzuorqXf-2000.jpeg&quot; data-pswp-width=&quot;2000&quot; data-pswp-height=&quot;1371&quot;&gt;
-          &lt;img src=&quot;https://wescarr.com/art/img/G3MzuorqXf-450.jpeg&quot; alt=&quot;drying sap buckets by river&quot; width=&quot;450&quot; height=&quot;308&quot; loading=&quot;lazy&quot;&gt;
+          &lt;img src=&quot;https://wescarr.com/art/img/G3MzuorqXf-450.jpeg&quot; srcset=&quot;https://wescarr.com/art/img/G3MzuorqXf-450.jpeg 450w, https://wescarr.com/art/img/G3MzuorqXf-750.jpeg 750w&quot; sizes=&quot;450px&quot; alt=&quot;drying sap buckets by river&quot; width=&quot;450&quot; height=&quot;308&quot; loading=&quot;lazy&quot;&gt;
         &lt;/a&gt;
       &lt;/li&gt;
     
       &lt;li&gt;
         &lt;a href=&quot;https://wescarr.com/art/img/bcjhEo5jPA-2000.jpeg&quot; data-pswp-width=&quot;2000&quot; data-pswp-height=&quot;1378&quot;&gt;
-          &lt;img src=&quot;https://wescarr.com/art/img/bcjhEo5jPA-450.jpeg&quot; alt=&quot;late spring sap buckets&quot; width=&quot;450&quot; height=&quot;310&quot; loading=&quot;lazy&quot;&gt;
+          &lt;img src=&quot;https://wescarr.com/art/img/bcjhEo5jPA-450.jpeg&quot; srcset=&quot;https://wescarr.com/art/img/bcjhEo5jPA-450.jpeg 450w, https://wescarr.com/art/img/bcjhEo5jPA-750.jpeg 750w&quot; sizes=&quot;450px&quot; alt=&quot;late spring sap buckets&quot; width=&quot;450&quot; height=&quot;310&quot; loading=&quot;lazy&quot;&gt;
         &lt;/a&gt;
       &lt;/li&gt;
     
       &lt;li&gt;
         &lt;a href=&quot;https://wescarr.com/art/img/blUDiNLrr4-2000.jpeg&quot; data-pswp-width=&quot;2000&quot; data-pswp-height=&quot;1391&quot;&gt;
-          &lt;img src=&quot;https://wescarr.com/art/img/blUDiNLrr4-450.jpeg&quot; alt=&quot;new pup mt mansfield&quot; width=&quot;450&quot; height=&quot;312&quot; loading=&quot;lazy&quot;&gt;
+          &lt;img src=&quot;https://wescarr.com/art/img/blUDiNLrr4-450.jpeg&quot; srcset=&quot;https://wescarr.com/art/img/blUDiNLrr4-450.jpeg 450w, https://wescarr.com/art/img/blUDiNLrr4-750.jpeg 750w&quot; sizes=&quot;450px&quot; alt=&quot;new pup mt mansfield&quot; width=&quot;450&quot; height=&quot;312&quot; loading=&quot;lazy&quot;&gt;
         &lt;/a&gt;
       &lt;/li&gt;
     
       &lt;li&gt;
         &lt;a href=&quot;https://wescarr.com/art/img/g1oT3Ug_-N-2000.jpeg&quot; data-pswp-width=&quot;2000&quot; data-pswp-height=&quot;1321&quot;&gt;
-          &lt;img src=&quot;https://wescarr.com/art/img/g1oT3Ug_-N-450.jpeg&quot; alt=&quot;yellow bowl&quot; width=&quot;450&quot; height=&quot;297&quot; loading=&quot;lazy&quot;&gt;
+          &lt;img src=&quot;https://wescarr.com/art/img/g1oT3Ug_-N-450.jpeg&quot; srcset=&quot;https://wescarr.com/art/img/g1oT3Ug_-N-450.jpeg 450w, https://wescarr.com/art/img/g1oT3Ug_-N-750.jpeg 750w&quot; sizes=&quot;450px&quot; alt=&quot;yellow bowl&quot; width=&quot;450&quot; height=&quot;297&quot; loading=&quot;lazy&quot;&gt;
         &lt;/a&gt;
       &lt;/li&gt;
     
       &lt;li&gt;
         &lt;a href=&quot;https://wescarr.com/art/img/Pj2lmPyElW-1500.jpeg&quot; data-pswp-width=&quot;1500&quot; data-pswp-height=&quot;1013&quot;&gt;
-          &lt;img src=&quot;https://wescarr.com/art/img/Pj2lmPyElW-450.jpeg&quot; alt=&quot;winter dumpsters&quot; width=&quot;450&quot; height=&quot;303&quot; loading=&quot;lazy&quot;&gt;
+          &lt;img src=&quot;https://wescarr.com/art/img/Pj2lmPyElW-450.jpeg&quot; srcset=&quot;https://wescarr.com/art/img/Pj2lmPyElW-450.jpeg 450w, https://wescarr.com/art/img/Pj2lmPyElW-750.jpeg 750w&quot; sizes=&quot;450px&quot; alt=&quot;winter dumpsters&quot; width=&quot;450&quot; height=&quot;303&quot; loading=&quot;lazy&quot;&gt;
         &lt;/a&gt;
       &lt;/li&gt;
     
       &lt;li&gt;
         &lt;a href=&quot;https://wescarr.com/art/img/TeCBXuh27f-1500.jpeg&quot; data-pswp-width=&quot;1500&quot; data-pswp-height=&quot;1019&quot;&gt;
-          &lt;img src=&quot;https://wescarr.com/art/img/TeCBXuh27f-450.jpeg&quot; alt=&quot;side yard shadows&quot; width=&quot;450&quot; height=&quot;305&quot; loading=&quot;lazy&quot;&gt;
+          &lt;img src=&quot;https://wescarr.com/art/img/TeCBXuh27f-450.jpeg&quot; srcset=&quot;https://wescarr.com/art/img/TeCBXuh27f-450.jpeg 450w, https://wescarr.com/art/img/TeCBXuh27f-750.jpeg 750w&quot; sizes=&quot;450px&quot; alt=&quot;side yard shadows&quot; width=&quot;450&quot; height=&quot;305&quot; loading=&quot;lazy&quot;&gt;
         &lt;/a&gt;
       &lt;/li&gt;
     
       &lt;li&gt;
         &lt;a href=&quot;https://wescarr.com/art/img/wPMNAU8dkt-1500.jpeg&quot; data-pswp-width=&quot;1500&quot; data-pswp-height=&quot;1045&quot;&gt;
-          &lt;img src=&quot;https://wescarr.com/art/img/wPMNAU8dkt-450.jpeg&quot; alt=&quot;winter lounging&quot; width=&quot;450&quot; height=&quot;313&quot; loading=&quot;lazy&quot;&gt;
+          &lt;img src=&quot;https://wescarr.com/art/img/wPMNAU8dkt-450.jpeg&quot; srcset=&quot;https://wescarr.com/art/img/wPMNAU8dkt-450.jpeg 450w, https://wescarr.com/art/img/wPMNAU8dkt-750.jpeg 750w&quot; sizes=&quot;450px&quot; alt=&quot;winter lounging&quot; width=&quot;450&quot; height=&quot;313&quot; loading=&quot;lazy&quot;&gt;
         &lt;/a&gt;
       &lt;/li&gt;
     
       &lt;li&gt;
         &lt;a href=&quot;https://wescarr.com/art/img/wguj8fr6Lp-1500.jpeg&quot; data-pswp-width=&quot;1500&quot; data-pswp-height=&quot;1012&quot;&gt;
-          &lt;img src=&quot;https://wescarr.com/art/img/wguj8fr6Lp-450.jpeg&quot; alt=&quot;strip mall sidewalk shadows and snow &quot; width=&quot;450&quot; height=&quot;303&quot; loading=&quot;lazy&quot;&gt;
+          &lt;img src=&quot;https://wescarr.com/art/img/wguj8fr6Lp-450.jpeg&quot; srcset=&quot;https://wescarr.com/art/img/wguj8fr6Lp-450.jpeg 450w, https://wescarr.com/art/img/wguj8fr6Lp-750.jpeg 750w&quot; sizes=&quot;450px&quot; alt=&quot;strip mall sidewalk shadows and snow &quot; width=&quot;450&quot; height=&quot;303&quot; loading=&quot;lazy&quot;&gt;
         &lt;/a&gt;
       &lt;/li&gt;
     
       &lt;li&gt;
         &lt;a href=&quot;https://wescarr.com/art/img/Nh_o86fKkE-1500.jpeg&quot; data-pswp-width=&quot;1500&quot; data-pswp-height=&quot;1055&quot;&gt;
-          &lt;img src=&quot;https://wescarr.com/art/img/Nh_o86fKkE-450.jpeg&quot; alt=&quot;winter chickens under octopus tree&quot; width=&quot;450&quot; height=&quot;316&quot; loading=&quot;lazy&quot;&gt;
+          &lt;img src=&quot;https://wescarr.com/art/img/Nh_o86fKkE-450.jpeg&quot; srcset=&quot;https://wescarr.com/art/img/Nh_o86fKkE-450.jpeg 450w, https://wescarr.com/art/img/Nh_o86fKkE-750.jpeg 750w&quot; sizes=&quot;450px&quot; alt=&quot;winter chickens under octopus tree&quot; width=&quot;450&quot; height=&quot;316&quot; loading=&quot;lazy&quot;&gt;
         &lt;/a&gt;
       &lt;/li&gt;
     
       &lt;li&gt;
         &lt;a href=&quot;https://wescarr.com/art/img/nFFK5VUQE4-1308.jpeg&quot; data-pswp-width=&quot;1308&quot; data-pswp-height=&quot;1841&quot;&gt;
-          &lt;img src=&quot;https://wescarr.com/art/img/nFFK5VUQE4-450.jpeg&quot; alt=&quot;craftsbury nordic overhang flags skier&quot; width=&quot;450&quot; height=&quot;633&quot; loading=&quot;lazy&quot;&gt;
+          &lt;img src=&quot;https://wescarr.com/art/img/nFFK5VUQE4-450.jpeg&quot; srcset=&quot;https://wescarr.com/art/img/nFFK5VUQE4-450.jpeg 450w, https://wescarr.com/art/img/nFFK5VUQE4-750.jpeg 750w&quot; sizes=&quot;450px&quot; alt=&quot;craftsbury nordic overhang flags skier&quot; width=&quot;450&quot; height=&quot;633&quot; loading=&quot;lazy&quot;&gt;
         &lt;/a&gt;
       &lt;/li&gt;
     
       &lt;li&gt;
         &lt;a href=&quot;https://wescarr.com/art/img/VCpL_Bm-mn-1426.jpeg&quot; data-pswp-width=&quot;1426&quot; data-pswp-height=&quot;971&quot;&gt;
-          &lt;img src=&quot;https://wescarr.com/art/img/VCpL_Bm-mn-450.jpeg&quot; alt=&quot;craftsbury vermont eclectic farm stand&quot; width=&quot;450&quot; height=&quot;306&quot; loading=&quot;lazy&quot;&gt;
+          &lt;img src=&quot;https://wescarr.com/art/img/VCpL_Bm-mn-450.jpeg&quot; srcset=&quot;https://wescarr.com/art/img/VCpL_Bm-mn-450.jpeg 450w, https://wescarr.com/art/img/VCpL_Bm-mn-750.jpeg 750w&quot; sizes=&quot;450px&quot; alt=&quot;craftsbury vermont eclectic farm stand&quot; width=&quot;450&quot; height=&quot;306&quot; loading=&quot;lazy&quot;&gt;
         &lt;/a&gt;
       &lt;/li&gt;
     
       &lt;li&gt;
         &lt;a href=&quot;https://wescarr.com/art/img/trd991g4BZ-1500.jpeg&quot; data-pswp-width=&quot;1500&quot; data-pswp-height=&quot;954&quot;&gt;
-          &lt;img src=&quot;https://wescarr.com/art/img/trd991g4BZ-450.jpeg&quot; alt=&quot;mansfield from west 2 4 25&quot; width=&quot;450&quot; height=&quot;286&quot; loading=&quot;lazy&quot;&gt;
+          &lt;img src=&quot;https://wescarr.com/art/img/trd991g4BZ-450.jpeg&quot; srcset=&quot;https://wescarr.com/art/img/trd991g4BZ-450.jpeg 450w, https://wescarr.com/art/img/trd991g4BZ-750.jpeg 750w&quot; sizes=&quot;450px&quot; alt=&quot;mansfield from west 2 4 25&quot; width=&quot;450&quot; height=&quot;286&quot; loading=&quot;lazy&quot;&gt;
         &lt;/a&gt;
       &lt;/li&gt;
     
       &lt;li&gt;
         &lt;a href=&quot;https://wescarr.com/art/img/DiPoL3AQ3W-1363.jpeg&quot; data-pswp-width=&quot;1363&quot; data-pswp-height=&quot;1820&quot;&gt;
-          &lt;img src=&quot;https://wescarr.com/art/img/DiPoL3AQ3W-450.jpeg&quot; alt=&quot;montreal cat cafe floor reflection&quot; width=&quot;450&quot; height=&quot;600&quot; loading=&quot;lazy&quot;&gt;
+          &lt;img src=&quot;https://wescarr.com/art/img/DiPoL3AQ3W-450.jpeg&quot; srcset=&quot;https://wescarr.com/art/img/DiPoL3AQ3W-450.jpeg 450w, https://wescarr.com/art/img/DiPoL3AQ3W-750.jpeg 750w&quot; sizes=&quot;450px&quot; alt=&quot;montreal cat cafe floor reflection&quot; width=&quot;450&quot; height=&quot;600&quot; loading=&quot;lazy&quot;&gt;
         &lt;/a&gt;
       &lt;/li&gt;
     
       &lt;li&gt;
         &lt;a href=&quot;https://wescarr.com/art/img/hz3eHzYWdq-1490.jpeg&quot; data-pswp-width=&quot;1490&quot; data-pswp-height=&quot;996&quot;&gt;
-          &lt;img src=&quot;https://wescarr.com/art/img/hz3eHzYWdq-450.jpeg&quot; alt=&quot;montreal women near residential homes in winter&quot; width=&quot;450&quot; height=&quot;300&quot; loading=&quot;lazy&quot;&gt;
+          &lt;img src=&quot;https://wescarr.com/art/img/hz3eHzYWdq-450.jpeg&quot; srcset=&quot;https://wescarr.com/art/img/hz3eHzYWdq-450.jpeg 450w, https://wescarr.com/art/img/hz3eHzYWdq-750.jpeg 750w&quot; sizes=&quot;450px&quot; alt=&quot;montreal women near residential homes in winter&quot; width=&quot;450&quot; height=&quot;300&quot; loading=&quot;lazy&quot;&gt;
         &lt;/a&gt;
       &lt;/li&gt;
     
       &lt;li&gt;
         &lt;a href=&quot;https://wescarr.com/art/img/sf-fDX8JKN-1418.jpeg&quot; data-pswp-width=&quot;1418&quot; data-pswp-height=&quot;910&quot;&gt;
-          &lt;img src=&quot;https://wescarr.com/art/img/sf-fDX8JKN-450.jpeg&quot; alt=&quot;mt mansfield stone house 2 1 25&quot; width=&quot;450&quot; height=&quot;288&quot; loading=&quot;lazy&quot;&gt;
+          &lt;img src=&quot;https://wescarr.com/art/img/sf-fDX8JKN-450.jpeg&quot; srcset=&quot;https://wescarr.com/art/img/sf-fDX8JKN-450.jpeg 450w, https://wescarr.com/art/img/sf-fDX8JKN-750.jpeg 750w&quot; sizes=&quot;450px&quot; alt=&quot;mt mansfield stone house 2 1 25&quot; width=&quot;450&quot; height=&quot;288&quot; loading=&quot;lazy&quot;&gt;
         &lt;/a&gt;
       &lt;/li&gt;
     
       &lt;li&gt;
         &lt;a href=&quot;https://wescarr.com/art/img/a5BoooMOcL-1335.jpeg&quot; data-pswp-width=&quot;1335&quot; data-pswp-height=&quot;873&quot;&gt;
-          &lt;img src=&quot;https://wescarr.com/art/img/a5BoooMOcL-450.jpeg&quot; alt=&quot;playground in snow 1 18 25&quot; width=&quot;450&quot; height=&quot;294&quot; loading=&quot;lazy&quot;&gt;
+          &lt;img src=&quot;https://wescarr.com/art/img/a5BoooMOcL-450.jpeg&quot; srcset=&quot;https://wescarr.com/art/img/a5BoooMOcL-450.jpeg 450w, https://wescarr.com/art/img/a5BoooMOcL-750.jpeg 750w&quot; sizes=&quot;450px&quot; alt=&quot;playground in snow 1 18 25&quot; width=&quot;450&quot; height=&quot;294&quot; loading=&quot;lazy&quot;&gt;
         &lt;/a&gt;
       &lt;/li&gt;
     
       &lt;li&gt;
         &lt;a href=&quot;https://wescarr.com/art/img/5rZjFZJ3d3-1292.jpeg&quot; data-pswp-width=&quot;1292&quot; data-pswp-height=&quot;1822&quot;&gt;
-          &lt;img src=&quot;https://wescarr.com/art/img/5rZjFZJ3d3-450.jpeg&quot; alt=&quot;shadows on house 2 8 25&quot; width=&quot;450&quot; height=&quot;634&quot; loading=&quot;lazy&quot;&gt;
+          &lt;img src=&quot;https://wescarr.com/art/img/5rZjFZJ3d3-450.jpeg&quot; srcset=&quot;https://wescarr.com/art/img/5rZjFZJ3d3-450.jpeg 450w, https://wescarr.com/art/img/5rZjFZJ3d3-750.jpeg 750w&quot; sizes=&quot;450px&quot; alt=&quot;shadows on house 2 8 25&quot; width=&quot;450&quot; height=&quot;634&quot; loading=&quot;lazy&quot;&gt;
         &lt;/a&gt;
       &lt;/li&gt;
     
       &lt;li&gt;
         &lt;a href=&quot;https://wescarr.com/art/img/4FUXBalcDF-1203.jpeg&quot; data-pswp-width=&quot;1203&quot; data-pswp-height=&quot;1820&quot;&gt;
-          &lt;img src=&quot;https://wescarr.com/art/img/4FUXBalcDF-450.jpeg&quot; alt=&quot;ski lodge 1 27 25&quot; width=&quot;450&quot; height=&quot;680&quot; loading=&quot;lazy&quot;&gt;
+          &lt;img src=&quot;https://wescarr.com/art/img/4FUXBalcDF-450.jpeg&quot; srcset=&quot;https://wescarr.com/art/img/4FUXBalcDF-450.jpeg 450w, https://wescarr.com/art/img/4FUXBalcDF-750.jpeg 750w&quot; sizes=&quot;450px&quot; alt=&quot;ski lodge 1 27 25&quot; width=&quot;450&quot; height=&quot;680&quot; loading=&quot;lazy&quot;&gt;
         &lt;/a&gt;
       &lt;/li&gt;
     
       &lt;li&gt;
         &lt;a href=&quot;https://wescarr.com/art/img/GvaEgHRMPu-1393.jpeg&quot; data-pswp-width=&quot;1393&quot; data-pswp-height=&quot;976&quot;&gt;
-          &lt;img src=&quot;https://wescarr.com/art/img/GvaEgHRMPu-450.jpeg&quot; alt=&quot;snow barn 2 6 25&quot; width=&quot;450&quot; height=&quot;315&quot; loading=&quot;lazy&quot;&gt;
+          &lt;img src=&quot;https://wescarr.com/art/img/GvaEgHRMPu-450.jpeg&quot; srcset=&quot;https://wescarr.com/art/img/GvaEgHRMPu-450.jpeg 450w, https://wescarr.com/art/img/GvaEgHRMPu-750.jpeg 750w&quot; sizes=&quot;450px&quot; alt=&quot;snow barn 2 6 25&quot; width=&quot;450&quot; height=&quot;315&quot; loading=&quot;lazy&quot;&gt;
         &lt;/a&gt;
       &lt;/li&gt;
     
       &lt;li&gt;
         &lt;a href=&quot;https://wescarr.com/art/img/TF-muy5Ewn-1404.jpeg&quot; data-pswp-width=&quot;1404&quot; data-pswp-height=&quot;930&quot;&gt;
-          &lt;img src=&quot;https://wescarr.com/art/img/TF-muy5Ewn-450.jpeg&quot; alt=&quot;stubby trees house 2 16 25&quot; width=&quot;450&quot; height=&quot;298&quot; loading=&quot;lazy&quot;&gt;
+          &lt;img src=&quot;https://wescarr.com/art/img/TF-muy5Ewn-450.jpeg&quot; srcset=&quot;https://wescarr.com/art/img/TF-muy5Ewn-450.jpeg 450w, https://wescarr.com/art/img/TF-muy5Ewn-750.jpeg 750w&quot; sizes=&quot;450px&quot; alt=&quot;stubby trees house 2 16 25&quot; width=&quot;450&quot; height=&quot;298&quot; loading=&quot;lazy&quot;&gt;
         &lt;/a&gt;
       &lt;/li&gt;
     
       &lt;li&gt;
         &lt;a href=&quot;https://wescarr.com/art/img/BTnswl6BeP-1435.jpeg&quot; data-pswp-width=&quot;1435&quot; data-pswp-height=&quot;979&quot;&gt;
-          &lt;img src=&quot;https://wescarr.com/art/img/BTnswl6BeP-450.jpeg&quot; alt=&quot;underhill state park lean to 1 2 15 25&quot; width=&quot;450&quot; height=&quot;307&quot; loading=&quot;lazy&quot;&gt;
+          &lt;img src=&quot;https://wescarr.com/art/img/BTnswl6BeP-450.jpeg&quot; srcset=&quot;https://wescarr.com/art/img/BTnswl6BeP-450.jpeg 450w, https://wescarr.com/art/img/BTnswl6BeP-750.jpeg 750w&quot; sizes=&quot;450px&quot; alt=&quot;underhill state park lean to 1 2 15 25&quot; width=&quot;450&quot; height=&quot;307&quot; loading=&quot;lazy&quot;&gt;
         &lt;/a&gt;
       &lt;/li&gt;
     
       &lt;li&gt;
         &lt;a href=&quot;https://wescarr.com/art/img/WAJDxfngNl-1461.jpeg&quot; data-pswp-width=&quot;1461&quot; data-pswp-height=&quot;993&quot;&gt;
-          &lt;img src=&quot;https://wescarr.com/art/img/WAJDxfngNl-450.jpeg&quot; alt=&quot;underhill state park lean to 2 2 14 25&quot; width=&quot;450&quot; height=&quot;305&quot; loading=&quot;lazy&quot;&gt;
+          &lt;img src=&quot;https://wescarr.com/art/img/WAJDxfngNl-450.jpeg&quot; srcset=&quot;https://wescarr.com/art/img/WAJDxfngNl-450.jpeg 450w, https://wescarr.com/art/img/WAJDxfngNl-750.jpeg 750w&quot; sizes=&quot;450px&quot; alt=&quot;underhill state park lean to 2 2 14 25&quot; width=&quot;450&quot; height=&quot;305&quot; loading=&quot;lazy&quot;&gt;
         &lt;/a&gt;
       &lt;/li&gt;
     
       &lt;li&gt;
         &lt;a href=&quot;https://wescarr.com/art/img/ILwEgbcTDx-1500.jpeg&quot; data-pswp-width=&quot;1500&quot; data-pswp-height=&quot;1023&quot;&gt;
-          &lt;img src=&quot;https://wescarr.com/art/img/ILwEgbcTDx-450.jpeg&quot; alt=&quot;underhill state park pavillion 2 9 25&quot; width=&quot;450&quot; height=&quot;306&quot; loading=&quot;lazy&quot;&gt;
+          &lt;img src=&quot;https://wescarr.com/art/img/ILwEgbcTDx-450.jpeg&quot; srcset=&quot;https://wescarr.com/art/img/ILwEgbcTDx-450.jpeg 450w, https://wescarr.com/art/img/ILwEgbcTDx-750.jpeg 750w&quot; sizes=&quot;450px&quot; alt=&quot;underhill state park pavillion 2 9 25&quot; width=&quot;450&quot; height=&quot;306&quot; loading=&quot;lazy&quot;&gt;
         &lt;/a&gt;
       &lt;/li&gt;
     
       &lt;li&gt;
         &lt;a href=&quot;https://wescarr.com/art/img/baSWJQ1ipJ-1395.jpeg&quot; data-pswp-width=&quot;1395&quot; data-pswp-height=&quot;976&quot;&gt;
-          &lt;img src=&quot;https://wescarr.com/art/img/baSWJQ1ipJ-450.jpeg&quot; alt=&quot;underhill state park toilet 2 11 25&quot; width=&quot;450&quot; height=&quot;314&quot; loading=&quot;lazy&quot;&gt;
+          &lt;img src=&quot;https://wescarr.com/art/img/baSWJQ1ipJ-450.jpeg&quot; srcset=&quot;https://wescarr.com/art/img/baSWJQ1ipJ-450.jpeg 450w, https://wescarr.com/art/img/baSWJQ1ipJ-750.jpeg 750w&quot; sizes=&quot;450px&quot; alt=&quot;underhill state park toilet 2 11 25&quot; width=&quot;450&quot; height=&quot;314&quot; loading=&quot;lazy&quot;&gt;
         &lt;/a&gt;
       &lt;/li&gt;
     
       &lt;li&gt;
         &lt;a href=&quot;https://wescarr.com/art/img/KKNc7VZv5l-1439.jpeg&quot; data-pswp-width=&quot;1439&quot; data-pswp-height=&quot;971&quot;&gt;
-          &lt;img src=&quot;https://wescarr.com/art/img/KKNc7VZv5l-450.jpeg&quot; alt=&quot;yard overhang woodpile in winter&quot; width=&quot;450&quot; height=&quot;303&quot; loading=&quot;lazy&quot;&gt;
+          &lt;img src=&quot;https://wescarr.com/art/img/KKNc7VZv5l-450.jpeg&quot; srcset=&quot;https://wescarr.com/art/img/KKNc7VZv5l-450.jpeg 450w, https://wescarr.com/art/img/KKNc7VZv5l-750.jpeg 750w&quot; sizes=&quot;450px&quot; alt=&quot;yard overhang woodpile in winter&quot; width=&quot;450&quot; height=&quot;303&quot; loading=&quot;lazy&quot;&gt;
         &lt;/a&gt;
       &lt;/li&gt;
     
@@ -376,7 +376,54 @@
 &lt;p&gt; Making this page also provided a chance to play with a &lt;a href=&quot;https://photoswipe.com/&quot;&gt;slideshow tool&lt;/a&gt; and eleventy&#39;s &lt;a href=&quot;https://www.11ty.dev/docs/plugins/image/&quot;&gt;plugin&lt;/a&gt;.
 
 &lt;/p&gt;&lt;/section&gt;
+&lt;!-- 
+&lt;section class=&quot; theme--emp  &quot;&gt;
 
+  &lt;style&gt;
+    .newsletter-container[attr-a][attr-b][attr-c][attr-d][attr-e][attr-f] .form-preview {
+  display: flex;
+}
+.newsletter-container[attr-a][attr-b][attr-c][attr-d][attr-e][attr-f] .form-preview,
+.newsletter-container[attr-a][attr-b][attr-c][attr-d][attr-e][attr-f] .form-preview *{
+  box-sizing: border-box !important;
+}
+
+
+.newsletter-container[attr-a][attr-b][attr-c][attr-d][attr-e][attr-f] .form-preview .preview-input-field input {
+ font-size: 1.1em;
+  padding: 1em;
+  margin-right: 1em;
+}
+
+.newsletter-container[attr-a][attr-b][attr-c][attr-d][attr-e][attr-f] .form-preview .preview-submit-button button {
+ font-size: 1.1em;
+  padding: 1.1em;
+  border: 0 !important;
+  border-radius: 6px !important;
+  margin: 0;
+}
+.newsletter-container[attr-a][attr-b][attr-c][attr-d][attr-e][attr-f] .form-preview .preview-submit-button button:hover {
+  cursor: pointer !important;
+}
+
+  &lt;/style&gt;
+    &lt;h2&gt;Get fresh, steaming art sent to your email, once a week. Made by hand. &lt;/h2&gt;
+    &lt;p&gt;I&#39;m excited to start sharing my newest pen and watercolor art by email soon! I&#39;d love it if you&#39;d join. &lt;/p&gt;
+  &lt;div class=&quot;newsletter-container&quot; attr-a attr-b attr-c attr-d attr-e attr-f&gt;
+    &lt;form  data-v-8541cdc9=&quot;&quot; action=&quot;https://api.follow.it/subscription-form/aWtwL1dVR1VCd3MzaHYyS3FJdS8yR3JETlVBRlB1dDRLR2Z6Z1pqQ2hmOC9IMmdEV3I3RVFCQTJGZEN0SFdQWkljVmg4MU5QWktzVlIrZWJjallkRFkrbGxRL0RUdHZMRkZkbjBiV3Awb1hOQ2szL21kMktydWc5TkNVeVgvU0p8VjlTZ0JObDFqMzN4R05UalhZYzFFQXMvQklrMllvZkVpM3FLUUFSL2Vnaz0=/8&quot; method=&quot;post&quot;&gt;
+      &lt;div data-v-8541cdc9=&quot;&quot; class=&quot;form-preview&quot;&gt;
+      &lt;div data-v-8541cdc9=&quot;&quot; class=&quot;preview-heading&quot;&gt;
+    &lt;/div&gt;
+    &lt;div data-v-8541cdc9=&quot;&quot; class=&quot;preview-input-field&quot;&gt;
+      &lt;input data-v-8541cdc9=&quot;&quot; type=&quot;email&quot; name=&quot;email&quot; required aria-required=&quot;true&quot; placeholder=&quot;Email address&quot; spellcheck=&quot;false&quot; &gt;
+    &lt;/div&gt;
+    &lt;div data-v-8541cdc9=&quot;&quot; class=&quot;preview-submit-button&quot;&gt;
+      &lt;button data-v-8541cdc9=&quot;&quot; type=&quot;submit&quot; style=&quot; text-align: center;&quot;&gt;Subscribe&lt;/button&gt;
+    &lt;/div&gt;&lt;/div&gt;&lt;/form&gt;
+    
+    &lt;p&gt;&lt;small&gt;&lt;a href=&quot;https://follow.it&quot; target=&quot;_blank&quot; class=&quot;external powered-by-line&quot;&gt;Powered by follow.it&lt;/a&gt;&lt;/small&gt;&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/section&gt;  --&gt;
 
 
 

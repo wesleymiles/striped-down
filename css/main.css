@@ -1491,10 +1491,9 @@ body.modal-open {
     grid-column: span 1;
 
 }
-    .card:nth-child(7n) { grid-column: span 2; }
-  /*  reset on small screens */
-  @media (max-width: 800px) {
-    .card:nth-child(7n) { grid-column: span 1; }
+  .card:nth-child(7n) { grid-column: span 2; }
+    /*  reset on small screens */
+    @media (max-width: 800px) { .card:nth-child(7n) { grid-column: span 1; }
   }
 
   .card:hover,
@@ -1505,9 +1504,7 @@ body.modal-open {
     background-color: var(--bg-dark);
     border-color: #fff;
   }
-  .card:nth-child(7n) {
 
-  }
   
   .card * {
   transition: all 0.2s ease;
@@ -1620,13 +1617,13 @@ body.post img {
     flex: 1 0 100%;
     flex-wrap: wrap;
     column-gap: .5em;
-    margin-top: .5em;
+    margin: var(--gap) 0;
     font-size: .7em;
 }
 
-.archive-list {
+ul.archive-list {
   list-style: none;
-  margin: 0;
+  margin-top: var(--gap);
   padding: 0;
 }
 

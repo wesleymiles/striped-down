@@ -2,9 +2,10 @@
 layout: blog.liquid
 title: Clear day for Washington
 description: A stunning walk up a popular peak
+permalink: "/blog/{{ title | slugify }}/"
 tags: 
   - post
-  - tripreport
+  - trip-report
 date: 2025-10-10
 trips:
   dateHiked: 2020-08-15

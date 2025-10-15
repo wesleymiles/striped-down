@@ -37,6 +37,13 @@
 			preload: [1, 1]
 		  });
 		  lightbox.init();
+
+		document.addEventListener('DOMContentLoaded', () => {
+			// Select every 7th list item and update its img sizes attribute
+			document.querySelectorAll('#gallery > ul > li:nth-child(7n) img').forEach(img => {
+				img.sizes = '950px';
+			});
+		});
 	  </script>
 	  
 	{% endif %}

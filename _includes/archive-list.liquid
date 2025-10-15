@@ -13,7 +13,7 @@
                     <dt>Tagged:</dt>
                     {%- for tag in post.data.tags -%}
                         {% if tag != 'post' -%}
-                            <dd class="tag"><a href="/blog/tag/{{ tag }}">{{ tag }}</a></dd>
+                            <dd class="tag"><a href="/blog/tag/{{ tag | slugify }}">{{ tag | unslugify }}</a></dd>
                          {% endif -%}
                     {% endfor -%}
                 </dl>

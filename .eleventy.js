@@ -44,43 +44,48 @@ async function processImage(src, options = {}) {
   };
 }
 
-// Legacy function for backward compatibility
-async function getImageData(src, alt) {
-  const processed = await processImage(src);
-  return { imageInfo: processed.full, alt: alt || "" };
-}
-
-
 module.exports = function (eleventyConfig) {
   // Plugins
   eleventyConfig.addPlugin(eleventyNavigationPlugin);
 
-  // Multiple image shortcodes for different use cases
-  
-  // Smart image shortcode with path resolution and optional caption
-  eleventyConfig.addAsyncShortcode("image", async function(src, alt, caption = "", className = "") {
-    // Smart path resolution
-    let resolvedSrc = src;
-    
-    // If src starts with './' or doesn't start with '/', make it relative to current page
+  // RSS Feed
+  eleventyConfig.addPlugin(feedPlugin, {
+    type: "rss",
+    outputPath: "/art-feed.xml",
+    collection: {
+      name: "art",
+      limit: 0,
+    },
+    metadata: {
+      language: "en",
+      title: "Art feed",
+      subtitle: "This is a longer description about your blog.",
+      base: "https://wescarr.com/blog/art",
+      author: {
+        name: "Wes Carr",
+      },
+    },
+  });
+
+  // ============================================
+  // IMAGE SHORTCODES
+  // ============================================
+
+  // Helper function for path resolution (DRY)
+  function resolveImagePath(src, pageContext) {
     if (src.startsWith('./') || (!src.startsWith('/') && !src.startsWith('http'))) {
-      // Get current page directory from the context
-      const currentPageDir = this.page && this.page.inputPath 
-        ? path.dirname(this.page.inputPath) 
+      const currentPageDir = pageContext.page && pageContext.page.inputPath 
+        ? path.dirname(pageContext.page.inputPath) 
         : '';
-      
-      // Remove leading './' if present
       const cleanSrc = src.replace(/^\.\//, '');
-      resolvedSrc = currentPageDir ? path.join(currentPageDir, cleanSrc) : src;
-      
-      // Debug logging
-      console.log(`Resolving image path:`);
-      console.log(`  Original: ${src}`);
-      console.log(`  Current page: ${this.page?.inputPath || 'unknown'}`);
-      console.log(`  Current dir: ${currentPageDir}`);
-      console.log(`  Resolved: ${resolvedSrc}`);
+      return currentPageDir ? path.join(currentPageDir, cleanSrc) : src;
     }
-    
+    return src;
+  }
+
+  // Basic image shortcode with optional caption
+  eleventyConfig.addAsyncShortcode("image", async function(src, alt, caption = "", className = "") {
+    const resolvedSrc = resolveImagePath(src, this);
     const processed = await processImage(resolvedSrc);
     const img = processed.full;
     
@@ -101,21 +106,9 @@ module.exports = function (eleventyConfig) {
     return `<div class="${className}">${imageHtml}</div>`;
   });
 
-  // Smart responsive image shortcode with path resolution and optional caption
+  // Responsive image with WebP support
   eleventyConfig.addAsyncShortcode("responsiveImage", async function(src, alt, caption = "", className = "") {
-    // Smart path resolution
-    let resolvedSrc = src;
-    
-    // If src starts with './' or doesn't start with '/', make it relative to current page
-    if (src.startsWith('./') || (!src.startsWith('/') && !src.startsWith('http'))) {
-      const currentPageDir = this.page && this.page.inputPath 
-        ? path.dirname(this.page.inputPath) 
-        : '';
-      
-      const cleanSrc = src.replace(/^\.\//, '');
-      resolvedSrc = currentPageDir ? path.join(currentPageDir, cleanSrc) : src;
-    }
-    
+    const resolvedSrc = resolveImagePath(src, this);
     const processed = await processImage(resolvedSrc, {
       widths: [300, 600, 1200, null],
       formats: ["webp", "jpeg"]
@@ -154,30 +147,21 @@ module.exports = function (eleventyConfig) {
     return `<div class="${className}">${pictureHtml}</div>`;
   });
 
-  // Smart gallery/slideshow compatible shortcode with path resolution and optional caption
+  // Gallery/slideshow compatible image with srcset for responsive thumbnails
   eleventyConfig.addAsyncShortcode("galleryImage", async function(src, alt, caption = "", className = "") {
-    // Smart path resolution
-    let resolvedSrc = src;
-    
-    // If src starts with './' or doesn't start with '/', make it relative to current page
-    if (src.startsWith('./') || (!src.startsWith('/') && !src.startsWith('http'))) {
-      const currentPageDir = this.page && this.page.inputPath 
-        ? path.dirname(this.page.inputPath) 
-        : '';
-      
-      const cleanSrc = src.replace(/^\.\//, '');
-      resolvedSrc = currentPageDir ? path.join(currentPageDir, cleanSrc) : src;
-    }
-    
+    const resolvedSrc = resolveImagePath(src, this);
     const processed = await processImage(resolvedSrc, {
-      widths: [450, 750, null], // thumbnail, medium, full
-      formats: ["jpeg"] // Keep single format for slideshow compatibility
+      widths: [450, 750, null], // thumbnail, large thumbnail, full
+      formats: ["jpeg"]
     });
     
-    const thumb = processed.thumbnail;
+    const thumb = processed.thumbnail; // 450px
+    const largethumb = processed.medium; // 750px
     const full = processed.full;
     
     const imageHtml = `<img src="${thumb.url}" 
+                            srcset="${thumb.url} 450w, ${largethumb.url} 750w"
+                            sizes="450px"
                             data-full="${full.url}"
                             data-full-width="${full.width}"
                             data-full-height="${full.height}"
@@ -198,41 +182,11 @@ module.exports = function (eleventyConfig) {
     return `<div class="${className}">${imageHtml}</div>`;
   });
 
-  // Template formats
-  eleventyConfig.setTemplateFormats("html,liquid,njk,md");
+  // ============================================
+  // COLLECTIONS
+  // ============================================
 
-  // Readable dates
-  eleventyConfig.addFilter("postDate", (dateObj) => {  
-    return DateTime.fromJSDate(dateObj).toLocaleString(DateTime.DATE_MED);
-  });
-
-  // Markdown config
-  eleventyConfig.setLibrary("md", markdownIt({ html: true, breaks: false, typographer: true }));
-
-  // Passthrough copy settings
-  const passthroughPaths = [
-    "fonts", "feed.xsl", "font.woff","font.ttf", "img", "css", "js", "vid/", "mp4", "webm", "animations", "js/script.js", "photoswipe/",
-    "project/wobblies/img",
-    "work/mockup-demo"
-  ];
-
-  // Dynamically find all blog image directories
-  const blogPath = "blog/";
-  if (fs.existsSync(blogPath)) { // Ensure the blog directory exists
-    const blogDirs = fs.readdirSync(blogPath, { withFileTypes: true })
-      .filter(dirent => dirent.isDirectory())
-      .map(dirent => path.join(blogPath, dirent.name, "img"));
-
-    passthroughPaths.push(...blogDirs);
-  }
-
-  // Add passthrough copies
-  passthroughPaths.forEach(path => eleventyConfig.addPassthroughCopy({ [path]: path }));
-
-  // Global data
-  eleventyConfig.addGlobalData("siteUrl", "https://wescarr.com");
-
-  // Updated gallery collection using unified image processing
+  // Gallery images collection
   eleventyConfig.addCollection("images", async function () {
     const imageDir = "art/img/";
     let files = fs.readdirSync(imageDir).filter(file => /\.(jpg|png|gif)$/i.test(file));
@@ -242,13 +196,12 @@ module.exports = function (eleventyConfig) {
       let imagePath = path.join(imageDir, file);
       const stats = fs.statSync(imagePath);
 
-      // Use unified processing function
       const processed = await processImage(imagePath, {
-        widths: [450, 750, null], // thumbnail, medium, full
-        formats: ["jpeg"], // Keep single format for slideshow
+        widths: [450, 750, null],
+        formats: ["jpeg"],
         outputDir: "./_site/art/img/",
         urlPath: "/art/img/",
-        fixOrientation: true, // because @11ty/eleventy-img doesn't always respect a photo's EXIF orientation metadata during processing
+        fixOrientation: true,
       });
 
       images.push({
@@ -267,54 +220,103 @@ module.exports = function (eleventyConfig) {
       });
     }
 
-    // Sort by date, newest first
     images.sort((a, b) => b.date - a.date);
     return images;
   });
 
-  // adding RSS
-  eleventyConfig.addPlugin(feedPlugin, {
-    type: "rss", // or "rss", "json"
-    outputPath: "/art-feed.xml",
-    collection: {
-      name: "art", // iterate over `collections.posts`
-      limit: 0,     // 0 means no limit
-    },
-    metadata: {
-      language: "en",
-      title: "Art feed",
-      subtitle: "This is a longer description about your blog.",
-      base: "https://wescarr.com/blog/art",
-      author: {
-        name: "Wes Carr",
-        //email: "",
-      },
-    },
-    //stylesheet: "/feed.xsl", // stylesheet reference
-  });
-
+  // Art blog posts collection
   eleventyConfig.addCollection("artblogPosts", function(collectionApi) {
-    // Filter all posts for those having the 'art' tag
     return collectionApi.getAll().filter(item => {
       return item.data.tags && item.data.tags.includes("art");
     });
   });
 
+  // Trip reports collection
+  eleventyConfig.addCollection("trip-report", function(collectionApi) {
+    return collectionApi.getFilteredByTag("trip-report");
+  });
 
-    // Only minify HTML in production
-    if (process.env.NODE_ENV === "production") {
-      eleventyConfig.addTransform("htmlmin", function(content, outputPath) {
-        if (outputPath && outputPath.endsWith(".html")) {
-          let minified = htmlmin.minify(content, {
-            // useShortDoctype: true,
-            removeComments: true,
-            // collapseWhitespace: true,
-          });
-          return minified;
-        }
-        return content;
-      });
-    }
+  // ============================================
+  // FILTERS
+  // ============================================
 
+  // Readable dates
+  eleventyConfig.addFilter("postDate", (dateObj) => {  
+    return DateTime.fromJSDate(dateObj).toLocaleString(DateTime.DATE_MED);
+  });
 
+  // Convert slug to title case
+  eleventyConfig.addFilter("unslugify", function(slug) {
+    return slug
+      .split('-')
+      .map(word => word.charAt(0).toUpperCase() + word.slice(1))
+      .join(' ');
+  });
+
+  // Parse elevation for trip report charts
+  eleventyConfig.addFilter("parseElevation", function(elevation) {
+    if (!elevation) return 0;
+    return parseInt(elevation.toString().replace(/[^0-9]/g, '')) || 0;
+  });
+
+  // ============================================
+  // CONFIGURATION
+  // ============================================
+
+  // Template formats
+  eleventyConfig.setTemplateFormats("html,liquid,njk,md");
+
+  // Markdown config
+  eleventyConfig.setLibrary("md", markdownIt({ 
+    html: true, 
+    breaks: false, 
+    typographer: true 
+  }));
+
+  // Global data
+  eleventyConfig.addGlobalData("siteUrl", "https://wescarr.com");
+
+  // Passthrough copy
+  const passthroughPaths = [
+    "fonts", 
+    "feed.xsl", 
+    "font.woff",
+    "font.ttf", 
+    "img", 
+    "css", 
+    "js", 
+    "vid/", 
+    "mp4", 
+    "webm", 
+    "animations", 
+    "js/script.js", 
+    "photoswipe/",
+    "project/wobblies/img",
+    "work/mockup-demo"
+  ];
+
+  // Dynamically find all blog image directories
+  const blogPath = "blog/";
+  if (fs.existsSync(blogPath)) {
+    const blogDirs = fs.readdirSync(blogPath, { withFileTypes: true })
+      .filter(dirent => dirent.isDirectory())
+      .map(dirent => path.join(blogPath, dirent.name, "img"));
+
+    passthroughPaths.push(...blogDirs);
+  }
+
+  passthroughPaths.forEach(path => eleventyConfig.addPassthroughCopy({ [path]: path }));
+
+  // HTML minification (production only)
+  if (process.env.NODE_ENV === "production") {
+    eleventyConfig.addTransform("htmlmin", function(content, outputPath) {
+      if (outputPath && outputPath.endsWith(".html")) {
+        let minified = htmlmin.minify(content, {
+          removeComments: true,
+        });
+        return minified;
+      }
+      return content;
+    });
+  }
 };

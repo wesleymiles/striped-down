@@ -1,7 +1,7 @@
 ---
 layout: blog.liquid
-title: Art
-description: A place to gather the drawings I've been doing this year so far, with pen, india ink, and sometimes watercolor.
+title: Art knoll
+description: A place to collect the work from my budding hobby. Most use a uniball pen and india ink, and some include watercolor.
 date-updated: 2025-09-28
 tags: art
 eleventyNavigation: 
@@ -25,7 +25,13 @@ eleventyNavigation:
     {% for image in collections.images reverse %}
       <li>
         <a href="{{ image.fullUrl }}" data-pswp-width="{{ image.fullWidth }}" data-pswp-height="{{ image.fullHeight }}">
-          <img src="{{ image.thumbUrl }}" alt="{{ image.alt }}" width="{{ image.thumbWidth }}" height="{{ image.thumbHeight }}" loading="lazy">
+          <img src="{{ image.thumbUrl }}" 
+            srcset="{{ image.thumbUrl }} 450w, {{ image.mediumUrl }} 750w"
+            sizes="450px"
+            alt="{{ image.alt }}" 
+            width="{{ image.thumbWidth }}" 
+            height="{{ image.thumbHeight }}" 
+            loading="lazy">
         </a>
       </li>
     {% endfor %}

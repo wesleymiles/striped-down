@@ -4,7 +4,7 @@ title: Butler lodge to nebraska notch loop
 description: A wet morning hike and the worry that came with it
 tags: 
   - post
-  - tripreport
+  - trip-report
 date: 2025-09-26
 trips:
   dateHiked: 2025-09-26

@@ -4,11 +4,11 @@ title: Mount Chocorua out and back
 description: One of the few sub-4000-footer I've done
 tags: 
   - post
-  - tripreport
+  - trip-report
 date: 2025-10-09
 trips:
   dateHiked: 2023-08-12
-  peak: Mount Chocorua
+  peak: Mt. Chocorua
   # totalTime: 0:00 hours
   elevation: 3,490 feet
   distance: 7.6 miles

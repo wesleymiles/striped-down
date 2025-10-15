@@ -4,11 +4,11 @@ title: Mount Moosilauke x 3
 description: Fun one with the old hiking gang
 tags: 
   - post
-  - tripreport
+  - trip-report
 date: 2025-10-09
 trips:
   dateHiked: 2024-09-07
-  peak: Mount Moosilauke
+  peak: Mt. Moosilauke
   # totalTime: 0:00 hours
   elevation: 4,802 feet
   distance: 7.4 miles

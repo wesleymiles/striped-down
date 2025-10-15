@@ -5,11 +5,21 @@ pagination:
   alias: tag
   addAllPagesToCollections: true
 layout: blog.liquid
-permalink: /blog/tag/{{ tag | slugify }}/index.html
+permalink: /blog/tag/{{ tag }}/index.html
 eleventyComputed:
-  title: Posts tagged "{{ tag }}"
+  title: Posts tagged {{ tag | unslugify }}
+  description: "{{ tagDescriptions[tag].description }}"
 ---
 
+
+
+
+{% if page.url == '/blog/tag/trip-report/' %}
+
+  {% include 'tripreports.liquid' %}
+  <h2>Browse by date</h2>
+
+{% endif %}
 
 
 <ul class="archive-list">
@@ -36,8 +46,6 @@ eleventyComputed:
           <span class="label-prevnext">Back:</span>
           <span class="title-prevnext"><a href="/blog">See all blogs</a></span>
       </p>
+
   </nav>
 </section>
-
-
-

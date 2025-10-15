@@ -4,11 +4,11 @@ title: Peak near the Maine border
 description: Exploring the wreckage of a 1954 plane crash in the Great North Woods of N.H.
 tags: 
   - post
-  - tripreport
+  - trip-report
 date: 2025-10-09
 trips:
   dateHiked: 2016-06-25
-  peak: Add peak name here
+  peak: Mt. Success
   # totalTime: 0:00 hours
   elevation: 3,565 feet
   distance: 6.5 miles

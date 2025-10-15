@@ -9,20 +9,28 @@
 	
 
 	
+		<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-date-fns@3.0.0/dist/chartjs-adapter-date-fns.bundle.min.js"></script>
+		<script src="/js/trip-report-chart.js"></script>
+	
+
+	
 
 	
 
 
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Posts tagged "tripreport" — Wes</title>
+    <title>Posts tagged Trip Report — Wes</title>
 
 	<!-- SEO Tags -->
 	
+		<meta name="description" content="I've started uploading some older trip reports with the criteria that they have to be semi-strenuous. Ever since becoming a dad, my hikes have become more local and photos less noteworthy." />
+	
 
-	<meta property="og:title" content="Posts tagged "tripreport""/>
-	<meta property="og:url" content="/blog/tag/tripreport/ "/>
-	<meta property="og:description" content=""/>
+	<meta property="og:title" content="Posts tagged Trip Report"/>
+	<meta property="og:url" content="/blog/tag/trip-report/ "/>
+	<meta property="og:description" content="I've started uploading some older trip reports with the criteria that they have to be semi-strenuous. Ever since becoming a dad, my hikes have become more local and photos less noteworthy."/>
 
 
 <meta property="og:image" content="https://wescarr.com/img/social/tags.jpg">
@@ -49,7 +57,7 @@
 
   </head>
 
-	<body class="Posts tagged "tripreport" ">
+	<body class="Posts tagged Trip Report ">
   	<a class="skip-link nav-tab" href='#main'>Skip to content</a>
 		<header class="mast">
 			<nav aria-label="Main">
@@ -86,9 +94,18 @@
 <article>
 
     <header class="content-header">
+        
+        
+            <dl class="blog-tags">
+                <!-- <dt>Tagged:</dt> -->
+        
+                
 
-        <h1 class="content-heading">Posts tagged "tripreport"</h1>
-        <p class="content-desc"></p>
+            </dl>
+        
+
+        <h1 class="content-heading">Posts tagged Trip Report</h1>
+        <p class="content-desc">I've started uploading some older trip reports with the criteria that they have to be semi-strenuous. Ever since becoming a dad, my hikes have become more local and photos less noteworthy.</p>
         
         <!-- if it's a post, and not the blog or tag page, include a date  -->
         
@@ -104,10 +121,133 @@
     
 
 
+
+
+
+  
+
+<article>
+    <h2>Browse by date & elevation</h2>
+    <div id="trip-chart" style="width: 100%; height: 500px;"></div>
+
+    <script>
+       const tripData = [
+            
+            {
+                date: "March 23, 2014",
+                elevation: 4006,
+                peak: "Mt. Waumbek",
+                url: "/blog/trip-report/mt-waumbek-sledding/",
+                title: "Hiking Mt Waumbek in winter"
+            },
+            
+            {
+                date: "Fri Jul 01 2016 20:00:00 GMT-0400 (Eastern Daylight Time)",
+                elevation: 0,
+                peak: "Add peak name here",
+                url: "/blog/trip-report/2016-07-02/",
+                title: "Hike on 2016-07-02"
+            },
+            
+            {
+                date: "Fri Nov 11 2016 19:00:00 GMT-0500 (Eastern Standard Time)",
+                elevation: 0,
+                peak: "Add peak name here",
+                url: "/blog/trip-report/2016-11-12/",
+                title: "Hike on 2016-11-12"
+            },
+            
+            {
+                date: "Fri Jan 27 2017 19:00:00 GMT-0500 (Eastern Standard Time)",
+                elevation: 0,
+                peak: "Add peak name here",
+                url: "/blog/trip-report/2017-01-28/",
+                title: "Hike on 2017-01-28"
+            },
+            
+            {
+                date: "Thu Oct 10 2019 20:00:00 GMT-0400 (Eastern Daylight Time)",
+                elevation: 2650,
+                peak: "Stowe pinnacle",
+                url: "/blog/trip-report/Stowe pinnacle with a delicate babe/",
+                title: "Stowe pinnacle with a delicate babe"
+            },
+            
+            {
+                date: "Wed Feb 21 2024 19:00:00 GMT-0500 (Eastern Standard Time)",
+                elevation: 4083,
+                peak: "Camels hump",
+                url: "/blog/trip-report/camels-hump-in-winter/",
+                title: "Camels hump in winter"
+            },
+            
+            {
+                date: "Thu Sep 25 2025 20:00:00 GMT-0400 (Eastern Daylight Time)",
+                elevation: 3015,
+                peak: "Mt. Mansfield",
+                url: "/blog/trip-report/butler-lodge-to-nebraska-notch/",
+                title: "Butler lodge to nebraska notch loop"
+            },
+            
+            {
+                date: "Tue Aug 31 2021 20:00:00 GMT-0400 (Eastern Daylight Time)",
+                elevation: 4393,
+                peak: "Mt. Mansfield",
+                url: "/blog/trip-report/mansfield-in-between-jobs/",
+                title: "Mansfield in between jobs"
+            },
+            
+            {
+                date: "Fri Aug 11 2023 20:00:00 GMT-0400 (Eastern Daylight Time)",
+                elevation: 3490,
+                peak: "Mt. Chocorua",
+                url: "/blog/trip-report/mount-chocorua-out-and back/",
+                title: "Mount Chocorua out and back"
+            },
+            
+            {
+                date: "Fri Sep 06 2024 20:00:00 GMT-0400 (Eastern Daylight Time)",
+                elevation: 4802,
+                peak: "Mt. Moosilauke",
+                url: "/blog/trip-report/mount-moosilauke-x-3/",
+                title: "Mount Moosilauke x 3"
+            },
+            
+            {
+                date: "Fri Jun 24 2016 20:00:00 GMT-0400 (Eastern Daylight Time)",
+                elevation: 3565,
+                peak: "Mt. Success",
+                url: "/blog/trip-report/peak-near-the-maine-border/",
+                title: "Peak near the Maine border"
+            },
+            
+            {
+                date: "Fri Aug 14 2020 20:00:00 GMT-0400 (Eastern Daylight Time)",
+                elevation: 6288,
+                peak: "Mt. Washington",
+                url: "/blog/clear-day-for-washington/",
+                title: "Clear day for Washington"
+            }
+            
+        ];
+
+        // Simple visualization with clickable points
+        createTripChart(tripData);
+    </script>
+    
+</article>
+
+
+
+  <h2>Browse by date</h2>
+
+
+
+
 <ul class="archive-list"><li>
       <article class="archive-entry">
         <div class="entry-header">
-            <h3><a href="/blog/trip-report/2020-08-15/">Clear day for Washington</a></h3>
+            <h3><a href="/blog/clear-day-for-washington/">Clear day for Washington</a></h3>
             <time class="meta-date" datetime="Oct 9, 2025">Oct 9, 2025</time>
         </div>
         <p><span class="excerpt">A stunning walk up a popular peak</span></p>
@@ -163,10 +303,10 @@
     </li><li>
       <article class="archive-entry">
         <div class="entry-header">
-            <h3><a href="/blog/trip-report/2019-10-11/">Hike on 2019-10-11</a></h3>
+            <h3><a href="/blog/trip-report/Stowe pinnacle with a delicate babe/">Stowe pinnacle with a delicate babe</a></h3>
             <time class="meta-date" datetime="Oct 10, 2019">Oct 10, 2019</time>
         </div>
-        <p><span class="excerpt">Add your hike description here</span></p>
+        <p><span class="excerpt">Three weeks after our second was born, we took him on his first hike</span></p>
       </article>
     </li><li>
       <article class="archive-entry">
@@ -211,20 +351,14 @@
           <span class="label-prevnext">Back:</span>
           <span class="title-prevnext"><a href="/blog">See all blogs</a></span>
       </p>
+
   </nav>
 </section>
-
-
-
-
 </article>
 
 <section class ="post-footer">
 
-    <dl class="blog-tags">
-        
-    </dl>
-            
+          
 
     <hr>
     <nav class="posts-next-previous">

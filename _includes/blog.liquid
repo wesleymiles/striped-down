@@ -3,6 +3,21 @@
 <article>
 
     <header class="content-header">
+        {% assign tagPagePrefix = '/blog/tag/' %}
+        {% if page.url contains tagPagePrefix %}
+            <dl class="blog-tags">
+                <!-- <dt>Tagged:</dt> -->
+        
+                {% for tag in tags %}
+                    {% if tag != 'post' %}
+    
+                        <a href="/blog/tag/{{ tag }}">{{ tag | unslugify }}</a>
+    
+                    {% endif %}
+                {% endfor %}
+
+            </dl>
+        {% endif %}
 
         <h1 class="content-heading">{{ title }}</h1>
         <p class="content-desc">{{ description }}</p>
@@ -55,21 +70,7 @@
 
 <section class ="post-footer">
 
-    <dl class="blog-tags">
-        {% if tags %}
-            <dt>Tagged:</dt>
-    
-            {% for tag in tags %}
-                {% if tag != 'post' %}
-                    
-                    <a href="/blog/tag/{{ tag }}">{{ tag }}</a>
-
-                {% endif %}
-            {% endfor %}
-    
-        {% endif %}
-    </dl>
-            
+          
 
     <hr>
     <nav class="posts-next-previous">

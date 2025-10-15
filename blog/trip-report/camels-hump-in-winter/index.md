@@ -4,15 +4,16 @@ title: Camels hump in winter
 description: Crispy birthday hike with cookies on top
 tags: 
   - post
-  - tripreport
+  - trip-report
 date: 2024-02-22
 trips:
   dateHiked: 2024-02-22
   peak: Camels hump
-  totalTime: 0:00 hours
-  elevation: 0 feet
-  distance: 0.0 miles
-  temp: 0F° on top
+  # totalTime: 0:00 hours
+  elevation: 4,083 feet
+  trail: Monroe Trail
+  distance: 6 miles
+  temp: 15F° on top
 location: 
   town: Duxbury
   state: Vermont

@@ -39,7 +39,7 @@ description: I'm a UX designer at the open source software company Red Hat, I fr
 							<dt>Tagged:</dt>
 							{%- for tag in post.data.tags -%}
 								{% if tag != 'post' -%}
-									<dd class="tag"><a href="/blog/tag/{{ tag }}">{{ tag }}</a></dd>
+									<dd class="tag"><a href="/blog/tag/{{ tag }}">{{ tag | unslugify }}</a></dd>
 								 {% endif -%}
 							{% endfor -%}
 						</dl>
