@@ -34,4 +34,4 @@ My wife had a cousin in town from her mother-land of Poland who was here for the
 
 {% image "img/IMG_9153 10.44.45 PM.JPG", "Hiking photo from 2016-07-02", "Ready to venture through the clouds" %}
 
-{% image "img/bundled-up.JPG", "Hiking photo from 2016-07-02", "Quick selfie against the white backdrop before heading down" %}
+{% image "img/bundled-up.jpg", "Hiking photo from 2016-07-02", "Quick selfie against the white backdrop before heading down" %}
