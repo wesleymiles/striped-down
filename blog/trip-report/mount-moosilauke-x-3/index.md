@@ -8,9 +8,9 @@ tags:
 date: 2025-10-09
 trips:
   dateHiked: 2024-09-07
-  peak: Mt. Moosilauke
-  # totalTime: 0:00 hours
-  elevation: 4,802 feet
+  peaks: 
+    - name: Mt. Moosilauke
+      elevation: 4802
   distance: 7.4 miles
   temp: 55F° on top
   trail: Beaver Brook Trail

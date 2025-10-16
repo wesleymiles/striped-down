@@ -8,9 +8,9 @@ tags:
 date: 2025-10-09
 trips:
   dateHiked: 2016-06-25
-  peak: Mt. Success
-  # totalTime: 0:00 hours
-  elevation: 3,565 feet
+  peaks: 
+    - name: Mt. Success
+      elevation: 3565
   distance: 6.5 miles
   # temp: 0F° on top
 location: 

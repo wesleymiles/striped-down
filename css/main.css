@@ -2147,7 +2147,7 @@ https://griffadev.medium.com/building-a-responsive-progressively-enhanced-masonr
       grid-template-rows: masonry;
       grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
       /* no more wonky bottom */
-      align-tracks: stretch;
+      /* align-tracks: stretch; */
 }
 
   /* no more wonky bottom */

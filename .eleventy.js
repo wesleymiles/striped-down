@@ -147,6 +147,29 @@ module.exports = function (eleventyConfig) {
     return `<div class="${className}">${pictureHtml}</div>`;
   });
 
+
+  // Format elevation with commas and "feet"
+  eleventyConfig.addFilter("formatElevation", function(elevation) {
+    if (!elevation) return '';
+    return elevation.toLocaleString() + ' feet';
+  });
+
+// Returns the entire peak object with the highest elevation
+eleventyConfig.addFilter("getHighestElevation", function(peaks) {
+  if (!peaks || !Array.isArray(peaks) || peaks.length === 0) return 0;
+  return peaks.reduce((max, peak) => 
+    (peak.elevation || 0) > max ? (peak.elevation || 0) : max
+  , 0);
+});
+
+  // Get total elevation gain if you want to sum all peaks
+  eleventyConfig.addFilter("totalElevation", function(peaks) {
+    if (!peaks || !peaks.length) return 0;
+    return peaks.reduce((sum, peak) => sum + (peak.elevation || 0), 0);
+  });
+
+
+
   // Gallery/slideshow compatible image with srcset for responsive thumbnails
   eleventyConfig.addAsyncShortcode("galleryImage", async function(src, alt, caption = "", className = "") {
     const resolvedSrc = resolveImagePath(src, this);
@@ -262,6 +285,29 @@ module.exports = function (eleventyConfig) {
   // ============================================
   // CONFIGURATION
   // ============================================
+
+  // Slugify all permalinks automatically
+  eleventyConfig.addGlobalData("permalink", () => {
+    return (data) => {
+      const slugify = require("slugify");
+      
+      // Get the file path without extension
+      const pathParts = data.page.filePathStem.split('/').filter(Boolean);
+      
+      // Slugify each directory and filename, but remove 'index'
+      const slugifiedParts = pathParts
+        .filter(part => part !== 'index') // Remove 'index' from path
+        .map(part => 
+          slugify(part, { 
+            lower: true, 
+            strict: true,
+            remove: /[*+~.()'"!:@]/g
+          })
+        );
+      
+      return `/${slugifiedParts.join('/')}/`;
+    };
+  });
 
   // Template formats
   eleventyConfig.setTemplateFormats("html,liquid,njk,md");

@@ -8,9 +8,10 @@ tags:
 date: 2025-09-26
 trips:
   dateHiked: 2025-09-26
-  peak: Mt. Mansfield
+  peaks: 
+    - name: Mt. Mansfield
+      elevation: 3015 
   totalTime: 2:51 hours
-  elevation: 3,015 feet
   distance: 6.0 miles
   temp: 54F° on top
 location: 

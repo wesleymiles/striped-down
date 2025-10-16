@@ -56,7 +56,10 @@ function createTripChart(data) {
                     callbacks: {
                         label: (context) => {
                             const trip = data[context.dataIndex];
-                            return `${trip.peak}: ${trip.elevation} ft`;
+                            if (trip.peaks.length > 1) {
+                                return trip.peaks.map(p => `${p.name}: ${p.elevation} ft`);
+                            }
+                            return `${trip.peaks[0].name}: ${trip.peaks[0].elevation} ft`;
                         }
                     }
                 }

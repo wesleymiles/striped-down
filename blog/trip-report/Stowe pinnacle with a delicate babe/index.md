@@ -2,15 +2,16 @@
 layout: blog.liquid
 title: Stowe pinnacle with a delicate babe
 description: Three weeks after our second was born, we took him on his first hike
+permalink: "{{ page.filePathStem | slugify }}/index.html"
 tags: 
   - postq
   - trip-report
 date: 2019-10-11
 trips:
   dateHiked: 2019-10-11
-  peak: Stowe pinnacle 
-  # totalTime: 0:00 hours
-  elevation: 2,650 feet
+  peaks: 
+    - name: Stowe pinnacle 
+      elevation: 2650
   trail: Stowe Pinnacle Trail
   distance: 3.2 miles
   # temp: 0F° on top

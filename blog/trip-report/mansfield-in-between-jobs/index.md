@@ -8,9 +8,9 @@ tags:
 date: 2025-10-09
 trips:
   dateHiked: 2021-09-01
-  peak: Mt. Mansfield
-  # totalTime: 0:00 hours
-  elevation: 4,393 feet
+  peaks: 
+    - name: Mt. Mansfield
+      elevation: 4393
   trail: Sunset Ridge
   distance: 5.2 miles
   temp: 60F° on top

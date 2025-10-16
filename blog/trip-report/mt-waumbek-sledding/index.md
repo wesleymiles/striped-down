@@ -8,8 +8,9 @@ tags:
 date: 2015-04-04
 trips:
   dateHiked: March 23, 2014
-  peak: Mt. Waumbek
-  elevation: 4,006 feet
+  peaks: 
+    - name: Mt. Waumbek
+      elevation: 4006
   distance: 7.2 miles
   temp: 26F° on top
 location: 

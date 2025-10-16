@@ -72,16 +72,16 @@
 				
 				<ul class="nav-menu">
 					  <li>
-					    	<a href="/blog/">Blog</a>
-				  	</li>
-					  <li>
-					    	<a href="/art/">Art</a>
-				  	</li>
-					  <li>
 					    	<a href="/web/">Web</a>
 				  	</li>
 					  <li>
+					    	<a href="/blog/">Blog</a>
+				  	</li>
+					  <li>
 					    	<a href="/now/">Now</a>
+				  	</li>
+					  <li>
+					    	<a href="/art/">Art</a>
 				  	</li>
 					</ul>
 
@@ -96,12 +96,12 @@
     <header class="content-header">
         
         
-            <dl class="blog-tags">
-                <!-- <dt>Tagged:</dt> -->
+            <!-- <dl class="blog-tags">
+                <dt>Tagged:</dt>
         
                 
 
-            </dl>
+            </dl> -->
         
 
         <h1 class="content-heading">Posts tagged Trip Report</h1>
@@ -109,9 +109,9 @@
         
         <!-- if it's a post, and not the blog or tag page, include a date  -->
         
+    
+        <!-- if it's a trip report, include trip report metadata  -->
         
-            <!-- if it's a trip report, include trip report metadata  -->
-            
 
         
 
@@ -124,121 +124,176 @@
 
 
 
-  
-
-<article>
+  <article>
     <h2>Browse by date & elevation</h2>
     <div id="trip-chart" style="width: 100%; height: 500px;"></div>
 
     <script>
-       const tripData = [
+        const tripData = [
+            
             
             {
                 date: "March 23, 2014",
                 elevation: 4006,
-                peak: "Mt. Waumbek",
+                peaks: [
+                    
+                    { name: "Mt. Waumbek", elevation: 4006 }
+                    
+                ],
                 url: "/blog/trip-report/mt-waumbek-sledding/",
                 title: "Hiking Mt Waumbek in winter"
             },
             
-            {
-                date: "Fri Jul 01 2016 20:00:00 GMT-0400 (Eastern Daylight Time)",
-                elevation: 0,
-                peak: "Add peak name here",
-                url: "/blog/trip-report/2016-07-02/",
-                title: "Hike on 2016-07-02"
-            },
             
-            {
-                date: "Fri Nov 11 2016 19:00:00 GMT-0500 (Eastern Standard Time)",
-                elevation: 0,
-                peak: "Add peak name here",
-                url: "/blog/trip-report/2016-11-12/",
-                title: "Hike on 2016-11-12"
-            },
-            
-            {
-                date: "Fri Jan 27 2017 19:00:00 GMT-0500 (Eastern Standard Time)",
-                elevation: 0,
-                peak: "Add peak name here",
-                url: "/blog/trip-report/2017-01-28/",
-                title: "Hike on 2017-01-28"
-            },
             
             {
                 date: "Thu Oct 10 2019 20:00:00 GMT-0400 (Eastern Daylight Time)",
                 elevation: 2650,
-                peak: "Stowe pinnacle",
-                url: "/blog/trip-report/Stowe pinnacle with a delicate babe/",
+                peaks: [
+                    
+                    { name: "Stowe pinnacle", elevation: 2650 }
+                    
+                ],
+                url: "/blog-trip-report-stowe-pinnacle-with-a-delicate-babe-index/",
                 title: "Stowe pinnacle with a delicate babe"
             },
+            
+            
             
             {
                 date: "Wed Feb 21 2024 19:00:00 GMT-0500 (Eastern Standard Time)",
                 elevation: 4083,
-                peak: "Camels hump",
+                peaks: [
+                    
+                    { name: "Camels hump", elevation: 4083 }
+                    
+                ],
                 url: "/blog/trip-report/camels-hump-in-winter/",
                 title: "Camels hump in winter"
             },
             
+            
+            
             {
                 date: "Thu Sep 25 2025 20:00:00 GMT-0400 (Eastern Daylight Time)",
                 elevation: 3015,
-                peak: "Mt. Mansfield",
+                peaks: [
+                    
+                    { name: "Mt. Mansfield", elevation: 3015 }
+                    
+                ],
                 url: "/blog/trip-report/butler-lodge-to-nebraska-notch/",
                 title: "Butler lodge to nebraska notch loop"
             },
             
+            
+            
             {
                 date: "Tue Aug 31 2021 20:00:00 GMT-0400 (Eastern Daylight Time)",
                 elevation: 4393,
-                peak: "Mt. Mansfield",
+                peaks: [
+                    
+                    { name: "Mt. Mansfield", elevation: 4393 }
+                    
+                ],
                 url: "/blog/trip-report/mansfield-in-between-jobs/",
                 title: "Mansfield in between jobs"
             },
             
+            
+            
             {
                 date: "Fri Aug 11 2023 20:00:00 GMT-0400 (Eastern Daylight Time)",
                 elevation: 3490,
-                peak: "Mt. Chocorua",
-                url: "/blog/trip-report/mount-chocorua-out-and back/",
+                peaks: [
+                    
+                    { name: "Mt. Chocorua", elevation: 3490 }
+                    
+                ],
+                url: "/blog/trip-report/mount-chocorua-out-and-back/",
                 title: "Mount Chocorua out and back"
             },
+            
+            
             
             {
                 date: "Fri Sep 06 2024 20:00:00 GMT-0400 (Eastern Daylight Time)",
                 elevation: 4802,
-                peak: "Mt. Moosilauke",
+                peaks: [
+                    
+                    { name: "Mt. Moosilauke", elevation: 4802 }
+                    
+                ],
                 url: "/blog/trip-report/mount-moosilauke-x-3/",
                 title: "Mount Moosilauke x 3"
             },
             
+            
+            
             {
                 date: "Fri Jun 24 2016 20:00:00 GMT-0400 (Eastern Daylight Time)",
                 elevation: 3565,
-                peak: "Mt. Success",
+                peaks: [
+                    
+                    { name: "Mt. Success", elevation: 3565 }
+                    
+                ],
                 url: "/blog/trip-report/peak-near-the-maine-border/",
                 title: "Peak near the Maine border"
             },
             
+            
+            
             {
                 date: "Fri Aug 14 2020 20:00:00 GMT-0400 (Eastern Daylight Time)",
                 elevation: 6288,
-                peak: "Mt. Washington",
-                url: "/blog/clear-day-for-washington/",
+                peaks: [
+                    
+                    { name: "Mt. Washington", elevation: 6288 }
+                    
+                ],
+                url: "/blog/trip-report/clear-day-for-washington/",
                 title: "Clear day for Washington"
+            },
+            
+            
+            
+            {
+                date: "Fri Jul 01 2016 20:00:00 GMT-0400 (Eastern Daylight Time)",
+                elevation: 4393,
+                peaks: [
+                    
+                    { name: "Mt. Mansfield", elevation: 4393 }
+                    
+                ],
+                url: "/blog/trip-report/clouds-on-mansfield/",
+                title: "Clouds on Mansfield"
+            },
+            
+            
+            
+            {
+                date: "Fri Jan 27 2017 19:00:00 GMT-0500 (Eastern Standard Time)",
+                elevation: 4403,
+                peaks: [
+                    
+                    { name: "Mt. Hancock", elevation: 4403 },
+                    
+                    { name: "South Hancock", elevation: 4319 }
+                    
+                ],
+                url: "/blog/trip-report/hancock-south-hancock-solid-butt-sliding/",
+                title: "Hancock, South Hancock; solid butt-sliding"
             }
             
+            
         ];
-
-        // Simple visualization with clickable points
+        
         createTripChart(tripData);
     </script>
-    
+
+
 </article>
-
-
-
   <h2>Browse by date</h2>
 
 
@@ -247,7 +302,23 @@
 <ul class="archive-list"><li>
       <article class="archive-entry">
         <div class="entry-header">
-            <h3><a href="/blog/clear-day-for-washington/">Clear day for Washington</a></h3>
+            <h3><a href="/blog/trip-report/hancock-south-hancock-solid-butt-sliding/">Hancock, South Hancock; solid butt-sliding</a></h3>
+            <time class="meta-date" datetime="Oct 14, 2025">Oct 14, 2025</time>
+        </div>
+        <p><span class="excerpt">A January hike and camp where the sledding gods shone down on us</span></p>
+      </article>
+    </li><li>
+      <article class="archive-entry">
+        <div class="entry-header">
+            <h3><a href="/blog/trip-report/clouds-on-mansfield/">Clouds on Mansfield</a></h3>
+            <time class="meta-date" datetime="Oct 14, 2025">Oct 14, 2025</time>
+        </div>
+        <p><span class="excerpt">Guiding Polish relatives up a mountain to a windy summit</span></p>
+      </article>
+    </li><li>
+      <article class="archive-entry">
+        <div class="entry-header">
+            <h3><a href="/blog/trip-report/clear-day-for-washington/">Clear day for Washington</a></h3>
             <time class="meta-date" datetime="Oct 9, 2025">Oct 9, 2025</time>
         </div>
         <p><span class="excerpt">A stunning walk up a popular peak</span></p>
@@ -271,7 +342,7 @@
     </li><li>
       <article class="archive-entry">
         <div class="entry-header">
-            <h3><a href="/blog/trip-report/mount-chocorua-out-and back/">Mount Chocorua out and back</a></h3>
+            <h3><a href="/blog/trip-report/mount-chocorua-out-and-back/">Mount Chocorua out and back</a></h3>
             <time class="meta-date" datetime="Oct 8, 2025">Oct 8, 2025</time>
         </div>
         <p><span class="excerpt">One of the few sub-4000-footer I've done</span></p>
@@ -303,34 +374,10 @@
     </li><li>
       <article class="archive-entry">
         <div class="entry-header">
-            <h3><a href="/blog/trip-report/Stowe pinnacle with a delicate babe/">Stowe pinnacle with a delicate babe</a></h3>
+            <h3><a href="/blog-trip-report-stowe-pinnacle-with-a-delicate-babe-index/">Stowe pinnacle with a delicate babe</a></h3>
             <time class="meta-date" datetime="Oct 10, 2019">Oct 10, 2019</time>
         </div>
         <p><span class="excerpt">Three weeks after our second was born, we took him on his first hike</span></p>
-      </article>
-    </li><li>
-      <article class="archive-entry">
-        <div class="entry-header">
-            <h3><a href="/blog/trip-report/2017-01-28/">Hike on 2017-01-28</a></h3>
-            <time class="meta-date" datetime="Jan 27, 2017">Jan 27, 2017</time>
-        </div>
-        <p><span class="excerpt">Add your hike description here</span></p>
-      </article>
-    </li><li>
-      <article class="archive-entry">
-        <div class="entry-header">
-            <h3><a href="/blog/trip-report/2016-11-12/">Hike on 2016-11-12</a></h3>
-            <time class="meta-date" datetime="Nov 11, 2016">Nov 11, 2016</time>
-        </div>
-        <p><span class="excerpt">Add your hike description here</span></p>
-      </article>
-    </li><li>
-      <article class="archive-entry">
-        <div class="entry-header">
-            <h3><a href="/blog/trip-report/2016-07-02/">Hike on 2016-07-02</a></h3>
-            <time class="meta-date" datetime="Jul 1, 2016">Jul 1, 2016</time>
-        </div>
-        <p><span class="excerpt">Add your hike description here</span></p>
       </article>
     </li><li>
       <article class="archive-entry">
@@ -356,11 +403,14 @@
 </section>
 </article>
 
+<hr>
 <section class ="post-footer">
 
+    
+
+    
           
 
-    <hr>
     <nav class="posts-next-previous">
 
     </nav>

@@ -8,9 +8,10 @@ tags:
 date: 2024-02-22
 trips:
   dateHiked: 2024-02-22
-  peak: Camels hump
+  peaks: 
+    - name: Camels hump
+      elevation: 4083 
   # totalTime: 0:00 hours
-  elevation: 4,083 feet
   trail: Monroe Trail
   distance: 6 miles
   temp: 15F° on top

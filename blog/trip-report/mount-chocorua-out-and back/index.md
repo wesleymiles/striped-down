@@ -8,9 +8,9 @@ tags:
 date: 2025-10-09
 trips:
   dateHiked: 2023-08-12
-  peak: Mt. Chocorua
-  # totalTime: 0:00 hours
-  elevation: 3,490 feet
+  peaks: 
+    - name: Mt. Chocorua
+      elevation: 3490
   distance: 7.6 miles
   # temp: 0F° on top
   trail: Champney Falls Trail

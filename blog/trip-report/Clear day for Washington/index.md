@@ -2,16 +2,15 @@
 layout: blog.liquid
 title: Clear day for Washington
 description: A stunning walk up a popular peak
-permalink: "/blog/{{ title | slugify }}/"
 tags: 
   - post
   - trip-report
 date: 2025-10-10
 trips:
   dateHiked: 2020-08-15
-  peak: Mt. Washington
-  # totalTime: 0:00 hours
-  elevation: 6,288 feet
+  peaks:
+    - name: Mt. Washington
+      elevation: 6288
   distance: 9.6 miles
   trail: Ammonoosuc Ravine
   # temp: 0F° on top
