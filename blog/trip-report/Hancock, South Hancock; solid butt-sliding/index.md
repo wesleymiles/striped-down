@@ -98,10 +98,11 @@ On this hike, I was practicing a new skill: identifying trees from their bark. W
 
 {% image "img/MAP-hancock-south-hancock.jpg", "Hiking photo from 2017-01-28", "Simplified map of the loop, from <a href='https://4000footers.com/hancock.shtml'>4000footers.com</a>." %}
 
+<blockquote>
 
-Weariness hit me an hour from the car.
+Weariness hit me an hour from the car. It was possibly delayed by that pint at the summit.
 
-It was possibly delayed by that pint at the summit.
+</blockquote>
 
 
 

@@ -12,17 +12,17 @@ As of May 6th, 2023, there’s an orchard at the Underhill town pond.
 
 Okay, calling it an orchard is a bit aspirational. There’s six apple trees, nine blueberries, and ten raspberries in the ground. Once they start producing, they’re up for grabs to anyone who comes by.
 
+<div class="grid bleed">
 
 <figure>
 	<a href="{{ page.url | url }}img/underhill-community-orchard-map-full.png">
 		<picture>	 
-			<source srcset="{{ page.url | url }}img/underhill-community-orchard-map.webp" type="image/webp">
-			<source srcset="{{ page.url | url }}img/underhill-community-orchard-map.jpg" type="image/jpg">
 			<img src="{{ page.url | url }}img/underhill-community-orchard-map.png" alt="Map" />
 		</picture>
 		<figcaption>See full map with descriptions</figcaption>
 	</a>
 	</figure>
+</div>
 
 ## It’s a public experiment of planting perennial fruit-givers on public land.
 

@@ -28,12 +28,11 @@
             <li><time class="meta-date" datetime="{{ date | postDate }}">Written: {{ date | postDate }}</time>
         
             {% if date-updated %}
-                | <time class="meta-date" datetime="{{ date-updated | postDate }}">Updated: {{ date-updated | postDate }}</time>
+                <time class="meta-date" datetime="{{ date-updated | postDate }}">Updated: {{ date-updated | postDate }}</time>
             {% endif %}
             
             </li>
 
-        </ul>
         {% endif %}
     
         <!-- if it's a trip report, include trip report metadata  -->

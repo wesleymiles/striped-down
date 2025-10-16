@@ -2,7 +2,6 @@
 layout: blog.liquid
 title: Stowe pinnacle with a delicate babe
 description: Three weeks after our second was born, we took him on his first hike
-permalink: "{{ page.filePathStem | slugify }}/index.html"
 tags: 
   - postq
   - trip-report
@@ -44,4 +43,4 @@ According to [reddit](https://www.reddit.com/r/vermont/comments/1lnb7cb/stowe_pi
 
 {% image "img/IMG_3510.JPG", "Hiking photo from 2019-10-11", "Autumn all the way up" %}
 
-{% image "img/IMG_3525 10.44.45 PM.JPG", "Hiking photo from 2019-10-11", "Photo from the hike" %}
+{% image "img/IMG_3525 10.44.45 PM.JPG", "Hiking photo from 2019-10-11", "Well deserved summit scarf" %}
