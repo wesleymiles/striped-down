@@ -238,7 +238,7 @@ eleventyConfig.addFilter("getHighestElevation", function(peaks) {
         fullWidth: processed.full.width,
         fullHeight: processed.full.height,
         alt: file.replace(/\.\w+$/, "").replace(/[-_]/g, " "),
-        date: stats.birthtime,
+        date: stats.mtime,
         filename: file
       });
     }
