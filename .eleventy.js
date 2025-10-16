@@ -6,6 +6,22 @@ const Image = require("@11ty/eleventy-img");
 const { DateTime } = require("luxon");
 const { feedPlugin } = require("@11ty/eleventy-plugin-rss");
 const htmlmin = require("html-minifier-terser");
+const { execSync } = require('child_process');
+
+// Get Git commit date for a file
+function getGitDate(filePath) {
+  try {
+    // Get the date of the last commit that modified this file
+    const timestamp = execSync(
+      `git log -1 --format=%at -- "${filePath}"`,
+      { encoding: 'utf-8' }
+    ).trim();
+    return timestamp ? new Date(parseInt(timestamp) * 1000) : new Date();
+  } catch (error) {
+    console.warn(`Could not get git date for ${filePath}, using current date`);
+    return new Date();
+  }
+}
 
 // Unified image processing function for all use cases
 async function processImage(src, options = {}) {
@@ -147,29 +163,6 @@ module.exports = function (eleventyConfig) {
     return `<div class="${className}">${pictureHtml}</div>`;
   });
 
-
-  // Format elevation with commas and "feet"
-  eleventyConfig.addFilter("formatElevation", function(elevation) {
-    if (!elevation) return '';
-    return elevation.toLocaleString() + ' feet';
-  });
-
-// Returns the entire peak object with the highest elevation
-eleventyConfig.addFilter("getHighestElevation", function(peaks) {
-  if (!peaks || !Array.isArray(peaks) || peaks.length === 0) return 0;
-  return peaks.reduce((max, peak) => 
-    (peak.elevation || 0) > max ? (peak.elevation || 0) : max
-  , 0);
-});
-
-  // Get total elevation gain if you want to sum all peaks
-  eleventyConfig.addFilter("totalElevation", function(peaks) {
-    if (!peaks || !peaks.length) return 0;
-    return peaks.reduce((sum, peak) => sum + (peak.elevation || 0), 0);
-  });
-
-
-
   // Gallery/slideshow compatible image with srcset for responsive thumbnails
   eleventyConfig.addAsyncShortcode("galleryImage", async function(src, alt, caption = "", className = "") {
     const resolvedSrc = resolveImagePath(src, this);
@@ -209,7 +202,7 @@ eleventyConfig.addFilter("getHighestElevation", function(peaks) {
   // COLLECTIONS
   // ============================================
 
-  // Gallery images collection
+  // Gallery images collection using Git dates for reliable sorting
   eleventyConfig.addCollection("images", async function () {
     const imageDir = "art/img/";
     let files = fs.readdirSync(imageDir).filter(file => /\.(jpg|png|gif)$/i.test(file));
@@ -217,7 +210,6 @@ eleventyConfig.addFilter("getHighestElevation", function(peaks) {
     let images = [];
     for (let file of files) {
       let imagePath = path.join(imageDir, file);
-      const stats = fs.statSync(imagePath);
 
       const processed = await processImage(imagePath, {
         widths: [450, 750, null],
@@ -238,11 +230,12 @@ eleventyConfig.addFilter("getHighestElevation", function(peaks) {
         fullWidth: processed.full.width,
         fullHeight: processed.full.height,
         alt: file.replace(/\.\w+$/, "").replace(/[-_]/g, " "),
-        date: stats.mtime,
+        date: getGitDate(imagePath), // Use Git commit date
         filename: file
       });
     }
 
+    // Sort by date, newest first
     images.sort((a, b) => b.date - a.date);
     return images;
   });
@@ -280,6 +273,26 @@ eleventyConfig.addFilter("getHighestElevation", function(peaks) {
   eleventyConfig.addFilter("parseElevation", function(elevation) {
     if (!elevation) return 0;
     return parseInt(elevation.toString().replace(/[^0-9]/g, '')) || 0;
+  });
+
+  // Format elevation with commas and "feet"
+  eleventyConfig.addFilter("formatElevation", function(elevation) {
+    if (!elevation) return '';
+    return elevation.toLocaleString() + ' feet';
+  });
+
+  // Get highest elevation from peaks array
+  eleventyConfig.addFilter("getHighestElevation", function(peaks) {
+    if (!peaks || !Array.isArray(peaks) || peaks.length === 0) return 0;
+    return peaks.reduce((max, peak) => 
+      (peak.elevation || 0) > max ? (peak.elevation || 0) : max
+    , 0);
+  });
+
+  // Get total elevation gain if you want to sum all peaks
+  eleventyConfig.addFilter("totalElevation", function(peaks) {
+    if (!peaks || !peaks.length) return 0;
+    return peaks.reduce((sum, peak) => sum + (peak.elevation || 0), 0);
   });
 
   // ============================================
