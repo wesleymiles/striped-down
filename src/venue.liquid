@@ -1,0 +1,18 @@
+---
+pagination:
+  data: collections.venues
+  size: 1
+  alias: venueName
+permalink: "/venue/{{ venueName | slugify }}/"
+layout: blog.liquid
+---
+
+<h1>{{ venueName }}</h1>
+
+<ul>
+  {% for post in collections.all %}
+	{% if post.data.concerts and post.data.concerts.venue == venueName %}
+	  <li><a href="{{ post.url }}">{{ post.data.title }}</a></li>
+	{% endif %}
+  {% endfor %}
+</ul>

@@ -76,35 +76,97 @@
 
     {{ content }}
 </article>
-
 <hr>
-<section class ="post-footer">
+<section class="post-footer">
 
-    {% if tags %}
+ <hr>
+ <section class="post-footer">
+   
+    <ul class="blog-tags">
+ 
+   <!--  ✅ Classic Blog Tags (if still using) --> 
+     {% if tags %}
+     {% assign tagPagePrefix = '/blog/tag/' %}
+     {% unless page.url contains tagPagePrefix %}
+         <!-- <dt>Tagged:</dt> -->
+         {% for tag in tags %}
+           {% if tag != 'post' %}
+             <li>
+               <a href="/blog/tag/{{ tag | slugify }}/">{{ tag | unslugify }}</a>
+             </li>
+           {% endif %}
+         {% endfor %}
+       
+     {% endunless %}
+   {% endif %}
+ 
+ 
+   <!--  🎤 Artists (single or array) --> 
+     {% if concerts.artist %}
+     {% if concerts.artist | isArray %}
+       {% for artist in concerts.artist %}
+         <li>
+           <a href="/artist/{{ artist | slugify }}/" class="tax-link artist">
+            {{ artist }}
+           </a>
+         </li>
+       {% endfor %}
+     {% else %}
+       <li>
+         <a href="/artist/{{ concerts.artist | slugify }}/" class="tax-link artist">
+          {{ concerts.artist }}
+         </a>
+       </li>
+     {% endif %}
+   {% endif %}
+ 
+ 
+   <!--  🏛 Venues --> 
+     {% if concerts.venue %}
+     <li>
+       <a href="/venue/{{ concerts.venue | slugify }}/" class="tax-link venue">
+        {{ concerts.venue }}
+       </a>
+     </li>
+   {% endif %}
+ 
+ 
+   <!--  🏔 Peaks (array support) --> 
+     {% if trips.peaks %}
+     {% for peak in trips.peaks %}
+       {% if peak.name %}
+         <li>
+           <a href="/peak/{{ peak.name | slugify }}/" class="tax-link peak">
+            {{ peak.name }}
+           </a>
+         </li>
+       {% endif %}
+     {% endfor %}
+   {% endif %}
+ 
+ 
+   <!--  🧭 Location (State + Town) --> 
+     {% if location.state %}
+     <li>
+       <a href="/state/{{ location.state | slugify }}/" class="tax-link state">
+        {{ location.state }}
+       </a>
+     </li>
+   {% endif %}
+ 
+   {% if location.town %}
+     <li>
+       <a href="/town/{{ location.town | slugify }}/" class="tax-link town">
+        {{ location.town }}
+       </a>
+     </li>
+   {% endif %}
+ 
+  </ul>
+</section>
 
-        {% assign tagPagePrefix = '/blog/tag/' %}
-        {% unless page.url contains tagPagePrefix %}
-            
-            <dl class="blog-tags">
-                <dt>Tagged:</dt>
-                
-                {% for tag in tags %}
-                {% if tag != 'post' %}
-                
-                <a href="/blog/tag/{{ tag }}">{{ tag | unslugify }}</a>
-                
-                {% endif %}
-                {% endfor %}
-                
-            </dl>
-        {% endunless %}
 
-    {% endif %}
-
-    
-          
-
-    <nav class="posts-next-previous">
+<nav class="posts-next-previous">
 
     {%- if collections.post %}
 

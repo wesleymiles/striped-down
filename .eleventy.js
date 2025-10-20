@@ -6,15 +6,17 @@ const Image = require("@11ty/eleventy-img");
 const { DateTime } = require("luxon");
 const { feedPlugin } = require("@11ty/eleventy-plugin-rss");
 const htmlmin = require("html-minifier-terser");
-const { execSync } = require('child_process');
+const { execSync } = require("child_process");
+const slugifyLib = require("slugify");
 
-// Get Git commit date for a file
+// ==================================================
+// Utilities
+// ==================================================
 function getGitDate(filePath) {
   try {
-    // Get the date of the last commit that modified this file
     const timestamp = execSync(
       `git log -1 --format=%at -- "${filePath}"`,
-      { encoding: 'utf-8' }
+      { encoding: "utf-8" }
     ).trim();
     return timestamp ? new Date(parseInt(timestamp) * 1000) : new Date();
   } catch (error) {
@@ -23,186 +25,140 @@ function getGitDate(filePath) {
   }
 }
 
-// Unified image processing function for all use cases
 async function processImage(src, options = {}) {
-  // Resolve absolute path to source file
   const absPath = path.join(__dirname, src);
-  
-  // Check if file exists
   if (!fs.existsSync(absPath)) {
     console.error(`Image not found: ${src} (looking for ${absPath})`);
     throw new Error(`Image not found: ${src}`);
   }
-  
-  // Default options - can be overridden
+
   const defaultOptions = {
-    widths: [450, 750, null], // thumbnail, medium, full size
-    formats: [path.extname(src).slice(1)], // Keep original format
+    widths: [450, 750, null],
+    formats: [path.extname(src).slice(1)],
     outputDir: path.join(__dirname, "_site", path.dirname(src)),
     urlPath: "/" + path.dirname(src),
     cache: false
   };
-  
-  // Merge with custom options
+
   const finalOptions = { ...defaultOptions, ...options };
-  
-  let metadata = await Image(absPath, finalOptions);
-  
+  const metadata = await Image(absPath, finalOptions);
+
   const formatKey = Object.keys(metadata)[0];
   const images = metadata[formatKey];
-  
+
   return {
-    thumbnail: images[0], // smallest
-    medium: images[1] || images[0], // medium or fallback to smallest
-    full: images[images.length - 1], // largest (original)
+    thumbnail: images[0],
+    medium: images[1] || images[0],
+    full: images[images.length - 1],
     all: images,
-    metadata: metadata
+    metadata
   };
 }
 
+function slugifyString(str) {
+  if (!str) return "";
+  return slugifyLib(str, {
+    lower: true,
+    strict: true,
+    remove: /[*+~.()'"!:@]/g
+  });
+}
+
+// ==================================================
+// MAIN ELEVENTY CONFIG
+// ==================================================
 module.exports = function (eleventyConfig) {
   // Plugins
   eleventyConfig.addPlugin(eleventyNavigationPlugin);
-
-  // RSS Feed
   eleventyConfig.addPlugin(feedPlugin, {
     type: "rss",
     outputPath: "/art-feed.xml",
-    collection: {
-      name: "art",
-      limit: 0,
-    },
+    collection: { name: "art", limit: 0 },
     metadata: {
       language: "en",
       title: "Art feed",
       subtitle: "This is a longer description about your blog.",
       base: "https://wescarr.com/blog/art",
-      author: {
-        name: "Wes Carr",
-      },
-    },
+      author: { name: "Wes Carr" }
+    }
+  });
+  
+
+  // ==================================================
+  // GLOBAL PERMALINK SLUGIFY LOGIC
+  // ==================================================
+  eleventyConfig.addGlobalData("permalink", () => {
+    return (data) => {
+      const pathParts = data.page.filePathStem
+        .split("/")
+        .filter(Boolean)
+        .filter(part => part !== "index")
+        .map(part => slugifyString(part));
+
+      return `/${pathParts.join("/")}/`;
+    };
   });
 
-  // ============================================
-  // IMAGE SHORTCODES
-  // ============================================
+  // ==================================================
+  // FILTERS
+  // ==================================================
+  eleventyConfig.addFilter("slugify", slugifyString);
+  eleventyConfig.addFilter("isArray", v => Array.isArray(v));
+  eleventyConfig.addFilter("postDate", dateObj =>
+    DateTime.fromJSDate(dateObj).toLocaleString(DateTime.DATE_MED)
+  );
+  eleventyConfig.addFilter("unslugify", slug =>
+    slug
+      .split("-")
+      .map(w => w.charAt(0).toUpperCase() + w.slice(1))
+      .join(" ")
+  );
+  eleventyConfig.addFilter("parseElevation", e =>
+    e ? parseInt(e.toString().replace(/[^0-9]/g, "")) || 0 : 0
+  );
+  eleventyConfig.addFilter("formatElevation", e =>
+    e ? e.toLocaleString() + " feet" : ""
+  );
+  eleventyConfig.addFilter("getHighestElevation", peaks => {
+    if (!peaks || !Array.isArray(peaks) || peaks.length === 0) return 0;
+    return peaks.reduce((max, p) => (p.elevation || 0) > max ? p.elevation : max, 0);
+  });
+  eleventyConfig.addFilter("totalElevation", peaks =>
+    peaks?.reduce((sum, p) => sum + (p.elevation || 0), 0) || 0
+  );
 
-  // Helper function for path resolution (DRY)
+    // taxonomy file here
+  require("./src/taxonomy.js")(eleventyConfig);
+
+
+
+  // ==================================================
+  // IMAGE SHORTCODES
+  // ==================================================
   function resolveImagePath(src, pageContext) {
-    if (src.startsWith('./') || (!src.startsWith('/') && !src.startsWith('http'))) {
-      const currentPageDir = pageContext.page && pageContext.page.inputPath 
-        ? path.dirname(pageContext.page.inputPath) 
-        : '';
-      const cleanSrc = src.replace(/^\.\//, '');
+    if (src.startsWith("./") || (!src.startsWith("/") && !src.startsWith("http"))) {
+      const currentPageDir = pageContext.page?.inputPath
+        ? path.dirname(pageContext.page.inputPath)
+        : "";
+      const cleanSrc = src.replace(/^\.\//, "");
       return currentPageDir ? path.join(currentPageDir, cleanSrc) : src;
     }
     return src;
   }
 
-  // Basic image shortcode with optional caption
-  eleventyConfig.addAsyncShortcode("image", async function(src, alt, caption = "", className = "") {
+  eleventyConfig.addAsyncShortcode("image", async function (src, alt, caption = "", className = "") {
     const resolvedSrc = resolveImagePath(src, this);
     const processed = await processImage(resolvedSrc);
     const img = processed.full;
-    
-    const imageHtml = `<img src="${img.url}" 
-                            width="${img.width}" 
-                            height="${img.height}" 
-                            alt="${alt || ''}" 
-                            loading="lazy" 
-                            decoding="async">`;
-    
-    if (caption) {
-      return `<figure class="${className}">
-        ${imageHtml}
-        <figcaption>${caption}</figcaption>
-      </figure>`;
-    }
-    
-    return `<div class="${className}">${imageHtml}</div>`;
+    const imageHtml = `<img src="${img.url}" width="${img.width}" height="${img.height}" alt="${alt || ''}" loading="lazy" decoding="async">`;
+    return caption
+      ? `<figure class="${className}">${imageHtml}<figcaption>${caption}</figcaption></figure>`
+      : `<div class="${className}">${imageHtml}</div>`;
   });
 
-  // Responsive image with WebP support
-  eleventyConfig.addAsyncShortcode("responsiveImage", async function(src, alt, caption = "", className = "") {
-    const resolvedSrc = resolveImagePath(src, this);
-    const processed = await processImage(resolvedSrc, {
-      widths: [300, 600, 1200, null],
-      formats: ["webp", "jpeg"]
-    });
-    
-    const webp = processed.metadata.webp || [];
-    const jpeg = processed.metadata.jpeg || [];
-    
-    let sourceTags = '';
-    if (webp.length > 0) {
-      const webpSrcset = webp.map(img => `${img.url} ${img.width}w`).join(', ');
-      sourceTags += `<source type="image/webp" srcset="${webpSrcset}">`;
-    }
-    
-    const jpegSrcset = jpeg.map(img => `${img.url} ${img.width}w`).join(', ');
-    const fallback = jpeg[jpeg.length - 1];
-    
-    const pictureHtml = `<picture>
-      ${sourceTags}
-      <img src="${fallback.url}" 
-           srcset="${jpegSrcset}"
-           width="${fallback.width}" 
-           height="${fallback.height}" 
-           alt="${alt || ''}"
-           loading="lazy" 
-           decoding="async">
-    </picture>`;
-    
-    if (caption) {
-      return `<figure class="${className}">
-        ${pictureHtml}
-        <figcaption>${caption}</figcaption>
-      </figure>`;
-    }
-    
-    return `<div class="${className}">${pictureHtml}</div>`;
-  });
-
-  // Gallery/slideshow compatible image with srcset for responsive thumbnails
-  eleventyConfig.addAsyncShortcode("galleryImage", async function(src, alt, caption = "", className = "") {
-    const resolvedSrc = resolveImagePath(src, this);
-    const processed = await processImage(resolvedSrc, {
-      widths: [450, 750, null], // thumbnail, large thumbnail, full
-      formats: ["jpeg"]
-    });
-    
-    const thumb = processed.thumbnail; // 450px
-    const largethumb = processed.medium; // 750px
-    const full = processed.full;
-    
-    const imageHtml = `<img src="${thumb.url}" 
-                            srcset="${thumb.url} 450w, ${largethumb.url} 750w"
-                            sizes="450px"
-                            data-full="${full.url}"
-                            data-full-width="${full.width}"
-                            data-full-height="${full.height}"
-                            width="${thumb.width}" 
-                            height="${thumb.height}" 
-                            alt="${alt || ''}" 
-                            class="gallery-image"
-                            loading="lazy" 
-                            decoding="async">`;
-    
-    if (caption) {
-      return `<figure class="${className} gallery-figure">
-        ${imageHtml}
-        <figcaption>${caption}</figcaption>
-      </figure>`;
-    }
-    
-    return `<div class="${className}">${imageHtml}</div>`;
-  });
-
-  // ============================================
+  // ==================================================
   // COLLECTIONS
-  // ============================================
-
-  // Gallery images collection using Git dates for reliable sorting
+  // ==================================================
   eleventyConfig.addCollection("images", async function () {
     const imageDir = "art/img/";
     let files = fs.readdirSync(imageDir).filter(file => /\.(jpg|png|gif)$/i.test(file));
@@ -210,13 +166,12 @@ module.exports = function (eleventyConfig) {
     let images = [];
     for (let file of files) {
       let imagePath = path.join(imageDir, file);
-
       const processed = await processImage(imagePath, {
         widths: [450, 750, null],
         formats: ["jpeg"],
         outputDir: "./_site/art/img/",
         urlPath: "/art/img/",
-        fixOrientation: true,
+        fixOrientation: true
       });
 
       images.push({
@@ -230,150 +185,53 @@ module.exports = function (eleventyConfig) {
         fullWidth: processed.full.width,
         fullHeight: processed.full.height,
         alt: file.replace(/\.\w+$/, "").replace(/[-_]/g, " "),
-        date: getGitDate(imagePath), // Use Git commit date
+        date: getGitDate(imagePath),
         filename: file
       });
     }
 
-    // Sort by date, newest first
     images.sort((a, b) => b.date - a.date);
     return images;
   });
 
-  // Art blog posts collection
-  eleventyConfig.addCollection("artblogPosts", function(collectionApi) {
-    return collectionApi.getAll().filter(item => {
-      return item.data.tags && item.data.tags.includes("art");
-    });
-  });
+  eleventyConfig.addCollection("artblogPosts", (collectionApi) =>
+    collectionApi.getAll().filter(item => item.data.tags?.includes("art"))
+  );
 
-  // Trip reports collection
-  eleventyConfig.addCollection("trip-report", function(collectionApi) {
-    return collectionApi.getFilteredByTag("trip-report");
-  });
+  eleventyConfig.addCollection("trip-report", (collectionApi) =>
+    collectionApi.getFilteredByTag("trip-report")
+  );
 
-  // ============================================
-  // FILTERS
-  // ============================================
 
-  // Readable dates
-  eleventyConfig.addFilter("postDate", (dateObj) => {  
-    return DateTime.fromJSDate(dateObj).toLocaleString(DateTime.DATE_MED);
-  });
-
-  // Convert slug to title case
-  eleventyConfig.addFilter("unslugify", function(slug) {
-    return slug
-      .split('-')
-      .map(word => word.charAt(0).toUpperCase() + word.slice(1))
-      .join(' ');
-  });
-
-  // Parse elevation for trip report charts
-  eleventyConfig.addFilter("parseElevation", function(elevation) {
-    if (!elevation) return 0;
-    return parseInt(elevation.toString().replace(/[^0-9]/g, '')) || 0;
-  });
-
-  // Format elevation with commas and "feet"
-  eleventyConfig.addFilter("formatElevation", function(elevation) {
-    if (!elevation) return '';
-    return elevation.toLocaleString() + ' feet';
-  });
-
-  // Get highest elevation from peaks array
-  eleventyConfig.addFilter("getHighestElevation", function(peaks) {
-    if (!peaks || !Array.isArray(peaks) || peaks.length === 0) return 0;
-    return peaks.reduce((max, peak) => 
-      (peak.elevation || 0) > max ? (peak.elevation || 0) : max
-    , 0);
-  });
-
-  // Get total elevation gain if you want to sum all peaks
-  eleventyConfig.addFilter("totalElevation", function(peaks) {
-    if (!peaks || !peaks.length) return 0;
-    return peaks.reduce((sum, peak) => sum + (peak.elevation || 0), 0);
-  });
-
-  // ============================================
-  // CONFIGURATION
-  // ============================================
-
-  // Slugify all permalinks automatically
-  eleventyConfig.addGlobalData("permalink", () => {
-    return (data) => {
-      const slugify = require("slugify");
-      
-      // Get the file path without extension
-      const pathParts = data.page.filePathStem.split('/').filter(Boolean);
-      
-      // Slugify each directory and filename, but remove 'index'
-      const slugifiedParts = pathParts
-        .filter(part => part !== 'index') // Remove 'index' from path
-        .map(part => 
-          slugify(part, { 
-            lower: true, 
-            strict: true,
-            remove: /[*+~.()'"!:@]/g
-          })
-        );
-      
-      return `/${slugifiedParts.join('/')}/`;
-    };
-  });
-
-  // Template formats
-  eleventyConfig.setTemplateFormats("html,liquid,njk,md");
-
-  // Markdown config
-  eleventyConfig.setLibrary("md", markdownIt({ 
-    html: true, 
-    breaks: false, 
-    typographer: true 
-  }));
-
-  // Global data
+  // ==================================================
+  // OTHER SETTINGS
+  // ==================================================
+  eleventyConfig.setTemplateFormats(["html", "liquid", "njk", "md"]);
+  eleventyConfig.setLibrary("md", markdownIt({ html: true, typographer: true }));
   eleventyConfig.addGlobalData("siteUrl", "https://wescarr.com");
 
-  // Passthrough copy
+  // Passthrough
   const passthroughPaths = [
-    "fonts", 
-    "feed.xsl", 
-    "font.woff",
-    "font.ttf", 
-    "img", 
-    "css", 
-    "js", 
-    "vid/", 
-    "mp4", 
-    "webm", 
-    "animations", 
-    "js/script.js", 
-    "photoswipe/",
-    "project/wobblies/img",
-    "work/mockup-demo"
+    "fonts", "feed.xsl", "font.woff", "font.ttf", "img", "css", "js", "vid/",
+    "mp4", "webm", "animations", "js/script.js", "photoswipe/",
+    "project/wobblies/img", "work/mockup-demo"
   ];
 
-  // Dynamically find all blog image directories
   const blogPath = "blog/";
   if (fs.existsSync(blogPath)) {
     const blogDirs = fs.readdirSync(blogPath, { withFileTypes: true })
       .filter(dirent => dirent.isDirectory())
       .map(dirent => path.join(blogPath, dirent.name, "img"));
-
     passthroughPaths.push(...blogDirs);
   }
 
-  passthroughPaths.forEach(path => eleventyConfig.addPassthroughCopy({ [path]: path }));
+  passthroughPaths.forEach(p => eleventyConfig.addPassthroughCopy({ [p]: p }));
 
-  // HTML minification (production only)
+  // HTML minification
   if (process.env.NODE_ENV === "production") {
-    eleventyConfig.addTransform("htmlmin", function(content, outputPath) {
+    eleventyConfig.addTransform("htmlmin", function (content, outputPath) {
       if (outputPath && outputPath.endsWith(".html")) {
-        let minified = htmlmin.minify(content, {
-          removeComments: true,
-        });
-        return minified;
+        return htmlmin.minify(content, { removeComments: true });
       }
       return content;
     });

@@ -1619,6 +1619,7 @@ body.post img {
     column-gap: .5em;
     margin: var(--gap) 0;
     font-size: .7em;
+    padding-left: 0
 }
 
 ul.archive-list {
