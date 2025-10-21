@@ -1,7 +1,8 @@
 ---
 layout: blog.liquid
 title: "{{ concerts.artist }} at {{ concerts.venue }}"
-description: Add your hike description here
+eleventyComputed:
+  description: "with {{ concerts | otherArtists }}"
 tags: 
   - post
   - concert

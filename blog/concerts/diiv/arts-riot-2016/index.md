@@ -11,11 +11,12 @@ concerts:
   venue: blank
   artist: Diiv
 location:
-  town: Unknown
+  town: Arts Riot
   state: Vermont
 ---
 
 {% image "img/IMG_9540.JPG", "Hiking photo from 2016-11-05", "Photo from the hike" %}
+
 
 {% image "img/IMG_9542.JPG", "Hiking photo from 2016-11-05", "Photo from the hike" %}
 

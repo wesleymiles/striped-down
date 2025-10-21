@@ -1,0 +1,22 @@
+.eleventy.js
+- Main Configuration Hub
+- What goes here:
+	- Plugins 
+	- Import/require other config files
+	- Global settings (template formats, markdown config)
+	- Core filters that are site-wide utilities (like postDate, parseElevation)
+	- Shortcodes
+	- Passthrough copy
+	
+	
+taxonomies.js
+- Content Classification System, the filing system and label maker
+- What goes here:
+	- Collections that group content (artists, venues, peaks, states, towns)
+	- Filters specific to those taxonomies (primaryArtist, allArtists, formatPeaks)
+	- Helper functions for taxonomy data transformation
+	- Anything that answers "what are all the X in my content?"
+	
+	
+Future? 
+"Is this about processing images?" → images.js (or keep in .eleventy.js if small)

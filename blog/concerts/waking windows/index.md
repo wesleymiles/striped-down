@@ -1,7 +1,8 @@
 ---
 layout: blog.liquid
 title: "{{ concerts.artist }} at {{ concerts.venue }}"
-description: Add your hike description here
+eleventyComputed:
+  description: "with {{ concerts | otherArtists }}"
 tags: 
   - post
   - concert
@@ -9,7 +10,12 @@ date: 2016-05-07
 concerts:
   event-date: 2016-05-07
   venue: blank
-  artist: Waking Windows, Protomartr, Chris Cohen, Waxahachee, Yacht
+  artist:
+    - Waking Windows
+    - Protomartr
+    - Chris Cohen
+    - Waxahachee
+    - Yacht
 location: 
   town: Winooski
   state: Vermont

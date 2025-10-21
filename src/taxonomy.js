@@ -8,6 +8,14 @@ function makeSlug(str) {
   });
 }
 
+function unslugify(str) {
+  if (!str) return "";
+  return str
+	.split("-")
+	.map(w => w.charAt(0).toUpperCase() + w.slice(1))
+	.join(" ");
+}
+
 module.exports = function (eleventyConfig) {
   // 🧠 Artists
   eleventyConfig.addCollection("artists", (collectionApi) => {
@@ -17,9 +25,7 @@ module.exports = function (eleventyConfig) {
 	  if (Array.isArray(val)) val.forEach(a => set.add(a));
 	  else if (val) set.add(val);
 	});
-	const result = [...set].sort();
-	console.log("🎯 Artists:", result);
-	return result;
+	return [...set].sort();
   });
 
   // 🏛 Venues
@@ -29,9 +35,7 @@ module.exports = function (eleventyConfig) {
 	  const v = item.data.concerts?.venue;
 	  if (v) set.add(v);
 	});
-	const result = [...set].sort();
-	console.log("🎯 Venues:", result);
-	return result;
+	return [...set].sort();
   });
 
   // 🏔 Peaks
@@ -45,9 +49,7 @@ module.exports = function (eleventyConfig) {
 		});
 	  }
 	});
-	const result = [...set].sort();
-	console.log("🎯 Peaks:", result);
-	return result;
+	return [...set].sort();
   });
 
   // 🧭 States
@@ -57,9 +59,7 @@ module.exports = function (eleventyConfig) {
 	  const s = item.data.location?.state;
 	  if (s) set.add(s);
 	});
-	const result = [...set].sort();
-	console.log("🎯 States:", result);
-	return result;
+	return [...set].sort();
   });
 
   // 🏘 Towns
@@ -69,12 +69,31 @@ module.exports = function (eleventyConfig) {
 	  const t = item.data.location?.town;
 	  if (t) set.add(t);
 	});
-	const result = [...set].sort();
-	console.log("🎯 Towns:", result);
-	return result;
+	return [...set].sort();
   });
 
-  // Helper filter
+  // Filters
   eleventyConfig.addFilter("slugify", makeSlug);
-};
+  eleventyConfig.addFilter("unslugify", unslugify);
 
+  // Artist-specific filters
+  eleventyConfig.addFilter("primaryArtist", function(concerts) {
+	if (!concerts?.artist) return "";
+	const artist = Array.isArray(concerts.artist) ? concerts.artist[0] : concerts.artist;
+	return unslugify(artist);
+  });
+
+  eleventyConfig.addFilter("otherArtists", function(concerts) {
+	if (!concerts?.artist || !Array.isArray(concerts.artist)) return "";
+	if (concerts.artist.length <= 1) return "";
+	
+	const others = concerts.artist.slice(1);
+	return others.map(artist => unslugify(artist)).join(", ");
+  });
+
+  eleventyConfig.addFilter("allArtists", function(concerts) {
+	if (!concerts?.artist) return "";
+	const artists = Array.isArray(concerts.artist) ? concerts.artist : [concerts.artist];
+	return artists.map(artist => unslugify(artist)).join(", ");
+  });
+};

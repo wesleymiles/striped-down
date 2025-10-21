@@ -1617,10 +1617,14 @@ body.post img {
     flex: 1 0 100%;
     flex-wrap: wrap;
     column-gap: .5em;
-    margin: var(--gap) 0;
     font-size: .7em;
     padding-left: 0
 }
+
+  section.post-footer .blog-tags {
+    margin: calc(var(--gap)*4) 0;
+  }
+
 
 ul.archive-list {
   list-style: none;
@@ -1631,7 +1635,7 @@ ul.archive-list {
   .archive-list li {
     margin-bottom: 2em;
     border-bottom: var(--border);
-    padding-bottom: 1em;
+    padding-bottom: 2em;
   }
 
     /* border on all but the last one */
