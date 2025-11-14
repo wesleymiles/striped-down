@@ -1,6 +1,13 @@
 {% include '_head.liquid' %}
     
-    <h1>{{ title }}</h1>
-    {{ content }}   
+<article>
 
+    <header class="content-header">
+        <h1 class="content-heading">{{ title }}</h1>
+        <p class="content-desc">{{ description }}</p>
+    </header>
+    
+    {{ content }}
+
+</article>
 {% include '_foot.html' %}
