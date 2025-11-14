@@ -37,9 +37,9 @@ At the time I was living on pine street in the big city (Burlington.) Arts riot 
 </div>
 
   {% image "img/arts-riot-mural-eatery.webp", "Arts Riot art", "Eatery mural by Shelburne Craft School", "https://www.sevendaysvt.com/arts-culture/artsriot-gets-new-mural-courtesy-of-shelburne-craft-school-3260053/" %}
-  {% image "img/arts-riot-entrance-2.jpg", "Arts Riot art", "Main door mural by Erin Bundock", "https://www.erinbundockfreelancearts.com/arts-riot" %}
+  {% image "img/arts-riot-entrance-2.jpg", "Arts Riot art", "Main door mural by Erin Bundock", "https://www.erinbundockfreelancearts.com/arts-riot" %} 
   
-  {% image "img/arts-riot-distillery-logo.jpg", "Logo reading Arts Riot: Destroy apathy", "Logo after it changed hands. Highlighting their motto." %}
+  {% image "img/arts-riot-distillery-logo.jpg", "Logo reading Arts Riot: Destroy apathy", "Logo after it changed hands. Highlighting their motto." %} 
 <div class="grid bleed">
   {% image "img/arts-riot-distillery-interior.jpg", "Interior colorful muralsa", "The branding was good! Interior of the new distillery space" %}
 </div>
