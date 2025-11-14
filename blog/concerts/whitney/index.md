@@ -33,5 +33,5 @@ The stand out moment was the sparce brass. The horn section popped in and out of
 {% image "img/IMG_9504.JPG", "Openers, three others supporting Sam Evian", "Sam Evian" %}
 
 
-  {% image "img/merch-1.jpg", "Arts Riot art", "The merch table" %}
-  {% image "img/merch-2.jpg", "Arts Riot art", "Destroy Apathy! My favorite company motto ever." %}
+  {% image "img/merch-1.JPG", "Arts Riot art", "The merch table" %}
+  {% image "img/merch-2.JPG", "Arts Riot art", "Destroy Apathy! My favorite company motto ever." %}
