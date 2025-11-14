@@ -39,7 +39,7 @@ According to [reddit](https://www.reddit.com/r/vermont/comments/1lnb7cb/stowe_pi
   {% image "img/P1010705 10.44.45 PM.jpg", "Hiking photo from 2019-10-12", "Content" %}
 </div>
 
-{% image "img/orange-path.JPG", "Hiking photo from 2019-10-11", "Vibrant on the flat" %}
+{% image "img/orange-path.jpg", "Hiking photo from 2019-10-11", "Vibrant on the flat" %}
 
 {% image "img/IMG_3506.JPG", "Hiking photo from 2019-10-11", "Peeking at camels hump" %}
 
