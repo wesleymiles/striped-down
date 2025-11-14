@@ -24,7 +24,6 @@ Singer Zachary Cole Smith, who wites A LOT about his addiction with opiods, stop
 
 I'm pretty sure I was introduced to DIIV from the sampler album [CT5](https://store.capturedtracks.com/release/447486-various-artists-ct5-sampler-five-years-of-captured-tracks) from the record label Captured Tracks. It featured their single from their first album. This tour they were promoting their second. That mixtape also opened me up to [Chris Cohen](../../../../artist/chris-cohen/) and Beach Fossils, who I fell hard for. 
 
-
 {% image "img/IMG_9545.JPG", "DIIV at Arts Riot", "DIIV" %}
 
 ## An aside, an ode to Arts Riot
@@ -36,10 +35,12 @@ At the time I was living on pine street in the big city (Burlington.) Arts riot 
   {% image "img/arts-riot-mural.JPG", "Arts Riot art", "Mural close-up" %}
 </div>
 
-  {% image "img/arts-riot-mural-eatery.webp", "Arts Riot art", "Eatery mural by Shelburne Craft School", "https://www.sevendaysvt.com/arts-culture/artsriot-gets-new-mural-courtesy-of-shelburne-craft-school-3260053/" %}
-  {% image "img/arts-riot-entrance-2.jpg", "Arts Riot art", "Main door mural by Erin Bundock", "https://www.erinbundockfreelancearts.com/arts-riot" %} 
-  
-  {% image "img/arts-riot-distillery-logo.jpg", "Logo reading Arts Riot: Destroy apathy", "Logo after it changed hands. Highlighting their motto." %} 
+{% image "img/arts-riot-mural-eatery.webp", "Arts Riot art", "Eatery mural by Shelburne Craft School", "https://www.sevendaysvt.com/arts-culture/artsriot-gets-new-mural-courtesy-of-shelburne-craft-school-3260053/" %}
+
+{% image "img/arts-riot-entrance-2.jpg", "Arts Riot art", "Main door mural by Erin Bundock", "https://www.erinbundockfreelancearts.com/arts-riot" %} 
+
+{% image "img/arts-riot-distillery-logo.jpg", "Logo reading Arts Riot: Destroy apathy", "Logo after it changed hands. Highlighting their motto." %} 
+
 <div class="grid bleed">
   {% image "img/arts-riot-distillery-interior.jpg", "Interior colorful muralsa", "The branding was good! Interior of the new distillery space" %}
 </div>
