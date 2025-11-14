@@ -1,20 +1,5 @@
-const slugify = require("slugify");
-
-function makeSlug(str) {
-  return slugify(str || "", {
-	lower: true,
-	strict: true,
-	remove: /[*+~.()'"!:@]/g
-  });
-}
-
-function unslugify(str) {
-  if (!str) return "";
-  return str
-	.split("-")
-	.map(w => w.charAt(0).toUpperCase() + w.slice(1))
-	.join(" ");
-}
+// Note: slugify and unslugify filters are defined in .eleventy.js
+// We use them here but don't redefine them to avoid duplicates
 
 module.exports = function (eleventyConfig) {
   // 🧠 Artists
@@ -72,28 +57,62 @@ module.exports = function (eleventyConfig) {
 	return [...set].sort();
   });
 
-  // Filters
-  eleventyConfig.addFilter("slugify", makeSlug);
-  eleventyConfig.addFilter("unslugify", unslugify);
+  // ==================================================
+  // TAXONOMY-SPECIFIC FILTERS
+  // ==================================================
+  
+  // Helper function to unslugify (matches .eleventy.js implementation)
+  function unslugify(str) {
+	if (!str) return "";
+	return str
+	  .split("-")
+	  .map(w => w.charAt(0).toUpperCase() + w.slice(1))
+	  .join(" ");
+  }
 
-  // Artist-specific filters
+  // 🎤 Artist/Concert filters
+  // Get the display name (festival or first artist)
   eleventyConfig.addFilter("primaryArtist", function(concerts) {
-	if (!concerts?.artist) return "";
-	const artist = Array.isArray(concerts.artist) ? concerts.artist[0] : concerts.artist;
-	return unslugify(artist);
-  });
-
-  eleventyConfig.addFilter("otherArtists", function(concerts) {
-	if (!concerts?.artist || !Array.isArray(concerts.artist)) return "";
-	if (concerts.artist.length <= 1) return "";
+	if (!concerts) return "";
 	
-	const others = concerts.artist.slice(1);
-	return others.map(artist => unslugify(artist)).join(", ");
+	// If it's a festival, return the festival name
+	if (concerts.festival) {
+	  return concerts.festival;
+	}
+	
+	// Otherwise return the first artist (unslugified)
+	if (Array.isArray(concerts.artist)) {
+	  return unslugify(concerts.artist[0]);
+	}
+	
+	return unslugify(concerts.artist || "");
   });
 
+  // Get other artists (excluding the primary one, or all if festival)
+  eleventyConfig.addFilter("otherArtists", function(concerts) {
+	if (!concerts || !concerts.artist) return "";
+	
+	const artists = Array.isArray(concerts.artist) ? concerts.artist : [concerts.artist];
+	
+	// If it's a festival, show all artists
+	if (concerts.festival) {
+	  return artists.map(artist => unslugify(artist)).join(", ");
+	}
+	
+	// Otherwise skip the first artist (it's the primary)
+	const others = artists.slice(1);
+	return others.length > 0 ? others.map(artist => unslugify(artist)).join(", ") : "";
+  });
+
+  // Get all artists as a formatted string
   eleventyConfig.addFilter("allArtists", function(concerts) {
 	if (!concerts?.artist) return "";
 	const artists = Array.isArray(concerts.artist) ? concerts.artist : [concerts.artist];
 	return artists.map(artist => unslugify(artist)).join(", ");
+  });
+
+  // Check if it's a festival
+  eleventyConfig.addFilter("isFestival", function(concerts) {
+	return concerts && concerts.festival ? true : false;
   });
 };

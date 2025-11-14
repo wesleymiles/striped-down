@@ -7,7 +7,7 @@ tags:
   - concert
 date: 2025-09-06
 concerts:
-  event-date: 2023-01-01 
+  event-date: 2015-01-01 
   venue: Arts Riot
   artist: Lee Fields
 location:

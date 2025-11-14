@@ -1,0 +1,25 @@
+---
+pagination:
+  data: collections.peaks
+  size: 1
+  alias: peakName
+permalink: "/peak/{{ peakName | slugify }}/"
+layout: blog.liquid
+---
+
+<h1>{{ peakName }}</h1>
+
+<ul>
+  {% for post in collections.all %}
+	{% if post.data.trips and post.data.trips.peaks %}
+	  {% assign found = false %}
+	  {% for peak in post.data.trips.peaks %}
+		{% if peak.name == peakName and found == false %}
+		  <li><a href="{{ post.url }}">{{ post.data.title }}</a></li>
+		  {% assign found = true %}
+		{% endif %}
+	  {% endfor %}
+	{% endif %}
+  {% endfor %}
+</ul>
+

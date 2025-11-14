@@ -6,26 +6,32 @@ eleventyComputed:
 tags: 
   - post
   - concert
-date: 2016-10-14
+date: 2025-11-13
 concerts:
   event-date: 2016-10-14
-  venue: blank
-  artist: Whitney
+  venue: Arts Riot
+  artist: 
+    - Whitney
+    - Sam Evian
 location: 
-  town: Unknown
+  town: Burlington
   state: Vermont
 ---
 
-{% image "img/IMG_9504.JPG", "Hiking photo from 2016-10-14", "Photo from the hike" %}
+{% image "img/IMG_9509.JPG", "Whitney at Arts Riot", "Max Kakacek" %}
 
-{% image "img/IMG_9506.JPG", "Hiking photo from 2016-10-14", "Photo from the hike" %}
 
-{% image "img/IMG_9507.JPG", "Hiking photo from 2016-10-14", "Photo from the hike" %}
+There's something about having the drummer as a singer that changes the dyanamic of a show. The drums are pulled forward which equalizes the members. Julien Ehrlich's voice is hard to mimic. It's a bold falsetto I can't hold for more than half a song. I knew this going into it and was excited to see him maintain it live. 
 
-{% image "img/IMG_9508.JPG", "Hiking photo from 2016-10-14", "Photo from the hike" %}
+Max is on guitar. He was fun to watch, his nerdy aesthetic rocking that strat. The riffs on this album, their first, are distortionless and just complicated enough for me to learn -- no, not in one sitting, but it feels possible. 
 
-{% image "img/IMG_9509.JPG", "Hiking photo from 2016-10-14", "Photo from the hike" %}
+The stand out moment was the sparce brass. The horn section popped in and out of a few songs and made the crowd collectively wince in delight.
 
-{% image "img/IMG_9510.JPG", "Hiking photo from 2016-10-14", "Photo from the hike" %}
+{% image "img/IMG_9511.JPG", "Whitney at Arts Riot", "Whitney" %}
 
-{% image "img/IMG_9511.JPG", "Hiking photo from 2016-10-14", "Photo from the hike" %}
+
+{% image "img/IMG_9504.JPG", "Openers, three others supporting Sam Evian", "Sam Evian" %}
+
+
+  {% image "img/merch-1.jpg", "Arts Riot art", "The merch table" %}
+  {% image "img/merch-2.jpg", "Arts Riot art", "Destroy Apathy! My favorite company motto ever." %}

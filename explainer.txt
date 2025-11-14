@@ -16,7 +16,20 @@ taxonomies.js
 	- Filters specific to those taxonomies (primaryArtist, allArtists, formatPeaks)
 	- Helper functions for taxonomy data transformation
 	- Anything that answers "what are all the X in my content?"
+- How it works
+	- Collections are created in src/taxonomy.js:
+		- collections.artists — unique artist names from all posts' concerts.artist, and so on
+	- Pagination templates generate the pages:
+		- src/artist.liquid — paginates over collections.artists to create one page per artist
+	- Each generated page:
+		- Uses the permalink pattern to create URLs like /artist/diiv/ or /venue/arts-riot/
+		- Lists all posts that match that artist or venue
+	- This is a standard Eleventy pattern for taxonomy/archive pages: create a collection of unique values, then paginate over it to generate one page per value.
 	
-	
+
+eleventyComputed.js
+- This makes my front matter support multiple artists without mucking up the template with code
+
+
 Future? 
 "Is this about processing images?" → images.js (or keep in .eleventy.js if small)

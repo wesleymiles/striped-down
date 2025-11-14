@@ -19,7 +19,6 @@ html {
   height: 100%;
   background-color: var(--bg-light);
 
-
   --text-non-em: #86816d;
   --text-em: #3ea261;
   --text-light: #FFFADB;
@@ -42,15 +41,32 @@ html {
   --border: 1px solid var(--bg-light-alt);
 }
 
+body::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-height: 100%;
+  background-image: url("/img/pattern-needles.jpg");
+  background-size: 15%;
+  opacity: 0.1;
+  z-index: -1; 
+}
 
-html,body {
+html {
   box-sizing: border-box;
+}
+
+body {
+  box-sizing: border-box;
+  min-height: 100%;
+  position: relative;
 }
 
 
 /* Variables
 -------------------------------------------------- */
-
 
 body {
   background-color: #fdfcf9;
@@ -74,8 +90,8 @@ body {
 
 body {
   margin: 0;
-  padding: var(--gap) var(--gap) var(--gap) 13vw;
-  border-radius: var(--curve) var(--curve) 0 0;
+  padding: 0 var(--gap) 0 13vw;
+  /* border-radius: var(--curve) var(--curve) 0 0; */
 }
 
 p, li, table, dl, label, button {
@@ -517,7 +533,7 @@ header.mast {
 /* Image grid container */
 .grid {
   display: grid;
-  gap: 1rem;
+  gap: 2rem;
   margin: 2rem 0;
 }
 
@@ -587,10 +603,11 @@ header nav {
 -------------------------------------------------- */
 
 header.mast {
-  background-color: var(--bg-light);
-  padding: 1em 0;
+  background-color: rgb(var(--bg-light)/ 0.5);
+  padding: 1em 1em .7em;
   border-bottom: 2px solid transparent; 
   border-image-source: linear-gradient(to right, var(--bg-dark-alt) 75%, var(--bg-light-alt) 25%);
+  background-color: var(--bg-light);
   border-image-slice: 1;
 } 
 
@@ -617,7 +634,7 @@ nav li {
   }
 
     nav .nav-menu li {
-      margin: 0 0 0 1em;
+      margin: 1em 0 0 1em;
       list-style: none;
     }
 
@@ -734,7 +751,7 @@ header.mast .site-logo {
   .skip-link {
     transform: translateY(-200%);
     position: absolute;
-    z-index: 1;
+    z-index: 3;
     color: #fff!important;
     padding: .5em;
     background-color: #62A87C;
@@ -1868,53 +1885,15 @@ form legend {
 /* Homepage
 -------------------------------------------------- */
 
-.homepage h1
-/* , .homepage h2, */
-/* .homepage h3  */
-{ 
-  /* font-size: 1em; */
-}
 
-.homepage main svg {
-  width: 18px;
-  height: auto;
-}
 
-/* body.homepage .hero  {
-  margin-bottom: -300px;
-  padding-bottom: 250px;
-  padding-top: 6em;
-}
-
-body.homepage .hero::after  {
-  
-} */
-
-  /* putting my photo in a croppable box that matches the content height */
-  body.homepage section.about figure,
-  body.homepage section.about picture {
-    display: flex;
-    z-index: 2;
-  }
-    body.homepage section.about picture img {
-      object-fit: cover; 
-    }
-
-  body.homepage section.work-status {
-    border-radius: var(--curve);
+.homepage .archive-list li:nth-of-type(2){
+  border-bottom: 0
 }
 
 
-  /* @media only screen and (max-width: 800px) {
-    
-    body.homepage .hero  {
-      padding-top: 7em;
-      margin-bottom: -130px;
-      padding-bottom: 100px;
-    }
 
 
-  } */
 
 
 

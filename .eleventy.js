@@ -127,80 +127,86 @@ module.exports = function (eleventyConfig) {
     peaks?.reduce((sum, p) => sum + (p.elevation || 0), 0) || 0
   );
 
-    // taxonomy file here
+  // taxonomy file here
   require("./src/taxonomy.js")(eleventyConfig);
 
-
-
   // ==================================================
-  // IMAGE SHORTCODES
+  // IMAGES COLLECTION (for art gallery)
   // ==================================================
-  function resolveImagePath(src, pageContext) {
-    if (src.startsWith("./") || (!src.startsWith("/") && !src.startsWith("http"))) {
-      const currentPageDir = pageContext.page?.inputPath
-        ? path.dirname(pageContext.page.inputPath)
-        : "";
-      const cleanSrc = src.replace(/^\.\//, "");
-      return currentPageDir ? path.join(currentPageDir, cleanSrc) : src;
-    }
-    return src;
-  }
-
-  eleventyConfig.addAsyncShortcode("image", async function (src, alt, caption = "", className = "") {
-    const resolvedSrc = resolveImagePath(src, this);
-    const processed = await processImage(resolvedSrc);
-    const img = processed.full;
-    const imageHtml = `<img src="${img.url}" width="${img.width}" height="${img.height}" alt="${alt || ''}" loading="lazy" decoding="async">`;
-    return caption
-      ? `<figure class="${className}">${imageHtml}<figcaption>${caption}</figcaption></figure>`
-      : `<div class="${className}">${imageHtml}</div>`;
-  });
-
-  // ==================================================
-  // COLLECTIONS
-  // ==================================================
-  eleventyConfig.addCollection("images", async function () {
-    const imageDir = "art/img/";
-    let files = fs.readdirSync(imageDir).filter(file => /\.(jpg|png|gif)$/i.test(file));
-
-    let images = [];
-    for (let file of files) {
-      let imagePath = path.join(imageDir, file);
-      const processed = await processImage(imagePath, {
-        widths: [450, 750, null],
-        formats: ["jpeg"],
-        outputDir: "./_site/art/img/",
-        urlPath: "/art/img/",
-        fixOrientation: true
-      });
-
-      images.push({
-        thumbUrl: processed.thumbnail.url,
-        thumbWidth: processed.thumbnail.width,
-        thumbHeight: processed.thumbnail.height,
-        mediumUrl: processed.medium.url,
-        mediumWidth: processed.medium.width,
-        mediumHeight: processed.medium.height,
-        fullUrl: processed.full.url,
-        fullWidth: processed.full.width,
-        fullHeight: processed.full.height,
-        alt: file.replace(/\.\w+$/, "").replace(/[-_]/g, " "),
-        date: getGitDate(imagePath),
-        filename: file
-      });
+  eleventyConfig.addCollection("images", async (collectionApi) => {
+    const artImgDir = path.join(__dirname, "art", "img");
+    if (!fs.existsSync(artImgDir)) {
+      return [];
     }
 
-    images.sort((a, b) => b.date - a.date);
+    const imageFiles = fs.readdirSync(artImgDir)
+      .filter(file => /\.(jpg|jpeg|png|webp)$/i.test(file))
+      .sort()
+      .reverse(); // Newest first
+
+    const images = [];
+    for (const file of imageFiles) {
+      const imagePath = path.join(artImgDir, file);
+      const relativePath = `art/img/${file}`;
+      
+      try {
+        const processed = await processImage(relativePath);
+        const stats = fs.statSync(imagePath);
+        
+        // Extract alt text from filename (remove extension, replace hyphens/underscores with spaces)
+        const altText = file
+          .replace(/\.[^/.]+$/, "")
+          .replace(/[-_]/g, " ")
+          .replace(/\b\w/g, l => l.toUpperCase());
+
+        images.push({
+          fullUrl: processed.full.url,
+          fullWidth: processed.full.width,
+          fullHeight: processed.full.height,
+          thumbUrl: processed.thumbnail.url,
+          thumbWidth: processed.thumbnail.width,
+          thumbHeight: processed.thumbnail.height,
+          mediumUrl: processed.medium.url,
+          alt: altText,
+          date: stats.mtime || stats.birthtime
+        });
+      } catch (error) {
+        console.warn(`Failed to process image ${file}:`, error.message);
+      }
+    }
+
     return images;
   });
 
-  eleventyConfig.addCollection("artblogPosts", (collectionApi) =>
-    collectionApi.getAll().filter(item => item.data.tags?.includes("art"))
-  );
+// ==================================================
+// IMAGE SHORTCODES
+// ==================================================
+function resolveImagePath(src, pageContext) {
+  if (src.startsWith("./") || (!src.startsWith("/") && !src.startsWith("http"))) {
+    const currentPageDir = pageContext.page?.inputPath
+      ? path.dirname(pageContext.page.inputPath)
+      : "";
+    const cleanSrc = src.replace(/^\.\//, "");
+    return currentPageDir ? path.join(currentPageDir, cleanSrc) : src;
+  }
+  return src;
+}
 
-  eleventyConfig.addCollection("trip-report", (collectionApi) =>
-    collectionApi.getFilteredByTag("trip-report")
-  );
+eleventyConfig.addAsyncShortcode("image", async function (src, alt, caption = "", link = "") {
+  const resolvedSrc = resolveImagePath(src, this);
+  const processed = await processImage(resolvedSrc);
+  const img = processed.full;
+  const imageHtml = `<img src="${img.url}" width="${img.width}" height="${img.height}" alt="${alt || ''}" loading="lazy" decoding="async">`;
+  
+  if (caption) {
+    const captionHtml = link 
+      ? `<a href="${link}">${caption}</a>` 
+      : caption;
+    return `<figure>${imageHtml}<figcaption>${captionHtml}</figcaption></figure>`;
+  }
+  
+  return `<div>${imageHtml}</div>`;
+});
 
 
   // ==================================================
