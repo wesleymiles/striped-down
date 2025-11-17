@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+
+	<!-- When to insert different head items per page  -->
+    
+	
+	
+
+	
+
+	
+
+	
+
+
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Site Architecture & Workflow Diagrams — Wes</title>
+
+	<!-- SEO Tags -->
+	
+		<meta name="description" content="Visual diagrams showing how the site works, from local development to deployment" />
+	
+
+	<meta property="og:title" content="Site Architecture & Workflow Diagrams"/>
+	<meta property="og:url" content="/site-architecture/ "/>
+	<meta property="og:description" content="Visual diagrams showing how the site works, from local development to deployment"/>
+
+
+<meta property="og:image" content="https://wescarr.com/img/social/SITE-ARCHITECTURE.jpg">
+
+<link rel="preload" as="font" type="font/woff2" crossorigin href="/fonts/BagnardSans.otf">
+<link rel="preload" as="font" type="font/woff2" crossorigin href="/fonts/PublicSans-Light.ttf">
+<link rel="preload" as="font" type="font/woff2" crossorigin href="/fonts/PublicSans-Medium.ttf">
+<link rel="preload" as="font" type="font/woff2" crossorigin href="/fonts/PublicSans-Regular.ttf">
+
+
+    <link rel="stylesheet" href="/css/main.css">
+  	<link rel="stylesheet" href="/css/fonts.css">	
+	
+
+<!-- <link rel="preconnect" href="https://fonts.googleapis.com"> -->
+<!-- <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> -->
+<!-- <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&display=swap" rel="stylesheet"> -->
+<!-- <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&display=swap" rel="stylesheet"> -->
+<!-- <link href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet"> -->
+
+    <link rel="icon" href="/img/favicon.ico">
+	<link rel="icon" href="/img/icon.svg" type="image/svg+xml">
+	<link rel="apple-touch-icon" href="/img/apple-touch-icon.png">
+
+  </head>
+
+	<body class="Site Architecture & Workflow Diagrams ">
+  	<a class="skip-link nav-tab" href='#main'>Skip to content</a>
+		<header class="mast">
+			<nav aria-label="Main">
+
+				<div class="site-logo">
+					<img src="/img/juniper-left.png" alt="juniper bough illustration" />
+					<a href="/">
+						<img src="/img/chipmunk.png" alt="Mountain icon" width="100" />
+					</a>
+				</div>
+
+				
+				<ul class="nav-menu">
+					  <li>
+					    	<a href="/web/">Web</a>
+				  	</li>
+					  <li>
+					    	<a href="/now/">Now</a>
+				  	</li>
+					  <li>
+					    	<a href="/art/">Art</a>
+				  	</li>
+					  <li>
+					    	<a href="/blog/">Blog</a>
+				  	</li>
+					</ul>
+
+			</nav>
+
+		</header>
+
+	<main id="main">
+    
+<article>
+
+    <header class="content-header">
+        <h1 class="content-heading">Site Architecture & Workflow Diagrams</h1>
+        <p class="content-desc">Visual diagrams showing how the site works, from local development to deployment</p>
+    </header>
+    
+    <h1>Site Architecture &amp; Workflow Diagrams</h1>
+<p>This document uses Mermaid.js diagrams to visualize how the site works, from local development to deployment.</p>
+<blockquote>
+<p><strong>Note:</strong> These diagrams render automatically in GitHub, VS Code (with Mermaid extension), and many Markdown viewers. For other tools, use <a href="https://mermaid.live/">Mermaid Live Editor</a>.</p>
+</blockquote>
+<hr>
+<h2>1. Overall Deployment Flow</h2>
+<p>This diagram shows the complete flow from local development to production deployment.</p>
+<pre><code class="language-mermaid">flowchart LR
+  subgraph LocalDev[&quot;Local Development&quot;]
+    Dev[Developer] --&gt;|Edit files| Files[Source Files]
+    Files --&gt;|npm start| DevServer[&quot;Eleventy Dev Server&quot;]
+    DevServer --&gt;|localhost:8080| Preview[&quot;Browser Preview&quot;]
+    Preview -- &quot;Live Reload&quot; --&gt; DevServer
+  end
+
+  subgraph VersionControl[&quot;Version Control&quot;]
+    Files -. &quot;git commit&quot; .-&gt; Git[&quot;Git&quot;]
+    Git -- &quot;git push&quot; --&gt; GH[GitHub Repository]
+  end
+
+  subgraph Deploy[&quot;Deployment&quot;]
+    GH -- Webhook --&gt; Netlify[Netlify]
+    Netlify --&gt; Install[&quot;npm install&lt;br&gt;&lt;b&gt;Install Dependencies&lt;/b&gt;&quot;]
+    Install --&gt; Build[&quot;npm run build&lt;br&gt;&lt;b&gt;Eleventy Build&lt;/b&gt;&quot;]
+    Build --&gt; Static[&quot;Generate&lt;br&gt;&lt;b&gt;Static HTML/CSS/JS&lt;/b&gt;&quot;]
+    Static --&gt; CDN[&quot;Deploy&lt;br&gt;&lt;b&gt;Netlify CDN&lt;/b&gt;&quot;]
+    CDN -- &quot;Live Site&quot; --&gt; Users[Users]
+  end
+
+  style Dev fill:#e1f5ff
+  style GH fill:#24292e,color:#fff
+  style Netlify fill:#00ad9f,color:#fff
+  style CDN fill:#00ad9f,color:#fff
+  style Users fill:#4caf50,color:#fff
+</code></pre>
+<hr>
+<h2>2. Eleventy Build Process</h2>
+<p>This diagram details how Eleventy transforms source files into a static site.</p>
+<pre><code class="language-mermaid">flowchart TD
+    subgraph &quot;Source Files&quot;
+        A[Markdown Files&lt;br/&gt;blog/*.md]
+        B[Liquid Templates&lt;br/&gt;_includes/*.liquid]
+        C[Data Files&lt;br/&gt;_data/*.json]
+        D[Assets&lt;br/&gt;css/, js/, img/, fonts/]
+        E[Config Files&lt;br/&gt;.eleventy.js&lt;br/&gt;src/taxonomy.js]
+    end
+    
+    subgraph &quot;Eleventy Processing&quot;
+        F[Read Source Files]
+        G[Process Front Matter]
+        H[Generate Collections]
+        I[Apply Templates]
+        J[Process Markdown]
+        K[Apply Filters]
+        L[Generate Taxonomies]
+        M[Optimize Images]
+        N[Minify HTML]
+    end
+    
+    subgraph &quot;Output&quot;
+        O[Static HTML Files]
+        P[CSS Files]
+        Q[JavaScript Files]
+        R[Images]
+        S[Fonts]
+        T[_site/ Directory]
+    end
+    
+    A --&gt; F
+    B --&gt; F
+    C --&gt; F
+    E --&gt; F
+    
+    F --&gt; G
+    G --&gt; H
+    H --&gt; L
+    L --&gt; I
+    I --&gt; J
+    J --&gt; K
+    K --&gt; M
+    M --&gt; N
+    
+    D --&gt;|Passthrough| T
+    
+    N --&gt; O
+    O --&gt; T
+    P --&gt; T
+    Q --&gt; T
+    R --&gt; T
+    S --&gt; T
+    
+    style F fill:#ff6b6b,color:#fff
+    style T fill:#4caf50,color:#fff
+</code></pre>
+<hr>
+<h2>3. Site Structure &amp; Collections</h2>
+<p>This diagram shows how content is organized and how collections are generated.</p>
+<pre><code class="language-mermaid">flowchart TB
+    subgraph &quot;Content Sources&quot;
+        A[Blog Posts&lt;br/&gt;blog/*/index.md]
+        B[Pages&lt;br/&gt;*.html, *.md]
+        C[Data Files&lt;br/&gt;_data/*.json]
+    end
+    
+    subgraph &quot;Eleventy Collections&quot;
+        D[collections.all&lt;br/&gt;All content]
+        E[collections.post&lt;br/&gt;Tagged 'post']
+        F[collections.artists&lt;br/&gt;From concerts.artist]
+        G[collections.venues&lt;br/&gt;From concerts.venue]
+        H[collections.peaks&lt;br/&gt;From trips.peaks]
+        I[collections.states&lt;br/&gt;From location.state]
+        J[collections.towns&lt;br/&gt;From location.town]
+    end
+    
+    subgraph &quot;Generated Pages&quot;
+        K[Blog Posts&lt;br/&gt;/blog/*/]
+        L[Tag Pages&lt;br/&gt;/blog/tag/*/]
+        M[Artist Pages&lt;br/&gt;/artist/*/]
+        N[Venue Pages&lt;br/&gt;/venue/*/]
+        O[Peak Pages&lt;br/&gt;/peak/*/]
+        P[State Pages&lt;br/&gt;/state/*/]
+        Q[Town Pages&lt;br/&gt;/town/*/]
+    end
+    
+    A --&gt; D
+    B --&gt; D
+    C --&gt; D
+    
+    D --&gt; E
+    D --&gt; F
+    D --&gt; G
+    D --&gt; H
+    D --&gt; I
+    D --&gt; J
+    
+    E --&gt; K
+    E --&gt; L
+    F --&gt; M
+    G --&gt; N
+    H --&gt; O
+    I --&gt; P
+    J --&gt; Q
+    
+    style D fill:#ff6b6b,color:#fff
+    style K fill:#4caf50,color:#fff
+    style L fill:#4caf50,color:#fff
+    style M fill:#4caf50,color:#fff
+    style N fill:#4caf50,color:#fff
+    style O fill:#4caf50,color:#fff
+    style P fill:#4caf50,color:#fff
+    style Q fill:#4caf50,color:#fff
+</code></pre>
+<hr>
+<h2>4. Development Workflow</h2>
+<p>This diagram shows the typical development cycle.</p>
+<pre><code class="language-mermaid">sequenceDiagram
+    participant Dev as Developer
+    participant Local as Local Machine
+    participant Eleventy as Eleventy Dev Server
+    participant Browser as Browser
+    participant Git as Git
+    participant GitHub as GitHub
+    participant Netlify as Netlify
+    participant Users as Users
+    
+    Dev-&gt;&gt;Local: Edit source files
+    Dev-&gt;&gt;Local: npm start
+    Local-&gt;&gt;Eleventy: Start dev server
+    Eleventy-&gt;&gt;Browser: Serve on localhost:8080
+    Browser-&gt;&gt;Eleventy: Request page
+    Eleventy-&gt;&gt;Browser: Return HTML (live reload)
+    
+    loop Development
+        Dev-&gt;&gt;Local: Make changes
+        Eleventy-&gt;&gt;Browser: Auto-reload
+    end
+    
+    Dev-&gt;&gt;Git: git add, commit
+    Dev-&gt;&gt;GitHub: git push
+    GitHub-&gt;&gt;Netlify: Webhook trigger
+    Netlify-&gt;&gt;Netlify: npm install
+    Netlify-&gt;&gt;Netlify: npm run build
+    Netlify-&gt;&gt;Netlify: Deploy to CDN
+    Netlify-&gt;&gt;Users: Live site updated
+</code></pre>
+<hr>
+<h2>5. File Processing Pipeline</h2>
+<p>This diagram shows how different file types are processed.</p>
+<pre><code class="language-mermaid">flowchart LR
+    subgraph &quot;Input&quot;
+        A[.md files]
+        B[.liquid files]
+        C[.html files]
+        D[.json files]
+        E[.css, .js, .jpg, etc.]
+    end
+    
+    subgraph &quot;Processing&quot;
+        F[Markdown Parser]
+        G[Liquid Engine]
+        H[Data Loader]
+        I[Image Optimizer]
+        J[HTML Minifier]
+    end
+    
+    subgraph &quot;Output&quot;
+        K[HTML]
+        L[CSS]
+        M[JS]
+        N[Images]
+    end
+    
+    A --&gt; F
+    B --&gt; G
+    C --&gt; G
+    D --&gt; H
+    E --&gt;|Passthrough| L
+    E --&gt;|Passthrough| M
+    E --&gt; I
+    
+    F --&gt; G
+    H --&gt; G
+    G --&gt; J
+    I --&gt; N
+    
+    J --&gt; K
+    
+    style F fill:#ff6b6b,color:#fff
+    style G fill:#ff6b6b,color:#fff
+    style I fill:#ff6b6b,color:#fff
+    style K fill:#4caf50,color:#fff
+</code></pre>
+<hr>
+<h2>6. Taxonomy Generation Flow</h2>
+<p>This diagram shows how taxonomies (artists, venues, peaks, etc.) are generated from content.</p>
+<pre><code class="language-mermaid">flowchart TD
+    A[Blog Posts with Front Matter] --&gt; B[Eleventy Reads All Content]
+    
+    B --&gt; C{Extract Taxonomy Data}
+    
+    C --&gt;|concerts.artist| D[collections.artists]
+    C --&gt;|concerts.venue| E[collections.venues]
+    C --&gt;|trips.peaks| F[collections.peaks]
+    C --&gt;|location.state| G[collections.states]
+    C --&gt;|location.town| H[collections.towns]
+    C --&gt;|tags| I[collections.{tag}]
+    
+    D --&gt; J[src/artist.liquid]
+    E --&gt; K[src/venue.liquid]
+    F --&gt; L[src/peak.liquid]
+    G --&gt; M[src/state.liquid]
+    H --&gt; N[src/town.liquid]
+    I --&gt; O[blog/tags.html]
+    
+    J --&gt; P[/artist/*/ pages]
+    K --&gt; Q[/venue/*/ pages]
+    L --&gt; R[/peak/*/ pages]
+    M --&gt; S[/state/*/ pages]
+    N --&gt; T[/town/*/ pages]
+    O --&gt; U[/blog/tag/*/ pages]
+    
+    style C fill:#ff6b6b,color:#fff
+    style P fill:#4caf50,color:#fff
+    style Q fill:#4caf50,color:#fff
+    style R fill:#4caf50,color:#fff
+    style S fill:#4caf50,color:#fff
+    style T fill:#4caf50,color:#fff
+    style U fill:#4caf50,color:#fff
+</code></pre>
+<hr>
+<h2>7. Environment Comparison</h2>
+<p>This diagram compares the three environments: localhost, GitHub, and Netlify.</p>
+<pre><code class="language-mermaid">flowchart TB
+    subgraph &quot;Localhost (Development)&quot;
+        A1[npm start]
+        A2[Eleventy --serve]
+        A3[Watch Mode]
+        A4[Live Reload]
+        A5[localhost:8080]
+        A1 --&gt; A2
+        A2 --&gt; A3
+        A3 --&gt; A4
+        A4 --&gt; A5
+    end
+    
+    subgraph &quot;GitHub (Repository)&quot;
+        B1[Source Code]
+        B2[Version Control]
+        B3[Git History]
+        B4[Branch Management]
+        B1 --&gt; B2
+        B2 --&gt; B3
+        B2 --&gt; B4
+    end
+    
+    subgraph &quot;Netlify (Production)&quot;
+        C1[Auto Deploy on Push]
+        C2[npm install]
+        C3[npm run build]
+        C4[Generate _site/]
+        C5[Deploy to CDN]
+        C6[Live Site]
+        C1 --&gt; C2
+        C2 --&gt; C3
+        C3 --&gt; C4
+        C4 --&gt; C5
+        C5 --&gt; C6
+    end
+    
+    B1 -.-&gt;|git push| C1
+    
+    style A5 fill:#2196f3,color:#fff
+    style B1 fill:#24292e,color:#fff
+    style C6 fill:#00ad9f,color:#fff
+</code></pre>
+<hr>
+<h2>Key Concepts</h2>
+<h3>Build Command</h3>
+<ul>
+<li><strong>Local:</strong> <code>npm start</code> → <code>npx eleventy --serve</code> (development server with watch mode)</li>
+<li><strong>Production:</strong> <code>npm run build</code> → <code>NODE_ENV=production eleventy</code> (static site generation)</li>
+</ul>
+<h3>Output Directory</h3>
+<ul>
+<li>All generated files go to <code>_site/</code> directory</li>
+<li>This directory is what gets deployed to Netlify</li>
+</ul>
+<h3>Collections</h3>
+<ul>
+<li>Collections are dynamically generated from content</li>
+<li>Taxonomies (artists, venues, peaks, etc.) are created by scanning all content</li>
+<li>Each collection generates multiple pages via pagination templates</li>
+</ul>
+<h3>Deployment</h3>
+<ul>
+<li>GitHub stores the source code</li>
+<li>Netlify watches for pushes and automatically rebuilds</li>
+<li>Netlify serves the static <code>_site/</code> directory via CDN</li>
+</ul>
+<hr>
+<h2>Viewing These Diagrams</h2>
+<ul>
+<li><strong>GitHub:</strong> Renders automatically in Markdown files</li>
+<li><strong>VS Code:</strong> Install the “Markdown Preview Mermaid Support” extension</li>
+<li><strong>Online:</strong> Copy diagram code to <a href="https://mermaid.live/">Mermaid Live Editor</a></li>
+<li><strong>Documentation Sites:</strong> Most modern documentation platforms support Mermaid</li>
+</ul>
+<hr>
+<h2>Related Documentation</h2>
+<ul>
+<li><a href="TAXONOMY-MAP.md">Taxonomy Map</a> - Detailed breakdown of all site taxonomies</li>
+<li><a href="THIRD-PARTY-LIBRARIES.md">Third-Party Libraries</a> - Complete list of dependencies and external libraries</li>
+<li><a href="README.md">README</a> - Project overview</li>
+</ul>
+
+
+</article>
+
+	</main>
+
+	<footer>
+		
+			<nav>
+				<p class="colophon">
+					Built with <a href="https://www.11ty.dev/">eleventy</a>
+				</p>
+				<p class="social">
+					<a href="https://www.linkedin.com/in/wes-carr-8918b99/">linkedin</a>  |  
+					<a href="https://unsplash.com/@wescarr">unsplash</a>  |  
+					<a href="https://www.are.na/wes-carr">are.na</a>   |  
+					<a href="https://www.last.fm/user/wesleymiles">last.fm</a>   |  
+					<a href="mailto:hi@wescarr.com">email</a>
+
+					
+				</p>
+			</nav>
+
+
+	</footer>
+
+	</body>
+
+
+	
+
+	
+	<script type="module">
+		import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+		
+		// Wait for DOM to be ready
+		function initMermaid() {
+			// Initialize Mermaid
+			mermaid.initialize({ 
+				startOnLoad: false, 
+				theme: 'default',
+				securityLevel: 'loose'
+			});
+
+			// Convert markdown code blocks to Mermaid diagrams
+			const codeBlocks = document.querySelectorAll('code.language-mermaid, pre code.language-mermaid');
+			codeBlocks.forEach((codeBlock, index) => {
+				const mermaidCode = codeBlock.textContent.trim();
+				if (!mermaidCode) return;
+				
+				const wrapper = document.createElement('div');
+				wrapper.className = 'mermaid';
+				wrapper.textContent = mermaidCode;
+				wrapper.id = `mermaid-${index}`;
+				
+				// Replace the pre/code block with the mermaid div
+				const pre = codeBlock.closest('pre');
+				if (pre) {
+					pre.parentElement.replaceChild(wrapper, pre);
+				} else {
+					codeBlock.parentElement.replaceChild(wrapper, codeBlock);
+				}
+			});
+			
+			// Run Mermaid after conversion
+			if (document.querySelectorAll('.mermaid').length > 0) {
+				mermaid.run();
+			}
+		}
+
+		// Run when DOM is ready
+		if (document.readyState === 'loading') {
+			document.addEventListener('DOMContentLoaded', initMermaid);
+		} else {
+			initMermaid();
+		}
+	</script>
+	
+
+</html>

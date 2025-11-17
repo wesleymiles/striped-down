@@ -24,7 +24,6 @@
 	</body>
 
 
-
 	{% if page.url == '/art/' or page.url == '/' %}
 	
 	<script type="module">
@@ -46,6 +45,54 @@
 		});
 	  </script>
 	  
+	{% endif %}
+
+	{% if page.url == '/site-architecture/' or page.url == '/blog/expanding-the-site/' %}
+	<script type="module">
+		import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+		
+		// Wait for DOM to be ready
+		function initMermaid() {
+			// Initialize Mermaid
+			mermaid.initialize({ 
+				startOnLoad: false, 
+				theme: 'default',
+				securityLevel: 'loose'
+			});
+
+			// Convert markdown code blocks to Mermaid diagrams
+			const codeBlocks = document.querySelectorAll('code.language-mermaid, pre code.language-mermaid');
+			codeBlocks.forEach((codeBlock, index) => {
+				const mermaidCode = codeBlock.textContent.trim();
+				if (!mermaidCode) return;
+				
+				const wrapper = document.createElement('div');
+				wrapper.className = 'mermaid';
+				wrapper.textContent = mermaidCode;
+				wrapper.id = `mermaid-${index}`;
+				
+				// Replace the pre/code block with the mermaid div
+				const pre = codeBlock.closest('pre');
+				if (pre) {
+					pre.parentElement.replaceChild(wrapper, pre);
+				} else {
+					codeBlock.parentElement.replaceChild(wrapper, codeBlock);
+				}
+			});
+			
+			// Run Mermaid after conversion
+			if (document.querySelectorAll('.mermaid').length > 0) {
+				mermaid.run();
+			}
+		}
+
+		// Run when DOM is ready
+		if (document.readyState === 'loading') {
+			document.addEventListener('DOMContentLoaded', initMermaid);
+		} else {
+			initMermaid();
+		}
+	</script>
 	{% endif %}
 
 </html>

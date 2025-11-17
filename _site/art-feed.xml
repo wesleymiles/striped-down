@@ -394,7 +394,54 @@
 &lt;p&gt; Making this page also provided a chance to play with a &lt;a href=&quot;https://photoswipe.com/&quot;&gt;slideshow tool&lt;/a&gt; and eleventy&#39;s &lt;a href=&quot;https://www.11ty.dev/docs/plugins/image/&quot;&gt;plugin&lt;/a&gt;.
 
 &lt;/p&gt;&lt;/section&gt;
+&lt;!-- 
+&lt;section class=&quot; theme--emp  &quot;&gt;
 
+  &lt;style&gt;
+    .newsletter-container[attr-a][attr-b][attr-c][attr-d][attr-e][attr-f] .form-preview {
+  display: flex;
+}
+.newsletter-container[attr-a][attr-b][attr-c][attr-d][attr-e][attr-f] .form-preview,
+.newsletter-container[attr-a][attr-b][attr-c][attr-d][attr-e][attr-f] .form-preview *{
+  box-sizing: border-box !important;
+}
+
+
+.newsletter-container[attr-a][attr-b][attr-c][attr-d][attr-e][attr-f] .form-preview .preview-input-field input {
+ font-size: 1.1em;
+  padding: 1em;
+  margin-right: 1em;
+}
+
+.newsletter-container[attr-a][attr-b][attr-c][attr-d][attr-e][attr-f] .form-preview .preview-submit-button button {
+ font-size: 1.1em;
+  padding: 1.1em;
+  border: 0 !important;
+  border-radius: 6px !important;
+  margin: 0;
+}
+.newsletter-container[attr-a][attr-b][attr-c][attr-d][attr-e][attr-f] .form-preview .preview-submit-button button:hover {
+  cursor: pointer !important;
+}
+
+  &lt;/style&gt;
+    &lt;h2&gt;Get fresh, steaming art sent to your email, once a week. Made by hand. &lt;/h2&gt;
+    &lt;p&gt;I&#39;m excited to start sharing my newest pen and watercolor art by email soon! I&#39;d love it if you&#39;d join. &lt;/p&gt;
+  &lt;div class=&quot;newsletter-container&quot; attr-a attr-b attr-c attr-d attr-e attr-f&gt;
+    &lt;form  data-v-8541cdc9=&quot;&quot; action=&quot;https://api.follow.it/subscription-form/aWtwL1dVR1VCd3MzaHYyS3FJdS8yR3JETlVBRlB1dDRLR2Z6Z1pqQ2hmOC9IMmdEV3I3RVFCQTJGZEN0SFdQWkljVmg4MU5QWktzVlIrZWJjallkRFkrbGxRL0RUdHZMRkZkbjBiV3Awb1hOQ2szL21kMktydWc5TkNVeVgvU0p8VjlTZ0JObDFqMzN4R05UalhZYzFFQXMvQklrMllvZkVpM3FLUUFSL2Vnaz0=/8&quot; method=&quot;post&quot;&gt;
+      &lt;div data-v-8541cdc9=&quot;&quot; class=&quot;form-preview&quot;&gt;
+      &lt;div data-v-8541cdc9=&quot;&quot; class=&quot;preview-heading&quot;&gt;
+    &lt;/div&gt;
+    &lt;div data-v-8541cdc9=&quot;&quot; class=&quot;preview-input-field&quot;&gt;
+      &lt;input data-v-8541cdc9=&quot;&quot; type=&quot;email&quot; name=&quot;email&quot; required aria-required=&quot;true&quot; placeholder=&quot;Email address&quot; spellcheck=&quot;false&quot; &gt;
+    &lt;/div&gt;
+    &lt;div data-v-8541cdc9=&quot;&quot; class=&quot;preview-submit-button&quot;&gt;
+      &lt;button data-v-8541cdc9=&quot;&quot; type=&quot;submit&quot; style=&quot; text-align: center;&quot;&gt;Subscribe&lt;/button&gt;
+    &lt;/div&gt;&lt;/div&gt;&lt;/form&gt;
+    
+    &lt;p&gt;&lt;small&gt;&lt;a href=&quot;https://follow.it&quot; target=&quot;_blank&quot; class=&quot;external powered-by-line&quot;&gt;Powered by follow.it&lt;/a&gt;&lt;/small&gt;&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/section&gt;  --&gt;
 
 
 
