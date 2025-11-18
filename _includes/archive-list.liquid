@@ -1,5 +1,6 @@
 <ul class="archive-list">
-    {%- for post in collections.post reversed -%}
+    {%- assign sortedPosts = collections.post | sortByEventDate -%}
+    {%- for post in sortedPosts -%}
 
         <li>
             <article class="archive-entry">

@@ -22,7 +22,7 @@ eleventyNavigation:
 
 <div class="pswp-gallery pswp-gallery--single-column" id="gallery">
   <ul>
-    {% for image in collections.images reverse %}
+    {% for image in collections.images %}
       <li>
         <a href="{{ image.fullUrl }}" data-pswp-width="{{ image.fullWidth }}" data-pswp-height="{{ image.fullHeight }}">
           <img src="{{ image.thumbUrl }}" 
@@ -40,8 +40,6 @@ eleventyNavigation:
 
 
 
-
-<p> Making this page also provided a chance to play with a <a href="https://photoswipe.com/">slideshow tool</a> and eleventy's <a href="https://www.11ty.dev/docs/plugins/image/">plugin</a>.
 
 </section>
 <!-- 

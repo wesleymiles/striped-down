@@ -9,7 +9,6 @@ date: 2023-08-04
 
 <section class="hero">
 
-# Revamping 2 local logos <span>without their consent</span>
 I wanted to summarize what goes into giving a brand a refresh, but I didn’t have it written down. I hadn’t cataloged the process during any actual projects. So I set out to pump some life into 2 local logos to do so. 
 
 I chose businesses who’s signs I drive by often. They could each use some love / have many opportunities for improvement.
@@ -139,7 +138,7 @@ They also have use different text on their signs and different variations of wor
 
 ### Research
 
-What else do I need to know about Joe’s? I scrour around and find more signs.
+What else do I need to know about Joe’s? I scroured around and find more signs.
 <figure>
 	<picture>
 	 	<source srcset="img/joes-research.webp" type="image/webp">

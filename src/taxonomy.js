@@ -115,4 +115,52 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addFilter("isFestival", function(concerts) {
 	return concerts && concerts.festival ? true : false;
   });
+
+  // ==================================================
+  // POST SORTING FILTERS
+  // ==================================================
+  
+  // Helper function to get the sort date for a post
+  // Uses hike date for trip reports, concert date for concerts, post date otherwise
+  function getSortDate(post) {
+	if (!post || !post.data) return new Date(0);
+	
+	// Check if it's a trip report
+	if (post.data.tags && post.data.tags.includes("trip-report") && post.data.trips?.dateHiked) {
+	  return new Date(post.data.trips.dateHiked);
+	}
+	
+	// Check if it's a concert
+	if (post.data.tags && post.data.tags.includes("concert") && post.data.concerts?.["event-date"]) {
+	  return new Date(post.data.concerts["event-date"]);
+	}
+	
+	// Default to post date - ensure it's a Date object
+	const postDate = post.date || post.data.date;
+	if (postDate instanceof Date) {
+	  return postDate;
+	}
+	return postDate ? new Date(postDate) : new Date(0);
+  }
+
+  // Get the sort date for a post (hike date for trip reports, concert date for concerts, post date otherwise)
+  eleventyConfig.addFilter("getSortDate", getSortDate);
+
+  // Sort posts by sort date (newest first)
+  eleventyConfig.addFilter("sortByEventDate", posts => {
+	if (!Array.isArray(posts)) return posts;
+	
+	// Create array with dates for sorting
+	const postsWithDates = posts.map(post => ({
+	  post,
+	  timestamp: getSortDate(post).getTime()
+	}));
+	
+	// Sort by timestamp (newest first)
+	// b.timestamp - a.timestamp: if b is newer, result is positive, so b comes before a
+	postsWithDates.sort((a, b) => b.timestamp - a.timestamp);
+	
+	// Return just the posts in sorted order
+	return postsWithDates.map(item => item.post);
+  });
 };

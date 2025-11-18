@@ -5,7 +5,7 @@
     <header class="content-header">
 
         <h1 class="content-heading">{{ title }}</h1>
-        <p class="content-desc">{{ description }}</p>
+        <p class="content-desc">{{ description | raw }}</p>
         
         <ul class="metadata">
           <!-- include a written on date if it's a blog post, but not an archive page or concert or trip report   -->

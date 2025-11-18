@@ -35,12 +35,16 @@
 
 	<!-- SEO Tags -->
 	{% if description %}
-		<meta name="description" content="{{ description }}" />
+		{% assign descriptionPlain = description | strip_html %}
+		<meta name="description" content="{{ descriptionPlain }}" />
 	{% endif %}
 
 	<meta property="og:title" content="{{ title }}"/>
 	<meta property="og:url" content="{{ page.url | url }} "/>
-	<meta property="og:description" content="{{ description }}"/>
+	{% if description %}
+		{% assign descriptionPlain = description | strip_html %}
+		<meta property="og:description" content="{{ descriptionPlain }}"/>
+	{% endif %}
 
 
 <meta property="og:image" content="{{ siteUrl | append: '/img/social/' | append: page.fileSlug | append: '.jpg' }}">

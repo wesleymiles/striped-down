@@ -126,6 +126,12 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addFilter("totalElevation", peaks =>
     peaks?.reduce((sum, p) => sum + (p.elevation || 0), 0) || 0
   );
+  
+  // Strip HTML tags from text (for meta descriptions)
+  eleventyConfig.addFilter("strip_html", str => {
+    if (!str) return "";
+    return str.toString().replace(/<[^>]*>/g, "");
+  });
 
   // taxonomy file here
   require("./src/taxonomy.js")(eleventyConfig);
@@ -140,9 +146,7 @@ module.exports = function (eleventyConfig) {
     }
 
     const imageFiles = fs.readdirSync(artImgDir)
-      .filter(file => /\.(jpg|jpeg|png|webp)$/i.test(file))
-      .sort()
-      .reverse(); // Newest first
+      .filter(file => /\.(jpg|jpeg|png|webp)$/i.test(file));
 
     const images = [];
     for (const file of imageFiles) {
@@ -151,7 +155,9 @@ module.exports = function (eleventyConfig) {
       
       try {
         const processed = await processImage(relativePath);
-        const stats = fs.statSync(imagePath);
+        
+        // Use git date for consistent sorting across environments (Netlify vs local)
+        const imageDate = getGitDate(imagePath);
         
         // Extract alt text from filename (remove extension, replace hyphens/underscores with spaces)
         const altText = file
@@ -168,12 +174,15 @@ module.exports = function (eleventyConfig) {
           thumbHeight: processed.thumbnail.height,
           mediumUrl: processed.medium.url,
           alt: altText,
-          date: stats.mtime || stats.birthtime
+          date: imageDate
         });
       } catch (error) {
         console.warn(`Failed to process image ${file}:`, error.message);
       }
     }
+
+    // Sort by date (newest first)
+    images.sort((a, b) => b.date.getTime() - a.date.getTime());
 
     return images;
   });

@@ -17,4 +17,19 @@ location:
   town: Burlington
   state: Vermont
 ---
+<div class="grid bleed">
+{% image "img/beach-fossils.jpg", "Concert photo", "Beach Fossils" %}
+</div>
 
+{% image "img/beach-fossils-2.jpg", "Concert photo", "Beach Fossils" %}
+
+{% image "img/beach-fossils-3.jpg", "Concert photo", "Beach Fossils" %}
+
+{% image "img/beach-fossils-4.jpg", "Concert photo", "Beach Fossils" %}
+
+{% image "img/beach-fossils-5.jpg", "Concert photo", "Beach Fossils" %}
+
+
+{% image "img/being-dead.jpg", "Concert photo", "Being Dead" %}
+
+{% image "img/being-dead-2.jpg", "Concert photo", "Being Dead" %}

@@ -24,7 +24,8 @@ eleventyComputed:
 
 <ul class="archive-list">
 
-  {%- for post in collections[tag] reversed filter("post") -%}
+  {%- assign sortedPosts = collections[tag] | sortByEventDate -%}
+  {%- for post in sortedPosts -%}
    <li>
       <article class="archive-entry">
         <div class="entry-header">

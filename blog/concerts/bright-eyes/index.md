@@ -18,14 +18,14 @@ location:
   state: Vermont
 ---
 
-{% image "img/IMG_4875.jpeg", "Hiking photo from 2025-04-15", "Bright Eyes" %}
+{% image "img/IMG_4875.jpeg", "Concert photo", "Bright Eyes" %}
 
-{% image "img/IMG_4876.jpeg", "Hiking photo from 2025-04-15", "Connor" %}
+{% image "img/IMG_4876.jpeg", "Concert photo", "Connor" %}
 
 
-{% image "img/IMG_4873.jpeg", "Hiking photo from 2025-04-15", "Cursive" %}
+{% image "img/IMG_4873.jpeg", "Concert photo", "Cursive" %}
 
-{% image "img/IMG_4874.jpeg", "Hiking photo from 2025-04-15", "Cursive" %}
+{% image "img/IMG_4874.jpeg", "Concert photo", "Cursive" %}
 
 
 
