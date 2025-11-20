@@ -29,6 +29,7 @@ html {
   --bg-light-alt: #e7e5d9;
   --gapSm: 21px;
   --sans-serif-var: 'bagnard';
+  --serif-var: 'bagnard serif';
   --sans-serif: 'Public','bricolage', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   --serif: 'instrument';
   --serif-system: Times New Roman, Droid Serif, Times, Source Serif Pro, serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbolserif;
@@ -50,7 +51,7 @@ body::after {
   min-height: 100%;
   background-image: url("/img/pattern-needles.jpg");
   background-size: 15%;
-  opacity: 0.1;
+  opacity: 0.2;
   z-index: -1; 
 }
 
@@ -357,8 +358,8 @@ h1, h2, h3{
 }
 
 h1 {
-  font-size: 4em;
-  font-family: var(--sans-serif-var), var(--sans-serif-system);
+  font-size: 5em;
+  font-family: var(--serif-var), var(--serif-system);
   font-weight: normal;
   letter-spacing: -2px;
   margin-bottom: .5em;
@@ -372,9 +373,8 @@ h2 {
   font-size: 2em;
   font-weight: normal;
   letter-spacing: -1px;
-  /* color: var(--bg-dark); */
-  margin: 0 0 .5em;
-  font-family: var(--sans-serif-var), var(--sans-serif-system);
+  margin: 0 0 2em;
+  font-family: var(--serif-var), var(--serif-system);
 }
   h2:not(:first-child) {  margin-top: 2em; }
 
@@ -405,9 +405,9 @@ small {
 @media only screen and (max-width: 800px) {
 
  html { font-size: 16px; }
-  h1 { font-size: 2em; }
+  h1 { font-size: 3em; }
   h2 { font-size: 1.5em; }
-  /* h3 { font-size: 1.6em; } */
+  h3 { font-size: 1.2em; }
   /* h4 { font-size: 1.3em; } */
   body { padding: 0 }
   footer { padding: 1em;}
@@ -598,6 +598,14 @@ header nav {
 
 }
 
+@media only screen and (max-width: 500px) {
+
+  body > main {
+    padding-left: calc(var(--gap) / 2);
+    padding-right: calc(var(--gap) / 2);
+  }
+
+}
 
 
 
@@ -606,11 +614,13 @@ header nav {
 
 header.mast {
   background-color: rgb(var(--bg-light)/ 0.5);
-  padding: 1em 1em .7em;
-  border-bottom: 2px solid transparent; 
-  border-image-source: linear-gradient(to right, var(--bg-dark-alt) 75%, var(--bg-light-alt) 25%);
-  background-color: var(--bg-light);
-  border-image-slice: 1;
+  padding: 1em calc(var(--gap) * 2) .7em;
+  /* border-bottom: 1px solid transparent;  */
+  /* border-image-source: linear-gradient(to right, var(--bg-dark-alt) 75%, var(--bg-dark) 25%); */
+  /* border-image-slice: 1; */
+  border-color: var(--bg-dark-alt);
+  /* background-color: var(--bg-light-alt); */
+  
 } 
 
 nav {
@@ -624,7 +634,7 @@ nav {
 
 nav p,
 nav li {
-  /* font-family: var(--sans-serif-var), var(--sans-serif-system); */
+  font-family: var(--serif-var), var(--serif-system);
   
 }
 
@@ -636,25 +646,48 @@ nav li {
   }
 
     nav .nav-menu li {
-      margin: 1em 0 0 1em;
+      margin: 0 0 0 1em;
       list-style: none;
+    }
+
+    nav .nav-menu li a {
+      position: relative;
+      text-decoration: none;
+      display: inline-block;
+      padding-bottom: 5px;
+    }
+
+    nav .nav-menu li a::after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 100%;
+      height: 1px;
+      background-color: var(--bg-dark-alt);
+      transform: scaleX(0);
+      transform-origin: center;
+      transition: transform 0.3s ease;
+    }
+
+    nav .nav-menu li a:hover::after {
+      transform: scaleX(1);
     }
 
     nav .nav-menu li.active-nav a:visited,
     nav .nav-menu li.active-nav a:link {
       color: #285E50;
-      border-top: 2px solid var(--bg-dark-alt);
-      margin-top: -2px;
+      font-weight: bold;
     }
 
-    nav p, 
-    nav a:visited, 
-    nav a:link {
-/*      color: #CDD3D6;*/
+    nav .nav-menu li.active-nav a::after {
+      transform: scaleX(1);
     }
+
+
     nav a:hover, 
     nav a:active {
-      color: #3ea261
+      color: #285E50;
     }
 
 @media only screen and (max-width: 800px) {
@@ -717,6 +750,7 @@ header.mast .site-logo {
   display: flex;
   font-size: 1em;
   z-index: 1;
+  /* border-bottom: 1px solid var(--bg-dark-alt) */
 }
 
   header.mast .site-logo > img {
@@ -726,6 +760,7 @@ header.mast .site-logo {
     top: 0;
     transition: all .3s;
     z-index: 1;
+    display: none;
   }
 
 /*  when hovered, rotate to show my name */
@@ -735,12 +770,11 @@ header.mast .site-logo {
   }
 
   header.mast .site-logo a > img {
-    margin-bottom: -40px;
-    margin-left: -20px;
+    margin: -60px 0 -50px -50px;
+    transform: rotate(20deg);
   }
 
     header nav a {
-      padding-left: 5px;
       word-wrap: normal;
       text-decoration: none;
       display: block;
@@ -783,7 +817,7 @@ header.mast .site-logo {
         }
 
       header.mast .site-logo a > img {
-        width: 109px;
+        width: 140px;
         position: absolute;
         z-index: 1;
         top: 45px;
@@ -1829,6 +1863,12 @@ Styles for https://photoswipe.com slideshow too
   #gallery > ul {
     grid-template-columns: repeat(2, 1fr);
   }
+  #gallery li a {
+    height: 200px;
+  }
+  #gallery > ul > li:nth-child(7n) a {
+    height: 300px;
+  }
 }
 
 
@@ -1968,7 +2008,7 @@ form legend {
 section.tl.stretch--bg {
   padding-left: 1em;
   padding-right: 1em;
-  background-color: #fff;
+  /* background-color: #fff; */
   width: 80vw;
 }
 

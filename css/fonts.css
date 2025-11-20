@@ -32,7 +32,7 @@
   src: url('/fonts/Sentient-Variable.woff2') format("woff2");
   font-display: swap;
 } */
-@font-face {
+/* @font-face {
   font-family: 'instrument';
   src: url('/fonts/InstrumentSerif-Regular.ttf') format("truetype");
   font-display: swap;
@@ -45,7 +45,7 @@
   font-display: swap;
   font-weight: normal;
   font-style: italic;
-}
+} */
 
 @font-face {
   font-family: "Public";
@@ -74,7 +74,14 @@
 @font-face {
   font-family: 'bagnard';
   src: url('/fonts/BagnardSans.otf') format("opentype");
-  /* src: url('/fonts/Bagnard.otf') format("opentype"); */
+  font-weight: normal;
+  font-display: swap;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'bagnard serif';
+  src: url('/fonts/Bagnard.otf') format("opentype");
   font-weight: normal;
   font-display: swap;
   font-style: normal;
