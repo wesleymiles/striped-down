@@ -15,4 +15,9 @@ location:
   state: Vermont
 ---
 
- 
+{% image "img/IMG_8413.JPG", "Lee Fields on stage with santa-themed support singers", " " %}
+
+Not a bad way to bring in the new year. 🎉
+
+{% image "img/IMG_8415.JPG", "Smiling couple", " " %}
+
