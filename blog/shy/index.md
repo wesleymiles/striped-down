@@ -2,7 +2,7 @@
 layout: blog.liquid
 title: The quiet ones
 description: 
-tags: ["posty","journal"]
+# tags: ["posty","journal"]
 date: 2025-01-01
 ---
 
