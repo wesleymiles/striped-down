@@ -1,4 +1,8 @@
 {
+  "trip report": {
+    "description": "I've started uploading some older trip reports with the criteria that they have to be semi-strenuous. Ever since becoming a dad, my hikes have become more local and photos less noteworthy.",
+    "customTemplate": "tripreports.liquid"
+  },
   "trip-report": {
     "description": "I've started uploading some older trip reports with the criteria that they have to be semi-strenuous. Ever since becoming a dad, my hikes have become more local and photos less noteworthy.",
     "customTemplate": "tripreports.liquid"

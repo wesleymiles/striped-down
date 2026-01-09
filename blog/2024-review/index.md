@@ -6,16 +6,6 @@ tags: ["post","journal"]
 date: 2025-01-01
 ---
 
-<section class="hero">
-
-
-
-
-</section>
-
-<section>
-    <div class="content-inner">
-
   		
 ## Summary
 

@@ -199,6 +199,60 @@ blockquote p {
   }
 }
 
+/* Boxed list with citation
+--------------------------------------------------- */
+.boxed-list {
+  position: relative;
+  padding: calc(var(--gap) * 1.5) calc(var(--gap) * 1.5) calc(var(--gap) * .5);
+  margin: calc(var(--gap) * 2) 0;
+  border-left: var(--border);
+  background-color: var(--bg-light-alt);
+  border-radius: var(--curve);
+}
+.boxed-list * {
+  font-size: 0.9em;
+}
+
+
+.boxed-list ul,
+.boxed-list ol {
+  margin: 0;
+  padding-left: calc(var(--gap) * 1.5);
+}
+
+.boxed-list li {
+  margin-bottom: calc(var(--gap) * 0.5);
+  
+}
+
+.boxed-list li:last-child {
+  margin-bottom: 0;
+}
+
+.boxed-list cite {
+  display: block;
+  /* margin-top: calc(var(--gap) * 1.5); */
+  /* padding-top: calc(var(--gap) * 1); */
+  /* border-top: var(--border); */
+  /* font-size: 0.9em; */
+  font-style: normal;
+  /* font-family: var(--sans-serif-system); */
+  /* color: var(--text-non-em); */
+}
+
+.boxed-list cite::before {
+  content: '— ';
+}
+
+@media only screen and (max-width: 800px) {
+  .boxed-list {
+    padding: var(--gap);
+    margin: var(--gap) 0;
+    border-left: none;
+    border: var(--border);
+  }
+}
+
 a {
   text-underline-offset: .25rem; 
   text-decoration-thickness: 0.03em;
@@ -373,10 +427,10 @@ h2 {
   font-size: 2em;
   font-weight: normal;
   letter-spacing: -1px;
-  margin: 0 0 2em;
+  margin: 0 0 1em;
   font-family: var(--serif-var), var(--serif-system);
 }
-  h2:not(:first-child) {  margin-top: 2em; }
+  h2:not(:first-child) {  margin-top: 3em; }
 
 
 h3 {

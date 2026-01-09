@@ -79,7 +79,7 @@
          {% for tag in tags %}
            {% if tag != 'post' %}
              <li>
-               <a href="/blog/tag/{{ tag | slugify }}/">{{ tag | unslugify }}</a>
+               <a href="/blog/tag/{{ tag | slugify }}/">{{ tag }}</a>
              </li>
            {% endif %}
          {% endfor %}

@@ -137,7 +137,49 @@ module.exports = function (eleventyConfig) {
   require("./src/taxonomy.js")(eleventyConfig);
 
   // ==================================================
-  // IMAGES COLLECTION (for art gallery)
+  // TAG COLLECTIONS FOR PAGINATION (handles tags with spaces)
+  // ==================================================
+  // Creates a collection of all tags with both original and slugified names
+  // This allows tags with spaces like "Digital sovereignty" to work properly
+  eleventyConfig.addCollection("allTags", function(collectionApi) {
+    const tagMap = new Map();
+    
+    // Get all posts
+    collectionApi.getAll().forEach(item => {
+      const tags = item.data.tags;
+      if (Array.isArray(tags)) {
+        tags.forEach(tag => {
+          if (tag && tag !== 'post' && tag !== 'homepage') {
+            const slugified = slugifyString(tag);
+            // Store original tag name, keyed by slugified version
+            if (!tagMap.has(slugified)) {
+              tagMap.set(slugified, tag);
+            }
+          }
+        });
+      }
+    });
+    
+    // Return array of objects with both original and slugified names
+    return Array.from(tagMap.entries()).map(([slug, original]) => ({
+      slug: slug,
+      original: original
+    })).sort((a, b) => a.slug.localeCompare(b.slug));
+  });
+
+  // ==================================================
+  // ART COLLECTION (for art blog posts)
+  // ==================================================
+  // Creates collections.art for posts tagged with "art"
+  // This is used by the RSS feed plugin
+  eleventyConfig.addCollection("art", function(collectionApi) {
+    return collectionApi.getFilteredByTag("art")
+      .filter(item => item.data.tags && item.data.tags.includes("post"))
+      .sort((a, b) => b.date - a.date);
+  });
+
+  // ==================================================
+  // IMAGES COLLECTION (for art gallery slideshow)
   // ==================================================
   eleventyConfig.addCollection("images", async (collectionApi) => {
     const artImgDir = path.join(__dirname, "art", "img");
@@ -191,6 +233,9 @@ module.exports = function (eleventyConfig) {
 // IMAGE SHORTCODES
 // ==================================================
 function resolveImagePath(src, pageContext) {
+  if (!src) {
+    throw new Error("Image shortcode requires a src parameter");
+  }
   if (src.startsWith("./") || (!src.startsWith("/") && !src.startsWith("http"))) {
     const currentPageDir = pageContext.page?.inputPath
       ? path.dirname(pageContext.page.inputPath)
@@ -202,6 +247,10 @@ function resolveImagePath(src, pageContext) {
 }
 
 eleventyConfig.addAsyncShortcode("image", async function (src, alt, caption = "", link = "") {
+  if (!src) {
+    console.warn("Image shortcode called without src parameter");
+    return "";
+  }
   const resolvedSrc = resolveImagePath(src, this);
   const processed = await processImage(resolvedSrc);
   const img = processed.full;
@@ -224,6 +273,9 @@ eleventyConfig.addAsyncShortcode("image", async function (src, alt, caption = ""
   eleventyConfig.setTemplateFormats(["html", "liquid", "njk", "md"]);
   eleventyConfig.setLibrary("md", markdownIt({ html: true, typographer: true }));
   eleventyConfig.addGlobalData("siteUrl", "https://wescarr.com");
+  
+  // Ignore README files (they're documentation, not content)
+  eleventyConfig.ignores.add("**/README.md");
 
   // Passthrough
   const passthroughPaths = [

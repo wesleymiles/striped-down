@@ -14,6 +14,9 @@
     "@11ty/eleventy": "^3.0.0",
     "@11ty/eleventy-img": "^6.0.4",
     "@11ty/eleventy-navigation": "^0.3.5",
+    "@atproto/api": "^0.18.8",
+    "axios": "^1.13.2",
+    "gray-matter": "^4.0.3",
     "html-minifier-terser": "^7.2.0"
   },
   "dependencies": {

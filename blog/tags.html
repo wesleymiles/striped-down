@@ -1,30 +1,32 @@
 ---
 pagination:
-  data: collections
+  data: collections.allTags
   size: 1
-  alias: tag
+  alias: tagData
   addAllPagesToCollections: true
 layout: blog.liquid
-permalink: /blog/tag/{{ tag }}/index.html
-eleventyComputed:
-  title: Posts tagged {{ tag | unslugify }}
-  description: "{{ tagDescriptions[tag].description }}"
+permalink: /blog/tag/{{ tagData.slug }}/index.html
 ---
 
 
 
 
-{% if page.url == '/blog/tag/trip-report/' %}
+{% if tagData.slug == 'trip-report' %}
 
   {% include 'tripreports.liquid' %}
   <h2>Browse by date</h2>
 
 {% endif %}
 
+{% if tagData.slug == 'art' %}
+
+  <p>Art blog posts featuring individual pieces with descriptions and process notes. For the full gallery slideshow, visit <a href="/art/">the art knoll</a>.</p>
+{% endif %}
+
 
 <ul class="archive-list">
 
-  {%- assign sortedPosts = collections[tag] | sortByEventDate -%}
+  {%- assign sortedPosts = collections[tagData.original] | sortByEventDate -%}
   {%- for post in sortedPosts -%}
    <li>
       <article class="archive-entry">

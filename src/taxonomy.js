@@ -125,8 +125,10 @@ module.exports = function (eleventyConfig) {
   function getSortDate(post) {
 	if (!post || !post.data) return new Date(0);
 	
-	// Check if it's a trip report
-	if (post.data.tags && post.data.tags.includes("trip-report") && post.data.trips?.dateHiked) {
+	// Check if it's a trip report (supports both "trip-report" and "trip report")
+	const tags = post.data.tags || [];
+	const isTripReport = tags.includes("trip-report") || tags.includes("trip report");
+	if (isTripReport && post.data.trips?.dateHiked) {
 	  return new Date(post.data.trips.dateHiked);
 	}
 	

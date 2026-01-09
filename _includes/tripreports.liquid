@@ -4,7 +4,8 @@
 
     <script>
         const tripData = [
-            {% for post in collections.trip-report %}
+            {% assign tripReportCollection = collections[tagData.original] | default: collections['trip-report'] | default: collections['trip report'] %}
+            {% for post in tripReportCollection %}
             {% if post.data.trips.peaks %}
             {
                 date: "{{ post.data.trips.dateHiked }}",

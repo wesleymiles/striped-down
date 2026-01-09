@@ -43,5 +43,43 @@ module.exports = {
 	if (Array.isArray(artist)) return artist.map(a => unslugify(a)).join(", ");
 	if (typeof artist === "string") return unslugify(artist);
 	return "";
+  },
+  
+  // Tag page computed properties (for tags with spaces)
+  tag: (data) => {
+	return data.tagData?.original || "";
+  },
+  title: (data) => {
+	// Only override title for tag pages
+	if (data.tagData) {
+	  return `Posts tagged ${data.tagData.original}`;
+	}
+	// Fall back to default title computation for other pages
+	const artist = data.concerts?.artist;
+	const venue = data.concerts?.venue;
+	let artistName = "";
+	if (Array.isArray(artist)) artistName = artist[0];
+	else if (typeof artist === "string") artistName = artist;
+	
+	if (data.title && artistName && venue) {
+	  return data.title
+		.replace("{{ concerts.artist }}", unslugify(artistName))
+		.replace("{{ concerts.venue }}", venue);
+	}
+	
+	if (artistName && venue) {
+	  return `${unslugify(artistName)} at ${venue}`;
+	}
+	return data.title;
+  },
+  description: (data) => {
+	// Only override description for tag pages
+	if (data.tagData) {
+	  const tagDescriptions = data.tagDescriptions || {};
+	  // Try original tag name first, then slugified version for backwards compatibility
+	  return tagDescriptions[data.tagData.original]?.description || 
+	         tagDescriptions[data.tagData.slug]?.description || "";
+	}
+	return data.description || "";
   }
 };
