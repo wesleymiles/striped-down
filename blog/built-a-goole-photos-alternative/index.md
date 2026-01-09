@@ -52,7 +52,7 @@ In the meantime I'd learned [TrueNAS](https://www.truenas.com) was the "right" t
 
 Again, I wish AI could have foreseen the common internet issues with TrueNAS \+ my hardware (anger emoji).
 
-So I went through the same Ubuntu installation as before, but this time everything worked. wifi drivers loaded immediately, with no need to use ethernet firstly. Docker installed without a hitch. Within two hours I had Ubuntu running and Immich deployed and accessible from my browser. 
+So I went through the same Ubuntu installation as before, but this time everything worked. Wifi drivers loaded immediately, with no need to use ethernet firstly. Docker installed without a hitch. Within two hours I had Ubuntu running and Immich deployed and accessible from my browser. 
 
 I set up Samba for network file sharing so the drives appear in Finder like any network storage. Then copied 57GB of photos over wifi (some from Google Photos exports, others from local backups). 
 
@@ -117,4 +117,5 @@ Then move to the final steps:
 * Maybe add Jellyfin for video streaming
 
 <br />
+
 Join me in [seizing the means of computation](https://www.versobooks.com/products/3035-the-internet-con). 
