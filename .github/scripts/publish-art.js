@@ -5,8 +5,62 @@ const axios = require('axios');
 const { BskyAgent } = require('@atproto/api');
 const { execSync } = require('child_process');
 
-async function getNewArtPosts() {
+async function getNewArtPosts(forceRepublish = false) {
   try {
+    if (forceRepublish) {
+      // If force republish, return all art posts with publishing flags enabled
+      const allArtFiles = execSync('find blog/art -name "index.md" -type f')
+        .toString()
+        .split('\n')
+        .filter(file => file.trim() !== '');
+      
+      // Filter to only posts with publishing flags enabled
+      const postsToPublish = [];
+      for (const file of allArtFiles) {
+        try {
+          const content = fs.readFileSync(file, 'utf8');
+          const { data } = matter(content);
+          if (data.blueskyPost || data.includeInNewsletter) {
+            postsToPublish.push(file);
+          }
+        } catch (error) {
+          // Skip files we can't read
+        }
+      }
+      return postsToPublish;
+    }
+    
+    // Check if we have a previous commit to compare against
+    let hasPreviousCommit = true;
+    try {
+      execSync('git rev-parse HEAD~1', { stdio: 'ignore' });
+    } catch (error) {
+      hasPreviousCommit = false;
+    }
+    
+    if (!hasPreviousCommit) {
+      console.log('No previous commit found - checking all art posts for publishing flags');
+      // First commit or manual trigger - check all posts
+      const allArtFiles = execSync('find blog/art -name "index.md" -type f')
+        .toString()
+        .split('\n')
+        .filter(file => file.trim() !== '');
+      
+      const postsToPublish = [];
+      for (const file of allArtFiles) {
+        try {
+          const content = fs.readFileSync(file, 'utf8');
+          const { data } = matter(content);
+          if (data.blueskyPost || data.includeInNewsletter) {
+            postsToPublish.push(file);
+          }
+        } catch (error) {
+          // Skip files we can't read
+        }
+      }
+      return postsToPublish;
+    }
+    
     // Get files changed in the last commit
     const changedFiles = execSync('git diff --name-only HEAD HEAD~1')
       .toString()
@@ -14,7 +68,34 @@ async function getNewArtPosts() {
       .filter(file => file.includes('blog/art/') && file.endsWith('.md'))
       .filter(file => file.trim() !== '');
     
-    return changedFiles;
+    // Check if publishing flags actually changed (not just the file)
+    const filesWithFlagChanges = [];
+    for (const file of changedFiles) {
+      try {
+        // Get the diff for this specific file
+        const diff = execSync(`git diff HEAD HEAD~1 -- "${file}"`)
+          .toString();
+        
+        // Check if blueskyPost or includeInNewsletter flags changed
+        const flagsChanged = 
+          /^\+.*blueskyPost:\s*true/m.test(diff) ||
+          /^\+.*includeInNewsletter:\s*true/m.test(diff) ||
+          /^[-+].*blueskyPost:/m.test(diff) ||
+          /^[-+].*includeInNewsletter:/m.test(diff);
+        
+        if (flagsChanged) {
+          filesWithFlagChanges.push(file);
+          console.log(`  ✓ Publishing flags changed in ${file}`);
+        } else {
+          console.log(`  ⏭️  Skipping ${file} - publishing flags unchanged (likely just content edit)`);
+        }
+      } catch (error) {
+        // If we can't check the diff, include it to be safe
+        filesWithFlagChanges.push(file);
+      }
+    }
+    
+    return filesWithFlagChanges;
   } catch (error) {
     // If no previous commit or no changes, return empty array
     console.log('No previous commit found or no changes detected');
@@ -122,7 +203,15 @@ async function createButtondownDraft(post, imageUrl, filePath) {
 async function main() {
   console.log('🎨 Checking for new art posts...\n');
   
-  const newFiles = await getNewArtPosts();
+  // Check if force republish was requested (from workflow_dispatch input)
+  const forceRepublish = process.env.INPUT_FORCE_REPUBLISH === 'true' || 
+                         process.argv.includes('--force-republish');
+  
+  if (forceRepublish) {
+    console.log('⚠️  Force republish mode: Will process all art posts\n');
+  }
+  
+  const newFiles = await getNewArtPosts(forceRepublish);
   
   if (newFiles.length === 0) {
     console.log('No new art posts found.');

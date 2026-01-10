@@ -5,6 +5,13 @@ on:
     branches: [main]
     paths:
       - 'blog/art/**/*.md'
+  workflow_dispatch:
+    inputs:
+      force_republish:
+        description: 'Force re-publish even if flags unchanged (for testing)'
+        required: false
+        default: 'false'
+        type: boolean
 
 jobs:
   publish:
@@ -29,5 +36,6 @@ jobs:
           BLUESKY_PASSWORD: ${{ secrets.BLUESKY_PASSWORD }}
           BUTTONDOWN_API_KEY: ${{ secrets.BUTTONDOWN_API_KEY }}
           SITE_URL: 'https://wescarr.com'  # Your actual site URL
+          INPUT_FORCE_REPUBLISH: ${{ inputs.force_republish }}
         run: node .github/scripts/publish-art.js
 

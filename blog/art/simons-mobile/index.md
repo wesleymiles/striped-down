@@ -11,7 +11,7 @@ imageAlt: "Gouache painting of a mobile station sign in front of city market, a 
 
 # Publishing options - set these to true when ready to publish
 blueskyPost: false
-includeInNewsletter: false
+includeInNewsletter: true
 socialCaption: "New piece finished! Experimenting with watercolor gradients 🎨"
 newsletterContent: |
   Hi everyone. So happy you signed up to join me on my journey of becoming a better artist. 

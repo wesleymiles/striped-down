@@ -48,6 +48,8 @@ You can use the image shortcode for additional images:
 
 ## Publishing Workflow
 
+### Automatic Publishing (Recommended)
+
 1. Create your art post in `blog/art/post-name/index.md`
 2. Add your image to `blog/art/post-name/img/artwork.jpg`
 3. Set `blueskyPost: true` and/or `includeInNewsletter: true` in front matter
@@ -55,6 +57,29 @@ You can use the image shortcode for additional images:
 5. The GitHub Action will automatically:
    - Post to Bluesky (if `blueskyPost: true`)
    - Create a draft in Buttondown (if `includeInNewsletter: true`)
+
+### Smart Change Detection
+
+The workflow only publishes when publishing flags change, not when you make content edits:
+- ✅ **Will publish**: Changing `includeInNewsletter: false` → `true`
+- ✅ **Will publish**: Changing `blueskyPost: false` → `true`
+- ❌ **Won't publish**: Fixing a typo in the content
+- ❌ **Won't publish**: Updating the description or newsletter content
+
+### Manual Trigger (For Testing/Re-publishing)
+
+To manually trigger the workflow or force re-publish all posts:
+
+1. Go to your GitHub repo → **Actions** tab
+2. Select **"Publish New Art"** workflow
+3. Click **"Run workflow"**
+4. Optionally check **"Force re-publish even if flags unchanged"** to process all posts
+5. Click **"Run workflow"**
+
+This is useful for:
+- Testing the workflow
+- Re-publishing to a larger audience
+- Processing posts that were skipped due to errors
 
 ## Notes
 
