@@ -28,7 +28,13 @@ jobs:
       
       - name: Install dependencies
         run: |
-          npm install gray-matter axios @atproto/api
+          mkdir -p .github/temp
+          cd .github/temp
+          echo '{"name":"temp","version":"1.0.0"}' > package.json
+          npm install --ignore-scripts gray-matter axios @atproto/api
+          cd ../..
+          # Symlink node_modules so the script can find the packages
+          ln -sf .github/temp/node_modules node_modules
       
       - name: Process and publish new art
         env:
