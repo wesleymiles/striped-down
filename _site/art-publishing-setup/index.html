@@ -1,0 +1,92 @@
+<h1>Art Publishing Automation Setup</h1>
+<h2>Directory Structure</h2>
+<p>Your site now supports two ways to display art:</p>
+<h3>1. Art Slideshow (Existing - Unchanged)</h3>
+<ul>
+<li><strong>Location</strong>: <code>art/img/</code></li>
+<li><strong>Purpose</strong>: Automatic gallery slideshow at <code>/art/</code></li>
+<li><strong>How it works</strong>: All images in <code>art/img/</code> are automatically collected into <code>collections.images</code> and displayed in a PhotoSwipe gallery</li>
+<li><strong>Status</strong>: ✅ Keep using this as-is</li>
+</ul>
+<h3>2. Art Blog Posts (New)</h3>
+<ul>
+<li><strong>Location</strong>: <code>blog/art/post-name/index.md</code></li>
+<li><strong>Purpose</strong>: Individual art posts with descriptions, newsletter content, and social sharing</li>
+<li><strong>How it works</strong>: Posts with <code>tags: [&quot;post&quot;, &quot;art&quot;]</code> appear in <code>collections.art</code> and <code>collections.post</code></li>
+<li><strong>Status</strong>: ✅ Ready to use</li>
+</ul>
+<h2>Integration with Your Site</h2>
+<h3>Collections</h3>
+<ul>
+<li><strong><code>collections.images</code></strong>: Still pulls from <code>art/img/</code> for the slideshow (unchanged)</li>
+<li><strong><code>collections.art</code></strong>: New collection for art blog posts (posts with <code>tags: [&quot;post&quot;, &quot;art&quot;]</code>)</li>
+<li><strong><code>collections.post</code></strong>: Art posts automatically included (they have <code>tags: [&quot;post&quot;, &quot;art&quot;]</code>)</li>
+</ul>
+<h3>RSS Feed</h3>
+<ul>
+<li>Your existing art RSS feed (<code>/art-feed.xml</code>) now uses <code>collections.art</code></li>
+<li>It will include both old art posts (like <code>snow-barn</code>) and new ones from <code>blog/art/</code></li>
+</ul>
+<h3>URLs</h3>
+<ul>
+<li>Art posts follow your existing permalink pattern: <code>/blog/art/post-name/</code></li>
+<li>Slideshow remains at <code>/art/</code></li>
+</ul>
+<h2>Creating an Art Post</h2>
+<ol>
+<li>Create directory: <code>blog/art/my-artwork/</code></li>
+<li>Create <code>index.md</code> with front matter (see <code>blog/art/README.md</code> for template)</li>
+<li>Add image to <code>blog/art/my-artwork/img/artwork.jpg</code></li>
+<li>Reference image in front matter: <code>image: img/artwork.jpg</code></li>
+<li>Set <code>blueskyPost: true</code> and/or <code>includeInNewsletter: true</code> if you want automation</li>
+<li>Commit and push</li>
+</ol>
+<h2>Automation Setup</h2>
+<h3>Step 1: Add GitHub Secrets</h3>
+<p>Go to your GitHub repo → Settings → Secrets and variables → Actions, add:</p>
+<ul>
+<li><code>BLUESKY_USERNAME</code>: Your full Bluesky handle (e.g., <code>username.bsky.social</code>)</li>
+<li><code>BLUESKY_PASSWORD</code>: Your Bluesky app password</li>
+<li><code>BUTTONDOWN_API_KEY</code>: Your Buttondown API key</li>
+</ul>
+<h3>Step 2: Update Site URL</h3>
+<p>Edit <code>.github/workflows/publish-art.yml</code> and update:</p>
+<pre><code class="language-yaml">SITE_URL: 'https://wescarr.com'  # Your actual site URL
+</code></pre>
+<h3>Step 3: Test</h3>
+<ol>
+<li>Create a test art post in <code>blog/art/test-post/</code></li>
+<li>Set <code>blueskyPost: false</code> and <code>includeInNewsletter: false</code> initially</li>
+<li>Commit and push</li>
+<li>Verify the post appears on your site</li>
+<li>Then set the flags to <code>true</code> and push again to test automation</li>
+</ol>
+<h2>Workflow</h2>
+<h3>Daily Art Publishing</h3>
+<ol>
+<li>Create art</li>
+<li>Save image to <code>blog/art/post-name/img/artwork.jpg</code></li>
+<li>Create <code>blog/art/post-name/index.md</code> with details</li>
+<li>Set <code>blueskyPost: true</code> and/or <code>includeInNewsletter: true</code></li>
+<li><code>git add</code>, <code>git commit</code>, <code>git push</code></li>
+<li>Check Bluesky - post is live automatically!</li>
+<li>Go to Buttondown, review draft, hit send when ready</li>
+</ol>
+<h3>Quick Art (Slideshow Only)</h3>
+<ul>
+<li>Just drop images in <code>art/img/</code> (existing workflow, unchanged)</li>
+</ul>
+<h2>Files Created</h2>
+<ul>
+<li><code>.github/workflows/publish-art.yml</code> - GitHub Action workflow</li>
+<li><code>.github/scripts/publish-art.js</code> - Publishing script</li>
+<li><code>blog/art/README.md</code> - Detailed documentation</li>
+<li><code>blog/art/example-post/index.md</code> - Example template (delete when ready)</li>
+</ul>
+<h2>Notes</h2>
+<ul>
+<li>Art posts use your existing <code>blog.liquid</code> layout</li>
+<li>They appear in your blog navigation and RSS feeds</li>
+<li>The slideshow at <code>/art/</code> continues to work independently</li>
+<li>Both systems can coexist - use slideshow for quick dumps, blog posts for featured pieces</li>
+</ul>
