@@ -174,6 +174,18 @@ async function publishToBluesky(post, imagePath) {
 
 async function createButtondownDraft(post, imageUrl, filePath) {
   try {
+    // Check if API key is set
+    if (!process.env.BUTTONDOWN_API_KEY) {
+      console.error('✗ Buttondown error: BUTTONDOWN_API_KEY environment variable is not set');
+      return false;
+    }
+    
+    // Check if newsletter content exists
+    if (!post.newsletterContent) {
+      console.error('✗ Buttondown error: newsletterContent is missing in front matter');
+      return false;
+    }
+    
     // Convert newsletter content to HTML
     const contentParagraphs = post.newsletterContent
       .split('\n')
@@ -194,6 +206,10 @@ async function createButtondownDraft(post, imageUrl, filePath) {
       <p style="margin-top: 30px;"><a href="${postUrl}">View on my website →</a></p>
     `;
     
+    console.log('  Creating Buttondown draft...');
+    console.log('  Subject:', `New artwork: ${post.title}`);
+    console.log('  Image URL:', imageUrl);
+    
     const response = await axios.post(
       'https://api.buttondown.email/v1/emails',
       {
@@ -210,10 +226,20 @@ async function createButtondownDraft(post, imageUrl, filePath) {
     );
     
     console.log('✓ Created Buttondown draft:', post.title);
+    console.log('  Draft ID:', response.data?.id || 'unknown');
     console.log('  Review at: https://buttondown.email/emails');
     return true;
   } catch (error) {
-    console.error('✗ Buttondown error:', error.response?.data || error.message);
+    console.error('✗ Buttondown error:');
+    if (error.response) {
+      console.error('  Status:', error.response.status);
+      console.error('  Data:', JSON.stringify(error.response.data, null, 2));
+    } else if (error.request) {
+      console.error('  Request made but no response received');
+      console.error('  Message:', error.message);
+    } else {
+      console.error('  Error:', error.message);
+    }
     return false;
   }
 }
