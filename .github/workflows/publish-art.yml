@@ -35,12 +35,13 @@ jobs:
           npm install --ignore-scripts gray-matter axios @atproto/api
       
       - name: Process and publish new art
+        working-directory: ${{ github.workspace }}
         env:
           BLUESKY_USERNAME: ${{ secrets.BLUESKY_USERNAME }}
           BLUESKY_PASSWORD: ${{ secrets.BLUESKY_PASSWORD }}
           BUTTONDOWN_API_KEY: ${{ secrets.BUTTONDOWN_API_KEY }}
           SITE_URL: 'https://wescarr.com'  # Your actual site URL
           INPUT_FORCE_REPUBLISH: ${{ inputs.force_republish }}
-          NODE_PATH: ${{ github.workspace }}/.github/temp/node_modules
-        run: node .github/scripts/publish-art.js
+        run: |
+          NODE_PATH=${{ github.workspace }}/.github/temp/node_modules:$NODE_PATH node .github/scripts/publish-art.js
 
