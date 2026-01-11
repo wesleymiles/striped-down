@@ -32,9 +32,6 @@ jobs:
           cd .github/temp
           echo '{"name":"temp","version":"1.0.0"}' > package.json
           npm install --ignore-scripts gray-matter axios @atproto/api
-          cd ../..
-          # Symlink node_modules so the script can find the packages
-          ln -sf .github/temp/node_modules node_modules
       
       - name: Process and publish new art
         env:
@@ -43,5 +40,6 @@ jobs:
           BUTTONDOWN_API_KEY: ${{ secrets.BUTTONDOWN_API_KEY }}
           SITE_URL: 'https://wescarr.com'  # Your actual site URL
           INPUT_FORCE_REPUBLISH: ${{ inputs.force_republish }}
+          NODE_PATH: ${{ github.workspace }}/.github/temp/node_modules
         run: node .github/scripts/publish-art.js
 
