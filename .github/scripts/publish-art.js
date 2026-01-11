@@ -1,9 +1,24 @@
 const fs = require('fs');
 const path = require('path');
+const { execSync } = require('child_process');
+
+// Add temp node_modules to module resolution path BEFORE requiring any modules
+const tempModulesPath = path.join(__dirname, '..', 'temp', 'node_modules');
+if (fs.existsSync(tempModulesPath)) {
+  const Module = require('module');
+  // Override _nodeModulePaths to prioritize temp node_modules
+  const originalNodeModulePaths = Module._nodeModulePaths;
+  Module._nodeModulePaths = function(from) {
+    const paths = originalNodeModulePaths.call(this, from);
+    // Add temp node_modules at the beginning
+    paths.unshift(tempModulesPath);
+    return paths;
+  };
+}
+
 const matter = require('gray-matter');
 const axios = require('axios');
 const { BskyAgent } = require('@atproto/api');
-const { execSync } = require('child_process');
 
 async function getNewArtPosts(forceRepublish = false) {
   try {
