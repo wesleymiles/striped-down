@@ -53,9 +53,12 @@ async function getNewArtPosts(forceRepublish = false) {
       hasPreviousCommit = false;
     }
     
-    if (!hasPreviousCommit) {
-      console.log('No previous commit found - checking all art posts for publishing flags');
-      // First commit or manual trigger - check all posts
+    // Check if this is a manual trigger (workflow_dispatch)
+    const isManualTrigger = process.env.GITHUB_EVENT_NAME === 'workflow_dispatch';
+    
+    if (!hasPreviousCommit || isManualTrigger) {
+      console.log('Manual trigger or no previous commit - checking all art posts for publishing flags');
+      // Manual trigger or first commit - check all posts
       const allArtFiles = execSync('find blog/art -name "index.md" -type f')
         .toString()
         .split('\n')
