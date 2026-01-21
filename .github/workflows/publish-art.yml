@@ -1,17 +1,21 @@
 name: Publish New Art
 
-on:
-  push:
-    branches: [main]
-    paths:
-      - 'blog/art/**/*.md'
-  workflow_dispatch:
-    inputs:
-      force_republish:
-        description: 'Force re-publish even if flags unchanged (for testing)'
-        required: false
-        default: 'false'
-        type: boolean
+# Automation disabled - uncomment below to re-enable
+# on:
+#   push:
+#     branches: [main]
+#     paths:
+#       - 'blog/art/**/*.md'
+#   workflow_dispatch:
+#     inputs:
+#       force_republish:
+#         description: 'Force re-publish even if flags unchanged (for testing)'
+#         required: false
+#         default: 'false'
+#         type: boolean
+
+# Temporarily disabled - no triggers
+on: {}
 
 jobs:
   publish:

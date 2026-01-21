@@ -1,7 +1,7 @@
 ---
 layout: blog.liquid
 title: Revamping 2 local logos
-description: I redesigned the logos of three local businesses without their input or consent
+description: Redesigned the logos of local businesses to review my workflow	
 tags: ["post", "design"]
 date: 2023-08-04 
 ---

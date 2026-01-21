@@ -28,7 +28,7 @@ location:
 
 {% image "img/IMG_2613.jpg", "Hiking photo from 2024-02-22", "Grey skies on top. Looking to the northwest toward lake champlain." %}
 
-{% image "img/IMG_2614.jpg", "Hiking photo from 2024-02-22", "Selfie with the sun breaking throug" %}
+{% image "img/IMG_2614.jpg", "Hiking photo from 2024-02-22", "Selfie with the sun breaking through" %}
 
 {% image "img/IMG_2616.jpg", "Hiking photo from 2024-02-22", "Spying Mt. Mansfield and its ski resorts to the north" %}
 
