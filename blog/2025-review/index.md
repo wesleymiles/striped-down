@@ -6,7 +6,8 @@ tags: ["post","journal"]
 date: 2026-03-01
 ---
 
-This year I printed a 2025 photo book for the family and a 373 page book for all my instagram photos, Analog-insta. For that I used the service [Lulu](https://www.lulu.com/). I also did a ton of drawings this year. I had plenty of references to review the year in prepping this post. 
+
+This year I printed a 2025 photo book for the family and a 373 page book for all my instagram photos, Analog-insta. (For that I used the service [Lulu](https://www.lulu.com/).) I also did a ton of drawings this year, so I had plenty of references to remind me what happened this year.
 
 
 ## Practice
@@ -33,6 +34,8 @@ This is the second year I've (mostly) stopped drinking. I probably had 6 drinks 
 
 
 Work was harder this year. There's a particular frustration that comes when something you care about gets disrupted by forces that don't seem to care much about the actual work. An AI mandate came down without the project management infrastructure to support it. It felt chaotic. Priorities shifted. Clarity evaporated. But our team dug in and persevered which made it feel like we were all in it together and that brought us closer. It was the most frustrated I've been at the company.
+
+On the flip, the most rewarding times at work were doing research. I went for the third year in a row to Red Hat's conference as a researcher. As a remote worker, that face to face time with people who use what we build is so powerful. For all the reasons user research is powerful: you hear what works and what doesn't directly. No synthetic voices, no spinning your wheels in your remote-work bubble. In addition, I ran two card sort studies and continue to maintain an ongoing feedback mechanism on the site. 
 
 Also, side-work ramped up.
 
