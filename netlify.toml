@@ -1,0 +1,7 @@
+# Match Netlify's build environment for reproducible deploys
+[build]
+  # npm ci ensures exact lockfile install (prevents "works locally, fails on Netlify")
+  command = "npm ci && eleventy"
+
+[build.environment]
+  NODE_VERSION = "20"
