@@ -2,6 +2,9 @@
   "name": "package",
   "version": "1.0.0",
   "description": "\"With a package.json, you can install packages locally. –11ty",
+  "engines": {
+    "node": ">=20"
+  },
   "main": ".eleventy.js",
   "scripts": {
     "start": "npx eleventy --serve",
@@ -31,7 +34,7 @@
     "markdown-it": "^13.0.1",
     "photoswipe": "^5.4.4",
     "punycode": "^2.3.1",
-    "sharp": "^0.32.1"
+    "sharp": "^0.33.0"
   },
   "repository": {
     "type": "git",
