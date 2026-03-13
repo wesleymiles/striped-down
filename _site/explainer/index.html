@@ -1,0 +1,53 @@
+<h2>.eleventy.js</h2>
+<ul>
+<li>Main Configuration Hub</li>
+<li>What goes here:
+<ul>
+<li>Plugins</li>
+<li>Import/require other config files</li>
+<li>Global settings (template formats, markdown config)</li>
+<li>Core filters that are site-wide utilities (like postDate, parseElevation)</li>
+<li>Shortcodes</li>
+<li>Passthrough copy</li>
+</ul>
+</li>
+</ul>
+<h2>taxonomies.js</h2>
+<ul>
+<li>Content Classification System, the filing system and label maker</li>
+<li>What goes here:
+<ul>
+<li>Collections that group content (artists, venues, peaks, states, towns)</li>
+<li>Filters specific to those taxonomies (primaryArtist, allArtists, formatPeaks)</li>
+<li>Helper functions for taxonomy data transformation</li>
+<li>Anything that answers “what are all the X in my content?”</li>
+</ul>
+</li>
+<li>How it works
+<ul>
+<li>Collections are created in src/taxonomy.js:
+<ul>
+<li>collections.artists — unique artist names from all posts’ concerts.artist, and so on</li>
+</ul>
+</li>
+<li>Pagination templates generate the pages:
+<ul>
+<li>src/artist.liquid — paginates over collections.artists to create one page per artist</li>
+</ul>
+</li>
+<li>Each generated page:
+<ul>
+<li>Uses the permalink pattern to create URLs like /artist/diiv/ or /venue/arts-riot/</li>
+<li>Lists all posts that match that artist or venue</li>
+</ul>
+</li>
+<li>This is a standard Eleventy pattern for taxonomy/archive pages: create a collection of unique values, then paginate over it to generate one page per value.</li>
+</ul>
+</li>
+</ul>
+<h2>eleventyComputed.js</h2>
+<ul>
+<li>This makes my front matter support multiple artists without mucking up the template with code</li>
+</ul>
+<h2>Future?</h2>
+<p>“Is this about processing images?” → images.js (or keep in .eleventy.js if small)</p>

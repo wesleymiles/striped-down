@@ -1,4 +1,5 @@
-.eleventy.js
+## .eleventy.js
+
 - Main Configuration Hub
 - What goes here:
 	- Plugins 
@@ -9,7 +10,8 @@
 	- Passthrough copy
 	
 	
-taxonomies.js
+## taxonomies.js
+
 - Content Classification System, the filing system and label maker
 - What goes here:
 	- Collections that group content (artists, venues, peaks, states, towns)
@@ -27,18 +29,11 @@ taxonomies.js
 	- This is a standard Eleventy pattern for taxonomy/archive pages: create a collection of unique values, then paginate over it to generate one page per value.
 	
 
-eleventyComputed.js
+## eleventyComputed.js
+
 - This makes my front matter support multiple artists without mucking up the template with code
 
 
-Future? 
+## Future? 
 "Is this about processing images?" → images.js (or keep in .eleventy.js if small)
 
-
-ART PUBLISHING AUTOMATION
-- Art blog posts go in blog/art/post-name/index.md
-- Art slideshow images continue to go in art/img/ (unchanged)
-- Posts with tags: ["post", "art"] appear in collections.art
-- GitHub Action watches blog/art/**/*.md for new posts
-- Set blueskyPost: true and/or includeInNewsletter: true in front matter
-- See blog/art/README.md for full details

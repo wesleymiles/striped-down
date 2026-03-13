@@ -163,7 +163,7 @@ blockquote {
     font-weight: 400;
   }
 
-blockquote p {
+blockquote {
   font-size: 1.2em;
   font-style: italic;
   margin-bottom: 2em;
@@ -179,7 +179,7 @@ blockquote p {
     font-size: 20px;
     font-style: normal;
     font-family: var(--sans-serif-system);
-    font-size: .8em;
+    font-size: .7em;
   }
   blockquote cite::before {
     content:'\2014';
