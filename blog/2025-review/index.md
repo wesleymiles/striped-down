@@ -24,6 +24,10 @@ Flipping through my sketchbooks and pads, I count 114 drawings across the year. 
 
 Here's one thing: I don't experience creating art as "fun." That word gets thrown at me a lot. "What a fun hobby." But it's often a pain in the ass. The urge doesn't feel like joy oddly, but like something that needs doing, and I'm the one who has to do it. The work is urgent in a way that doesn't care whether I'm in the mood. I’m sure many artists, poets, and writers can articulate the urge better than I.
 
+> Artists don't get down to work until the pain of working is exceeded by the pain of not working
+> <cite>Stephen De Staebler, sculptor, from Art & fear</cite>
+
+
 Looking at what I'm actually drawn to has started clarifying where I want to grow. What my art lacks currently is a point, a reason, a narrative. The stuff they teach you in art school. Here's to practicing that next year.
 
 This is the second year I've (mostly) stopped drinking. I probably had 6 drinks over the year. Maybe sobriety made space for the drawing to become urgent? Could be. Drinks numbers are down, drawings up.
@@ -79,7 +83,6 @@ I'm halfway through Pynchon's Gravity's Rainbow. It's the kind of book that dema
 
 
 > It remains a difficult novel to critique (or even to read), not only because of the myriad subjects it covers, but also due to the lack of an obvious storyline. Critics often focus on Gravity’s Rainbow as a “text”, or on its meta-textual effects. Its “plot” is difficult to summarize. It is clearly not a traditional novel. However, despite its unusual structure and density of language, clearly one of the main themes that emerges in Gravity’s Rainbow is the prevalence of corporate power and its attendant technologies. Corporate power crosses national lines, even (especially?) during times of war, even during World War II.
->
 > <cite>Dan Gegges, [The Satirist](https://www.thesatirist.com/books/GravitysRainbow.html#_Toc328677260)</cite>
 
 I've become interested in tackling a hard book every once in a while, the kind that won't let you coast. I don't know why I punish myself so. Before this, I finished the [postmodern](https://oyc.yale.edu/english/engl-291) Yale online course syllabus, which I started last year. It led me down a few tangents not on the list. I read In Cold Blood, then naturally went to the Capote film about the author, then the 1967 adaptation of the book, then Badlands with Martin Sheen. These stories tried to understand the fear of the late 1950s, due to brutal murders by individuals that weren't easily painted as bad. A strange thing to sit with now, when murder has become normalized. Our fear generalized.
@@ -93,7 +96,6 @@ Then I went east and picked up meditation again, pairing it with a Zen-buddhism 
 
 
 > In their brief time together Slothrop forms the impression that this octopus is not in good mental health, though where's his basis for comparing?”
->
 > <cite>Thomas Pynchon, Gravity’s Rainbow</cite>
 
 
