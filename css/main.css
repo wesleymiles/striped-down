@@ -351,21 +351,25 @@ ol {
     counter-increment: my-awesome-counter;
     position: relative;
     margin-bottom: 1em;
+    margin-left: .5em;
   }
     ol > li::before {
       content: counter(my-awesome-counter);
       color: #FFFADB;
       position: absolute;
       --size: 20px;
-      left: -24px;
+      left: -30px;
       line-height: var(--size);
       width: var(--size);
       height: var(--size);
-      top: 4px;
+      top: 8px;
       background: #466a79;
       border-radius: 50%;
       text-align: center;  
       font-size: 0.7em;
+    }
+    ol > li h4 {
+      margin-bottom: 0;
     }
     ol > li ul {
       margin-top: .3em;
@@ -1922,6 +1926,30 @@ Styles for https://photoswipe.com slideshow too
   }
   #gallery > ul > li:nth-child(7n) a {
     height: 300px;
+  }
+}
+
+/* Static gallery: no links, no enlargement, keeps cascading layout */
+#gallery.gallery--static img {
+  cursor: default;
+}
+#gallery.gallery--static img:hover {
+  transform: none;
+}
+#gallery.gallery--static > ul > li:nth-child(7n) {
+  grid-column: auto;
+}
+#gallery.gallery--static li {
+  display: block;
+  line-height: 0;
+  height: 300px;
+  max-height: 300px;
+  overflow: hidden;
+  border-radius: 8px;
+}
+@media (max-width: 900px) {
+  #gallery.gallery--static li {
+    height: 200px;
   }
 }
 
