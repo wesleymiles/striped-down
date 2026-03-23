@@ -72,13 +72,9 @@ I wrote more about <a href="/blog/gift/">freelancing in the gift here</a>.
 </ol>
 
 
-## Need proof that branding works?
-
-Here's my favorite example. I had the pleasure of working with this branding company's logos before. They track the impact of their logos in terms of client revenue. See the <a href="https://www.kickcharge.com/portfolio/client-stats/" class="external" >GIGANTIC percentage increases</a> on fifty rebrands. 
-
 <div class="faq">
 
-## FAQ
+## Questions & answers
 
 <details>
   <summary> Branding? Logos? Do we need it?  </summary>
