@@ -72,52 +72,51 @@ I wrote more about <a href="/blog/gift/">freelancing in the gift here</a>.
 </ol>
 
 
-<div class="faq">
-
 ## Questions & answers
 
-<details>
-  <summary> Branding? Logos? Do we need it?  </summary>
-  <div>
+<div class="faq">
+  <details>
+    <summary> Branding? Logos? Do we need it?  </summary>
+    <div>
 
-    Here's my favorite example. 
-    
-    I had the pleasure of working with this branding company's logos before. They track the impact of their logos in terms of client revenue. See the <a href="https://www.kickcharge.com/portfolio/client-stats/" class="external" >GIGANTIC percentage increases</a> on fifty rebrands. 
+      Here's my favorite example. 
+      
+      I had the pleasure of working with this branding company's logos before. They track the impact of their logos in terms of client revenue. See the <a href="https://www.kickcharge.com/portfolio/client-stats/" class="external" >GIGANTIC percentage increases</a> on fifty rebrands. 
 
-  </div>
-</details>
-
-<details>
-  <summary >Why me? </summary>
-  <div>
-
-    In the last 10 years, I helped 322 orgs create a positive, memorable impression. Half a dozen have taken a jump into the gift-world with me.
-  
-    Behind this idea is an urge to help small local orgs succeed. 
-  
-    I want to give that old pizza shop getting cornered by Chili’s and Texas Roadhouse a fighting chance.
-  
-    I aim to help you expand your reach by creating a crunchy promise your potential customers can sink your teeth into.
-
-    Lastly, taste. This is a real reason why people hire designers. I know what good design looks like and can help channel your vision into something pleasing.
-  </div>
-</details>
-
-<details>
-  <summary> Why are logos magic?</summary>
-  <div>
-
-    They have the power to communicate your values, philosophy, reputation, and what customers can expect by using succinct imagery.
-    
-    Your logo is the core of your brand.
-    
-    Branding is the whole thing - the combination of messaging and visuals you consistently use.
-    
-    With this service, it’s up to <i>you</i> to apply and express the logo in ways that resonate with your audience. 
-    
-    It’s also up to you to back up the promise of a logo with action. 
     </div>
-</details>
+  </details>
+
+  <details>
+    <summary >Why me? </summary>
+    <div>
+
+      In the last 10 years, I helped 322 orgs create a positive, memorable impression. Half a dozen have taken a jump into the gift-world with me.
+    
+      Behind this idea is an urge to help small local orgs succeed. 
+    
+      I want to give that old pizza shop getting cornered by Chili’s and Texas Roadhouse a fighting chance.
+    
+      I aim to help you expand your reach by creating a crunchy promise your potential customers can sink your teeth into.
+
+      Lastly, taste. This is a real reason why people hire designers. I know what good design looks like and can help channel your vision into something pleasing.
+    </div>
+  </details>
+
+  <details>
+    <summary> Why are logos magic?</summary>
+    <div>
+
+      They have the power to communicate your values, philosophy, reputation, and what customers can expect by using succinct imagery.
+      
+      Your logo is the core of your brand.
+      
+      Branding is the whole thing - the combination of messaging and visuals you consistently use.
+      
+      With this service, it’s up to <i>you</i> to apply and express the logo in ways that resonate with your audience. 
+      
+      It’s also up to you to back up the promise of a logo with action. 
+      </div>
+  </details>
 
 </div>
 
