@@ -19,6 +19,11 @@ location:
   state: Vermont
 ---
 
+{% image "img/gladie.jpg", "Gladie up on stage", "GLADIE" %}
+
+{% image "img/gladie-2.jpg", "Gladie smiling during banter", "GLADIE" %}
+
+
 Peter Helmis the frontman said it's been 17 years since they were in burlington. And after that show then, the b-town cops hassled them for sleeping on the beach on a mattress of beer bottles. The internet disagrees with the timing, saying it's been 13 years, when they came with Joyce Manor at the now defunt [Memorial Auditorium](https://bigheavyworld.com/242main) (never got to see a show there.) Either way, we're glad to have them back. I don't doubt the beach police part though.
 
 {% image "img/algernon-cadwallader-3.jpg", "Algernon Cadwallader on stage", " " %}
@@ -45,6 +50,3 @@ I already want to check out the documentary "Let the Fire Burn" about the 1985 b
 
 
 
-{% image "img/gladie.jpg", "Gladie up on stage", "GLADIE" %}
-
-{% image "img/gladie-2.jpg", "Gladie smiling during banter", "GLADIE" %}
