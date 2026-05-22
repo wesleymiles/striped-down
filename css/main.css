@@ -1529,7 +1529,7 @@ body.modal-open {
     section.library article h2 {
       margin-bottom: 0;
       font-size: 1.2em;
-      font-weight: normal;
+      font-weight: 400;
     }
 
       /*  scoping the years only */
@@ -1538,11 +1538,13 @@ body.modal-open {
         display: block;
         vertical-align: bottom;
       }
-      /*  scoping the author only */
-      section.library article header span.book-intro h2 :nth-child(1)  {
+
+      section.library article header span.book-intro h2 span.book-title  {
         font-weight: 700;
       }
-
+    section.library article header span.book-intro h2 span.book-author  {
+        font-size: .9em;
+      }
 
      section.library article header {
         flex-grow: 1;

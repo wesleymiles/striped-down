@@ -6,7 +6,7 @@ eleventyComputed:
 tags: 
   - post
   - concert
-date: 2016-03-12
+date: 2026-03-30
 concerts:
   event-date: 2026-03-09
   venue: Higher Ground

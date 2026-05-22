@@ -1,0 +1,58 @@
+{
+  "version": 1,
+  "notes": "Canonical slugs for the radical comics library (/blog/non-fiction-comics). Use `id` values in article data-tags, comicsLtTagOverrides.json, and filter JS — never rename ids once books reference them; add new ids instead.",
+  "groups": {
+    "form": "How the book works narratively (genre-ish).",
+    "theme": "What it is mainly about (your editorial lens)."
+  },
+  "tags": [
+    {
+      "id": "adaptation",
+      "label": "Adaptation",
+      "group": "form",
+      "hint": "Graphic adaptation of existing prose, reportage, or classics."
+    },
+    {
+      "id": "biography",
+      "label": "Biography",
+      "group": "form",
+      "hint": "Lives of others; documentary biography."
+    },
+    {
+      "id": "journalism",
+      "label": "Journalism",
+      "group": "form",
+      "hint": "Reported nonfiction comics / comics journalism."
+    },
+    {
+      "id": "memoir",
+      "label": "Memoir",
+      "group": "form",
+      "hint": "First-person nonfiction."
+    },
+    {
+      "id": "identity",
+      "label": "Identity",
+      "group": "theme",
+      "hint": "Race, gender, migration, belonging, selfhood."
+    },
+    {
+      "id": "social",
+      "label": "Social issues",
+      "group": "theme",
+      "hint": "Structural inequality, policy, collective struggle — broad social nonfiction lens."
+    },
+    {
+      "id": "resistance",
+      "label": "Resistance",
+      "group": "theme",
+      "hint": "Organizing, dissent, liberation struggles (collective or systemic)."
+    },
+    {
+      "id": "war",
+      "label": "War",
+      "group": "theme",
+      "hint": "Conflict, militarism, aftermath."
+    }
+  ]
+}

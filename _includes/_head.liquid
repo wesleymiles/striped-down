@@ -40,20 +40,22 @@
 	{% endif %}
 
 	<meta property="og:title" content="{{ title }}"/>
-	<meta property="og:url" content="{{ page.url | url }} "/>
+	<link rel="canonical" href="{{ siteUrl }}{{ page.url }}" />
+	<meta property="og:url" content="{{ siteUrl }}{{ page.url }}"/>
+	<meta property="og:type" content="website"/>
+	<meta name="twitter:card" content="summary_large_image"/>
 	{% if description %}
 		{% assign descriptionPlain = description | strip_html %}
 		<meta property="og:description" content="{{ descriptionPlain }}"/>
 	{% endif %}
 
 
-<meta property="og:image" content="{{ siteUrl | append: '/img/social/' | append: page.fileSlug | append: '.jpg' }}">
+<meta property="og:image" content="{{ ogImageUrl }}"/>
+	<meta name="twitter:image" content="{{ ogImageUrl }}"/>
 
-<link rel="preload" as="font" type="font/woff2" crossorigin href="{{ '/fonts/BagnardSans.otf' | url }}">
-<link rel="preload" as="font" type="font/woff2" crossorigin href="{{ '/fonts/Bagnard.otf' | url }}">
-<link rel="preload" as="font" type="font/woff2" crossorigin href="{{ '/fonts/PublicSans-Light.ttf' | url }}">
-<link rel="preload" as="font" type="font/woff2" crossorigin href="{{ '/fonts/PublicSans-Medium.ttf' | url }}">
-<link rel="preload" as="font" type="font/woff2" crossorigin href="{{ '/fonts/PublicSans-Regular.ttf' | url }}">
+<link rel="preload" as="font" type="font/otf" crossorigin href="{{ '/fonts/BagnardSans.otf' | url }}">
+<link rel="preload" as="font" type="font/otf" crossorigin href="{{ '/fonts/Bagnard.otf' | url }}">
+<link rel="preload" as="font" type="font/ttf" crossorigin href="{{ '/fonts/PublicSans-Regular.ttf' | url }}">
 
 
     <link rel="stylesheet" href="{{ '/css/main.css' | url }}">
@@ -68,9 +70,9 @@
 <!-- <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&display=swap" rel="stylesheet"> -->
 <!-- <link href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet"> -->
 
-    <link rel="icon" href="/img/favicon.ico">
-	<link rel="icon" href="/img/icon.svg" type="image/svg+xml">
-	<link rel="apple-touch-icon" href="/img/apple-touch-icon.png">
+    <link rel="icon" href="{{ '/favicon.ico' | url }}" sizes="48x48">
+	<link rel="icon" href="{{ '/img/icon.svg' | url }}" type="image/svg+xml">
+	<link rel="apple-touch-icon" href="{{ '/apple-touch-icon.png' | url }}">
 
   </head>
 

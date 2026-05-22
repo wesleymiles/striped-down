@@ -3,8 +3,8 @@ layout: layout.liquid
 title: Logos
 description: A sample of logos and branding
 tags: design
-# eleventyNavigation: 
-  # key: Logo in-a-week
+eleventyNavigation: 
+  key: Logos
 ---
 
 
@@ -17,21 +17,26 @@ tags: design
 
   <div id="gallery" class="grid bleed gallery--static">
   <ul>
-    <li><img src="/img/speedy/branding/ginger-woodworks-1.jpg" alt="A wood inlay on a piece of furniture with Ginger Woodworks logo visible" /></li>
-    <li><img src="/img/speedy/branding/ginger-woodworks-logo.jpg" alt="Ginger Woodworks logo" /></li>
-    <li><img src="/img/speedy/branding/ginger-woodworks-2.jpg" alt="At a craft fair or boutique, a variety of cutting boards and wooden bread knives from Ginger Woodworks" /></li>
-    <li><img src="/img/speedy/branding/in-law-brewing-logo-1.jpg" alt="In Law Brewing alternate logo" /></li>
-    <li><img src="/img/speedy/branding/in-law-brewing-1.jpg" alt="The owners of In Law Brewing sitting on a beer trailer with branded cups and swag in hand" /></li>
-    <li><img src="/img/speedy/branding/in-law-brewing-logo-2.jpg" alt="In Law Brewing logo" /></li>
-    <li><img src="/img/speedy/branding/browns-river-farm-logo.jpg" alt="Brown's River Farm logo" /></li>
-    <li><img src="/img/speedy/branding/wildcats-logo.jpg" alt="Wildcats logo" /></li>
-    <li><img src="/img/speedy/branding/hampshire-logo.jpg" alt="Hampshire logo" /></li>
-    <li><img src="/img/speedy/branding/millriver-carpenters-logo.jpg" alt="Mill River Carpenters logo" /></li>
-    <li><img src="/img/speedy/branding/creative-carved-signs-logo.jpg" alt="Creative Carved Signs logo" /></li>
-    <li><img src="/img/speedy/branding/orbit-logo.jpg" alt="Orbit logo" /></li>
-    <li><img src="/img/speedy/branding/marblehead-on-harbor-logo.jpg" alt="Marblehead on Harbor logo" /></li>
-    <li><img src="/img/speedy/branding/harvest-crossing-logo.jpg" alt="Harvest Crossing logo" /></li>
-    <li><img src="/img/speedy/branding/brush-brook-community-farm-logo.jpg" alt="Brush Brook Community Farm logo" /></li>
+    <li><img src="/img/speedy/branding/ju-food-hub-logo.jpg" alt="Jericho Underhill Food Hub logo" loading="lazy" decoding="async" /></li>
+    <li><img src="/img/speedy/branding/harvest-crossing-logo.jpg" alt="Harvest Crossing logo" loading="lazy" decoding="async" /></li>
+    <li><img src="/img/speedy/branding/ucu-logo.jpg" alt="United Church of Underhill logo" loading="lazy" decoding="async" /></li>
+    <li><img src="/img/speedy/branding/covered-bridge-logo.jpg" alt="The Covered Bridge Blueberry u-pick farm logo" loading="lazy" decoding="async" /></li>
+    <li><img src="/img/speedy/branding/farm-between-logo.png" alt="The Farm Between logo, Jeffersonville" loading="lazy" decoding="async" /></li>
+    <li><img src="/img/speedy/branding/west-farm-logo.jpg" alt="West Farm logo, partner to The Farm Between, Jeffersonville" loading="lazy" decoding="async" /></li>
+    <li><img src="/img/speedy/branding/ginger-woodworks-1.jpg" alt="A wood inlay on a piece of furniture with Ginger Woodworks logo visible" loading="lazy" decoding="async" /></li>
+    <li><img src="/img/speedy/branding/ginger-woodworks-logo.jpg" alt="Ginger Woodworks logo" loading="lazy" decoding="async" /></li>
+    <li><img src="/img/speedy/branding/ginger-woodworks-2.jpg" alt="At a craft fair or boutique, a variety of cutting boards and wooden bread knives from Ginger Woodworks" loading="lazy" decoding="async" /></li>
+    <li><img src="/img/speedy/branding/in-law-brewing-logo-1.jpg" alt="In Law Brewing alternate logo" loading="lazy" decoding="async" /></li>
+    <li><img src="/img/speedy/branding/in-law-brewing-1.jpg" alt="The owners of In Law Brewing sitting on a beer trailer with branded cups and swag in hand" loading="lazy" decoding="async" /></li>
+    <li><img src="/img/speedy/branding/in-law-brewing-logo-2.jpg" alt="In Law Brewing logo" loading="lazy" decoding="async" /></li>
+    <li><img src="/img/speedy/branding/browns-river-farm-logo.jpg" alt="Brown's River Farm logo" loading="lazy" decoding="async" /></li>
+    <li><img src="/img/speedy/branding/wildcats-logo.jpg" alt="Wildcats logo" loading="lazy" decoding="async" /></li>
+    <li><img src="/img/speedy/branding/hampshire-logo.jpg" alt="Hampshire logo" loading="lazy" decoding="async" /></li>
+    <li><img src="/img/speedy/branding/millriver-carpenters-logo.jpg" alt="Mill River Carpenters logo" loading="lazy" decoding="async" /></li>
+    <li><img src="/img/speedy/branding/creative-carved-signs-logo.jpg" alt="Creative Carved Signs logo" loading="lazy" decoding="async" /></li>
+    <li><img src="/img/speedy/branding/orbit-logo.jpg" alt="Orbit logo" loading="lazy" decoding="async" /></li>
+    <li><img src="/img/speedy/branding/marblehead-on-harbor-logo.jpg" alt="Marblehead on Harbor logo" loading="lazy" decoding="async" /></li>
+    <li><img src="/img/speedy/branding/brush-brook-community-farm-logo.jpg" alt="Brush Brook Community Farm logo" loading="lazy" decoding="async" /></li>
   </ul>
 </div>
 

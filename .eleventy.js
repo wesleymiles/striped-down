@@ -37,7 +37,7 @@ async function processImage(src, options = {}) {
     formats: [path.extname(src).slice(1)],
     outputDir: path.join(__dirname, "_site", path.dirname(src)),
     urlPath: "/" + path.dirname(src),
-    cache: false
+    cache: true
   };
 
   const finalOptions = { ...defaultOptions, ...options };
@@ -53,6 +53,21 @@ async function processImage(src, options = {}) {
     all: images,
     metadata
   };
+}
+
+function resolveOgImageUrl(data) {
+  const siteUrl = data.siteUrl || "https://wescarr.com";
+  const socialDir = path.join(__dirname, "img", "social");
+  const slug = data.page?.fileSlug;
+  const candidates = [];
+  if (slug) candidates.push(`${slug}.jpg`);
+  candidates.push("default.jpg", "art.jpg");
+  for (const name of candidates) {
+    if (fs.existsSync(path.join(socialDir, name))) {
+      return `${siteUrl}/img/social/${name}`;
+    }
+  }
+  return `${siteUrl}/img/apple-touch-icon.png`;
 }
 
 function slugifyString(str) {
@@ -270,18 +285,40 @@ eleventyConfig.addAsyncShortcode("image", async function (src, alt, caption = ""
   // ==================================================
   // OTHER SETTINGS
   // ==================================================
-  eleventyConfig.setTemplateFormats(["html", "liquid", "njk", "md"]);
+  eleventyConfig.setTemplateFormats(["html", "liquid", "njk", "md", "xml"]);
   eleventyConfig.setLibrary("md", markdownIt({ html: true, typographer: true }));
   eleventyConfig.addGlobalData("siteUrl", "https://wescarr.com");
+  eleventyConfig.addGlobalData("eleventyComputed", {
+    ogImageUrl: (data) => resolveOgImageUrl(data)
+  });
   
   // Ignore README files (they're documentation, not content)
   eleventyConfig.ignores.add("**/README.md");
 
   // Passthrough
+  // Browsers often fetch /favicon.ico before parsing <link rel="icon">
+  eleventyConfig.addPassthroughCopy({ "img/favicon.ico": "favicon.ico" });
+  eleventyConfig.addPassthroughCopy({ "img/apple-touch-icon.png": "apple-touch-icon.png" });
+
   const passthroughPaths = [
-    "fonts", "feed.xsl", "font.woff", "font.ttf", "img", "css", "js", "vid/",
-    "mp4", "webm", "animations", "js/script.js", "photoswipe/",
-    "project/wobblies/img", "work/mockup-demo"
+    "feed.xsl",
+    "robots.txt",
+    "fonts/BagnardSans.otf",
+    "fonts/Bagnard.otf",
+    "fonts/PublicSans-Light.ttf",
+    "fonts/PublicSans-Medium.ttf",
+    "fonts/PublicSans-Regular.ttf",
+    "img",
+    "css",
+    "js",
+    "vid/",
+    "mp4",
+    "webm",
+    "animations",
+    "js/script.js",
+    "photoswipe/",
+    "project/wobblies/img",
+    "work/mockup-demo"
   ];
 
   const blogPath = "blog/";
