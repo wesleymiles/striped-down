@@ -10,6 +10,7 @@
     "start": "npx eleventy --serve",
     "build": "NODE_ENV=production eleventy",
     "check-images": "./scripts/check-image-cases.sh",
+    "fix-image-orientation": "./scripts/fix-image-orientation.sh",
     "fetch-comics-covers": "node scripts/fetch-comics-covers.mjs",
     "seed-comics-tags": "node scripts/seed-comics-tag-overrides.mjs",
     "compress-comics-notes": "node scripts/compress-comics-notes.mjs"

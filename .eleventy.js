@@ -37,7 +37,8 @@ async function processImage(src, options = {}) {
     formats: [path.extname(src).slice(1)],
     outputDir: path.join(__dirname, "_site", path.dirname(src)),
     urlPath: "/" + path.dirname(src),
-    cache: true
+    cache: true,
+    fixOrientation: true
   };
 
   const finalOptions = { ...defaultOptions, ...options };
