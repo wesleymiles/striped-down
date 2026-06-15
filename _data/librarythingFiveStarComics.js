@@ -112,6 +112,14 @@ function dateReadYear(book) {
   return m ? m[1] : null;
 }
 
+/** e.g. "Drawn and Quarterly (2022), 436 pages" → "Drawn and Quarterly" */
+function publisherFromBook(book) {
+  const pub = String(book.publication || "").trim();
+  if (!pub) return null;
+  const m = pub.match(/^(.+?)\s*\(/);
+  return m ? m[1].trim() : pub.split(",")[0].trim() || null;
+}
+
 function normalize(book, tagOverrides, vocabulary, imgRoot, bookNotes) {
   const isbn = pickIsbn(book);
   const isbnKey = isbn ? String(isbn).replace(/[^0-9X]/gi, "") : "";
@@ -127,6 +135,7 @@ function normalize(book, tagOverrides, vocabulary, imgRoot, bookNotes) {
     authorsDisplay: uniqueAuthorNames(book),
     year: book.date || null,
     dateReadYear: dateReadYear(book),
+    publisher: publisherFromBook(book),
     displayTags,
     coverUrl: localCoverUrl(book, override, imgRoot),
     notesInclude,

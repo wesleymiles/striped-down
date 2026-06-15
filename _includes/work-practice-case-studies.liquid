@@ -1,0 +1,20 @@
+{% for project in projects %}
+<section id="{{ project.data.slug }}" class="{% if project.data.bgClass %}{{ project.data.bgClass }}{% endif %}">
+  <h3>{{ project.data.title }}</h3>
+  {{ project.templateContent }}
+  {% assign heroImage = project.data.hero | default: project.data.thumb %}
+  {% if heroImage %}
+  <picture>
+    <figure>
+      <img src="{{ heroImage }}" alt="" loading="lazy" decoding="async" />
+      <figcaption>Hero image</figcaption>
+    </figure>
+  </picture>
+  {% endif %}
+  {% if project.data.liveUrl %}
+  <div class="button">
+    <a href="{{ project.data.liveUrl }}" target="_blank" rel="noopener noreferrer">See site</a>
+  </div>
+  {% endif %}
+</section>
+{% endfor %}

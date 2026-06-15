@@ -187,6 +187,41 @@ module.exports = function (eleventyConfig) {
   // ==================================================
   // Creates collections.art for posts tagged with "art"
   // This is used by the RSS feed plugin
+  eleventyConfig.addCollection("workPreview", function (collectionApi) {
+    return collectionApi
+      .getFilteredByGlob("work-preview/projects/*.md")
+      .sort(
+        (a, b) =>
+          (a.data.order ?? 999) - (b.data.order ?? 999) ||
+          (a.data.title || "").localeCompare(b.data.title || "", undefined, {
+            sensitivity: "base"
+          })
+      );
+  });
+
+  function workPreviewByPractice(collectionApi, practice) {
+    return collectionApi
+      .getFilteredByGlob("work-preview/projects/*.md")
+      .filter((item) => item.data.practice === practice)
+      .sort(
+        (a, b) =>
+          (a.data.order ?? 999) - (b.data.order ?? 999) ||
+          (a.data.title || "").localeCompare(b.data.title || "", undefined, {
+            sensitivity: "base"
+          })
+      );
+  }
+
+  eleventyConfig.addCollection("workPreviewRedHat", (api) =>
+    workPreviewByPractice(api, "red-hat")
+  );
+  eleventyConfig.addCollection("workPreviewContractor", (api) =>
+    workPreviewByPractice(api, "contractor")
+  );
+  eleventyConfig.addCollection("workPreviewLocal", (api) =>
+    workPreviewByPractice(api, "local")
+  );
+
   eleventyConfig.addCollection("art", function(collectionApi) {
     return collectionApi.getFilteredByTag("art")
       .filter(item => item.data.tags && item.data.tags.includes("post"))

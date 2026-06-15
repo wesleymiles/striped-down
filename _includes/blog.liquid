@@ -7,36 +7,40 @@
         <h1 class="content-heading">{{ title }}</h1>
         <p class="content-desc">{{ description | raw }}</p>
         
+        {% if libraryViewToggle %}
+        <section class="stretch content-header__meta-row">
+          <ul class="metadata">
+            {% if date and not concerts %}
+              <li><time class="meta-date" datetime="{{ date | postDate }}">Written: {{ date | postDate }}</time></li>
+            {% endif %}
+            {% if date-updated %}
+              <li><time class="meta-date" datetime="{{ date-updated | postDate }}">Updated: {{ date-updated | postDate }}</time></li>
+            {% endif %}
+          </ul>
+          {% include "library-view-toggle.liquid" %}
+        </section>
+        {% else %}
         <ul class="metadata">
-          <!-- include a written on date if it's a blog post, but not an archive page or concert or trip report   -->
           {% if date and not concerts %}
               <li><time class="meta-date" datetime="{{ date | postDate }}">Written: {{ date | postDate }}</time></li>
           {% endif %}
-        
           {% if date-updated %}
               <li><time class="meta-date" datetime="{{ date-updated | postDate }}">Updated: {{ date-updated | postDate }}</time></li>
           {% endif %}
-          
           {% if concerts %}
-
             {% if concerts.event-date %}
                 <li>{{ concerts.event-date | postDate }}</li>
             {% endif %}
-            
             {% if concerts.event-date %}
                 <li>{{ location.town }}, {{ location.state }}</li>
             {% endif %}
-              
           {% endif %}
-      
-          <!-- if it's a trip report, include trip report metadata  -->
           {% if trips %}
-          
             {% if trips.dateHiked %}
                 <li>Date hiked: {{ trips.dateHiked | postDate }}</li>
             {% endif %}
             {% if trips.peaks %}
-                <li>Peak{% if trips.peaks.size > 1 %}s{% endif %}: 
+                <li>Peak{% if trips.peaks.size > 1 %}s{% endif %}:
                     {% for peak in trips.peaks %}
                         {{ peak.name }} ({{ peak.elevation | formatElevation }}){% unless forloop.last %}, {% endunless %}
                     {% endfor %}
@@ -50,17 +54,16 @@
             {% endif %}
             {% if trips.temp %}
                 <li>Temp at highest point: {{ trips.temp }}</li>
-            {% endif %} 
+            {% endif %}
             {% if location.town %}
                 <li>Town: {{ location.town }}</li>
-            {% endif %} 
+            {% endif %}
             {% if location.state %}
                 <li>State: {{ location.state }}</li>
-            {% endif %} 
-            
+            {% endif %}
           {% endif %}
-
-        
+        </ul>
+        {% endif %}
 
     </header>
 

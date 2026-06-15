@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8">
 
-	
+	<!-- When to insert different head items per page  -->
     
 	
 	
@@ -16,28 +16,28 @@
 
 
 
-    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Non-fiction comics library — Wes</title>
 
-	
-	
-		
-		<meta name="description" content="A catalog of my favorite non-fiction graphic novels. Many are memoirs. Most are considered radical. I recommend reading them all.">
-	
-
-	<meta property="og:title" content="Non-fiction comics library">
-	<link rel="canonical" href="https://wescarr.com/blog/non-fiction-comics/">
-	<meta property="og:url" content="https://wescarr.com/blog/non-fiction-comics/">
-	<meta property="og:type" content="website">
-	<meta name="twitter:card" content="summary_large_image">
+	<!-- SEO Tags -->
 	
 		
-		<meta property="og:description" content="A catalog of my favorite non-fiction graphic novels. Many are memoirs. Most are considered radical. I recommend reading them all.">
+		<meta name="description" content="A catalog of my favorite non-fiction graphic novels. Many are memoirs. Most are considered radical. I recommend reading them all." />
+	
+
+	<meta property="og:title" content="Non-fiction comics library"/>
+	<link rel="canonical" href="https://wescarr.com/blog/non-fiction-comics/" />
+	<meta property="og:url" content="https://wescarr.com/blog/non-fiction-comics/"/>
+	<meta property="og:type" content="website"/>
+	<meta name="twitter:card" content="summary_large_image"/>
+	
+		
+		<meta property="og:description" content="A catalog of my favorite non-fiction graphic novels. Many are memoirs. Most are considered radical. I recommend reading them all."/>
 	
 
 
-<meta property="og:image" content="https://wescarr.com/img/social/default.jpg">
-	<meta name="twitter:image" content="https://wescarr.com/img/social/default.jpg">
+<meta property="og:image" content="https://wescarr.com/img/social/default.jpg"/>
+	<meta name="twitter:image" content="https://wescarr.com/img/social/default.jpg"/>
 
 <link rel="preload" as="font" type="font/otf" crossorigin href="/fonts/BagnardSans.otf">
 <link rel="preload" as="font" type="font/otf" crossorigin href="/fonts/Bagnard.otf">
@@ -47,12 +47,11 @@
     <link rel="stylesheet" href="/css/main.css">
   	<link rel="stylesheet" href="/css/fonts.css">	
 	
-
-
-
-
-
-
+<!-- <link rel="preconnect" href="https://fonts.googleapis.com"> -->
+<!-- <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> -->
+<!-- <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&display=swap" rel="stylesheet"> -->
+<!-- <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&display=swap" rel="stylesheet"> -->
+<!-- <link href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet"> -->
 
     <link rel="icon" href="/favicon.ico" sizes="48x48">
 	<link rel="icon" href="/img/icon.svg" type="image/svg+xml">
@@ -61,14 +60,14 @@
   </head>
 
 	<body class="Non-fiction comics library post books">
-  	<a class="skip-link nav-tab" href="#main">Skip to content</a>
+  	<a class="skip-link nav-tab" href='#main'>Skip to content</a>
 		<header class="mast">
 			<nav aria-label="Main">
 
 				<div class="site-logo">
 					<a href="/">
-						<img src="/img/juniper-left.png" title="Head home" alt="juniper bough illustration">
-						
+						<img src="/img/juniper-left.png"  title="Head home" alt="juniper bough illustration" />
+						<!-- <img src="/img/chipmunk.png" title="Head home" alt="Tiny chipmunk illustration" width="200" /> -->
 					</a>
 				</div>
 
@@ -104,30 +103,62 @@
         <h1 class="content-heading">Non-fiction comics library</h1>
         <p class="content-desc">A catalog of my favorite non-fiction graphic novels. Many are memoirs. Most are considered radical. I recommend reading them all.</p>
         
-        <ul class="metadata">
-          
-          
+        
+        <section class="stretch content-header__meta-row">
+          <ul class="metadata">
+            
               <li><time class="meta-date" datetime="Sep 30, 2023">Written: Sep 30, 2023</time></li>
-          
-        
-          
-              <li><time class="meta-date" datetime="May 20, 2026">Updated: May 20, 2026</time></li>
-          
-          
-          
-      
-          
-          
+            
+            
+              <li><time class="meta-date" datetime="Jun 3, 2026">Updated: Jun 3, 2026</time></li>
+            
+          </ul>
+          <div class="library-view-toggle" role="group" aria-label="Library layout">
+  <button
+    type="button"
+    class="library-view-toggle__btn is-active"
+    data-library-view="default"
+    aria-pressed="true"
+    aria-label="Default view"
+    title="Default view"
+  >
+    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+      <rect x="3" y="3" width="8" height="8" rx="1"></rect>
+      <rect x="13" y="3" width="8" height="8" rx="1"></rect>
+      <rect x="3" y="13" width="8" height="8" rx="1"></rect>
+      <rect x="13" y="13" width="8" height="8" rx="1"></rect>
+    </svg>
+  </button>
+  <button
+    type="button"
+    class="library-view-toggle__btn"
+    data-library-view="compact"
+    aria-pressed="false"
+    aria-label="Compact view"
+    title="Compact view"
+  >
+    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+      <rect x="3" y="3" width="4" height="4" rx="0.5"></rect>
+      <rect x="10" y="3" width="4" height="4" rx="0.5"></rect>
+      <rect x="17" y="3" width="4" height="4" rx="0.5"></rect>
+      <rect x="3" y="10" width="4" height="4" rx="0.5"></rect>
+      <rect x="10" y="10" width="4" height="4" rx="0.5"></rect>
+      <rect x="17" y="10" width="4" height="4" rx="0.5"></rect>
+      <rect x="3" y="17" width="4" height="4" rx="0.5"></rect>
+      <rect x="10" y="17" width="4" height="4" rx="0.5"></rect>
+      <rect x="17" y="17" width="4" height="4" rx="0.5"></rect>
+    </svg>
+  </button>
+</div>
 
+        </section>
         
 
-    </ul></header>
+    </header>
 
     
-  
-
-<section class="stretch" id="filters">
-  <input type="radio" id="lt-tag-all" name="tag" value="All" checked="checked">
+<section class="stretch library-filters" id="filters">
+  <input type="radio" id="lt-tag-all" name="tag" value="All" checked>
   <label for="lt-tag-all">All</label>
   
   <input type="radio" id="lt-tag-adaptation" name="tag" value="adaptation">
@@ -164,25 +195,49 @@
   <div class="no-details">
   
     <summary>
-      <article itemscope itemtype="https://schema.org/Book" data-tags="adaptation">
-        <header>
+      <article
+        itemscope
+        itemtype="https://schema.org/Book"
+        data-tags="adaptation"
+      >
+        <div class="library-cover-wrap">
+          
+          <picture class="library-cover">
+            <source srcset="/blog/non-fiction-comics/img/covers/9780358359920.jpg" type="image/jpeg" />
+            <img
+              src="/blog/non-fiction-comics/img/covers/9780358359920.jpg"
+              alt="Cover: 1984: The Graphic Novel: (Authorized Orwell Edition)"
+              loading="lazy"
+              decoding="async"
+              itemprop="image"
+            />
+          </picture>
+          
+          
+        </div>
+        
+        <p class="library-compact-meta">2021 · Read 2023</p>
+        
+        <h3 class="library-compact-title" itemprop="name">1984: The Graphic Novel: (Authorized Orwell Edition)</h3>
+        <header class="library-default-header">
           <span class="book-intro">
             <h2>
               <span class="book-title" itemprop="name">1984: The Graphic Novel: (Authorized Orwell Edition)</span>,
-              <br>by
-              <span class="book-author" itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name">George Orwell, Fido Nesti</span></span>
+              <br />by
+              <span
+                class="book-author"
+                itemprop="author"
+                itemscope
+                itemtype="https://schema.org/Person"
+                ><span itemprop="name">George Orwell, Fido Nesti</span></span
+              >
             </h2>
           </span>
         </header>
-        
-        <picture>
-          <source srcset="/blog/non-fiction-comics/img/covers/9780358359920.jpg" type="image/jpeg">
-          <img src="/blog/non-fiction-comics/img/covers/9780358359920.jpg" alt="Cover: 1984: The Graphic Novel: (Authorized Orwell Edition)" loading="lazy" decoding="async" itemprop="image">
-        </picture>
-        
-        <small>
+        <small class="library-default-dates">
           Published: <span itemprop="copyrightYear">2021</span>
-           · Read: 2023</small>
+           · Read: 2023
+        </small>
         <section></section>
       </article>
     </summary>
@@ -194,25 +249,49 @@
   <div class="no-details">
   
     <summary>
-      <article itemscope itemtype="https://schema.org/Book" data-tags="adaptation, biography">
-        <header>
+      <article
+        itemscope
+        itemtype="https://schema.org/Book"
+        data-tags="adaptation, biography"
+      >
+        <div class="library-cover-wrap">
+          
+          <picture class="library-cover">
+            <source srcset="/blog/non-fiction-comics/img/covers/9781910620151.jpg" type="image/jpeg" />
+            <img
+              src="/blog/non-fiction-comics/img/covers/9781910620151.jpg"
+              alt="Cover: Audubon, On The Wings Of The World [Graphic Novel]"
+              loading="lazy"
+              decoding="async"
+              itemprop="image"
+            />
+          </picture>
+          
+          
+        </div>
+        
+        <p class="library-compact-meta">2017</p>
+        
+        <h3 class="library-compact-title" itemprop="name">Audubon, On The Wings Of The World [Graphic Novel]</h3>
+        <header class="library-default-header">
           <span class="book-intro">
             <h2>
               <span class="book-title" itemprop="name">Audubon, On The Wings Of The World [Graphic Novel]</span>,
-              <br>by
-              <span class="book-author" itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name">Fabien Grolleau, David Sutton, Jeremie Royer, Etienne Gilgillan</span></span>
+              <br />by
+              <span
+                class="book-author"
+                itemprop="author"
+                itemscope
+                itemtype="https://schema.org/Person"
+                ><span itemprop="name">Fabien Grolleau, David Sutton, Jeremie Royer, Etienne Gilgillan</span></span
+              >
             </h2>
           </span>
         </header>
-        
-        <picture>
-          <source srcset="/blog/non-fiction-comics/img/covers/9781910620151.jpg" type="image/jpeg">
-          <img src="/blog/non-fiction-comics/img/covers/9781910620151.jpg" alt="Cover: Audubon, On The Wings Of The World [Graphic Novel]" loading="lazy" decoding="async" itemprop="image">
-        </picture>
-        
-        <small>
+        <small class="library-default-dates">
           Published: <span itemprop="copyrightYear">2017</span>
-          </small>
+          
+        </small>
         <section></section>
       </article>
     </summary>
@@ -224,25 +303,53 @@
   <details>
   
     <summary>
-      <article itemscope itemtype="https://schema.org/Book" data-tags="memoir, war">
-        <header>
+      <article
+        itemscope
+        itemtype="https://schema.org/Book"
+        data-tags="memoir, war"
+      >
+        <div class="library-cover-wrap">
+          
+          <picture class="library-cover">
+            <source srcset="/blog/non-fiction-comics/img/covers/9780867196023.jpg" type="image/jpeg" />
+            <img
+              src="/blog/non-fiction-comics/img/covers/9780867196023.jpg"
+              alt="Cover: Barefoot Gen, Vol. 1: A Cartoon Story of Hiroshima"
+              loading="lazy"
+              decoding="async"
+              itemprop="image"
+            />
+          </picture>
+          
+          
+          <span class="library-expand-hint" title="Expand personal notes">
+            <img src="/img/icon-expand.svg" width="20" height="20" alt="" />
+          </span>
+          
+        </div>
+        
+        <p class="library-compact-meta">2004 · Read 2023</p>
+        
+        <h3 class="library-compact-title" itemprop="name">Barefoot Gen, Vol. 1: A Cartoon Story of Hiroshima</h3>
+        <header class="library-default-header">
           <span class="book-intro">
             <h2>
               <span class="book-title" itemprop="name">Barefoot Gen, Vol. 1: A Cartoon Story of Hiroshima</span>,
-              <br>by
-              <span class="book-author" itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name">Keiji Nakazawa</span></span>
+              <br />by
+              <span
+                class="book-author"
+                itemprop="author"
+                itemscope
+                itemtype="https://schema.org/Person"
+                ><span itemprop="name">Keiji Nakazawa</span></span
+              >
             </h2>
           </span>
         </header>
-        
-        <picture>
-          <source srcset="/blog/non-fiction-comics/img/covers/9780867196023.jpg" type="image/jpeg">
-          <img src="/blog/non-fiction-comics/img/covers/9780867196023.jpg" alt="Cover: Barefoot Gen, Vol. 1: A Cartoon Story of Hiroshima" loading="lazy" decoding="async" itemprop="image">
-        </picture>
-        
-        <small>
+        <small class="library-default-dates">
           Published: <span itemprop="copyrightYear">2004</span>
-           · Read: 2023</small>
+           · Read: 2023
+        </small>
         <section></section>
       </article>
     </summary>
@@ -274,25 +381,49 @@ While the illustrations are fairly simple compared to others I've encountered, t
   <div class="no-details">
   
     <summary>
-      <article itemscope itemtype="https://schema.org/Book" data-tags="memoir">
-        <header>
+      <article
+        itemscope
+        itemtype="https://schema.org/Book"
+        data-tags="memoir"
+      >
+        <div class="library-cover-wrap">
+          
+          <picture class="library-cover">
+            <source srcset="/blog/non-fiction-comics/img/covers/9781891830433.jpg" type="image/jpeg" />
+            <img
+              src="/blog/non-fiction-comics/img/covers/9781891830433.jpg"
+              alt="Cover: Blankets"
+              loading="lazy"
+              decoding="async"
+              itemprop="image"
+            />
+          </picture>
+          
+          
+        </div>
+        
+        <p class="library-compact-meta">2003</p>
+        
+        <h3 class="library-compact-title" itemprop="name">Blankets</h3>
+        <header class="library-default-header">
           <span class="book-intro">
             <h2>
               <span class="book-title" itemprop="name">Blankets</span>,
-              <br>by
-              <span class="book-author" itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name">Craig Thompson</span></span>
+              <br />by
+              <span
+                class="book-author"
+                itemprop="author"
+                itemscope
+                itemtype="https://schema.org/Person"
+                ><span itemprop="name">Craig Thompson</span></span
+              >
             </h2>
           </span>
         </header>
-        
-        <picture>
-          <source srcset="/blog/non-fiction-comics/img/covers/9781891830433.jpg" type="image/jpeg">
-          <img src="/blog/non-fiction-comics/img/covers/9781891830433.jpg" alt="Cover: Blankets" loading="lazy" decoding="async" itemprop="image">
-        </picture>
-        
-        <small>
+        <small class="library-default-dates">
           Published: <span itemprop="copyrightYear">2003</span>
-          </small>
+          
+        </small>
         <section></section>
       </article>
     </summary>
@@ -304,25 +435,49 @@ While the illustrations are fairly simple compared to others I've encountered, t
   <div class="no-details">
   
     <summary>
-      <article itemscope itemtype="https://schema.org/Book" data-tags="memoir">
-        <header>
+      <article
+        itemscope
+        itemtype="https://schema.org/Book"
+        data-tags="memoir"
+      >
+        <div class="library-cover-wrap">
+          
+          <picture class="library-cover">
+            <source srcset="/blog/non-fiction-comics/img/covers/9780271088068.jpg" type="image/jpeg" />
+            <img
+              src="/blog/non-fiction-comics/img/covers/9780271088068.jpg"
+              alt="Cover: Crude: A Memoir"
+              loading="lazy"
+              decoding="async"
+              itemprop="image"
+            />
+          </picture>
+          
+          
+        </div>
+        
+        <p class="library-compact-meta">2021</p>
+        
+        <h3 class="library-compact-title" itemprop="name">Crude: A Memoir</h3>
+        <header class="library-default-header">
           <span class="book-intro">
             <h2>
               <span class="book-title" itemprop="name">Crude: A Memoir</span>,
-              <br>by
-              <span class="book-author" itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name">Pablo Fajardo, Damien Roudeau, Hannah Chute, Sophie Tardy-Joubert</span></span>
+              <br />by
+              <span
+                class="book-author"
+                itemprop="author"
+                itemscope
+                itemtype="https://schema.org/Person"
+                ><span itemprop="name">Pablo Fajardo, Damien Roudeau, Hannah Chute, Sophie Tardy-Joubert</span></span
+              >
             </h2>
           </span>
         </header>
-        
-        <picture>
-          <source srcset="/blog/non-fiction-comics/img/covers/9780271088068.jpg" type="image/jpeg">
-          <img src="/blog/non-fiction-comics/img/covers/9780271088068.jpg" alt="Cover: Crude: A Memoir" loading="lazy" decoding="async" itemprop="image">
-        </picture>
-        
-        <small>
+        <small class="library-default-dates">
           Published: <span itemprop="copyrightYear">2021</span>
-          </small>
+          
+        </small>
         <section></section>
       </article>
     </summary>
@@ -334,25 +489,49 @@ While the illustrations are fairly simple compared to others I've encountered, t
   <div class="no-details">
   
     <summary>
-      <article itemscope itemtype="https://schema.org/Book" data-tags="biography">
-        <header>
+      <article
+        itemscope
+        itemtype="https://schema.org/Book"
+        data-tags="biography"
+      >
+        <div class="library-cover-wrap">
+          
+          <picture class="library-cover">
+            <source srcset="/blog/non-fiction-comics/img/covers/9780486436661.jpg" type="image/jpeg" />
+            <img
+              src="/blog/non-fiction-comics/img/covers/9780486436661.jpg"
+              alt="Cover: Diary of an Early American Boy: Noah Blake 1805 (Dover Books on Americana)"
+              loading="lazy"
+              decoding="async"
+              itemprop="image"
+            />
+          </picture>
+          
+          
+        </div>
+        
+        <p class="library-compact-meta">2004 · Read 2023</p>
+        
+        <h3 class="library-compact-title" itemprop="name">Diary of an Early American Boy: Noah Blake 1805 (Dover Books on Americana)</h3>
+        <header class="library-default-header">
           <span class="book-intro">
             <h2>
               <span class="book-title" itemprop="name">Diary of an Early American Boy: Noah Blake 1805 (Dover Books on Americana)</span>,
-              <br>by
-              <span class="book-author" itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name">Eric Sloane</span></span>
+              <br />by
+              <span
+                class="book-author"
+                itemprop="author"
+                itemscope
+                itemtype="https://schema.org/Person"
+                ><span itemprop="name">Eric Sloane</span></span
+              >
             </h2>
           </span>
         </header>
-        
-        <picture>
-          <source srcset="/blog/non-fiction-comics/img/covers/9780486436661.jpg" type="image/jpeg">
-          <img src="/blog/non-fiction-comics/img/covers/9780486436661.jpg" alt="Cover: Diary of an Early American Boy: Noah Blake 1805 (Dover Books on Americana)" loading="lazy" decoding="async" itemprop="image">
-        </picture>
-        
-        <small>
+        <small class="library-default-dates">
           Published: <span itemprop="copyrightYear">2004</span>
-           · Read: 2023</small>
+           · Read: 2023
+        </small>
         <section></section>
       </article>
     </summary>
@@ -364,25 +543,53 @@ While the illustrations are fairly simple compared to others I've encountered, t
   <details>
   
     <summary>
-      <article itemscope itemtype="https://schema.org/Book" data-tags="journalism, memoir">
-        <header>
+      <article
+        itemscope
+        itemtype="https://schema.org/Book"
+        data-tags="journalism, memoir"
+      >
+        <div class="library-cover-wrap">
+          
+          <picture class="library-cover">
+            <source srcset="/blog/non-fiction-comics/img/covers/9781770462892.jpg" type="image/jpeg" />
+            <img
+              src="/blog/non-fiction-comics/img/covers/9781770462892.jpg"
+              alt="Cover: Ducks: Two Years in the Oil Sands"
+              loading="lazy"
+              decoding="async"
+              itemprop="image"
+            />
+          </picture>
+          
+          
+          <span class="library-expand-hint" title="Expand personal notes">
+            <img src="/img/icon-expand.svg" width="20" height="20" alt="" />
+          </span>
+          
+        </div>
+        
+        <p class="library-compact-meta">2022 · Read 2023</p>
+        
+        <h3 class="library-compact-title" itemprop="name">Ducks: Two Years in the Oil Sands</h3>
+        <header class="library-default-header">
           <span class="book-intro">
             <h2>
               <span class="book-title" itemprop="name">Ducks: Two Years in the Oil Sands</span>,
-              <br>by
-              <span class="book-author" itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name">Kate Beaton</span></span>
+              <br />by
+              <span
+                class="book-author"
+                itemprop="author"
+                itemscope
+                itemtype="https://schema.org/Person"
+                ><span itemprop="name">Kate Beaton</span></span
+              >
             </h2>
           </span>
         </header>
-        
-        <picture>
-          <source srcset="/blog/non-fiction-comics/img/covers/9781770462892.jpg" type="image/jpeg">
-          <img src="/blog/non-fiction-comics/img/covers/9781770462892.jpg" alt="Cover: Ducks: Two Years in the Oil Sands" loading="lazy" decoding="async" itemprop="image">
-        </picture>
-        
-        <small>
+        <small class="library-default-dates">
           Published: <span itemprop="copyrightYear">2022</span>
-           · Read: 2023</small>
+           · Read: 2023
+        </small>
         <section></section>
       </article>
     </summary>
@@ -418,25 +625,53 @@ While the illustrations are fairly simple compared to others I've encountered, t
   <details>
   
     <summary>
-      <article itemscope itemtype="https://schema.org/Book" data-tags="journalism, war">
-        <header>
+      <article
+        itemscope
+        itemtype="https://schema.org/Book"
+        data-tags="journalism, war"
+      >
+        <div class="library-cover-wrap">
+          
+          <picture class="library-cover">
+            <source srcset="/blog/non-fiction-comics/img/covers/9780805073478.jpg" type="image/jpeg" />
+            <img
+              src="/blog/non-fiction-comics/img/covers/9780805073478.jpg"
+              alt="Cover: Footnotes in Gaza: A Graphic Novel"
+              loading="lazy"
+              decoding="async"
+              itemprop="image"
+            />
+          </picture>
+          
+          
+          <span class="library-expand-hint" title="Expand personal notes">
+            <img src="/img/icon-expand.svg" width="20" height="20" alt="" />
+          </span>
+          
+        </div>
+        
+        <p class="library-compact-meta">2009 · Read 2023</p>
+        
+        <h3 class="library-compact-title" itemprop="name">Footnotes in Gaza: A Graphic Novel</h3>
+        <header class="library-default-header">
           <span class="book-intro">
             <h2>
               <span class="book-title" itemprop="name">Footnotes in Gaza: A Graphic Novel</span>,
-              <br>by
-              <span class="book-author" itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name">Joe Sacco</span></span>
+              <br />by
+              <span
+                class="book-author"
+                itemprop="author"
+                itemscope
+                itemtype="https://schema.org/Person"
+                ><span itemprop="name">Joe Sacco</span></span
+              >
             </h2>
           </span>
         </header>
-        
-        <picture>
-          <source srcset="/blog/non-fiction-comics/img/covers/9780805073478.jpg" type="image/jpeg">
-          <img src="/blog/non-fiction-comics/img/covers/9780805073478.jpg" alt="Cover: Footnotes in Gaza: A Graphic Novel" loading="lazy" decoding="async" itemprop="image">
-        </picture>
-        
-        <small>
+        <small class="library-default-dates">
           Published: <span itemprop="copyrightYear">2009</span>
-           · Read: 2023</small>
+           · Read: 2023
+        </small>
         <section></section>
       </article>
     </summary>
@@ -472,25 +707,49 @@ While the illustrations are fairly simple compared to others I've encountered, t
   <div class="no-details">
   
     <summary>
-      <article itemscope itemtype="https://schema.org/Book" data-tags="resistance, war">
-        <header>
+      <article
+        itemscope
+        itemtype="https://schema.org/Book"
+        data-tags="resistance, war"
+      >
+        <div class="library-cover-wrap">
+          
+          <picture class="library-cover">
+            <source srcset="/blog/non-fiction-comics/img/covers/9781623719951.jpg" type="image/jpeg" />
+            <img
+              src="/blog/non-fiction-comics/img/covers/9781623719951.jpg"
+              alt="Cover: Freedom Hospital: A Syrian Story"
+              loading="lazy"
+              decoding="async"
+              itemprop="image"
+            />
+          </picture>
+          
+          
+        </div>
+        
+        <p class="library-compact-meta">2018 · Read 2021</p>
+        
+        <h3 class="library-compact-title" itemprop="name">Freedom Hospital: A Syrian Story</h3>
+        <header class="library-default-header">
           <span class="book-intro">
             <h2>
               <span class="book-title" itemprop="name">Freedom Hospital: A Syrian Story</span>,
-              <br>by
-              <span class="book-author" itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name">Hamid Sulaiman</span></span>
+              <br />by
+              <span
+                class="book-author"
+                itemprop="author"
+                itemscope
+                itemtype="https://schema.org/Person"
+                ><span itemprop="name">Hamid Sulaiman</span></span
+              >
             </h2>
           </span>
         </header>
-        
-        <picture>
-          <source srcset="/blog/non-fiction-comics/img/covers/9781623719951.jpg" type="image/jpeg">
-          <img src="/blog/non-fiction-comics/img/covers/9781623719951.jpg" alt="Cover: Freedom Hospital: A Syrian Story" loading="lazy" decoding="async" itemprop="image">
-        </picture>
-        
-        <small>
+        <small class="library-default-dates">
           Published: <span itemprop="copyrightYear">2018</span>
-           · Read: 2021</small>
+           · Read: 2021
+        </small>
         <section></section>
       </article>
     </summary>
@@ -502,25 +761,49 @@ While the illustrations are fairly simple compared to others I've encountered, t
   <div class="no-details">
   
     <summary>
-      <article itemscope itemtype="https://schema.org/Book" data-tags="memoir">
-        <header>
+      <article
+        itemscope
+        itemtype="https://schema.org/Book"
+        data-tags="memoir"
+      >
+        <div class="library-cover-wrap">
+          
+          <picture class="library-cover">
+            <source srcset="/blog/non-fiction-comics/img/covers/9780593700778.jpg" type="image/jpeg" />
+            <img
+              src="/blog/non-fiction-comics/img/covers/9780593700778.jpg"
+              alt="Cover: Ginseng Roots: A Memoir (Pantheon Graphic Library)"
+              loading="lazy"
+              decoding="async"
+              itemprop="image"
+            />
+          </picture>
+          
+          
+        </div>
+        
+        <p class="library-compact-meta">2025</p>
+        
+        <h3 class="library-compact-title" itemprop="name">Ginseng Roots: A Memoir (Pantheon Graphic Library)</h3>
+        <header class="library-default-header">
           <span class="book-intro">
             <h2>
               <span class="book-title" itemprop="name">Ginseng Roots: A Memoir (Pantheon Graphic Library)</span>,
-              <br>by
-              <span class="book-author" itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name">Craig Thompson</span></span>
+              <br />by
+              <span
+                class="book-author"
+                itemprop="author"
+                itemscope
+                itemtype="https://schema.org/Person"
+                ><span itemprop="name">Craig Thompson</span></span
+              >
             </h2>
           </span>
         </header>
-        
-        <picture>
-          <source srcset="/blog/non-fiction-comics/img/covers/9780593700778.jpg" type="image/jpeg">
-          <img src="/blog/non-fiction-comics/img/covers/9780593700778.jpg" alt="Cover: Ginseng Roots: A Memoir (Pantheon Graphic Library)" loading="lazy" decoding="async" itemprop="image">
-        </picture>
-        
-        <small>
+        <small class="library-default-dates">
           Published: <span itemprop="copyrightYear">2025</span>
-          </small>
+          
+        </small>
         <section></section>
       </article>
     </summary>
@@ -532,25 +815,49 @@ While the illustrations are fairly simple compared to others I've encountered, t
   <div class="no-details">
   
     <summary>
-      <article itemscope itemtype="https://schema.org/Book" data-tags="journalism, social">
-        <header>
+      <article
+        itemscope
+        itemtype="https://schema.org/Book"
+        data-tags="journalism, social"
+      >
+        <div class="library-cover-wrap">
+          
+          <picture class="library-cover">
+            <source srcset="/blog/non-fiction-comics/img/covers/9780593125366.jpg" type="image/jpeg" />
+            <img
+              src="/blog/non-fiction-comics/img/covers/9780593125366.jpg"
+              alt="Cover: Hidden Systems: Water, Electricity, the Internet, and the Secrets Behind the Systems We Use Every Day (A Graphic Novel)"
+              loading="lazy"
+              decoding="async"
+              itemprop="image"
+            />
+          </picture>
+          
+          
+        </div>
+        
+        <p class="library-compact-meta">2023 · Read 2023</p>
+        
+        <h3 class="library-compact-title" itemprop="name">Hidden Systems: Water, Electricity, the Internet, and the Secrets Behind the Systems We Use Every Day (A Graphic Novel)</h3>
+        <header class="library-default-header">
           <span class="book-intro">
             <h2>
               <span class="book-title" itemprop="name">Hidden Systems: Water, Electricity, the Internet, and the Secrets Behind the Systems We Use Every Day (A Graphic Novel)</span>,
-              <br>by
-              <span class="book-author" itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name">Dan Nott</span></span>
+              <br />by
+              <span
+                class="book-author"
+                itemprop="author"
+                itemscope
+                itemtype="https://schema.org/Person"
+                ><span itemprop="name">Dan Nott</span></span
+              >
             </h2>
           </span>
         </header>
-        
-        <picture>
-          <source srcset="/blog/non-fiction-comics/img/covers/9780593125366.jpg" type="image/jpeg">
-          <img src="/blog/non-fiction-comics/img/covers/9780593125366.jpg" alt="Cover: Hidden Systems: Water, Electricity, the Internet, and the Secrets Behind the Systems We Use Every Day (A Graphic Novel)" loading="lazy" decoding="async" itemprop="image">
-        </picture>
-        
-        <small>
+        <small class="library-default-dates">
           Published: <span itemprop="copyrightYear">2023</span>
-           · Read: 2023</small>
+           · Read: 2023
+        </small>
         <section></section>
       </article>
     </summary>
@@ -562,25 +869,49 @@ While the illustrations are fairly simple compared to others I've encountered, t
   <div class="no-details">
   
     <summary>
-      <article itemscope itemtype="https://schema.org/Book" data-tags="memoir">
-        <header>
+      <article
+        itemscope
+        itemtype="https://schema.org/Book"
+        data-tags="memoir"
+      >
+        <div class="library-cover-wrap">
+          
+          <picture class="library-cover">
+            <source srcset="/blog/non-fiction-comics/img/covers/9781897299975.jpg" type="image/jpeg" />
+            <img
+              src="/blog/non-fiction-comics/img/covers/9781897299975.jpg"
+              alt="Cover: Market Day"
+              loading="lazy"
+              decoding="async"
+              itemprop="image"
+            />
+          </picture>
+          
+          
+        </div>
+        
+        <p class="library-compact-meta">2010 · Read 2022</p>
+        
+        <h3 class="library-compact-title" itemprop="name">Market Day</h3>
+        <header class="library-default-header">
           <span class="book-intro">
             <h2>
               <span class="book-title" itemprop="name">Market Day</span>,
-              <br>by
-              <span class="book-author" itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name">James Sturm</span></span>
+              <br />by
+              <span
+                class="book-author"
+                itemprop="author"
+                itemscope
+                itemtype="https://schema.org/Person"
+                ><span itemprop="name">James Sturm</span></span
+              >
             </h2>
           </span>
         </header>
-        
-        <picture>
-          <source srcset="/blog/non-fiction-comics/img/covers/9781897299975.jpg" type="image/jpeg">
-          <img src="/blog/non-fiction-comics/img/covers/9781897299975.jpg" alt="Cover: Market Day" loading="lazy" decoding="async" itemprop="image">
-        </picture>
-        
-        <small>
+        <small class="library-default-dates">
           Published: <span itemprop="copyrightYear">2010</span>
-           · Read: 2022</small>
+           · Read: 2022
+        </small>
         <section></section>
       </article>
     </summary>
@@ -592,25 +923,49 @@ While the illustrations are fairly simple compared to others I've encountered, t
   <div class="no-details">
   
     <summary>
-      <article itemscope itemtype="https://schema.org/Book" data-tags="adaptation, social">
-        <header>
+      <article
+        itemscope
+        itemtype="https://schema.org/Book"
+        data-tags="adaptation, social"
+      >
+        <div class="library-cover-wrap">
+          
+          <picture class="library-cover">
+            <source srcset="/blog/non-fiction-comics/img/covers/9781608462667.jpg" type="image/jpeg" />
+            <img
+              src="/blog/non-fiction-comics/img/covers/9781608462667.jpg"
+              alt="Cover: Marx's Capital Illustrated: An Illustrated Introduction"
+              loading="lazy"
+              decoding="async"
+              itemprop="image"
+            />
+          </picture>
+          
+          
+        </div>
+        
+        <p class="library-compact-meta">2014</p>
+        
+        <h3 class="library-compact-title" itemprop="name">Marx's Capital Illustrated: An Illustrated Introduction</h3>
+        <header class="library-default-header">
           <span class="book-intro">
             <h2>
               <span class="book-title" itemprop="name">Marx's Capital Illustrated: An Illustrated Introduction</span>,
-              <br>by
-              <span class="book-author" itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name">David Smith, Phil Evans</span></span>
+              <br />by
+              <span
+                class="book-author"
+                itemprop="author"
+                itemscope
+                itemtype="https://schema.org/Person"
+                ><span itemprop="name">David Smith, Phil Evans</span></span
+              >
             </h2>
           </span>
         </header>
-        
-        <picture>
-          <source srcset="/blog/non-fiction-comics/img/covers/9781608462667.jpg" type="image/jpeg">
-          <img src="/blog/non-fiction-comics/img/covers/9781608462667.jpg" alt="Cover: Marx's Capital Illustrated: An Illustrated Introduction" loading="lazy" decoding="async" itemprop="image">
-        </picture>
-        
-        <small>
+        <small class="library-default-dates">
           Published: <span itemprop="copyrightYear">2014</span>
-          </small>
+          
+        </small>
         <section></section>
       </article>
     </summary>
@@ -622,25 +977,49 @@ While the illustrations are fairly simple compared to others I've encountered, t
   <div class="no-details">
   
     <summary>
-      <article itemscope itemtype="https://schema.org/Book" data-tags="memoir, war">
-        <header>
+      <article
+        itemscope
+        itemtype="https://schema.org/Book"
+        data-tags="memoir, war"
+      >
+        <div class="library-cover-wrap">
+          
+          <picture class="library-cover">
+            <source srcset="/blog/non-fiction-comics/img/covers/9780679729778.jpg" type="image/jpeg" />
+            <img
+              src="/blog/non-fiction-comics/img/covers/9780679729778.jpg"
+              alt="Cover: Maus II: A Survivor's Tale: And Here My Troubles Began (Pantheon Graphic Library)"
+              loading="lazy"
+              decoding="async"
+              itemprop="image"
+            />
+          </picture>
+          
+          
+        </div>
+        
+        <p class="library-compact-meta">1992</p>
+        
+        <h3 class="library-compact-title" itemprop="name">Maus II: A Survivor's Tale: And Here My Troubles Began (Pantheon Graphic Library)</h3>
+        <header class="library-default-header">
           <span class="book-intro">
             <h2>
               <span class="book-title" itemprop="name">Maus II: A Survivor's Tale: And Here My Troubles Began (Pantheon Graphic Library)</span>,
-              <br>by
-              <span class="book-author" itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name">Art Spiegelman</span></span>
+              <br />by
+              <span
+                class="book-author"
+                itemprop="author"
+                itemscope
+                itemtype="https://schema.org/Person"
+                ><span itemprop="name">Art Spiegelman</span></span
+              >
             </h2>
           </span>
         </header>
-        
-        <picture>
-          <source srcset="/blog/non-fiction-comics/img/covers/9780679729778.jpg" type="image/jpeg">
-          <img src="/blog/non-fiction-comics/img/covers/9780679729778.jpg" alt="Cover: Maus II: A Survivor's Tale: And Here My Troubles Began (Pantheon Graphic Library)" loading="lazy" decoding="async" itemprop="image">
-        </picture>
-        
-        <small>
+        <small class="library-default-dates">
           Published: <span itemprop="copyrightYear">1992</span>
-          </small>
+          
+        </small>
         <section></section>
       </article>
     </summary>
@@ -652,25 +1031,49 @@ While the illustrations are fairly simple compared to others I've encountered, t
   <div class="no-details">
   
     <summary>
-      <article itemscope itemtype="https://schema.org/Book" data-tags="memoir, identity">
-        <header>
+      <article
+        itemscope
+        itemtype="https://schema.org/Book"
+        data-tags="memoir, identity"
+      >
+        <div class="library-cover-wrap">
+          
+          <picture class="library-cover">
+            <source srcset="/blog/non-fiction-comics/img/covers/9780593462294.jpg" type="image/jpeg" />
+            <img
+              src="/blog/non-fiction-comics/img/covers/9780593462294.jpg"
+              alt="Cover: Mexikid: (Newbery Honor Award Winner)"
+              loading="lazy"
+              decoding="async"
+              itemprop="image"
+            />
+          </picture>
+          
+          
+        </div>
+        
+        <p class="library-compact-meta">2023 · Read 2025</p>
+        
+        <h3 class="library-compact-title" itemprop="name">Mexikid: (Newbery Honor Award Winner)</h3>
+        <header class="library-default-header">
           <span class="book-intro">
             <h2>
               <span class="book-title" itemprop="name">Mexikid: (Newbery Honor Award Winner)</span>,
-              <br>by
-              <span class="book-author" itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name">Pedro Martin</span></span>
+              <br />by
+              <span
+                class="book-author"
+                itemprop="author"
+                itemscope
+                itemtype="https://schema.org/Person"
+                ><span itemprop="name">Pedro Martin</span></span
+              >
             </h2>
           </span>
         </header>
-        
-        <picture>
-          <source srcset="/blog/non-fiction-comics/img/covers/9780593462294.jpg" type="image/jpeg">
-          <img src="/blog/non-fiction-comics/img/covers/9780593462294.jpg" alt="Cover: Mexikid: (Newbery Honor Award Winner)" loading="lazy" decoding="async" itemprop="image">
-        </picture>
-        
-        <small>
+        <small class="library-default-dates">
           Published: <span itemprop="copyrightYear">2023</span>
-           · Read: 2025</small>
+           · Read: 2025
+        </small>
         <section></section>
       </article>
     </summary>
@@ -682,25 +1085,49 @@ While the illustrations are fairly simple compared to others I've encountered, t
   <div class="no-details">
   
     <summary>
-      <article itemscope itemtype="https://schema.org/Book" data-tags="memoir, war">
-        <header>
+      <article
+        itemscope
+        itemtype="https://schema.org/Book"
+        data-tags="memoir, war"
+      >
+        <div class="library-cover-wrap">
+          
+          <picture class="library-cover">
+            <source srcset="/blog/non-fiction-comics/img/covers/9780394541556.jpg" type="image/jpeg" />
+            <img
+              src="/blog/non-fiction-comics/img/covers/9780394541556.jpg"
+              alt="Cover: My Father Bleeds History (Maus)"
+              loading="lazy"
+              decoding="async"
+              itemprop="image"
+            />
+          </picture>
+          
+          
+        </div>
+        
+        <p class="library-compact-meta">1991 · Read 2022</p>
+        
+        <h3 class="library-compact-title" itemprop="name">My Father Bleeds History (Maus)</h3>
+        <header class="library-default-header">
           <span class="book-intro">
             <h2>
               <span class="book-title" itemprop="name">My Father Bleeds History (Maus)</span>,
-              <br>by
-              <span class="book-author" itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name">Art Spiegelman</span></span>
+              <br />by
+              <span
+                class="book-author"
+                itemprop="author"
+                itemscope
+                itemtype="https://schema.org/Person"
+                ><span itemprop="name">Art Spiegelman</span></span
+              >
             </h2>
           </span>
         </header>
-        
-        <picture>
-          <source srcset="/blog/non-fiction-comics/img/covers/9780394541556.jpg" type="image/jpeg">
-          <img src="/blog/non-fiction-comics/img/covers/9780394541556.jpg" alt="Cover: My Father Bleeds History (Maus)" loading="lazy" decoding="async" itemprop="image">
-        </picture>
-        
-        <small>
+        <small class="library-default-dates">
           Published: <span itemprop="copyrightYear">1991</span>
-           · Read: 2022</small>
+           · Read: 2022
+        </small>
         <section></section>
       </article>
     </summary>
@@ -712,25 +1139,49 @@ While the illustrations are fairly simple compared to others I've encountered, t
   <div class="no-details">
   
     <summary>
-      <article itemscope itemtype="https://schema.org/Book" data-tags="memoir, war">
-        <header>
+      <article
+        itemscope
+        itemtype="https://schema.org/Book"
+        data-tags="memoir, war"
+      >
+        <div class="library-cover-wrap">
+          
+          <picture class="library-cover">
+            <source srcset="/blog/non-fiction-comics/img/covers/9780809094820.jpg" type="image/jpeg" />
+            <img
+              src="/blog/non-fiction-comics/img/covers/9780809094820.jpg"
+              alt="Cover: Not the Israel My Parents Promised Me"
+              loading="lazy"
+              decoding="async"
+              itemprop="image"
+            />
+          </picture>
+          
+          
+        </div>
+        
+        <p class="library-compact-meta">2012 · Read 2023</p>
+        
+        <h3 class="library-compact-title" itemprop="name">Not the Israel My Parents Promised Me</h3>
+        <header class="library-default-header">
           <span class="book-intro">
             <h2>
               <span class="book-title" itemprop="name">Not the Israel My Parents Promised Me</span>,
-              <br>by
-              <span class="book-author" itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name">Harvey Pekar, Joyce Brabner, JT Waldman</span></span>
+              <br />by
+              <span
+                class="book-author"
+                itemprop="author"
+                itemscope
+                itemtype="https://schema.org/Person"
+                ><span itemprop="name">Harvey Pekar, Joyce Brabner, JT Waldman</span></span
+              >
             </h2>
           </span>
         </header>
-        
-        <picture>
-          <source srcset="/blog/non-fiction-comics/img/covers/9780809094820.jpg" type="image/jpeg">
-          <img src="/blog/non-fiction-comics/img/covers/9780809094820.jpg" alt="Cover: Not the Israel My Parents Promised Me" loading="lazy" decoding="async" itemprop="image">
-        </picture>
-        
-        <small>
+        <small class="library-default-dates">
           Published: <span itemprop="copyrightYear">2012</span>
-           · Read: 2023</small>
+           · Read: 2023
+        </small>
         <section></section>
       </article>
     </summary>
@@ -742,25 +1193,49 @@ While the illustrations are fairly simple compared to others I've encountered, t
   <div class="no-details">
   
     <summary>
-      <article itemscope itemtype="https://schema.org/Book" data-tags="journalism, war">
-        <header>
+      <article
+        itemscope
+        itemtype="https://schema.org/Book"
+        data-tags="journalism, war"
+      >
+        <div class="library-cover-wrap">
+          
+          <picture class="library-cover">
+            <source srcset="/blog/non-fiction-comics/img/covers/9781560974321.jpg" type="image/jpeg" />
+            <img
+              src="/blog/non-fiction-comics/img/covers/9781560974321.jpg"
+              alt="Cover: Palestine Collection"
+              loading="lazy"
+              decoding="async"
+              itemprop="image"
+            />
+          </picture>
+          
+          
+        </div>
+        
+        <p class="library-compact-meta">2014 · Read 2023</p>
+        
+        <h3 class="library-compact-title" itemprop="name">Palestine Collection</h3>
+        <header class="library-default-header">
           <span class="book-intro">
             <h2>
               <span class="book-title" itemprop="name">Palestine Collection</span>,
-              <br>by
-              <span class="book-author" itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name">Joe Sacco</span></span>
+              <br />by
+              <span
+                class="book-author"
+                itemprop="author"
+                itemscope
+                itemtype="https://schema.org/Person"
+                ><span itemprop="name">Joe Sacco</span></span
+              >
             </h2>
           </span>
         </header>
-        
-        <picture>
-          <source srcset="/blog/non-fiction-comics/img/covers/9781560974321.jpg" type="image/jpeg">
-          <img src="/blog/non-fiction-comics/img/covers/9781560974321.jpg" alt="Cover: Palestine Collection" loading="lazy" decoding="async" itemprop="image">
-        </picture>
-        
-        <small>
+        <small class="library-default-dates">
           Published: <span itemprop="copyrightYear">2014</span>
-           · Read: 2023</small>
+           · Read: 2023
+        </small>
         <section></section>
       </article>
     </summary>
@@ -772,25 +1247,49 @@ While the illustrations are fairly simple compared to others I've encountered, t
   <div class="no-details">
   
     <summary>
-      <article itemscope itemtype="https://schema.org/Book" data-tags="journalism">
-        <header>
+      <article
+        itemscope
+        itemtype="https://schema.org/Book"
+        data-tags="journalism"
+      >
+        <div class="library-cover-wrap">
+          
+          <picture class="library-cover">
+            <source srcset="/blog/non-fiction-comics/img/covers/9781627799034.jpg" type="image/jpeg" />
+            <img
+              src="/blog/non-fiction-comics/img/covers/9781627799034.jpg"
+              alt="Cover: Paying the Land"
+              loading="lazy"
+              decoding="async"
+              itemprop="image"
+            />
+          </picture>
+          
+          
+        </div>
+        
+        <p class="library-compact-meta">2020 · Read 2021</p>
+        
+        <h3 class="library-compact-title" itemprop="name">Paying the Land</h3>
+        <header class="library-default-header">
           <span class="book-intro">
             <h2>
               <span class="book-title" itemprop="name">Paying the Land</span>,
-              <br>by
-              <span class="book-author" itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name">Joe Sacco</span></span>
+              <br />by
+              <span
+                class="book-author"
+                itemprop="author"
+                itemscope
+                itemtype="https://schema.org/Person"
+                ><span itemprop="name">Joe Sacco</span></span
+              >
             </h2>
           </span>
         </header>
-        
-        <picture>
-          <source srcset="/blog/non-fiction-comics/img/covers/9781627799034.jpg" type="image/jpeg">
-          <img src="/blog/non-fiction-comics/img/covers/9781627799034.jpg" alt="Cover: Paying the Land" loading="lazy" decoding="async" itemprop="image">
-        </picture>
-        
-        <small>
+        <small class="library-default-dates">
           Published: <span itemprop="copyrightYear">2020</span>
-           · Read: 2021</small>
+           · Read: 2021
+        </small>
         <section></section>
       </article>
     </summary>
@@ -802,25 +1301,49 @@ While the illustrations are fairly simple compared to others I've encountered, t
   <div class="no-details">
   
     <summary>
-      <article itemscope itemtype="https://schema.org/Book" data-tags="journalism, war">
-        <header>
+      <article
+        itemscope
+        itemtype="https://schema.org/Book"
+        data-tags="journalism, war"
+      >
+        <div class="library-cover-wrap">
+          
+          <picture class="library-cover">
+            <source srcset="/blog/non-fiction-comics/img/covers/9781951491147.jpg" type="image/jpeg" />
+            <img
+              src="/blog/non-fiction-comics/img/covers/9781951491147.jpg"
+              alt="Cover: Power Born of Dreams: My Story is Palestine"
+              loading="lazy"
+              decoding="async"
+              itemprop="image"
+            />
+          </picture>
+          
+          
+        </div>
+        
+        <p class="library-compact-meta">2021</p>
+        
+        <h3 class="library-compact-title" itemprop="name">Power Born of Dreams: My Story is Palestine</h3>
+        <header class="library-default-header">
           <span class="book-intro">
             <h2>
               <span class="book-title" itemprop="name">Power Born of Dreams: My Story is Palestine</span>,
-              <br>by
-              <span class="book-author" itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name">Mohammad Sabaaneh</span></span>
+              <br />by
+              <span
+                class="book-author"
+                itemprop="author"
+                itemscope
+                itemtype="https://schema.org/Person"
+                ><span itemprop="name">Mohammad Sabaaneh</span></span
+              >
             </h2>
           </span>
         </header>
-        
-        <picture>
-          <source srcset="/blog/non-fiction-comics/img/covers/9781951491147.jpg" type="image/jpeg">
-          <img src="/blog/non-fiction-comics/img/covers/9781951491147.jpg" alt="Cover: Power Born of Dreams: My Story is Palestine" loading="lazy" decoding="async" itemprop="image">
-        </picture>
-        
-        <small>
+        <small class="library-default-dates">
           Published: <span itemprop="copyrightYear">2021</span>
-          </small>
+          
+        </small>
         <section></section>
       </article>
     </summary>
@@ -832,25 +1355,49 @@ While the illustrations are fairly simple compared to others I've encountered, t
   <div class="no-details">
   
     <summary>
-      <article itemscope itemtype="https://schema.org/Book" data-tags="journalism, war">
-        <header>
+      <article
+        itemscope
+        itemtype="https://schema.org/Book"
+        data-tags="journalism, war"
+      >
+        <div class="library-cover-wrap">
+          
+          <picture class="library-cover">
+            <source srcset="/blog/non-fiction-comics/img/covers/9781770462557.jpg" type="image/jpeg" />
+            <img
+              src="/blog/non-fiction-comics/img/covers/9781770462557.jpg"
+              alt="Cover: Rolling Blackouts: Dispatches from Turkey, Syria, and Iraq"
+              loading="lazy"
+              decoding="async"
+              itemprop="image"
+            />
+          </picture>
+          
+          
+        </div>
+        
+        <p class="library-compact-meta">2016 · Read 2019</p>
+        
+        <h3 class="library-compact-title" itemprop="name">Rolling Blackouts: Dispatches from Turkey, Syria, and Iraq</h3>
+        <header class="library-default-header">
           <span class="book-intro">
             <h2>
               <span class="book-title" itemprop="name">Rolling Blackouts: Dispatches from Turkey, Syria, and Iraq</span>,
-              <br>by
-              <span class="book-author" itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name">Sarah Glidden</span></span>
+              <br />by
+              <span
+                class="book-author"
+                itemprop="author"
+                itemscope
+                itemtype="https://schema.org/Person"
+                ><span itemprop="name">Sarah Glidden</span></span
+              >
             </h2>
           </span>
         </header>
-        
-        <picture>
-          <source srcset="/blog/non-fiction-comics/img/covers/9781770462557.jpg" type="image/jpeg">
-          <img src="/blog/non-fiction-comics/img/covers/9781770462557.jpg" alt="Cover: Rolling Blackouts: Dispatches from Turkey, Syria, and Iraq" loading="lazy" decoding="async" itemprop="image">
-        </picture>
-        
-        <small>
+        <small class="library-default-dates">
           Published: <span itemprop="copyrightYear">2016</span>
-           · Read: 2019</small>
+           · Read: 2019
+        </small>
         <section></section>
       </article>
     </summary>
@@ -862,25 +1409,49 @@ While the illustrations are fairly simple compared to others I've encountered, t
   <div class="no-details">
   
     <summary>
-      <article itemscope itemtype="https://schema.org/Book" data-tags="biography">
-        <header>
+      <article
+        itemscope
+        itemtype="https://schema.org/Book"
+        data-tags="biography"
+      >
+        <div class="library-cover-wrap">
+          
+          <picture class="library-cover">
+            <source srcset="/blog/non-fiction-comics/img/covers/9780786839018.jpg" type="image/jpeg" />
+            <img
+              src="/blog/non-fiction-comics/img/covers/9780786839018.jpg"
+              alt="Cover: Satchel Paige: Striking Out Jim Crow"
+              loading="lazy"
+              decoding="async"
+              itemprop="image"
+            />
+          </picture>
+          
+          
+        </div>
+        
+        <p class="library-compact-meta">2007 · Read 2025</p>
+        
+        <h3 class="library-compact-title" itemprop="name">Satchel Paige: Striking Out Jim Crow</h3>
+        <header class="library-default-header">
           <span class="book-intro">
             <h2>
               <span class="book-title" itemprop="name">Satchel Paige: Striking Out Jim Crow</span>,
-              <br>by
-              <span class="book-author" itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name">James Sturm, Rich Tommaso</span></span>
+              <br />by
+              <span
+                class="book-author"
+                itemprop="author"
+                itemscope
+                itemtype="https://schema.org/Person"
+                ><span itemprop="name">James Sturm, Rich Tommaso</span></span
+              >
             </h2>
           </span>
         </header>
-        
-        <picture>
-          <source srcset="/blog/non-fiction-comics/img/covers/9780786839018.jpg" type="image/jpeg">
-          <img src="/blog/non-fiction-comics/img/covers/9780786839018.jpg" alt="Cover: Satchel Paige: Striking Out Jim Crow" loading="lazy" decoding="async" itemprop="image">
-        </picture>
-        
-        <small>
+        <small class="library-default-dates">
           Published: <span itemprop="copyrightYear">2007</span>
-           · Read: 2025</small>
+           · Read: 2025
+        </small>
         <section></section>
       </article>
     </summary>
@@ -892,25 +1463,53 @@ While the illustrations are fairly simple compared to others I've encountered, t
   <details>
   
     <summary>
-      <article itemscope itemtype="https://schema.org/Book" data-tags="memoir, identity">
-        <header>
+      <article
+        itemscope
+        itemtype="https://schema.org/Book"
+        data-tags="memoir, identity"
+      >
+        <div class="library-cover-wrap">
+          
+          <picture class="library-cover">
+            <source srcset="/blog/non-fiction-comics/img/covers/9781524748418.jpg" type="image/jpeg" />
+            <img
+              src="/blog/non-fiction-comics/img/covers/9781524748418.jpg"
+              alt="Cover: Shubeik Lubeik (Pantheon Graphic Library)"
+              loading="lazy"
+              decoding="async"
+              itemprop="image"
+            />
+          </picture>
+          
+          
+          <span class="library-expand-hint" title="Expand personal notes">
+            <img src="/img/icon-expand.svg" width="20" height="20" alt="" />
+          </span>
+          
+        </div>
+        
+        <p class="library-compact-meta">2023 · Read 2023</p>
+        
+        <h3 class="library-compact-title" itemprop="name">Shubeik Lubeik (Pantheon Graphic Library)</h3>
+        <header class="library-default-header">
           <span class="book-intro">
             <h2>
               <span class="book-title" itemprop="name">Shubeik Lubeik (Pantheon Graphic Library)</span>,
-              <br>by
-              <span class="book-author" itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name">Deena Mohamed</span></span>
+              <br />by
+              <span
+                class="book-author"
+                itemprop="author"
+                itemscope
+                itemtype="https://schema.org/Person"
+                ><span itemprop="name">Deena Mohamed</span></span
+              >
             </h2>
           </span>
         </header>
-        
-        <picture>
-          <source srcset="/blog/non-fiction-comics/img/covers/9781524748418.jpg" type="image/jpeg">
-          <img src="/blog/non-fiction-comics/img/covers/9781524748418.jpg" alt="Cover: Shubeik Lubeik (Pantheon Graphic Library)" loading="lazy" decoding="async" itemprop="image">
-        </picture>
-        
-        <small>
+        <small class="library-default-dates">
           Published: <span itemprop="copyrightYear">2023</span>
-           · Read: 2023</small>
+           · Read: 2023
+        </small>
         <section></section>
       </article>
     </summary>
@@ -940,25 +1539,49 @@ While the illustrations are fairly simple compared to others I've encountered, t
   <div class="no-details">
   
     <summary>
-      <article itemscope itemtype="https://schema.org/Book" data-tags="biography">
-        <header>
+      <article
+        itemscope
+        itemtype="https://schema.org/Book"
+        data-tags="biography"
+      >
+        <div class="library-cover-wrap">
+          
+          <picture class="library-cover">
+            <source srcset="/blog/non-fiction-comics/img/covers/9780809016495.jpg" type="image/jpeg" />
+            <img
+              src="/blog/non-fiction-comics/img/covers/9780809016495.jpg"
+              alt="Cover: The Beats"
+              loading="lazy"
+              decoding="async"
+              itemprop="image"
+            />
+          </picture>
+          
+          
+        </div>
+        
+        <p class="library-compact-meta">2010 · Read 2021</p>
+        
+        <h3 class="library-compact-title" itemprop="name">The Beats</h3>
+        <header class="library-default-header">
           <span class="book-intro">
             <h2>
               <span class="book-title" itemprop="name">The Beats</span>,
-              <br>by
-              <span class="book-author" itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name">Harvey Pekar</span></span>
+              <br />by
+              <span
+                class="book-author"
+                itemprop="author"
+                itemscope
+                itemtype="https://schema.org/Person"
+                ><span itemprop="name">Harvey Pekar</span></span
+              >
             </h2>
           </span>
         </header>
-        
-        <picture>
-          <source srcset="/blog/non-fiction-comics/img/covers/9780809016495.jpg" type="image/jpeg">
-          <img src="/blog/non-fiction-comics/img/covers/9780809016495.jpg" alt="Cover: The Beats" loading="lazy" decoding="async" itemprop="image">
-        </picture>
-        
-        <small>
+        <small class="library-default-dates">
           Published: <span itemprop="copyrightYear">2010</span>
-           · Read: 2021</small>
+           · Read: 2021
+        </small>
         <section></section>
       </article>
     </summary>
@@ -970,25 +1593,49 @@ While the illustrations are fairly simple compared to others I've encountered, t
   <div class="no-details">
   
     <summary>
-      <article itemscope itemtype="https://schema.org/Book" data-tags="memoir">
-        <header>
+      <article
+        itemscope
+        itemtype="https://schema.org/Book"
+        data-tags="memoir"
+      >
+        <div class="library-cover-wrap">
+          
+          <picture class="library-cover">
+            <source srcset="/blog/non-fiction-comics/img/covers/299108757.jpg" type="image/jpeg" />
+            <img
+              src="/blog/non-fiction-comics/img/covers/299108757.jpg"
+              alt="Cover: The FUFF Complete Collection"
+              loading="lazy"
+              decoding="async"
+              itemprop="image"
+            />
+          </picture>
+          
+          
+        </div>
+        
+        <p class="library-compact-meta">2021 · Read 2022</p>
+        
+        <h3 class="library-compact-title" itemprop="name">The FUFF Complete Collection</h3>
+        <header class="library-default-header">
           <span class="book-intro">
             <h2>
               <span class="book-title" itemprop="name">The FUFF Complete Collection</span>,
-              <br>by
-              <span class="book-author" itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name">Jeffrey Lewis</span></span>
+              <br />by
+              <span
+                class="book-author"
+                itemprop="author"
+                itemscope
+                itemtype="https://schema.org/Person"
+                ><span itemprop="name">Jeffrey Lewis</span></span
+              >
             </h2>
           </span>
         </header>
-        
-        <picture>
-          <source srcset="/blog/non-fiction-comics/img/covers/299108757.jpg" type="image/jpeg">
-          <img src="/blog/non-fiction-comics/img/covers/299108757.jpg" alt="Cover: The FUFF Complete Collection" loading="lazy" decoding="async" itemprop="image">
-        </picture>
-        
-        <small>
+        <small class="library-default-dates">
           Published: <span itemprop="copyrightYear">2021</span>
-           · Read: 2022</small>
+           · Read: 2022
+        </small>
         <section></section>
       </article>
     </summary>
@@ -1000,25 +1647,53 @@ While the illustrations are fairly simple compared to others I've encountered, t
   <details>
   
     <summary>
-      <article itemscope itemtype="https://schema.org/Book" data-tags="social">
-        <header>
+      <article
+        itemscope
+        itemtype="https://schema.org/Book"
+        data-tags="social"
+      >
+        <div class="library-cover-wrap">
+          
+          <picture class="library-cover">
+            <source srcset="/blog/non-fiction-comics/img/covers/9780547815503.jpg" type="image/jpeg" />
+            <img
+              src="/blog/non-fiction-comics/img/covers/9780547815503.jpg"
+              alt="Cover: The Great American Dust Bowl"
+              loading="lazy"
+              decoding="async"
+              itemprop="image"
+            />
+          </picture>
+          
+          
+          <span class="library-expand-hint" title="Expand personal notes">
+            <img src="/img/icon-expand.svg" width="20" height="20" alt="" />
+          </span>
+          
+        </div>
+        
+        <p class="library-compact-meta">2013 · Read 2023</p>
+        
+        <h3 class="library-compact-title" itemprop="name">The Great American Dust Bowl</h3>
+        <header class="library-default-header">
           <span class="book-intro">
             <h2>
               <span class="book-title" itemprop="name">The Great American Dust Bowl</span>,
-              <br>by
-              <span class="book-author" itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name">Don Brown</span></span>
+              <br />by
+              <span
+                class="book-author"
+                itemprop="author"
+                itemscope
+                itemtype="https://schema.org/Person"
+                ><span itemprop="name">Don Brown</span></span
+              >
             </h2>
           </span>
         </header>
-        
-        <picture>
-          <source srcset="/blog/non-fiction-comics/img/covers/9780547815503.jpg" type="image/jpeg">
-          <img src="/blog/non-fiction-comics/img/covers/9780547815503.jpg" alt="Cover: The Great American Dust Bowl" loading="lazy" decoding="async" itemprop="image">
-        </picture>
-        
-        <small>
+        <small class="library-default-dates">
           Published: <span itemprop="copyrightYear">2013</span>
-           · Read: 2023</small>
+           · Read: 2023
+        </small>
         <section></section>
       </article>
     </summary>
@@ -1061,25 +1736,49 @@ While the illustrations are fairly simple compared to others I've encountered, t
   <div class="no-details">
   
     <summary>
-      <article itemscope itemtype="https://schema.org/Book" data-tags="memoir, identity">
-        <header>
+      <article
+        itemscope
+        itemtype="https://schema.org/Book"
+        data-tags="memoir, identity"
+      >
+        <div class="library-cover-wrap">
+          
+          <picture class="library-cover">
+            <source srcset="/blog/non-fiction-comics/img/covers/9780358659112.jpg" type="image/jpeg" />
+            <img
+              src="/blog/non-fiction-comics/img/covers/9780358659112.jpg"
+              alt="Cover: The High Desert: Black. Punk. Nowhere."
+              loading="lazy"
+              decoding="async"
+              itemprop="image"
+            />
+          </picture>
+          
+          
+        </div>
+        
+        <p class="library-compact-meta">2022 · Read 2023</p>
+        
+        <h3 class="library-compact-title" itemprop="name">The High Desert: Black. Punk. Nowhere.</h3>
+        <header class="library-default-header">
           <span class="book-intro">
             <h2>
               <span class="book-title" itemprop="name">The High Desert: Black. Punk. Nowhere.</span>,
-              <br>by
-              <span class="book-author" itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name">James Spooner</span></span>
+              <br />by
+              <span
+                class="book-author"
+                itemprop="author"
+                itemscope
+                itemtype="https://schema.org/Person"
+                ><span itemprop="name">James Spooner</span></span
+              >
             </h2>
           </span>
         </header>
-        
-        <picture>
-          <source srcset="/blog/non-fiction-comics/img/covers/9780358659112.jpg" type="image/jpeg">
-          <img src="/blog/non-fiction-comics/img/covers/9780358659112.jpg" alt="Cover: The High Desert: Black. Punk. Nowhere." loading="lazy" decoding="async" itemprop="image">
-        </picture>
-        
-        <small>
+        <small class="library-default-dates">
           Published: <span itemprop="copyrightYear">2022</span>
-           · Read: 2023</small>
+           · Read: 2023
+        </small>
         <section></section>
       </article>
     </summary>
@@ -1091,25 +1790,49 @@ While the illustrations are fairly simple compared to others I've encountered, t
   <div class="no-details">
   
     <summary>
-      <article itemscope itemtype="https://schema.org/Book" data-tags="biography, social">
-        <header>
+      <article
+        itemscope
+        itemtype="https://schema.org/Book"
+        data-tags="biography, social"
+      >
+        <div class="library-cover-wrap">
+          
+          <picture class="library-cover">
+            <source srcset="/blog/non-fiction-comics/img/covers/9780399581441.jpg" type="image/jpeg" />
+            <img
+              src="/blog/non-fiction-comics/img/covers/9780399581441.jpg"
+              alt="Cover: The Life of Frederick Douglass: A Graphic Narrative of a Slave's Journey from Bondage to Freedom"
+              loading="lazy"
+              decoding="async"
+              itemprop="image"
+            />
+          </picture>
+          
+          
+        </div>
+        
+        <p class="library-compact-meta">2019 · Read 2021</p>
+        
+        <h3 class="library-compact-title" itemprop="name">The Life of Frederick Douglass: A Graphic Narrative of a Slave's Journey from Bondage to Freedom</h3>
+        <header class="library-default-header">
           <span class="book-intro">
             <h2>
               <span class="book-title" itemprop="name">The Life of Frederick Douglass: A Graphic Narrative of a Slave's Journey from Bondage to Freedom</span>,
-              <br>by
-              <span class="book-author" itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name">David F. Walker, Marissa Louise, Damon Smyth</span></span>
+              <br />by
+              <span
+                class="book-author"
+                itemprop="author"
+                itemscope
+                itemtype="https://schema.org/Person"
+                ><span itemprop="name">David F. Walker, Marissa Louise, Damon Smyth</span></span
+              >
             </h2>
           </span>
         </header>
-        
-        <picture>
-          <source srcset="/blog/non-fiction-comics/img/covers/9780399581441.jpg" type="image/jpeg">
-          <img src="/blog/non-fiction-comics/img/covers/9780399581441.jpg" alt="Cover: The Life of Frederick Douglass: A Graphic Narrative of a Slave's Journey from Bondage to Freedom" loading="lazy" decoding="async" itemprop="image">
-        </picture>
-        
-        <small>
+        <small class="library-default-dates">
           Published: <span itemprop="copyrightYear">2019</span>
-           · Read: 2021</small>
+           · Read: 2021
+        </small>
         <section></section>
       </article>
     </summary>
@@ -1121,25 +1844,49 @@ While the illustrations are fairly simple compared to others I've encountered, t
   <div class="no-details">
   
     <summary>
-      <article itemscope itemtype="https://schema.org/Book" data-tags="biography">
-        <header>
+      <article
+        itemscope
+        itemtype="https://schema.org/Book"
+        data-tags="biography"
+      >
+        <div class="library-cover-wrap">
+          
+          <picture class="library-cover">
+            <source srcset="/blog/non-fiction-comics/img/covers/9780916718008.jpg" type="image/jpeg" />
+            <img
+              src="/blog/non-fiction-comics/img/covers/9780916718008.jpg"
+              alt="Cover: The Most Costly Journey: Stories of Migrant Farmworkers in Vermont Drawn by New England Cartoonists (English and Spanish Edition)"
+              loading="lazy"
+              decoding="async"
+              itemprop="image"
+            />
+          </picture>
+          
+          
+        </div>
+        
+        <p class="library-compact-meta">2021 · Read 2022</p>
+        
+        <h3 class="library-compact-title" itemprop="name">The Most Costly Journey: Stories of Migrant Farmworkers in Vermont Drawn by New England Cartoonists (English and Spanish Edition)</h3>
+        <header class="library-default-header">
           <span class="book-intro">
             <h2>
               <span class="book-title" itemprop="name">The Most Costly Journey: Stories of Migrant Farmworkers in Vermont Drawn by New England Cartoonists (English and Spanish Edition)</span>,
-              <br>by
-              <span class="book-author" itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name">Marek Bennett, Andy Kolovos, Teresa Mares</span></span>
+              <br />by
+              <span
+                class="book-author"
+                itemprop="author"
+                itemscope
+                itemtype="https://schema.org/Person"
+                ><span itemprop="name">Marek Bennett, Andy Kolovos, Teresa Mares</span></span
+              >
             </h2>
           </span>
         </header>
-        
-        <picture>
-          <source srcset="/blog/non-fiction-comics/img/covers/9780916718008.jpg" type="image/jpeg">
-          <img src="/blog/non-fiction-comics/img/covers/9780916718008.jpg" alt="Cover: The Most Costly Journey: Stories of Migrant Farmworkers in Vermont Drawn by New England Cartoonists (English and Spanish Edition)" loading="lazy" decoding="async" itemprop="image">
-        </picture>
-        
-        <small>
+        <small class="library-default-dates">
           Published: <span itemprop="copyrightYear">2021</span>
-           · Read: 2022</small>
+           · Read: 2022
+        </small>
         <section></section>
       </article>
     </summary>
@@ -1151,25 +1898,49 @@ While the illustrations are fairly simple compared to others I've encountered, t
   <div class="no-details">
   
     <summary>
-      <article itemscope itemtype="https://schema.org/Book" data-tags="journalism, war">
-        <header>
+      <article
+        itemscope
+        itemtype="https://schema.org/Book"
+        data-tags="journalism, war"
+      >
+        <div class="library-cover-wrap">
+          
+          <picture class="library-cover">
+            <source srcset="/blog/non-fiction-comics/img/covers/9781328810151.jpg" type="image/jpeg" />
+            <img
+              src="/blog/non-fiction-comics/img/covers/9781328810151.jpg"
+              alt="Cover: The Unwanted: Stories of the Syrian Refugees"
+              loading="lazy"
+              decoding="async"
+              itemprop="image"
+            />
+          </picture>
+          
+          
+        </div>
+        
+        <p class="library-compact-meta">2018 · Read 2021</p>
+        
+        <h3 class="library-compact-title" itemprop="name">The Unwanted: Stories of the Syrian Refugees</h3>
+        <header class="library-default-header">
           <span class="book-intro">
             <h2>
               <span class="book-title" itemprop="name">The Unwanted: Stories of the Syrian Refugees</span>,
-              <br>by
-              <span class="book-author" itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name">Don Brown</span></span>
+              <br />by
+              <span
+                class="book-author"
+                itemprop="author"
+                itemscope
+                itemtype="https://schema.org/Person"
+                ><span itemprop="name">Don Brown</span></span
+              >
             </h2>
           </span>
         </header>
-        
-        <picture>
-          <source srcset="/blog/non-fiction-comics/img/covers/9781328810151.jpg" type="image/jpeg">
-          <img src="/blog/non-fiction-comics/img/covers/9781328810151.jpg" alt="Cover: The Unwanted: Stories of the Syrian Refugees" loading="lazy" decoding="async" itemprop="image">
-        </picture>
-        
-        <small>
+        <small class="library-default-dates">
           Published: <span itemprop="copyrightYear">2018</span>
-           · Read: 2021</small>
+           · Read: 2021
+        </small>
         <section></section>
       </article>
     </summary>
@@ -1181,25 +1952,49 @@ While the illustrations are fairly simple compared to others I've encountered, t
   <div class="no-details">
   
     <summary>
-      <article itemscope itemtype="https://schema.org/Book" data-tags="memoir, social">
-        <header>
+      <article
+        itemscope
+        itemtype="https://schema.org/Book"
+        data-tags="memoir, social"
+      >
+        <div class="library-cover-wrap">
+          
+          <picture class="library-cover">
+            <source srcset="/blog/non-fiction-comics/img/covers/9781797223674.jpg" type="image/jpeg" />
+            <img
+              src="/blog/non-fiction-comics/img/covers/9781797223674.jpg"
+              alt="Cover: This Country: Searching for Home in (Very) Rural America"
+              loading="lazy"
+              decoding="async"
+              itemprop="image"
+            />
+          </picture>
+          
+          
+        </div>
+        
+        <p class="library-compact-meta">2023 · Read 2026</p>
+        
+        <h3 class="library-compact-title" itemprop="name">This Country: Searching for Home in (Very) Rural America</h3>
+        <header class="library-default-header">
           <span class="book-intro">
             <h2>
               <span class="book-title" itemprop="name">This Country: Searching for Home in (Very) Rural America</span>,
-              <br>by
-              <span class="book-author" itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name">Navied Mahdavian</span></span>
+              <br />by
+              <span
+                class="book-author"
+                itemprop="author"
+                itemscope
+                itemtype="https://schema.org/Person"
+                ><span itemprop="name">Navied Mahdavian</span></span
+              >
             </h2>
           </span>
         </header>
-        
-        <picture>
-          <source srcset="/blog/non-fiction-comics/img/covers/9781797223674.jpg" type="image/jpeg">
-          <img src="/blog/non-fiction-comics/img/covers/9781797223674.jpg" alt="Cover: This Country: Searching for Home in (Very) Rural America" loading="lazy" decoding="async" itemprop="image">
-        </picture>
-        
-        <small>
+        <small class="library-default-dates">
           Published: <span itemprop="copyrightYear">2023</span>
-           · Read: 2026</small>
+           · Read: 2026
+        </small>
         <section></section>
       </article>
     </summary>
@@ -1211,25 +2006,49 @@ While the illustrations are fairly simple compared to others I've encountered, t
   <div class="no-details">
   
     <summary>
-      <article itemscope itemtype="https://schema.org/Book" data-tags="social, resistance">
-        <header>
+      <article
+        itemscope
+        itemtype="https://schema.org/Book"
+        data-tags="social, resistance"
+      >
+        <div class="library-cover-wrap">
+          
+          <picture class="library-cover">
+            <source srcset="/blog/non-fiction-comics/img/covers/9781250295309.jpg" type="image/jpeg" />
+            <img
+              src="/blog/non-fiction-comics/img/covers/9781250295309.jpg"
+              alt="Cover: Unrig: How to Fix Our Broken Democracy (World Citizen Comics)"
+              loading="lazy"
+              decoding="async"
+              itemprop="image"
+            />
+          </picture>
+          
+          
+        </div>
+        
+        <p class="library-compact-meta">2020 · Read 2021</p>
+        
+        <h3 class="library-compact-title" itemprop="name">Unrig: How to Fix Our Broken Democracy (World Citizen Comics)</h3>
+        <header class="library-default-header">
           <span class="book-intro">
             <h2>
               <span class="book-title" itemprop="name">Unrig: How to Fix Our Broken Democracy (World Citizen Comics)</span>,
-              <br>by
-              <span class="book-author" itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name">Daniel G. Newman, George O'Connor</span></span>
+              <br />by
+              <span
+                class="book-author"
+                itemprop="author"
+                itemscope
+                itemtype="https://schema.org/Person"
+                ><span itemprop="name">Daniel G. Newman, George O'Connor</span></span
+              >
             </h2>
           </span>
         </header>
-        
-        <picture>
-          <source srcset="/blog/non-fiction-comics/img/covers/9781250295309.jpg" type="image/jpeg">
-          <img src="/blog/non-fiction-comics/img/covers/9781250295309.jpg" alt="Cover: Unrig: How to Fix Our Broken Democracy (World Citizen Comics)" loading="lazy" decoding="async" itemprop="image">
-        </picture>
-        
-        <small>
+        <small class="library-default-dates">
           Published: <span itemprop="copyrightYear">2020</span>
-           · Read: 2021</small>
+           · Read: 2021
+        </small>
         <section></section>
       </article>
     </summary>
@@ -1241,25 +2060,49 @@ While the illustrations are fairly simple compared to others I've encountered, t
   <div class="no-details">
   
     <summary>
-      <article itemscope itemtype="https://schema.org/Book" data-tags="biography, resistance">
-        <header>
+      <article
+        itemscope
+        itemtype="https://schema.org/Book"
+        data-tags="biography, resistance"
+      >
+        <div class="library-cover-wrap">
+          
+          <picture class="library-cover">
+            <source srcset="/blog/non-fiction-comics/img/covers/9781844675258.jpg" type="image/jpeg" />
+            <img
+              src="/blog/non-fiction-comics/img/covers/9781844675258.jpg"
+              alt="Cover: Wobblies!: A Graphic History of the Industrial Workers of the World"
+              loading="lazy"
+              decoding="async"
+              itemprop="image"
+            />
+          </picture>
+          
+          
+        </div>
+        
+        <p class="library-compact-meta">2005 · Read 2023</p>
+        
+        <h3 class="library-compact-title" itemprop="name">Wobblies!: A Graphic History of the Industrial Workers of the World</h3>
+        <header class="library-default-header">
           <span class="book-intro">
             <h2>
               <span class="book-title" itemprop="name">Wobblies!: A Graphic History of the Industrial Workers of the World</span>,
-              <br>by
-              <span class="book-author" itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name">Paul Buhle, Nicole Schulman</span></span>
+              <br />by
+              <span
+                class="book-author"
+                itemprop="author"
+                itemscope
+                itemtype="https://schema.org/Person"
+                ><span itemprop="name">Paul Buhle, Nicole Schulman</span></span
+              >
             </h2>
           </span>
         </header>
-        
-        <picture>
-          <source srcset="/blog/non-fiction-comics/img/covers/9781844675258.jpg" type="image/jpeg">
-          <img src="/blog/non-fiction-comics/img/covers/9781844675258.jpg" alt="Cover: Wobblies!: A Graphic History of the Industrial Workers of the World" loading="lazy" decoding="async" itemprop="image">
-        </picture>
-        
-        <small>
+        <small class="library-default-dates">
           Published: <span itemprop="copyrightYear">2005</span>
-           · Read: 2023</small>
+           · Read: 2023
+        </small>
         <section></section>
       </article>
     </summary>
@@ -1271,25 +2114,49 @@ While the illustrations are fairly simple compared to others I've encountered, t
   <div class="no-details">
   
     <summary>
-      <article itemscope itemtype="https://schema.org/Book" data-tags="memoir">
-        <header>
+      <article
+        itemscope
+        itemtype="https://schema.org/Book"
+        data-tags="memoir"
+      >
+        <div class="library-cover-wrap">
+          
+          <picture class="library-cover">
+            <source srcset="/blog/non-fiction-comics/img/covers/9781606999325.jpg" type="image/jpeg" />
+            <img
+              src="/blog/non-fiction-comics/img/covers/9781606999325.jpg"
+              alt="Cover: Wrinkles"
+              loading="lazy"
+              decoding="async"
+              itemprop="image"
+            />
+          </picture>
+          
+          
+        </div>
+        
+        <p class="library-compact-meta">2016 · Read 2025</p>
+        
+        <h3 class="library-compact-title" itemprop="name">Wrinkles</h3>
+        <header class="library-default-header">
           <span class="book-intro">
             <h2>
               <span class="book-title" itemprop="name">Wrinkles</span>,
-              <br>by
-              <span class="book-author" itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name">Paco Roca</span></span>
+              <br />by
+              <span
+                class="book-author"
+                itemprop="author"
+                itemscope
+                itemtype="https://schema.org/Person"
+                ><span itemprop="name">Paco Roca</span></span
+              >
             </h2>
           </span>
         </header>
-        
-        <picture>
-          <source srcset="/blog/non-fiction-comics/img/covers/9781606999325.jpg" type="image/jpeg">
-          <img src="/blog/non-fiction-comics/img/covers/9781606999325.jpg" alt="Cover: Wrinkles" loading="lazy" decoding="async" itemprop="image">
-        </picture>
-        
-        <small>
+        <small class="library-default-dates">
           Published: <span itemprop="copyrightYear">2016</span>
-           · Read: 2025</small>
+           · Read: 2025
+        </small>
         <section></section>
       </article>
     </summary>
@@ -1300,7 +2167,7 @@ While the illustrations are fairly simple compared to others I've encountered, t
 </section>
 
 <section class="content-section">
-  <hr>
+  <hr />
   <p><strong>About:</strong>  This growing genre has taught me about the world in a way word-only books, podcasts, videos, and other existing media haven't been able to. The journalistic, memoir styles of Sacco's Palestine is gripping storytelling. The imagery and handdrawn text transfer emotion through a different field than words alone. </p>
 
   <p><strong>Status:</strong> So far, I'm using thematic tags to chunk them. I'd like to add a personal blurb to each one to describe more about why I recommend them. Graphic novels are a struggle to categorize. You'll notice this in the variety of methods libraries and bookstores use to shelve them. Because it's a high-level category, all other genres are sub-genres of it. On one hand, there's an argument to shelve them together, but on the other hand, it makes sense to sprinkle them throughout the shelves.</p>
@@ -1311,8 +2178,41 @@ While the illustrations are fairly simple compared to others I've encountered, t
 
 <script>
   document.addEventListener("DOMContentLoaded", () => {
+    const STORAGE_KEY = "nfc-comics-library-view";
+    const bookListEl = document.getElementById("BookList");
     const filters = document.querySelectorAll("#filters input[type=\"radio\"]");
     const bookList = document.querySelectorAll("#BookList article");
+    const viewButtons = document.querySelectorAll("[data-library-view]");
+
+    function setLibraryView(view) {
+      const compact = view === "compact";
+      bookListEl.classList.toggle("library-view--compact", compact);
+      viewButtons.forEach((btn) => {
+        const active = btn.dataset.libraryView === view;
+        btn.classList.toggle("is-active", active);
+        btn.setAttribute("aria-pressed", active ? "true" : "false");
+      });
+      try {
+        localStorage.setItem(STORAGE_KEY, view);
+      } catch (_) {}
+    }
+
+    const savedView = (() => {
+      try {
+        return localStorage.getItem(STORAGE_KEY);
+      } catch (_) {
+        return null;
+      }
+    })();
+    if (savedView === "compact" || savedView === "default") {
+      setLibraryView(savedView);
+    }
+
+    viewButtons.forEach((btn) => {
+      btn.addEventListener("click", () => {
+        setLibraryView(btn.dataset.libraryView);
+      });
+    });
 
     filters.forEach((filter) => {
       filter.addEventListener("change", () => {
@@ -1335,7 +2235,7 @@ While the illustrations are fairly simple compared to others I've encountered, t
         const isVisible = tag === "All" || bookTags.includes(tag);
         const container = book.closest("details") || book.closest(".no-details");
         if (container) {
-          container.style.display = isVisible ? "block" : "none";
+          container.style.display = isVisible ? "" : "none";
         }
       });
     }
@@ -1348,11 +2248,11 @@ While the illustrations are fairly simple compared to others I've encountered, t
    
     <ul class="blog-tags">
  
-      
+     <!--  ✅ Classic Blog Tags (if still using) --> 
      
      
      
-           
+           <!-- <dt>Tagged:</dt> -->
          
            
          
@@ -1366,19 +2266,19 @@ While the illustrations are fairly simple compared to others I've encountered, t
         
       
  
-      
+     <!--  🎤 Artists (single or array) --> 
      
  
  
-       
+      <!--  🏛 Venues --> 
       
  
  
-      
+     <!--  🏔 Peaks (array support) --> 
      
  
  
-       
+      <!--  🧭 Location (State + Town) --> 
       
  
     
@@ -1395,7 +2295,7 @@ While the illustrations are fairly simple compared to others I've encountered, t
                     <span class="label-prevnext">Next:</span>
                     <span class="title-prevnext"><a href="/blog/hack-day-2023/">Hackday 2023 - automating accessbility within our CMS</a></span>
                 </p>
-            
+            </ul>
 
     </nav>
 
@@ -1407,7 +2307,9 @@ While the illustrations are fairly simple compared to others I've encountered, t
 	<footer>
 		
 			<nav>
-				
+				<!-- <p class="colophon">
+					Built with <a href="https://www.11ty.dev/">eleventy</a>
+				</p> -->
 				<img src="/img/pine-bottom.png" alt="" class="footer-image">
 				<p class="social">
 					<a href="https://www.linkedin.com/in/wes-carr-8918b99/">linkedin</a>  |  

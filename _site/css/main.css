@@ -1396,18 +1396,9 @@ section.library summary::-webkit-details-marker {
   display: none;
 }
 
+  /* Expand affordance lives on cover (.library-expand-hint) */
   section.library details summary h2::before {
-    content: '';
-    position: relative;
-    float: right;
-    width: 20px;
-    height: 20px;
-    background: url(/img/icon-expand.svg) no-repeat center center;
-    background-size: 20px 20px;
-    border-radius: 50%;
-    border: solid 1px #ddd;
-    padding: 5px;
-    margin-left: 10px; /* Add spacing to prevent overlap */
+    display: none;
   }
 
 
@@ -1450,14 +1441,218 @@ section.library summary::-webkit-details-marker {
     min-height: 600px;
     }
 
-/* stick filters to top of screen on scroll */
-.library #filters{
-  /* background-color: #fff; */
+/* Post header: dates left, view toggle right */
+.content-header__meta-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: var(--gap);
+  width: 100%;
+}
+
+.content-header__meta-row .metadata {
+  margin: 0;
+  flex: 1 1 auto;
+}
+
+.library-view-toggle {
+  display: inline-flex;
+  border: 1px solid #c2e1c3;
+  border-radius: 8px;
+  overflow: hidden;
+  background: #fff;
+  flex-shrink: 0;
+}
+
+.library-view-toggle__btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  padding: 0;
+  border: 0;
+  margin: 0;
   background: transparent;
+  color: var(--text-non-em);
+  cursor: pointer;
+}
+
+.library-view-toggle__btn svg {
+  display: block;
+}
+
+.library-view-toggle__btn.is-active {
+  background: #3ea261;
+  color: #fff;
+  border-radius: 5px;
+}
+
+.library-view-toggle__btn:hover:not(.is-active) {
+  background: var(--bg-light-alt);
+  color: #466a79;
+}
+
+/* Full-width tag filters (separate from view toggle) */
+.library-filters#filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
   padding: 2em 0;
   position: sticky;
   top: 0;
   z-index: 1;
+  /* background: var(--bg-light); */
+}
+
+/* Cover + expand affordance for books with notes */
+.library-cover-wrap {
+  position: relative;
+  width: 100%;
+}
+
+.library-expand-hint {
+  position: absolute;
+  top: 0;
+  right: 0;
+  align-items: center;
+  padding: 5px;
+  width: 20px;
+  height: 20px;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 999px;
+  color: #466a79;
+}
+
+.library-expand-hint img {
+  width: 18px;
+  height: 18px;
+  display: block;
+}
+
+section.library details summary {
+  cursor: pointer;
+}
+
+section.library .no-details summary {
+  cursor: default;
+}
+
+/* Default view: hide compact-only lines */
+section.library .library-compact-meta,
+section.library .library-compact-title {
+  display: none;
+}
+
+/* Compact collection grid */
+section.library.library-view--compact {
+  grid-template-columns: repeat(auto-fill, minmax(11rem, 1fr));
+  grid-gap: 1.25rem;
+}
+
+section.library.library-view--compact .library-default-header,
+section.library.library-view--compact .library-default-dates,
+section.library.library-view--compact article > section:empty {
+  display: none;
+}
+
+section.library.library-view--compact .library-compact-meta,
+section.library.library-view--compact .library-compact-title {
+  display: block;
+}
+
+section.library.library-view--compact .no-details summary,
+section.library.library-view--compact details summary {
+  padding: 0;
+  border: none;
+  background: transparent;
+  box-shadow: none;
+  min-height: 0;
+}
+
+section.library.library-view--compact .no-details summary:hover,
+section.library.library-view--compact details summary:hover {
+  box-shadow: none;
+  border-color: transparent;
+}
+
+section.library.library-view--compact article {
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+section.library.library-view--compact article picture.library-cover {
+  margin: 0;
+  order: 1;
+}
+
+section.library.library-view--compact article picture.library-cover img {
+  width: 100%;
+  height: auto;
+  min-width: 0;
+  max-height: none;
+  aspect-ratio: 2 / 3;
+  object-fit: cover;
+  border-radius: 4px;
+  outline: none;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.12);
+}
+
+section.library.library-view--compact .library-compact-meta {
+  order: 2;
+  margin: 0.35rem 0 0;
+  font-size: 0.72em;
+  line-height: 1.35;
+  color: var(--text-non-em);
+  text-align: left;
+}
+
+section.library.library-view--compact .library-compact-title {
+  order: 3;
+  margin: 0;
+  font-size: 0.95em;
+  font-weight: 700;
+  line-height: 1.25;
+  font-family: var(--sans-serif-system);
+  color: #466a79;
+}
+
+section.library.library-view--compact .library-cover-wrap {
+  position: relative;
+}
+
+section.library.library-view--compact .library-expand-hint {
+  top: 0.35rem;
+  right: 0.35rem;
+}
+
+section.library.library-view--compact article picture.library-cover {
+  margin: 0;
+}
+
+@media only screen and (max-width: 800px) {
+  .content-header__meta-row {
+    align-items: center;
+  }
+  section.library.library-view--compact {
+    grid-template-columns: repeat(auto-fill, minmax(9rem, 1fr));
+  }
+}
+
+/* Default view: expand hint on cover; picture needs relative context */
+section.library:not(.library-view--compact) article picture.library-cover {
+  position: relative;
+}
+
+section.library:not(.library-view--compact) .library-cover-wrap {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
 }
 
 
@@ -1551,7 +1746,7 @@ body.modal-open {
     }
 
        section.library article header:not(:first-child) {
-         margin-top: calc(8*var(--gapSm));
+         /* margin-top: calc(8*var(--gapSm)); */
       }
 
 
@@ -1565,8 +1760,8 @@ body.modal-open {
       }
 
        section.library article picture img {
-          height: 300px;
-          min-width: 200px;
+          /* height: 350px; */
+          /* min-width: 200px; */
           object-fit: cover;
           outline: 1px solid #ddd;
       }
@@ -1577,7 +1772,7 @@ body.modal-open {
   @media only screen and (max-width: 800px) {
     section.library {   grid-template-columns: repeat( auto-fit, minmax(250px, 1fr) ); }
       section.library article {   min-height: 430px;}
-        section.library article picture { margin: 0 auto;  }
+        section.library article picture { margin: 0 auto calc(2*(var(--gapSm)));  }
         /* section.library article picture img { height: 200px; min-width: 150px;   } */
         /* move X inside the modal */
         section.library details[open] summary::after { color: #000; right: 46px;}

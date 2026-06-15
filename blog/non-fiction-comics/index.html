@@ -3,13 +3,12 @@ layout: blog.liquid
 title: Non-fiction comics library
 description: A catalog of my favorite non-fiction graphic novels. Many are memoirs. Most are considered radical. I recommend reading them all.
 tags: ["post", "books"]
+libraryViewToggle: true
 date: 2023-10-01
-date-updated: 2026-05-21
+date-updated: 2026-06-04
 ---
 
-  
-
-<section class="stretch" id="filters">
+<section class="stretch library-filters" id="filters">
   <input type="radio" id="lt-tag-all" name="tag" value="All" checked>
   <label for="lt-tag-all">All</label>
   {% for t in nfcComicsTagVocabulary.tags %}
@@ -33,7 +32,33 @@ date-updated: 2026-05-21
         itemtype="https://schema.org/Book"
         data-tags="{{ book.displayTags | join: ', ' }}"
       >
-        <header>
+        <div class="library-cover-wrap">
+          {% if book.coverUrl %}
+          <picture class="library-cover">
+            <source srcset="{{ book.coverUrl }}" type="image/jpeg" />
+            <img
+              src="{{ book.coverUrl }}"
+              alt="Cover: {{ book.title }}"
+              loading="lazy"
+              decoding="async"
+              itemprop="image"
+            />
+          </picture>
+          {% endif %}
+          {% if book.notesInclude %}
+          <span class="library-expand-hint" title="Expand personal notes">
+            <img src="/img/icon-expand.svg" width="20" height="20" alt="" />
+          </span>
+          {% endif %}
+        </div>
+        {% if book.year or book.dateReadYear %}
+        <p class="library-compact-meta">
+          {%- if book.year -%}{{ book.year }}{%- endif -%}
+          {%- if book.dateReadYear -%}{% if book.year %} · {% endif %}Read {{ book.dateReadYear }}{%- endif -%}
+        </p>
+        {% endif %}
+        <h3 class="library-compact-title" itemprop="name">{{ book.title }}</h3>
+        <header class="library-default-header">
           <span class="book-intro">
             <h2>
               <span class="book-title" itemprop="name">{{ book.title }}</span>,
@@ -48,22 +73,10 @@ date-updated: 2026-05-21
             </h2>
           </span>
         </header>
-        {% if book.coverUrl %}
-        <picture>
-          <source srcset="{{ book.coverUrl }}" type="image/jpeg" />
-          <img
-            src="{{ book.coverUrl }}"
-            alt="Cover: {{ book.title }}"
-            loading="lazy"
-            decoding="async"
-            itemprop="image"
-          />
-        </picture>
-        {% endif %}
-        <small>
+        <small class="library-default-dates">
           {% if book.year %}Published: <span itemprop="copyrightYear">{{ book.year }}</span>{% endif %}
-          {% if book.dateReadYear %} · Read: {{ book.dateReadYear }}{% endif %}</small
-        >
+          {% if book.dateReadYear %} · Read: {{ book.dateReadYear }}{% endif %}
+        </small>
         <section></section>
       </article>
     </summary>
@@ -101,8 +114,41 @@ date-updated: 2026-05-21
 
 <script>
   document.addEventListener("DOMContentLoaded", () => {
+    const STORAGE_KEY = "nfc-comics-library-view";
+    const bookListEl = document.getElementById("BookList");
     const filters = document.querySelectorAll("#filters input[type=\"radio\"]");
     const bookList = document.querySelectorAll("#BookList article");
+    const viewButtons = document.querySelectorAll("[data-library-view]");
+
+    function setLibraryView(view) {
+      const compact = view === "compact";
+      bookListEl.classList.toggle("library-view--compact", compact);
+      viewButtons.forEach((btn) => {
+        const active = btn.dataset.libraryView === view;
+        btn.classList.toggle("is-active", active);
+        btn.setAttribute("aria-pressed", active ? "true" : "false");
+      });
+      try {
+        localStorage.setItem(STORAGE_KEY, view);
+      } catch (_) {}
+    }
+
+    const savedView = (() => {
+      try {
+        return localStorage.getItem(STORAGE_KEY);
+      } catch (_) {
+        return null;
+      }
+    })();
+    if (savedView === "compact" || savedView === "default") {
+      setLibraryView(savedView);
+    }
+
+    viewButtons.forEach((btn) => {
+      btn.addEventListener("click", () => {
+        setLibraryView(btn.dataset.libraryView);
+      });
+    });
 
     filters.forEach((filter) => {
       filter.addEventListener("change", () => {
@@ -125,7 +171,7 @@ date-updated: 2026-05-21
         const isVisible = tag === "All" || bookTags.includes(tag);
         const container = book.closest("details") || book.closest(".no-details");
         if (container) {
-          container.style.display = isVisible ? "block" : "none";
+          container.style.display = isVisible ? "" : "none";
         }
       });
     }

@@ -26,7 +26,7 @@ I was excited for this one. [The new sound](https://geordiegreep.bandcamp.com/al
 </div>
 
 
-{% image "img/geordie-and-the-boys.jpg", "Geordie Greep at higher ground", "Geordie and his gretsch" %}
+{% image "img/geordie-and-the-boys.jpg", "Geordie Greep at higher ground", "Geordie and the boys" %}
 
 {% image "img/geordie-croon.jpg", "Geordie Greep at higher ground", "Geordie crooning" %}
 

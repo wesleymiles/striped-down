@@ -2,7 +2,7 @@
 layout: blog.liquid
 title: The quiet ones
 description: 
-# tags: ["posty","journal"]
+# tags: ["post","journal"]
 date: 2025-01-01
 ---
 
@@ -82,15 +82,4 @@ I realize I just keep repeating familiar tropes: exposure to your fear helps low
 As I record this on my phone while hiking, let me say this to the shy designers out there (and to my future self): you're not alone. Your sensitive, pattern-seeing eyes are not a weakness; they are a gift. Respect them.
 
 
-<figure>
-    <picture class="full">
-        <source srcset="img/drawings.webp" type="image/webp">
-        <source srcset="img/drawings.png" type="image/png">
-        <img src="img/drawings.png">
-    </picture>
-    <figcaption>Did some image-based journaling here and there. Left one is from a day in california. Right one is from a random day at home.</figcaption>
-</figure> 
-
-
-	</div>
 </section>

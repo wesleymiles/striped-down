@@ -1,0 +1,28 @@
+---
+layout: layout.liquid
+title: Local organizations
+description: Websites and branding for Vermont nonprofits, food hubs, and community initiatives.
+noindex: true
+permalink: /work-preview/local-organizations/
+tags: work-preview
+---
+
+<p><a href="/work-preview/">← Selected work</a></p>
+
+<p>
+  Sites and identity work for mission-driven orgs close to home—often branding and web together, so
+  the story reads the same in a header, on a yard sign, and in the browser.
+</p>
+
+<h2>Select projects</h2>
+<ul>
+  {% for project in collections.workPreviewLocal %}
+  <li>
+    <a href="#{{ project.data.slug }}">{{ project.data.title }}</a>
+  </li>
+  {% endfor %}
+</ul>
+
+<hr />
+
+{% include "work-practice-case-studies.liquid", projects: collections.workPreviewLocal %}

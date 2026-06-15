@@ -1,0 +1,21 @@
+{% include '_head.liquid' %}
+
+<article>
+  <p>A project from <a href="/work-preview/red-hat/">Red Hat</a>.</p>
+
+  <header class="content-header">
+    <h1 class="content-heading">{{ title }}</h1>
+  </header>
+
+  {{ content }}
+
+  {% if liveUrl %}
+  <div class="button">
+    <a href="{{ liveUrl }}" target="_blank" rel="noopener noreferrer">See site</a>
+  </div>
+  {% endif %}
+
+  <p><a href="/work-preview/red-hat/">← Red Hat</a></p>
+</article>
+
+{% include '_foot.html' %}

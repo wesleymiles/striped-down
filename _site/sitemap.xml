@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"><url>
+    <loc>https://wescarr.com/blog/trip-report/isolation/</loc>
+  </url><url>
+    <loc>https://wescarr.com/blog/trip-report/tri-pyramids/</loc>
+  </url><url>
     <loc>https://wescarr.com/blog/trip-report/mt-waumbek-sledding/</loc>
   </url><url>
     <loc>https://wescarr.com/blog/trip-report/cascade-adk/</loc>
@@ -35,8 +39,6 @@
     <loc>https://wescarr.com/blog/hack-day-2023/</loc>
   </url><url>
     <loc>https://wescarr.com/blog/chickens-v1/</loc>
-  </url><url>
-    <loc>https://wescarr.com/blog/trip-report/camels-hump-in-winter/</loc>
   </url><url>
     <loc>https://wescarr.com/blog/chickens-v2/</loc>
   </url><url>
@@ -106,19 +108,29 @@
   </url><url>
     <loc>https://wescarr.com/blog/tag/books/</loc>
   </url><url>
+    <loc>https://wescarr.com/blog/tag/branding/</loc>
+  </url><url>
     <loc>https://wescarr.com/blog/tag/community/</loc>
   </url><url>
     <loc>https://wescarr.com/blog/tag/concert/</loc>
   </url><url>
+    <loc>https://wescarr.com/blog/tag/contractor/</loc>
+  </url><url>
     <loc>https://wescarr.com/blog/tag/design/</loc>
   </url><url>
     <loc>https://wescarr.com/blog/tag/digital-sovereignty/</loc>
+  </url><url>
+    <loc>https://wescarr.com/blog/tag/e-commerce/</loc>
   </url><url>
     <loc>https://wescarr.com/blog/tag/hackathon/</loc>
   </url><url>
     <loc>https://wescarr.com/blog/tag/homesteading/</loc>
   </url><url>
     <loc>https://wescarr.com/blog/tag/journal/</loc>
+  </url><url>
+    <loc>https://wescarr.com/blog/tag/local/</loc>
+  </url><url>
+    <loc>https://wescarr.com/blog/tag/logo/</loc>
   </url><url>
     <loc>https://wescarr.com/blog/tag/permaculture/</loc>
   </url><url>
@@ -132,9 +144,13 @@
   </url><url>
     <loc>https://wescarr.com/blog/tag/trip-report/</loc>
   </url><url>
-    <loc>https://wescarr.com/blog/tag/uiproject/</loc>
+    <loc>https://wescarr.com/blog/tag/tripreport/</loc>
   </url><url>
     <loc>https://wescarr.com/blog/tag/uxproject/</loc>
+  </url><url>
+    <loc>https://wescarr.com/blog/tag/web/</loc>
+  </url><url>
+    <loc>https://wescarr.com/blog/tag/work-preview/</loc>
   </url><url>
     <loc>https://wescarr.com/blog/work/mockup-demo/desktop-homepage/</loc>
   </url><url>
@@ -217,6 +233,14 @@
     <loc>https://wescarr.com/blog/art/bed-side-table-paint-sketch/</loc>
   </url><url>
     <loc>https://wescarr.com/blog/concerts/geordie-greep/</loc>
+  </url><url>
+    <loc>https://wescarr.com/blog/trip-report/frost-butler-loop-second-time/</loc>
+  </url><url>
+    <loc>https://wescarr.com/blog/trip-report/frost-butler-loop-with-the-dog/</loc>
+  </url><url>
+    <loc>https://wescarr.com/blog/trip-report/owls-head/</loc>
+  </url><url>
+    <loc>https://wescarr.com/blog/trip-report/stowe-pinnacle-winter-2018/</loc>
   </url><url>
     <loc>https://wescarr.com/art-feed.xml</loc>
   </url></urlset>
