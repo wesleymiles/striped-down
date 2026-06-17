@@ -56,14 +56,55 @@ async function processImage(src, options = {}) {
   };
 }
 
-function resolveOgImageUrl(data) {
+function resolveImagePath(src, pageContext) {
+  if (!src) {
+    throw new Error("Image shortcode requires a src parameter");
+  }
+  if (src.startsWith("./") || (!src.startsWith("/") && !src.startsWith("http"))) {
+    const currentPageDir = pageContext.page?.inputPath
+      ? path.dirname(pageContext.page.inputPath)
+      : "";
+    const cleanSrc = src.replace(/^\.\//, "");
+    return currentPageDir ? path.join(currentPageDir, cleanSrc) : src;
+  }
+  return src;
+}
+
+function extractFirstImageSrc(inputPath) {
+  if (!inputPath || !fs.existsSync(inputPath)) return null;
+  const content = fs.readFileSync(inputPath, "utf8");
+  const body = content.replace(/^---[\s\S]*?---\s*/, "");
+  for (const line of body.split("\n")) {
+    if (line.trim().startsWith("<!--")) continue;
+    const match = line.match(/\{%\s*image\s+["']([^"']+)["']/);
+    if (match) return match[1];
+  }
+  return null;
+}
+
+async function resolveOgImageUrl(data) {
   const siteUrl = data.siteUrl || "https://wescarr.com";
+
+  if (data.ogImage) {
+    return data.ogImage.startsWith("http")
+      ? data.ogImage
+      : `${siteUrl}${data.ogImage.startsWith("/") ? data.ogImage : `/${data.ogImage}`}`;
+  }
+
+  const inputPath = data.page?.inputPath;
+  const firstSrc = extractFirstImageSrc(inputPath);
+  if (firstSrc) {
+    try {
+      const resolvedSrc = resolveImagePath(firstSrc, { page: data.page });
+      const processed = await processImage(resolvedSrc);
+      return `${siteUrl}${processed.full.url}`;
+    } catch (error) {
+      console.warn(`OG image from first post image failed for ${inputPath}:`, error.message);
+    }
+  }
+
   const socialDir = path.join(__dirname, "img", "social");
-  const slug = data.page?.fileSlug;
-  const candidates = [];
-  if (slug) candidates.push(`${slug}.jpg`);
-  candidates.push("default.jpg", "art.jpg");
-  for (const name of candidates) {
+  for (const name of ["default.jpg", "art.jpg"]) {
     if (fs.existsSync(path.join(socialDir, name))) {
       return `${siteUrl}/img/social/${name}`;
     }
@@ -283,20 +324,6 @@ module.exports = function (eleventyConfig) {
 // ==================================================
 // IMAGE SHORTCODES
 // ==================================================
-function resolveImagePath(src, pageContext) {
-  if (!src) {
-    throw new Error("Image shortcode requires a src parameter");
-  }
-  if (src.startsWith("./") || (!src.startsWith("/") && !src.startsWith("http"))) {
-    const currentPageDir = pageContext.page?.inputPath
-      ? path.dirname(pageContext.page.inputPath)
-      : "";
-    const cleanSrc = src.replace(/^\.\//, "");
-    return currentPageDir ? path.join(currentPageDir, cleanSrc) : src;
-  }
-  return src;
-}
-
 eleventyConfig.addAsyncShortcode("image", async function (src, alt, caption = "", link = "") {
   if (!src) {
     console.warn("Image shortcode called without src parameter");
