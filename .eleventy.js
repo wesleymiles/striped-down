@@ -25,6 +25,9 @@ function getGitDate(filePath) {
   }
 }
 
+const IMAGE_MAX_WIDTH = 1600;
+const IMAGE_WIDTHS = [450, 750, IMAGE_MAX_WIDTH];
+
 async function processImage(src, options = {}) {
   const absPath = path.join(__dirname, src);
   if (!fs.existsSync(absPath)) {
@@ -32,9 +35,12 @@ async function processImage(src, options = {}) {
     throw new Error(`Image not found: ${src}`);
   }
 
+  const ext = path.extname(src).slice(1).toLowerCase();
+  const format = ext === "jpg" ? "jpeg" : ext;
+
   const defaultOptions = {
-    widths: [450, 750, null],
-    formats: [path.extname(src).slice(1)],
+    widths: IMAGE_WIDTHS,
+    formats: [format],
     outputDir: path.join(__dirname, "_site", path.dirname(src)),
     urlPath: "/" + path.dirname(src),
     cache: true,
