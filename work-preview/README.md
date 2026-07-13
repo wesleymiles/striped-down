@@ -2,6 +2,8 @@
 
 Staging area for the future `/work/` section. **Does not replace** `/web` or `/logos` yet.
 
+**Hidden from builds:** `work-preview/` is listed in `.eleventyignore` until launch. Remove that line to publish.
+
 ## URLs
 
 | URL | Purpose |

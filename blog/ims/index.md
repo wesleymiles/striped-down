@@ -81,7 +81,7 @@ team chose certain patterns to reuse internally. We reeled in our creativity. We
 </figure>
 
 <h3>Example blocks</h3>
-<p>To show my various solutions to the same content, here’s an exhaustive list of <em>Services Carousel </em>examples. To dig further into one client, check out the nautical-themed <a href="/work-preview/home-services-agency/#nautical-hvac">Charter case study</a>.
+<p>To show my various solutions to the same content, here’s an exhaustive list of <em>Services Carousel </em>examples. To dig further into one client, check out the nautical-themed Charter work on the <a href="/web/">web design page</a>.
 
 
 <figure>

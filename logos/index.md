@@ -10,13 +10,10 @@ eleventyNavigation:
 
 
 
-  
-## Examples 
-
-
 
   <div id="gallery" class="grid bleed gallery--static">
   <ul>
+    <li><img src="/img/speedy/branding/rosewood-homestead-logo-rectangle-color.png" alt="Rosewood Homestead logo" loading="lazy" decoding="async" /></li>
     <li><img src="/img/speedy/branding/ju-food-hub-logo.jpg" alt="Jericho Underhill Food Hub logo" loading="lazy" decoding="async" /></li>
     <li><img src="/img/speedy/branding/harvest-crossing-logo.jpg" alt="Harvest Crossing logo" loading="lazy" decoding="async" /></li>
     <li><img src="/img/speedy/branding/ucu-logo.jpg" alt="United Church of Underhill logo" loading="lazy" decoding="async" /></li>
