@@ -1,10 +1,10 @@
 ---
 layout: blog.liquid
 title: Commonplace book
-description: An ongoing collection of quotes and notes that were originally jotted down from a weekly notion journal.Intending to be an extension of my brain.
+description: An ongoing collection of quotes and notes that were originally jotted down from a weekly notion journal. Bookmarked for evergreen.
 tags: ["post", "books"]
 date: 2024-11-11
-date-updated: 2024-12-15
+date-updated: 2026-07-27
 ---
 
     <section class="hero">
@@ -15,7 +15,7 @@ date-updated: 2024-12-15
 
 <!-- https: //bjhess.com/commonplace -->
 
-
+<!-- 
 
 <section id="filters">
     <input type="radio" id="all" name="tag" value="All" checked>
@@ -29,11 +29,211 @@ date-updated: 2024-12-15
     <input type="radio" id="biz-ness" name="tag" value="Biz-ness">
     <label for="biz-ness">Biz-ness</label>
 </section>
-<img style="margin: 0 auto;display:block" src="img/coming-soon.png" width="150px">
+<img style="margin: 0 auto;display:block" src="img/coming-soon.png" width="150px"> -->
+
 
 <section >
     <div class="content-inner">
 
+
+<h2 class="keep-sticky">2025</h2>
+
+<hr>
+
+<div data-tags="Quote">
+
+<blockquote>
+    <p>Is this something that I would worry about if I knew I were the God of my reality? How would that version of me view the world and have FUN with it.</p>
+    <p>It also helped to have beliefs that I always ended up where I was supposed to be and that every challenge brought with it the seed for an equal or greater opportunity.</p>
+    <cite>Neville (via reddit)</cite>
+</blockquote>
+
+
+</div>
+
+<hr>
+
+<div data-tags="Quote">
+<blockquote>
+    <p>The arrival of house-rattling Wind this black morning grants me a break from my habit of forgetting that the world is alive.</p>
+    <p>In the interview she tells a story about a teaching she carries from her grandmother, who used to remind her and the other kids not to speak poorly of Cold or Wind. Out on the Dakota plains, I can only imagine the frequency with which such verbal displays of disapproval might seem appealing. “You must be very careful,” her grandmother said, “because they are always listening. They will bite you.” Perhaps our modern English term “frostbite” serves as a breadcrumb to a long-forgotten animistic awareness.</p>
+    <cite>Adam Wilson, <a href="https://peasantryschool.substack.com/p/the-bone-rattler-the-wardrobe-and">Peasantry School</a></cite>
+</blockquote>
+
+ he decides to “go cold turkey on complaining about the weather.” 
+
+</div>
+
+<hr>
+
+<div data-tags="Quote">
+
+<blockquote>
+    <p>I've only been in Twin Peaks a short time, but in that time, I have seen decency, honor, and dignity. Murder is not a faceless event here. It is not a statistic to be tallied up at the end of the day. Laura Palmer's death has affected each and every man, woman and child because life has meaning here, every life. That's a way of living I thought had vanished from the Earth but it hasn't, Albert, it's right here in Twin Peaks.</p>
+    <cite>Agent Cooper, Twin Peaks S1E4</cite>
+</blockquote>
+
+</div>
+
+<hr>
+
+<div data-tags="Quote">
+
+<blockquote>
+    <p>In the political realm, both sides think the other side's are idiots. Progress comes when you let go of that assumption. Let's stop agreeing about that. Because then you have to ask, if it's not that they're evil or stupid, then why do you believe what you believe? Let me hear about it. What is your life experience? Then you find out that they have a valid vantage point. What they believe makes sense given all they have experienced. Then other possibilities arise for resolving conflict rather than overcoming them by force.</p>
+    <cite>Charles Eisenstein</cite>
+</blockquote>
+
+</div>
+
+<hr>
+
+<div data-tags="Ideas">
+
+<strong>Attention residue builds up from context switching.</strong>
+
+"People experiencing attention residue after switching tasks are likely to demonstrate poor performance on that next task. The thicker the residue, the worse the performance."
+
+</div>
+
+<hr>
+
+<div data-tags="Quote">
+
+<blockquote>
+    <p>At some point, exploration becomes evasion.</p>
+    <cite><a href="https://medium.com/the-design-coach/are-you-an-accidental-design-saboteur-according-to-the-cia-459cb832ccb6">The Design Coach</a></cite>
+</blockquote>
+
+Loved this one about when we use "discovery" as a crutch or avoidance behvavior to deciding. 
+
+</div>
+
+<hr>
+
+<div data-tags="Quote">
+
+<blockquote>
+    <p>Trauma annihilates the self, freezes the imagination, forces stasis and repetition.</p>
+    <cite>The New Yorker, on trauma plots</cite>
+</blockquote>
+
+I chaulk up those end-results to social anxiety, but maybe there's a dash of trauma in there too. 
+
+</div>
+
+<hr>
+
+<div data-tags="Ideas">
+
+<blockquote>
+    <p>If you want to grow as a designer, be intentional about practicing decision-making. Start by putting yourself in situations where you have to make a lot of decisions, a lot of the time. <strong>The journey from junior to senior is paved with countless decisions.</strong></p>
+    <cite>Dan Mall, <a href="https://danmall.com/posts/how-did-you-pick-that-typeface/">How did you pick that typeface?</a></cite>
+</blockquote>
+
+</div>
+
+<hr>
+
+<div data-tags="Ideas">
+
+<strong>It's not right. It's the way it is.</strong> Sometimes I should work to <em>change</em> the situation. Other times, I need to <em>navigate</em> it as it is. — Dan Mall
+
+</div>
+
+<hr>
+
+<div data-tags="Quote">
+
+<blockquote>
+    <p>🧽 Don't be a sponge — be a strainer.</p>
+</blockquote>
+
+Sponge absorbs everything. The strainer keeps only what matters.
+
+<!-- "I am the calm observer, detached, but aware." — mantra for not getting too sucked into other people's stories. -->
+
+</div>
+
+<hr>
+
+<div data-tags="Quote">
+
+<blockquote>
+    <p>We don't want to try to make people like us. We want to make people like being around us.</p>
+</blockquote>
+
+</div>
+
+<hr>
+
+<div data-tags="Quote">
+
+<blockquote>
+    <p>The future is here, it's just not evenly distributed.</p>
+    <cite>William Gibson</cite>
+</blockquote>
+
+"Stop outsourcing the discomfort of thinking."
+
+</div>
+
+<hr>
+
+<div data-tags="Ideas">
+
+Following the wisdom that <a href="https://en.wikipedia.org/wiki/The_purpose_of_a_system_is_what_it_does">a system is what it does</a>: Spotify in 2025 is a computer system that converts the huge mountains of money that musicians generate using their creative gifts into an astonishing net worth for its billionaire founder, so he can deploy it in leading a $700 million dollar investment round in cutting-edge autonomous weapons companies.
+
+<cite><a href="https://terminal.ahumanfuture.co/posts/2025-10-17/the-world-is-something-that-we-make/">Terminal</a></cite>
+
+</div>
+
+<hr>
+
+<div data-tags="Ideas">
+
+What if instead of trying to avoid being judged — you allow yourself to be judged?
+
+You simply say: actually, it's fine if people judge me.
+
+</div>
+
+<hr>
+
+<div data-tags="Quote">
+
+David Carr on journalists: "go out, <strong>find people more interesting than you</strong>, learn about something, come back and tell other people about it."
+
+Or as it's put in <em>All That We Leave Behind</em>: "We tell interesting stories to boring people, and people need interesting stories."
+
+</div>
+
+<hr>
+
+<div data-tags="Quote">
+
+Forget about your mouth, be proud of your presence.
+
+Be more interested in getting to know others.
+
+<em>When you lose all sense of self<br>
+The bonds of a thousand chains will vanish<br>
+Lose yourself completely<br>
+Return by the pure heart</em>
+
+</div>
+
+<hr>
+
+<div data-tags="Quote">
+
+<blockquote>
+    <p>For one hour we step from the blast furnace of the way things are into the shelter of a possibility, at once a plea and a prayer for our human-ness.</p>
+</blockquote>
+
+</div>
+
+<hr>
 
 <h2 class="keep-sticky">2024</h2>
 
