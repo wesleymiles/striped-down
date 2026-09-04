@@ -1,8 +1,7 @@
 ---
 layout: blog.liquid
-eleventyComputed:
-  title: "{{ concerts | primaryArtist }} at {{ concerts.venue }}"
-  description: "with {{ concerts | otherArtists }}"
+title: "{{ concerts.artist }} at {{ concerts.venue }}"
+description: New years on pine street
 tags: 
   - post
   - concert
@@ -14,7 +13,7 @@ concerts:
     - Barbacoa
 location:
   town: Burlington
-  state: New York 
+  state: Vermont
 ---
 
 My wife and I spend new years with Burlington's long-standing instrumental surf-rock trio. Their [bandcamp](https://barbacoa.bandcamp.com/). They've been at this game for 30 years. The guitarist, Bill Mullins always gives me Harry Dean Stanton vibes, when I catch him playing or around town. His look and genre feel very Stanton.

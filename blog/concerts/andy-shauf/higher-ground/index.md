@@ -4,15 +4,15 @@ title: "{{ concerts.artist }} at {{ concerts.venue }}"
 eleventyComputed:
   description: "with {{ concerts | otherArtists }}"
 tags: 
-- post
-- concert
+  - post
+  - concert
 date: 2023-05-01
-concerts:
+concerts: 
   event-date: 2023-04-30
   venue: Higher Ground
   artist:
-    - Andy Shauf
-    - Marina Allen
+  - Andy Shauf
+  - Marina Allen
 location: 
 town: Burlington
 state: Vermont

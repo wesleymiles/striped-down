@@ -18,10 +18,12 @@ location:
   state: New York
 ---
 
+<div class="grid  bleed">
 
 {% image "img/tbs.jpg", "Taking Back Sunday performing on stage", " " %}
+</div>
 
-Both bands were riding big album years; tourint touring on follow-ups on monster albums. Jimmy Eat World had just put out *Futures* in October and Taking Back Sunday dropped *Where You Want to Be* in July. It was a proper co-headline; alternating who closed. I don't remember which band ended the night, but I remember the room being packed and the blurry audience shot below is accurate about my memory of this one. 
+Both bands were riding big album years; touring touring on follow-ups on monster albums. Jimmy Eat World had just put out *Futures* in October and Taking Back Sunday dropped *Where You Want to Be* in July. It was a proper co-headline; alternating who closed. I don't remember which band ended the night, but I remember the room being packed and the blurry audience shot below is accurate about my memory of this one. 
 
 
 <div class="grid cols-2 bleed">

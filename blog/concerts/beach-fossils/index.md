@@ -17,6 +17,8 @@ location:
   town: Burlington
   state: Vermont
 ---
+
+
 <div class="grid bleed">
 {% image "img/beach-fossils.jpg", "Concert photo", "Beach Fossils" %}
 </div>

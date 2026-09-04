@@ -64,7 +64,7 @@ module.exports = function (eleventyConfig) {
   // Helper function to unslugify (matches .eleventy.js implementation)
   function unslugify(str) {
 	if (!str) return "";
-	return str
+	return String(str)
 	  .split("-")
 	  .map(w => w.charAt(0).toUpperCase() + w.slice(1))
 	  .join(" ");
@@ -120,6 +120,29 @@ module.exports = function (eleventyConfig) {
   // POST SORTING FILTERS
   // ==================================================
   
+  // Parse YYYY-MM-DD as local calendar date (avoids UTC off-by-one in US timezones)
+  function parseLocalDate(value) {
+	if (!value) return new Date(0);
+	if (value instanceof Date) {
+	  // Date-only YAML values arrive as UTC midnight; use calendar components
+	  if (
+		value.getUTCHours() === 0 &&
+		value.getUTCMinutes() === 0 &&
+		value.getUTCSeconds() === 0 &&
+		value.getUTCMilliseconds() === 0
+	  ) {
+		return new Date(value.getUTCFullYear(), value.getUTCMonth(), value.getUTCDate());
+	  }
+	  return value;
+	}
+	const str = value.toString();
+	const match = str.match(/^(\d{4})-(\d{2})-(\d{2})/);
+	if (match) {
+	  return new Date(+match[1], +match[2] - 1, +match[3]);
+	}
+	return new Date(value);
+  }
+
   // Helper function to get the sort date for a post
   // Uses hike date for trip reports, concert date for concerts, post date otherwise
   function getSortDate(post) {
@@ -129,12 +152,12 @@ module.exports = function (eleventyConfig) {
 	const tags = post.data.tags || [];
 	const isTripReport = tags.includes("trip-report") || tags.includes("trip report");
 	if (isTripReport && post.data.trips?.dateHiked) {
-	  return new Date(post.data.trips.dateHiked);
+	  return parseLocalDate(post.data.trips.dateHiked);
 	}
 	
 	// Check if it's a concert
 	if (post.data.tags && post.data.tags.includes("concert") && post.data.concerts?.["event-date"]) {
-	  return new Date(post.data.concerts["event-date"]);
+	  return parseLocalDate(post.data.concerts["event-date"]);
 	}
 	
 	// Default to post date - ensure it's a Date object

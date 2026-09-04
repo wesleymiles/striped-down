@@ -13,6 +13,7 @@ concerts:
   artist:
     - Jeffrey Lewis
     - Burning Hell
+    - Ratland
 location:
   town: Burlington
   state: Vermont

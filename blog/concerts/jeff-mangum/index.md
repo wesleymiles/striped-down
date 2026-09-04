@@ -9,14 +9,14 @@ tags:
 date: 2026-08-25
 concerts:
   event-date: 2013-02-18
-  venue: Lupo's
+  venue: Lupo's Heartbreak Hotel
   artist:
     - Jeff Mangum
     - Tall Firs
     - Briars of North America
 location:
   town: Providence
-  state: Rhode Island
+  state: Rhode Island 
 ---
 
 {% image "img/IMG_3158.JPG", "A packed crowd at Lupo's in Providence, crystal chandelier above, everyone shoulder to shoulder waiting for Jeff Mangum", " " %}

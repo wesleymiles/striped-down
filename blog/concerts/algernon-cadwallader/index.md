@@ -1,8 +1,9 @@
 ---
 layout: blog.liquid
-title: "{{ concerts.artist }} at {{ concerts.venue }}"
 eleventyComputed:
+  title: "{{ concerts | primaryArtist }} at {{ concerts.venue }}"
   description: "with {{ concerts | otherArtists }}"
+title: "{{ concerts.artist }} at {{ concerts.venue }}"
 tags: 
   - post
   - concert
@@ -24,7 +25,7 @@ location:
 {% image "img/gladie-2.jpg", "Gladie smiling during banter", "GLADIE" %}
 
 
-Peter Helmis the frontman said it's been 17 years since they were in burlington. And after that show then, the b-town cops hassled them for sleeping on the beach on a mattress of beer bottles. The internet disagrees with the timing, saying it's been 13 years, when they came with Joyce Manor at the now defunt [Memorial Auditorium](https://bigheavyworld.com/242main) (never got to see a show there.) Either way, we're glad to have them back. I don't doubt the beach police part though.
+Peter Helmis the frontman, said it's been 17 years since they were in Burlington. And after that show then, the b-town cops hassled them for sleeping on the beach on a mattress of beer bottles. The internet disagrees with the timing, saying it's been 13 years, when they came with Joyce Manor at the now defunct [Memorial Auditorium](https://bigheavyworld.com/242main) (never got to see a show there.) Either way, we're glad to have them back. I don't doubt the beach police part though.
 
 {% image "img/algernon-cadwallader-3.jpg", "Algernon Cadwallader on stage", " " %}
 
@@ -40,7 +41,7 @@ After the rock show, my car kicked on the audiobook I had had on; Technofeudalis
 
 > On “Attn MOVE,” he turns his attention to Philadelphia’s infamous 1985 [MOVE bombing](https://www.pbs.org/independentlens/documentaries/let-the-fire-burn), when police dropped explosives on a local Black activist group, killing 11. “Some black clouds never go away,” he reflects. “Just hover in place and change their shape right in front of your face.” The band has expressed regret over its past disengagement from political issues; now, they’ve found new commitment to push for change and collective understanding. 
 
-I love when bands widen the topics they cover. The music becomes more relatable because it now mirrors my complexities and varying interests. Zach De la o was and is my favorite professor. Though he's pretty much disappeared post-RATM, five years ago his verse with [Run the jewels](https://www.youtube.com/watch?v=32hUIGnMpOY&t=160s) about Toussaint Louverture leading the Hatian revolition hit me hard. That nugget got lodged pretty deep and didn't dissolve. Earlier this year I picked it up and read a number of books on Haiti. 
+I love when bands widen the topics they cover. The music becomes more relatable because it now mirrors my complexities and varying interests. Zach De la o was and is my favorite professor. Though he's pretty much disappeared post-RATM, five years ago his verse with [Run the jewels](https://www.youtube.com/watch?v=32hUIGnMpOY&t=160s) about Toussaint Louverture leading the Haitian revolution hit me hard. That nugget got lodged pretty deep and didn't dissolve. Earlier this year I picked it up and read a number of books on Haiti. 
 
 I already want to check out the documentary "Let the Fire Burn" about the 1985 bombing Algernon Cadwallader schooled me on. 
 

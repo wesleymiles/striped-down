@@ -16,7 +16,7 @@ location:
   state: Vermont
 ---
 
-The memory that stands out from this one is mid-show, Ani and the rest of the crowd learned that Trump won the election. I remember feeling room's attention shifted inward, away from the artist. 
+The memory that stands out from this one is mid-show, Ani and the rest of the crowd learned that Trump won the election. I remember feeling the room's attention shifted inward, away from the artist. 
 
 {% image "img/IMG_9560.JPG", "Hiking photo from 2016-11-09", "Photo from the hike" %}
 

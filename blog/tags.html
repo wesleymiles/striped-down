@@ -32,7 +32,7 @@ permalink: /blog/tag/{{ tagData.slug }}/index.html
       <article class="archive-entry">
         <div class="entry-header">
             <h3><a href="{{ post.url }}">{{ post.data.title }}</a></h3>
-            <time class="meta-date" datetime="{{ post.data.date | postDate }}">{{ post.date | postDate }}</time>
+            <time class="meta-date" datetime="{{ post | getSortDate | postDate }}">{{ post | getSortDate | postDate }}</time>
         </div>
         <p><span class="excerpt">{{ post.data.description }}</span></p>
       </article>

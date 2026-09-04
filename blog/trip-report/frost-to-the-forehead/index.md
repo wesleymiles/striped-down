@@ -5,9 +5,9 @@ description: Extended the Frost–Butler loop for the first time to tag the Fore
 tags: 
   - post
   - trip-report
-date: 2026-07-27
+date: 2026-07-28
 trips:
-  dateHiked: 2026-07-25
+  dateHiked: 2026-07-24
   peaks: 
     - name: Mount Mansfield
       elevation: 3940
