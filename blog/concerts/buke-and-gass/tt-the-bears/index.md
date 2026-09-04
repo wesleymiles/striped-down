@@ -21,7 +21,7 @@ location:
 Buke and Gass at TT the Bear's — bass and baritone guitar, no full drum set, all stomp and thump. I remember hearing of them on NPR, I forget which show, and was intrigued by the full sound they made while being a duo.
 
 <div class="grid bleed">
-{% image "img/buke&gass--010.JPG", "Buke and Gass performing live", " " %}
+{% image "img/buke-and-gass--010.jpg", "Buke and Gass performing live", " " %}
 </div>
 {% image "img/bukeandgass--014.JPG", "Buke and Gass at TT the Bear's Place", " " %}
 {% image "img/buke--gass_5232492048_o.jpg", "Buke and Gass at TT the Bear's", " " %}
