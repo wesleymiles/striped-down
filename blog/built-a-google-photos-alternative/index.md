@@ -1,6 +1,6 @@
 ---
 layout: blog.liquid
-title: How I built a goole photos alternative
+title: How I built a google photos alternative
 description: After four years of working as a designer in the marketing department of a linux distro, he finally tries linux.
 tags: 
   - post
