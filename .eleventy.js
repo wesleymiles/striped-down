@@ -368,38 +368,50 @@ eleventyConfig.addAsyncShortcode("image", async function (src, alt, caption = ""
   // Browsers often fetch /favicon.ico before parsing <link rel="icon">
   eleventyConfig.addPassthroughCopy({ "img/favicon.ico": "favicon.ico" });
   eleventyConfig.addPassthroughCopy({ "img/apple-touch-icon.png": "apple-touch-icon.png" });
+  
+  // Video passthrough
+  eleventyConfig.addPassthroughCopy("**/*.mp4");
+  eleventyConfig.addPassthroughCopy("**/*.webm");
+  eleventyConfig.addPassthroughCopy("**/*.mov");
 
   const passthroughPaths = [
     "feed.xsl",
     "robots.txt",
+  
     "fonts/BagnardSans.otf",
     "fonts/Bagnard.otf",
     "fonts/PublicSans-Light.ttf",
     "fonts/PublicSans-Medium.ttf",
     "fonts/PublicSans-Regular.ttf",
+  
     "img",
     "css",
     "js",
-    "vid/",
-    "mp4",
-    "webm",
+    "vid",
     "animations",
-    "js/script.js",
-    "photoswipe/",
+    "photoswipe",
+  
     "project/wobblies/img",
-    "work/mockup-demo"
+    "work/mockup-demo",
   ];
-
-  const blogPath = "blog/";
+  
+  const blogPath = "blog";
+  
   if (fs.existsSync(blogPath)) {
-    const blogDirs = fs.readdirSync(blogPath, { withFileTypes: true })
-      .filter(dirent => dirent.isDirectory())
-      .map(dirent => path.join(blogPath, dirent.name, "img"));
+    const blogDirs = fs
+      .readdirSync(blogPath, { withFileTypes: true })
+      .filter((dirent) => dirent.isDirectory())
+      .map((dirent) => path.join(blogPath, dirent.name, "img"));
+  
     passthroughPaths.push(...blogDirs);
   }
-
-  passthroughPaths.forEach(p => eleventyConfig.addPassthroughCopy({ [p]: p }));
-
+  
+  for (const sourcePath of passthroughPaths) {
+    eleventyConfig.addPassthroughCopy({
+      [sourcePath]: sourcePath,
+    });
+  }
+  
   // HTML minification
   if (process.env.NODE_ENV === "production") {
     eleventyConfig.addTransform("htmlmin", function (content, outputPath) {

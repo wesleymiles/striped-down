@@ -6,7 +6,7 @@ tags: posty
 date: 2016-04-12
 ---
 
-#Check-in on intentions and systems as your company grows
+# Check-in on intentions and systems as your company grows
 
 As fate would have it, my friend James and I ended up in the same tiny niche. Our companies compete for the same clients. Mine is 5 years old and his is under 2. Since we both enjoy yammering about business, interesting discussions of the inner-workings ensued (while not giving secrets to the enemy, of course).
 
@@ -22,7 +22,7 @@ This was all very sophisticated when I started, especially after being a freelan
 
 James isn’t there yet. His company get things done by relying on people. The trust is in peers not processes. But people can forget, or get sick or quit.
 
-###So, systems can be good.
+### So, systems can be good.
 
  
 But, there’s a benefit to seeing the whole.
@@ -31,10 +31,10 @@ Allowing employees to understand how the business works as a whole gives more op
 
 Automation can save loads of human brain power, but built too high and employees can’t see out. Your collective brain power potential goes back down as it becomes individualized.
 
-###So, systems can be bad.
+### So, systems can be bad.
 
  
-##As you probably guessed, the sweet-spot is between the extremes.
+## As you probably guessed, the sweet-spot is between the extremes.
 
 The flatter, the more nimble you are to change directions and scrap processes. That, in turn, puts more trust and work and responsibility on employees. The fatter, we’ll say, the slower you are to change hard earned processes, but those processes save time and lesson mistakes.
 
