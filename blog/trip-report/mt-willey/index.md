@@ -84,9 +84,10 @@ My camera and I took a few minutes to unwind before heading back to society. A n
 
 ### The cabin
   
-Ohe of the gang inherited the cabin from his folks and it is filled with mementos of their love for the mountains. It'as an uninsulated, two-bedroom, modest shelter north of the park with an amazing view of Mt. Adams. The location is perfect. Seasoned members of the group get the electric-headed rooms, while the young'ns get the floor in front of the fireplace - along with the proud duty of maintaining the fire. I love that place. 
-
+One of the gang inherited the cabin from his folks and it is filled with mementos of their love for the mountains. It'as an uninsulated, two-bedroom, modest shelter north of the park with an amazing view of Mt. Adams. The location is perfect. Seasoned members of the group get the electric-headed rooms, while the young'ns get the floor in front of the fireplace - along with the proud duty of maintaining the fire. 
 
 
 {% image "img/mt-willey-12.jpg", "Mt. Willey hiking photo", " " %}
 
+
+Love that place. 
