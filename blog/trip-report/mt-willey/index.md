@@ -68,7 +68,6 @@ Being a Tim Ferriss reader, I see the [80/20](http://en.wikipedia.org/wiki/Paret
 - **solution 2:** use ankle muscle to soften the impact on knees.
 - **verdict:** my legs delayed the hurting some. The idea was to land on the toe more often instead of the heel. If anything, becoming more aware and experimenting with of small, repeating actions should lead to wins.
 
-{% image "img/mt-willey-14.jpg", "Mt. Willey hiking photo", "Snowier toward the top" %}
 {% image "img/mt-willey-01.jpg", "Mt. Willey hiking photo", "Just a glaze toward the borrom" %}
 
 ### The base
