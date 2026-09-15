@@ -68,6 +68,7 @@ Being a Tim Ferriss reader, I see the [80/20](http://en.wikipedia.org/wiki/Paret
 - **solution 2:** use ankle muscle to soften the impact on knees.
 - **verdict:** my legs delayed the hurting some. The idea was to land on the toe more often instead of the heel. If anything, becoming more aware and experimenting with of small, repeating actions should lead to wins.
 
+{% image "img/mt-willey-14.JPG", "Mt. Willey hiking photo", "Snowier toward the top" %}
 {% image "img/mt-willey-01.jpg", "Mt. Willey hiking photo", "Just a glaze toward the borrom" %}
 
 ### The base
@@ -78,7 +79,7 @@ My camera and I took a few minutes to unwind before heading back to society. A n
 
 {% image "img/mt-willey-07.jpg", "Mt. Willey hiking photo", "The original Willey House Station was built in the 1875 and was burned in the 1980's, leaving the founation." %}
 {% image "img/mt-willey-11.jpg", "Mt. Willey hiking photo", "Unused pole still standing" %}
-{% image "img/mt-willey-13.jpg", "Mt. Willey hiking photo", "Close-up from the train bridge" %}
+{% image "img/mt-willey-13.JPG", "Mt. Willey hiking photo", "Close-up from the train bridge" %}
 
 
 ### The cabin
