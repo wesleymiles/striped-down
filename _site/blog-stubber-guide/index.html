@@ -1,0 +1,199 @@
+<h1>Blog Stubber (<code>scaffold-post.js</code>)</h1>
+<p>Zero-network, zero-AI CLI that scaffolds a hike or concert post from a folder of photos: reads EXIF for dates, copies + renames images, writes matching frontmatter. Lives in <code>blog-stubbing/</code>, writes into the sibling <code>striped-down/blog/</code>.</p>
+<h2>Setup (one-time)</h2>
+<pre><code class="language-bash">cd blog-stubbing
+npm init -y
+npm install exiftool-vendored fs-extra fast-glob
+</code></pre>
+<h2>Basic pattern</h2>
+<pre><code class="language-bash">node scaffold-post.js &lt;hike|concert&gt; --source &lt;photo-folder&gt; --slug &lt;slug&gt; [options] [--dry-run]
+</code></pre>
+<p>Always try <code>--dry-run</code> first — it prints the frontmatter and file plan without writing anything. Re-running on an existing slug is refused (duplicate guard), so nothing gets clobbered by accident.</p>
+<hr>
+<h2>Hike (trip report)</h2>
+<pre><code class="language-bash">node scaffold-post.js hike \
+  --source trip-report-raw/butler-lodge \
+  --slug butler-lodge-loop \
+  --peak &quot;Mt. Mansfield:3015&quot; \
+  --trail &quot;Stevensville trailhead → Butler Lodge → Long Trail → Nebraska Notch&quot; \
+  --town Underhill \
+  --state Vermont \
+  --group-hours 6 \
+  --layout auto \
+  --dry-run
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>Flag</th>
+<th>Required</th>
+<th>Default</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>--source</code></td>
+<td>yes</td>
+<td>—</td>
+<td>Folder of photos for this one hike</td>
+</tr>
+<tr>
+<td><code>--slug</code></td>
+<td>no</td>
+<td><code>hike-&lt;date&gt;</code></td>
+<td>Output folder name under <code>blog/trip-report/</code></td>
+</tr>
+<tr>
+<td><code>--peak</code></td>
+<td>no</td>
+<td>placeholder</td>
+<td><code>&quot;Name:elevation&quot;</code>; multiple: <code>&quot;Peak1:3015,Peak2:3719&quot;</code></td>
+</tr>
+<tr>
+<td><code>--trail</code></td>
+<td>no</td>
+<td>omitted</td>
+<td>Free-text route, e.g. arrows between segments</td>
+</tr>
+<tr>
+<td><code>--town</code></td>
+<td>no</td>
+<td><code>Underhill</code></td>
+<td></td>
+</tr>
+<tr>
+<td><code>--state</code></td>
+<td>no</td>
+<td><code>Vermont</code></td>
+<td></td>
+</tr>
+<tr>
+<td><code>--group-hours</code></td>
+<td>no</td>
+<td><code>6</code></td>
+<td>Warns (doesn’t split) if photos span more than this many hours</td>
+</tr>
+<tr>
+<td><code>--layout</code></td>
+<td>no</td>
+<td><code>auto</code></td>
+<td><code>auto</code> | <code>singles</code> | <code>grid</code>/<code>pairs</code> — how images are wrapped</td>
+</tr>
+<tr>
+<td><code>--out</code></td>
+<td>no</td>
+<td><code>../striped-down/blog</code></td>
+<td>Override output root</td>
+</tr>
+<tr>
+<td><code>--dry-run</code></td>
+<td>no</td>
+<td>off</td>
+<td>Preview only</td>
+</tr>
+</tbody>
+</table>
+<p><code>date</code>, <code>dateHiked</code>, and the fallback title all come from the earliest EXIF date in the source folder if you don’t override them. <code>distance</code>, <code>totalTime</code>, and <code>temp</code> are always written as placeholders (<code>0.0 miles</code>, <code>0:00 hours</code>, <code>0F° on top</code>) — fill those in by hand after scaffolding.</p>
+<hr>
+<h2>Concert</h2>
+<pre><code class="language-bash">node scaffold-post.js concert \
+  --source &quot;concerts-raw/jeffrey-lewis&quot; \
+  --slug jeffrey-lewis/higher-ground-2024 \
+  --venue &quot;Higher Ground&quot; \
+  --artists &quot;Jeffrey Lewis&quot; \
+  --festival &quot;&quot; \
+  --event-date 2024-03-15 \
+  --town &quot;South Burlington&quot; \
+  --state Vermont \
+  --layout auto \
+  --dry-run
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>Flag</th>
+<th>Required</th>
+<th>Default</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>--source</code></td>
+<td>yes</td>
+<td>—</td>
+<td>Folder of photos for this show</td>
+</tr>
+<tr>
+<td><code>--slug</code></td>
+<td>yes</td>
+<td>—</td>
+<td>Output folder under <code>blog/concerts/</code>; nest as <code>artist/venue-year</code> for repeat acts</td>
+</tr>
+<tr>
+<td><code>--venue</code></td>
+<td>yes</td>
+<td>—</td>
+<td></td>
+</tr>
+<tr>
+<td><code>--artists</code></td>
+<td>yes</td>
+<td>—</td>
+<td>Comma-separated; one name → plain string, 2+ → array (headliner first). Numeric names like <code>311</code> get auto-quoted in the YAML</td>
+</tr>
+<tr>
+<td><code>--festival</code></td>
+<td>no</td>
+<td>omitted</td>
+<td>Only written if given</td>
+</tr>
+<tr>
+<td><code>--event-date</code></td>
+<td>no</td>
+<td>EXIF date</td>
+<td>Falls back to the earliest photo’s EXIF date if omitted</td>
+</tr>
+<tr>
+<td><code>--town</code></td>
+<td>no</td>
+<td><code>Unknown</code></td>
+<td></td>
+</tr>
+<tr>
+<td><code>--state</code></td>
+<td>no</td>
+<td><code>Unknown</code></td>
+<td></td>
+</tr>
+<tr>
+<td><code>--layout</code></td>
+<td>no</td>
+<td><code>auto</code></td>
+<td>Same options as hike mode</td>
+</tr>
+<tr>
+<td><code>--out</code></td>
+<td>no</td>
+<td><code>../striped-down/blog</code></td>
+<td>Override output root</td>
+</tr>
+<tr>
+<td><code>--dry-run</code></td>
+<td>no</td>
+<td>off</td>
+<td>Preview only</td>
+</tr>
+</tbody>
+</table>
+<p><code>date</code> (publish date) is always today; <code>concerts.event-date</code> (actual show date, drives sort order) uses <code>--event-date</code> or falls back to EXIF.</p>
+<hr>
+<h2>Image layout modes</h2>
+<ul>
+<li><strong><code>auto</code></strong> (default): every full group of 4 photos becomes a <code>&lt;div class=&quot;grid cols-2 bleed&quot;&gt;</code> block; leftover photos (&lt;4) render as single `` shortcodes.</li>
+<li><strong><code>singles</code></strong>: every photo gets its own `` line, no grid.</li>
+<li><strong><code>grid</code></strong> / <strong><code>pairs</code></strong>: forces grid wrapping even on partial groups.</li>
+</ul>
+<h2>After scaffolding</h2>
+<p>The script only ever produces placeholder body text and stub metadata — always open the generated <code>index.md</code> and fill in the real description, distance/time/temp (hikes), and any narrative before publishing.</p>

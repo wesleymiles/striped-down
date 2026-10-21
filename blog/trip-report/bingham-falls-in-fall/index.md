@@ -8,9 +8,8 @@ tags:
 date: 2016-11-12
 trips:
   dateHiked: 2016-11-12
-  peaks:
-    - name: Bingham Falls
-      elevation: 1500
+  # peaks:
+    # - name: Bingham Falls
   totalTime: 1 hours
   distance: 1 miles
   # temp: 0F° on top

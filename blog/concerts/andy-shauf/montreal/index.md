@@ -1,8 +1,8 @@
 ---
 layout: blog.liquid
-title: "{{ concerts.artist }} at {{ concerts.venue }}"
+title: "{{ concerts.artist }}"
 eleventyComputed:
-  description: "with {{ concerts | otherArtists }}"
+  description: "@ {{ concerts.venue }}, with {{ concerts | otherArtists }}"
 tags: 
   - post
   - concert
@@ -17,7 +17,7 @@ location:
   town: Montreal
   state: Quebec
 ---
-
+ 
 
 {% image "img/IMG_2305.JPG", "Andy and his band covered in red light", "The six peice" %}
 

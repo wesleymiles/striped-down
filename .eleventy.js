@@ -286,7 +286,7 @@ module.exports = function (eleventyConfig) {
     }
 
     const imageFiles = fs.readdirSync(artImgDir)
-      .filter(file => /\.(jpg|jpeg|png|webp)$/i.test(file));
+      .filter(file => /\.(jpg|gif|jpeg|png|webp)$/i.test(file));
 
     const images = [];
     for (const file of imageFiles) {

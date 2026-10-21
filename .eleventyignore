@@ -3,3 +3,10 @@ one-week-logo/
 project/tabs-collection/
 research.html
 work-preview/
+
+# Agent/tooling config for Cline + Cursor. Never publish these.
+# NOTE: Eleventy does NOT ignore dot-directories on its own — a bare .md file
+# inside one is compiled into the site (e.g. _site/.clinerules/<name>/index.html).
+.clinerules/
+.cursor/
+

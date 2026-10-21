@@ -1,7 +1,7 @@
 {
   "name": "package",
   "version": "1.0.0",
-  "description": "\"With a package.json, you can install packages locally. –11ty",
+  "description": "With a package.json, you can install packages locally. –11ty",
   "engines": {
     "node": ">=20"
   },
@@ -38,7 +38,8 @@
     "markdown-it": "^13.0.1",
     "photoswipe": "^5.4.4",
     "punycode": "^2.3.1",
-    "sharp": "^0.33.0"
+    "sharp": "^0.33.0",
+    "slugify": "1.6.6"
   },
   "repository": {
     "type": "git",
